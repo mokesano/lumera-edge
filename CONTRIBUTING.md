@@ -1,4 +1,4 @@
-# Contributing to Scholarium
+# Contributing to ScholarAux
 
 First of all, thank you for contributing!
 
