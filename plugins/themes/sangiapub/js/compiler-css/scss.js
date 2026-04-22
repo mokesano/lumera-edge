@@ -1,36 +1,33 @@
-        document.addEventListener("DOMContentLoaded", function () {
-            const scssUrls = {$scssUrls|@json_encode};
-
-            // Fungsi untuk mengompilasi SCSS ke CSS
-            function compileScssToCss(scssUrl) {
-                fetch(scssUrl)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Gagal memuat file SCSS (${scssUrl}): ${response.statusText}`);
-                        }
-                        return response.text();
-                    })
-                    .then(scssContent => {
-                        try {
-                            // Kompilasi SCSS ke CSS menggunakan SCSS.js
-                            const result = Sass.compile(scssContent);
-                            const cssContent = result.css;
-
-                            // Buat elemen <style> dan tambahkan CSS ke DOM
-                            const styleElement = document.createElement("style");
-                            styleElement.textContent = cssContent;
-                            document.head.appendChild(styleElement);
-
-                            console.log(`SCSS (${scssUrl}) berhasil dikompilasi dan diterapkan.`);
-                        } catch (error) {
-                            console.error(`Gagal mengompilasi SCSS (${scssUrl}):`, error);
-                        }
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    });
+document.addEventListener("DOMContentLoaded", function () {
+    const scssUrls = {$scssUrls|@json_encode};
+    
+    // Validate input
+    if (!Array.isArray(scssUrls) || scssUrls.length === 0) {
+        console.warn("No SCSS URLs provided");
+        return;
+    }
+    
+    async function compileScssToCss(scssUrl) {
+        try {
+            const response = await fetch(scssUrl);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             }
-
-            // Kompilasi semua file SCSS
-            scssUrls.forEach(scssUrl => compileScssToCss(scssUrl));
-        });
+            
+            const scssContent = await response.text();
+            const result = Sass.compile(scssContent);
+            
+            const styleElement = document.createElement("style");
+            styleElement.textContent = result.css;
+            document.head.appendChild(styleElement);
+            
+            console.log(`✓ SCSS compiled: ${scssUrl}`);
+        } catch (error) {
+            console.error(`✗ Failed to compile SCSS (${scssUrl}):`, error.message);
+        }
+    }
+    
+    // Compile all SCSS files
+    scssUrls.forEach(compileScssToCss);
+});
