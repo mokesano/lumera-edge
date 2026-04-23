@@ -412,8 +412,8 @@ class PayPalPlugin extends PaymethodPlugin {
                             );
 
                             $queuedPaymentId = $request->getUserVar('custom');
-                            import('classes.payment.ojs.OJSPaymentManager');
-                            $ojsPaymentManager = new OJSPaymentManager($request);
+                            import('classes.payment.AppPaymentManager');
+                            $ojsPaymentManager = new AppPaymentManager($request);
                             $queuedPayment = $ojsPaymentManager->getQueuedPayment($queuedPaymentId);
 
                             if (!$queuedPayment) {
