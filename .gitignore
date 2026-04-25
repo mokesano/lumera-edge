@@ -16,6 +16,7 @@ violation_dirs.txt
 
 # Composer dependencies
 vendor/
+node_modules/
 
 # Environment files
 .env
