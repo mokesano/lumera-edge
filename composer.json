@@ -1,8 +1,8 @@
 {
     "name": "wizdam/wizdam-editorial",
-    "description": "Wizdam Publisher Platform - Modern Open Journal Systems Framework",
+    "description": "Wizdam Editorial - Modern Publisher Platform for Journal Management Framework Workflow and Publishing",
     "type": "project",
-    "license": "GPL-2.0-only",
+    "license": "GPL-3.0-only",
     "keywords": [
         
         "publishing",
@@ -12,14 +12,14 @@
     ],
     "homepage": "https://wizdam.sangia.org/",
     "support": {
-        "issues": "https://github.com/wizdam/wizdam/issues",
+        "issues": "https://github.com/mokesano/wizdam-editorial/issues",
         "forum": "https://forum.wizdam.sangia.org/",
-        "source": "https://github.com/wizdam/wizdam"
+        "source": "https://github.com/mokesano/wizdam-editorial"
     },
     "authors": [
         {
             "name": "Rochmady",
-            "email": "admin@wizdam.sangia.org",
+            "email": "rochmady@sangia.org",
             "role": "Lead Developer"
         }
     ],
@@ -112,10 +112,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php -r \"echo 'Wizdam Platform installed successfully!\\n';\""
+            "@php -r \"echo 'Wizdam Editorial Platform installed successfully!\\n';\""
         ],
         "post-update-cmd": [
-            "@php -r \"echo 'Wizdam Platform updated successfully!\\n';\""
+            "@php -r \"echo 'Wizdam Editorial Platform updated successfully!\\n';\""
         ],
         "test": "phpunit",
         "cs-check": "phpcs --standard=PSR12 core/Library app",
