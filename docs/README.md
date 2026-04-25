@@ -1,4 +1,4 @@
-# 🧠 Wizdam Editorial 1.0
+# 📰 Wizdam Editorial 1.0
 
 ### Platform Manajemen Editorial & Penerbitan Ilmiah Modern
 
