@@ -4,7 +4,6 @@
     "type": "project",
     "license": "GPL-3.0-only",
     "keywords": [
-        
         "publishing",
         "journal",
         "open-access",
@@ -34,18 +33,18 @@
         "adodb/adodb-php": "^5.22",
         "chillerlan/php-qrcode": "^6.0",
         "ezyang/htmlpurifier": "^4.19",
-        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/guzzle": "^7.10.4",
         "midtrans/midtrans-php": "^2.6",
         "mpdf/mpdf": "^8.0",
-        "setasign/fpdi": "^2.0",
+        "setasign/fpdi": "^2.6.7",
         "simplepie/simplepie": "^1.9",
         "smarty/smarty": "^5.8",
         "symfony/polyfill-mbstring": "^1.36",
-        "symfony/var-dumper": "^6.0",
+        "symfony/var-dumper": "^6.4.36",
         "vlucas/phpdotenv": "^5.5",
         "wikimedia/less.php": "^5.5",
         "wizdamdebug/debug-toolbar": "@dev",
-        "xendit/xendit-php": "^2.0"
+        "xendit/xendit-php": "^2.19.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.0",
@@ -119,9 +118,11 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "repositories": [{
-        "name": "wizdam-debug-toolbar",
-        "type": "vcs",
-        "url": "https://github.com/mokesano/WizdamDebugToolbar"
-    }]
+    "repositories": [
+        {
+            "name": "wizdam-debug-toolbar",
+            "type": "vcs",
+            "url": "https://github.com/mokesano/WizdamDebugToolbar"
+        }
+    ]
 }
