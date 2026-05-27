@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8969ba27b929cf54a6497350529c16f",
+    "content-hash": "0bead09fe1eb967a60cf3b722b3f2c6f",
     "packages": [
         {
             "name": "adodb/adodb-php",
@@ -83,49 +83,66 @@
         },
         {
             "name": "chillerlan/php-qrcode",
-            "version": "4.4.2",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chillerlan/php-qrcode.git",
-                "reference": "345ed8e4ffb56e6b3fcd9f42e3970b9026fa6ce4"
+                "reference": "49006e34bd5328f163e80329e7312f34dceea59b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/345ed8e4ffb56e6b3fcd9f42e3970b9026fa6ce4",
-                "reference": "345ed8e4ffb56e6b3fcd9f42e3970b9026fa6ce4",
+                "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/49006e34bd5328f163e80329e7312f34dceea59b",
+                "reference": "49006e34bd5328f163e80329e7312f34dceea59b",
                 "shasum": ""
             },
             "require": {
-                "chillerlan/php-settings-container": "^2.1.6 || ^3.2.1",
+                "chillerlan/php-settings-container": "^3.2.1",
                 "ext-mbstring": "*",
-                "php": "^7.4 || ^8.0"
+                "php": "^8.2"
             },
             "require-dev": {
-                "phan/phan": "^5.4.5",
+                "chillerlan/php-authenticator": "^5.3",
+                "ext-fileinfo": "*",
+                "intervention/image": "^3.11",
+                "phan/phan": "^6.0.1",
+                "phpbench/phpbench": "^1.4",
                 "phpmd/phpmd": "^2.15",
-                "phpunit/phpunit": "^9.6",
-                "setasign/fpdf": "^1.8.2",
-                "squizlabs/php_codesniffer": "^3.11"
+                "phpstan/phpstan": "^2.1.40",
+                "phpstan/phpstan-deprecation-rules": "^2.0.4",
+                "phpunit/phpunit": "^11.5",
+                "setasign/fpdf": "^1.8.6",
+                "slevomat/coding-standard": "^8.28",
+                "squizlabs/php_codesniffer": "^4.0"
             },
             "suggest": {
                 "chillerlan/php-authenticator": "Yet another Google authenticator! Also creates URIs for mobile apps.",
+                "intervention/image": "More advanced GD and ImageMagick output.",
                 "setasign/fpdf": "Required to use the QR FPDF output.",
                 "simple-icons/simple-icons": "SVG icons that you can use to embed as logos in the QR Code"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "chillerlan\\QRCode\\": "src/"
+                    "chillerlan\\QRCode\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "MIT",
+                "Apache-2.0"
             ],
             "authors": [
                 {
                     "name": "Kazuhiko Arase",
-                    "homepage": "https://github.com/kazuhikoarase"
+                    "homepage": "https://github.com/kazuhikoarase/qrcode-generator"
+                },
+                {
+                    "name": "ZXing Authors",
+                    "homepage": "https://github.com/zxing/zxing"
+                },
+                {
+                    "name": "Ashot Khanamiryan",
+                    "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder"
                 },
                 {
                     "name": "Smiley",
@@ -137,26 +154,29 @@
                     "homepage": "https://github.com/chillerlan/php-qrcode/graphs/contributors"
                 }
             ],
-            "description": "A QR code generator with a user friendly API. PHP 7.4+",
+            "description": "A QR Code generator and reader with a user-friendly API. PHP 8.2+",
             "homepage": "https://github.com/chillerlan/php-qrcode",
             "keywords": [
                 "phpqrcode",
                 "qr",
                 "qr code",
+                "qr-reader",
                 "qrcode",
-                "qrcode-generator"
+                "qrcode-generator",
+                "qrcode-reader"
             ],
             "support": {
+                "docs": "https://php-qrcode.readthedocs.io",
                 "issues": "https://github.com/chillerlan/php-qrcode/issues",
-                "source": "https://github.com/chillerlan/php-qrcode/tree/4.4.2"
+                "source": "https://github.com/chillerlan/php-qrcode"
             },
             "funding": [
                 {
                     "url": "https://ko-fi.com/codemasher",
-                    "type": "ko_fi"
+                    "type": "Ko-Fi"
                 }
             ],
-            "time": "2024-11-15T15:36:24+00:00"
+            "time": "2026-03-18T21:21:07+00:00"
         },
         {
             "name": "chillerlan/php-settings-container",
@@ -352,16 +372,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.10.0",
+            "version": "7.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b51ac707cfa420b7bfd4e4d5e510ba8008e822b4"
+                "reference": "aec528da477062d3af11f51e6b33402be233b21f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b51ac707cfa420b7bfd4e4d5e510ba8008e822b4",
-                "reference": "b51ac707cfa420b7bfd4e4d5e510ba8008e822b4",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aec528da477062d3af11f51e6b33402be233b21f",
+                "reference": "aec528da477062d3af11f51e6b33402be233b21f",
                 "shasum": ""
             },
             "require": {
@@ -379,8 +399,9 @@
                 "bamarni/composer-bin-plugin": "^1.8.2",
                 "ext-curl": "*",
                 "guzzle/client-integration-tests": "3.0.2",
+                "guzzlehttp/test-server": "^0.3.2",
                 "php-http/message-factory": "^1.1",
-                "phpunit/phpunit": "^8.5.39 || ^9.6.20",
+                "phpunit/phpunit": "^8.5.52 || ^9.6.34",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -458,7 +479,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.10.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.10.4"
             },
             "funding": [
                 {
@@ -474,20 +495,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-23T22:36:01+00:00"
+            "time": "2026-05-22T19:00:53+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.3.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "481557b130ef3790cf82b713667b43030dc9c957"
+                "reference": "09e8a212562fb1fb6a512c4156ed71525969d6c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/481557b130ef3790cf82b713667b43030dc9c957",
-                "reference": "481557b130ef3790cf82b713667b43030dc9c957",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/09e8a212562fb1fb6a512c4156ed71525969d6c2",
+                "reference": "09e8a212562fb1fb6a512c4156ed71525969d6c2",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +516,7 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.44 || ^9.6.25"
+                "phpunit/phpunit": "^8.5.52 || ^9.6.34"
             },
             "type": "library",
             "extra": {
@@ -541,7 +562,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.3.0"
+                "source": "https://github.com/guzzle/promises/tree/2.4.1"
             },
             "funding": [
                 {
@@ -557,20 +578,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-22T14:34:08+00:00"
+            "time": "2026-05-20T22:57:30+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.9.0",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884"
+                "reference": "a1bbdc172f32a25fe999965b65b6e71fd87da9ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/7d0ed42f28e42d61352a7a79de682e5e67fec884",
-                "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a1bbdc172f32a25fe999965b65b6e71fd87da9ed",
+                "reference": "a1bbdc172f32a25fe999965b65b6e71fd87da9ed",
                 "shasum": ""
             },
             "require": {
@@ -585,9 +606,9 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
-                "http-interop/http-factory-tests": "0.9.0",
+                "http-interop/http-factory-tests": "1.1.0",
                 "jshttp/mime-db": "1.54.0.1",
-                "phpunit/phpunit": "^8.5.44 || ^9.6.25"
+                "phpunit/phpunit": "^8.5.52 || ^9.6.34"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -658,7 +679,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.9.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.10.2"
             },
             "funding": [
                 {
@@ -674,7 +695,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-03-10T16:41:02+00:00"
+            "time": "2026-05-25T22:58:15+00:00"
         },
         {
             "name": "midtrans/midtrans-php",
@@ -1581,16 +1602,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b",
                 "shasum": ""
             },
             "require": {
@@ -1603,7 +1624,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -1628,7 +1649,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -1640,15 +1661,19 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2026-04-13T15:52:40+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.36.0",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -1707,7 +1732,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.36.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.37.0"
             },
             "funding": [
                 {
@@ -1731,16 +1756,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.37.0",
+            "version": "v1.38.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315"
+                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6a21eb99c6973357967f6ce3708cd55a6bec6315",
-                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92",
                 "shasum": ""
             },
             "require": {
@@ -1792,7 +1817,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.37.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.1"
             },
             "funding": [
                 {
@@ -1812,11 +1837,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T17:25:58+00:00"
+            "time": "2026-05-26T12:51:13+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.36.0",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -1876,7 +1901,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.36.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.37.0"
             },
             "funding": [
                 {
@@ -2146,23 +2171,23 @@
         },
         {
             "name": "wizdamdebug/debug-toolbar",
-            "version": "v1.0.0",
+            "version": "v1.0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mokesano/WizdamDebugToolbar.git",
-                "reference": "76a76cc9b1140bd26fba0a397d54dcf73f968247"
+                "url": "https://github.com/mokesano/DebugToolbar.git",
+                "reference": "b74e6b4cd464614da43d305cb45b201da5dbbba0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mokesano/WizdamDebugToolbar/zipball/76a76cc9b1140bd26fba0a397d54dcf73f968247",
-                "reference": "76a76cc9b1140bd26fba0a397d54dcf73f968247",
+                "url": "https://api.github.com/repos/mokesano/DebugToolbar/zipball/b74e6b4cd464614da43d305cb45b201da5dbbba0",
+                "reference": "b74e6b4cd464614da43d305cb45b201da5dbbba0",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^10.0"
+                "phpunit/phpunit": "^12.5.22"
             },
             "suggest": {
                 "psr/http-message": "Untuk integrasi PSR-7 request/response",
@@ -2194,8 +2219,6 @@
             },
             "archive": {
                 "exclude": [
-                    "/Wizdam_DEPRICATED/",
-                    "/src_DEPRICATED/",
                     "/.github/",
                     "/tests/",
                     ".editorconfig",
@@ -2213,8 +2236,8 @@
             ],
             "authors": [
                 {
-                    "name": "Sangia Publishing House",
-                    "email": "dev@sangia.org",
+                    "name": "Rochmady",
+                    "email": "srochmady@gmail.com",
                     "homepage": "https://www.sangia.org",
                     "role": "Developer"
                 }
@@ -2230,61 +2253,76 @@
                 "wizdam"
             ],
             "support": {
-                "source": "https://github.com/mokesano/WizdamDebugToolbar/tree/v1.0.0",
-                "issues": "https://github.com/mokesano/WizdamDebugToolbar/issues"
+                "source": "https://github.com/mokesano/DebugToolbar/tree/v1.0.2.0",
+                "issues": "https://github.com/mokesano/DebugToolbar/issues"
             },
             "funding": [
                 {
                     "type": "github",
-                    "url": "https://github.com/Rochmady"
+                    "url": "https://github.com/mokesano"
                 }
             ],
-            "time": "2026-04-19T07:41:55+00:00"
+            "time": "2026-05-27T05:23:16+00:00"
         },
         {
             "name": "xendit/xendit-php",
-            "version": "2.19.0",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xendit/xendit-php.git",
-                "reference": "02e9e413a072e68d238adb1750d9e125268b16e5"
+                "reference": "4c6e1b9899aef8c6224c7c1ae46963b71435280b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xendit/xendit-php/zipball/02e9e413a072e68d238adb1750d9e125268b16e5",
-                "reference": "02e9e413a072e68d238adb1750d9e125268b16e5",
+                "url": "https://api.github.com/repos/xendit/xendit-php/zipball/4c6e1b9899aef8c6224c7c1ae46963b71435280b",
+                "reference": "4c6e1b9899aef8c6224c7c1ae46963b71435280b",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "ext-json": "*",
-                "guzzlehttp/guzzle": ">=6.0",
-                "php": ">=7.2.0"
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^7.3",
+                "guzzlehttp/psr7": "^1.7 || ^2.0",
+                "php": "^7.4 || ^8.0",
+                "vlucas/phpdotenv": "^5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.13",
-                "squizlabs/php_codesniffer": "~3.5",
-                "vlucas/phpdotenv": "^4.1"
+                "friendsofphp/php-cs-fixer": "^3.5",
+                "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Xendit\\": "src/"
+                    "Xendit\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "unlicense"
             ],
-            "description": "PHP clients for Xendit API",
-            "homepage": "https://github.com/xendit/xendit-php",
+            "authors": [
+                {
+                    "name": "OpenAPI-Generator contributors",
+                    "homepage": "https://openapi-generator.tech"
+                }
+            ],
+            "description": "Xendit PHP SDK",
+            "homepage": "https://openapi-generator.tech",
             "keywords": [
-                "xendit"
+                "api",
+                "openapi",
+                "openapi-generator",
+                "openapitools",
+                "php",
+                "rest",
+                "sdk"
             ],
             "support": {
                 "issues": "https://github.com/xendit/xendit-php/issues",
-                "source": "https://github.com/xendit/xendit-php/tree/2.19.0"
+                "source": "https://github.com/xendit/xendit-php/tree/7.0.0"
             },
-            "time": "2022-10-12T03:31:31+00:00"
+            "time": "2025-05-29T04:04:47+00:00"
         }
     ],
     "packages-dev": [
@@ -3058,6 +3096,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2023-02-03T06:58:43+00:00"
         },
         {
@@ -3113,6 +3152,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2023-02-03T06:59:15+00:00"
         },
         {
@@ -4032,9 +4072,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wizdamdebug/debug-toolbar": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
