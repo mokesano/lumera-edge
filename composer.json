@@ -43,7 +43,7 @@
         "symfony/var-dumper": "^8.0.8",
         "vlucas/phpdotenv": "^5.5",
         "wikimedia/less.php": "^5.5",
-        "wizdam/debug-toolbar": "@dev",
+        "wizdamdebug/debug-toolbar": "^1.0.0",
         "xendit/xendit-php": "^7.0.0"
     },
     "require-dev": {
@@ -120,7 +120,7 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "name": "wizdam-debug-toolbar",
+            "name": "wizdamdebug/debug-toolbar",
             "type": "vcs",
             "url": "https://github.com/mokesano/DebugToolbar"
         }
