@@ -9,7 +9,7 @@
 set -e
 
 echo "=================================================="
-echo "Fix Namespace Comments - Wizdam Editorial 1.0"
+echo "Fix Namespace Comments - Lumera Edge 1.0"
 echo "=================================================="
 echo ""
 

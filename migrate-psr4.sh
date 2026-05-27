@@ -1,6 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# WIZDAM EDITORIAL 1.0 - PSR-4 COMPLIANCE MIGRATION SCRIPT
+# LUMERA EDGE 1.0 - PSR-4 COMPLIANCE MIGRATION SCRIPT
 # =============================================================================
 # Script ini akan:
 # 1. Rename folder dari lowercase ke PascalCase
@@ -13,7 +13,7 @@ set -e
 BASE_DIR="/workspace/app/Helpers"
 
 echo "=========================================="
-echo "WIZDAM PSR-4 Migration Script"
+echo "LUMERA EDGE PSR-4 Migration Script"
 echo "=========================================="
 echo ""
 
