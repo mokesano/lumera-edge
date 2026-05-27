@@ -8,7 +8,7 @@ declare(strict_types=1);
 /**
  * @file pages.admin.index.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Project
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_admin

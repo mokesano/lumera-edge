@@ -9,7 +9,7 @@
 set -e
 
 echo "=================================================="
-echo "PSR-4 Violation Fix Script - Wizdam Editorial 1.0"
+echo "PSR-4 Violation Fix Script - Lumera Edge 1.0"
 echo "=================================================="
 echo ""
 

@@ -1,30 +1,30 @@
-# 📰 Wizdam Editorial 1.0
+# 📰 Lumera Edge 1.0
 
 ### Platform Manajemen Editorial & Penerbitan Ilmiah Modern
 
-**Wizdam Editorial** adalah platform open‑source untuk manajemen editorial dan penerbitan ilmiah yang dibangun dengan arsitektur **Publisher‑Centric** modern, fleksibel, dan skalabel.
+**Lumera Edge** adalah platform open‑source untuk manajemen editorial dan penerbitan ilmiah yang dibangun dengan arsitektur **Publisher‑Centric** modern, fleksibel, dan skalabel.
 
 > *“Empowering Publishers with Modern Technology”*
 
 ---
 
 <p align="center">
-  <a href="https://github.com/mokesano/wizdam-editorial">
+  <a href="https://github.com/mokesano/lumera-edge">
     <img src="https://img.shields.io/badge/PHP-^8.4-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
   </a>
-  <a href="https://github.com/mokesano/wizdam-editorial/blob/main/docs/LICENSE">
+  <a href="https://github.com/mokesano/lumera-edge/blob/main/docs/LICENSE">
     <img src="https://img.shields.io/badge/license-GPL%203.0--only-blue?style=for-the-badge" alt="License">
   </a>
-  <a href="https://packagist.org/packages/wizdam/wizdam-editorial">
-    <img src="https://img.shields.io/badge/packagist-wizdam%2Fwizdam--editorial-F28D1A?style=for-the-badge&logo=packagist&logoColor=white" alt="Packagist">
+  <a href="https://packagist.org/packages/wizdam/lumera-edge">
+    <img src="https://img.shields.io/badge/packagist-wizdam%2Flumera--edge-F28D1A?style=for-the-badge&logo=packagist&logoColor=white" alt="Packagist">
   </a>
-  <a href="https://github.com/mokesano/wizdam-editorial/actions">
+  <a href="https://github.com/mokesano/lumera-edge/actions">
     <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge&logo=github-actions&logoColor=white" alt="Build Status">
   </a>
-  <a href="https://github.com/mokesano/wizdam-editorial/security/advisories">
+  <a href="https://github.com/mokesano/lumera-edge/security/advisories">
     <img src="https://img.shields.io/badge/security-policy-important?style=for-the-badge&logo=github" alt="Security Policy">
   </a>
-  <a href="https://github.com/mokesano/wizdam-editorial/releases">
+  <a href="https://github.com/mokesano/lumera-edge/releases">
     <img src="https://img.shields.io/badge/release-v1.0.0--alpha-lightgrey?style=for-the-badge" alt="Release">
   </a>
 </p>
@@ -37,19 +37,19 @@
 
 ---
 
-## 📖 Tentang Wizdam Editorial
+## 📖 Tentang Lumera Edge
 
-Wizdam Editorial 1.0 merupakan hasil **refactoring dan modernisasi total** dari basis kode **OJS 2.x**, dirancang ulang dengan prinsip‑prinsip pengembangan perangkat lunak terkini. Platform ini mengubah paradigma dari *Journal‑Centric* menjadi **Publisher‑Centric**, memungkinkan satu instalasi menaungi banyak penerbit (*multi‑publisher*) – bukan hanya banyak jurnal.
+Lumera Edge 1.0 merupakan hasil **refactoring dan modernisasi total** dari basis kode **Aplikasi Pengelolaan Jurnal Terpopuler v2.x**, dirancang ulang dengan prinsip‑prinsip pengembangan perangkat lunak terkini. Platform ini mengubah paradigma dari *Journal‑Centric* menjadi **Publisher‑Centric** yang mengedepankan penerbit dibanding silo jurnal.
 
-Dibangun di atas fondasi **Wizdam Kernel**, platform ini memisahkan secara jelas antara *Core Engine*, *Modules*, dan *Library Eksternal*, serta mengadopsi standar industri seperti Composer, PSR‑4 Autoloading, dan konfigurasi berbasis environment variable (`.env`). Hasilnya adalah sistem yang **ringkas, mudah dipahami, dan siap produksi**.
+Dibangun di atas fondasi **Lumera Kernel**, platform ini memisahkan secara jelas antara *Core Engine*, *Modules*, dan *Library Eksternal*, serta mengadopsi standar industri seperti Composer, PSR‑4 Autoloading, dan konfigurasi berbasis environment variable (`.env`). Hasilnya adalah sistem yang **ringkas, mudah dipahami, dan siap produksi**.
 
 ---
 
-## ✨ Mengapa Wizdam Editorial?
+## ✨ Mengapa Lumera Editorial?
 
-| 🔧 Aspek | 🟡 OJS 2.x (Legacy) | 🟢 Wizdam 1.0 (Modern) |
+| 🔧 Aspek | 🟡 Aplikasi Legacy v2.x | 🟢 Lumera 1.0 (Modern) |
 | :--- | :--- | :--- |
-| **Struktur** | `lib/pkp/`, `lib/ojs/`, `classes/` | **Flat & Modular**: `core/Kernel/`, `core/Modules/`, `app/` |
+| **Struktur** | `lib/`, `lib/`, `classes/` | **Flat & Modular**: `core/Kernel/`, `core/Modules/`, `app/` |
 | **Paradigma** | Journal‑Centric (`Journal`, `Site`) | **Publisher‑Centric** (`Press`, `CorePublisher`) |
 | **Dependencies** | Manual includes | **Composer + PSR‑4 Autoloading** |
 | **Konfigurasi** | `config.inc.php` saja | **`.env`** + config bridge |
@@ -74,7 +74,7 @@ Dibangun di atas fondasi **Wizdam Kernel**, platform ini memisahkan secara jelas
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/mokesano/wizdam-editorial.git
+git clone https://github.com/mokesano/lumera-edge.git
 cd wizdam-editorial
 
 # 2. Install dependencies PHP
@@ -106,7 +106,7 @@ php -S localhost:8000 -t public/
 3. Pastikan folder `storage/` dan `public/` **writable**
 4. Akses domain Anda untuk menjalankan installer web‑based
 
-> 📘 Panduan lengkap: [docs/INSTALLATION.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/INSTALLATION.md)
+> 📘 Panduan lengkap: [docs/INSTALLATION.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/INSTALLATION.md)
 
 ---
 
@@ -116,7 +116,7 @@ php -S localhost:8000 -t public/
 
 | Fitur | Deskripsi |
 | :--- | :--- |
-| 🏢 **Multi‑Publisher** | Satu instalasi, banyak penerbit — bukan hanya banyak jurnal |
+| 🏢 **Publisher-Centric** | Satu instalasi, untuk satu penerbit — bukan hanya banyak jurnal |
 | 🔄 **Workflow Fleksibel** | Submission → Review → Production → Publish |
 | 👥 **Peer Review** | Blind, Double‑Blind, dan Open Review |
 | 👤 **User & Role** | Manajemen pengguna dengan permission granular |
@@ -151,7 +151,7 @@ php -S localhost:8000 -t public/
 
 ## 🏗️ Sekilas Arsitektur
 
-Wizdam Editorial mengadopsi arsitektur **layered modular** yang memisahkan *core engine*, *business logic*, dan *presentation layer*:
+Lumera Edge mengadopsi arsitektur **layered modular** yang memisahkan *core engine*, *business logic*, dan *presentation layer*:
 
 ```
 Core Kernel   →   App Domain   →   Pages / API
@@ -167,7 +167,7 @@ Core Kernel   →   App Domain   →   Pages / API
 | **Plugins** | Sistem plugin yang dapat diperluas |
 | **Themes** | Template Smarty untuk kustomisasi tampilan |
 
-> 🧠 Detail lengkap: [docs/ARCHITECTURE.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/ARCHITECTURE.md)
+> 🧠 Detail lengkap: [docs/ARCHITECTURE.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/ARCHITECTURE.md)
 
 ---
 
@@ -228,21 +228,21 @@ Dokumentasi lengkap tersedia di folder `docs/`:
 
 | Dokumen | Deskripsi |
 | :--- | :--- |
-| [INSTALLATION.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/INSTALLATION.md) | Panduan instalasi lengkap (dev & production) |
-| [ARCHITECTURE.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/ARCHITECTURE.md) | Detail arsitektur & struktur direktori |
-| [MIGRATION.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/MIGRATION.md) | Migrasi dari OJS 2.x ke Wizdam 1.0 |
-| [CONTRIBUTING.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/CONTRIBUTING.md) | Panduan kontribusi developer |
-| [API.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/API.md) | REST API documentation |
-| [PLUGINS.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/PLUGINS.md) | Pengembangan plugin |
-| [THEMING.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/THEMING.md) | Panduan tema & template |
-| [DEPLOYMENT.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/DEPLOYMENT.md) | Best practices deployment |
-| [SECURITY.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/SECURITY.md) | Keamanan & hardening |
+| [INSTALLATION.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/INSTALLATION.md) | Panduan instalasi lengkap (dev & production) |
+| [ARCHITECTURE.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/ARCHITECTURE.md) | Detail arsitektur & struktur direktori |
+| [MIGRATION.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/MIGRATION.md) | Migrasi dari OJS 2.x ke Lumera 1.0 |
+| [CONTRIBUTING.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/CONTRIBUTING.md) | Panduan kontribusi developer |
+| [API.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/API.md) | REST API documentation |
+| [PLUGINS.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/PLUGINS.md) | Pengembangan plugin |
+| [THEMING.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/THEMING.md) | Panduan tema & template |
+| [DEPLOYMENT.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/DEPLOYMENT.md) | Best practices deployment |
+| [SECURITY.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/SECURITY.md) | Keamanan & hardening |
 
 ---
 
 ## 🤝 Kontribusi
 
-Kami menyambut kontribusi dari komunitas! Lihat [CONTRIBUTING.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/CONTRIBUTING.md) untuk:
+Kami menyambut kontribusi dari komunitas! Lihat [CONTRIBUTING.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/CONTRIBUTING.md) untuk:
 
 * Cara setup development environment
 * Coding standards (**PSR‑12**)
@@ -252,7 +252,7 @@ Kami menyambut kontribusi dari komunitas! Lihat [CONTRIBUTING.md](https://github
 
 ### Code of Conduct
 
-Proyek ini mengikuti [Code of Conduct](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/CODE_OF_CONDUCT.md) untuk memastikan lingkungan yang inklusif dan ramah.
+Proyek ini mengikuti [Code of Conduct](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/CODE_OF_CONDUCT.md) untuk memastikan lingkungan yang inklusif dan ramah.
 
 ---
 
@@ -262,15 +262,15 @@ Keamanan adalah prioritas utama. **Jangan mengumbar kerentanan secara publik.**
 
 * **Pelaporan**: Kirim laporan kerentanan ke [security@sangia.org](mailto:security@sangia.org)
 * **Respons**: Pengelola utama akan merespons dalam **48 jam**
-* **Advisori**: Dipublikasikan di [GitHub Security Advisories](https://github.com/mokesano/wizdam-editorial/security/advisories)
+* **Advisori**: Dipublikasikan di [GitHub Security Advisories](https://github.com/mokesano/lumera-edge/security/advisories)
 
-Detail lengkap: [SECURITY.md](https://github.com/mokesano/wizdam-editorial/blob/main/docs/docs/SECURITY.md)
+Detail lengkap: [SECURITY.md](https://github.com/mokesano/lumera-edge/blob/main/docs/docs/SECURITY.md)
 
 ---
 
 ## 📄 Lisensi
 
-Wizdam Editorial dilisensikan di bawah **GNU General Public License v3.0** (GPL‑3.0). Lihat [LICENSE](https://github.com/mokesano/wizdam-editorial/blob/main/docs/LICENSE) untuk teks lengkap.
+Lumera Edge dilisensikan di bawah **GNU General Public License v3.0** (GPL‑3.0). Lihat [LICENSE](https://github.com/mokesano/lumera-edge/blob/main/docs/LICENSE) untuk teks lengkap.
 
 | Izin | Ketentuan |
 | :--- | :--- |
@@ -283,18 +283,18 @@ Wizdam Editorial dilisensikan di bawah **GNU General Public License v3.0** (GPL�
 
 | 🔗 Tautan | Deskripsi |
 | :--- | :--- |
-| [Website Resmi](https://wizdam.sangia.org/) | Halaman utama Wizdam Platform |
-| [Dokumentasi](https://docs.wizdam.sangia.org/) | Dokumentasi online |
-| [Issue Tracker](https://github.com/mokesano/wizdam-editorial/issues) | Laporkan bug atau usulkan fitur |
-| [Community Forum](https://community.wizdam.sangia.org/) | Diskusi komunitas |
-| [Packagist](https://packagist.org/packages/wizdam/wizdam-editorial) | Paket Composer |
-| [Demo Jurnal](https://journals.sangia.org/) | Contoh jurnal yang menggunakan Wizdam |
+| [Website Resmi](https://lumera.sangia.org/) | Halaman utama Lumera Platform |
+| [Dokumentasi](https://lumera.sangia.org/docs) | Dokumentasi online |
+| [Issue Tracker](https://github.com/mokesano/lumera-edge/issues) | Laporkan bug atau usulkan fitur |
+| [Community Forum](https://community.lumera.sangia.org/) | Diskusi komunitas |
+| [Packagist](https://packagist.org/packages/wizdam/lumera-edge) | Paket Composer |
+| [Demo Jurnal](https://journals.sangia.org/) | Contoh jurnal yang menggunakan Lumera |
 
 ---
 
 ## 🙏 Ucapan Terima Kasih
 
-Wizdam Editorial dibangun di atas fondasi yang diletakkan oleh:
+Lumera Edge dibangun di atas fondasi yang diletakkan oleh:
 
 | 🏷️ Atribusi | 🔗 Referensi |
 | :--- | :--- |
@@ -302,16 +302,16 @@ Wizdam Editorial dibangun di atas fondasi yang diletakkan oleh:
 | **Sangia Publishing House** | [journals.sangia.org](https://journals.sangia.org/) |
 | **Komunitas Open Source** | Berbagai library dan framework PHP modern |
 | **Lead Developer** | [Rochmady (mokesano)](https://github.com/mokesano) |
-| **Tim Wizdam** | [Wizdam Archon](https://github.com/archoun) |
+| **Tim Code Lumera** | [Wizdam Archon](https://github.com/archoun) |
 
 ---
 
 ## ⭐ Kontributor
 
-Terima kasih kepada semua kontributor yang telah membantu mengembangkan Wizdam Editorial!
+Terima kasih kepada semua kontributor yang telah membantu mengembangkan Lumera Edge!
 
-<a href="https://github.com/mokesano/wizdam-editorial/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mokesano/wizdam-editorial" alt="Contributors" />
+<a href="https://github.com/mokesano/lumera-edge/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mokesano/lumera-edge" alt="Contributors" />
 </a>
 
 ---
@@ -320,12 +320,12 @@ Terima kasih kepada semua kontributor yang telah membantu mengembangkan Wizdam E
   <br>
   <sub>Dibangun dengan ❤️ untuk memajukan penerbitan ilmiah Indonesia dan dunia</sub>
   <br><br>
-  <a href="https://github.com/mokesano/wizdam-editorial/stargazers">
-    <img src="https://img.shields.io/github/stars/mokesano/wizdam-editorial?style=social" alt="GitHub Stars">
+  <a href="https://github.com/mokesano/lumera-edge/stargazers">
+    <img src="https://img.shields.io/github/stars/mokesano/lumera-edge?style=social" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/mokesano/wizdam-editorial/network/members">
-    <img src="https://img.shields.io/github/forks/mokesano/wizdam-editorial?style=social" alt="GitHub Forks">
+  <a href="https://github.com/mokesano/lumera-edge/network/members">
+    <img src="https://img.shields.io/github/forks/mokesano/lumera-edge?style=social" alt="GitHub Forks">
   </a>
   <br><br>
-  <sub>© 2025–2026 Rochmady & Wizdam Editorial Team. Dilisensikan di bawah GPL‑3.0.</sub>
+  <sub>© 2025–2026 Rochmady & Code Lumera Team. Dilisensikan di bawah GPL‑3.0.</sub>
 </p>

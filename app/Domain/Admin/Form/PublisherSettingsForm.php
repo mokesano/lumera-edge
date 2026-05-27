@@ -7,7 +7,7 @@ namespace App\Domain\Admin\Form;
 /**
  * @file app.Classes.admin.form.PublisherSettingsForm.inc.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Project
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PublisherSettingsForm
@@ -15,7 +15,7 @@ namespace App\Domain\Admin\Form;
  * @see CorePublisherSettingsForm
  *
  * @brief Form to edit publisher settings.
- * [WIZDAM EDITION] Refactored for PHP 8.x
+ * [LUMERA EDGE EDITION] Refactored for PHP 8.x
  */
 
 import('app.Domain.Admin.form.CorePublisherSettingsForm');
@@ -48,7 +48,7 @@ class PublisherSettingsForm extends CorePublisherSettingsForm {
      * @param string|null $template
      */
     public function display($request = null, $template = null) {
-        // [WIZDAM] Singleton Fallback
+        // [LUMERA EDGE] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
         $pressDao = DAORegistry::getDAO('PressDAO');
@@ -58,7 +58,7 @@ class PublisherSettingsForm extends CorePublisherSettingsForm {
         $allThemes = PluginRegistry::loadCategory('themes');
         $themes = [];
         
-        // [WIZDAM] Simplified iteration
+        // [LUMERA EDGE] Simplified iteration
         if (!empty($allThemes)) {
             foreach ($allThemes as $plugin) {
                 $themes[basename($plugin->getPluginPath())] = $plugin;
