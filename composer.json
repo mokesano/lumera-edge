@@ -1,19 +1,19 @@
 {
-    "name": "wizdam/wizdam-editorial",
-    "description": "Wizdam Editorial - Modern Publisher Platform for Journal Management Framework Workflow and Publishing",
+    "name": "lumera/lumera-edge",
+    "description": "Lumera Edge - Modern Publisher Platform for Journal Management Framework Workflow and Publishing",
     "type": "project",
     "license": "GPL-3.0-only",
     "keywords": [
         "publishing",
         "journal",
         "open-access",
-        "wizdam"
+        "lumera"
     ],
-    "homepage": "https://wizdam.sangia.org/",
+    "homepage": "https://lumera.sangia.org/",
     "support": {
-        "issues": "https://github.com/mokesano/wizdam-editorial/issues",
-        "forum": "https://forum.wizdam.sangia.org/",
-        "source": "https://github.com/mokesano/wizdam-editorial"
+        "issues": "https://github.com/mokesano/lumera-edge/issues",
+        "forum": "https://forum.lumera.sangia.org/",
+        "source": "https://github.com/mokesano/lumera-edge"
     },
     "authors": [
         {
@@ -106,10 +106,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php -r \"echo 'Wizdam Editorial Platform installed successfully!\\n';\""
+            "@php -r \"echo 'Lumera Edge Platform installed successfully!\\n';\""
         ],
         "post-update-cmd": [
-            "@php -r \"echo 'Wizdam Editorial Platform updated successfully!\\n';\""
+            "@php -r \"echo 'Lumera Edge Platform updated successfully!\\n';\""
         ],
         "test": "phpunit",
         "cs-check": "phpcs --standard=PSR12 core/Library app",

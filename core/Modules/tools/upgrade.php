@@ -4,14 +4,14 @@ declare(strict_types=1);
 /**
  * @file core/Modules/tools/upgrade.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Contributors
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AppUpgradeTool
  * @ingroup tools
  *
- * @brief CLI tool for upgrading Wizdam.
- * [WIZDAM EDITION] Wizdam Upgrade Tool Implementation.
+ * @brief CLI tool for upgrading Lumera Edge.
+ * [LUMERA EDGE EDITION] Lumera Edge Upgrade Tool Implementation.
  */
 
 require(__DIR__ . '/bootstrap.php');
@@ -43,7 +43,8 @@ class AppUpgradeTool extends UpgradeTool {
     }
 }
 
-// [WIZDAM] Safe instantiation
+// [LUMERA EDGE] Safe instantiation
 $tool = new AppUpgradeTool($argv ?? []);
 $tool->execute();
+
 ?>
