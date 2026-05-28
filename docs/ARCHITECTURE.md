@@ -1,6 +1,6 @@
-# Arsitektur Wizdam Editorial 1.0
+# Arsitektur Lumera Edge 1.0
 
-Dokumentasi lengkap tentang arsitektur, struktur direktori, dan desain sistem Wizdam Editorial.
+Dokumentasi lengkap tentang arsitektur, struktur direktori, dan desain sistem Lumera Edge.
 
 ---
 
@@ -19,7 +19,7 @@ Dokumentasi lengkap tentang arsitektur, struktur direktori, dan desain sistem Wi
 
 ## Overview
 
-Wizdam Editorial 1.0 dibangun dengan prinsip **Separation of Concerns** dan **Modular Design**, memisahkan dengan jelas antara:
+Lumera Edge 1.0 dibangun dengan prinsip **Separation of Concerns** dan **Modular Design**, memisahkan dengan jelas antara:
 
 1. **Core Engine** - Framework inti yang tidak bergantung pada bisnis logic spesifik
 2. **Application Layer** - Logika bisnis spesifik untuk manajemen publikasi
@@ -525,4 +525,4 @@ class AnalyticsServiceProvider extends ServiceProvider {
 
 ---
 
-© 2024 Wizdam Editorial Team
+© 2024 Lumera Edge and Team
