@@ -8,14 +8,14 @@ declare(strict_types=1);
 /**
  * @file core/Modules/xml/XMLParser.inc.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Contributors
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CoreXMLParser
  * @ingroup xml
  *
  * @brief Generic class for parsing an XML document into a data structure.
- * * REFACTORED: Wizdam Edition (PHP 8 Compatibility, No Magic Quotes, Modern XML Handlers)
+ * * REFACTORED: Lumera Edge Edition (PHP 8 Compatibility, No Magic Quotes, Modern XML Handlers)
  */
 
 // The default character encodings
