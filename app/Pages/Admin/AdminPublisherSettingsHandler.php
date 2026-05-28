@@ -7,7 +7,7 @@ namespace App\Pages\Admin;
 /**
  * @file pages.admin.AdminPublisherSettingsHandler.inc.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Project
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AdminPublisherSettingsHandler
@@ -15,7 +15,7 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for changing publisher admin settings.
  *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * [LUMERA EDGE EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.admin.AdminHandler');
@@ -72,13 +72,13 @@ class AdminPublisherSettingsHandler extends AdminHandler {
         $this->validate();
         $this->setupTemplate(true);
         
-        // [WIZDAM] Singleton Fallback
+        // [LUMERA EDGE] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
         
         $site = $request->getSite();
 
         import('app.Domain.Admin.form.SiteSettingsForm');
-        import('app.Domain.File.PublicFileManager'); // [WIZDAM] Explicit import
+        import('app.Domain.File.PublicFileManager'); // [LUMERA EDGE] Explicit import
 
         $settingsForm = new SiteSettingsForm();
         $settingsForm->readInputData();
