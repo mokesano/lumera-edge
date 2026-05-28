@@ -1,6 +1,6 @@
 <?php
 /**
- * WIZDAM EDITORIAL 1.0 - PSR-4 AUTOLOADING FIX SCRIPT
+ * LUMERA EDGE 1.0 - PSR-4 AUTOLOADING FIX SCRIPT
  * 
  * Script ini akan:
  * 1. Rename semua file .inc.php menjadi .php
@@ -111,7 +111,7 @@ function processFile(string $filepath, string $workspace): bool {
 
 // Main execution
 logMessage("========================================");
-logMessage("WIZDAM PSR-4 FIX - Starting at " . date('Y-m-d H:i:s'));
+logMessage("LUMERA EDGE PSR-4 FIX - Starting at " . date('Y-m-d H:i:s'));
 logMessage("Dry Run: " . ($dryRun ? 'YES' : 'NO'));
 logMessage("========================================");
 logMessage("");
