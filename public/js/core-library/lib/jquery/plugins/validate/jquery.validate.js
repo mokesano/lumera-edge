@@ -998,16 +998,13 @@ $.extend($.validator, {
 
 		// http://docs.jquery.com/Plugins/Validation/Methods/url
 		url: function(value, element) {
-			// avoid catastrophic backtracking from complex URL regexes
-			if ( this.optional(element) ) {
+			// Use native URL parsing to avoid catastrophic backtracking in complex regex validation
+			if (this.optional(element)) {
 				return true;
-			}
-			if ( !/^(https?|ftp):\/\//i.test(value) ) {
-				return false;
 			}
 			try {
 				var parsed = new URL(value);
-				return /^(https?|ftp):$/i.test(parsed.protocol) && !!parsed.hostname;
+				return /^(https?|ftp):$/i.test(parsed.protocol);
 			} catch (e) {
 				return false;
 			}
