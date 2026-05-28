@@ -183,9 +183,35 @@ jQuery.validator.addMethod("email2", function(value, element, param) {
 		return true;
 	}
 
-	// Reuse the built-in email validator first, then allow domains without a required TLD.
-	return jQuery.validator.methods.email.call(this, value, element, param) ||
-		/^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)*\.?$/i.test(value);
+	if (/\s/.test(value)) {
+		return false;
+	}
+
+	var at = value.indexOf("@");
+	if (at <= 0 || at !== value.lastIndexOf("@") || at === value.length - 1) {
+		return false;
+	}
+
+	var local = value.slice(0, at);
+	var domain = value.slice(at + 1);
+
+	if (!local || !domain) {
+		return false;
+	}
+
+	// TLD optional: allow single-label domains, but require valid non-empty labels.
+	var labels = domain.split(".");
+	for (var i = 0; i < labels.length; i++) {
+		var label = labels[i];
+		if (!label) {
+			return false;
+		}
+		if (!/^[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_])?$/i.test(label)) {
+			return false;
+		}
+	}
+
+	return true;
 }, jQuery.validator.messages.email);
 
 // same as url, but TLD is optional
