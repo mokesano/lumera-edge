@@ -1,6 +1,6 @@
-# Panduan Migrasi OJS 2.x ke Wizdam Editorial 1.0
+# Panduan Migrasi OJS 2.x ke Lumera Edge 1.0
 
-Panduan lengkap untuk melakukan migrasi dari Open Journal Systems (OJS) 2.x ke Wizdam Editorial 1.0.
+Panduan lengkap untuk melakukan migrasi dari Open Journal Systems (OJS) 2.x ke Lumera Edge 1.0.
 
 ---
 
@@ -19,11 +19,11 @@ Panduan lengkap untuk melakukan migrasi dari Open Journal Systems (OJS) 2.x ke W
 
 ## Overview Migrasi
 
-Wizdam Editorial 1.0 adalah hasil refactoring total dari OJS 2.x dengan perubahan fundamental:
+Lumera Edge 1.0 adalah hasil refactoring total dari Aplikasi Legacy v2.x dengan perubahan fundamental:
 
 ### Apa yang Berubah?
 
-| Aspek | OJS 2.x | Wizdam 1.0 |
+| Aspek | Legacy v2.x | Lumera Edge 1.0 |
 |-------|---------|------------|
 | **Namespace** | Global (PKP*, OJS*) | PSR-4 (Wizdam\Core\*, Wizdam\App\*) |
 | **Struktur** | `lib/pkp/`, `lib/ojs/`, `classes/` | `core/Kernel/`, `core/Modules/`, `app/` |
@@ -718,16 +718,16 @@ Setelah migrasi selesai:
 - [API Documentation](API.md)
 
 ### Community
-- Forum: https://community.wizdam.framework.id
-- GitHub Issues: https://github.com/wizdam/framework/issues
-- Discord: https://discord.gg/wizdam
+- Forum: https://community.lumera.sangia.org
+- GitHub Issues: https://github.com/mokesano/framework/issues
+- Discord: https://discord.gg/lumera
 
 ### Professional Services
-- Migration assistance: support@wizdam.framework.id
-- Custom development: dev@wizdam.framework.id
+- Migration assistance: support@sangia.org
+- Custom development: support.dev@sangia.org
 
 ---
 
-© 2024 Wizdam Editorial Team
+© 2024 Lumera Edge and Team
 
 *Migrasi yang sukses adalah kunci transformasi digital Anda!*
