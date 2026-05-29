@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites plugina</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Webguneko trafikoa analizatzeko doako eta iturburu irekiko aplikazio bat da phpMyVisites. Wizdam Editorialn integratzeko, phpMyVisites instalatuta eduki behar da. Informazio gehiago <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites webgunean</a>.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Webguneko trafikoa analizatzeko doako eta iturburu irekiko aplikazio bat da phpMyVisites. Lumeran integratzeko, phpMyVisites instalatuta eduki behar da. Informazio gehiago <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites webgunean</a>.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Ezarpenak</message>

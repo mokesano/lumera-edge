@@ -13,7 +13,7 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">Plugin OpenAIRE menambahkan elemen projectID ke metadata artikel dan memperluas interface OAI-PMH menurut Petunjuk OpenAIRE 1.1, membantu jurnal Wizdam Editorial untuk menjadi OpenAIRE compliant.</message>
+	<message key="plugins.generic.openAIRE.description">Plugin OpenAIRE menambahkan elemen projectID ke metadata artikel dan memperluas interface OAI-PMH menurut Petunjuk OpenAIRE 1.1, membantu jurnal Lumera untuk menjadi OpenAIRE compliant.</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
 	<message key="plugins.generic.openAIRE.metadata">Metadata spesifik OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.projectID.description">(ProjectID setara dengan jumlah Perjanjian Hibah)</message>

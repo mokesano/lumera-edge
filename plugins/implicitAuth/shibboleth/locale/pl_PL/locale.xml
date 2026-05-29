@@ -16,5 +16,5 @@
  
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. This is a site-wide plugin and is enabled in the Wizdam Editorial config file.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. This is a site-wide plugin and is enabled in the Lumera config file.</message>
 </locale>

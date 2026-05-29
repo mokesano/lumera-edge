@@ -56,8 +56,8 @@
        -->
 
        <!-- Common Messages -->
-       <message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-       <message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+       <message key="common.openJournalSystems">Lumera Systems</message>
+       <message key="common.scholarWizdam">Lumera Systems</message>
        
        <message key="common.confirmComplete">Ви впевнені, що хочете позначити це завдання як завершене? Після цього, ймовірно, ви не матимете можливості вносити зміни.</message>
        <message key="common.payment">Платіж</message>

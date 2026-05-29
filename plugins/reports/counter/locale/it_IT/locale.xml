@@ -37,6 +37,6 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Totale epr tutte le riviste</message>
 	<message key="plugins.reports.counter.1a.anonymous">anonimo</message>
-	<message key="plugins.reports.counter.legacyStats">I link sottostanti generano report obsoleti, utilizzando i vecchi dati del plugin, che non sono COUNTER-ready. Se vuoi generare un report COUNTER aggiornato utilizzando il nuovo tipo di metrica Wizdam Editorial COUNTER metric type, usa i link qui sopra.</message>
+	<message key="plugins.reports.counter.legacyStats">I link sottostanti generano report obsoleti, utilizzando i vecchi dati del plugin, che non sono COUNTER-ready. Se vuoi generare un report COUNTER aggiornato utilizzando il nuovo tipo di metrica Lumera COUNTER metric type, usa i link qui sopra.</message>
 	<message key="plugins.reports.counter.allCustomers">Tutti gli utenti</message>
 </locale>

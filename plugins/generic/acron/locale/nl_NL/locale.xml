@@ -14,7 +14,7 @@
 
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.acron.name">Acron Plugin</message>
-	<message key="plugins.generic.acron.description">Deze plugin probeert de afhankelijkheid van Wizdam Editorial van periodieke taken tools als 'cron' te verminderen.</message>
+	<message key="plugins.generic.acron.description">Deze plugin probeert de afhankelijkheid van Lumera van periodieke taken tools als 'cron' te verminderen.</message>
 	<message key="plugins.generic.acron.enabled">The Acron Plugin is ingeschakeld.</message>
 	<message key="plugins.generic.acron.disabled">The Acron Pluginis uitgeschakeld.</message>
 

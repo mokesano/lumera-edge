@@ -38,6 +38,6 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Итого для всех журналов</message>
 	<message key="plugins.reports.counter.1a.anonymous">анонимно</message>
-	<message key="plugins.reports.counter.legacyStats">Ссылки ниже генерируют устаревшие отчеты, используя данные старого плагина, который не является готовым для COUNTER. Если вы хотите сгенерировать текущие отчеты «COUNTER», используя новый тип метрики Wizdam Editorial COUNTER, воспользуйтесь ссылками выше.</message>
+	<message key="plugins.reports.counter.legacyStats">Ссылки ниже генерируют устаревшие отчеты, используя данные старого плагина, который не является готовым для COUNTER. Если вы хотите сгенерировать текущие отчеты «COUNTER», используя новый тип метрики Lumera COUNTER, воспользуйтесь ссылками выше.</message>
 	<message key="plugins.reports.counter.allCustomers">Все покупатели</message>
 </locale>

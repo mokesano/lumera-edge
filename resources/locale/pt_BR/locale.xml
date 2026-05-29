@@ -684,8 +684,8 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="about.availableSubscriptionTypes">Tipos de Assinaturas</message>
 	<message key="about.journalSponsorship">Patrocínio da revista</message>
 	<message key="about.aboutThisPublishingSystem">Sobre este sistema de publicação</message>
-	<message key="about.aboutOJSJournal"><![CDATA[A revista usa o Wizdam Editorial Systems (ScholarWizdam {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas, desenvolvido com suporte e distribuição pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[O portal utiliza o Wizdam Editorial System (ScholarWizdam {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas desenvolvido com suporte e distribuição  pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[A revista usa o Lumera Systems (ScholarWizdam {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas, desenvolvido com suporte e distribuição pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[O portal utiliza o Lumera System (ScholarWizdam {$ojsVersion}), sistema de código livre gratuito para a administração e a publicação de revistas desenvolvido com suporte e distribuição  pelo <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> sob a licença GNU General Public License.]]></message>
 
 	<!-- Announcement -->
 
@@ -1092,7 +1092,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.orcid">ORCID iD</message>
 	<message key="user.orcid.description"><![CDATA[O identificador ORCID pode ser obtido no <a href="http://orcid.org/" target="_blank">registro ORCID</a>. Você deve aceitar os padrões para apresentação de iD ORCID e incluir a URL completa (por exemplo: <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
 	<message key="user.profile.form.orcidInvalid">O identificador ORCID fornecido é inválido.</message>
-	<message key="manager.setup.preservationDescription"><![CDATA[O Wizdam Editorial Systems é compatível com o sistema <a href="http://www.lockss.org/" target="_blank"> LOCKSS </a> (Lots of Copies Keep Stuff Safe) para garantir a preservação segura e permanente de sua revista. Você tem várias opções para a inclusão da sua revista em uma rede LOCKSS:]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[O Lumera Systems é compatível com o sistema <a href="http://www.lockss.org/" target="_blank"> LOCKSS </a> (Lots of Copies Keep Stuff Safe) para garantir a preservação segura e permanente de sua revista. Você tem várias opções para a inclusão da sua revista em uma rede LOCKSS:]]></message>
 	<message key="user.profile.implicitAuthChangePasswordInstructions">Caso tenha acessado o sistema por meio de sua conta Shibboleth, siga as instruções da sua organização para os processos de alteração de senha. Para cadastros locais no sistema, continue com o processo abaixo.</message>
 	<message key="user.login.implicitAuthLogin">Acesso via Shibboleth</message>
 	<message key="user.register.emailValidation">Validação de e-mail obrigatória</message>

@@ -34,8 +34,8 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+	<message key="common.openJournalSystems">Lumera Systems</message>
+	<message key="common.scholarWizdam">Lumera Systems</message>
 
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Aide</message>
@@ -271,12 +271,12 @@
 	<message key="subscriptionManager.subscriptionManagement">Gestion des abonnements</message>
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Wizdam Editorial Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
-	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Wizdam Editorial Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
+	<message key="plugins.categories.generic.description">Les plugiciels génériques sont utilisés pour étendre les possibilités d'Lumera Systems de nombreuses façons qui ne sont pas prises en charge par les autres catégories de plugiciels.</message>
+	<message key="plugins.categories.auth.description">Les plugiciels d'autorisation permettent au Lumera Systems de déléguer la tâche d'authentification des utilisateurs à d'autres systèmes, comme les serveurs LDAP.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Wizdam Editorial Systems prend en charge le système <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
+	<message key="manager.setup.lockssDescription"><![CDATA[Lumera Systems prend en charge le système <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) afin d'assurer l'archivage sécuritaire et permanent pour la revue. LOCKSS est un logiciel libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues numériques sélectionnées en interrogant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée  par rapport aux caches des autres bibliothèques, et si son contenu est corrompu ou perdu, les autres caches de la revue sont utilisés pour le restaurer.
 	<br /><br />
-	La configuration de la prise en charge de LOCKSS pour Wizdam Editorial Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
+	La configuration de la prise en charge de LOCKSS pour Lumera Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">{$oaiUrl}</span>.
@@ -549,13 +549,13 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.availableSubscriptionTypes">Types d'abonnement</message>
 	<message key="about.journalSponsorship">Commanditaires de la revue</message>
 	<message key="about.aboutThisPublishingSystem">À propos de ce système de publication</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Cette revue utilise Wizdam Editorial Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href="http://wizdam.sangia.org/">Sangia Publishing House</a> sous la license publique générale GNU.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Ce site utilise Wizdam Editorial Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href="http://wizdam.sangia.org/">Sangia Publishing House</a> sous la license publique générale GNU.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[Cette revue utilise Lumera Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href="http://wizdam.sangia.org/">Sangia Publishing House</a> sous la license publique générale GNU.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Ce site utilise Lumera Systems {$ojsVersion}, un logiciel de gestion et d'édition de revues à code source libre développé, pris en charge et distribué librement par le <a href="http://wizdam.sangia.org/">Sangia Publishing House</a> sous la license publique générale GNU.]]></message>
 
 	<!-- Announcement -->
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Aide d'Wizdam Editorial Systems</message>
+	<message key="help.ojsHelp">Aide d'Lumera Systems</message>
 	<message key="help.ojsHelpAbbrev">Aide d'ScholarWizdam</message>
 
 	<!-- Article Logs -->
@@ -951,5 +951,5 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="user.orcid">Identifiant ORCID</message>
 	<message key="user.profile.form.orcidInvalid">L'identifiant ORCID que vous avez fourni n'est pas valide.</message>
 	<message key="user.orcid.description"><![CDATA[Les identifiants ORCID doivent être assignés par le <a href="http://orcid.org/" target="_blank">registre d'ORCID</a>. Vous devez vous conformer à leur normes pour le format des indentifiants ORCID; vous devez également inclure l'identifiant uniforme de ressource (URI) au complet (par exemple, <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
-	<message key="manager.setup.preservationDescription"><![CDATA[Wizdam Editorial Systems soutient <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), système qui permet d’assurer la conservation pérenne et sécurisée de votre revue. Vous avez plusieurs options pour intégrer votre revue dans le réseau LOCKSS :]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Lumera Systems soutient <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), système qui permet d’assurer la conservation pérenne et sécurisée de votre revue. Vous avez plusieurs options pour intégrer votre revue dans le réseau LOCKSS :]]></message>
 </locale>

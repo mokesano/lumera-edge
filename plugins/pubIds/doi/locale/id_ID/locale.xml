@@ -13,11 +13,11 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Plugin ini mengaktifkan penugasan Digital Object Identifiers untuk terbitan, artikel, galley dan file tambahan dalam Wizdam Editorial.</message>
+	<message key="plugins.pubIds.doi.description">Plugin ini mengaktifkan penugasan Digital Object Identifiers untuk terbitan, artikel, galley dan file tambahan dalam Lumera.</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Pengaturan Plugin DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.description">Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam Wizdam Editorial:</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam Lumera:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Konten Jurnal</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Silahkan pilih objek DOIs yang harus ditugaskan.</message>
@@ -33,7 +33,7 @@
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Akhiran DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gunakan pola seperti di bawah untuk menciptakan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk tahun, %a untuk ID artikel Wizdam Editorial, %g untuk ID galley Wizdam Editorial, %s untuk ID file tambahan dan %p untuk nomor halaman. </message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Gunakan pola seperti di bawah untuk menciptakan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk tahun, %a untuk ID artikel Lumera, %g untuk ID galley Lumera, %s untuk ID file tambahan dan %p untuk nomor halaman. </message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">untuk terbitan</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">untuk artikel</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">untuk galley</message>

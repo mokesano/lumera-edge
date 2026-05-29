@@ -14,11 +14,11 @@
 <locale name="en_US" full_name="U.S. English">
 
 	<message key="plugins.generic.stopForumSpam.displayName">Stop Forum Spam Plugin</message>
-	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Integrate Wizdam Editorial with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.]]></message>
+	<message key="plugins.generic.stopForumSpam.description"><![CDATA[Integrate Lumera with the Stop Forum Spam prevention system, which aims to reduce the amount of spam registrations.]]></message>
 
 	<message key="plugins.generic.stopForumSpam.manager.settings">Settings</message>
 	<message key="plugins.generic.stopForumSpam.manager.stopForumSpamSettings">Stop Forum Spam Settings</message>
-	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>With this plugin enabled, Wizdam Editorial will check to see if a submitted user registration contains elements that are on the Stop Forum Spam list.  Registrations will be denied if this is the case.</p>]]></message>
+	<message key="plugins.generic.stopForumSpam.manager.settings.description"><![CDATA[<p>With this plugin enabled, Lumera will check to see if a submitted user registration contains elements that are on the Stop Forum Spam list.  Registrations will be denied if this is the case.</p>]]></message>
 	<message key="plugins.generic.stopForumSpam.manager.settings.checkIp">Check registration IP</message>
 	<message key="plugins.generic.stopForumSpam.manager.settings.checkEmail">Check registration email address</message>
 	<message key="plugins.generic.stopForumSpam.manager.settings.checkUsername">Check registration username (enable with caution!)</message>

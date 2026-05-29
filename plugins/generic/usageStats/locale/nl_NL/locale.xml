@@ -31,9 +31,9 @@
 	<message key="plugins.generic.usageStats.noCounterBotList">De COUNTER bot list could kon niet gevonden worden, of er zijn er meerdere. Het bestand {$file} kon niet verwerkt worden</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">De COUNTER bot list {$botlist} kon niet geopend worden. Het bestand {$file} kon niet verwerkt worden.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Wizdam Editorial gebruiksstatistieken rapport</message>
-	<message key="plugins.reports.usageStats.report.description">Wizdam Editorial standaard gebruiksstatistieken rapport (geschikt voor COUNTER)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Lumera gebruiksstatistieken rapport</message>
+	<message key="plugins.reports.usageStats.report.description">Lumera standaard gebruiksstatistieken rapport (geschikt voor COUNTER)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
 </locale>

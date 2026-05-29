@@ -15,8 +15,8 @@
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.translator.name">Dodatak za prevođenje</message>
 	<message key="plugins.generic.translator.description">Ovaj dodatak omogućuje web uređivanje fajlova prevoda.</message>
-	<message key="plugins.generic.translator.longdescription">Ova oblast omogućava Administratorima sajta da napravi, promeni i proveri prevode Wizdam Editorial sistema. Ovo je na nivou sajta i ne bi trebalo koristiti za prilagođavanje jednog Wizdam Editorial časopisa. Ako ispravite ili napravite prevod, molimo Vas da razmotrite slanje u javni projekat za distribuciju znanja sa budućim izdanjima.</message>
-	<message key="plugins.generic.translator.localeDescription">Ova strana navodi sve komponente Wizdam Editorial prevoda i prevodiocu pruža mogućnost da izmeni svaki. Pun prevod prevoda treba da sadrži kompletne prevode svih komponenti.</message>
+	<message key="plugins.generic.translator.longdescription">Ova oblast omogućava Administratorima sajta da napravi, promeni i proveri prevode Lumera sistema. Ovo je na nivou sajta i ne bi trebalo koristiti za prilagođavanje jednog Lumera časopisa. Ako ispravite ili napravite prevod, molimo Vas da razmotrite slanje u javni projekat za distribuciju znanja sa budućim izdanjima.</message>
+	<message key="plugins.generic.translator.localeDescription">Ova strana navodi sve komponente Lumera prevoda i prevodiocu pruža mogućnost da izmeni svaki. Pun prevod prevoda treba da sadrži kompletne prevode svih komponenti.</message>
 	
 	<message key="plugins.generic.translator.tarMissing">Izvoz funkcija ovog dodatka je deaktivirana pošto nije moguće pronaći konfigurisan tar binari na serveru. Molimo proverite da li imate instaliran program tar, a zatim podesite putanju do tar binari u config.inc.php [cli] sekciji!</message>
 	

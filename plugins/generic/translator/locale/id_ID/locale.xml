@@ -14,8 +14,8 @@
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.translator.name"> Plugin Translator </message> 
 	<message key="plugins.generic.translator.description"> Plugin ini memungkinkan pemeliharaan web-based file terjemahan.</message> 
-	<message key="plugins.generic.translator.longdescription"> Area ini memungkinkan  Administrator Situs untuk membangun, memodifikasi, dan mengecek terjemahan IWizdam Editorial. Ini adalah site-wide dan tidak seharusnya digunakan untuk menyesuaikan jurnal Wizdam Editorial tunggal.</message> 
-	<message key="plugins.generic.translator.localeDescription"> Halaman ini mendaftar semua komponen terjemahan IWizdam Editorial dan menyediakan penerjemah kesempatan untuk mengedit. Terjemahan penuh dari sebuah naskah terjemahan harus mengandung terjemahan lengkap semua komponen.</message>	
+	<message key="plugins.generic.translator.longdescription"> Area ini memungkinkan  Administrator Situs untuk membangun, memodifikasi, dan mengecek terjemahan ILumera. Ini adalah site-wide dan tidak seharusnya digunakan untuk menyesuaikan jurnal Lumera tunggal.</message> 
+	<message key="plugins.generic.translator.localeDescription"> Halaman ini mendaftar semua komponen terjemahan ILumera dan menyediakan penerjemah kesempatan untuk mengedit. Terjemahan penuh dari sebuah naskah terjemahan harus mengandung terjemahan lengkap semua komponen.</message>	
 	<message key="plugins.generic.translator.tarMissing"> Fungsi ekspor plugin ini telah diaktivasi karena configured tar binary tidak bisa ditemukan di sistem ini. Pastikan bahwa Anda mempunyai program tar yang diinstal dan kemudian mengatur jalan ke tar binary di bagian config.inc.php's [cli]!</message>
 	<message key="plugins.generic.translator.localeName"> Nama locale </message> 
 	<message key="plugins.generic.translator.localeKey"> Kunci </message> 

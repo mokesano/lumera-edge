@@ -16,5 +16,5 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Dette plugin gælder hele sitet og aktiveres i Wizdam Editorial config filen.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Dette plugin gælder hele sitet og aktiveres i Lumera config filen.</message>
 </locale>

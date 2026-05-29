@@ -125,7 +125,7 @@
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">dia(s) antes do prazo de revisão.</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Enviar aos autores um lembrete</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">dia(s) após o prazo de revisão.</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the Wizdam Editorial configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the Wizdam Editorial documentation.]]></message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the Lumera configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the Lumera documentation.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">Informação Adicionar</message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Informação adicionar publicado com livros em revisão.</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Por favor, especifique o número de semanas para o prazo de revisão do livro.</message>

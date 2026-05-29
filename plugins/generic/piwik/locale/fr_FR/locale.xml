@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Plugiciel Piwik</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Intégrez Wizdam Editorial avec Piwik, une application gratuite et en accès libre qui analyse le trafic d'un site web. Cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href="http://piwik.org/" title="piwik site">site Piwik</a> pour de plus amples informations.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Intégrez Lumera avec Piwik, une application gratuite et en accès libre qui analyse le trafic d'un site web. Cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href="http://piwik.org/" title="piwik site">site Piwik</a> pour de plus amples informations.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Paramètres</message>

@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Plugin Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integruje Wizdam Editorial s Google Analytics, aplikací od Googlu pro sledování provozu webových stránek. Vyžaduje, abyste již měli založený Google Analytics účet. Viz prosím <a href="http://www.google.com/analytics/" title="stránka Google Analytics"> stránky Google Analytics</a> pro více informací.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integruje Lumera s Google Analytics, aplikací od Googlu pro sledování provozu webových stránek. Vyžaduje, abyste již měli založený Google Analytics účet. Viz prosím <a href="http://www.google.com/analytics/" title="stránka Google Analytics"> stránky Google Analytics</a> pro více informací.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Nastavení</message>

@@ -47,7 +47,7 @@ Příklady:
 	<message key="plugins.importexport.users.import.errorsOccurred">Během importu došlo k chybám</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Potvrďte, že toto jsou uživatelé, které chcete importovat do systému</message>
 	<message key="plugins.importexport.users.import.warning">Varování</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Nelze použít hesla šifrovaná pomocí {$importHash}; Wizdam Editorial je nakofigurováno pro použití {$ojsHash}. Pokud budete pokračovat, budete muset resetovat hesla importovaných uživatelů.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Nelze použít hesla šifrovaná pomocí {$importHash}; Lumera je nakofigurováno pro použití {$ojsHash}. Pokud budete pokračovat, budete muset resetovat hesla importovaných uživatelů.</message>
 	<message key="plugins.importexport.users.unknownJournal">Byla specifikována neznámá cesta k časopisu "{$journalPath}".</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Exportovat uživatele</message>

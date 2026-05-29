@@ -129,7 +129,7 @@
        <message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">днів перед кінцевою датою рецензування.</message>
        <message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Надсилати авторам нагадування поштою через</message>
        <message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">днів після кінцевої дати рецензування.</message>
-       <message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію, адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації Wizdam Editorial. Крім того, як зазначено у документації Wizdam Editorial, налаштування цієї опції може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></message>
+       <message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Примітка:</strong> Щоб активувати цю опцію, адміністратор сайту повинен дозволити директиву <tt>scheduled_tasks</tt> у файлі конфігурації Lumera. Крім того, як зазначено у документації Lumera, налаштування цієї опції може вимагати також додаткових конфігурацій (що можливо не на всіх серверах).]]></message>
        <message key="plugins.generic.booksForReview.settings.additionalInformation">Додаткова інформація</message>
        <message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Додаткова інформація, яка повинна публікуватися разом з книгами до рецензії.</message>
        <message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Будь ласка, вкажіть кількість тижнів до настання кінцевої дати рецензування книг.</message>

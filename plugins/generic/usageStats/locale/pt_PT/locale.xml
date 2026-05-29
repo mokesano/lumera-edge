@@ -36,7 +36,7 @@
 	<message key="plugins.reports.usageStats.report.displayName">Relatório de Estatísticas de Utilização da Revista</message>
 	<message key="plugins.reports.usageStats.report.description">Relatório de Estatísticas de Utilização da Revista(COUNTER)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/COUNTER</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Opção de dados privados</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respeitar privacidade dados</message>
 	<message key="plugins.generic.usageStats.settings.archives">Arquivos</message>

@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Modulul phpMyVisites</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integrează Wizdam Editorial cu phpMyVisites: o aplicaţie open source pentru analiza traficului pe site. Necesită instalarea deja a lui phpMyVisites. Vedeţi <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">siteul phpMyVisites</a> pentru mai multe informaţii.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrează Lumera cu phpMyVisites: o aplicaţie open source pentru analiza traficului pe site. Necesită instalarea deja a lui phpMyVisites. Vedeţi <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">siteul phpMyVisites</a> pentru mai multe informaţii.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Setări</message>

@@ -82,7 +82,7 @@
 	<message key="plugins.generic.pln.notifications.archive_tar_missing">Devi installare l'estensione Archive_Tar PHP per poter abilitare la Wizdam PLN.</message>
 	<message key="plugins.generic.pln.notifications.php5_missing">La Wizdam PLN richiede PHP 5 o superiore.</message>
 
-	<message key="plugins.generic.pln.error.include.bagit">La libreria BagIt, già compresa dalam Wizdam Editorial, non può essere caricata, probabilmente a causa di qualche requisito mancante.</message>
+	<message key="plugins.generic.pln.error.include.bagit">La libreria BagIt, già compresa dalam Lumera, non può essere caricata, probabilmente a causa di qualche requisito mancante.</message>
 	<message key="plugins.generic.pln.error.network.servicedocument">Errore di rete {$error} connettendosi alla PLN per ricevere il service document.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Errore di rete {$error} connettendosi alla PLN per la trasmissione del versamento</message>
 	<message key="plugins.generic.pln.error.network.swordstatement">Errore di rete {$error} connettendosi alla PLN per ricevere gli aggiornamenti sullo stato del versamento.</message>

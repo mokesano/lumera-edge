@@ -13,6 +13,6 @@
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Ini adalah plugin site-wide dan diaktifkan di file konfigurasi Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Ini adalah plugin site-wide dan diaktifkan di file konfigurasi Lumera.</message>
 </locale>
 

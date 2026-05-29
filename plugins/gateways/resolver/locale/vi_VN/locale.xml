@@ -15,6 +15,6 @@
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.gateways.resolver.displayName">Công cụ Phân giải</message>
 	<message key="plugins.gateways.resolver.description">Công cụ này phân giải các số tạp chí và bài viết dựa trên thông tin trích dẫn.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Không thể phân giả một đối tượng sử dụng thông tin trích dẫn cụ thể đã cho. Đảm bảo rằng thông tin trích dẫn đầy đủ và tham chiếu tới một đối tượng trong phiên bản phần mềm Wizdam Editorial này.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Không thể phân giả một đối tượng sử dụng thông tin trích dẫn cụ thể đã cho. Đảm bảo rằng thông tin trích dẫn đầy đủ và tham chiếu tới một đối tượng trong phiên bản phần mềm Lumera này.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Xuất kho dữ liệu</message>
 </locale>

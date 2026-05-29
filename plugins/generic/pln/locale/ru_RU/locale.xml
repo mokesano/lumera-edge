@@ -85,7 +85,7 @@
 	<message key="plugins.generic.pln.notifications.archive_tar_missing">Расширение PHP Archive_Tar должно быть установлено до включения Wizdam PLN.</message>
 	<message key="plugins.generic.pln.notifications.php5_missing">Wizdam PLN требует PHP версии 5 или выше.</message>
 
-	<message key="plugins.generic.pln.error.include.bagit">Библиотеку BagIt, входящую в состав Wizdam Editorial, не удается загрузить, скорее всего из-за отсутствия необходимых для ее работы компонент.</message>
+	<message key="plugins.generic.pln.error.include.bagit">Библиотеку BagIt, входящую в состав Lumera, не удается загрузить, скорее всего из-за отсутствия необходимых для ее работы компонент.</message>
 	<message key="plugins.generic.pln.error.network.servicedocument">Ошибка сети {$error} при подключении к PLN для получения служебного документа.</message>
 	<message key="plugins.generic.pln.error.network.deposit">Ошибка сети {$error} при подключении к PLN для отправки депонируемого объекта.</message>
 	<message key="plugins.generic.pln.error.network.swordstatement">Ошибка сети {$error} при подключении к PLN для получения обновленного статуса депонируемого объекта.</message>

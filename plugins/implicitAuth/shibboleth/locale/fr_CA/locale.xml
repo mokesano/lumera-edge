@@ -16,5 +16,5 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugiciel ShibAuth</message>
-	<message key="plugins.implicitAuth.shibboleth.description">Plugiciel ShibAuth. Il s'agit d'un plugiciel global pour l'ensemble du site et qui est activé dans le fichier de configuration Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Plugiciel ShibAuth. Il s'agit d'un plugiciel global pour l'ensemble du site et qui est activé dans le fichier de configuration Lumera.</message>
 </locale>

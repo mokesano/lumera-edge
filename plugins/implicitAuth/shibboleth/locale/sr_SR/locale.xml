@@ -16,5 +16,5 @@
  
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth dodatak</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Ovo je dodatak za ceo sajt i uključuje se u Wizdam Editorial konfiguracionom fajlu.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Ovo je dodatak za ceo sajt i uključuje se u Lumera konfiguracionom fajlu.</message>
 </locale>

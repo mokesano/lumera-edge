@@ -52,8 +52,8 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+	<message key="common.openJournalSystems">Lumera Systems</message>
+	<message key="common.scholarWizdam">Lumera Systems</message>
 	<message key="common.confirmComplete">Czy na pewno chcesz oznaczyc zadania jako wykonane? Po oznaczeniu edycja nie będzie dostępna.</message>
 	<message key="common.payment">Płatność</message>
 	<message key="common.payments">Płatności</message>

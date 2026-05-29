@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Модуль Piwik</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Модуль інтегрує Wizdam Editorial із Piwik - безкоштовним пакетом з відкритим вихідним кодом, призначеним для аналізу трафіку веб-сайту. Модуль потребує, щоб пакет Piwik був встановленим на сервері. Більше інформації можна отримати на <a href="http://piwik.org/" title="piwik site">сайті Piwik</a>.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Модуль інтегрує Lumera із Piwik - безкоштовним пакетом з відкритим вихідним кодом, призначеним для аналізу трафіку веб-сайту. Модуль потребує, щоб пакет Piwik був встановленим на сервері. Більше інформації можна отримати на <a href="http://piwik.org/" title="piwik site">сайті Piwik</a>.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Налаштування</message>

@@ -24,10 +24,10 @@
 	<message key="plugins.generic.usageStats.displayName">Statistiky využití</message>
 	<message key="plugins.generic.usageStats.description">Present data objects usage statistics. Can use server access log files to extract statistics.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Statistika využití Wizdam Editorial</message>
-	<message key="plugins.reports.usageStats.report.description">Wizdam Editorial standardní zpráva využití (COUNTER ready)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Statistika využití Lumera</message>
+	<message key="plugins.reports.usageStats.report.description">Lumera standardní zpráva využití (COUNTER ready)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/POČÍTADLO</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/POČÍTADLO</message>
 	<message key="plugins.reports.usageStats.metricType.full">Statistika Open Journal Systems (COUNTER ready)</message>
 	<message key="plugins.generic.usageStats.usageStatsLoaderName">Statistika nahrávání souborů</message>
 	<message key="plugins.generic.usageStats.removeUrlError">Řádek číslo {$lineNumber} v souboru {$file} obsahuje url, ze kterého nejde odstranit základní url.</message>

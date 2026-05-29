@@ -47,7 +47,7 @@
 	<message key="plugins.importexport.users.import.errorsOccurred">导入出错</message>
 	<message key="plugins.importexport.users.import.confirmUsers">确认这些用户都是你想导入到系统中</message>
 	<message key="plugins.importexport.users.import.warning">警告</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">无法使用{$importHash}来加密用户密码；Wizdam Editorial将依据期配置使用{$ojsHash}。如果继续，你需要重置导入用户的密码。(Cannot use passwords hashed with {$importHash}; Wizdam Editorial is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">无法使用{$importHash}来加密用户密码；Lumera将依据期配置使用{$ojsHash}。如果继续，你需要重置导入用户的密码。(Cannot use passwords hashed with {$importHash}; Lumera is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
 	<message key="plugins.importexport.users.unknownJournal">指定了一个未知的期刊路径.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">导出用户</message>

@@ -35,8 +35,8 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+	<message key="common.openJournalSystems">Lumera Systems</message>
+	<message key="common.scholarWizdam">Lumera Systems</message>
 	<message key="common.confirmComplete">Er du sikker på, at du vil markere denne opgave som fuldført? Du kan muligvis ikke foretage ændringer senere.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>

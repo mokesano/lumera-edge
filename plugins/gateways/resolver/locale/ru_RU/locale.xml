@@ -15,6 +15,6 @@
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.gateways.resolver.displayName">Плагин распознавания</message>
 	<message key="plugins.gateways.resolver.description">Этот плагин распознает выпуски и статьи, используя информацию в ссылке.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Не удается однозначно распознать материал по предоставленной в ссылке информации. Пожалуйста убедитесь, что ссылка полная и относится к материалу, опубликованному на данном сервере Wizdam Editorial.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Не удается однозначно распознать материал по предоставленной в ссылке информации. Пожалуйста убедитесь, что ссылка полная и относится к материалу, опубликованному на данном сервере Lumera.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Экспортировать подборки</message>
 </locale>

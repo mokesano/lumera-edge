@@ -16,5 +16,5 @@
  
 <locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Acest modul se aplică în tot siteul şi este activat din fişierul de configurare al Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Acest modul se aplică în tot siteul şi este activat din fişierul de configurare al Lumera.</message>
 </locale>

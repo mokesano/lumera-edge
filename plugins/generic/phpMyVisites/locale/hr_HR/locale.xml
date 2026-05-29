@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites dodatak</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integrirajte Wizdam Editorial sa phpMyVisites, besplatnom aplikacijom otvorenog koda namijenjenoj analizi mrežnog prometa. Aktivacija zahtijeva prethodnu instalaciju phpMyVisites aplikacije. Za više informacija konzultirajte <a href="http://www.phpmyvisites.us/" title="phpMyVisites stranice">phpMyVisites stranice</a>.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrirajte Lumera sa phpMyVisites, besplatnom aplikacijom otvorenog koda namijenjenoj analizi mrežnog prometa. Aktivacija zahtijeva prethodnu instalaciju phpMyVisites aplikacije. Za više informacija konzultirajte <a href="http://www.phpmyvisites.us/" title="phpMyVisites stranice">phpMyVisites stranice</a>.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Postavke</message>

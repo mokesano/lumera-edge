@@ -14,5 +14,5 @@
  
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.driver.displayName">Плагин «DRIVER»</message>
-	<message key="plugins.generic.driver.description">Плагин «DRIVER» расширяет интерфейс OAI-PMH в соответствии с DRIVER Guidelines 2.0, помогая журналам Wizdam Editorial становиться DRIVER-совместимыми.</message>
+	<message key="plugins.generic.driver.description">Плагин «DRIVER» расширяет интерфейс OAI-PMH в соответствии с DRIVER Guidelines 2.0, помогая журналам Lumera становиться DRIVER-совместимыми.</message>
 </locale>

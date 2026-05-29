@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Plugin phpMyVisites</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Gabungkan Wizdam Editorial dengan phpMyVisites, aplikasi analis lalu lintas situs web sumber terbuka. Memerlukan phpMyVisites sudah diinstal. Lihat <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">situs phpMyVisites</a> untuk informasi lebih lanjut.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Gabungkan Lumera dengan phpMyVisites, aplikasi analis lalu lintas situs web sumber terbuka. Memerlukan phpMyVisites sudah diinstal. Lihat <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">situs phpMyVisites</a> untuk informasi lebih lanjut.]]></message>
 	<!-- Manajemen Pengaturan phpMyVisites -->
 	<message key="plugins.generic.phpmv.manager.settings">Pengaturan</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Pengaturan phpMyVisites</message>

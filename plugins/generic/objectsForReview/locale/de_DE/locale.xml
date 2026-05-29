@@ -85,7 +85,7 @@
 	<message key="plugins.generic.objectsForReview.settings.enableDueReminderBeforeDays2">Tag(e) vor dem Fälligkeitsdatum schicken.</message>
 	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays1">Autor/innen eine Erinnerungs-E-Mail</message>
 	<message key="plugins.generic.objectsForReview.settings.enableDueReminderAfterDays2">Tag(e) nach dem Fälligkeitsdatum schicken.</message>
-	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss der/die Zeitschriftenverwalter/in die <tt>scheduled_tasks</tt>-Option in der Wizdam Editorial-Konfigurationsdatei auswählen. Eventuell sind weitere Einstellungen des Servers (die vielleicht nicht auf allen Servern möglich sind) erforderlich, um diese Funktionen zu ermöglichen, vgl. die Wizdam Editorial-Dokumentation.]]></message>
+	<message key="plugins.generic.objectsForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss der/die Zeitschriftenverwalter/in die <tt>scheduled_tasks</tt>-Option in der Lumera-Konfigurationsdatei auswählen. Eventuell sind weitere Einstellungen des Servers (die vielleicht nicht auf allen Servern möglich sind) erforderlich, um diese Funktionen zu ermöglichen, vgl. die Lumera-Dokumentation.]]></message>
 	<message key="plugins.generic.objectsForReview.settings.additionalInformation">Zusätzliche Informationen</message>
 	<message key="plugins.generic.objectsForReview.settings.additionalInformationDescription">Zusätzliche Informationen, die zusammen mit der Liste der Rezensionsobjekte veröffentlicht werden.</message>
 

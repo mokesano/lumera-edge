@@ -14,7 +14,7 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area Wizdam Editorial menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area Wizdam Editorial menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor. <strong>TinyMCE sekarang belum diinstal; mohon instal ini di {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area Lumera menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Plugin ini memudahkan pengeditan WYSIWYG untuk teks area Lumera menggunakan <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> konten editor. <strong>TinyMCE sekarang belum diinstal; mohon instal ini di {$tinyMcePath}.</strong>]]></message>
 	<message key="plugins.generic.tinymce.settings">Pengaturan</message>
 </locale>

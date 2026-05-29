@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Piwik Plugin</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Integrate Wizdam Editorial with Piwik, a free and open source web site traffic analysis application. Requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="piwik site">Piwik site</a> for more information.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Integrate Lumera with Piwik, a free and open source web site traffic analysis application. Requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="piwik site">Piwik site</a> for more information.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Settings</message>

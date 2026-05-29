@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Плагин «phpMyVisites»</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Этот плагин интегрирует Wizdam Editorial с phpMyVisites, свободным программным обеспечением с открытым кодом для анализа трафика веб-сайта. Требует, чтобы phpMyVisites уже было установлено. Дополнительную информацию смотрите на <a href="http://www.phpmyvisites.us/" title="Сайт phpMyVisites">сайте phpMyVisites</a>.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Этот плагин интегрирует Lumera с phpMyVisites, свободным программным обеспечением с открытым кодом для анализа трафика веб-сайта. Требует, чтобы phpMyVisites уже было установлено. Дополнительную информацию смотрите на <a href="http://www.phpmyvisites.us/" title="Сайт phpMyVisites">сайте phpMyVisites</a>.]]></message>
 	<!-- Управление настройками phpMyVisites -->
 	<message key="plugins.generic.phpmv.manager.settings">Настройки</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Настройки phpMyVisites</message>

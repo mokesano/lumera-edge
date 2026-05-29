@@ -16,5 +16,5 @@
  
 <locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Công cụ ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Đây là công cụ phụ trợ trên toàn website và được kích hoạt trong file cấu hình của Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Đây là công cụ phụ trợ trên toàn website và được kích hoạt trong file cấu hình của Lumera.</message>
 </locale>

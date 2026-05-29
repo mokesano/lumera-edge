@@ -18,5 +18,5 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Dit is een plugin voor de hele site die ingeschakeld wordt in het Wizdam Editorial configuratiebestand.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Dit is een plugin voor de hele site die ingeschakeld wordt in het Lumera configuratiebestand.</message>
 </locale>

@@ -31,9 +31,9 @@
 	<message key="plugins.generic.usageStats.noCounterBotList">Η λίστα COUNTER bot δεν ήταν δυνατόν να βρεθεί ή περισσότερες από μια λίστες είναι παρούσες. Tο αρχείο  {$file} δεν ήταν δυνατόν να επεξεργαστεί.</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">Η λίστα COUNTER bot {$botlist} δεν ήταν δυνατόν να ανοιχτεί. Το αρχείο  {$file} δεν ήταν δυνατόν να επεξεργαστεί.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Wizdam Editorial αναφορά στατιστικών χρήσης</message>
-	<message key="plugins.reports.usageStats.report.description">Wizdam Editorial προκαθορισμένη αναφορά στατιστικών χρήσης (COUNTER ready)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Lumera αναφορά στατιστικών χρήσης</message>
+	<message key="plugins.reports.usageStats.report.description">Lumera προκαθορισμένη αναφορά στατιστικών χρήσης (COUNTER ready)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems statistics (COUNTER ready)</message>
 </locale>

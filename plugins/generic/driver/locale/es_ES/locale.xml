@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2019 Rochmady and Wizdam Team
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: https://wizdam.sangia.org/wiki/index.php?title=Wizdam Editorial:_Spanish_(es_ES)
+  * Credits: https://wizdam.sangia.org/wiki/index.php?title=Lumera:_Spanish_(es_ES)
   *
   * DRIVER plugin localization strings
   -->
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">El módulo DRIVER amplia la interfaz OAI-PMH según las directrices DRIVER 2.0, lo que permite que las revistas de Wizdam Editorial sean compatibles con DRIVER.</message>
+	<message key="plugins.generic.driver.description">El módulo DRIVER amplia la interfaz OAI-PMH según las directrices DRIVER 2.0, lo que permite que las revistas de Lumera sean compatibles con DRIVER.</message>
 </locale>

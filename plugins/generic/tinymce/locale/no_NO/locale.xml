@@ -14,8 +14,8 @@
  
 <locale name="no_NO" full_name="Norsk">
 	<message key="plugins.generic.tinymce.name">TinyMCE-programutvidelse</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i Wizdam Editorial tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>-editor.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i Wizdam Editorial tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE er for øyeblikket ikke installert; installer den i {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i Lumera tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>-editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Denne programutvidelsen oppretter WYSIWYG-redigering i Lumera tekstfelt ved bruk av <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE er for øyeblikket ikke installert; installer den i {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Innstillinger</message>
 </locale>

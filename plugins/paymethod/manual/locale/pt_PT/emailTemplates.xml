@@ -17,7 +17,7 @@
 O item adquirido é "{$itemName}".
 O custo é {$itemCost} ({$itemCurrencyCode}).
 
-Esta mensagem foi gerada pelo Plugin de Pagamento Manual do Wizdam Editorial.</body>
+Esta mensagem foi gerada pelo Plugin de Pagamento Manual do Lumera.</body>
 		<description>Esta mensagem notifica o editor-gestor que um pagamento manual foi realizado e exige processamento.</description>
 	</email_text>
 </email_texts>

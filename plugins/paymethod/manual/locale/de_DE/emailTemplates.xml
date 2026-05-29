@@ -19,7 +19,7 @@
 Gezahlt werden soll für "{$itemName}".
 Die Kosten betragen {$itemCost} ({$itemCurrencyCode}).
 
-Diese E-Mail wurde vom Wizdam Editorial-Plug-In Manuelle Gebührenzahlung erzeugt.</body>
+Diese E-Mail wurde vom Lumera-Plug-In Manuelle Gebührenzahlung erzeugt.</body>
 		<description>Diese E-Mail-Vorlage wird genutzt, um eine/n Zeitschriftenverwalter/in darüber zu benachrichtigen, dass eine manuelle Zahlung beantragt worden ist.</description>
 	</email_text>
 </email_texts>

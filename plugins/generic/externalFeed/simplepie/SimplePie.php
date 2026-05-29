@@ -1,6 +1,6 @@
 <?php
 /**
- * Wrapper SimplePie untuk Wizdam Editorial 1.0
+ * Wrapper SimplePie untuk Lumera 1.0
  * Menjembatani kode legacy Wizdam dengan SimplePie Modern (Namespaced) dari core/Library
  * 
  * Menggunakan library SimplePie terpusat di: ./core/Library/simplepie/simplepie/

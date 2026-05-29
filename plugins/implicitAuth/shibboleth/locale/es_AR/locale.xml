@@ -16,6 +16,6 @@
  
 <locale name="es_AR" full_name="Español (Argentina)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin ShibAuth</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Este es un plugin para todo el sitio y está habilitado en el archivo de configuración de Wizdam Editorial.
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Este es un plugin para todo el sitio y está habilitado en el archivo de configuración de Lumera.
 Plugin de autentificación con Shibboleth.</message>
 </locale>

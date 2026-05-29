@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Plugin Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Mengintegrasikan Wizdam Editorial dengan Google Analytics, aplikasi analisis lalu lintas web site dari Google. Mewajibkan Anda telah men-setup akun Google Analytics. Silahkan lihat <a href="http://www.google.com/analytics/" title="Google Analytics site">Situs Google Analytics</a> untuk informasi lebih lanjut.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Mengintegrasikan Lumera dengan Google Analytics, aplikasi analisis lalu lintas web site dari Google. Mewajibkan Anda telah men-setup akun Google Analytics. Silahkan lihat <a href="http://www.google.com/analytics/" title="Google Analytics site">Situs Google Analytics</a> untuk informasi lebih lanjut.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Pengaturan</message>

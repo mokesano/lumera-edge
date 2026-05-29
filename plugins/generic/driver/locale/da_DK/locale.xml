@@ -13,5 +13,5 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">The DRIVER plugin extends the OAI-PMH interface according to the DRIVER Guidelines 2.0, helping Wizdam Editorial journals to become DRIVER compliant.</message>
+	<message key="plugins.generic.driver.description">The DRIVER plugin extends the OAI-PMH interface according to the DRIVER Guidelines 2.0, helping Lumera journals to become DRIVER compliant.</message>
 </locale>

@@ -37,6 +37,6 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD-PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Gesamtsumme für alle Zeitschriften</message>
 	<message key="plugins.reports.counter.1a.anonymous">anonym</message>
-	<message key="plugins.reports.counter.legacyStats">Die Links unten erzeugen veraltete Berichte auf Basis der alten Plug-In-Daten. Wenn Sie aktuelle COUNTER-reife Berichte mit der neuen Wizdam Editorial-COUNTER-Metrik erzeugen wollen, benutzen Sie die Links oben.</message>
+	<message key="plugins.reports.counter.legacyStats">Die Links unten erzeugen veraltete Berichte auf Basis der alten Plug-In-Daten. Wenn Sie aktuelle COUNTER-reife Berichte mit der neuen Lumera-COUNTER-Metrik erzeugen wollen, benutzen Sie die Links oben.</message>
 	<message key="plugins.reports.counter.allCustomers">Alle Kund/innen</message>
 </locale>

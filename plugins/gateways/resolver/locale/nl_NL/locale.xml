@@ -17,6 +17,6 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.gateways.resolver.displayName">Resolver plugin</message>
 	<message key="plugins.gateways.resolver.description">Deze plugin zoekt uitgaven en artikelen op grond van citatie-informatie.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Niets gevonden met de opgegeven citatie-informatie. Controleer of de citatie-informatie volledig is en verwijst naar een entiteit in deze Wizdam Editorial installatie.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Niets gevonden met de opgegeven citatie-informatie. Controleer of de citatie-informatie volledig is en verwijst naar een entiteit in deze Lumera installatie.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
 </locale>

@@ -14,8 +14,8 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Dette plugin aktiverer WYSIWYG redigering af Wizdam Editorial tekstfelter ved hjælp af <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> tekstbehandleren.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Dette plugin aktiverer WYSIWYG redigering af Wizdam Editorial tekstfelter ved hjælp af <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> tekstbehandleren. <strong>TinyMCE er ikke installeret; sørg for at installere den i {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Dette plugin aktiverer WYSIWYG redigering af Lumera tekstfelter ved hjælp af <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> tekstbehandleren.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Dette plugin aktiverer WYSIWYG redigering af Lumera tekstfelter ved hjælp af <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> tekstbehandleren. <strong>TinyMCE er ikke installeret; sørg for at installere den i {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Indstillinger</message>
 </locale>

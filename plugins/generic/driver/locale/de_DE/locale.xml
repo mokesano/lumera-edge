@@ -13,5 +13,5 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">Das DRIVER-Plug-In erweitert die OAI-PMH-Schnittstelle gemäß DRIVER Guidelines 2.0, damit Wizdam Editorial-Zeitschriften DRIVER-kompatibel werden können.</message>
+	<message key="plugins.generic.driver.description">Das DRIVER-Plug-In erweitert die OAI-PMH-Schnittstelle gemäß DRIVER Guidelines 2.0, damit Lumera-Zeitschriften DRIVER-kompatibel werden können.</message>
 </locale>

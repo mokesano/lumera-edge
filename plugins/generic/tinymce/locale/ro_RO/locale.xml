@@ -14,8 +14,8 @@
  
 <locale name="ro_RO" full_name="Limba Română">
 	<message key="plugins.generic.tinymce.name">Modulul TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Acest modul permite editarea WYSIWYG a zonelor de text din Wizdam Editorial folosind <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> ca şi editor pentru conţinut.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Acest modul permite editarea WYSIWYG a zonelor de text din Wizdam Editorial folosind <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> ca şi editor pentru conţinut. <strong>TinyMCE nu este instalat în acest moment. Acesta trebuie instalat în {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Acest modul permite editarea WYSIWYG a zonelor de text din Lumera folosind <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> ca şi editor pentru conţinut.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Acest modul permite editarea WYSIWYG a zonelor de text din Lumera folosind <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> ca şi editor pentru conţinut. <strong>TinyMCE nu este instalat în acest moment. Acesta trebuie instalat în {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Setări</message>
 </locale>

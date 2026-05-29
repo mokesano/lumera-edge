@@ -50,7 +50,7 @@ Adibideak:
 	<message key="plugins.importexport.users.import.errorsOccurred">Erroreak gertatu dira inportazioan</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Berretsi hauek direla sistemara inportatu nahi dituzun erabiltzaileak</message>
 	<message key="plugins.importexport.users.import.warning">Abisua</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Ezin da erabili "{$importHash}"ekin xehatutako pasahitzik; {$ojsHash} erabiltzeko konfiguratuta dago Wizdam Editorial. Jarraitzen baduzu, inportatutako erabiltzaileen pasahitzak berrezarri beharko dituzu.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Ezin da erabili "{$importHash}"ekin xehatutako pasahitzik; {$ojsHash} erabiltzeko konfiguratuta dago Lumera. Jarraitzen baduzu, inportatutako erabiltzaileen pasahitzak berrezarri beharko dituzu.</message>
 	<message key="plugins.importexport.users.unknownJournal">Aldizkariaren bide ezezaguna: {$journalPath}</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Esportatu erabiltzaileak</message>

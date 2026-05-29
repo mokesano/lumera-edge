@@ -15,7 +15,7 @@
  
 <locale name="hr_HR" full_name="Hrvatski">
 	<message key="plugins.gateways.resolver.displayName">Resolver</message>
-	<message key="plugins.gateways.resolver.description"><![CDATA[Ovaj dodatak generira popis naslova časopisa ove Wizdam Editorial instalcije namijenjen <I>link resolver</I> programima. Uključuje nazive, ISSN, datum od kada su dostupni cjeloviti tekstovi itd.]]></message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Nije moguće izraditi jedinstveni entitet koristeći postojeće informacije. Provjerite da li su informacije o časopisima potpune te da li se odnose na entitete koji se nalaze u ovoj instalaciji Wizdam Editorial-a.</message>
+	<message key="plugins.gateways.resolver.description"><![CDATA[Ovaj dodatak generira popis naslova časopisa ove Lumera instalcije namijenjen <I>link resolver</I> programima. Uključuje nazive, ISSN, datum od kada su dostupni cjeloviti tekstovi itd.]]></message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Nije moguće izraditi jedinstveni entitet koristeći postojeće informacije. Provjerite da li su informacije o časopisima potpune te da li se odnose na entitete koji se nalaze u ovoj instalaciji Lumera-a.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Iznesi fundus</message>
 </locale>

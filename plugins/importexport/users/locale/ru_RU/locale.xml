@@ -50,7 +50,7 @@
 	<message key="plugins.importexport.users.import.errorsOccurred">При импорте произошли ошибки</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Подтвердите, что это те самые пользователи, которых вы хотите импортировать в систему</message>
 	<message key="plugins.importexport.users.import.warning">Предупреждение</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Нельзя использовать пароли, хэшированные алгоритмом {$importHash}; Wizdam Editorial сейчас настроен на использование {$ojsHash}. Если вы продолжите, то вам будет необходимо сбросить пароли импортированных пользователей.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Нельзя использовать пароли, хэшированные алгоритмом {$importHash}; Lumera сейчас настроен на использование {$ojsHash}. Если вы продолжите, то вам будет необходимо сбросить пароли импортированных пользователей.</message>
 	<message key="plugins.importexport.users.unknownJournal">Был указан неизвестный путь журнала «{$journalPath}».</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Экспортировать пользователей</message>

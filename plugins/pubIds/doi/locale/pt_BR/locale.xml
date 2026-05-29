@@ -13,11 +13,11 @@
  
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Este plugin habilita a atribuição de de Identificadores de Objeto Digital (DOI) a edições, artigos, composições e arquivos suplementares no Wizdam Editorial.</message>
+	<message key="plugins.pubIds.doi.description">Este plugin habilita a atribuição de de Identificadores de Objeto Digital (DOI) a edições, artigos, composições e arquivos suplementares no Lumera.</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Configurações</message>
-	<message key="plugins.pubIds.doi.manager.settings.description">Configure o plugin DOI para gerenciar e usar DOIs no Wizdam Editorial:</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Configure o plugin DOI para gerenciar e usar DOIs no Lumera:</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Conteúdo</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Escolha a quais objetos serão atribuídos DOIs.</message>
@@ -34,7 +34,7 @@
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Sufixo DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">O sufixo DOI pode assumir qualquer forma, desde que seja único entre todos todos os objetos publicados com o mesmo prefixo DOI:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Use o padrão informado a seguir para gerar sufixos DOI. Use %j para iniciais da publicação, %v para o volume, %i a edição, %Y para o ano, %a para o ID do artigo Wizdam Editorial, %g para o ID da composição Wizdam Editorial, %s para o ID do arquivo suplementar Wizdam Editorial e %p para o número da página.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Use o padrão informado a seguir para gerar sufixos DOI. Use %j para iniciais da publicação, %v para o volume, %i a edição, %Y para o ano, %a para o ID do artigo Lumera, %g para o ID da composição Lumera, %s para o ID do arquivo suplementar Lumera e %p para o número da página.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">para edições</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">para artigos</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">para composições</message>

@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Плагин «Google Analytics»</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Этот плагин интегрирует Wizdam Editorial с Google Analytics, приложением для анализа трафика веб-сайта от компании Google. Требует наличия у Вас учетной записи в системе Google Analytics. Пожалуйста, просмотрите <a href="http://www.google.com/analytics/" title="сайт Google Analytics">сайт Google Analytics</a> для получения более подробной информации.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Этот плагин интегрирует Lumera с Google Analytics, приложением для анализа трафика веб-сайта от компании Google. Требует наличия у Вас учетной записи в системе Google Analytics. Пожалуйста, просмотрите <a href="http://www.google.com/analytics/" title="сайт Google Analytics">сайт Google Analytics</a> для получения более подробной информации.]]></message>
 
 	<!-- Управление настройками Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Настройки</message>

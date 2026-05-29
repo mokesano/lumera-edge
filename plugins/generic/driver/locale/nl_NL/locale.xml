@@ -13,5 +13,5 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">De DRIVER plugin breidt de OAI-PMH interface uit overeenkomstig de DRIVER Guidelines 2.0, waardoor Wizdam Editorial tijdschriften DRIVER compliant worden.</message>
+	<message key="plugins.generic.driver.description">De DRIVER plugin breidt de OAI-PMH interface uit overeenkomstig de DRIVER Guidelines 2.0, waardoor Lumera tijdschriften DRIVER compliant worden.</message>
 </locale>

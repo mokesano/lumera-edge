@@ -16,7 +16,7 @@
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">Statistiche phpMyVisites</message>
-	<message key="plugins.generic.phpmv.description"><![CDATA[Integra Wizdam Editorial con phpMyVisites, un'applicazione web gratuita e open source per l'analisi del traffico. Richiede che phpMyVisites sia già installato. Si veda <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for more information.]]></message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integra Lumera con phpMyVisites, un'applicazione web gratuita e open source per l'analisi del traffico. Richiede che phpMyVisites sia già installato. Si veda <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for more information.]]></message>
 
 	<!-- phpMyVisites Settings Management -->
 	<message key="plugins.generic.phpmv.manager.settings">Impostazioni</message>

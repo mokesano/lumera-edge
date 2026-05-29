@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analyticsプラグイン</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Wizdam EditorialにGoogle Analyticsを組み込みます。Google Analyticsとは、Googleが提供するWebサイトのトラフィック分析アプリケーションです。利用するには、Google Analyticsのアカウントが必要です。詳細については、<a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics サイト</a>を参照してください。]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[LumeraにGoogle Analyticsを組み込みます。Google Analyticsとは、Googleが提供するWebサイトのトラフィック分析アプリケーションです。利用するには、Google Analyticsのアカウントが必要です。詳細については、<a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics サイト</a>を参照してください。]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">設定</message>

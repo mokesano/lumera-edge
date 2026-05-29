@@ -31,10 +31,10 @@
 	<message key="plugins.generic.usageStats.noCounterBotList">La liste COUNTER bot ne peut être trouvée, ou plus d'une liste est présente. Le fichier {$file} n'a pu être traité.</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">La liste COUNTER bot {$botlist} n'a pu être ouverte. Le fichier {$file} n'a pu être traité.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Rapport de statistiques d'usage Wizdam Editorial</message>
-	<message key="plugins.reports.usageStats.report.description">Rapport de statistiques d'usage Wizdam Editorial par défaut (COUNTER prêt)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Rapport de statistiques d'usage Lumera</message>
+	<message key="plugins.reports.usageStats.report.description">Rapport de statistiques d'usage Lumera par défaut (COUNTER prêt)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Statistiques Open Journal Systems (COUNTER prêt)</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Options de confidentialité des données</message>
 	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Chemin du fichier de salage</message>

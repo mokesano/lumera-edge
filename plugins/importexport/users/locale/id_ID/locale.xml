@@ -49,7 +49,7 @@ Contoh:
 	<message key="plugins.importexport.users.import.errorsOccurred">Terjadi kesalahan saat prose impor</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Konfirmasikan bahwa ini adalah pengguna yang Anda ingin mengimpor ke dalam sistem</message>
 	<message key="plugins.importexport.users.import.warning">Peringatan</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Tidak dapat menggunakan hash kata kunci dengan {$importHash}; Wizdam Editorial dikonfigurasikan untuk menggunakan {$ojsHash}. Jika Anda melanjutkan, Anda harus memuat ulang kata kunci pengguna yang di impor</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Tidak dapat menggunakan hash kata kunci dengan {$importHash}; Lumera dikonfigurasikan untuk menggunakan {$ojsHash}. Jika Anda melanjutkan, Anda harus memuat ulang kata kunci pengguna yang di impor</message>
 	<message key="plugins.importexport.users.unknownJournal">Path jurnal tidak diketahui "{$journalPath}" dispesifikasikan.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Ekspor Pengguna</message>

@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugina</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integratu Wizdam Editorial Google Analytics-ekin, Google-n webguneen trafikoa analizatzeko aplikazioarekin. Google Analytics kontua edukitzea eskatzen du. Informazio gehiago <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics-en gunean</a>.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integratu Lumera Google Analytics-ekin, Google-n webguneen trafikoa analizatzeko aplikazioarekin. Google Analytics kontua edukitzea eskatzen du. Informazio gehiago <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics-en gunean</a>.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Ezarpenak</message>

@@ -126,7 +126,7 @@
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">Hari-hari sebelum tanggal jatuh tempo.</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Kirim email pengingat kepada penulis</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">Hari-hari setelah tanggal jatuh tempo.</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, adminsrator situs harus memudahkan <tt>tugas-tugas yang dijadwalkan</tt> pilihan di file konfigurasi Wizdam Editorial. Konfigurasi server tambahan bisa diperlukan untuk mendukung ungsionalitas ini (yang mungkin tidak bisa untuk semua server), seperti ditunjukkan di dokumentasi Wizdam Editorial.]]></message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Catatan:</strong> Untuk mengaktifkan pilihan ini, adminsrator situs harus memudahkan <tt>tugas-tugas yang dijadwalkan</tt> pilihan di file konfigurasi Lumera. Konfigurasi server tambahan bisa diperlukan untuk mendukung ungsionalitas ini (yang mungkin tidak bisa untuk semua server), seperti ditunjukkan di dokumentasi Lumera.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">Informasi tambahan</message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Informasi tambahan diterbitkan bersama dengan buku untuk review.</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Tentukan jumlah minggu untuk jatuh tempo review buku.</message>

@@ -75,8 +75,8 @@
 	-->
 
 	<!-- Общие сообщения -->
-	<message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+	<message key="common.openJournalSystems">Lumera Systems</message>
+	<message key="common.scholarWizdam">Lumera Systems</message>
 	<message key="common.confirmComplete">Вы уверены, что хотите отметить эту задачу как завершенную? После этого у Вас может не быть возможности внести изменения.</message>
 	<message key="common.payment">Платеж</message>
 	<message key="common.payments">Платежи</message>
@@ -406,9 +406,9 @@
 	<!-- Управление платежами -->
 
 	<!-- Общая информация плагинов -->
-	<message key="plugins.categories.auth.description">Плагины авторизации позволяют Wizdam Editorial Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
+	<message key="plugins.categories.auth.description">Плагины авторизации позволяют Lumera Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
 	<message key="plugins.categories.citationFormats.description">Плагины форматов ссылок предоставляют пользователям различные форматы, с помощью которых можно получить доступ к ссылкам статей.</message>
-	<message key="plugins.categories.generic.description">Общие плагины используются для расширения возможностей Wizdam Editorial Systems различными способами, которые не поддерживаются другими категориями плагинов.</message>
+	<message key="plugins.categories.generic.description">Общие плагины используются для расширения возможностей Lumera Systems различными способами, которые не поддерживаются другими категориями плагинов.</message>
 	<message key="plugins.categories.implicitAuth">Плагины скрытой аутентификации</message>
 	<message key="plugins.categories.implicitAuth.description">Плагины скрытой аутентификации реализуют поддержку аутентификации пользователей на основе заголовков протокола http.</message>
 	<message key="plugins.categories.oaiMetadataFormats">Плагины формата метаданных OAI</message>
@@ -429,7 +429,7 @@
 	рецензентам запрос на рецензирование по электронной почте, с прикрепленной к письму копией статьи. Рецензенты электронной почтой отправляют редакторам свое согласие (или свой отказ), а также свою рецензию и рекомендацию. Редакторы вносят согласие (или отказ) рецензента, рецензию и рекомендацию на странице «Рецензирование» этой статьи, чтобы отразить на сайте процесс рецензирования.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[Wizdam Editorial Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. У вас есть несколько вариантов для включения вашего жкрнала в сеть LOCKSS:]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Lumera Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), которая обеспечивает безопасную и постоянную архивацию журнала. У вас есть несколько вариантов для включения вашего жкрнала в сеть LOCKSS:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Другие сети LOCKSS</strong>
 <br /><br />

@@ -14,11 +14,11 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.generic.customLocale.name">カスタムロケールプラグイン</message>
-	<message key="plugins.generic.customLocale.description">Wizdam Editorialのユーザインターフェースで使用されるデフォルトのテキストをカスタマイズできるようにします。</message>
+	<message key="plugins.generic.customLocale.description">Lumeraのユーザインターフェースで使用されるデフォルトのテキストをカスタマイズできるようにします。</message>
 
 	<message key="plugins.generic.customLocale.longDescription">この雑誌に現在設定されているすべてのロケールを表示しています。</message>
 	<message key="plugins.generic.customLocale.localeDescription">選択したロケールで利用可能なすべてのファイルを表示しています。</message>
-	<message key="plugins.generic.customLocale.fileDescription">該当するカスタムテキストフィールドにテキストを入力してください。Wizdam Editorialのデフォルトテキストを使用する場合は、カスタムフィールドを空白のままにしてください。</message>
+	<message key="plugins.generic.customLocale.fileDescription">該当するカスタムテキストフィールドにテキストを入力してください。Lumeraのデフォルトテキストを使用する場合は、カスタムフィールドを空白のままにしてください。</message>
 	<message key="plugins.generic.customLocale.localeName">ロケール名</message>
 	<message key="plugins.generic.customLocale.localeKey">キー</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">値</message>

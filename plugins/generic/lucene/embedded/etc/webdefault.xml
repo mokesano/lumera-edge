@@ -10,7 +10,7 @@
   * goverened by the Apache License Version 2.0. See LICENSE-APACHE-2.0.txt in
   * the plugin's root directory.
   *
-  * Wizdam Editorial solr/lucene search plugin jetty default configuration.
+  * Lumera solr/lucene search plugin jetty default configuration.
   * 
   * NB: You may have to customize this file for a secure central server
   * deployment.

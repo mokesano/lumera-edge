@@ -48,7 +48,7 @@
 	<message key="plugins.generic.usageStats.failedCounterBotList">La lista COUNTER dei bot {$botlist} non può essere aperta. Il file {$file} non può essere processato.</message>
 	
 	<message key="plugins.reports.usageStats.report.displayName">Report delle statistiche d'uso</message>
-	<message key="plugins.reports.usageStats.report.description">Report delle statistiche Wizdam Editorial (compatibili COUNTER)</message>
+	<message key="plugins.reports.usageStats.report.description">Report delle statistiche Lumera (compatibili COUNTER)</message>
 	
 	<message key="plugins.reports.usageStats.optout.displayName">Informazioni sulla privacy delle statistiche d'uso</message>
 	<message key="plugins.reports.usageStats.optout.description">Informazioni sulla privacy delle statistiche d'uso</message>
@@ -77,6 +77,6 @@
 		<p>Ricordati che i log generali del server non sono toccati dalla tua decisione di essere escluso dal rilevamento statistico degli accessi. Fai riferimento alla nostra <a href="{$privacyStatementUrl}">privacy statement</a>.</p>]]></message>
 
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/COUNTER</message>
-	<message key="plugins.reports.usageStats.metricType.full">Statistiche Wizdam Editorial (compatibili COUNTER)</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Statistiche Lumera (compatibili COUNTER)</message>
 </locale>

@@ -28,7 +28,7 @@
 	<message key="plugins.reports.counter.1a.ytdHtml">HTML YTD</message>
 	<message key="plugins.reports.counter.1a.ytdPdf">PDF YTD</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas as revistas</message>
-	<message key="plugins.reports.counter.legacyStats">Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do COUNTER do Wizdam Editorial, use os links em cima.</message>
+	<message key="plugins.reports.counter.legacyStats">Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do COUNTER do Lumera, use os links em cima.</message>
 	<message key="plugins.reports.counter.release">Lançamento do COUNTER</message>
 	<message key="plugins.reports.counter.olderReports">Relatórios antigos do portal</message>
 	<message key="plugins.reports.counter.error.badParameters">Os parâmetros do relatório eram inválidos.</message>

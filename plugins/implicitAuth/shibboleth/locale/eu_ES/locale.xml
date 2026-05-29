@@ -16,6 +16,6 @@
  
 <locale name="eu_ES" full_name="Euskara">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Plugin hau gune osokoa da eta Wizdam Editorial konfigurazio-fitxategian gaitzen da.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Plugin hau gune osokoa da eta Lumera konfigurazio-fitxategian gaitzen da.</message>
 </locale>
 

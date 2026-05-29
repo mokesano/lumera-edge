@@ -15,7 +15,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google-Analytics-Plug-In</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Verbinden Sie Wizdam Editorial mit Google Analytics, der Google-Anwendung zur Nutzungsanalyse von Webseiten-Traffic. Voraussetzung ist, dass Sie bereits einen Google-Analytics-Zugang haben. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Verbinden Sie Lumera mit Google Analytics, der Google-Anwendung zur Nutzungsanalyse von Webseiten-Traffic. Voraussetzung ist, dass Sie bereits einen Google-Analytics-Zugang haben. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.]]></message>
 
 	<!-- Google-Analytics-Einstellungen verwalten -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Einstellungen</message>

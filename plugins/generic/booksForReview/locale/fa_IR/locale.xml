@@ -125,7 +125,7 @@
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">روز قبل از مهلت کارشناسی</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">ارسال ایمل یاد آور به نویسنده</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">روز بعد از مهلت کارشناسی</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the Wizdam Editorial configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the Wizdam Editorial documentation.]]></message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the Lumera configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the Lumera documentation.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">اطلاعات بیشتر</message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">اطلاعات بیشترهمراه با کتاب برای کارشناسی چاپ می شود</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">لطفا مدت زمان کارشناسی به هفته را وارد کنید</message>

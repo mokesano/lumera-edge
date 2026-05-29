@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Piwik dodatak</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[INtegriše Wizdam Editorial i Piwik sistem za analizu saobraćaja na web sajtu. Zahtev je da je Piwik već instaliran. Pogledajte <a href="http://piwik.org/" title="piwik site">Piwik sajt</a> za više informacija.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[INtegriše Lumera i Piwik sistem za analizu saobraćaja na web sajtu. Zahtev je da je Piwik već instaliran. Pogledajte <a href="http://piwik.org/" title="piwik site">Piwik sajt</a> za više informacija.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Podešavanja</message>

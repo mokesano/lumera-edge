@@ -13,7 +13,7 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">Il plugin OpenAIRE aggiunge l'elemento projectID ai metadati degli articoli ed estende l'interfaccia OAI-PMH in accordo con le OpenAIRE Guidelines 1.1, permettendo alla rivista Wizdam Editorial di divenire compatibile con le specifiche OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">Il plugin OpenAIRE aggiunge l'elemento projectID ai metadati degli articoli ed estende l'interfaccia OAI-PMH in accordo con le OpenAIRE Guidelines 1.1, permettendo alla rivista Lumera di divenire compatibile con le specifiche OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
 	<message key="plugins.generic.openAIRE.metadata">Metadati specifici per OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.projectID.description">(Il projectID è uguale al numero del Grant Agreement)</message>

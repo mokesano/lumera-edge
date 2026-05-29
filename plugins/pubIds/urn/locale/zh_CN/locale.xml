@@ -16,7 +16,7 @@
 
 	<!-- plugin -->
 	<message key="plugins.pubIds.urn.displayName">URN</message>
-	<message key="plugins.pubIds.urn.description">插件能够实现对象统一资源名称的分配（期次，文章，样稿和附加文件）在Wizdam Editorial。</message>
+	<message key="plugins.pubIds.urn.description">插件能够实现对象统一资源名称的分配（期次，文章，样稿和附加文件）在Lumera。</message>
 
 	<!-- URN manager options, setting -->
 	<message key="plugins.pubIds.urn.manager.settings.description">执行以下设置开启管理和使用URN。</message>
@@ -26,7 +26,7 @@
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN 字尾</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default">使用默认模式。</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.default.description"><![CDATA[%j.v%vi%i 期次<br />%j.v%vi%i.%a 文章<br />%j.v%vi%i.%a.g%g 样稿 <br />%j.v%vi%i.%a.s%s 附加文件。]]></message>
-	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">使用以下模式生成URN字尾。%j 为期刊首字母, %v为卷号, %i 为期数, %Y 为年份, %a 为Wizdam Editorial文章ID, %g 为Wizdam Editorial 样稿 ID, %s 为 Wizdam Editorial 附加文件 ID, %p 为 页数and %x 为"自定义标识符”（启用设置4.3）。</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern">使用以下模式生成URN字尾。%j 为期刊首字母, %v为卷号, %i 为期数, %Y 为年份, %a 为Lumera文章ID, %g 为Lumera 样稿 ID, %s 为 Lumera 附加文件 ID, %p 为 页数and %x 为"自定义标识符”（启用设置4.3）。</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.issues">期次</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.articles">文章</message>
 	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.pattern.galleys">样稿</message>

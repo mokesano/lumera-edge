@@ -17,7 +17,7 @@
 
 	<message key="plugins.importexport.medra.intro"><![CDATA[Pokud chcete registrovat DOIs v rámci mEDRA, následujte, prosím, pokyny na
 		<a href="http://www.medra.org/en/guide.htm" target="_blank">domácí stránce mEDRA</a>
-		abyste obdrželi uživatelské jméno a login. Pokud nemáte vlastní uživatelské jméno a heslo, budete stále ještě mít možnost exportu do mEDRA XML formátu (Onix pro DOI), ale nebudete mít možnost registrovat DOI v rámci Wizdam Editorial.
+		abyste obdrželi uživatelské jméno a login. Pokud nemáte vlastní uživatelské jméno a heslo, budete stále ještě mít možnost exportu do mEDRA XML formátu (Onix pro DOI), ale nebudete mít možnost registrovat DOI v rámci Lumera.
                 Uvědomte si, prosím, že heslo bude uloženo jako prostý text, t.j. nekódovaně, s ohledem na požadavky služby mEDRA.]]></message>
 
 	<message key="plugins.importexport.medra.settings.description"><![CDATA[Prosím, <a href="{$settingsUrl}">konfigurejte</a> exportní plugin mEDRA před prvním použitím.]]></message>

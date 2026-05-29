@@ -16,5 +16,5 @@
  
 <locale name="uk_UA" full_name="Українська">
        <message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-       <message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Цей модуль загальносистемний, він включений у файлі конфігурації Wizdam Editorial.</message>
+       <message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Цей модуль загальносистемний, він включений у файлі конфігурації Lumera.</message>
 </locale>

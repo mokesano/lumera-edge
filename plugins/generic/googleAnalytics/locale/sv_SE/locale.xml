@@ -18,7 +18,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Tillägg för Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrerar Wizdam Editorial med Google Analytics, Google's analysverktyg för webbtrafik. Detta kräver att du redan innan har satt upp ett konto hos Google för Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics sajt">Google Analytics sajt</a> for more information.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrerar Lumera med Google Analytics, Google's analysverktyg för webbtrafik. Detta kräver att du redan innan har satt upp ett konto hos Google för Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics sajt">Google Analytics sajt</a> for more information.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Inställningar</message>

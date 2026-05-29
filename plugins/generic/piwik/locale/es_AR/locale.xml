@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Plugin Piwik</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Integra Wizdam Editorial con Piwik, una aplicación de análisis de tráfico web gratuita y  de código abierto. Requiere que Piwik ya esté instalado. Por favor ver <a href="http://piwik.org/" title="piwik site">el sitio de Piwik</a> para más información.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Integra Lumera con Piwik, una aplicación de análisis de tráfico web gratuita y  de código abierto. Requiere que Piwik ya esté instalado. Por favor ver <a href="http://piwik.org/" title="piwik site">el sitio de Piwik</a> para más información.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Configuraciones</message>

@@ -6,7 +6,7 @@
   * Copyright (c) 2003-2019 Rochmady and Wizdam Team
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Wizdam Editorial solr/lucene search plugin solr cores default configuration.
+  * Lumera solr/lucene search plugin solr cores default configuration.
   * 
   * NB: You may rename/add cores if you implement the central server mode.
   * Please see the README file in the plugin's root directory for more

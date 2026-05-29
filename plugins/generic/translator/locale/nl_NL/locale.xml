@@ -17,8 +17,8 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.translator.name">Translator Plugin</message>
 	<message key="plugins.generic.translator.description">Met deze plugin kunnen taalbestanden via een webinterface onderhouden worden.</message>
-	<message key="plugins.generic.translator.longdescription">Op deze plek kan de Site Administrator vertalingen van Wizdam Editorial maken, veranderen en controleren. Dit werkt door de hele site en is niet bedoeld om een enkel Wizdam Editorial tijdschrijft te modificeren. Als u een vertaling maakt of verbetert, overweeg dan om die beschikbaar te stellen aan het Public Knowledge Project.</message>
-	<message key="plugins.generic.translator.localeDescription">Deze pagina toont alle componenten van een Wizdam Editorial vertaling en biedt de vertaler de mogelijkheid om ze te bewerken. Een volledige vertaling bevat complete vertalingen van alle componenten.</message>
+	<message key="plugins.generic.translator.longdescription">Op deze plek kan de Site Administrator vertalingen van Lumera maken, veranderen en controleren. Dit werkt door de hele site en is niet bedoeld om een enkel Lumera tijdschrijft te modificeren. Als u een vertaling maakt of verbetert, overweeg dan om die beschikbaar te stellen aan het Public Knowledge Project.</message>
+	<message key="plugins.generic.translator.localeDescription">Deze pagina toont alle componenten van een Lumera vertaling en biedt de vertaler de mogelijkheid om ze te bewerken. Een volledige vertaling bevat complete vertalingen van alle componenten.</message>
 
 	<message key="plugins.generic.translator.localeName">Naam vertaling</message>
 	<message key="plugins.generic.translator.localeKey">Sleutel</message>

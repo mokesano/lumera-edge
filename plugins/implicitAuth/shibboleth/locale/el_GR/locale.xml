@@ -16,5 +16,5 @@
  
 <locale name="el_GR" full_name="ελληνικά">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuthPlugin</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Αυτό είναι ένα πρόσθετο ιστοτόπου (και όχι περιοδικού) και ενεργοποιείται από το αρχείο ρυθμίσεων του Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Αυτό είναι ένα πρόσθετο ιστοτόπου (και όχι περιοδικού) και ενεργοποιείται από το αρχείο ρυθμίσεων του Lumera.</message>
 </locale>

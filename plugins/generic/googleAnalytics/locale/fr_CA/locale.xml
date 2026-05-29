@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Plugiciel Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez Wizdam Editorial à Google Analytics, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Google Analytics pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez Lumera à Google Analytics, l’application d'analyse de trafic sur le site Web de Google. Vous devez avoir un compte Google Analytics pour utiliser cette application. Veuillez consulter le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples renseignements.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Paramètres</message>

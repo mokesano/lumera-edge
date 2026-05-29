@@ -37,8 +37,8 @@
 	-->
 
 	<!-- Common Messages -->
-	<message key="common.openJournalSystems">Wizdam Editorial Systems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Systems</message>
+	<message key="common.openJournalSystems">Lumera Systems</message>
+	<message key="common.scholarWizdam">Lumera Systems</message>
 
 	<!-- Common Form Messages -->
 
@@ -285,8 +285,8 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<!-- Plugin Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Los plugins genéricos se usan para ampliar las características de Wizdam Editorial Systems de diversas maneras que no son soportadas por otras categorías de plugins.</message>
-	<message key="plugins.categories.auth.description">Los plugins de autorización permiten a Wizdam Editorial Systems delegar las tareas de autentificación de usuarios/as a otros sistemas, como pueden ser servidores LDAP.</message>
+	<message key="plugins.categories.generic.description">Los plugins genéricos se usan para ampliar las características de Lumera Systems de diversas maneras que no son soportadas por otras categorías de plugins.</message>
+	<message key="plugins.categories.auth.description">Los plugins de autorización permiten a Lumera Systems delegar las tareas de autentificación de usuarios/as a otros sistemas, como pueden ser servidores LDAP.</message>
 
 
 
@@ -304,9 +304,9 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Wizdam Editorial Systems soporta el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un archivo seguro y permanente de la revista. LOCKSS es software libre desarrollado por la Biblioteca de la Universidad de Stanford que permite a las bibliotecas preservar revistas basadas en web seleccionadas recopilando regularmente los contenidos de las revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente contra el cache de otras bibliotecas, y si el contenido está corrupto o se ha perdido, se usan los otros caches de la revista para recuperarlo.
+	<message key="manager.setup.lockssDescription"><![CDATA[Lumera Systems soporta el sistema <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) para asegurar un archivo seguro y permanente de la revista. LOCKSS es software libre desarrollado por la Biblioteca de la Universidad de Stanford que permite a las bibliotecas preservar revistas basadas en web seleccionadas recopilando regularmente los contenidos de las revistas registradas para recopilar el nuevo contenido publicado y archivarlo. Cada archivo es validado continuamente contra el cache de otras bibliotecas, y si el contenido está corrupto o se ha perdido, se usan los otros caches de la revista para recuperarlo.
 <br /><br />
-Configurar el soporte LOCKSS para Wizdam Editorial Systems no es necesario hasta que se comienza a publicar, cuando esto ocurra es necesario que siga estos dos pasos:]]></message>
+Configurar el soporte LOCKSS para Lumera Systems no es necesario hasta que se comienza a publicar, cuando esto ocurra es necesario que siga estos dos pasos:]]></message>
 
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Para indexar los contenidos de esta revista en un sistema globalmente distribuido de bases de datos de investigación, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registre</a> la URL de su revista en el Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Esta herramienta recopila los metadatos de cada elemento indexado en esta revista, permitiendo una búsqueda precisa y exhaustiva de los sitios de investigación que se adhieren al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Recogida de Metadatos de la Iniciativa de Archivos Abierto</a>.
@@ -588,8 +588,8 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="about.availableSubscriptionTypes">Tipos de suscripción</message>
 	<message key="about.journalSponsorship">Patrocinio de la revista</message>
 	<message key="about.aboutThisPublishingSystem">Acerca de este sistema de publicación</message>
-	<message key="about.aboutOJSJournal"><![CDATA[Esta revista usa Wizdam Editorial Systems {$ojsVersion}, que es software libre de gestión y publicación de revistas desarrollado, soportado, y libremente distribuido por el <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> bajo Licencia Pública General GNU.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[Esta revista usa Wizdam Editorial Systems {$ojsVersion}, que es software libre de gestión y publicación de revistas desarrollado, soportado, y libremente distribuido por el <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> bajo Licencia Pública General GNU.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[Esta revista usa Lumera Systems {$ojsVersion}, que es software libre de gestión y publicación de revistas desarrollado, soportado, y libremente distribuido por el <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> bajo Licencia Pública General GNU.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[Esta revista usa Lumera Systems {$ojsVersion}, que es software libre de gestión y publicación de revistas desarrollado, soportado, y libremente distribuido por el <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> bajo Licencia Pública General GNU.]]></message>
 	<message key="about.statistics">Estadísticas</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte del proceso de envío, se les requiere a los autores que indiquen que su envío cumpla con todos los siguientes elementos, y que acepten que envíos que no cumplan con estas indicaciones pueden ser devueltos al autor.</message>
 	<message key="about.delayedOpenAccess">Acceso Libre Diferido</message>
@@ -601,7 +601,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Ayuda de Wizdam Editorial Systems</message>
+	<message key="help.ojsHelp">Ayuda de Lumera Systems</message>
 	<message key="help.ojsHelpAbbrev">Ayuda ScholarWizdam</message>
 
 	<!-- Article Logs -->

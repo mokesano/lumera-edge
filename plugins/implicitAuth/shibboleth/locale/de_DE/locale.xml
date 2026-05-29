@@ -15,5 +15,5 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.implicitAuth.shibboleth.displayName">ShibAuth-Plug-In</message>
-	<message key="plugins.implicitAuth.shibboleth.description">Das ShibAuth-Plug-In betrifft die gesamte Website und wird in der Wizdam Editorial-Konfigurationsdatei aktiviert.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Das ShibAuth-Plug-In betrifft die gesamte Website und wird in der Lumera-Konfigurationsdatei aktiviert.</message>
 </locale>

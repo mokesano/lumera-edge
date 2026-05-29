@@ -13,7 +13,7 @@
  
 <locale name="sr_SR" full_name="Cрпски">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">OpenAIRE dodatak dodaje projectID element metapodataka i proširuje OAI-PMH interfejs u skladu sa smernicama OpenAIRE 1.1 , pomažući Wizdam Editorial časopisu da postane OpenAIRE kompatibilan.</message>
+	<message key="plugins.generic.openAIRE.description">OpenAIRE dodatak dodaje projectID element metapodataka i proširuje OAI-PMH interfejs u skladu sa smernicama OpenAIRE 1.1 , pomažući Lumera časopisu da postane OpenAIRE kompatibilan.</message>
 	<message key="plugins.generic.openAIRE.projectID">ID projekta</message>
 	<message key="plugins.generic.openAIRE.metadata">OpenAIRE specifični metapodaci</message>
 	<message key="plugins.generic.openAIRE.projectID.description">ID projekta jednak je Grant Agreement broju)</message>

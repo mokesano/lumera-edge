@@ -16,8 +16,8 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken dalam Wizdam Editorial tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken dalam Wizdam Editorial tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE is momenteel niet geïnstalleerd. Installeer het in {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken dalam Lumera tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken dalam Lumera tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE is momenteel niet geïnstalleerd. Installeer het in {$tinyMcePath}.</strong>]]></message>
 
 	<message key="plugins.generic.tinymce.settings">Instellingen</message>
 </locale>

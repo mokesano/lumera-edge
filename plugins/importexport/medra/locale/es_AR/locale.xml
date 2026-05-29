@@ -18,7 +18,7 @@
 	<message key="plugins.importexport.medra.intro"><![CDATA[Si quiere registrar DOIs con mEDRA, por favor siga los pasos en la
 		<a href="http://www.medra.org/en/guide.htm" target="_blank">página de mEDRA </a>
 		para recibir un nombre de usuario y una clave.Si no tiene su nombre de usuario y su clave propios, seguirá siendo capaz de exportar  en el formato XML de mEDRA (Onix para DOI)
-		pero no podrá registrar sus  DOIs en mEDRA desde Wizdam Editorial. 
+		pero no podrá registrar sus  DOIs en mEDRA desde Lumera. 
 		Por favor note que la clave no se almacenara en la base de datos de forma encriptada debido a los requerimientos del servicio de registro de mEDRA.]]></message>
 
 	<message key="plugins.importexport.medra.settings.description"><![CDATA[Por favor <a href="{$settingsUrl}">configure</a> el plugin de exportación mEDRA  antes de usarlo por primera vez.]]></message>

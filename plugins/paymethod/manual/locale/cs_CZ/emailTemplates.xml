@@ -17,6 +17,6 @@
 Položka, za kterou je placeno "{$itemName}".
 Cena je {$itemCost} ({$itemCurrencyCode}).
 
-Tento email byl vygenerován Wizdam Editorial pluginem Manuální platby.</body>
+Tento email byl vygenerován Lumera pluginem Manuální platby.</body>
 	</email_text>
 </email_texts>

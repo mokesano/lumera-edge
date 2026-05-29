@@ -13,5 +13,5 @@
  
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">O plugin DRIVER estende a interface OAI-PMH de acordo com as Diretrizes DRIVER 2.0, auxiliando publicações Wizdam Editorial a atenderem ao padrão DRIVER.</message>
+	<message key="plugins.generic.driver.description">O plugin DRIVER estende a interface OAI-PMH de acordo com as Diretrizes DRIVER 2.0, auxiliando publicações Lumera a atenderem ao padrão DRIVER.</message>
 </locale>

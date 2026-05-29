@@ -125,7 +125,7 @@
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderBeforeDays2">dag/dagen voor de uiterste inzenddatum.</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays1">Stuur de auteur een herinnerings e-mail</message>
 	<message key="plugins.generic.booksForReview.settings.enableDueReminderAfterDays2">dag/dagen na de uiterste inzenddatum.</message>
-	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties te activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het Wizdam Editorial configuratiebestand inschakelen. Zoals in de Wizdam Editorial documentatie aangegeven is wellicht additionele configuratie van de server nodig, wat niet op alle servers mogelijk is.]]></message>
+	<message key="plugins.generic.booksForReview.settings.scheduledTasksDisabled"><![CDATA[<strong>Noot:</strong> Om deze opties te activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het Lumera configuratiebestand inschakelen. Zoals in de Lumera documentatie aangegeven is wellicht additionele configuratie van de server nodig, wat niet op alle servers mogelijk is.]]></message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformation">Additionele informatie</message>
 	<message key="plugins.generic.booksForReview.settings.additionalInformationDescription">Additionele informatie die bij de te bespreken boeken wordt gepubliceerd.</message>
 	<message key="plugins.generic.booksForReview.settings.dueWeeksRequired">Geef het aantal weken waarbinnen de boekbespreking binnen moet zijn.</message>

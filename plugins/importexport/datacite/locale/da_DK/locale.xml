@@ -22,7 +22,7 @@
 		with access to the DataCite service for minting persistent identifiers (DOIs)
 		and registering associated metadata. If you do not have your own username and
 		password you'll still be able to export into the DataCite XML format but you
-		cannot register your DOIs with DataCite from within Wizdam Editorial.
+		cannot register your DOIs with DataCite from within Lumera.
 		Please note that the password will be saved as plain text, i.e. not encrypted, due
 		to the DataCite registration service requirements.]]></message>
 

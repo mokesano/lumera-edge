@@ -14,5 +14,5 @@
  
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Плагин «ShibAuthPlugin»</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Работа этого плагина затрагивает весь сайт, плагин включается в файле конфигурации Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Работа этого плагина затрагивает весь сайт, плагин включается в файле конфигурации Lumera.</message>
 </locale>

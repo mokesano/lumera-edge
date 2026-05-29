@@ -14,11 +14,11 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.customLocale.name">Standard lokaliserings-plugin</message>
-	<message key="plugins.generic.customLocale.description">Dette plugin aktiverer mulighed for redigering af standard bruger-interfacet i Wizdam Editorial.</message>
+	<message key="plugins.generic.customLocale.description">Dette plugin aktiverer mulighed for redigering af standard bruger-interfacet i Lumera.</message>
 
 	<message key="plugins.generic.customLocale.longDescription">Denne side lister alle lokaliseringer, som aktuelt er installeret i tidsskriftet.</message>
 	<message key="plugins.generic.customLocale.localeDescription">Denne side lister alle filer, som er tilgængelige for den valgte lokalisering.</message>
-	<message key="plugins.generic.customLocale.fileDescription">Indtast en tekst i det korresponderende tekstfelt for ændringer. Lad tekst-feltet for ændringer være tomt, hvis den tekst, som er standard for Wizdam Editorial, skal bruges.</message>
+	<message key="plugins.generic.customLocale.fileDescription">Indtast en tekst i det korresponderende tekstfelt for ændringer. Lad tekst-feltet for ændringer være tomt, hvis den tekst, som er standard for Lumera, skal bruges.</message>
 	<message key="plugins.generic.customLocale.localeName">Lokaliseringsnavn</message>
 	<message key="plugins.generic.customLocale.localeKey">Nøgle</message>
 	<message key="plugins.generic.customLocale.localeKeyValue">Værdi</message>

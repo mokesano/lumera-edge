@@ -18,7 +18,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreer Wizdam Editorial met Google Analytics, Het website-gebruik analyse programma van Google. Vereist dat u al een Google Analytics account hebt. Zie <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> voor meer informatie.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreer Lumera met Google Analytics, Het website-gebruik analyse programma van Google. Vereist dat u al een Google Analytics account hebt. Zie <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> voor meer informatie.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Instellingen</message>

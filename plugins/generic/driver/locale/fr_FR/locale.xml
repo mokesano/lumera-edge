@@ -13,5 +13,5 @@
  
 <locale name="fr_FR" full_name="Français (France)">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">Le plugiciel DRIVER prolonge l'interface OAI-PMH selon les directives 2.0 de DRIVER, aidant ainsi les revue Wizdam Editorial à devenir conformes aux normes Driver.</message>
+	<message key="plugins.generic.driver.description">Le plugiciel DRIVER prolonge l'interface OAI-PMH selon les directives 2.0 de DRIVER, aidant ainsi les revue Lumera à devenir conformes aux normes Driver.</message>
 </locale>

@@ -16,5 +16,5 @@
  
 <locale name="no_NO" full_name="Norsk">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Programutvidelse for ShibAuth</message>
-	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Denne programutvidelsen vil gjelde for hele nettstedet, og må slås på i Wizdam Editorial config-filen.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">ShibAuthPlugin. Denne programutvidelsen vil gjelde for hele nettstedet, og må slås på i Lumera config-filen.</message>
 </locale>

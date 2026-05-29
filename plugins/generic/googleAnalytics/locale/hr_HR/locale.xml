@@ -16,7 +16,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics dodatak</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ovaj dodatak integrira Wizdam Editorial sa Google Analytics,  aplikacijom za analizu web prometa. Ovo od vas zahtijeva da imate već postavljen Google Analytics korisnički račun. Za više informacija pogledajte <a href="http://www.google.com/analytics/" title="Google Analytics stranice">Google Analytics stranice</a>.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ovaj dodatak integrira Lumera sa Google Analytics,  aplikacijom za analizu web prometa. Ovo od vas zahtijeva da imate već postavljen Google Analytics korisnički račun. Za više informacija pogledajte <a href="http://www.google.com/analytics/" title="Google Analytics stranice">Google Analytics stranice</a>.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Postavke</message>

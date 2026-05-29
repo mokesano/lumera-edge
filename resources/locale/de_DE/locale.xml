@@ -74,8 +74,8 @@
 	-->
 
 	<!-- Allgemeine Meldungen -->
-	<message key="common.openJournalSystems">Wizdam Editorial Sistems</message>
-	<message key="common.scholarWizdam">Wizdam Editorial Sistems</message>
+	<message key="common.openJournalSystems">Lumera Sistems</message>
+	<message key="common.scholarWizdam">Lumera Sistems</message>
 	<message key="common.confirmComplete">Sind Sie sicher, dass Sie diese Aufgabe als beendet markieren wollen? Später können möglicherweise keine Änderungen mehr vorgenommen werden.</message>
 	<message key="common.payment">Zahlung</message>
 	<message key="common.payments">Zahlungen</message>
@@ -405,9 +405,9 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der Scholar
 	<!-- Verwaltung Zahlungen -->
 
 	<!-- Allgemeine Informationen: Plug-Ins -->
-	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen Wizdam Editorial Sistems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
+	<message key="plugins.categories.auth.description">Die Zugangs-Plug-Ins ermöglichen Lumera Sistems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
 	<message key="plugins.categories.citationFormats.description">Plug-Ins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
-	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Wizdam Editorial Sistems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
+	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Lumera Sistems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plug-In-Kategorien bereitgestellt werden.</message>
 	<message key="plugins.categories.implicitAuth">Plug-Ins zur impliziten Authentifizierung</message>
 	<message key="plugins.categories.implicitAuth.description">Plug-Ins zur impliziten Authentifizierung stellen Mittel zur Verfügung, um Nutzer/innen anhand ihrer HTTP-Header zu authentifizieren.</message>
 	<message key="plugins.categories.oaiMetadataFormats">Plug-In für OAI-Metadaten-Format</message>
@@ -428,7 +428,7 @@ Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der Scholar
 	Gutachter/innen die Bitte um Begutachtung, indem sie den eingereichten Beitrag an die E-Mail anhängen. Gutachter/innen mailen den Redakteur/innen ihr Einverständnis (oder einen abschlägigen Bescheid), außerdem das Gutachten und ihre Empfehlung. Redakteur/innen können das Einverständnis der Gutachter/innen (oder deren abschlägigen Bescheid) sowie das Gutachten und die Empfehlung auf der "In Begutachtung"-Seite des Beitrags einsehen, um den Begutachtungsprozess zu verfolgen.</message>
 
 
-	<message key="manager.setup.preservationDescription"><![CDATA[Wizdam Editorial Sistems unterstützt das System <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) um sichere und dauerhafte Archivierung Ihrer Zeitschrift zu gewährleisten. Ihnen stehen mehrere Möglichkeiten zur Verfügung, Ihre Zeitschrift in ein LOCKSS-Netzwerk aufzunehmen:]]></message>
+	<message key="manager.setup.preservationDescription"><![CDATA[Lumera Sistems unterstützt das System <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) um sichere und dauerhafte Archivierung Ihrer Zeitschrift zu gewährleisten. Ihnen stehen mehrere Möglichkeiten zur Verfügung, Ihre Zeitschrift in ein LOCKSS-Netzwerk aufzunehmen:]]></message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
 <br /><br />
@@ -896,7 +896,7 @@ Tragen Sie zur Wiederherstellung des Passwortes unten Ihre E-Mail-Adresse ein. E
 	<!-- Mitteilungen -->
 
 	<!-- Hilfe -->
-	<message key="help.ojsHelp">Hilfe zu Wizdam Editorial Sistems</message>
+	<message key="help.ojsHelp">Hilfe zu Lumera Sistems</message>
 	<message key="help.ojsHelpAbbrev">ScholarWizdam-Hilfe</message>
 	<message key="help.searchReturnResults">Zurück zu Suchergebnissen</message>
 

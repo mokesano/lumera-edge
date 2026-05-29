@@ -7,7 +7,7 @@
   * Copyright (c) 2003-2019 Rochmady and Wizdam Team
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Credits: https://wizdam.sangia.org/wiki/index.php?title=Wizdam Editorial:_Catalan_(ca_ES)
+  * Credits: https://wizdam.sangia.org/wiki/index.php?title=Lumera:_Catalan_(ca_ES)
   *
   * Localization strings.
   -->
@@ -15,6 +15,6 @@
 <locale name="ca_ES" full_name="Català">
 	<message key="plugins.gateways.resolver.displayName">Mòdul del sistema de resolució</message>
 	<message key="plugins.gateways.resolver.description">Aquest mòdul determina números i articles a partir de la informació de citació.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">No s'ha pogut determinar una entitat simple mitjançant la informació de citació indicada. Comproveu que la informació de citació sigui completa i que faci referència a una entitat d'aquesta versió de l'Wizdam Editorial.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">No s'ha pogut determinar una entitat simple mitjançant la informació de citació indicada. Comproveu que la informació de citació sigui completa i que faci referència a una entitat d'aquesta versió de l'Lumera.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exporta el contingut</message>
 </locale>

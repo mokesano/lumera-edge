@@ -32,9 +32,9 @@ UsageStatsLoader::_getDataFromLogEntry() para más información.</message>
 	<message key="plugins.generic.usageStats.noCounterBotList">La lista de CONTADOR de bots no puede ser encontrada, o más de una lista esta presente. El archivo {$file} no puede ser procesado.</message>
 	<message key="plugins.generic.usageStats.failedCounterBotList">La lista CONTADORA de bots {$botlist} no se puede abrir. El archivo {$file} no se puede procesar.</message>
 	
-	<message key="plugins.reports.usageStats.report.displayName">Reporte de estadísticas de uso de Wizdam Editorial</message>
-	<message key="plugins.reports.usageStats.report.description">Reporte de estadísticas de uso de Wizdam Editorial por defecto (CONTADOR listo)</message>
+	<message key="plugins.reports.usageStats.report.displayName">Reporte de estadísticas de uso de Lumera</message>
+	<message key="plugins.reports.usageStats.report.description">Reporte de estadísticas de uso de Lumera por defecto (CONTADOR listo)</message>
 	
-	<message key="plugins.reports.usageStats.metricType">Wizdam Editorial/CONTADOR</message>
-	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Wizdam Editorial (CONTADOR listo)</message>
+	<message key="plugins.reports.usageStats.metricType">Lumera/CONTADOR</message>
+	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Lumera (CONTADOR listo)</message>
 </locale>

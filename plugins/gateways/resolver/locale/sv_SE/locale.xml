@@ -18,6 +18,6 @@
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.gateways.resolver.displayName">Resolver tillägg</message>
 	<message key="plugins.gateways.resolver.description">Detta tillägg kopplar till artikel eller publikation baserat på citeringsinformation</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Kan inte koppla till sökt dokument m. h. a. given citeringsinformation. Vänligen kontrollera att citeringsinformationen är komplett och att den refererar till ett objekt som återfinns i denna Wizdam Editorial installation.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Kan inte koppla till sökt dokument m. h. a. given citeringsinformation. Vänligen kontrollera att citeringsinformationen är komplett och att den refererar till ett objekt som återfinns i denna Lumera installation.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exportera beståndsposter</message>
 </locale>

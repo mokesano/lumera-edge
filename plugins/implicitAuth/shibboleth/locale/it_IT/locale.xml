@@ -16,5 +16,5 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.implicitAuth.shibboleth.displayName">Plugin di autenticazione Shibbolet</message>
-	<message key="plugins.implicitAuth.shibboleth.description">Questo plugin è esteso a tutto il sito e viene abilitato nel file di configurazione di Wizdam Editorial.</message>
+	<message key="plugins.implicitAuth.shibboleth.description">Questo plugin è esteso a tutto il sito e viene abilitato nel file di configurazione di Lumera.</message>
 </locale>

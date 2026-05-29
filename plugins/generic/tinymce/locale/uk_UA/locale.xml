@@ -16,7 +16,7 @@
  
 <locale name="uk_UA" full_name="Українська">
        <message key="plugins.generic.tinymce.name">Модуль TinyMCE</message>
-       <message key="plugins.generic.tinymce.description"><![CDATA[Цей модуль дозволяє WYSIWYG редагування текстових полів Wizdam Editorial за допомогою редактора змісту <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-       <message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Цей модуль дозволяє WYSIWYG редагування текстових полів Wizdam Editorial за допомогою редактора змісту <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>Наразі TinyMCE не встановлений; будь ласка, встановіть його за адресою {$tinyMcePath}.</strong>]]></message>
+       <message key="plugins.generic.tinymce.description"><![CDATA[Цей модуль дозволяє WYSIWYG редагування текстових полів Lumera за допомогою редактора змісту <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+       <message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Цей модуль дозволяє WYSIWYG редагування текстових полів Lumera за допомогою редактора змісту <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>Наразі TinyMCE не встановлений; будь ласка, встановіть його за адресою {$tinyMcePath}.</strong>]]></message>
        <message key="plugins.generic.tinymce.settings">Налаштування</message>
 </locale>

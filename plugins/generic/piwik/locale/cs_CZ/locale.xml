@@ -15,7 +15,7 @@
 
 	<!-- Piwik -->
 	<message key="plugins.generic.piwik.displayName">Plugin Piwik</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Propojte Wizdam Editorial s Piwik, volně dostupnou a otevřenou aplikací pro analýzu provozu webu. Požaduje, aby byl Piwik nainstalován. Na <a href="http://piwik.org/" title="piwik site">stránce Piwik</a> najdete více informací.]]></message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Propojte Lumera s Piwik, volně dostupnou a otevřenou aplikací pro analýzu provozu webu. Požaduje, aby byl Piwik nainstalován. Na <a href="http://piwik.org/" title="piwik site">stránce Piwik</a> najdete více informací.]]></message>
 
 	<!-- Piwik Settings Management -->
 	<message key="plugins.generic.piwik.manager.settings">Nastavení</message>

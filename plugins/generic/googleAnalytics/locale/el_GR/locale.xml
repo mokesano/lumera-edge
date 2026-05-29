@@ -23,7 +23,7 @@
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Πρόσθετο Google Analytics</message>
-	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ενσωμματώνει το Wizdam Editorial με το Google Analytics, την εφαρμογή για την ανάλυση της κίνησης ενός ιστοτόπου της  Google. Απαιτεί την ύπαρξη ενός λογαριασμού στο Google Analytics. Δείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> για περισσότερες πληροφορίες.]]></message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ενσωμματώνει το Lumera με το Google Analytics, την εφαρμογή για την ανάλυση της κίνησης ενός ιστοτόπου της  Google. Απαιτεί την ύπαρξη ενός λογαριασμού στο Google Analytics. Δείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> για περισσότερες πληροφορίες.]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.googleAnalytics.manager.settings">Ρυθμίσεις</message>
