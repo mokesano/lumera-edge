@@ -3,7 +3,7 @@
         'name' => 'lumera/lumera-edge',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8dcbdab2474011d2556d1ce3e3b99ee403efeecf',
+        'reference' => 'f1828c06b8ca2d10032821e873a4e7c746322674',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
@@ -85,7 +85,7 @@
         'lumera/lumera-edge' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8dcbdab2474011d2556d1ce3e3b99ee403efeecf',
+            'reference' => 'f1828c06b8ca2d10032821e873a4e7c746322674',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
