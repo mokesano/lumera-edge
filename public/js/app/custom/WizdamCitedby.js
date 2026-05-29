@@ -123,12 +123,12 @@
        if (list) list.classList.remove('citation-blur');
    };
    
-   // Fix HTML dalam judul
+   // Fix HTML dalam judul (aman: jangan reinterpretasi text sebagai HTML)
    const fixHtmlTitles = () => {
        document.querySelectorAll('.anchor-text span').forEach(span => {
            const text = span.textContent;
            if (text && text.includes('<') && text.includes('>')) {
-               span.innerHTML = text;
+               span.textContent = text;
            }
        });
    };

@@ -1,4 +1,4 @@
-# Contributing to Wizdam Editorial
+# Contributing to Lumera Edge
 
 First of all, thank you for contributing!
 
