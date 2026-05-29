@@ -112,9 +112,9 @@
 		
 	<br /><br />
 	
-	<a href="https://wizdam.editorial/"><img src="{$baseUrl}/core/Library/templates/images/core.gif" style="border: 0;" alt="Wizdam Editorial Project" /></a>
+	<a href="https://lumera.sangia.org/"><img src="{$baseUrl}/core/Library/templates/images/core.gif" style="border: 0;" alt="Lumera" /></a>
 	<br />
-	Wizdam Editorial was developed by the Wizdam Editorial Project.
+	Lumera was developed by the Lumera Project.
 </div>
 
 {include file="common/footer.tpl"}

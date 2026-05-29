@@ -18,7 +18,7 @@
 {/if}
 {/strip}
 <head>
-    <title>{$pageTitleTranslated} | ScholarWizdam Editorial System</title>
+    <title>{$pageTitleTranslated} | Lumera</title>
         
     <meta name="description" content="{$metaSearchDescription|escape}" />
     <meta name="keywords" content="{$metaSearchKeywords|escape}" />

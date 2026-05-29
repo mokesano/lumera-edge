@@ -23,7 +23,7 @@
 	{* optional elements *}
 	{* <category/> *}
 	{* <contributor/> *}
-	<generator uri="https://wizdam.editorial/" version="{$appVersion|escape}">Wizdam Editorial</generator>
+	<generator uri="https://lumera.sangia.org/" version="{$appVersion|escape}">Lumera</generator>
 	{if $journal->getLocalizedDescription()}
 		{assign var="description" value=$journal->getLocalizedDescription()}
 	{elseif $journal->getLocalizedSetting('searchDescription')}

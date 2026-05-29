@@ -5,7 +5,7 @@
  * Copyright (c) 2017-2026 Rochmady and Wizdam Team
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Modern register form ScholarWizdam Editorial Systems 
+ * Modern register form Lumera Systems 
  * kompatibel dengan App v2.4.8.2
  * Production-ready template dengan modern UI components
  *}

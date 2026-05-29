@@ -14,8 +14,8 @@
 </div>
 <div id="pageFooter">
     <div id="standardFooter">
-	    <a href="https://wizdam.sangia.org">
-		<img src="{$baseUrl}/assets/img/403index.png" alt="Wizdam Editorial Systems"/>
+	    <a href="https://lumera.sangia.org">
+		<img src="{$baseUrl}/assets/img/403index.png" alt="Lumera Systems"/>
 		</a>
 	</div>
 </div>

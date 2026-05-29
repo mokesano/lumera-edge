@@ -56,7 +56,7 @@ $response = [
 
     // [APP] Informasi Aplikasi
     'app_info' => [
-        'name'        => 'Wizdam Editorial Systems',
+        'name'        => 'Lumera Systems',
         'version'     => '1.0.0.0',
         'last_update' => '2025-10-27',
         'environment' => 'production'
@@ -100,20 +100,20 @@ $response = [
          [
             'name'    => 'Rochmady',
             'role'    => 'Lead Project',
-            'github'  => 'https://github.com/rochmady',
-            'website' => 'https://wizdam.sangia.org',
+            'github'  => 'https://github.com/mokesano',
+            'website' => 'https://lumera.sangia.org',
             'contact' => 'rochmady@sangia.org'
         ],
         [
-            'name'    => 'Wizdam Core Team',
+            'name'    => 'Lumera Core Team',
             'role'    => 'Lead Development',
-            'website' => 'https://wizdam.sangia.org',
+            'website' => 'https://lumera.sangia.org',
             'contact' => 'tech@sangia.org'
         ],
         [
             'name'    => 'Susiana',
             'role'    => 'Backend Engineer',
-            'website' => 'https://wizdam.sangia.org',
+            'website' => 'https://lumera.sangia.org',
             'contact' => 'susiana@sangia.org'
         ],
         [

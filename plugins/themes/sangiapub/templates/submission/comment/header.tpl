@@ -65,7 +65,7 @@
 {/literal}
 
 <header>
-    <img loading="lazy" src="{$baseUrl}/assets/img/wizdam-branded.svg" alt="Wizdam Editorial Systems" width="auto">
+    <img loading="lazy" src="{$baseUrl}/assets/img/wizdam-branded.svg" alt="Lumera" width="auto">
 </header>
 <div id="container">
 	<nav>

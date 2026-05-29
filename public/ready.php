@@ -60,7 +60,7 @@ try {
     // 7. Output JSON
     $response = [
         'status' => 'ready',
-        'app' => 'Wizdam Editorial Systems',
+        'app' => 'Lumera Systems',
         'version' => $currentVersion->getVersionString(), // Versi dari DB
         'driver_config' => Config::getVar('database', 'driver'),
         'connection_object' => $connClass,
