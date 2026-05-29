@@ -1,0 +1,128 @@
+{
+    "name": "lumera/lumera-edge",
+    "description": "Lumera Edge - Modern Publisher Platform for Journal Management Framework Workflow and Publishing",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "keywords": [
+        "publishing",
+        "journal",
+        "open-access",
+        "lumera"
+    ],
+    "homepage": "https://lumera.sangia.org/",
+    "support": {
+        "issues": "https://github.com/mokesano/lumera-edge/issues",
+        "forum": "https://forum.lumera.sangia.org/",
+        "source": "https://github.com/mokesano/lumera-edge"
+    },
+    "authors": [
+        {
+            "name": "Rochmady",
+            "email": "rochmady@sangia.org",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-zip": "*",
+        "adodb/adodb-php": "^5.22",
+        "chillerlan/php-qrcode": "^6.0.1",
+        "ezyang/htmlpurifier": "^4.19",
+        "guzzlehttp/guzzle": "^7.10.4",
+        "midtrans/midtrans-php": "^2.6",
+        "mpdf/mpdf": "^8.0",
+        "setasign/fpdi": "^2.6.7",
+        "simplepie/simplepie": "^1.9",
+        "smarty/smarty": "^5.8",
+        "symfony/polyfill-mbstring": "^1.36",
+        "symfony/var-dumper": "^8.0.8",
+        "vlucas/phpdotenv": "^5.5",
+        "wikimedia/less.php": "^5.5",
+        "wizdamdebug/debug-toolbar": "^1.0.0",
+        "xendit/xendit-php": "^7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wizdam\\Modules\\": [
+                "core/Modules/"
+            ],
+            "Wizdam\\Kernel\\": [
+                "core/Kernel/"
+            ],
+            "Wizdam\\Core\\": [
+                "core/Includes/"
+            ],
+            "App\\Domain\\": [
+                "app/Domain/"
+            ],
+            "App\\Pages\\": [
+                "app/Pages/"
+            ],
+            "App\\Controllers\\": [
+                "app/Controllers/"
+            ],
+            "App\\Services\\": [
+                "app/Services/"
+            ],
+            "App\\Helpers\\": [
+                "app/Helpers/"
+            ]
+        },
+        "classmap": [
+            "resources/smarty/plugins/",
+            "plugins/gateways/",
+            "plugins/generic/",
+            "plugins/importexport/",
+            "plugins/oaiMetadataFormats/",
+            "plugins/paymethod/"
+        ],
+        "files": [
+            "core/Includes/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wizdam\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        },
+        "vendor-dir": "core/Library"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"echo 'Lumera Edge Platform installed successfully!\\n';\""
+        ],
+        "post-update-cmd": [
+            "@php -r \"echo 'Lumera Edge Platform updated successfully!\\n';\""
+        ],
+        "test": "phpunit",
+        "cs-check": "phpcs --standard=PSR12 core/Library app",
+        "cs-fix": "phpcbf --standard=PSR12 core/Library app",
+        "analyze": "phpstan analyse --level max core/Library app"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "name": "wizdamdebug/debug-toolbar",
+            "type": "vcs",
+            "url": "https://github.com/mokesano/DebugToolbar"
+        }
+    ]
+}

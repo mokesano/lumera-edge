@@ -1,0 +1,33 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * @defgroup plugins_citationParser_parscit
+ */
+
+/**
+ * @file plugins/citationParser/parscit/ParscitCitationParserPlugin.inc.php
+ *
+ * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2003-2019 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class ParscitCitationParserPlugin
+ * @ingroup plugins_citationParser_parscit
+ *
+ * @brief ParsCit citation extraction connector plug-in.
+ */
+
+import('core.Modules.plugins.citationParser.parscit.CoreParscitCitationParserPlugin');
+
+class ParscitCitationParserPlugin extends CoreParscitCitationParserPlugin {
+    
+	/**
+	 * Constructor
+	 */
+    function __construct() {
+        parent::__construct();
+    }
+}
+
+?>

@@ -1,0 +1,53 @@
+/**
+ * @file js/classes/linkAction/RedirectRequest.js
+ *
+ * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2000-2019 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class RedirectRequest
+ * @ingroup js_classes_linkAction
+ *
+ * @brief A simple action request that will follow the given URL.
+ */
+(function($) {
+
+
+	/**
+	 * @constructor
+	 *
+	 * @extends $.core.classes.linkAction.LinkActionRequest
+	 *
+	 * @param {jQuery} $linkActionElement The element the link
+	 *  action was attached to.
+	 * @param {Object} options Configuration of the link action
+	 *  request.
+	 */
+	$.core.classes.linkAction.RedirectRequest =
+			function($linkActionElement, options) {
+
+		this.parent($linkActionElement, options);
+	};
+	$.core.classes.Helper.inherits(
+			$.core.classes.linkAction.RedirectRequest,
+			$.core.classes.linkAction.LinkActionRequest);
+
+
+	//
+	// Public methods
+	//
+	/**
+	 * @inheritDoc
+	 */
+	$.core.classes.linkAction.RedirectRequest.prototype.activate =
+			function(element, event) {
+
+		var options = this.getOptions();
+		window.location = options.url;
+
+		return this.parent('activate', element, event);
+	};
+
+
+/** @param {jQuery} $ jQuery closure. */
+})(jQuery);

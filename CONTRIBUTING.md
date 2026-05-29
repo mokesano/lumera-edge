@@ -1,4 +1,4 @@
-# Contributing to ScholarAux
+# Contributing to Lumera Edge
 
 First of all, thank you for contributing!
 
