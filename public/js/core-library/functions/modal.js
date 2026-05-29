@@ -23,7 +23,9 @@ function modal(url, actType, actOnId, localizedButtons, callingElement, dialogTi
         // Prepare variables
         var okButton = localizedButtons[0];
         var cancelButton = localizedButtons[1];
-        var UID = Math.ceil(1000 * Math.random());
+        var uidArray = new Uint32Array(1);
+        window.crypto.getRandomValues(uidArray);
+        var UID = uidArray[0].toString();
 
         // MODERNIZATION: Replace .die().live() with .off().on() attached to document
         // This handles dynamic elements correctly (formerly .live logic)
