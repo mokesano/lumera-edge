@@ -11,7 +11,9 @@
     const generate = prefix => {
       const date = new Date();
       const time = date.getTime();
-      const random = Math.floor(Math.random() * 1000000000);
+      const random = typeof globalThis !== 'undefined' && globalThis.crypto && typeof globalThis.crypto.getRandomValues === 'function'
+        ? globalThis.crypto.getRandomValues(new Uint32Array(1))[0]
+        : Math.floor(Math.random() * 1000000000);
       unique++;
       return prefix + '_' + random + unique + String(time);
     };
