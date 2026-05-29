@@ -4,17 +4,17 @@ declare(strict_types=1);
 /**
  * @file core/Modules/tools/install.php
  *
- * Copyright (c) 2013-2025 Wizdam Editorial Contributors
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AppInstallTool
  * @ingroup tools
  *
- * @brief CLI tool for installing Wizdam.
- * [WIZDAM EDITION] Modernized CLI Installer Child.
+ * @brief CLI tool for installing Lumera Edge.
+ * [LUMERA EDGE EDITION] Modernized CLI Installer Child.
  */
 
-require(__DIR__ . '/bootstrap.inc.php');
+require(__DIR__ . '/bootstrap.php');
 
 import('core.Modules.cliTool.InstallTool');
 
@@ -47,14 +47,14 @@ class AppInstallTool extends InstallTool {
      * @return bool
      */
     protected function readParams(): bool {
-        // [WIZDAM] Application Component
-        AppLocale::requireComponents(LOCALE_COMPONENT_WIZDAM_INSTALLER, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_WIZDAM_USER);
-        printf("%s\n", __('installer.wizdamInstallation'));
+        // [LUMERA EDGE] Application Component
+        AppLocale::requireComponents(LOCALE_COMPONENT_LUMERA_EDGE_INSTALLER, LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_LUMERA_EDGE_USER);
+        printf("%s\n", __('installer.lumeraEdgeInstallation'));
 
         // Call Parent implementation to read all common parameters
         parent::readParams();
 
-        // Read Wizdam-specific final parameter
+        // Read Lumera Edge-specific final parameter
         $this->readParamBoolean('install', 'installer.installApplication');
 
         // Parent expects a boolean return value to determine execution flow.
@@ -62,7 +62,7 @@ class AppInstallTool extends InstallTool {
     }
 }
 
-// [WIZDAM] Safe instantiation
+// [LUMERA EDGE] Safe instantiation
 $tool = new AppInstallTool($argv ?? []);
 $tool->execute();
 
