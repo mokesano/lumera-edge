@@ -1,7 +1,7 @@
 {
-  "name": "wizdam/wizdam-platform",
+  "name": "sangia/lumera-edge",
   "version": "1.0.0",
-  "description": "Wizdam Publisher Platform - Modern Open Journal Systems Framework",
+  "description": "Lumera Edge - Modern Publisher Platform for Journal Management Framework Workflow and Publishing",
   "private": true,
   "scripts": {
     "build": "npm run build:tinymce",
@@ -9,6 +9,6 @@
     "postinstall": "npm run build"
   },
   "devDependencies": {
-    "tinymce": "^6.8.0"
+    "tinymce": "^8.5.1"
   }
 }

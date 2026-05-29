@@ -1060,7 +1060,7 @@
             inside: { 'punctuation': /\./ }
           },
           'type-expression': {
-            pattern: re(/(\b(?:default|sizeof|typeof)\s*\(\s*(?!\s))(?:<<0>>|[^()])*(?=\s*\))/.source, [nestedRound]),
+            pattern: re(/(\b(?:default|sizeof|typeof)\s*\(\s*(?!\s))(?:[^()\s]|\s(?!\s)|<<0>>)*(?=\s*\))/.source, [nestedRound]),
             lookbehind: true,
             alias: 'class-name',
             inside: typeInside
@@ -1208,13 +1208,13 @@
         Prism.languages.insertBefore('csharp', 'string', {
           'interpolation-string': [
             {
-              pattern: re(/(^|[^\\])(?:\$@|@\$)"(?:""|\\[\s\S]|\{\{|<<0>>|[^\\{"<])*"/.source, [mInterpolation]),
+              pattern: re(/(^|[^\\])(?:\$@|@\$)"(?:""|\\[\s\S]|\{\{|<<0>>|[^\\{"])*"/.source, [mInterpolation]),
               lookbehind: true,
               greedy: true,
               inside: createInterpolationInside(mInterpolation, mInterpolationRound)
             },
             {
-              pattern: re(/(^|[^@\\])\$"(?:[^\\{"$]|\{\{|\\.|\$(?!\{))*"/.source, [sInterpolation]),
+              pattern: re(/(^|[^@\\])\$"(?:\\.|\{\{|<<0>>|[^\\"{])*"/.source, [sInterpolation]),
               lookbehind: true,
               greedy: true,
               inside: createInterpolationInside(sInterpolation, sInterpolationRound)
