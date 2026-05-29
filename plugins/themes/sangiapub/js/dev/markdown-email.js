@@ -34,11 +34,26 @@ $(document).ready(function() {
         $textarea.after($toggle).after($preview);
         
         // Function convert markdown simple
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
         function convertToHtml(text) {
-            return text
+            var safeText = escapeHtml(text);
+            return safeText
                 .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
                 .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(_, label, url) {
+                    if (/^(https?:\/\/|mailto:|\/|#)/i.test(url)) {
+                        return '<a href="' + url + '">' + label + '</a>';
+                    }
+                    return label + ' (' + url + ')';
+                })
                 .replace(/\n/g, '<br>');
         }
         
