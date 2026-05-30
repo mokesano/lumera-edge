@@ -1,28 +1,24 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Announcement;
+
 /**
  * @defgroup announcement
  */
 
 /**
- * @file core.Modules.announcement/CoreAnnouncement.inc.php
+ * @file core/Modules/Announcement/CoreAnnouncement.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreAnnouncement
  * @ingroup announcement
  * @see AnnouncementDAO, CoreAnnouncementDAO
  *
  * @brief Basic class describing a announcement.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Constructor)
- * - Strict SHIM
- * - Visibility explicit
- * - Safe Date Handling
  */
 
 define('ANNOUNCEMENT_EXPIRE_YEAR_OFFSET_FUTURE',    '+10');
@@ -157,6 +153,7 @@ class CoreAnnouncement extends DataObject {
     }
 
     /**
+     * [Depricated] Get full localized announcement title including type name.
      * @deprecated
      */
     public function getAnnouncementTitleFull() {
@@ -191,6 +188,7 @@ class CoreAnnouncement extends DataObject {
     }
 
     /**
+     * [Deprecated] Get localized short description
      * @deprecated
      */
     public function getAnnouncementDescriptionShort() {
@@ -225,6 +223,7 @@ class CoreAnnouncement extends DataObject {
     }
 
     /**
+     * [Deprecated] Get localized full description
      * @deprecated
      */
     public function getAnnouncementDescription() {
@@ -301,5 +300,4 @@ class CoreAnnouncement extends DataObject {
         return $this->setData('datePosted', $datetimePosted);
     }
 }
-
 ?>

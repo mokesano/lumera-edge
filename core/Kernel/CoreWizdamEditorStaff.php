@@ -1,14 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel\CoreWizdamEditorStaff;
+
 /**
- * @file core.Modules.classes/core/CoreEditorStaff.inc.php
+ * @file core/Kernel/CoreWizdamEditorStaff.php
  *
+ * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2000-2019 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class DataObject
+ * @ingroup core
+ * 
  * @brief Sistem cache data staff jurnal (Manager dan Editor) untuk homepage.
- * Versi core dari skrip tema kustom.
- *
- * @author Rochmady and Wizdam Team
- * @version v1.22.5 (Core Refactor)
  */
 
 // Import DAO yang dibutuhkan
@@ -26,7 +31,7 @@ class CoreWizdamEditorStaff {
     const ROLE_EDITOR = 256;
 
     /**
-     * @brief Metode publik utama untuk dipanggil dari handler lain (spt IndexHandler).
+     * Metode publik utama untuk dipanggil dari handler lain (spt IndexHandler).
      * @param $journal Journal Objek jurnal saat ini
      * @param $templateMgr TemplateManager Objek template manager
      * @param $maxDisplayCount int Jumlah maksimum staff yang ditampilkan
@@ -125,7 +130,7 @@ class CoreWizdamEditorStaff {
     }
 
     /**
-     * @brief Memproses objek User menjadi array data yang siap ditampilkan.
+     * Memproses objek User menjadi array data yang siap ditampilkan.
      * @param $user User Objek user
      * @param $locale string Locale
      * @param $countryDao CountryDAO Objek CountryDAO

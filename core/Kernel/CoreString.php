@@ -1,18 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/CoreString.inc.php
+ * @file core/Kernel/CoreString.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION v3.4]
- * - Refactored for PHP 8.1+ Strict Mode
- * - Converted to Static Class Architecture
- * - Fixed deprecated string access syntax ({}) -> ([])
- * - Enhanced Type Safety
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreString
  * @ingroup core
@@ -134,6 +130,7 @@ class CoreString {
     //
 
     /**
+     * Get the length of a string.
      * @see http://ca.php.net/manual/en/function.strlen.php
      * @param string $string
      * @return int
@@ -154,6 +151,7 @@ class CoreString {
     }
 
     /**
+     * Find the position of the first occurrence of a substring in a string.
      * @see http://ca.php.net/manual/en/function.strpos.php
      * @param string $haystack
      * @param string $needle
@@ -174,6 +172,7 @@ class CoreString {
     }
 
     /**
+     * Find the position of the last occurrence of a substring in a string.
      * @see http://ca.php.net/manual/en/function.strrpos.php
      * @param string $haystack
      * @param string $needle
@@ -193,6 +192,7 @@ class CoreString {
     }
 
     /**
+     * Find the position of the last occurrence of a substring in a string.
      * @see http://ca.php.net/manual/en/function.substr.php
      * @param string $string
      * @param int $start
@@ -215,6 +215,7 @@ class CoreString {
     }
 
     /**
+     * Replace text within a portion of a string.
      * @see http://ca.php.net/manual/en/function.substr_replace.php
      * @param string $string
      * @param string $replacement
@@ -251,6 +252,7 @@ class CoreString {
     }
 
     /**
+     * Convert a string to lowercase.
      * @see http://ca.php.net/manual/en/function.strtolower.php
      * @param string $string
      * @return string
@@ -269,6 +271,7 @@ class CoreString {
     }
 
     /**
+     * Convert a string to uppercase.
      * @see http://ca.php.net/manual/en/function.strtoupper.php
      * @param string $string
      * @return string
@@ -287,6 +290,7 @@ class CoreString {
     }
 
     /**
+     * Convert the first character of a string to uppercase.
      * @see http://ca.php.net/manual/en/function.ucfirst.php
      * @param string $string
      * @return string
@@ -307,6 +311,7 @@ class CoreString {
     }
 
     /**
+     * Count the number of substring occurrences in a string.
      * @see http://ca.php.net/manual/en/function.substr_count.php
      * @param string $haystack
      * @param string $needle
@@ -321,6 +326,7 @@ class CoreString {
     }
 
     /**
+     * Encode a string for use in an email header.
      * @see http://ca.php.net/manual/en/function.encode_mime_header.php
      * @param string $string
      * @return string
@@ -334,6 +340,7 @@ class CoreString {
     }
 
     /**
+     * Send an email.
      * @see http://ca.php.net/manual/en/function.mail.php
      * @param string $to
      * @param string $subject
@@ -357,6 +364,7 @@ class CoreString {
     //
 
     /**
+     * Quote regular expression characters in a string.
      * @see http://ca.php.net/manual/en/function.regexp_quote.php
      * @param string $string
      * @param string $delimiter
@@ -367,6 +375,7 @@ class CoreString {
     }
 
     /**
+     * Get array entries that match a regular expression.
      * @see http://ca.php.net/manual/en/function.regexp_grep.php
      * @param string $pattern
      * @param array $input
@@ -379,6 +388,7 @@ class CoreString {
     }
 
     /**
+     * Match a regular expression against a string.
      * @see http://ca.php.net/manual/en/function.regexp_match.php
      * @param string $pattern
      * @param string $subject
@@ -390,6 +400,7 @@ class CoreString {
     }
 
     /**
+     * Match a regular expression against a string and return the matches.
      * @see http://ca.php.net/manual/en/function.regexp_match_get.php
      * @param string $pattern
      * @param string $subject
@@ -402,6 +413,7 @@ class CoreString {
     }
 
     /**
+     * Match a regular expression against a string and return all matches.
      * @see http://ca.php.net/manual/en/function.regexp_match_all.php
      * @param string $pattern
      * @param string $subject
@@ -414,6 +426,7 @@ class CoreString {
     }
 
     /**
+     * Replace text using a regular expression.
      * @see http://ca.php.net/manual/en/function.regexp_replace.php
      * @param string|array $pattern
      * @param string|array $replacement
@@ -441,6 +454,7 @@ class CoreString {
     }
 
     /**
+     * Replace text using a regular expression and a callback function.
      * @see http://ca.php.net/manual/en/function.regexp_replace_callback.php
      * @param string|array $pattern
      * @param callable $callback
@@ -467,6 +481,7 @@ class CoreString {
     }
 
     /**
+     * Split a string by a regular expression.
      * @see http://ca.php.net/manual/en/function.regexp_split.php
      * @param string $pattern
      * @param string $subject
@@ -479,6 +494,7 @@ class CoreString {
     }
 
     /**
+     * Determine the MIME type of a file.
      * @see http://ca.php.net/manual/en/function.mime_content_type.php
      * @param string $filename
      * @param string $suggestedExtension
@@ -778,8 +794,7 @@ class CoreString {
     }
 
     /**
-     * Convert UTF-8 encoded characters in a string to escaped HTML entities
-     * [WIZDAM] Fixed deprecated usage of curly braces for string offset
+     * Convert UTF-8 encoded characters in a string to escaped HTML entities.
      * @param string $str
      * @return string
      */

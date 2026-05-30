@@ -1,25 +1,26 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Citation;
+
 /**
- * @file core.Modules.citation/CitationListTokenizerFilter.inc.php
+ * @file core/Modules/Citation/CitationListTokenizerFilter.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CitationListTokenizerFilter
  * @ingroup classes_citation
  *
  * @brief Class that takes an unformatted list of citations
  * and returns an array of raw citation strings.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('core.Modules.filter.Filter');
 
 class CitationListTokenizerFilter extends Filter {
+    
     /**
      * Constructor
      */

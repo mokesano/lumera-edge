@@ -1,15 +1,18 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Admin\Form;
+
 /**
  * @defgroup admin_form
  */
 
 /**
- * @file core.Modules.admin/form/CorePublisherSettingsForm.inc.php
+ * @file core/Modules/Admin/Form/CorePublisherSettingsForm.php
  *
  * Copyright (c) 2013-2025 Lumera Edge Project
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Copyright (c) 2000-2024 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CorePublisherSettingsForm
  * @ingroup admin_form
@@ -235,5 +238,4 @@ class CorePublisherSettingsForm extends Form {
         return true;
     }
 }
-
 ?>

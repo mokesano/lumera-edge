@@ -1,23 +1,23 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/DataObject.inc.php
+ * @file core/Kernel/DataObject.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataObject
  * @ingroup core
- * @see Core
  *
  * @brief Any class with an associated DAO should extend this class.
- *
- * [MODERNISASI] PHP 7.4+ Compatible with Backward Compatibility Bridge
  */
 
 class DataObject {
+
     /** @var array Array of object data */
     protected $_data = array();
 
@@ -44,9 +44,7 @@ class DataObject {
     }
 
     /**
-     * [MAGIC BRIDGE / SHIM]
-     * Backward Compatibility for Old Child Classes (Article, Issue, etc).
-     * Mencegah crash saat child class memanggil parent::DataObject()
+     * [SHIM] Backward Compatibility.
      */
     public function DataObject($callHooks = true) {
         // Memicu error level E_USER_DEPRECATED agar terekam di log tapi tidak mematikan aplikasi
@@ -64,8 +62,7 @@ class DataObject {
     //
 
     /**
-     * Get a piece of data for this object, localized to the current
-     * locale if possible.
+     * Get a piece of data for this object, localized to the current locale if possible.
      * @param string $key
      * @return mixed
      */
@@ -91,7 +88,6 @@ class DataObject {
 
     /**
      * Get the value of a data variable.
-     * [MODERNISASI] Uses Null Coalescing Operator logic manually for compat
      * @param string $key
      * @param string|null $locale (optional)
      * @return mixed
@@ -164,7 +160,6 @@ class DataObject {
 
     /**
      * Set all data variables at once.
-     * [MODERNISASI] Removed (&) reference. PHP 7+ uses Copy-on-Write optimization.
      * @param array $data
      */
     public function setAllData($data) {

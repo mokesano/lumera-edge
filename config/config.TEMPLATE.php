@@ -5,14 +5,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-; config.TEMPLATE.inc.php
+; config.TEMPLATE.php
 ;
 ; Copyright (c) 2013-2019 Sangia Publishing House
 ; Copyright (c) 2003-2019 Rochmady and Wizdam Team
 ; Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 ;
 ; ScholarWizdam Configuration settings.
-; Rename config.TEMPLATE.inc.php to config.inc.php to use.
+; Rename config.TEMPLATE.php to config.php to use.
 ;
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -320,7 +320,7 @@ use_html_purifier = On
 ;implicit_auth_admin_list = "jdoe@email.ca jshmo@email.ca"
 
 ; URL of the implicit auth 'Way Finder' (Discovery Service [DS]) page.
-; See pages/login/LoginHandler.inc.php for usage.
+; See pages/login/LoginHandler.php for usage.
 ;implicit_auth_wayf_url = "/Shibboleth.sso/wayf"
 
 

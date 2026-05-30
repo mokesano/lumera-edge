@@ -1,21 +1,21 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/Registry.inc.php
+ * @file core/Kernel/Registry.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Registry
  * @ingroup core
  *
  * @brief Maintains a static table of keyed references.
  * Used for storing/accessing single instance objects and values.
- * WIZDAM EDITION: Pure PHP 8 Strict (No References &)
  */
-
 
 class Registry {
     
@@ -32,7 +32,7 @@ class Registry {
     }
 
     /**
-     * [SHIM] Backward Compatibility
+     * [SHIM] Backward Compatibility.
      */
     public function Registry() {
         trigger_error(
@@ -44,7 +44,6 @@ class Registry {
 
     /**
      * Get the registry data structure.
-     * WIZDAM: Returns a COPY of the array in PHP 8 (Pass-by-value).
      * Modifying the result of this function will NOT modify the global registry 
      * unless explicitly set back via Registry::setHooks().
      * @return array
@@ -55,8 +54,7 @@ class Registry {
 
     /**
      * Get the value of an item in the registry.
-     * WIZDAM: Strictly returns by value/handle. No reference (&).
-     * * @param $key string
+     * @param $key string
      * @param $createIfEmpty boolean Whether or not to create the entry if none exists
      * @param $createWithDefault mixed If $createIfEmpty, this value will be used as a default
      * @return mixed The value (Object Handle or Array Copy)
@@ -74,7 +72,6 @@ class Registry {
 
     /**
      * Set the value of an item in the registry.
-     * WIZDAM: Strictly pass by value/handle.
      * @param $key string
      * @param $value mixed
      */
@@ -99,5 +96,4 @@ class Registry {
         self::$_registry = array();
     }
 }
-
 ?>

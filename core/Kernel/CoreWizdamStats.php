@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.classes/core/CoreStats.inc.php
+ * @file core/Kernel/CoreWizdamStats.php
  * 
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  * 
  * @ingroup Statistics
  * @class CoreWizdamStats
  * 
  * @brief Mengintegrasikan logika statistik kustom (v1.24.0) ke dalam core Wizdam.
- * Menggabungkan logika dari journal-insight.txt, getJournalStats_v2.txt, dan allJournalStats.txt
- * @author Rochmady and Wizdam Team
- * @version v1.24.0 (Core Refactor Lengkap - Final)
  */
 
 // Import kelas-kelas yang diperlukan
@@ -574,7 +573,7 @@ class CoreWizdamStats {
                 $result->Close();
             }
         } catch (Exception $e) {
-            // HANYA log jika Wizdam diatur untuk mencatat error di config.inc.php
+            // HANYA log jika Wizdam diatur untuk mencatat error di config.php
             if (Config::getVar('debug', 'log_errors')) {
                 error_log("WizdamStats: Error checking DB: " . $e->getMessage()); 
             }
@@ -608,7 +607,7 @@ class CoreWizdamStats {
                         // error_log("WizdamStats: Cache CORRUPT (unserialize failed) for JID: $journalId");
                     }
                 } catch (Exception $e) { 
-                    // HANYA jika Wizdam diatur untuk mencatat error di config.inc.php
+                    // HANYA jika Wizdam diatur untuk mencatat error di config.php
                     if (Config::getVar('debug', 'log_errors')) {
                         error_log("WizdamStats: Failed to read/unserialize cache for JID $journalId: " . $e->getMessage()); 
                     }
@@ -672,7 +671,7 @@ class CoreWizdamStats {
             return ($result1 !== false && $result2 !== false && $result3 !== false);
 
         } catch (Exception $e) {
-            // HANYA log jika Wizdam diatur untuk mencatat error di config.inc.php
+            // HANYA log jika Wizdam diatur untuk mencatat error di config.php
             if (Config::getVar('debug', 'log_errors')) {
                 error_log("WizdamStats: Exception during cache writing for JID $journalId: " . $e->getMessage());
             }
@@ -767,7 +766,7 @@ class CoreWizdamStats {
             return $hash;
 
         } catch (Exception $e) {
-             // HANYA log jika Wizdam diatur untuk mencatat error di config.inc.php
+             // HANYA log jika Wizdam diatur untuk mencatat error di config.php
              if (Config::getVar('debug', 'log_errors')) {
                  error_log("WizdamStats: Exception during HASH generation for JID $journalId: " . $e->getMessage());
              }

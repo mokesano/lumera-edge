@@ -1,28 +1,28 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Comment;
+
 /**
  * @defgroup comment
  */
 
 /**
- * @file core.Modules.comment/Comment.inc.php
+ * @file core/Modules/Comment/Comment.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Comment
  * @ingroup comment
  * @see CommentDAO
  *
  * @brief Class for public Comment associated with submission.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-
 class Comment extends DataObject {
+
     /**
      * Constructor.
      */
@@ -46,7 +46,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * Get submission comment id
+     * [DEPRECATED] Get submission comment id
      * @return int
      */
     public function getCommentId() {
@@ -55,7 +55,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * Set submission comment id
+     * [DEPRECATED] Set submission comment id
      * @param int $commentId
      */
     public function setCommentId($commentId) {
@@ -64,7 +64,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get number of child comments
+     * Get number of child comments
      * @return int
      */
     public function getChildCommentCount() {
@@ -72,7 +72,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set number of child comments
+     * Set number of child comments
      * @param int $childCommentCount
      */
     public function setChildCommentCount($childCommentCount) {
@@ -80,7 +80,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get parent comment id
+     * Get parent comment id
      * @return int
      */
     public function getParentCommentId() {
@@ -88,7 +88,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set parent comment id
+     * Set parent comment id
      * @param int $parentCommentId
      */
     public function setParentCommentId($parentCommentId) {
@@ -112,7 +112,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get user object
+     * Get user object
      * @return User|null
      */
     public function getUser() {
@@ -120,7 +120,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set user object
+     * Set user object
      * @param User $user
      */
     public function setUser($user) {
@@ -128,7 +128,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get poster name
+     * Get poster name
      * @return string
      */
     public function getPosterName() {
@@ -136,7 +136,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set poster name
+     * Set poster name
      * @param string $posterName
      */
     public function setPosterName($posterName) {
@@ -144,7 +144,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get poster email
+     * Get poster email
      * @return string
      */
     public function getPosterEmail() {
@@ -152,7 +152,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set poster email
+     * Set poster email
      * @param string $posterEmail
      */
     public function setPosterEmail($posterEmail) {
@@ -160,7 +160,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get posterIP
+     * Get posterIP
      * @return string
      */
     public function getPosterIP() {
@@ -168,7 +168,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set posterIP
+     * Set posterIP
      * @param string $posterIP
      */
     public function setPosterIP($posterIP) {
@@ -176,7 +176,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get title
+     * Get title
      * @return string
      */
     public function getTitle() {
@@ -184,7 +184,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set title
+     * Set title
      * @param string $title
      */
     public function setTitle($title) {
@@ -192,7 +192,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get comment body
+     * Get comment body
      * @return string
      */
     public function getBody() {
@@ -200,7 +200,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set comment body
+     * Set comment body
      * @param string $body
      */
     public function setBody($body) {
@@ -208,7 +208,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get date posted
+     * Get date posted
      * @return string
      */
     public function getDatePosted() {
@@ -216,7 +216,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set date posted
+     * Set date posted
      * @param string $datePosted
      */
     public function setDatePosted($datePosted) {
@@ -224,7 +224,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get date modified
+     * Get date modified
      * @return string
      */
     public function getDateModified() {
@@ -232,7 +232,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * set date modified
+     * Set date modified
      * @param string $dateModified
      */
     public function setDateModified($dateModified) {
@@ -240,7 +240,7 @@ class Comment extends DataObject {
     }
 
     /**
-     * get child comments (if fetched using recursive option)
+     * Get child comments (if fetched using recursive option)
      * @return array|null
      */
     public function getChildren() {
@@ -248,12 +248,11 @@ class Comment extends DataObject {
     }
 
     /**
-     * set child comments
+     * Set child comments
      * @param array $children
      */
     public function setChildren($children) {
         $this->setData('children', $children);
     }
 }
-
 ?>

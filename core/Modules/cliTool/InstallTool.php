@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\CliTool;
+
 /**
- * @file core.Modules.cliTool/InstallTool.php
+ * @file core/Modules/CliTool/InstallTool.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class installTool
  * @ingroup tools
  *
- * @brief CLI tool for installing a Wizdam app.
- * [WIZDAM EDITION] Modernized CLI Installer.
+ * @brief CLI tool for installing a Lumera app. Modernized CLI Installer.
  */
 
 import('core.Modules.install.Install');
@@ -81,7 +82,7 @@ class InstallTool extends CommandLineTool {
             }
 
             if (!$installer->wroteConfig()) {
-                    printf("\nNew config.inc.php:\n");
+                    printf("\nNew config.php:\n");
                     printf("----------------------------------------\n");
                     echo $installer->getConfigContents();
                     printf("----------------------------------------\n");
@@ -282,5 +283,4 @@ class InstallTool extends CommandLineTool {
     public function log($message): void {
         printf("[%s]\n", (string)$message);
     }
-
 }

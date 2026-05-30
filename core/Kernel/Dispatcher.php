@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/Dispatcher.inc.php
+ * @file core/Kernel/Dispatcher.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Dispatcher
  * @ingroup core
  *
  * @brief Class dispatching HTTP requests to handlers.
- * [WIZDAM EDITION] Modernized. PHP 8 Safe. Intelligent Caching. Strict Typed. Pure DI.
  */
 
 class Dispatcher {
@@ -216,7 +217,6 @@ class Dispatcher {
     }
 
     /**
-     * [WIZDAM INTELLIGENT CACHE]
      * Menggunakan ETag (Hash) dan Cache-Control: must-revalidate.
      * @param CoreRouter $router
      * @param CoreRequest $request

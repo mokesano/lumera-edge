@@ -1,29 +1,30 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Citation;
+
 /**
  * @defgroup citation_output
  */
 
 /**
- * @file core.Modules.citation/PlainTextReferencesList.inc.php
+ * @file core/Modules/Citation/PlainTextReferencesList.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PlainTextReferencesList
  * @ingroup citation
  *
  * @brief Class representing an ordered list of plain text citation output.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 define('REFERENCES_LIST_ORDERING_NUMERICAL', 0x01);
 define('REFERENCES_LIST_ORDERING_ALPHABETICAL', 0x02);
 
 class PlainTextReferencesList {
+
     /** @var int one of the REFERENCES_LIST_ORDERING_* constants */
     protected $_ordering;
 
@@ -32,8 +33,6 @@ class PlainTextReferencesList {
 
     /**
      * Constructor.
-     * @param string $listContent
-     * @param int $ordering one of the REFERENCES_LIST_ORDERING_* constants
      */
     public function __construct($listContent, $ordering) {
         // [WIZDAM FIX] Cast to ensure strict type compliance

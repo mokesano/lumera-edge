@@ -3,19 +3,17 @@ declare(strict_types=1);
 
 namespace App\Services\Statistics;
 
-
 /**
- * @file core.Modules.statistics/JournalStatsDAO.inc.php
+ * @file app/Services/Statistics/JournalStatsDAO.php
  * 
  * Copyright (c) 2024-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JournalStatsDAO
  * @ingroup Statistics
  * 
- * @brief DAO Terpadu untuk seluruh Statistik Jurnal ScholarWizdam [WIZDAM EDITION]
- * @version 2.0 (Strict MVC & PHP 8+ Compliant)
+ * @brief DAO Terpadu untuk seluruh Statistik Jurnal.
  */
 
 import('core.Modules.db.DAO');

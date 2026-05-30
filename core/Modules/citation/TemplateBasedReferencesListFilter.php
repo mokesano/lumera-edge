@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Citation;
+
 /**
- * @file core.Modules.citation/TemplateBasedReferencesListFilter.inc.php
+ * @file core/Modules/Citation/TemplateBasedReferencesListFilter.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TemplateBasedReferencesListFilter
  * @ingroup classes_citation
  *
  * @brief Abstract base class for filters that create a references
  * list for a submission.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('core.Modules.filter.TemplateBasedFilter');
@@ -22,8 +22,7 @@ import('core.Modules.filter.TemplateBasedFilter');
 class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
     
     /**
-     * Constructor
-     * @param FilterGroup $filterGroup
+     * Constructor.
      */
     public function __construct($filterGroup) {
         // Add the persistable filter settings.
@@ -101,6 +100,7 @@ class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
     // Implement template methods from TemplateBasedFilter
     //
     /**
+     * Get the template name.
      * @see TemplateBasedFilter::addTemplateVars()
      * @param CoreTemplateManager $templateMgr
      * @param Submission $submission
@@ -135,5 +135,4 @@ class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
         $templateMgr->assign('submission', $submission);
     }
 }
-
 ?>

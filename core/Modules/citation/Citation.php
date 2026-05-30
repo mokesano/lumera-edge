@@ -1,24 +1,24 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Citation;
+
 /**
  * @defgroup citation
  */
 
 /**
- * @file core.Modules.citation/Citation.inc.php
+ * @file core/Modules/Citation/Citation.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Citation
  * @ingroup citation
  * @see MetadataDescription
  *
- * @brief Class representing a citation (bibliographic reference)
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * @brief Class representing a citation (bibliographic reference).
  */
 
 define('CITATION_RAW', 0x01);
@@ -32,6 +32,7 @@ import('core.Modules.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
 import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter');
 
 class Citation extends DataObject {
+
     /** @var int citation state (raw, edited, parsed, looked-up) */
     protected $_citationState = CITATION_RAW;
 
@@ -49,7 +50,6 @@ class Citation extends DataObject {
 
     /**
      * Constructor.
-     * @param string|null $rawCitation an unparsed citation string
      */
     public function __construct($rawCitation = null) {
         // Switch on meta-data adapter support.
@@ -74,13 +74,13 @@ class Citation extends DataObject {
         call_user_func_array([$this, '__construct'], $args);
     }
 
+    
     //
     // Getters and Setters
     //
+
     /**
-     * Set meta-data descriptions discovered for this
-     * citation from external sources.
-     *
+     * Set meta-data descriptions discovered for this citation from external sources.
      * @param array $sourceDescriptions MetadataDescriptions
      */
     public function setSourceDescriptions($sourceDescriptions) {
@@ -88,9 +88,7 @@ class Citation extends DataObject {
     }
 
     /**
-     * Add a meta-data description discovered for this
-     * citation from an external source.
-     *
+     * Add a meta-data description discovered for this citation from an external source.
      * @param MetadataDescription $sourceDescription
      * @return int the source description's sequence number.
      */
@@ -117,9 +115,7 @@ class Citation extends DataObject {
     }
 
     /**
-     * Get all meta-data descriptions discovered for this
-     * citation from external sources.
-     *
+     * Get all meta-data descriptions discovered for this citation from external sources.
      * @return array MetadataDescriptions
      */
     public function getSourceDescriptions() {

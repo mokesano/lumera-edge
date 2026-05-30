@@ -1,16 +1,18 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
  * @defgroup core
  */
 
 /**
- * @file core.Modules.core/Core.inc.php
+ * @file core/Kernel/Core.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Core
  * @ingroup core
@@ -123,8 +125,7 @@ class Core {
     /**
      * Check the passed user agent for a bot.
      * @param $userAgent string
-     * @param $botRegexpsFile string An alternative file with regular
-     * expressions to find bots inside user agent strings.
+     * @param $botRegexpsFile string An alternative file with regular expressions to find bots inside user agent strings.
      * @return boolean
      */
     public static function isUserAgentBot($userAgent, $botRegexpsFile = USER_AGENTS_FILE) {
@@ -148,15 +149,12 @@ class Core {
     }
 
     /**
-     * Get context paths present into the passed
-     * url information.
+     * Get context paths present into the passed url information.
      * @param $urlInfo string Full url or just path info.
-     * @param $isPathInfo boolean Whether the
-     * passed url info string is a path info or not.
+     * @param $isPathInfo boolean Whether the passed url info string is a path info or not.
      * @param $contextList array (optional)
      * @param $contextDepth int (optional)
-     * @param $userVars array (optional) Pass GET variables
-     * if needed (for testing only).
+     * @param $userVars array (optional) Pass GET variables if needed (for testing only).
      * @return array
      */
     public static function getContextPaths($urlInfo, $isPathInfo, $contextList = null, $contextDepth = null, $userVars = array()) {
@@ -200,14 +198,10 @@ class Core {
     }
 
     /**
-     * Get the page present into
-     * the passed url information. It expects that urls
-     * were built using the system.
+     * Get the page present into the passed url information. It expects that urls were built using the system.
      * @param $urlInfo string Full url or just path info.
-     * @param $isPathInfo boolean Tell if the
-     * passed url info string is a path info or not.
-     * @param $userVars array (optional) Pass GET variables
-     * if needed (for testing only).
+     * @param $isPathInfo boolean Tell if the passed url info string is a path info or not.
+     * @param $userVars array (optional) Pass GET variables if needed (for testing only).
      * @return string
      */
     public static function getPage($urlInfo, $isPathInfo, $userVars = array()) {
@@ -216,14 +210,10 @@ class Core {
     }
 
     /**
-     * Get the operation present into
-     * the passed url information. It expects that urls
-     * were built using the system.
+     * Get the operation present into the passed url information. It expects that urls were built using the system.
      * @param $urlInfo string Full url or just path info.
-     * @param $isPathInfo boolean Tell if the
-     * passed url info string is a path info or not.
-     * @param $userVars array (optional) Pass GET variables
-     * if needed (for testing only).
+     * @param $isPathInfo boolean Tell if the passed url info string is a path info or not.
+     * @param $userVars array (optional) Pass GET variables if needed (for testing only).
      * @return string
      */
     public static function getOp($urlInfo, $isPathInfo, $userVars = array()) {
@@ -232,15 +222,11 @@ class Core {
     }
 
     /**
-     * Get the arguments present into
-     * the passed url information (not GET/POST arguments,
-     * only arguments appended to the URL separated by "/").
+     * Get the arguments present into the passed url information (not GET/POST arguments, only arguments appended to the URL separated by "/").
      * It expects that urls were built using the system.
      * @param $urlInfo string Full url or just path info.
-     * @param $isPathInfo boolean Tell if the
-     * passed url info string is a path info or not.
-     * @param $userVars array (optional) Pass GET variables
-     * if needed (for testing only).
+     * @param $isPathInfo boolean Tell if the passed url info string is a path info or not.
+     * @param $userVars array (optional) Pass GET variables if needed (for testing only).
      * @return array
      */
     public static function getArgs($urlInfo, $isPathInfo, $userVars = array()) {
@@ -249,11 +235,9 @@ class Core {
 
     /**
      * Remove base url from the passed url, if any.
-     * Also, if true, checks for the context path in
-     * url and if it's missing, tries to add it.
+     * Also, if true, checks for the context path in url and if it's missing, tries to add it.
      * @param $url string
-     * @return mixed string The url without base url,
-     * false if it was not possible to remove it.
+     * @return mixed string The url without base url, false if it was not possible to remove it.
      */
     public static function removeBaseUrl($url) {
         list($baseUrl, $contextPath) = Core::_getBaseUrlAndPath($url);
@@ -302,12 +286,9 @@ class Core {
     }
 
     /**
-     * Try to get the base url and, if configuration
-     * is set to use base url override, context
-     * path for the passed url.
+     * Try to get the base url and, if configuration is set to use base url override, context path for the passed url.
      * @param $url string
-     * @return array Base url and context path strings,
-     * false if not found or not the case.
+     * @return array Base url and context path strings, false if not found or not the case.
      */
     public static function _getBaseUrlAndPath($url) {
         $baseUrl = false;
@@ -357,15 +338,10 @@ class Core {
     }
 
     /**
-     * Check if the passed base url is part of
-     * the passed url, based on the context base url
-     * configuration. Both parameters can represent
-     * full url (host plus path) or just the path,
-     * but they have to be consistent.
-     * @param $baseUrl string Full base url
-     * or just it's path info.
-     * @param $url string Full url or just it's
-     * path info.
+     * Check if the passed base url is part of the passed url, based on the context base url configuration. 
+     * Both parameters can represent full url (host plus path) or just the path, but they have to be consistent.
+     * @param $baseUrl string Full base url or just it's path info.
+     * @param $url string Full url or just it's path info.
      * @return boolean
      */
     public static function _checkBaseUrl($baseUrl, $url) {
@@ -406,7 +382,6 @@ class Core {
 
     /**
      * Bot list file cache miss fallback.
-     * [MODERNISASI] Removed & reference, logic fix
      * @param $cache FileCache
      * @return array:
      */
@@ -430,9 +405,7 @@ class Core {
     }
 
     /**
-     * Filter the regular expressions to find bots, adding
-     * delimiters if necessary.
-     * [MODERNISASI] Removed & reference, returns modified string or false
+     * Filter the regular expressions to find bots, adding delimiters if necessary.
      * @param $regexp string
      * @return string|false
      */
@@ -474,14 +447,12 @@ class Core {
     }
 
     /**
-     * Get url components (page, operation and args)
-     * based on the passed offset.
+     * Get url components (page, operation and args) based on the passed offset.
      * @param $urlInfo string
      * @param $isPathInfo string
      * @param $offset int
      * @param $varName string
-     * @param $userVars array (optional) GET variables
-     * (only for testing).
+     * @param $userVars array (optional) GET variables (only for testing).
      * @return mixed array|string|null
      */
     public static function _getUrlComponents($urlInfo, $isPathInfo, $offset, $varName = '', $userVars = array()) {
@@ -519,5 +490,4 @@ class Core {
         return $component;
     }
 }
-
 ?>

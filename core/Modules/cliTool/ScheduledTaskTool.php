@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\CliTool;
+
 /**
- * @file core.Modules.cliTool/ScheduledTaskTool.inc.php
+ * @file core/Modules/CliTool/ScheduledTaskTool.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ScheduledTaskTool
  * @ingroup tools
@@ -35,7 +37,6 @@ class ScheduledTaskTool extends CommandLineTool {
 
     /**
      * Constructor.
-     * @param array $argv command-line arguments
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);

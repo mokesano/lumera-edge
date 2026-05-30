@@ -1,19 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Codelist;
+
 /**
- * @file core.Modules.codelist/QualifierDAO.inc.php
+ * @file core/Modules/Codelist/QualifierDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class QualifierDAO
  * @ingroup codelist
  * @see Qualifier
  *
  * @brief Operations for retrieving and modifying Subject Qualifier objects.
- *
  */
 
 import('core.Modules.codelist.Qualifier');
@@ -70,5 +71,4 @@ class QualifierDAO extends CodelistItemDAO {
         return new Qualifier();
     }
 }
-
 ?>

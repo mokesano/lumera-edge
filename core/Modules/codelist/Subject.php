@@ -1,23 +1,24 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Codelist;
+
 /**
  * @defgroup subject
  */
 
 /**
- * @file core.Modules.codelist/Subject.inc.php
+ * @file core/Modules/Codelist/Subject.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Subject
  * @ingroup codelist
  * @see SubjectDAO
  *
  * @brief Basic class describing a BIC Subject.
- *
  */
 
 import('core.Modules.codelist.CodelistItem');
@@ -51,11 +52,11 @@ class Subject extends CodelistItem {
     }
 
     /**
+     * Get the ONIX Subject Scheme Identifier for this Subject.
      * @return string the numerical value representing this item in the ONIX 3.0 schema
      */
     public function getOnixSubjectSchemeIdentifier(): string {
         return $this->_onixSubjectSchemeIdentifier;
     }
 }
-
 ?>

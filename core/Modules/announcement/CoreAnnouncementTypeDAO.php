@@ -1,23 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Announcement;
+
 /**
- * @file core.Modules.announcement/CoreAnnouncementTypeDAO.inc.php
+ * @file core/Modules/Announcement/CoreAnnouncementTypeDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreAnnouncementTypeDAO
  * @ingroup announcement
  * @see AnnouncementType, CoreAnnouncementType
  *
  * @brief Operations for retrieving and modifying AnnouncementType objects.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Constructor, Ref removal)
- * - Strict Integer Casting
- * - Null Safety
  */
 
 import('core.Modules.announcement.CoreAnnouncementType');
@@ -241,6 +238,7 @@ class CoreAnnouncementTypeDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Update an existing announcement type.
      * @see updateObject
      */
     public function updateAnnouncementType($announcementType) {
@@ -259,6 +257,7 @@ class CoreAnnouncementTypeDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Delete an announcement type.
      * @see deleteObject
      */
     public function deleteAnnouncementType($announcementType) {
@@ -267,8 +266,7 @@ class CoreAnnouncementTypeDAO extends DAO {
     }
 
     /**
-     * Delete an announcement type by announcement type ID. Note that all announcements with
-     * this type ID are also deleted.
+     * Delete an announcement type by announcement type ID. Note that all announcements with this type ID are also deleted.
      * @param int $typeId
      * @return boolean
      */
@@ -320,5 +318,4 @@ class CoreAnnouncementTypeDAO extends DAO {
         return $this->getInsertId('announcement_types', 'type_id');
     }
 }
-
 ?>

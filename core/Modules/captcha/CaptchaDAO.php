@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Captcha;
+
 /**
- * @file core.Modules.captcha/CaptchaDAO.inc.php
+ * @file core/Modules/Captcha/CaptchaDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CaptchaDAO
  * @ingroup captcha
@@ -14,7 +16,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying Captcha keys.
  */
-
 
 import('core.Modules.captcha.Captcha');
 
@@ -220,5 +221,4 @@ class CaptchaDAO extends DAO {
         return $this->updateObject($captcha);
     }
 }
-
 ?>

@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Core;
+
 /**
- * @file core.Modules.core/CoreApplication.inc.php
+ * @file core/Kernel/CoreApplication.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreApplication
- * @ingroup core
- * @brief Class describing this application.
- *
- * WIZDAM FORK v3.4 MODIFICATIONS:
- * - Added Publisher/Site Centric Constants
- * - Strict Typing enforced
+ * @ingroup core_kernel
+ * 
+ * @brief Class describing this application. Added Publisher/Site Centric Constants and methods.
  */
 
 if (!headers_sent()) {

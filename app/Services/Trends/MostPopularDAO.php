@@ -3,10 +3,17 @@ declare(strict_types=1);
 
 namespace App\Services\Trends;
 
-
 /**
- * @file core.Modules.trends/MostPopularDAO.inc.php
+ * @file app/Services/Trends/MostPopularDAO.php
  *
+ * Copyright (c) 2025 Wizdam Team
+ * Copyright (c) 2025 Rochmady
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class MostPopularDAO
+ * @ingroup trends
+ * 
+ * @brief DAO untuk mengambil data artikel terpopuler.
  * [WIZDAM] - Exclusive DAO for Most Popular metrics.
  * Menangani pengambilan data statistik performa artikel dengan performa tinggi.
  */
@@ -17,6 +24,9 @@ class MostPopularDAO extends DAO {
 
     /**
      * Mengambil artikel terpopuler dalam sebuah jurnal (Journal Level)
+     * @param int $journalId
+     * @param int $limit
+     * @return array Array
      */
     public function getMostPopularArticles(int $journalId, int $limit = 10): array {
         $sql = "SELECT a.article_id, SUM(m.metric) as total_views, pa.date_published
@@ -54,6 +64,8 @@ class MostPopularDAO extends DAO {
 
     /**
      * Mengambil artikel terpopuler dari top jurnal di sistem (Site Level)
+     * @param int $journalLimit Jumlah jurnal teratas yang akan diambil
+     * @return array Array artikel terpopuler dari jurnal teratas
      */
     public function getSiteLevelTopArticles(int $journalLimit = 4): array {
         // 1. Dapatkan Jurnal Terpopuler

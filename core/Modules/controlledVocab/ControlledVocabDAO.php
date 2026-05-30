@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\ControlledVocab;
+
 /**
- * @file core.Modules.controlledVocab/ControlledVocabDAO.inc.php
+ * @file core/Modules/ControlledVocab/ControlledVocabDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ControlledVocabDAO
  * @ingroup controlled_vocab
@@ -43,7 +45,6 @@ class ControlledVocabDAO extends DAO {
     /**
      * Return the Controlled Vocab Entry DAO for this Controlled Vocab.
      * Can be subclassed to provide extended DAOs.
-     * [MODERNISASI] Hapus & reference pada return value
      */
     public function getEntryDAO() {
         $entryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
@@ -100,7 +101,6 @@ class ControlledVocabDAO extends DAO {
 
     /**
      * Internal function to return an ControlledVocab object from a row.
-     * [MODERNISASI] Hapus & pada parameter $row
      * @param $row array
      * @return ControlledVocab
      */
@@ -116,7 +116,6 @@ class ControlledVocabDAO extends DAO {
 
     /**
      * Insert a new ControlledVocab.
-     * [MODERNISASI] Hapus & pada parameter object
      * @param $controlledVocab ControlledVocab
      * @return int
      */
@@ -138,7 +137,6 @@ class ControlledVocabDAO extends DAO {
 
     /**
      * Update an existing controlled vocab.
-     * [MODERNISASI] Hapus & pada parameter object
      * @param $controlledVocab ControlledVocab
      * @return boolean
      */
@@ -184,8 +182,7 @@ class ControlledVocabDAO extends DAO {
     }
 
     /**
-     * Retrieve an array of controlled vocabs matching the specified
-     * symbolic name and assoc info.
+     * Retrieve an array of controlled vocabs matching the specified symbolic name and assoc info.
      * @param $symbolic string
      * @param $assocType int
      * @param $assocId int
@@ -268,5 +265,4 @@ class ControlledVocabDAO extends DAO {
         return parent::getInsertId('controlled_vocabs', 'controlled_vocab_id');
     }
 }
-
 ?>

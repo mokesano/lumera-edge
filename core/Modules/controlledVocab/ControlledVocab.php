@@ -1,16 +1,18 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\ControlledVocab;
+
 /**
  * @defgroup controlled_vocab
  */
 
 /**
- * @file core.Modules.controlledVocab/ControlledVocab.inc.php
+ * @file core/Modules/ControlledVocab/ControlledVocab.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ControlledVocab
  * @ingroup controlled_vocab
@@ -47,7 +49,7 @@ class ControlledVocab extends DataObject {
     //
 
     /**
-     * get assoc id
+     * Get assoc id
      * @return int
      */
     public function getAssocId() {
@@ -55,7 +57,7 @@ class ControlledVocab extends DataObject {
     }
 
     /**
-     * set assoc id
+     * Set assoc id
      * @param $assocId int
      */
     public function setAssocId($assocId) {
@@ -105,5 +107,4 @@ class ControlledVocab extends DataObject {
         return $controlledVocabDao->enumerate($this->getId(), $settingName);
     }
 }
-
 ?>

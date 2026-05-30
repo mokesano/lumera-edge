@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/ItemIterator.inc.php
+ * @file core/Kernel/ItemIterator.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ItemIterator
  * @ingroup db
@@ -14,7 +16,6 @@ declare(strict_types=1);
  * @brief Generic iterator class; needs to be overloaded by subclasses
  * providing specific implementations.
  */
-
 
 class ItemIterator {
     
@@ -98,5 +99,4 @@ class ItemIterator {
         return array();
     }
 }
-
 ?>

@@ -3,17 +3,29 @@ declare(strict_types=1);
 
 namespace App\Services\Trends;
 
-
 /**
- * @file core.Modules.trends/WizdamTrendsManager.inc.php
+ * @file app/Services/Trends/WizdamTrendsManager.php
  *
- * [WIZDAM] - Service class untuk mempopulasi data Trends.
- * Memastikan assignment Smarty 100% presisi dengan legacy WIZDAM:
- * Termasuk Cover Image, Open Access, Keywords, dan Article Type.
+ * Copyright (c) 2025 Wizdam Team
+ * Copyright (c) 2025 Rochmady
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class WizdamTrendsManager
+ * @ingroup trends
+ * 
+ * @brief Service class to populate Trends data.
+ * Ensures 100% data fidelity with legacy WIZDAM:
+ * Includes Cover Image, Open Access, Keywords, and Article Type.
  */
 
 class WizdamTrendsManager {
 
+    /**
+     * Populate the most popular articles payload for Trends pages.
+     * @param TemplateManager $templateMgr The template manager to assign variables to.
+     * @param Journal|null $journal The journal context (null for site-level).
+     * @param CoreRequest $request The current request object for URL generation.
+     */
     public static function assignMostPopularPayload(TemplateManager $templateMgr, ?Journal $journal, CoreRequest $request): void {
         import('lib.wizdam.trends.MostPopularDAO');
         $popularDao = new MostPopularDAO();
@@ -49,7 +61,11 @@ class WizdamTrendsManager {
     }
 
     /**
-     * [WIZDAM] - Eksekusi Micro-Payload (Mengekstrak seluruh data ke tipe skalar murni)
+     * Format raw views data into a rich micro-payload for Trends templates.
+     * This includes all legacy WIZDAM fields: authors, article type, keywords, cover image, and open access status.
+     * @param array $rawViewsData Raw data from MostPopularDAO (articleId => ['views' => int, 'date_published' => string])
+     * @param CoreRequest $request The current request object for URL generation.
+     * @return array Formatted payload ready for Smarty templates.
      */
     private static function _formatMicroPayload(array $rawViewsData, CoreRequest $request): array {
         $journalDao = DAORegistry::getDAO('JournalDAO');
@@ -127,7 +143,11 @@ class WizdamTrendsManager {
     }
 
     /**
-     * [WIZDAM] - Helper: Mencari Cover Image dengan dukungan Multi-Locale
+     * Helper: Temukan gambar cover artikel berdasarkan konvensi penamaan WIZDAM.
+     * Mencari dengan berbagai kombinasi locale dan ekstensi untuk memastikan kompatibilitas penuh.
+     * @param int $journalId ID jurnal untuk membangun path file.
+     * @param int $articleId ID artikel untuk membangun path file.
+     * @return array Informasi tentang gambar cover (exists, url, path, locale, extension).
      */
     private static function _findArticleCoverImage(int $journalId, int $articleId): array {
         $locales = ['en_US', 'id_ID', 'en', 'id'];
@@ -170,7 +190,10 @@ class WizdamTrendsManager {
     }
 
     /**
-     * [WIZDAM] - Helper: Deteksi Open Access tanpa Raw SQL (MVC Compliant)
+     * Helper: Deteksi Open Access tanpa Raw SQL (MVC Compliant)
+     * @param Article $article The article to check.
+     * @param int $journalId The ID of the journal.
+     * @return bool True if the article is open access, false otherwise.
      */
     private static function _checkWizdamOpenAccessStatus(Article $article, int $journalId): bool {
         // Method 1: Cek dari setting artikel langsung

@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Comment;
+
 /**
- * @file core.Modules.comment/CommentDAO.inc.php
+ * @file core/Modules/Comment/CommentDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CommentDAO
  * @ingroup comment
  * @see Comment
  *
  * @brief Operations for retrieving and modifying Comment objects.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('core.Modules.comment.Comment');
@@ -28,6 +28,7 @@ define ('COMMENTS_ANONYMOUS', 2);    // Can be posted anonymously by authenticat
 define ('COMMENTS_UNAUTHENTICATED', 3);    // Can be posted anonymously by anyone
 
 class CommentDAO extends DAO {
+
     /**
      * Constructor
      */
@@ -200,7 +201,7 @@ class CommentDAO extends DAO {
     }
 
     /**
-     * inserts a new submission comment into comments table
+     * Inserts a new submission comment into comments table
      * @param Comment $comment
      * @return int ID of new comment
      */
@@ -291,7 +292,7 @@ class CommentDAO extends DAO {
     }
 
     /**
-     * updates a comment
+     * Updates a comment
      * @param Comment $comment
      */
     public function updateComment($comment) {
@@ -328,5 +329,4 @@ class CommentDAO extends DAO {
         );
     }
 }
-
 ?>

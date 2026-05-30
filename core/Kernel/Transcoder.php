@@ -1,21 +1,23 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/Transcoder.inc.php
+ * @file core/Kernel/Transcoder.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Transcoder
  * @ingroup db
  *
- * @brief Multi-class transcoder; uses mbstring and iconv if available, otherwise falls back to built-in classes
- * [WIZDAM EDITION] Refactored for PHP 7.4+/8.x Strict Standards & Type Safety.
+ * @brief Multi-class transcoder; uses mbstring and iconv if available, otherwise falls back to built-in classes.
  */
 
 class Transcoder {
+
     /** * @var string Name of source encoding 
      * [WIZDAM] Public visibility maintained for legacy compatibility
      */
@@ -44,7 +46,7 @@ class Transcoder {
     }
 
     /**
-     * [SHIM] Backward Compatibility
+     * [SHIM] Backward Compatibility.
      */
     public function Transcoder($fromEncoding, $toEncoding, $translit = false) {
         if (Config::getVar('debug', 'deprecation_warnings')) {

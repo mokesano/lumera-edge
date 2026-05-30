@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/ArrayItemIterator.inc.php
+ * @file core/Kernel/ArrayItemIterator.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArrayItemIterator
  * @ingroup db
@@ -18,6 +20,7 @@ declare(strict_types=1);
 import('core.Kernel.ItemIterator');
 
 class ArrayItemIterator extends ItemIterator {
+
     /** @var array The array of contents of this iterator. */
     public $theArray;
 
@@ -35,7 +38,6 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * Constructor.
-     * [MODERNISASI] Native Constructor
      * @param $theArray array The array of items to iterate through
      * @param $page int the current page number
      * @param $itemsPerPage int Number of items to display per page
@@ -56,7 +58,7 @@ class ArrayItemIterator extends ItemIterator {
     }
 
     /**
-     * Legacy Constructor Shim.
+     * [SHIM] Backward compatibility.
      */
     public function ArrayItemIterator($theArray, $page=-1, $itemsPerPage=-1) {
         trigger_error(
@@ -68,7 +70,6 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * Static method: Generate an iterator from an array and rangeInfo object.
-     * [MODERNISASI] Static public method, removed & reference
      * @param $theArray array
      * @param $theRange object
      */
@@ -83,7 +84,6 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * Return the next item in the iterator.
-     * [MODERNISASI] Removed & reference
      * @return object
      */
     public function next() {
@@ -100,7 +100,6 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * Return the next item in the iterator, with key.
-     * [MODERNISASI] Removed & reference
      * @return array (key, value)
      */
     public function nextWithKey() {
@@ -166,8 +165,7 @@ class ArrayItemIterator extends ItemIterator {
     }
 
     /**
-     * Convert this iterator to an array
-     * [MODERNISASI] Removed & reference
+     * Convert this iterator to an array.
      * @return array
      */
     public function toArray() {
@@ -184,7 +182,6 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * Get the range info representing the last page of results.
-     * [MODERNISASI] Removed & reference
      * @return object DBResultRange
      */
     public function getLastPageRangeInfo() {
@@ -198,8 +195,11 @@ class ArrayItemIterator extends ItemIterator {
 
     /**
      * A version of array_slice that takes keys into account.
-     * [MODERNISASI] Added public visibility
      * @see http://ca3.php.net/manual/en/function.array-slice.php
+     * @param array $array
+     * @param int $offset
+     * @param int $len
+     * @return array
      */
     public function array_slice_key($array, $offset, $len=-1) {
         if (!is_array($array)) return false;
@@ -214,5 +214,4 @@ class ArrayItemIterator extends ItemIterator {
         return $return;
     }
 }
-
 ?>

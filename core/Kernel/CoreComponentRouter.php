@@ -1,15 +1,17 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Core;
+
 /**
- * @file core.Modules.core/CoreComponentRouter.inc.php
+ * @file core/Kernel/CoreComponentRouter.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreComponentRouter
- * @ingroup core
+ * @ingroup core_kernel
  *
  * @brief Class mapping an HTTP request to a component handler operation.
  */
@@ -33,6 +35,7 @@ import('core.Kernel.CoreRouter');
 import('core.Kernel.Request');
 
 class CoreComponentRouter extends CoreRouter {
+
     //
     // Internal state cache variables
     // NB: Please do not access directly but
@@ -60,7 +63,6 @@ class CoreComponentRouter extends CoreRouter {
 
     /**
      * Retrieve the requested component from the request.
-     *
      * NB: This can be a component that not actually exists
      * in the code base.
      *
@@ -100,7 +102,6 @@ class CoreComponentRouter extends CoreRouter {
 
     /**
      * Retrieve the requested operation from the request
-     *
      * NB: This can be an operation that not actually
      * exists in the requested component.
      *
@@ -128,11 +129,8 @@ class CoreComponentRouter extends CoreRouter {
 
     /**
      * Get the (validated) RPC service endpoint from the request.
-     * If no such RPC service endpoint can be constructed then the method
-     * returns null.
      * @param $request CoreRequest the request to be routed
-     * @return callable an array with the handler instance
-     * and the handler operation to be called by call_user_func().
+     * @return callable 
      */
     public function getRpcServiceEndpoint($request) {
         if ($this->_rpcServiceEndpoint === false) {
@@ -150,8 +148,9 @@ class CoreComponentRouter extends CoreRouter {
             if (empty($component)) return $nullVar;
 
             // Construct the component handler file name and test its existence.
+            // [LUMERA NOTE] Change inc.php to .php for better autoloading and PSR compliance.
             $component = 'controllers.'.$component;
-            $componentFileName = str_replace('.', '/', $component).'.inc.php';
+            $componentFileName = str_replace('.', '/', $component).'.php';
             switch (true) {
                 case file_exists($componentFileName):
                     break;
@@ -199,8 +198,12 @@ class CoreComponentRouter extends CoreRouter {
     //
     // Implement template methods from CoreRouter
     //
+
     /**
+     * Route the given request to the appropriate component handler operation.
      * @see CoreRouter::route()
+     * @param $request CoreRequest the request to route.
+     * @return mixed
      */
     public function route($request) {
         // Determine the requested service endpoint.
@@ -218,7 +221,17 @@ class CoreComponentRouter extends CoreRouter {
     }
 
     /**
+     * Generate a URL to a component handler operation.
      * @see CoreRouter::url()
+     * @param $request
+     * @param $newContext
+     * @param $component
+     * @param $op
+     * @param $path
+     * @param $params
+     * @param $anchor
+     * @param $escape
+     * @return string
      */
     public function url($request, $newContext = null, $component = null, $op = null, $path = null,
             $params = null, $anchor = null, $escape = false) {
@@ -307,7 +320,11 @@ class CoreComponentRouter extends CoreRouter {
     }
 
     /**
+     * Handle an authorization failure for a component request.
      * @see CoreRouter::handleAuthorizationFailure()
+     * @param $request
+     * @param $authorizationMessage
+     * @return string
      */
     public function handleAuthorizationFailure($request, $authorizationMessage) {
         // Translate the authorization error message.
@@ -335,13 +352,11 @@ class CoreComponentRouter extends CoreRouter {
     //
     // Private helper methods
     //
+
     /**
      * Get the (validated) RPC service endpoint parts from the request.
-     * If no such RPC service endpoint parts can be retrieved
-     * then the method returns null.
-     * @param $request CoreRequest the request to be routed
-     * @return array a string array with the RPC service endpoint
-     * parts as values.
+     * @param $request 
+     * @return array 
      */
     public function _getValidatedServiceEndpointParts($request) {
         if ($this->_rpcServiceEndpointParts === false) {
@@ -371,12 +386,9 @@ class CoreComponentRouter extends CoreRouter {
     }
 
     /**
-     * Try to retrieve a (non-validated) array with the service
-     * endpoint parts from the request. See the classdoc for the
-     * URL patterns supported here.
+     * Try to retrieve a (non-validated) array with the service endpoint parts from the request.
      * @param $request CoreRequest the request to be routed
-     * @return array an array of (non-validated) service endpoint
-     * parts or null if the request is not an RPC request.
+     * @return array
      */
     public function _retrieveServiceEndpointParts($request) {
         // URL pattern depends on whether the server has path info
@@ -422,12 +434,9 @@ class CoreComponentRouter extends CoreRouter {
     }
 
     /**
-     * This method pre-validates the service endpoint parts before
-     * we try to convert them to a file/method name. This also
-     * converts all parts to lower case.
+     * This method pre-validates the service endpoint parts before we try to convert them to a file/method name.
      * @param $rpcServiceEndpointParts array
-     * @return array the validated service endpoint parts or null if validation
-     * does not succeed.
+     * @return array 
      */
     public function _validateServiceEndpointParts($rpcServiceEndpointParts) {
         // Do we have data at all?

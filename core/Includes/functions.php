@@ -2,11 +2,11 @@
 declare(strict_types=1);
 
 /**
- * @file includes/functions.inc.php
+ * @file core/Includes/functions.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup index
  *
@@ -14,10 +14,6 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Enhanced for Namespaces, API Responses & Strict Typing.
  */
 
-/**
- * [WIZDAM POLYFILL] PHP 8.0+ string functions — PHP 7.x safe 
- * (strncmp/substr sejak PHP 4)
- */
 if (!function_exists('str_starts_with')) {
     function str_starts_with(string $haystack, string $needle): bool {
         return strncmp($haystack, $needle, strlen($needle)) === 0;
@@ -80,7 +76,9 @@ if (!function_exists('import')) {
             $mappedClass = 'core.Modules.controllers.' . substr($class, 12);
         }
 
-        $filePath = str_replace('.', '/', $mappedClass) . '.inc.php';
+        // [LUMERA NOTE] Map Wizdam class names to CORE and Wizdam class names to APP
+        // Using inc.php or .php suffixes are handled by the autoloader or legacy mapping, so we focus on namespace mapping.
+        $filePath = str_replace('.', '/', $mappedClass) . '.php';
 
         if (defined('BASE_SYS_DIR') && file_exists(BASE_SYS_DIR . '/' . $filePath)) {
             // include_once: graceful — eksekusi berlanjut ke require_once fallback jika gagal
@@ -92,7 +90,6 @@ if (!function_exists('import')) {
 
         $importedClasses[$class] = true;
     }
-}
 }
 
 /**

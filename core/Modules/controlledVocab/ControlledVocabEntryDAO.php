@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\ControlledVocab;
+
 /**
- * @file core.Modules.controlledVocab/ControlledVocabEntryDAO.inc.php
+ * @file core/Modules/ControlledVocab/ControlledVocabEntryDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ControlledVocabEntryDAO
  * @ingroup controlled_vocab
@@ -65,8 +67,7 @@ class ControlledVocabEntryDAO extends DAO {
     }
 
     /**
-     * Retrieve a controlled vocab entry by resolving one of its settings
-     * to the corresponding entry id.
+     * Retrieve a controlled vocab entry by resolving one of its settings to the corresponding entry id.
      * @param $settingValue string the setting value to be searched for
      * @param $symbolic string the vocabulary to be searched, identified by its symbolic name
      * @param $assocType integer
@@ -107,9 +108,7 @@ class ControlledVocabEntryDAO extends DAO {
     }
 
     /**
-     * Internal function to return an ControlledVocabEntry object from a
-     * row.
-     * [MODERNISASI] Hapus & pada parameter $row
+     * Internal function to return an ControlledVocabEntry object from a row.
      * @param $row array
      * @return ControlledVocabEntry
      */
@@ -133,8 +132,7 @@ class ControlledVocabEntryDAO extends DAO {
     }
 
     /**
-     * Update the localized fields for this table
-     * [MODERNISASI] Hapus & pada parameter object
+     * Update the localized fields for this table.
      * @param $controlledVocabEntry object
      */
     public function updateLocaleFields($controlledVocabEntry) {
@@ -145,7 +143,6 @@ class ControlledVocabEntryDAO extends DAO {
 
     /**
      * Insert a new ControlledVocabEntry.
-     * [MODERNISASI] Hapus & pada parameter object
      * @param $controlledVocabEntry ControlledVocabEntry
      * @return int
      */
@@ -186,8 +183,7 @@ class ControlledVocabEntryDAO extends DAO {
     }
 
     /**
-     * Retrieve an iterator of controlled vocabulary entries matching a
-     * particular controlled vocabulary ID.
+     * Retrieve an iterator of controlled vocabulary entries matching a particular controlled vocabulary ID.
      * @param $controlledVocabId int
      * @return object DAOResultFactory containing matching CVE objects
      */
@@ -212,7 +208,6 @@ class ControlledVocabEntryDAO extends DAO {
 
     /**
      * Update an existing review form element.
-     * [MODERNISASI] Hapus & pada parameter object
      * @param $controlledVocabEntry ControlledVocabEntry
      */
     public function updateObject($controlledVocabEntry) {
@@ -232,6 +227,8 @@ class ControlledVocabEntryDAO extends DAO {
 
     /**
      * Sequentially renumber entries in their sequence order.
+     * @param $controlledVocabId int
+     * @return boolean
      */
     public function resequence($controlledVocabId) {
         $result = $this->retrieve(
@@ -264,5 +261,4 @@ class ControlledVocabEntryDAO extends DAO {
         return parent::getInsertId('controlled_vocab_entries', 'controlled_vocab_entry_id');
     }
 }
-
 ?>

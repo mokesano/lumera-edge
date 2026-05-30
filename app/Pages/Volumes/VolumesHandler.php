@@ -14,8 +14,6 @@ namespace App\Pages\Volumes;
  * @ingroup pages_volumes
  *
  * @brief Handle requests for custom volume functions.
- *
- * [WIZDAM EDITION] Custom Handler - Refactored for PHP 8.1+ Strict Compliance
  * [WIZDAM v3] view() mendeteksi issue null dan merender konten artikel langsung
  *             sebagai pengganti sejati detail issue (bukan sekadar daftar issue).
  *

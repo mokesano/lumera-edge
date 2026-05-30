@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Captcha;
+
 /**
- * @file core.Modules.captcha/CaptchaManager.inc.php
+ * @file core/Modules/Captcha/CaptchaManager.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CaptchaManager
  * @ingroup captcha
@@ -21,7 +23,6 @@ class CaptchaManager {
     
     /**
      * Constructor.
-     * Create a manager for handling temporary file uploads.
      */
     public function __construct() {
         $this->_performPeriodicCleanup();
@@ -156,7 +157,6 @@ class CaptchaManager {
 
     /**
      * Determine whether CAPTCHA is enabled for a specific context.
-     * [WIZDAM FIX] Hormati captcha_on_* dari config.inc.php
      * Jika captcha_on_* tidak dikonfigurasi, fallback ke nilai captcha global.
      * @param string $context 'login'|'register'|'comments'|'mailinglist'
      * @return bool
@@ -187,5 +187,4 @@ class CaptchaManager {
         }
     }
 }
-
 ?>

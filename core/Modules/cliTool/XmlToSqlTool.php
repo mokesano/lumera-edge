@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\CliTool;
+
 /**
- * @file core.Modules.cliTool/XmlToSqlTool.inc.php
+ * @file core/Modules/CliTool/XmlToSqlTool.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class XmlToSqlTool
  * @ingroup tools
@@ -35,7 +37,6 @@ class XmlToSqlTool extends CommandLineTool {
 
     /**
      * Constructor.
-     * @param array $argv command-line arguments
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);
@@ -126,7 +127,7 @@ class XmlToSqlTool extends CommandLineTool {
      * Parse an XML database file and output the corresponding SQL statements.
      */
     public function execute(): void {
-        require_once('./core/Library/adodb/adodb-xmlschema.inc.php');
+        require_once('./core/Library/adodb/adodb-xmlschema.php');
         
         $dbconn = null;
         if (in_array($this->command, ['print', 'save'])) {

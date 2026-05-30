@@ -1,18 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/CoreProfiler.inc.php
+ * @file core/Kernel/CoreProfiler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreProfiler
  * @ingroup core
  *
  * @brief Basic shell class used to wrap the PHP Quick Profiler Class
- * WIZDAM EDITION: PHP 8 Compatibility
  */
 
 require_once('./core/Library/pqp/classes/PhpQuickProfiler.php');

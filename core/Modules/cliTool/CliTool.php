@@ -1,29 +1,30 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\CliTool;
+
 /**
  * @defgroup tools
  */
 
 /**
- * @file core.Modules.cliTool/CliTool.inc.php
+ * @file core/Modules/CliTool/CliTool.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CommandLineTool
  * @ingroup tools
  *
  * @brief Initialization code for command-line scripts.
- * [WIZDAM EDITION] CLI Base Class. Strict Types & SAPI Security.
  */
 
 /** Initialization code */
 // Set current working directory
 define('PWD', getcwd());
 
-// Ensure we are in the base directory defined by tools/bootstrap.inc.php
+// Ensure we are in the base directory defined by tools/bootstrap.php
 if (defined('INDEX_FILE_LOCATION')) {
     chdir(dirname(INDEX_FILE_LOCATION));
 }
@@ -48,7 +49,6 @@ class CommandLineTool {
 
     /**
      * Constructor.
-     * @param array $argv
      */
     public function __construct(array $argv = []) {
         // [WIZDAM SECURITY] SAPI Check

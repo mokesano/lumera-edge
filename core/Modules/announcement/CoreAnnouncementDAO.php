@@ -1,23 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Announcement;
+
 /**
- * @file core.Modules.announcement/CoreAnnouncementDAO.inc.php
+ * @file core/Modules/Announcement/CoreAnnouncementDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreAnnouncementDAO
  * @ingroup announcement
  * @see Announcement, CoreAnnouncement
  *
  * @brief Operations for retrieving and modifying Announcement objects.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Constructor, Ref removal)
- * - Strict Integer Casting
- * - Date Logic Safety
  */
 
 import('core.Modules.announcement.CoreAnnouncement');
@@ -61,6 +58,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Retrieve an announcement by announcement ID.
      * @see getById
      */
     public function getAnnouncement($announcementId) {
@@ -195,6 +193,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Update an existing announcement.
      * @see updateObject
      */
     public function updateAnnouncement($announcement) {
@@ -212,6 +211,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Delete an announcement.
      * @see deleteObject
      */
     public function deleteAnnouncement($announcement) {
@@ -230,6 +230,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Delete an announcement by announcement ID.
      * @see deleteById
      */
     public function deleteAnnouncementById($announcementId) {
@@ -267,6 +268,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Deprecated] Delete announcements by Assoc ID
      * @see deleteByAssocId
      */
     public function deleteAnnouncementsByAssocId($assocType, $assocId) {
@@ -301,6 +303,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Depricated] Retrieve an array of announcements matching a particular assoc ID.
      * @see getByAssocId
      */
     public function getAnnouncementsByAssocId($assocType, $assocId, $rangeInfo = null) {
@@ -326,6 +329,7 @@ class CoreAnnouncementDAO extends DAO {
     }
 
     /**
+     * [Depricated] Retrieve an array of announcements matching a particular type ID.
      * @see getByTypeId
      */
     public function getAnnouncementsByTypeId($typeId, $rangeInfo = null) {
@@ -439,5 +443,4 @@ class CoreAnnouncementDAO extends DAO {
         return $this->getInsertId('announcements', 'announcement_id');
     }
 }
-
 ?>

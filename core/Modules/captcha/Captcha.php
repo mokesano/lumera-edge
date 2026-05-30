@@ -1,16 +1,18 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Captcha;
+
 /**
  * @defgroup captcha
  */
 
 /**
- * @file core.Modules.captcha/Captcha.inc.php
+ * @file core/Modules/Captcha/Captcha.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Captcha
  * @ingroup captcha
@@ -20,8 +22,8 @@ declare(strict_types=1);
  *
  */
 
-
 class Captcha extends DataObject {
+
     /**
      * Constructor.
      */
@@ -43,7 +45,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * get captcha id
+     * [Deprecated] Get captcha id.
      * @return int
      */
     public function getCaptchaId(): int {
@@ -52,7 +54,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * set captcha id
+     * [Deprecated] Set captcha id.
      * @param int $captchaId
      */
     public function setCaptchaId($captchaId) {
@@ -61,7 +63,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * get session id
+     * Get session id
      * @return string
      */
     public function getSessionId(): string {
@@ -69,7 +71,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * set session id
+     * Set session id
      * @param string $sessionId
      */
     public function setSessionId(string $sessionId) {
@@ -77,7 +79,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * get value
+     * Get value
      * @return string
      */
     public function getValue(): string {
@@ -85,7 +87,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * set value
+     * Set value
      * @param string $value
      */
     public function setValue(string $value) {
@@ -93,7 +95,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * get poster name
+     * Get poster name
      * @return string
      */
     public function getPosterName(): string {
@@ -101,7 +103,7 @@ class Captcha extends DataObject {
     }
 
     /**
-     * set date created
+     * Set date created
      * @param string $dateCreated
      */
     public function setDateCreated($dateCreated) {
@@ -109,12 +111,11 @@ class Captcha extends DataObject {
     }
 
     /**
-     * get date created
+     * Get date created
      * @return string|null
      */
     public function getDateCreated() {
         return $this->getData('dateCreated');
     }
 }
-
 ?>

@@ -1,23 +1,24 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Codelist;
+
 /**
  * @defgroup qualifier
  */
 
 /**
- * @file core.Modules.codelist/Qualifier.inc.php
+ * @file core/Modules/Codelist/Qualifier.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Qualifier
  * @ingroup codelist
  * @see QualifierDAO
  *
  * @brief Basic class describing a BIC Qualifier.
- *
  */
 
 import('core.Modules.codelist.CodelistItem');
@@ -51,11 +52,11 @@ class Qualifier extends CodelistItem {
     }
 
     /**
+     * Get the ONIX Subject Scheme Identifier for this Qualifier.
      * @return string the numerical value representing this item in the ONIX 3.0 schema
      */
     public function getOnixSubjectSchemeIdentifier(): string {
         return $this->_onixSubjectSchemeIdentifier;
     }
 }
-
 ?>

@@ -1,24 +1,26 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/VirtualArrayIterator.inc.php
+ * @file core/Kernel/VirtualArrayIterator.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class VirtualArrayIterator
  * @ingroup db
  *
  * @brief Provides paging and iteration for "virtual" arrays -- arrays for which only
  * the current "page" is available, but are much bigger in entirety.
- * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
 
 import('core.Kernel.ItemIterator');
 
 class VirtualArrayIterator extends ItemIterator {
+
     /** * @var array|null The array of contents of this iterator. 
      * [WIZDAM] Public for legacy access.
      */
@@ -124,7 +126,6 @@ class VirtualArrayIterator extends ItemIterator {
 
     /**
      * Return the next item in the iterator, with key.
-     * [WIZDAM] Removed reference (&) to match Parent ItemIterator.
      * @return array (key, value)
      */
     public function nextWithKey() {
@@ -196,8 +197,7 @@ class VirtualArrayIterator extends ItemIterator {
     }
 
     /**
-     * Convert the iterator into an array
-     * [WIZDAM] Removed reference (&) to match Parent ItemIterator.
+     * Convert the iterator into an array.
      * @return array
      */
     public function toArray() {

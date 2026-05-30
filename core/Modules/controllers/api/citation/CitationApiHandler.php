@@ -1,22 +1,23 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Citation;
+
 /**
  * @defgroup controllers_api_citation
  */
 
 /**
- * @file controllers/api/user/CitationApiHandler.inc.php
+ * @file core/Modules/controllers/api/citation/CitationApiHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CitationApiHandler
  * @ingroup controllers_api_user
  *
  * @brief Class defining the headless API for backend citation manipulation.
- * [WIZDAM EDITION] Modernized Citation API Handler.
  */
 
 // import the base Handler
@@ -50,6 +51,7 @@ class CitationApiHandler extends CoreHandler {
     // Implement template methods from CoreHandler
     //
     /**
+     * Authorize API requests for this handler.
      * @see CoreHandler::authorize()
      * [WIZDAM TRANSITION]: Signature kept loose for parent compatibility.
      */

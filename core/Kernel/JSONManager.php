@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/JSONManager.inc.php
+ * @file core/Kernel/JSONManager.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JSONManager
  * @ingroup core
@@ -14,7 +16,6 @@ declare(strict_types=1);
  * @brief Class to build and manipulate JSON (Javascript Object Notation) objects.
  *
  */
-
 
 class JSONManager {
     
@@ -25,7 +26,7 @@ class JSONManager {
     }
 
     /**
-     * Backward compatibility shim for PHP 4 constructor.
+     * [SHIM] Backward compatibility.
      */
     public function JSONManager() {
         trigger_error("Class '" . get_class($this) . "' uses deprecated constructor parent::JSONManager(). Please refactor to use parent::__construct().", E_USER_DEPRECATED);
@@ -33,8 +34,7 @@ class JSONManager {
     }
 
     /**
-     * PHP4 compatible version of json_encode()
-     *
+     * PHP4 compatible version of json_encode().
      * @param $value mixed The content to encode.
      * @return string The encoded content.
      */
@@ -63,11 +63,11 @@ class JSONManager {
 
     /**
      * Private function to get the JSON services library
+     * @return Services_JSON
      */
     public function _getJsonServices() {
         require_once('core/Library/json/JSON.php');
         return new Services_JSON();
     }
 }
-
 ?>

@@ -1,21 +1,23 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/RuntimeEnvironment.inc.php
+ * @file core/Kernel/RuntimeEnvironment.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class RuntimeEnvironment
  * @ingroup core
  *
  * @brief Class that describes a runtime environment.
- * [WIZDAM EDITION] Refactored for PHP 7.4+/8.x Strict Standards & Logic Fixes.
  */
 
 class RuntimeEnvironment {
+    
     /** * @var string 
      * [WIZDAM] Renamed from _phpVersionMin. Public for legacy compat.
      */

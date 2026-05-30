@@ -1,12 +1,14 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/JSONMessage.inc.php
+ * @file core/Kernel/JSONMessage.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JSONMessage
  * @ingroup core
@@ -16,6 +18,7 @@ declare(strict_types=1);
  */
 
 class JSONMessage {
+
     /** @var string The status of an event (e.g. false if form validation fails). */
     public $_status;
 
@@ -52,7 +55,7 @@ class JSONMessage {
     }
 
     /**
-     * Backward compatibility shim for PHP 4 constructor.
+     * [SHIM] Backward compatibility.
      */
     public function JSONMessage($status = true, $content = '', $elementId = '0', $additionalAttributes = null) {
         trigger_error("Class '" . get_class($this) . "' uses deprecated constructor parent::JSONMessage(). Please refactor to use parent::__construct().", E_USER_DEPRECATED);
@@ -187,5 +190,4 @@ class JSONMessage {
         return $jsonManager->encode($jsonObject);
     }
 }
-
 ?>

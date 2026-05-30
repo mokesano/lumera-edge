@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Citation;
+
 /**
- * @file core.Modules.citation/CitationDAO.inc.php
+ * @file core/Modules/Citation/CitationDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CitationDAO
  * @ingroup citation
  * @see Citation
  *
- * @brief Operations for retrieving and modifying Citation objects
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * @brief Operations for retrieving and modifying Citation objects.
  */
 
 // FIXME: We currently have direct dependencies on specific filter groups.
@@ -26,6 +26,7 @@ define('CITATION_LOOKUP_FILTER_GROUP', 'nlm30-element-citation=>nlm30-element-ci
 import('core.Modules.citation.Citation');
 
 class CitationDAO extends DAO {
+
     /**
      * Constructor
      */
@@ -164,16 +165,13 @@ class CitationDAO extends DAO {
 
     /**
      * Parses and looks up the given citation.
-     *
      * NB: checking the citation will not automatically
      * persist the changes. This has to be done by the caller.
      *
      * @param CoreRequest $request
      * @param Citation $originalCitation
      * @param array $filterIds a custom selection of filters to be applied
-     * @return Citation the checked citation. If checking
-     * was not successful then the original citation
-     * will be returned unchanged.
+     * @return Citation the checked citation. If checking was not successful then the original citation will be returned unchanged.
      */
     public function checkCitation($request, $originalCitation, $filterIds = []) {
         assert($originalCitation instanceof Citation);
@@ -198,10 +196,9 @@ class CitationDAO extends DAO {
     }
 
     /**
-     * Claims (locks) the next raw (unparsed) citation found in the
-     * database and checks it. This method is idempotent and parallelisable.
+     * Claims (locks) the next raw (unparsed) citation found in the database and checks it. 
+     * This method is idempotent and parallelisable.
      * It uses an atomic locking strategy to avoid race conditions.
-     *
      * @param CoreRequest $request
      * @param string $lockId a globally unique id that identifies the calling process.
      * @return bool true if a citation was found and checked, otherwise false.
@@ -460,9 +457,11 @@ class CitationDAO extends DAO {
         return $citationOutputFilter;
     }
 
+
     //
     // Protected helper methods
     //
+
     /**
      * Get the id of the last inserted citation.
      * @param string $table
@@ -478,6 +477,7 @@ class CitationDAO extends DAO {
     //
     // Private helper methods
     //
+
     /**
      * Construct a new citation object.
      * @return Citation
@@ -706,5 +706,4 @@ class CitationDAO extends DAO {
         return $filteredCitation;
     }
 }
-
 ?>

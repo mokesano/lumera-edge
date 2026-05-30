@@ -1,16 +1,18 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Codelist;
+
 /**
  * @defgroup codelist
  */
 
 /**
- * @file core.Modules.codelist/CodelistItem.inc.php
+ * @file core/Modules/Codelist/CodelistItem.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CodelistItem
  * @ingroup codelist
@@ -19,7 +21,6 @@ declare(strict_types=1);
  * @brief Basic class describing a codelist item.
  *
  */
-
 
 class CodelistItem extends DataObject {
     
@@ -80,6 +81,8 @@ class CodelistItem extends DataObject {
     }
 
     /**
+     * Get the numerical value representing this item in the ONIX 3.0 schema.
+     * @see https://www.editeur.org/83/Release-3.0-ONIX-for-Books-Product-Metadata/#codelists
      * @return string the numerical value representing this item in the ONIX 3.0 schema
      * @throws BadMethodCallException if not overridden by subclass
      */
@@ -88,5 +91,4 @@ class CodelistItem extends DataObject {
         throw new BadMethodCallException('This method must be implemented by a subclass.');
     }
 }
-
 ?>

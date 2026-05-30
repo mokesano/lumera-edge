@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Citation;
+
 /**
- * @file core.Modules.citation/PlainTextReferencesListFilter.inc.php
+ * @file core/Modules/Citation/PlainTextReferencesListFilter.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PlainTextReferencesListFilter
  * @ingroup classes_citation
  *
  * @brief Class that converts a submission to a plain text references list
  * based on the configured ordering type and citation output filter.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('core.Modules.citation.TemplateBasedReferencesListFilter');
@@ -23,8 +23,7 @@ import('core.Modules.citation.PlainTextReferencesList');
 class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     
     /**
-     * Constructor
-     * @param FilterGroup $filterGroup
+     * Constructor.
      */
     public function __construct($filterGroup) {
         // Add the persistable filter settings.
@@ -53,6 +52,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     // Implement template methods from TemplateBasedReferencesListFilter
     //
     /**
+     * Get the descriptions of the citation output filter types.
      * @see TemplateBasedReferencesListFilter::getCitationOutputFilterTypeDescriptions()
      * @return array
      */
@@ -67,6 +67,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     // Implement template methods from PersistableFilter
     //
     /**
+     * Get the class name.
      * @see PersistableFilter::getClassName()
      * @return string
      */
@@ -78,6 +79,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     // Implement template methods from Filter
     //
     /**
+     * Process the input and return a plain text references list.
      * @see Filter::process()
      * @param mixed $input
      * @return PlainTextReferencesList
@@ -93,6 +95,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     // Implement template methods from TemplateBasedFilter
     //
     /**
+     * Add template variables for the citation output.
      * @see TemplateBasedFilter::addTemplateVars()
      * @param CoreTemplateManager $templateMgr
      * @param Submission $submission
@@ -107,6 +110,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     }
 
     /**
+     * Get the template name.
      * @see TemplateBasedFilter::getTemplateName()
      * @return string
      */
@@ -115,6 +119,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     }
 
     /**
+     * Get the base path for the template.
      * @see TemplateBasedFilter::getBasePath()
      * @return string
      */
@@ -122,5 +127,4 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
         return dirname(__FILE__);
     }
 }
-
 ?>

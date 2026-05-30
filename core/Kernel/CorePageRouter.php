@@ -1,18 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Kernel;
+
 /**
- * @file core.Modules.core/CorePageRouter.inc.php
+ * @file core/Kernel/CorePageRouter.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CorePageRouter
  * @ingroup core
  *
  * @brief Class mapping an HTTP request to a handler or context.
- * [WIZDAM EDITION] Smart Routing, Magic Methods, Secure Web Cache, Strict Fixed
+ * Smart Routing, Magic Methods, Secure Web Cache, Strict Fixed.
  */
 
 define('ROUTER_DEFAULT_PAGE', './pages/index/index.php');
@@ -429,7 +431,7 @@ class CorePageRouter extends CoreRouter {
     /**
      * [WIZDAM] SMART ROUTER - EXECUTION ONLY
      * Fungsi ini telah dibersihkan dari logika Caching.
-     * Caching sekarang ditangani oleh Dispatcher.inc.php menggunakan metode Smart ETag.
+     * Caching sekarang ditangani oleh Dispatcher.php menggunakan metode Smart ETag.
      * @param callable $serviceEndpoint the handler and operation to call
      * @param CoreRequest $request the request to be routed
      * @param array $args the arguments to pass to the handler
@@ -476,7 +478,7 @@ class CorePageRouter extends CoreRouter {
             }
             
             // Catatan: Return value handler biasanya string HTML atau null (jika langsung echo/display)
-            // Hasil ini akan ditangkap oleh ob_start() di Dispatcher.inc.php jika Caching aktif.
+            // Hasil ini akan ditangkap oleh ob_start() di Dispatcher.php jika Caching aktif.
 
         } else {
             $authorizationMessage = $handler->getLastAuthorizationMessage();

@@ -1,23 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace Core\Modules\Announcement;
+
 /**
- * @file core.Modules.announcement/CoreAnnouncementType.inc.php
+ * @file core/Modules/Announcement/CoreAnnouncementType.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CoreAnnouncementType
  * @ingroup announcement
  * @see AnnouncementTypeDAO, AnnouncementTypeForm, CoreAnnouncementTypeDAO, CoreAnnouncementTypeForm
  *
  * @brief Basic class describing an announcement type.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Constructor)
- * - Strict SHIM
- * - Visibility explicit
  */
 
 class CoreAnnouncementType extends DataObject {
@@ -102,6 +99,7 @@ class CoreAnnouncementType extends DataObject {
     }
 
     /**
+     * [Deprecated] Get the type of the announcement type.
      * @deprecated
      */
     public function getAnnouncementTypeName() {
@@ -127,5 +125,4 @@ class CoreAnnouncementType extends DataObject {
         return $this->setData('name', $name, $locale);
     }
 }
-
 ?>

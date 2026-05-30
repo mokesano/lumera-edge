@@ -1,23 +1,24 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Modules\Codelist;
+
 /**
  * @defgroup codelist
  */
 
 /**
- * @file core.Modules.codelist/ONIXCodelistItem.inc.php
+ * @file core/Modules/Codelist/ONIXCodelistItem.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ONIXCodelistItem
  * @ingroup codelist
  * @see ONIXCodelistItemDAO
  *
  * @brief Basic class describing a codelist item.
- *
  */
 
 class ONIXCodelistItem extends DataObject {
