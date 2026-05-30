@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Payment;
 
-
 /**
- * @file core.Modules.payment/wizdam/AppQueuedPayment.inc.php
+ * @file app/Domain/Payment/AppQueuedPayment.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -14,8 +13,7 @@ namespace App\Domain\Payment;
  * @class AppQueuedPayment
  * @ingroup payment
  *
- * @brief Queued payment data structure for Wizdam
- * * MODERNIZED FOR WIZDAM FORK
+ * @brief Queued payment data structure for Wizdam-specific payment management.
  */
 
 import('app.Domain.Payment.QueuedPayment');

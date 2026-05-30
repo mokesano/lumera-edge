@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Security;
 
-
 /**
- * @file core.Modules.security/RoleDAO.inc.php
+ * @file app/Domain/Security/RoleDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -22,6 +21,8 @@ namespace App\Domain\Security;
 import('app.Domain.Security.Role');
 
 class RoleDAO extends DAO {
+    
+    /** @var UserDAO */
     public $userDao;
 
     /**

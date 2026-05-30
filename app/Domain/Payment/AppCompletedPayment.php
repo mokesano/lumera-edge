@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Payment;
 
-
 /**
  * @defgroup payment_wizdam
  */
 
 /**
- * @file core.Modules.payment/wizdam/AppCompletedPayment.inc.php
+ * @file app/Domain/Payment/AppCompletedPayment.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
@@ -20,11 +19,11 @@ namespace App\Domain\Payment;
  * @see AppCompletedPaymentDAO
  *
  * @brief Class describing a payment ready to be in the database.
- * * MODERNIZED FOR WIZDAM FORK
  */
 import('app.Domain.Payment.Payment');
 
 class AppCompletedPayment extends Payment {
+    
     /** @var int */
     public $journalId;
     /** @var int */

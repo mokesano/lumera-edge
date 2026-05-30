@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\I18n;
 
-
 /**
  * @defgroup admin
  */
 
 /**
- * @file core.Modules.i18n/LanguageAction.inc.php
+ * @file app.Domain.I18n/LanguageAction.php
  * @defgroup admin
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
@@ -22,8 +21,8 @@ namespace App\Domain\I18n;
  * @brief LanguageAction class.
  */
 
-define('LANGUAGE_PACK_DESCRIPTOR_URL', 'https://wizdam.sangia.org/app/wizdam/wizdam/xml/%s/locales.xml');
-define('LANGUAGE_PACK_TAR_URL', 'https://wizdam.sangia.org/app/wizdam/wizdam/xml/%s/%s.tar.gz');
+define('LANGUAGE_PACK_DESCRIPTOR_URL', 'https://lumera.sangia.org/app/xml/%s/locales.xml');
+define('LANGUAGE_PACK_TAR_URL', 'https://lumera.sangia.org/app/xml/%s/%s.tar.gz');
 
 class LanguageAction {
     

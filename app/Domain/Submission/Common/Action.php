@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Common;
 
-
 /**
  * @defgroup submission_common
  */
 
 /**
- * @file core.Modules.submission/common/Action.inc.php
+ * @file app/Domain/Submission/Common/Action.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

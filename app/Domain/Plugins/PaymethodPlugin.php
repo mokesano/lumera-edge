@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Plugins;
 
-
 /**
- * @file core.Modules.plugins/PaymethodPlugin.inc.php
+ * @file app/Domain/Plugins/PaymethodPlugin.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos

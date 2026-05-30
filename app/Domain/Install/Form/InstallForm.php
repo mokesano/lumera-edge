@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Install\Form;
 
-
 /**
  * @defgroup install_form
  */
 
 /**
- * @file core.Modules.install/form/InstallForm.inc.php
+ * @file app/Domain/Install/Form/InstallForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

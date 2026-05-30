@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Install;
 
-
 /**
- * @file core.Modules.install/Upgrade.inc.php
+ * @file app.Domain.Install/Upgrade.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -21,7 +20,7 @@ namespace App\Domain\Install;
  * [WIZDAM FORK v3.4] - PHP 8.4+ Strict Mode
  */
 
-import('app.Domain.Install.Installer');
+import('core.Modules.install.Installer');
 
 class Upgrade extends Installer {
 

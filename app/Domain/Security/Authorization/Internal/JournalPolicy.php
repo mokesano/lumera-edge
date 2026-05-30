@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Security\Authorization\Internal;
 
-
 /**
- * @file core.Modules.security/authorization/internal/JournalPolicy.inc.php
+ * @file app/Domain/Security/Authorization/Internal/JournalPolicy.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -15,8 +14,7 @@ namespace App\Domain\Security\Authorization\Internal;
  * @ingroup security_authorization_internal
  *
  * @brief Policy that ensures availability of an Wizdam journal in
- * the request context
- * * MODERNIZED FOR WIZDAM FORK
+ * the request context.
  */
 
 import('app.Domain.Security.authorization.PolicySet');

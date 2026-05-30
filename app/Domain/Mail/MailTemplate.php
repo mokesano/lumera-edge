@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Mail;
 
-
 /**
- * @file core.Modules.mail/MailTemplate.inc.php
+ * @file app/Domain/Mail/MailTemplate.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -23,6 +22,7 @@ namespace App\Domain\Mail;
 import('app.Domain.Mail.CoreMailTemplate');
 
 class MailTemplate extends CoreMailTemplate {
+    
     /** @var object|null The journal this message relates to */
     public $journal = null;
 

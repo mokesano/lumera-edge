@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Handler\Validation;
 
-
 /**
- * @file core.Modules.handler/HandlerValidatorJournal.inc.php
+ * @file app.Domain.Handler.Validation/HandlerValidatorJournal.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -17,7 +16,7 @@ namespace App\Domain\Handler\Validation;
  * @brief Class to validate if a Journal is present
  */
 
-import('app.Domain.Handler.validation.HandlerValidator');
+import('app.Domain.Handler.Validation.HandlerValidator');
 
 class HandlerValidatorJournal extends HandlerValidator {
     

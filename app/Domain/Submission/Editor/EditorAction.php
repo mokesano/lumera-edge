@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Editor;
 
-
 /**
- * @file core.Modules.submission/editor/EditorAction.inc.php
+ * @file app/Domain/Submission/Editor/EditorAction.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -22,6 +21,7 @@ namespace App\Domain\Submission\Editor;
 import('app.Domain.Submission.sectionEditor.SectionEditorAction');
 
 class EditorAction extends SectionEditorAction {
+    
     /**
      * Actions.
      */

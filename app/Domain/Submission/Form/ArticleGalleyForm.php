@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Form;
 
-
 /**
  * @defgroup submission_form
  */
 
 /**
- * @file core.Modules.submission/form/ArticleGalleyForm.inc.php
+ * @file app/Domain/Submission/Form/ArticleGalleyForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

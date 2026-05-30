@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Plugins;
 
-
 /**
- * @file core.Modules.plugins/Plugin.inc.php
+ * @file app/Domain/Plugins/Plugin.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -15,7 +14,6 @@ namespace App\Domain\Plugins;
  * @ingroup plugins
  *
  * @brief Abstract class for plugins
- * MODERNIZED FOR PHP 8.x+
  */
 
 import('app.Domain.Plugins.CorePlugin');

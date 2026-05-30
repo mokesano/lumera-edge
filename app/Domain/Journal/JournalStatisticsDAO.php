@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
- * @file core.Modules.journal/JournalStatisticsDAO.inc.php
+ * @file app/Domain/Journal/JournalStatisticsDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -15,11 +14,6 @@ namespace App\Domain\Journal;
  * @ingroup journal
  *
  * @brief Operations for retrieving journal statistics.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Visibility, Types, Date Handling)
- * - Performance Optimization (Hash Maps vs in_array)
- * - Safe Math (Division by Zero protection)
  */
 
 define('REPORT_TYPE_JOURNAL',    0x00001);

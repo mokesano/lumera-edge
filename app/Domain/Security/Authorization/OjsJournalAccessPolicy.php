@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Security\Authorization;
 
-
 /**
- * @file core.Modules.security/authorization/AppJournalAccessPolicy.inc.php
+ * @file app/Domain/Security/Authorization/OjsJournalAccessPolicy.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -14,8 +13,7 @@ namespace App\Domain\Security\Authorization;
  * @class AppJournalAccessPolicy
  * @ingroup security_authorization
  *
- * @brief Class to control access to Wizdam' journal setup components
- * * MODERNIZED FOR WIZDAM FORK
+ * @brief Class to control access to Wizdam' journal setup components.
  */
 
 import('app.Domain.Security.authorization.internal.JournalPolicy');

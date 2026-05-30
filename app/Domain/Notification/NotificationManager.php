@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Notification;
 
-
 /**
- * @file core.Modules.notification/NotificationManager.inc.php
+ * @file app/Domain/Notification/NotificationManager.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team

@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Payment\Form;
 
-
 /**
- * @file core.Modules.payments/wizdam/form/PaymentSettingsForm.inc.php
+ * @file app/Domain/Payment/Form/PaymentSettingsForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
@@ -14,8 +13,7 @@ namespace App\Domain\Payment\Form;
  * @class PaymentSettingsForm
  * @ingroup payments
  *
- * @brief Form for managers to modify Payment costs and settings
- * * MODERNIZED FOR WIZDAM FORK
+ * @brief Form for managers to modify Payment costs and settings.
  */
 
 import('core.Modules.form.Form');

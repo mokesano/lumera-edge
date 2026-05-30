@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Form;
 
-
 /**
- * @file core.Modules.submission/form/MetadataForm.inc.php
+ * @file app/Domain/Submission/Form/MetadataForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -24,6 +23,7 @@ import('core.Modules.form.Form');
 define('COVER_PAGE_IMAGE_NAME', 'coverPage');
 
 class MetadataForm extends Form {
+    
     /** @var object|null Article current article */
     public $article = null;
 

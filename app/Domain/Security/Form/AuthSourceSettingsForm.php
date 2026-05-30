@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Security\Form;
 
-
 /**
  * @defgroup security_form
  */
 
 /**
- * @file core.Modules.security/form/AuthSourceSettingsForm.inc.php
+ * @file app/Domain/Security/Form/AuthSourceSettingsForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -20,7 +19,6 @@ namespace App\Domain\Security\Form;
  * @see AuthSource, AuthSourceDAO
  *
  * @brief Form for editing authentication source settings.
- * * MODERNIZED FOR WIZDAM FORK
  */
 
 import('core.Modules.form.Form');

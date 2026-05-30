@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
- * @file core.Modules.journal/JournalDAO.inc.php
+ * @file app/Domain/Journal/JournalDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -29,7 +28,6 @@ class JournalDAO extends DAO {
     
     /**
      * Constructor.
-     * [MODERNISASI] Native Constructor
      */
     public function __construct() {
         parent::__construct();
@@ -48,7 +46,6 @@ class JournalDAO extends DAO {
 
     /**
      * Retrieve a journal by ID.
-     * [MODERNISASI] Removed & reference
      * @param $journalId int
      * @return Journal
      */
@@ -76,7 +73,6 @@ class JournalDAO extends DAO {
 
     /**
      * Retrieve a journal by path.
-     * [MODERNISASI] Removed & reference
      * @param $path string
      * @return Journal
      */
@@ -95,7 +91,6 @@ class JournalDAO extends DAO {
 
     /**
      * Internal function to return a Journal object from a row.
-     * [MODERNISASI] Factory method - Removed &
      * @param $row array
      * @return Journal
      */
@@ -226,7 +221,6 @@ class JournalDAO extends DAO {
 
     /**
      * Retrieve all journals.
-     * [MODERNISASI] Removed & reference
 	 * @param $enabledOnly boolean True iff only enabled jourals wanted
 	 * @param $rangeInfo object optional
 	 * @param $sortBy JOURNAL_FIELD_... optional sorting parameter
@@ -309,8 +303,7 @@ class JournalDAO extends DAO {
     }
 
     /**
-     * Retrieve all enabled journals
-     * [MODERNISASI] Removed & reference
+     * Retrieve all enabled journals.
      * @return array Journals ordered by sequence
      */
     public function getEnabledJournals($rangeInfo = null) {
@@ -320,7 +313,6 @@ class JournalDAO extends DAO {
 
     /**
      * Retrieve the IDs and titles of all journals in an associative array.
-     * [MODERNISASI] Removed & reference
      * @return array
      */
     public function getJournalTitles($enabledOnly = false) {
@@ -336,8 +328,7 @@ class JournalDAO extends DAO {
     }
 
     /**
-     * Retrieve enabled journal IDs and titles in an associative array
-     * [MODERNISASI] Removed & reference
+     * Retrieve enabled journal IDs and titles in an associative array.
      * @return array
      */
     public function getEnabledJournalTitles() {
@@ -362,7 +353,6 @@ class JournalDAO extends DAO {
 
     /**
      * Delete the public IDs of all publishing objects in a journal.
-     * 
 	 * @param $journalId int
 	 * @param $pubIdType string One of the NLM pub-id-type values or
 	 * 'other::something' if not part of the official NLM list
@@ -465,5 +455,4 @@ class JournalDAO extends DAO {
         return new DAOResultFactory($result, $this, '_returnJournalFromRow');
     }
 }
-
 ?>

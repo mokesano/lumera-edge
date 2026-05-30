@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Issue\Form;
 
-
 /**
  * @defgroup issue_galley_form
  */
 
 /**
- * @file core.Modules.issue/form/IssueGalleyForm.inc.php
+ * @file app/Domain/Issue/Form/IssueGalleyForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

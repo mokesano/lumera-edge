@@ -3,9 +3,22 @@ declare(strict_types=1);
 
 namespace App\Domain\Core;
 
+/**
+ * @file app.Domain.Core/WizdamWAF.php
+ *
+ * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2003-2019 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @class WizdamWAF
+ * @ingroup core
+ *
+ * @brief Class defining operations for Wizdam Web Application Firewall.
+ * [WIZDAM EDITION] Refactored for PHP 8.x
+ */
 
 // ### WAF v27.0 - SERVER-LEVEL PROTECTION (Standalone Mode) ###
-// LOKASI: /classes/core/WizdamWAF.inc.php
+// LOKASI: /classes/core/WizdamWAF.php
 // CARA KERJA: Dijalankan OTOMATIS oleh server untuk SEMUA file PHP
 // IMPLEMENTASI: Via php.ini (auto_prepend_file) atau .htaccess
 

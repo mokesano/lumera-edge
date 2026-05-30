@@ -20,10 +20,25 @@
             "name": "Rochmady",
             "email": "rochmady@sangia.org",
             "role": "Lead Developer"
+        },
+        {
+            "name": "Susiana",
+            "email": "susiana@sangia.org",
+            "role": "Co-Lead Developer"
+        },
+        {
+            "name": "Khayra Salsabila",
+            "email": "khayra@sangia.org",
+            "role": "Developer"
+        },
+        {
+            "name": "Rakha Ibrahim Rochmady",
+            "email": "rakha.im@sangia.org",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-json": "*",

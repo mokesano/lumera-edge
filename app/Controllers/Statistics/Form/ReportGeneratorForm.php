@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controllers\Statistics\Form;
 
-
 /**
- * @file controllers/statistics/form/ReportGeneratorForm.inc.php
+ * @file controllers/statistics/form/ReportGeneratorForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

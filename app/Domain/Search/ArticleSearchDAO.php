@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Search;
 
-
 /**
- * @file core.Modules.search/ArticleSearchDAO.inc.php
+ * @file app/Domain/Search/ArticleSearchDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

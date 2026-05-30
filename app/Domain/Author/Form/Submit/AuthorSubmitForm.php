@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Author\Form\Submit;
 
-
 /**
  * @defgroup author_form_submit
  */
 
 /**
- * @file core.Modules.author/form/submit/AuthorSubmitForm.inc.php
+ * @file core.Modules.author/form/submit/AuthorSubmitForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

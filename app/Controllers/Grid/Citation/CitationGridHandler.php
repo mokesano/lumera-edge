@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controllers\Grid\Citation;
 
-
 /**
- * @file controllers/grid/citation/CitationGridHandler.inc.php
+ * @file controllers/grid/citation/CitationGridHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team

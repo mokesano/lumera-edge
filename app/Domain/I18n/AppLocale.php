@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\I18n;
 
-
 /**
- * @file core.Modules.i18n/AppLocale.inc.php
+ * @file app.Domain.I18n/AppLocale.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

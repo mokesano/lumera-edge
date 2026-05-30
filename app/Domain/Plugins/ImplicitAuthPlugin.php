@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Plugins;
 
-
 /**
- * @file core.Modules.plugins/ImplicitAuthPlugin.inc.php
+ * @file app/Domain/Plugins/ImplicitAuthPlugin.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

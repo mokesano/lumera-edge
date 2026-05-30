@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Admin\Form;
 
-
 /**
- * @file core.Modules.admin/form/AboutSiteForm.inc.php
+ * @file core.Modules.admin/form/AboutSiteForm.php
  *
  * @class AboutSiteForm
  * @ingroup admin_form

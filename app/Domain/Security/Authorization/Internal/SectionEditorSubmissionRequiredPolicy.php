@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Security\Authorization\Internal;
 
-
 /**
- * @file core.Modules.security/authorization/internal/SectionEditorSubmissionRequiredPolicy.inc.php
+ * @file app/Domain/Security/Authorization/Internal/SectionEditorSubmissionRequiredPolicy.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team

@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Handler;
 
-
 /**
- * @file core.Modules.core/Handler.inc.php
+ * @file app.Domain.Handler/Handler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -198,7 +197,7 @@ class Handler extends CoreHandler {
         }
 
         // --- LAYER 3: BYPASS ---
-        // Jika ketiga fitur keamanan tidak ada yang aktif di config.inc.php
+        // Jika ketiga fitur keamanan tidak ada yang aktif di config.php
         return true; 
     }
     

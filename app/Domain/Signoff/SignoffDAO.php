@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Signoff;
 
-
 /**
- * @file core.Modules.signoff/SignoffDAO.inc.php
+ * @file app/Domain/Signoff/SignoffDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team

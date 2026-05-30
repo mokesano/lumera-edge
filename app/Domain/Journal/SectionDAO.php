@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
- * @file core.Modules.journal/SectionDAO.inc.php
+ * @file app/Domain/Journal/SectionDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -21,6 +20,7 @@ namespace App\Domain\Journal;
 import ('app.Domain.journal.Section');
 
 class SectionDAO extends DAO {
+
     /** @var array Cache storage */
     protected $cache;
 
@@ -674,5 +674,4 @@ class SectionDAO extends DAO {
         $this->resequenceCustomSectionOrders($issueId);
     }
 }
-
 ?>

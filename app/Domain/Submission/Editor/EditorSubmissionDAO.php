@@ -3,16 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Editor;
 
-
 /**
- * @file core.Modules.editor/EditorSubmissionDAO.inc.php
+ * @file app/Domain/Submission/Editor/EditorSubmissionDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * With contributions from:
- * - 2014 Instituto Nacional de Investigacion y Tecnologia Agraria y Alimentaria
  *
  * @class EditorSubmissionDAO
  * @ingroup submission

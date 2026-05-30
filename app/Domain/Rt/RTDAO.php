@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Rt;
 
-
 /**
- * @file core.Modules.rt/wizdam/RTDAO.inc.php
+ * @file app/Domain/Rt/RTDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

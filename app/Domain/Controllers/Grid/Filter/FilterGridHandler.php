@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Controllers\Grid\Filter;
 
-
 /**
- * @file core.Modules.controllers/grid/filter/FilterGridHandler.inc.php
+ * @file core.Modules.controllers/grid/filter/FilterGridHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team

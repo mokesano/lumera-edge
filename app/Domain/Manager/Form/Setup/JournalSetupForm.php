@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Manager\Form\Setup;
 
-
 /**
  * @defgroup manager_form_setup
  */
 
 /**
- * @file core.Modules.manager/form/setup/JournalSetupForm.inc.php
+ * @file app/Domain/Manager/Form/Setup/JournalSetupForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -26,6 +25,7 @@ namespace App\Domain\Manager\Form\Setup;
 import('core.Modules.form.Form');
 
 class JournalSetupForm extends Form {
+    
     /** @var int The step number */
     public $step;
 

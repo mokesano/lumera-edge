@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
- * @file core.Modules.journal/JournalSettingsDAO.inc.php
+ * @file app/Domain/Journal/JournalSettingsDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -16,9 +15,6 @@ namespace App\Domain\Journal;
  *
  * @brief Operations for retrieving and modifying journal settings.
  *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Ref removal, Visibility, Type Safety)
- * - Strict Types
  */
 
 class JournalSettingsDAO extends DAO {

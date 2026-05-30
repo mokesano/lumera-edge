@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Plugins;
 
-
 /**
- * @file core.Modules.plugins/AuthPlugin.inc.php
+ * @file app/Domain/Plugins/AuthPlugin.php
  *
  * @class AuthPlugin
  * @ingroup plugins

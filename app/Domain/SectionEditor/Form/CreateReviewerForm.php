@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Sectioneditor\Form;
 
-
 /**
  * @defgroup sectionEditor_form
  */
 
 /**
- * @file core.Modules.sectionEditor/form/CreateReviewerForm.inc.php
+ * @file app/Domain/SectionEditor/Form/CreateReviewerForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

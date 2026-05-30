@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Statistics;
 
-
 /**
  * @defgroup classes_statistics
  */
 
 /**
- * @file core.Modules.statistics/MetricsDAO.inc.php
+ * @file app/Domain/Statistics/MetricsDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -19,12 +18,6 @@ namespace App\Domain\Statistics;
  * @ingroup classes_statistics
  *
  * @brief Operations for retrieving and adding statistics data.
- *
- * [WIZDAM EDITION - ENTERPRISE PROTOCOL]
- * - Implements Sentinel Signature Caching (State-Based Invalidation)
- * - Atomic JSON.GZ Storage
- * - Fail-Fast Database Architecture
- * - PHP 8.x Strict Compatibility
  */
 
 class MetricsDAO extends DAO {

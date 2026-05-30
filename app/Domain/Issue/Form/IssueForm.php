@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Issue\Form;
 
-
 /**
  * @defgroup issue_form
  */
 
 /**
- * @file core.Modules.form/IssueForm.inc.php
+ * @file app/Domain/Issue/Form/IssueForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -27,6 +26,7 @@ import('core.Modules.form.Form');
 import('app.Domain.Issue.Issue'); // Bring in constants
 
 class IssueForm extends Form {
+    
     /** @var Issue|null current issue */
     protected ?Issue $issue = null;
 

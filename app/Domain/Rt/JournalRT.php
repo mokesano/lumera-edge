@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Rt;
 
-
 /**
  * @defgroup rt_wizdam
  */
 
 /**
- * @file core.Modules.rt/wizdam/JournalRT.inc.php
+ * @file app/Domain/Rt/JournalRT.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

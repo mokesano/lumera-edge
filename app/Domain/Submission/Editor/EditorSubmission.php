@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Submission\Editor;
 
-
 /**
- * @file core.Modules.submission/editor/EditorSubmission.inc.php
+ * @file app/Domain/Submission/Editor/EditorSubmission.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

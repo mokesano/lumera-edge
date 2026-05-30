@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Statistics;
 
-
 /**
- * @file core.Modules.statistics/StatisticsHelper.inc.php
+ * @file app/Domain/Statistics/StatisticsHelper.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -16,10 +15,6 @@ namespace App\Domain\Statistics;
  * @see StatisticsHelper
  *
  * @brief Statistics helper class.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (Static methods, Ref removal)
- * - Strict Typing
  */
 
 // Dimensions:

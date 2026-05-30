@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Manager\Form\Setup;
 
-
 /**
- * @file core.Modules.manager/form/setup/JournalSetupStep3Form.inc.php
+ * @file app/Domain/Manager/Form/Setup/JournalSetupStep3Form.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Comment\Form;
 
-
 /**
  * @defgroup rt_wizdam_form
  */
 
 /**
- * @file core.Modules.comment/form/CommentForm.inc.php
+ * @file core.Modules.comment/form/CommentForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

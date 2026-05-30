@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
  * @defgroup journal
  */
 
 /**
- * @file core.Modules.journal/Journal.inc.php
+ * @file app/Domain/Journal/Journal.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -23,7 +22,6 @@ namespace App\Domain\Journal;
  * [WIZDAM EDITION] PHP 7.4+ Compatible & Cleaned References
  */
 
-
 define('PUBLISHING_MODE_OPEN', 0);
 define('PUBLISHING_MODE_SUBSCRIPTION', 1);
 define('PUBLISHING_MODE_NONE', 2);
@@ -32,7 +30,6 @@ class Journal extends DataObject {
     
     /**
      * Constructor.
-     * [MODERNISASI] Native Constructor
      */
     public function __construct() {
         parent::__construct();
@@ -75,7 +72,6 @@ class Journal extends DataObject {
 
     /**
      * Return associative array of all locales supported by the journal.
-     * [MODERNISASI] Removed & reference
      * @return array
      */
     public function getSupportedLocaleNames() {
@@ -101,7 +97,6 @@ class Journal extends DataObject {
 
     /**
      * Return associative array of all locales supported by forms of the journal.
-     * [MODERNISASI] Removed & reference
      * @return array
      */
     public function getSupportedFormLocaleNames() {
@@ -126,7 +121,6 @@ class Journal extends DataObject {
 
     /**
      * Return associative array of all locales supported for the submissions.
-     * [MODERNISASI] Removed & reference
      * @return array
      */
     public function getSupportedSubmissionLocaleNames() {
@@ -343,7 +337,6 @@ class Journal extends DataObject {
 
     /**
      * Retrieve array of journal settings.
-     * [MODERNISASI] Removed & reference
      * @return array
      */
     public function getSettings() {
@@ -354,7 +347,6 @@ class Journal extends DataObject {
 
     /**
      * Retrieve a localized setting.
-     * [MODERNISASI] Removed & reference
      * @param $name string
      * @param $preferredLocale string
      * @return mixed
@@ -371,7 +363,6 @@ class Journal extends DataObject {
 
     /**
      * Retrieve a journal setting value.
-     * [MODERNISASI] Removed & reference
      * @param $name string
      * @param $locale string
      * @return mixed
@@ -401,7 +392,6 @@ class Journal extends DataObject {
     
     /**
      * Return all metric types supported by this journal.
-	 *
 	 * @return array An array of strings of supported metric type identifiers.
 	 */
     public function getMetricTypes($withDisplayNames = false) {
@@ -425,7 +415,6 @@ class Journal extends DataObject {
 
     /**
      * Returns the currently configured default metric type for this journal.
-     * 
 	 * @return null|string A metric type identifier or null if no default metric
 	 *   type could be identified.
 	 */
@@ -448,14 +437,12 @@ class Journal extends DataObject {
 
     /**
      * Retrieve a statistics report pre-filtered on this journal.
-     * [MODERNISASI] Strict Type Hinting (array) for Consistency with Application.inc.php
-	 *
+     * [MODERNISASI] Strict Type Hinting (array) for Consistency with Application.php
 	 * @param $metricType null|integer|array metrics selection
 	 * @param $columns integer|array column (aggregation level) selection
 	 * @param $filter array report-level filter selection
 	 * @param $orderBy array order criteria
 	 * @param $range null|DBResultRange paging specification
-	 *
 	 * @return null|array The selected data as a simple tabular
 	 *  result set or null if metrics are not supported by this journal.
 	 */
@@ -466,5 +453,4 @@ class Journal extends DataObject {
         return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
     }
 }
-
 ?>

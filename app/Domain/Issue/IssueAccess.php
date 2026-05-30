@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Issue;
 
-
 /**
  * @defgroup issue Issue
  */
 
 /**
- * @file core.Modules.issue/IssueAccess.inc.php
+ * @file app/Domain/Issue/IssueAccess.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady

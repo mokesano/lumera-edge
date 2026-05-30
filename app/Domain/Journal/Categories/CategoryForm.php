@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal\Categories;
 
-
 /**
- * @file core.Modules.journal/category/CategoryForm.inc.php
+ * @file app/Domain/Journal/Categories/CategoryForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -21,12 +20,12 @@ namespace App\Domain\Journal\Categories;
 import('core.Modules.form.Form');
 
 class CategoryForm extends Form {
+
     /** @var Category object the category being edited */
     public $category;
 
     /**
-     * Constructor
-     * [MODERNISASI] Native Constructor
+     * Constructor.
      * @param $category Category object; null to create new
      */
     public function __construct($category = null) {
@@ -121,5 +120,4 @@ class CategoryForm extends Form {
         }
     }
 }
-
 ?>

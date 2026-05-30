@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Payment;
 
-
 /**
- * @file core.Modules.payment/wizdam/AppPaymentAction.inc.php
+ * @file app/Domain/Payment/AppPaymentAction.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -15,9 +14,6 @@ namespace App\Domain\Payment;
  * @ingroup payments
  *
  * Common actions for payment management functions.
- * [WIZDAM EDITION] 
- * - FIXED: PHP 8.4 Static Compliance
- * - REFACTORED: De-monolithized into modular, testable methods.
  */
 
 class AppPaymentAction {

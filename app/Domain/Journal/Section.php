@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
-
 /**
- * @file core.Modules.journal/Section.inc.php
+ * @file app/Domain/Journal/Section.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -407,5 +406,4 @@ class Section extends DataObject {
         return $this->setData('policy', $policy, $locale);
     }
 }
-
 ?>

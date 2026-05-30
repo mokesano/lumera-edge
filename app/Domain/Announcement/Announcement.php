@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Announcement;
 
-
 /**
  * @defgroup announcement
  */
 
 /**
- * @file core.Modules.announcement/Announcement.inc.php
+ * @file core.Modules.announcement/Announcement.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

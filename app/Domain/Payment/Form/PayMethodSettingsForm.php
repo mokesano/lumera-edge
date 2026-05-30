@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Payment\Form;
 
-
 /**
- * @file core.Modules.payments/wizdam/form/PaymentSettingsForm.inc.php
+ * @file app/Domain/Payment/Form/PayMethodSettingsForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos

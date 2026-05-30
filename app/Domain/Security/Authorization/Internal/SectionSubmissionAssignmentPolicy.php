@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Security\Authorization\Internal;
 
-
 /**
- * @file core.Modules.security/authorization/internal/SectionSubmissionAssignmentPolicy.inc.php
+ * @file app/Domain/Security/Authorization/Internal/SectionSubmissionAssignmentPolicy.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -18,7 +17,6 @@ namespace App\Domain\Security\Authorization\Internal;
  *
  * NB: This policy expects a previously authorized section editor
  * submission in the authorization context.
- * * MODERNIZED FOR WIZDAM FORK
  */
 
 import('app.Domain.Security.authorization.AuthorizationPolicy');

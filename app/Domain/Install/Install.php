@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\Install;
 
-
 /**
- * @file core.Modules.install/Install.inc.php
+ * @file app.Domain.Install/Install.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -27,7 +26,7 @@ namespace App\Domain\Install;
 define('INSTALLER_DEFAULT_SITE_TITLE', 'common.wizdamEditorialSystems');
 define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 12);
 
-import('app.Domain.Install.CoreInstall');
+import('core.Modules.install.CoreInstall');
 
 class Install extends CoreInstall {
 
