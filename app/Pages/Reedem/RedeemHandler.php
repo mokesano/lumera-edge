@@ -3,15 +3,13 @@ declare(strict_types=1);
 
 namespace App\Pages\Reedem;
 
-
 /**
- * @file pages/redeem/RedeemHandler.inc.php
+ * @file app/Pages/Reedem/RedeemHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance, DDD, and i18n
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class RedeemHandler
  * @ingroup pages_redeem
  *
@@ -24,8 +22,12 @@ import('core.Modules.checkout.services.RedeemService');
 
 class RedeemHandler extends Handler {
     
+    /** @var RedeemService Layanan untuk mengelola logika bisnis penukaran poin */
     private RedeemService $redeemService;
 
+    /**
+     * Constructor
+     */
     public function __construct() {
         parent::__construct();
         
@@ -36,6 +38,10 @@ class RedeemHandler extends Handler {
         $this->redeemService = new RedeemService();
     }
 
+    /**
+     * Sets up the template for the redeem handler.
+     * @param CoreRequest|null $request
+     */
     public function setupTemplate($request = null): void {
         parent::setupTemplate($request);
         AppLocale::requireComponents(
@@ -47,6 +53,9 @@ class RedeemHandler extends Handler {
     /**
      * Menampilkan Dasbor Dompet Virtual (Saldo & Riwayat Mutasi).
      * Rute: GET /redeem
+     * @param array $args
+     * @param CoreRequest|null $request
+     * @return void
      */
     public function index(array $args = [], $request = null): void {
         $this->validate();
@@ -75,6 +84,9 @@ class RedeemHandler extends Handler {
     /**
      * Memproses permintaan penukaran poin (POST).
      * Rute: POST /redeem/exchange
+     * @param array $args
+     * @param CoreRequest|null $request
+     * @return void
      */
     public function exchange(array $args = [], $request = null): void {
         $this->validate();
@@ -124,6 +136,9 @@ class RedeemHandler extends Handler {
 
     /**
      * HELPER: Mengalihkan pengguna kembali ke dasbor dompet dengan Notifikasi Error.
+     * @param CoreRequest $request
+     * @param string $localeKey Kunci locale untuk pesan error yang akan ditampilkan
+     * @return void
      */
     private function _redirectWithError($request, string $localeKey): void {
         import('app.Domain.Notification.NotificationManager');

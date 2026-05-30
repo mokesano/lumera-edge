@@ -3,15 +3,16 @@ declare(strict_types=1);
 
 namespace App\Pages\Checkout;
 
-
 /**
- * @file pages/checkout/CheckoutHandler.inc.php
+ * @file app/Pages/Checkout/CheckoutHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class CheckoutHandler
+ * @ingroup pages_checkout
+ * 
  * @brief Controller antarmuka untuk 3-Tahap Checkout (Cart -> Billing -> Payment/Finalize).
  */
 

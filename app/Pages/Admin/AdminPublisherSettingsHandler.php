@@ -3,19 +3,16 @@ declare(strict_types=1);
 
 namespace App\Pages\Admin;
 
-
 /**
- * @file pages.admin.AdminPublisherSettingsHandler.inc.php
+ * @file app/Pages/Admin/AdminPublisherSettingsHandler.php
  *
  * Copyright (c) 2013-2025 Lumera Edge Project
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AdminPublisherSettingsHandler
  * @ingroup pages_admin
  *
  * @brief Handle requests for changing publisher admin settings.
- *
- * [LUMERA EDGE EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.admin.AdminHandler');

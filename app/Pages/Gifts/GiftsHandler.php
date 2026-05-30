@@ -3,24 +3,21 @@ declare(strict_types=1);
 
 namespace App\Pages\Gifts;
 
-
 /**
  * @defgroup gifts
  */
 
 /**
- * @file pages/gifts/GiftsHandler.inc.php
+ * @file app/Pages/Gifts/GiftsHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class GiftsHandler
  * @ingroup gifts
  *
- * @brief Handle requests to buy gifts
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * @brief Handle requests to buy gifts.
  */
 
 import('app.Domain.Handler.Handler');

@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\User;
 
-
 /**
- * @file pages/user/UserHandler.inc.php
+ * @file app/Pages/User/UserHandler.php
  * 
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  * 
  * @class UserHandler
  * @ingroup pages_user
  *
  * @brief Handle requests for user functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Handler.Handler');
@@ -303,5 +300,4 @@ class UserHandler extends Handler {
         $request->redirect(null, 'user');
     }
 }
-
 ?>

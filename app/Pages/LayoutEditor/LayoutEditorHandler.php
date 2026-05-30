@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Layouteditor;
 
-
 /**
- * @file pages/layoutEditor/LayoutEditorHandler.inc.php
+ * @file app/Pages/LayoutEditor/LayoutEditorHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LayoutEditorHandler
  * @ingroup pages_layoutEditor
  *
  * @brief Handle requests for layout editor functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Submission.layoutEditor.LayoutEditorAction');

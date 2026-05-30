@@ -1,30 +1,49 @@
 <?php
+declare(strict_types=1);
+
+namespace App\Pages\Trends;
+
 /**
- * @file pages/trends/TrendsHandler.inc.php
+ * @file app/Pages/Trends/TrendsHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * [WIZDAM] - Hub/Landing Page untuk semua metrik Trends ScholarWizdam.
  * URL Target: /{context}/trends
  */
 
-declare(strict_types=1);
-
-namespace App\Pages\Trends;
-
-
 import('app.Domain.Handler.Handler');
 
 class TrendsHandler extends Handler {
 
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+
+    /**
+     * Authorize the request
+     * @param Request $request
+     * @param array $args
+     * @param array $roleAssignments
+     * @return bool
+     */
     public function authorize($request, $args, $roleAssignments) {
         import('app.Domain.Security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);
     }
 
+    /**
+     * Display the trends hub/landing page.
+     * @param array $args
+     * @param CoreRequest $request
+     * @return void
+     */
     public function index(array $args = [], $request = NULL) {
         $this->setupTemplate($request);
         $templateMgr = TemplateManager::getManager($request);

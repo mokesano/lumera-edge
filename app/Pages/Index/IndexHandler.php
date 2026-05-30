@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Index;
 
-
 /**
- * @file pages/index/IndexHandler.inc.php
+ * @file app/Pages/Index/IndexHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
  * @ingroup pages_index
  *
  * @brief Handle site index requests.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Handler.Handler');

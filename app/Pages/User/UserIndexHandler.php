@@ -3,19 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\User;
 
-
 /**
- * @file pages/user/UserIndexHandler.inc.php
+ * @file app/Pages/User/UserIndexHandler.php
  * 
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  * 
  * @class UserIndexHandler
  * @ingroup pages_user
  *
  * @brief Handle requests for user dashboard (User Home).
- * [WIZDAM EDITION] Refactored from UserHandler for better separation of concerns.
  */
 
 import('app.Pages.user.UserHandler');

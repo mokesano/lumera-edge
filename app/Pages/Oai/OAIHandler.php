@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Oai;
 
-
 /**
- * @file pages/oai/OAIHandler.inc.php
+ * @file app/Pages/Oai/OAIHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIHandler
  * @ingroup pages_oai
  *
  * @brief Handle OAI protocol requests.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 define('SESSION_DISABLE_INIT', 1);
@@ -96,7 +93,7 @@ class OAIHandler extends Handler {
 
     /**
      * Validasi OAI.
-     * Fungsi ini memastikan bahwa fitur OAI diaktifkan di config.inc.php.
+     * Fungsi ini memastikan bahwa fitur OAI diaktifkan di config.php.
      * @param mixed $requiredContexts
      * @param object|null $request
      */

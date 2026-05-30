@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Sectioneditor;
 
-
 /**
- * @file pages/sectionEditor/SectionEditorHandler.inc.php
+ * @file app/Pages/SectionEditor/SectionEditorHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionEditorHandler
  * @ingroup pages_sectionEditor
  *
  * @brief Handle requests for section editor functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 // Filter section
@@ -26,6 +23,7 @@ import('app.Domain.Submission.sectionEditor.SectionEditorAction');
 import('app.Domain.Handler.Handler');
 
 class SectionEditorHandler extends Handler {
+    
     /** @var object|null submission associated with the request */
     public $submission = null;
 

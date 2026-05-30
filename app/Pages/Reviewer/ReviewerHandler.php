@@ -3,26 +3,24 @@ declare(strict_types=1);
 
 namespace App\Pages\Reviewer;
 
-
 /**
- * @file pages/reviewer/ReviewerHandler.inc.php
+ * @file app/Pages/Reviewer/ReviewerHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerHandler
  * @ingroup pages_reviewer
  *
  * @brief Handle requests for reviewer functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Submission.reviewer.ReviewerAction');
 import('app.Domain.Handler.Handler');
 
 class ReviewerHandler extends Handler {
+
     /** @var object|null user associated with the request */
     public $user = null;
 
@@ -212,8 +210,8 @@ class ReviewerHandler extends Handler {
     /**
      * Validate that the user is an assigned reviewer for the article.
      * Redirects to reviewer index page if validation fails.
-     * * [WIZDAM] Transition Mode: Loose signature to handle legacy parameter swapping
-     * * @param mixed $requiredContexts (Could be Request object, or null)
+     * [WIZDAM] Transition Mode: Loose signature to handle legacy parameter swapping
+     * @param mixed $requiredContexts (Could be Request object, or null)
      * @param mixed $request (Could be Request object, or reviewId (int), or null)
      */
     public function validate($requiredContexts = null, $request = null) {

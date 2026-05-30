@@ -3,15 +3,13 @@ declare(strict_types=1);
 
 namespace App\Pages\Authenticate;
 
-
 /**
- * @file pages/authenticate/AuthenticateHandler.inc.php
+ * @file app/Pages/Authenticate/AuthenticateHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance & DDD
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class AuthenticateHandler
  * 
  * @brief Handler Publik untuk memverifikasi keabsahan LoA, Sertifikat, dan Invoice.

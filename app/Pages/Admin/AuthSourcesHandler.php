@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Admin;
 
-
 /**
- * @file pages/admin/AuthSourcesHandler.inc.php
+ * @file app/Pages/Admin/AuthSourcesHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AuthSourcesHandler
  * @ingroup pages_admin
  *
- * @brief Handle requests for authentication source management in site administration. 
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * @brief Handle requests for authentication source management in site administration.
  */
 
 import('app.Domain.Plugins.AuthPlugin');

@@ -3,22 +3,18 @@ declare(strict_types=1);
 
 namespace App\Pages\Policies;
 
-
 /**
- * @file pages/policies/PoliciesHandler.inc.php
+ * @file app/Pages/Policies/PoliciesHandler.php
  *
  * Copyright (c) 2025 Wizdam Team
  * Copyright (c) 2025 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PoliciesHandler
  * @ingroup pages_policies
  *
  * @brief Handle requests for policy pages.
- * @version Wizdam-Fixed-Compatibility & Optimized
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance, 
- * DRY Principle, and N+1 Query Optimization.
+ * @version DRY Principle, and N+1 Query Optimization.
  */
 
 import('app.Domain.Handler.Handler');

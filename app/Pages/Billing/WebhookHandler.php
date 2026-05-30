@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 namespace App\Pages\Billing;
 
-
 /**
- * @file pages/billing/WebhookHandler.inc.php
+ * @file app/Pages/Billing/WebhookHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance & DDD
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class WebhookHandler
+ * @ingroup pages_billing
+ * 
  * @brief Menerima HTTP POST diam-diam dari Payment Gateway (Server-to-Server).
  * Dilengkapi dengan pengamanan Signature, Idempotency, dan Retry-Handling.
  */

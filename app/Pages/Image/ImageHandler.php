@@ -3,18 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Image;
 
-
 /**
- * @file pages/image/ImageHandler.inc.php
+ * @file app/Pages/Image/ImageHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ImageHandler
  * @ingroup pages_image
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * 
+ * @brief Custom handler untuk melayani permintaan gambar dengan resizing dinamis dan caching.
  * Custom Image Resizing & Caching Handler
  */
 

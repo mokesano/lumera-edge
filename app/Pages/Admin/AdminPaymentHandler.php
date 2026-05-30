@@ -3,12 +3,16 @@ declare(strict_types=1);
 
 namespace App\Pages\Admin;
 
-
 /**
- * @file pages/checkout/AdminPaymentHandler.inc.php
+ * @file app/Pages/Admin/AdminPaymentHandler.php
  *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * Copyright (c) 2013-2025 Lumera Edge Project
+ * Copyright (c) 2003-2025 Rochmady and Wizdam Team
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class AdminPaymentHandler
+ * @ingroup pages_admin
+ * 
  * @brief Handler khusus untuk Site Administrator mengelola Payment Gateway.
  */
 

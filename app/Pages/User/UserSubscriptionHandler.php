@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Pages\User;
 
-
 /**
- * @file pages/user/UserSubscriptionHandler.inc.php
+ * @file app/Pages/User/UserSubscriptionHandler.php
  * 
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  * 
  * @class UserSubscriptionHandler
  * @ingroup pages_user

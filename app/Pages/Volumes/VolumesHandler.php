@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Pages\Volumes;
 
-
 /**
- * @file pages/volumes/VolumesHandler.inc.php
+ * @file app/Pages/Volumes/VolumesHandler.php
  *
  * Copyright (c) 2025 Wizdam Team
  * Copyright (c) 2025 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class VolumesHandler
  * @ingroup pages_volumes

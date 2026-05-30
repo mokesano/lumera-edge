@@ -3,25 +3,23 @@ declare(strict_types=1);
 
 namespace App\Pages\Copyeditor;
 
-
 /**
- * @file pages/copyeditor/SubmissionCommentsHandler.inc.php
+ * @file app/Pages/Copyeditor/SubmissionCommentsHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionCommentsHandler
  * @ingroup pages_copyeditor
  *
  * @brief Handle requests for submission comments.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.copyeditor.SubmissionCopyeditHandler');
 
 class SubmissionCommentsHandler extends CopyeditorHandler {
+    
     /** @var Comment|null comment associated with this request */
     public $comment;
 

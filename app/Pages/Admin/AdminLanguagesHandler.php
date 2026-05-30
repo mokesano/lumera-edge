@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Admin;
 
-
 /**
- * @file pages/admin/AdminLanguagesHandler.inc.php
+ * @file app/pages/Admin/AdminLanguagesHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AdminLanguagesHandler
  * @ingroup pages_admin
  *
  * @brief Handle requests for changing site language settings.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.admin.AdminHandler');

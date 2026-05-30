@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Copyeditor;
 
-
 /**
- * @file pages/copyeditor/SubmissionCopyeditHandler.inc.php
+ * @file app/Pages/Copyeditor/SubmissionCopyeditHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionCopyeditHandler
  * @ingroup pages_copyeditor
  *
  * @brief Handle requests for submission tracking.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.copyeditor.CopyeditorHandler');

@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Manager;
 
-
 /**
- * @file pages/manager/PluginManagementHandler.inc.php
+ * @file app/Pages/Manager/PluginManagementHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PluginManagementHandler
  * @ingroup pages_manager
  *
  * @brief Handle requests for installing/upgrading/deleting plugins.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 define('VERSION_FILE', '/version.xml');

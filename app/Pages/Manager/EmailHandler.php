@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Manager;
 
-
 /**
- * @file pages/manager/EmailHandler.inc.php
+ * @file app/Pages/Manager/EmailHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class EmailHandler
  * @ingroup pages_manager
  *
- * @brief Handle requests for email management functions. 
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * @brief Handle requests for email management functions.
  */
 
 import('app.Pages.manager.ManagerHandler');

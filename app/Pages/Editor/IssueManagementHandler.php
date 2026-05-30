@@ -3,25 +3,23 @@ declare(strict_types=1);
 
 namespace App\Pages\Editor;
 
-
 /**
- * @file pages/editor/IssueManagementHandler.inc.php
+ * @file app/Pages/Editor/IssueManagementHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueManagementHandler
  * @ingroup pages_editor
  *
  * @brief Handle requests for issue management in publishing.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.editor.EditorHandler');
 
 class IssueManagementHandler extends EditorHandler {
+    
     /** @var Issue|null issue associated with the request */
     public $issue;
 

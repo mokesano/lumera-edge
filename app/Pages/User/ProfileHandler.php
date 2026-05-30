@@ -3,21 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\User;
 
-
 /**
- * @file pages/user/ProfileHandler.inc.php
+ * @file app/Pages/User/ProfileHandler.php
  * 
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  * 
  * @class ProfileHandler
  * @ingroup pages_user
  *
  * @brief Handle requests for modifying user profiles.
- *
- * [WIZDAM EDITION] 
- * Refactored for PHP 8.1+ Strict Compliance
  * Refactored for Semantic RESTful URLs (update-profile, my-profile).
  */
 
@@ -243,7 +239,7 @@ class ProfileHandler extends UserHandler {
         $templateMgr->assign('isOrcidLinked', !empty($orcid));
         $templateMgr->assign('orcidUrl', $orcid);
 
-        // Lempar status fitur SSO dari config.inc.php
+        // Lempar status fitur SSO dari config.php
         $templateMgr->assign('googleSsoEnabled', Config::getVar('sso', 'google'));
         $templateMgr->assign('orcidSsoEnabled', Config::getVar('sso', 'orcid'));
 

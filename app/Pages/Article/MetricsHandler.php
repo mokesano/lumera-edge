@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Article;
 
-
 /**
- * File: MetricsHandler.inc.php
+ * File: app/Pages/Article/MetricsHandler.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * Menangani permintaan untuk halaman "metrik" kustom sebuah artikel.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class MetricsHandler
  * @extends ArticleHandler
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * 
+ * @brief Menangani permintaan untuk halaman "metrik" kustom sebuah artikel.
  */
 
 import('app.Pages.article.ArticleHandler');

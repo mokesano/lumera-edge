@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Announcement;
 
-
 /**
- * @file pages/announcement/AnnouncementHandler.inc.php
+ * @file app/Pages/Announcement/AnnouncementHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementHandler
  * @ingroup pages_announcement
  *
  * @brief Handle requests for public announcement functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Null Safety
  */
 
 import('app.Pages.announcement.CoreAnnouncementHandler');

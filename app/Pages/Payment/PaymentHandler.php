@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Payment;
 
-
 /**
- * @file pages/payment/PaymentHandler.inc.php
+ * @file app/Pages/Payment/PaymentHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PaymentHandler
  * @ingroup pages_payment
  *
  * @brief Handle requests for payment functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Handler.Handler');

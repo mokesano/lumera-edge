@@ -3,25 +3,23 @@ declare(strict_types=1);
 
 namespace App\Pages\Author;
 
-
 /**
- * @file pages/author/TrackSubmissionHandler.inc.php
+ * @file app/Pages/Author/TrackSubmissionHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TrackSubmissionHandler
  * @ingroup pages_author
  *
  * @brief Handle requests for submission tracking.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Pages.author.AuthorHandler');
 
 class TrackSubmissionHandler extends AuthorHandler {
+    
     /** @var AuthorSubmission|null submission associated with the request */
     public $submission;
 

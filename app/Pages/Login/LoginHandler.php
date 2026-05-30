@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Login;
 
-
 /**
- * @file pages/login/LoginHandler.inc.php
+ * @file app/Pages/Login/LoginHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LoginHandler
  * @ingroup pages_login
  *
  * @brief Handle login/logout requests.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  * - Added ORCID SSO Integration
  * - Added Google SSO Integration
  */
