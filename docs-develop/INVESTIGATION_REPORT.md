@@ -108,7 +108,7 @@ Ganti `"plugins/"` dengan folder spesifik yang memang legacy:
 
 ### Step 1: Bersihkan Cache Composer
 ```powershell
-cd C:\xampp\htdocs\scholaraux-ori
+cd C:\xampp\htdocs\lumera-edge
 
 # Hapus semua cache Composer
 composer clear-cache
