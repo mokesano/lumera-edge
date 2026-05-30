@@ -19,6 +19,8 @@ storage/cache/*
 # Dependencies
 vendor/
 core/Libraries/
+core/Library/
+node_modules/
 
 # Compiled and build artifacts
 *.o
