@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Validators;
+
 /**
- * @file core.Modules.classes/validator/ValidatorWF.inc.php
+ * @file app/Helpers/Validators/ValidatorWF.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] - Frontedge Security
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class ValidatorWF
+ * 
  * @brief Menangani Web Application Firewall (WAF) internal, Rate Limiting, dan Request Tracing.
  */
-
-namespace App\Helpers\Validators;
-
 
 class ValidatorWF {
 

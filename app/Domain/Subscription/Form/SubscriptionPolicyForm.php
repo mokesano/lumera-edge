@@ -5,7 +5,7 @@ namespace App\Domain\Subscription\Form;
 
 
 /**
- * @file core.Modules.subscription/form/SubscriptionPolicyForm.inc.php
+ * @file app/Domain/Subscription/Form/SubscriptionPolicyForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

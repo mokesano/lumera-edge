@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Cart;
+
 /**
- * @file core.Modules.classes/cart/CartItemDAO.inc.php
+ * @file app/Helpers/Cart/CartItemDAO.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -10,12 +12,10 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
  * @class CartItemDAO
+ * 
  * @brief Data Access Object untuk operasi tabel cart_items (MyISAM).
  * Terisolasi di dalam direktori Wizdam Frontedge.
  */
-
-namespace App\Helpers\Cart;
-
 
 import('core.Modules.db.DAO');
 

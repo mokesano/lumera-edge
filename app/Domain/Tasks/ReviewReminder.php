@@ -5,7 +5,7 @@ namespace App\Domain\Tasks;
 
 
 /**
- * @file core.Modules.tasks/ReviewReminder.inc.php
+ * @file app/Domain/Tasks/ReviewReminder.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

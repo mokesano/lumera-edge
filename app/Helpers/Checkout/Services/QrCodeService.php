@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout\Services;
+
 /**
- * @file core.Modules.classes/checkout/services/QrCodeService.inc.php
+ * @file app/Helpers/Checkout/Services/QrCodeService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -12,9 +14,6 @@ declare(strict_types=1);
  * @class QrCodeService
  * @brief Wrapper independen untuk library chillerlan/php-qrcode (v5.0.5)
  */
-
-namespace App\Helpers\Checkout\Services;
-
 
 // Panggil library murni tanpa merusak autoloader Wizdam
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');

@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout;
+
 /**
- * @file core.Modules.classes/checkout/InvoiceDAO.inc.php
+ * @file app/Helpers/Checkout/InvoiceDAO.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -13,9 +15,6 @@ declare(strict_types=1);
  * @brief Operations for retrieving and modifying Invoice objects. 
  * Memiliki fitur Legacy Bridge ke tabel completed_payments bawaan Wizdam.
  */
-
-namespace App\Helpers\Checkout;
-
 
 import('core.Modules.db.DAO');
 import('core.Modules.db.DBResultRange');

@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Redeem;
+
 /**
- * @file core.Modules.classes/redeem/RewardPointDAO.inc.php
+ * @file app/Helpers/Redeem/RewardPointDAO.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * 
  * @class RewardPointDAO
+ * 
  * @brief Data Access Object untuk tabel reward_points. Menggunakan pendekatan Ledger.
  */
-
-namespace App\Helpers\Redeem;
-
 
 import('core.Modules.db.DAO');
 

@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Reviewer;
 
 
 /**
- * @file core.Modules.submission/reviewer/ReviewerSubmissionDAO.inc.php
+ * @file app/Domain/Submission/Reviewer/ReviewerSubmissionDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -23,6 +23,7 @@ namespace App\Domain\Submission\Reviewer;
 import('app.Domain.Submission.reviewer.ReviewerSubmission');
 
 class ReviewerSubmissionDAO extends DAO {
+    
     public $articleDao = null;
     public $authorDao = null;
     public $userDao = null;

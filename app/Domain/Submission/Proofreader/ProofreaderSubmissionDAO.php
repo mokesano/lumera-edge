@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Proofreader;
 
 
 /**
- * @file core.Modules.submission/proofreader/ProofreaderSubmissionDAO.inc.php
+ * @file app/Domain/Submission/Proofreader/ProofreaderSubmissionDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

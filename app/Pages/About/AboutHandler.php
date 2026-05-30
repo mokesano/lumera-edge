@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\About;
 
-
 /**
- * @file pages/about/AboutHandler.inc.php
+ * @file app/Pages/About/AboutHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AboutHandler
  * @ingroup pages_editor
  *
  * @brief Handle requests for editor functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('app.Domain.Handler.Handler');

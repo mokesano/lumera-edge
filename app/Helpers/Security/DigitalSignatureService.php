@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Security;
+
 /**
- * @file core.Modules.classes/security/DigitalSignatureService.inc.php
+ * @file app/Helpers/Security/DigitalSignatureService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance & DDD
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * 
  * @class DigitalSignatureService
+ * 
  * @brief Layanan kriptografi PAdES terintegrasi dengan Hierarki Konfigurasi.
  * Mendukung Auto-Generation dan kompatibilitas dengan CA Resmi (seperti BSrE).
  */
-
-namespace App\Helpers\Security;
-
 
 use Mpdf\Mpdf;
 

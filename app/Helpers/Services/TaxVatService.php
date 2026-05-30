@@ -1,19 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Services;
+
 /**
- * @file core.Modules.classes/checkout/services/TaxVatService.inc.php
+ * @file app/Helpers/Services/TaxVatService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class TaxVatService
+ * 
  * @brief Layanan pengelola kalkulasi Pajak (Inklusif/Eksklusif) sesuai standar.
  */
-
-namespace App\Helpers\Services;
-
 
 class TaxVatService {
 

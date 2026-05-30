@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Reviewassignment;
 
 
 /**
- * @file core.Modules.submission/reviewAssignment/ReviewAssignment.inc.php
+ * @file app/Domain/Submission/ReviewAssignment/ReviewAssignment.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

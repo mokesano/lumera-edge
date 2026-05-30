@@ -9,7 +9,7 @@ namespace App\Domain\Subscription\Form;
  */
 
 /**
- * @file core.Modules.subscription/form/GiftIndividualSubscriptionForm.inc.php
+ * @file app/Domain/Subscription/Form/GiftIndividualSubscriptionForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

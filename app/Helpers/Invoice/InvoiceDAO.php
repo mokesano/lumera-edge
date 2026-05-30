@@ -1,21 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Invoice;
+
 /**
- * @file core.Modules.classes/invoice/InvoiceDAO.inc.php
+ * @file app/Helpers/Invoice/InvoiceDAO.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * 
  * @class InvoiceDAO
+ * 
  * @brief Operations for retrieving and modifying Invoice objects. 
  * Memiliki fitur Legacy Bridge ke tabel completed_payments bawaan Wizdam.
  */
-
-namespace App\Helpers\Invoice;
-
 
 import('core.Modules.db.DAO');
 import('core.Modules.db.DBResultRange');

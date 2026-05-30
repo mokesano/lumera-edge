@@ -9,7 +9,7 @@ namespace App\Domain\Submission\Proofreader;
  */
  
 /**
- * @file core.Modules.submission/proofreader/ProofreaderSubmission.inc.php
+ * @file app/Domain/Submission/Proofreader/ProofreaderSubmission.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

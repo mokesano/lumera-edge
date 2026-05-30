@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Services;
+
 /**
- * @file core.Modules.classes/services/PdfService.inc.php
+ * @file app/Helpers/Services/PdfService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class PdfService
+ * 
  * @brief Wrapper independen untuk library mPDF yang murni menangani 
  * layouting dan rendering PDF. Digital signature via PHP OpenSSL native.
  */
-
-namespace App\Helpers\Services;
-
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
 import('core.Modules.invoice.Invoice');

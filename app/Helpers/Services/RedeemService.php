@@ -1,42 +1,58 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Services;
+
 /**
- * @file core.Modules.classes/services/RedeemService.inc.php
+ * @file app/Helpers/Services/RedeemService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class RedeemService
+ * 
  * @brief Layanan pengelola dompet loyalti dan penukaran poin.
  */
-
-namespace App\Helpers\Services;
-
 
 import('core.Modules.redeem.RewardPointDAO');
 
 class RedeemService {
 
+    /** @var RewardPointDAO */
     private RewardPointDAO $rewardDao;
 
+    /**
+     * Constructor.
+     */
     public function __construct() {
         $this->rewardDao = new RewardPointDAO();
     }
 
+    /**
+     * Mendapatkan saldo poin pengguna.
+     * @param int $userId
+     * @return int
+     */
     public function getUserBalance(int $userId): int {
         return $this->rewardDao->getBalanceByUserId($userId);
     }
 
+    /**
+     * Mendapatkan riwayat transaksi poin pengguna.
+     * @param int $userId
+     * @return array
+     */
     public function getUserHistory(int $userId): array {
         return $this->rewardDao->getHistoryByUserId($userId);
     }
 
     /**
-     * Logika Bisnis: Menukarkan poin menjadi Diskon/Voucher.
-     * Mengamankan agar pengguna tidak bisa menukar poin melebihi saldo.
+     * Menukarkan poin menjadi Diskon/Voucher.
+     * @param int $userId
+     * @param int $pointsToRedeem
+     * @param int $invoiceId
+     * @return bool
      */
     public function exchangePoints(int $userId, int $pointsToRedeem, int $invoiceId = 0): bool {
         if ($pointsToRedeem <= 0) {
@@ -57,7 +73,10 @@ class RedeemService {
     }
 
     /**
-     * Disediakan untuk CartService (Integrasi Lintas Domain yang kita buat sebelumnya)
+     * Menghitung diskon yang dapat diterapkan berdasarkan saldo poin pengguna.
+     * @param int $userId
+     * @param float $subtotal
+     * @return float
      */
     public function calculateApplicableDiscount(int $userId, float $subtotal): float {
         // Konversi poin ke nominal mata uang. Misal: 1 Poin = Rp 1.000 / $0.1

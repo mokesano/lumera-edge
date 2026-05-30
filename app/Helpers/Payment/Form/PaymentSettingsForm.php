@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Payment\Form;
+
 /**
- * @file core.Modules.classes/payment/form/PaymentSettingsForm.inc.php
+ * @file app/Helpers/Payment/Form/PaymentSettingsForm.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION]
+ * 
  * @class PaymentSettingsForm
+ * 
  * @brief Form untuk mengatur Payment Gateway Keys di level Admin.
  */
-
-namespace App\Helpers\Payment\Form;
-
 
 import('core.Modules.form.Form');
 import('core.Modules.services.PaymentSettingsService');
@@ -23,6 +22,9 @@ class PaymentSettingsForm extends Form {
 
     private PaymentSettingsService $settingsService;
 
+    /**
+     * Constructor.
+     */
     public function __construct() {
         // Arahkan ke template Smarty yang akan kita buat nanti
         parent::__construct('admin/paymentSettings.tpl');

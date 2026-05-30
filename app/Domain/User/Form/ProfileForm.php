@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\User\Form;
 
-
 /**
- * @file core.Modules.user/form/ProfileForm.inc.php
+ * @file app/Domain/User/Form/ProfileForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -15,12 +14,6 @@ namespace App\Domain\User\Form;
  * @ingroup user_form
  *
  * @brief Form to edit user profile.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 7.4/8.x Compatibility (Constructor, Ref removal, Visibility, Destructuring Guard)
- * - Session Safety Guard
- * - Image Processing Safety & UX Auto-Compression (GD Library)
- * - Secure Obfuscated Profile Image Naming
  */
 
 import('core.Modules.form.Form');

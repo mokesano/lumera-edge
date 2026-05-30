@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Security;
+
 /**
- * @file core.Modules.classes/security/SecurityHashService.inc.php
+ * @file app/Helpers/Security/SecurityHashService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance
+ * 
  * @class SecurityHashService
+ * 
  * @brief Layanan terpusat untuk pembuatan dan validasi hash keamanan dokumen publik/URL.
  */
-
-namespace App\Helpers\Security;
-
 
 class SecurityHashService {
     

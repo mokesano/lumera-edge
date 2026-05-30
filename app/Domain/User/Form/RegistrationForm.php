@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\User\Form;
 
-
 /**
  * @defgroup user_form
  */
 
 /**
- * @file core.Modules.user/form/RegistrationForm.inc.php
+ * @file app/Domain/User/Form/RegistrationForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -21,8 +20,6 @@ namespace App\Domain\User\Form;
  * @brief Form for user registration.
  *
  * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility
- * - Strict Visibility
  * - TRUE MODULAR SECURITY: Decoupled Default Captcha, reCAPTCHA, and Turnstile
  */
 

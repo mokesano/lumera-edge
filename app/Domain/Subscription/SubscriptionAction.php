@@ -5,7 +5,7 @@ namespace App\Domain\Subscription;
 
 
 /**
- * @file core.Modules.subscription/SubscriptionAction.inc.php
+ * @file app/Domain/Subscription/SubscriptionAction.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Payment;
+
 /**
- * @file core.Modules.classes/checkout/payment/MidtransGateway.inc.php
+ * @file app/Helpers/Payment/MidtransGateway.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION]
+ * 
  * @class MidtransGateway
+ * 
  * @brief Adapter spesifik untuk Midtrans PHP Library (v2.6.2)
  */
-
-namespace App\Helpers\Payment;
-
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
 

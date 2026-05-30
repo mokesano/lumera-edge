@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Reviewassignment;
 
 
 /**
- * @file core.Modules.submission/reviewAssignment/ReviewAssignmentDAO.inc.php
+ * @file app/Domain/Submission/ReviewAssignment/ReviewAssignmentDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -24,6 +24,7 @@ import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
 import('app.Domain.Submission.reviewAssignment.CoreReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends CoreReviewAssignmentDAO {
+    
     public $articleFileDao = null;
     public $suppFileDao = null;
     public $articleCommentDao = null;

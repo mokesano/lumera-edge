@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Validators;
+
 /**
- * @file core.Modules.classes/validator/ValidatorCSRF.inc.php
+ * @file app/Helpers/Validators/ValidatorCSRF.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] - Enhanced
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class ValidatorCSRF
+ * 
  * @brief Menangani pembuatan dan validasi token pencegah Cross-Site Request Forgery (CSRF).
  */
-
-namespace App\Helpers\Validators;
-
 
 class ValidatorCSRF {
 

@@ -3,20 +3,17 @@ declare(strict_types=1);
 
 namespace App\Pages\Admin;
 
-
 /**
- * @file pages/admin/AdminFunctionsHandler.inc.php
+ * @file app/Pages/Admin/AdminFunctionsHandler.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AdminFunctionsHandler
  * @ingroup pages_admin
  *
  * @brief Handle requests for site administrative/maintenance functions.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
 import('core.Modules.site.Version');

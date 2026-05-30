@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout\Payment;
+
 /**
- * @file core.Modules.classes/checkout/payment/XenditGateway.inc.php
+ * @file app/Helpers/Checkout/Payment/XenditGateway.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION]
+ * 
  * @class XenditGateway
+ * 
  * @brief Adapter spesifik untuk Xendit PHP Library (v7.0.0+)
  */
-
-namespace App\Helpers\Checkout\Payment;
-
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
 

@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout\Services;
+
 /**
- * @file core.Modules.classes/checkout/services/InvoiceService.inc.php
+ * @file app/Helpers/Checkout/Services/InvoiceService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION]
+ * 
  * @class InvoiceService
+ * 
  * @brief Jantung pengelola tagihan. Menangani bisnis proses pembayaran.
  */
-
-namespace App\Helpers\Checkout\Services;
-
 
 import('core.Modules.checkout.Invoice');
 import('core.Modules.checkout.InvoiceDAO');

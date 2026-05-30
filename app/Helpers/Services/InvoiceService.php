@@ -1,21 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Services;
+
 /**
- * @file core.Modules.classes/services/InvoiceService.inc.php
+ * @file app/Helpers/Services/InvoiceService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.4 Strict Compliance & DDD
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * 
  * @class InvoiceService
+ * 
  * @brief Jantung pengelola tagihan. Menangani bisnis proses pembayaran, 
  * bersih dari raw SQL query, mendukung i18n, dan berada di direktori services terpusat.
  */
-
-namespace App\Helpers\Services;
-
 
 // Model & DAO tetap di domain checkout (atau sesuaikan jika ikut dipindah)
 import('core.Modules.invoice.Invoice');

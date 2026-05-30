@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
+namespace App\Domain\Submission\Sectioneditor;
 
 /**
- * @file core.Modules.submission/sectionEditor/SectionEditorAction.inc.php
+ * @file app/Domain/Submission/SectionEditor/SectionEditorAction.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -14,11 +17,6 @@
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-declare(strict_types=1);
-
-namespace App\Domain\Submission\Sectioneditor;
-
 
 import('app.Domain.Submission.common.Action');
 

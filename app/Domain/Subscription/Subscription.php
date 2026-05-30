@@ -9,7 +9,7 @@ namespace App\Domain\Subscription;
  */
 
 /**
- * @file @file core.Modules.subscription/Subscription.inc.php
+ * @file app/Domain/Subscription/Subscription.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

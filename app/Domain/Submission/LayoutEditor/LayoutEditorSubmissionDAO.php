@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Layouteditor;
 
 
 /**
- * @file core.Modules.submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php
+ * @file app/Domain/Submission/LayoutEditor/LayoutEditorSubmissionDAO.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

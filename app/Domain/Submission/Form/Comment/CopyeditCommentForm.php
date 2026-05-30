@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Form\Comment;
 
 
 /**
- * @file core.Modules.submission/form/comment/CopyeditCommentForm.inc.php
+ * @file app/Domain/Submission/Form/Comment/CopyeditCommentForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

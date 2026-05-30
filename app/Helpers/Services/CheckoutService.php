@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Services;
+
 /**
- * @file core.Modules.classes/services/CheckoutService.inc.php
+ * @file app/Helpers/Services/CheckoutService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -14,9 +16,6 @@ declare(strict_types=1);
  * 
  * Menggunakan tabel 'queued_payments' sebagai pangkalan data keranjang sementara (Stateful Cart).
  */
-
-namespace App\Helpers\Services;
-
 
 import('app.Domain.Payment.AppQueuedPayment');
 import('core.Modules.services.InvoiceService');

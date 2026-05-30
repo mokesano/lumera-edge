@@ -1,21 +1,20 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout\Services;
+
 /**
- * @file core.Modules.classes/checkout/services/LoAService.inc.php
+ * @file app/Helpers/Checkout/Services/LoAService.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
+ * 
  * @class LoAService
+ * 
  * @brief Jantung verifikasi LoA. Berhubungan erat dengan InvoiceService untuk
  * memastikan LoA hanya terbit dan terverifikasi jika APC telah LUNAS.
  */
-
-namespace App\Helpers\Checkout\Services;
-
 
 import('core.Modules.checkout.services.InvoiceService');
 

@@ -5,7 +5,7 @@ namespace App\Domain\Submission\Reviewer;
 
 
 /**
- * @file core.Modules.submission/reviewer/ReviewerAction.inc.php
+ * @file app/Domain/Submission/Reviewer/ReviewerAction.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team

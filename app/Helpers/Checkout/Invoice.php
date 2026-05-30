@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout;
+
 /**
- * @file core.Modules.classes/checkout/Invoice.inc.php
+ * @file app/Helpers/Checkout/Invoice.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
@@ -10,11 +12,9 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  * @class Invoice
+ * 
  * @brief Data Object yang merepresentasikan satu entitas Tagihan (Global Level).
  */
-
-namespace App\Helpers\Checkout;
-
 
 import('core.Kernel.DataObject');
 

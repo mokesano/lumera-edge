@@ -1,20 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Helpers\Checkout\Payment;
+
 /**
- * @file core.Modules.classes/checkout/payment/PaymentGatewayInterface.inc.php
+ * @file app/Helpers/Checkout/Payment/PaymentGatewayInterface.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2017-2026 Rochmady
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * [WIZDAM EDITION]
+ * 
  * @interface PaymentGatewayInterface
+ * 
  * @brief Kontrak standar untuk semua penyedia Payment Gateway di ekosistem WIZDAM.
  */
-
-namespace App\Helpers\Checkout\Payment;
-
 
 import('core.Modules.checkout.Invoice');
 

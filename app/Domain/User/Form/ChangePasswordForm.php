@@ -3,9 +3,8 @@ declare(strict_types=1);
 
 namespace App\Domain\User\Form;
 
-
 /**
- * @file core.Modules.user/form/ChangePasswordForm.inc.php
+ * @file app/Domain/User/Form/ChangePasswordForm.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
@@ -15,11 +14,6 @@ namespace App\Domain\User\Form;
  * @ingroup user_form
  *
  * @brief Form to change a user's password.
- *
- * WIZDAM MODERNIZATION:
- * - PHP 8.x Compatibility (create_function removal, Constructor)
- * - Security Guard Clause (User Session)
- * - Strict Visibility
  */
 
 import('core.Modules.form.Form');
