@@ -1,8 +1,8 @@
 {**
  * @file plugins/generic/booksForReview/templates/editor/booksForReviewAssigned.tpl
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
- * Copyright (c) 2003-2019 Rochmady and Wizdam Team
+ * Copyright (c) 2017-2026 Sangia Publishing House
+ * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Display list of books for review for editor.

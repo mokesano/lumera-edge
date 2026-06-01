@@ -6,7 +6,7 @@ namespace App\Domain\Plugins;
 /**
  * @file app/Domain/Plugins/PaymethodPlugin.php
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *

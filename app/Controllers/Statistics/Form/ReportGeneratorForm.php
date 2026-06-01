@@ -6,8 +6,8 @@ namespace App\Controllers\Statistics\Form;
 /**
  * @file controllers/statistics/form/ReportGeneratorForm.php
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
- * Copyright (c) 2003-2019 Rochmady and Wizdam Team
+ * Copyright (c) 2017-2026 Sangia Publishing House
+ * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReportGeneratorForm
@@ -254,6 +254,7 @@ class ReportGeneratorForm extends Form {
     }
 
     /**
+     * Execute the form: generate the report and return the report URL.
      * @see Form::execute()
      * @param CoreRequest $request (No reference needed in PHP8 for objects)
      * @return string Report URL
@@ -371,5 +372,4 @@ class ReportGeneratorForm extends Form {
         return StatisticsHelper::getReportUrl($request, $this->_metricType, $columns, $filter, $orderBy);
     }
 }
-
 ?>

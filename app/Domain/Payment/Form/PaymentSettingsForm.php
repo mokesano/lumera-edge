@@ -6,7 +6,7 @@ namespace App\Domain\Payment\Form;
 /**
  * @file app/Domain/Payment/Form/PaymentSettingsForm.php
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *

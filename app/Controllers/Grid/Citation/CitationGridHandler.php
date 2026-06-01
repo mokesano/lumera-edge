@@ -6,7 +6,7 @@ namespace App\Controllers\Grid\Citation;
 /**
  * @file controllers/grid/citation/CitationGridHandler.php
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
@@ -14,7 +14,6 @@ namespace App\Controllers\Grid\Citation;
  * @ingroup controllers_grid_citation
  *
  * @brief Handle Wizdam specific parts of citation grid requests.
- * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
 import('app.Domain.Controllers.grid.citation.CoreCitationGridHandler');
@@ -26,7 +25,7 @@ import('app.Domain.Handler.validation.HandlerValidatorRoles');
 class CitationGridHandler extends CoreCitationGridHandler {
     
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct() {
         parent::__construct();
@@ -53,11 +52,13 @@ class CitationGridHandler extends CoreCitationGridHandler {
         self::__construct();
     }
 
+
     //
     // Implement template methods from CoreHandler
     //
 
     /**
+     * Add authorization policies.
      * @see CoreHandler::authorize()
      * @param CoreRequest $request
      * @param array $args
@@ -71,6 +72,7 @@ class CitationGridHandler extends CoreCitationGridHandler {
     }
 
     /**
+     * Initialize the handler.
      * @see CoreHandler::initialize()
      * @param CoreRequest $request
      * @param array|null $args
@@ -90,11 +92,13 @@ class CitationGridHandler extends CoreCitationGridHandler {
         parent::initialize($request, $args);
     }
 
+
     //
     // Override methods from CoreCitationGridHandler
     //
 
     /**
+     * Export citations.
      * @see CoreCitationGridHandler::exportCitations()
      * @param array $args
      * @param CoreRequest $request
@@ -108,5 +112,4 @@ class CitationGridHandler extends CoreCitationGridHandler {
         return parent::exportCitations($args, $request, $noCitationsFoundMessage);
     }
 }
-
 ?>

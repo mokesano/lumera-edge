@@ -2,7 +2,7 @@
 <!--
   * isbndb.xsl
   *
-  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2017-2026 Simon Fraser University
   * Copyright (c) 2000-2019 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *

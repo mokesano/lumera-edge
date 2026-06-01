@@ -3,7 +3,7 @@
 <!--
   * plugins/generic/xmlGalley/transform/test.xsl
   *
-  * Copyright (c) 2013-2019 Simon Fraser University
+  * Copyright (c) 2017-2026 Simon Fraser University
   * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *

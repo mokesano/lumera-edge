@@ -7,7 +7,7 @@ jQuery.core.controllers.modal = jQuery.core.controllers.modal || { };
 /**
  * @file js/controllers/modal/ModalHandler.js
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
+ * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *

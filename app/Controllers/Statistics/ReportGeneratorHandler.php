@@ -6,15 +6,14 @@ namespace App\Controllers\Statistics;
 /**
  * @file controllers/statistics/ReportGeneratorHandler.php
  *
- * Copyright (c) 2013-2019 Sangia Publishing House
- * Copyright (c) 2003-2019 Rochmady and Wizdam Team
+ * Copyright (c) 2017-2026 Sangia Publishing House
+ * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReportGeneratorHandler
  * @ingroup controllers_statistics
  *
  * @brief Handle requests for report generator functions.
- * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
 import('app.Domain.Handler.Handler');
@@ -158,7 +157,9 @@ class ReportGeneratorHandler extends Handler {
     }
 
     /**
+     * Setup template.
      * @see CoreHandler::setupTemplate()
+     * @param CoreRequest|null $request
      */
     public function setupTemplate($request = null) {
         parent::setupTemplate($request);
@@ -170,13 +171,13 @@ class ReportGeneratorHandler extends Handler {
         );
     }
 
+    
     //
     // Private helper methods.
     //
     
     /**
-     * Get report generator form object.
-     * [WIZDAM] Removed reference return '&' for PHP 8 compatibility with 'new' objects
+     * Get report generator form object with 'new' objects.
      * @param CoreRequest $request
      * @return ReportGeneratorForm
      */
@@ -239,5 +240,4 @@ class ReportGeneratorHandler extends Handler {
         return $reportGeneratorForm;
     }
 }
-
 ?>
