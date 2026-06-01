@@ -16,7 +16,7 @@ namespace App\Pages\Copyeditor;
  * @brief Handle requests for submission tracking.
  */
 
-import('app.Pages.copyeditor.CopyeditorHandler');
+import('app.Pages.Copyeditor.CopyeditorHandler');
 
 class SubmissionCopyeditHandler extends CopyeditorHandler {
     
@@ -173,7 +173,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
         $send = (int) $request->getUserVar('send') === 1;
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
 
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send ? '' : $request->url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
             $request->redirect(null, null, 'submission', $articleId);
@@ -291,7 +291,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
             $request->redirect(null, null, 'viewMetadata', $articleId);
         }
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         if (SectionEditorAction::removeArticleCoverPage($this->submission, $formLocale)) {
             $request->redirect(null, null, 'viewMetadata', $articleId);
         }

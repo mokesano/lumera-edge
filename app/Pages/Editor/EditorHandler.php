@@ -653,7 +653,7 @@ class EditorHandler extends SectionEditorHandler {
             $pageHierarchy = [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'], [$request->url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues']];
         }
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

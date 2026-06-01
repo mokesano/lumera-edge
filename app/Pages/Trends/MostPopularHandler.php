@@ -33,7 +33,7 @@ class MostPopularHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('app.Domain.Security.authorization.ContextRequiredPolicy');
+        import('core.Modules.security.authorization.ContextRequiredPolicy');
         // Set context required false, agar bisa diakses di site level maupun journal level
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);

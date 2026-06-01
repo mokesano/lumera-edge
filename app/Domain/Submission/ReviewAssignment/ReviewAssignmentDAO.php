@@ -20,8 +20,8 @@ namespace App\Domain\Submission\ReviewAssignment;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
-import('app.Domain.Submission.reviewAssignment.CoreReviewAssignmentDAO');
+import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
+import('core.Modules.submission.reviewAssignment.CoreReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends CoreReviewAssignmentDAO {
     

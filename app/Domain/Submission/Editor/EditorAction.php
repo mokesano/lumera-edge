@@ -18,7 +18,7 @@ namespace App\Domain\Submission\Editor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+import('app.Domain.Submission.SectionEditor.SectionEditorAction');
 
 class EditorAction extends SectionEditorAction {
     
@@ -85,7 +85,7 @@ class EditorAction extends SectionEditorAction {
             $editorSubmissionDao->updateEditorSubmission($editorSubmission);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $editorSubmission, ARTICLE_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', ['editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId]);
             return true;
         } else {
@@ -116,9 +116,9 @@ class EditorAction extends SectionEditorAction {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
         $user = $request->getUser();
 
-        import('app.Domain.Submission.editor.EditorAction');
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Editor.EditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
 
         $sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
         $sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
@@ -126,8 +126,8 @@ class EditorAction extends SectionEditorAction {
         $submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
         // Add a log entry before doing anything.
-        import('app.Domain.Article.log.ArticleLog');
-        import('app.Domain.Article.log.ArticleEventLogEntry');
+        import('app.Domain.Article.Log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleEventLogEntry');
         ArticleLog::logEvent($request, $article, ARTICLE_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', ['editorName' => $user->getFullName()]);
 
         // 1. Ensure that an editor is assigned.

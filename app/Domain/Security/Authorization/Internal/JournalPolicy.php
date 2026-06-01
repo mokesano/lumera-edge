@@ -17,7 +17,7 @@ namespace App\Domain\Security\Authorization\Internal;
  * the request context.
  */
 
-import('app.Domain.Security.authorization.PolicySet');
+import('core.Modules.security.authorization.PolicySet');
 
 class JournalPolicy extends PolicySet {
     
@@ -29,7 +29,7 @@ class JournalPolicy extends PolicySet {
         parent::__construct();
 
         // Ensure that we have a journal in the context.
-        import('app.Domain.Security.authorization.ContextRequiredPolicy');
+        import('core.Modules.security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noJournal'));
     }
 

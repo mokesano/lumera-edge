@@ -23,12 +23,12 @@ namespace App\Domain\Submission\SectionEditor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.sectionEditor.SectionEditorSubmission');
+import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
 
 // Bring in editor decision constants
-import('app.Domain.Submission.author.AuthorSubmission');
-import('app.Domain.Submission.common.Action');
-import('app.Domain.Submission.reviewer.ReviewerSubmission');
+import('app.Domain.Submission.Author.AuthorSubmission');
+import('app.Domain.Submission.Common.Action');
+import('app.Domain.Submission.Reviewer.ReviewerSubmission');
 
 class SectionEditorSubmissionDAO extends DAO {
     // [WIZDAM] Properties initialized to null for cPanel linter compatibility

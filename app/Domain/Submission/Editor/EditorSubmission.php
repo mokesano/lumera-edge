@@ -19,7 +19,7 @@ namespace App\Domain\Submission\Editor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-import('app.Domain.Submission.sectionEditor.SectionEditorSubmission');
+import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
 
 class EditorSubmission extends SectionEditorSubmission {
 

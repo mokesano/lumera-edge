@@ -20,7 +20,7 @@ namespace App\Domain\Security\Authorization\Internal;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-import('app.Domain.Security.authorization.AuthorizationPolicy');
+import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class CopyeditorSubmissionAssignmentPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

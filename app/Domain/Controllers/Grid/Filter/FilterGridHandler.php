@@ -20,7 +20,7 @@ namespace App\Domain\Controllers\Grid\Filter;
 import('app.Domain.Controllers.grid.filter.CoreFilterGridHandler');
 
 // import validation classes
-import('app.Domain.Handler.validation.HandlerValidatorJournal');
+import('app.Domain.Handler.Validation.HandlerValidatorJournal');
 import('app.Domain.Handler.validation.HandlerValidatorRoles');
 
 class FilterGridHandler extends CoreFilterGridHandler {
@@ -65,7 +65,7 @@ class FilterGridHandler extends CoreFilterGridHandler {
         if (!$request) $request = Application::get()->getRequest();
 
         // Make sure the user can change the journal setup.
-        import('app.Domain.Security.authorization.AppJournalAccessPolicy');
+        import('app.Domain.Security.Authorization.AppJournalAccessPolicy');
         $this->addPolicy(new AppJournalAccessPolicy($request, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }

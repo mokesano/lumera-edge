@@ -19,7 +19,7 @@ namespace App\Domain\Submission\EditAssignment;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.editAssignment.EditAssignment');
+import('app.Domain.Submission.EditAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {
     

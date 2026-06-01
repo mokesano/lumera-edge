@@ -16,7 +16,7 @@ namespace App\Pages\Reviewer;
  * @brief Handle requests for reviewer functions.
  */
 
-import('app.Domain.Submission.reviewer.ReviewerAction');
+import('app.Domain.Submission.Reviewer.ReviewerAction');
 import('app.Domain.Handler.Handler');
 
 class ReviewerHandler extends Handler {
@@ -117,7 +117,7 @@ class ReviewerHandler extends Handler {
         $templateMgr->assign('pageToDisplay', $page);
         $templateMgr->assign('submissions', $submissions);
 
-        import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
+        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
         import('app.Domain.Issue.IssueAction');

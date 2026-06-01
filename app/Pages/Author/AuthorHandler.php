@@ -16,7 +16,7 @@ namespace App\Pages\Author;
  * @brief Handle requests for journal author functions.
  */
 
-import('app.Domain.Submission.author.AuthorAction');
+import('app.Domain.Submission.Author.AuthorAction');
 import('app.Domain.Handler.Handler');
 
 class AuthorHandler extends Handler {
@@ -244,7 +244,7 @@ class AuthorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'author'), 'user.role.author'], [$request->url(null, 'author'), 'article.submissions']]
             : [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'author'), 'user.role.author']];
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -258,7 +258,7 @@ class AuthorHandler extends Handler {
      * @param CoreRequest $request
      */
     public function instructions($args, $request = null) {
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
         

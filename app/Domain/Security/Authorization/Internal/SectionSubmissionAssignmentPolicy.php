@@ -19,7 +19,7 @@ namespace App\Domain\Security\Authorization\Internal;
  * submission in the authorization context.
  */
 
-import('app.Domain.Security.authorization.AuthorizationPolicy');
+import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

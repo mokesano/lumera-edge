@@ -38,7 +38,7 @@ class JournalStatsHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('app.Domain.Security.authorization.ContextRequiredPolicy');
+        import('core.Modules.security.authorization.ContextRequiredPolicy');
         // Parameter ke-3 adalah false untuk mengizinkan akses tanpa konteks jurnal
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);

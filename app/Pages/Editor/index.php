@@ -142,7 +142,7 @@ switch ($op) {
 	case 'waivePublicationFee':
 	case 'downloadLayoutTemplate':
 		define('HANDLER_CLASS', 'SubmissionEditHandler');
-		import('app.Pages.sectionEditor.SubmissionEditHandler');
+		import('app.Pages.SectionEditor.SubmissionEditHandler');
 		break;
 	//
 	// Submission Comments
@@ -163,7 +163,7 @@ switch ($op) {
 	case 'saveComment':
 	case 'deleteComment':
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
-		import('app.Pages.sectionEditor.SubmissionCommentsHandler');
+		import('app.Pages.SectionEditor.SubmissionCommentsHandler');
 		break;
 	//
 	// Issue
@@ -199,7 +199,7 @@ switch ($op) {
 	case 'unpublishIssue':
 	case 'notifyUsers':
 		define('HANDLER_CLASS', 'IssueManagementHandler');
-		import('app.Pages.editor.IssueManagementHandler');
+		import('app.Pages.Editor.IssueManagementHandler');
 		break;
 	case 'index':
 	case 'submissions':
@@ -209,7 +209,7 @@ switch ($op) {
 	case 'deleteSubmission':
 	case 'instructions':
 		define('HANDLER_CLASS', 'EditorHandler');
-		import('app.Pages.editor.EditorHandler');
+		import('app.Pages.Editor.EditorHandler');
 }
 
 ?>
