@@ -1,23 +1,17 @@
-LOG Class autoload files not comply with PSR-4/PSR-12:
-
+WARNING:
 Warning: Ambiguous class resolution, "SettingsForm" was found 6x: in "C:/xampp/htdocs/lumera-edge/plugins/gateways/metsGateway/SettingsForm.php" and "C:/xampp/htdocs/lumera-edge/plugins/generic/announcementFeed/SettingsForm.php", "C:/xampp/htdocs/lumera-edge/plugins/generic/customBlockManager/SettingsForm.php", "C:/xampp/htdocs/lumera-edge/plugins/generic/dataverse/classes/form/SettingsForm.php", "C:/xampp/htdocs/lumera-edge/plugins/generic/sword/SettingsForm.php", "C:/xampp/htdocs/lumera-edge/plugins/generic/webFeed/SettingsForm.php", the first will be used.
-
 Warning: Ambiguous class resolution, "DOIExportDom" was found 3x: in "C:/xampp/htdocs/lumera-edge/plugins/importexport/crossref/classes/DOIExportDom.php" and "C:/xampp/htdocs/lumera-edge/plugins/importexport/datacite/classes/DOIExportDom.php", "C:/xampp/htdocs/lumera-edge/plugins/importexport/medra/classes/DOIExportDom.php", the first will be used.
-
 Warning: Ambiguous class resolution, "DOIExportPlugin" was found 3x: in "C:/xampp/htdocs/lumera-edge/plugins/importexport/crossref/classes/DOIExportPlugin.php" and "C:/xampp/htdocs/lumera-edge/plugins/importexport/datacite/classes/DOIExportPlugin.php", "C:/xampp/htdocs/lumera-edge/plugins/importexport/medra/classes/DOIExportPlugin.php", the first will be used.
-
 Warning: Ambiguous class resolution, "DOIExportSettingsForm" was found 3x: in "C:/xampp/htdocs/lumera-edge/plugins/importexport/crossref/classes/form/DOIExportSettingsForm.php" and "C:/xampp/htdocs/lumera-edge/plugins/importexport/datacite/classes/form/DOIExportSettingsForm.php", "C:/xampp/htdocs/lumera-edge/plugins/importexport/medra/classes/form/DOIExportSettingsForm.php", the first will be used.
-
 Warning: Ambiguous class resolution, "PubObjectCache" was found 4x: in "C:/xampp/htdocs/lumera-edge/plugins/importexport/crossref/classes/PubObjectCache.php" and "C:/xampp/htdocs/lumera-edge/plugins/importexport/datacite/classes/PubObjectCache.php", "C:/xampp/htdocs/lumera-edge/plugins/importexport/doaj/classes/PubObjectCache.php", "C:/xampp/htdocs/lumera-edge/plugins/importexport/medra/classes/PubObjectCache.php", the first will be used.
-
 Warning: Ambiguous class resolution, "MetsExportDom" was found in both "C:/xampp/htdocs/lumera-edge/plugins/gateways/metsGateway/MetsExportDom.php" and "C:/xampp/htdocs/lumera-edge/plugins/importexport/mets/MetsExportDom.php", the first will be used.
 
-To resolve ambiguity in classes not under your control you can ignore them by path using exclude-from-classmap
-Class CorePublisherSettingsForm located in ./core/Modules/admin/form/CorePublisherSettingsForm.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CoreAnnouncement located in ./core/Modules/announcement/CoreAnnouncement.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CoreAnnouncementDAO located in ./core/Modules/announcement/CoreAnnouncementDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CoreAnnouncementType located in ./core/Modules/announcement/CoreAnnouncementType.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CoreAnnouncementTypeDAO located in ./core/Modules/announcement/CoreAnnouncementTypeDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+To resolve ambiguity in classes not under your control you can ignore them by path using exclude-from-classmap:
+Class Core\Modules\Admin\Form\CorePublisherSettingsForm located in ./core/Modules/admin/form/CorePublisherSettingsForm.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Announcement\CoreAnnouncement located in ./core/Modules/announcement/CoreAnnouncement.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Announcement\CoreAnnouncementDAO located in ./core/Modules/announcement/CoreAnnouncementDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Announcement\CoreAnnouncementType located in ./core/Modules/announcement/CoreAnnouncementType.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Announcement\CoreAnnouncementTypeDAO located in ./core/Modules/announcement/CoreAnnouncementTypeDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class apc_false located in ./core/Modules/cache/APCuCache.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class APCuCache located in ./core/Modules/cache/APCuCache.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class CacheManager located in ./core/Modules/cache/CacheManager.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
@@ -28,37 +22,37 @@ Class memcache_false located in ./core/Modules/cache/MemcacheCache.php does not 
 Class memcache_null located in ./core/Modules/cache/MemcacheCache.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class MemcacheCache located in ./core/Modules/cache/MemcacheCache.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class XCacheCache located in ./core/Modules/cache/XCacheCache.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class Captcha located in ./core/Modules/captcha/Captcha.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CaptchaDAO located in ./core/Modules/captcha/CaptchaDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CaptchaManager located in ./core/Modules/captcha/CaptchaManager.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class Citation located in ./core/Modules/citation/Citation.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CitationDAO located in ./core/Modules/citation/CitationDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CitationListTokenizerFilter located in ./core/Modules/citation/CitationListTokenizerFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class PlainTextReferencesList located in ./core/Modules/citation/PlainTextReferencesList.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class PlainTextReferencesListFilter located in ./core/Modules/citation/PlainTextReferencesListFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class TemplateBasedReferencesListFilter located in ./core/Modules/citation/TemplateBasedReferencesListFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CommandLineTool located in ./core/Modules/cliTool/CliTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class InstallTool located in ./core/Modules/cliTool/InstallTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ScheduledTaskTool located in ./core/Modules/cliTool/ScheduledTaskTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Captcha\Captcha located in ./core/Modules/captcha/Captcha.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Captcha\CaptchaDAO located in ./core/Modules/captcha/CaptchaDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Captcha\CaptchaManager located in ./core/Modules/captcha/CaptchaManager.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Citation\Citation located in ./core/Modules/citation/Citation.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Citation\CitationDAO located in ./core/Modules/citation/CitationDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Citation\CitationListTokenizerFilter located in ./core/Modules/citation/CitationListTokenizerFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Citation\PlainTextReferencesList located in ./core/Modules/citation/PlainTextReferencesList.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Citation\PlainTextReferencesListFilter located in ./core/Modules/citation/PlainTextReferencesListFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Citation\TemplateBasedReferencesListFilter located in ./core/Modules/citation/TemplateBasedReferencesListFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\CliTool\CommandLineTool located in ./core/Modules/cliTool/CliTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\CliTool\InstallTool located in ./core/Modules/cliTool/InstallTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\CliTool\ScheduledTaskTool located in ./core/Modules/cliTool/ScheduledTaskTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class UpgradeTool located in ./core/Modules/cliTool/UpgradeTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class XmlToSqlTool located in ./core/Modules/cliTool/XmlToSqlTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CodelistItem located in ./core/Modules/codelist/CodelistItem.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CodelistItemDAO located in ./core/Modules/codelist/CodelistItemDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ONIXCodelistItem located in ./core/Modules/codelist/ONIXCodelistItem.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ONIXCodelistItemDAO located in ./core/Modules/codelist/ONIXCodelistItemDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ONIXParserDOMHandler located in ./core/Modules/codelist/ONIXParserDOMHandler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class Qualifier located in ./core/Modules/codelist/Qualifier.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class QualifierDAO located in ./core/Modules/codelist/QualifierDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class Subject located in ./core/Modules/codelist/Subject.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class SubjectDAO located in ./core/Modules/codelist/SubjectDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class Comment located in ./core/Modules/comment/Comment.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CommentDAO located in ./core/Modules/comment/CommentDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ConfigParser located in ./core/Modules/config/ConfigParser.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ControlledVocab located in ./core/Modules/controlledVocab/ControlledVocab.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ControlledVocabDAO located in ./core/Modules/controlledVocab/ControlledVocabDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ControlledVocabEntry located in ./core/Modules/controlledVocab/ControlledVocabEntry.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ControlledVocabEntryDAO located in ./core/Modules/controlledVocab/ControlledVocabEntryDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class CitationApiHandler located in ./core/Modules/controllers/api/citation/CitationApiHandler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\CliTool\XmlToSqlTool located in ./core/Modules/cliTool/XmlToSqlTool.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\CodelistItem located in ./core/Modules/codelist/CodelistItem.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\CodelistItemDAO located in ./core/Modules/codelist/CodelistItemDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\ONIXCodelistItem located in ./core/Modules/codelist/ONIXCodelistItem.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\ONIXCodelistItemDAO located in ./core/Modules/codelist/ONIXCodelistItemDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\ONIXParserDOMHandler located in ./core/Modules/codelist/ONIXParserDOMHandler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\Qualifier located in ./core/Modules/codelist/Qualifier.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\QualifierDAO located in ./core/Modules/codelist/QualifierDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\Subject located in ./core/Modules/codelist/Subject.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Codelist\SubjectDAO located in ./core/Modules/codelist/SubjectDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Comment\Comment located in ./core/Modules/comment/Comment.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class App\Modules\Comment\CommentDAO located in ./core/Modules/comment/CommentDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Config\ConfigParser located in ./core/Modules/config/ConfigParser.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\ControlledVocab\ControlledVocab located in ./core/Modules/controlledVocab/ControlledVocab.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\ControlledVocab\ControlledVocabDAO located in ./core/Modules/controlledVocab/ControlledVocabDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\ControlledVocab\ControlledVocabEntry located in ./core/Modules/controlledVocab/ControlledVocabEntry.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\ControlledVocab\ControlledVocabEntryDAO located in ./core/Modules/controlledVocab/ControlledVocabEntryDAO.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
+Class Core\Modules\Citation\CitationApiHandler located in ./core/Modules/controllers/api/citation/CitationApiHandler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class UserApiHandler located in ./core/Modules/controllers/api/user/UserApiHandler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class ArrayGridCellProvider located in ./core/Modules/controllers/grid/ArrayGridCellProvider.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class CategoryGridDataProvider located in ./core/Modules/controllers/grid/CategoryGridDataProvider.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
@@ -453,27 +447,27 @@ Class XMLParserDOMHandler located in ./core/Modules/xml/XMLParserDOMHandler.php 
 Class XMLTypeDescription located in ./core/Modules/xslt/XMLTypeDescription.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class XSLTransformationFilter located in ./core/Modules/xslt/XSLTransformationFilter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
 Class XSLTransformer located in ./core/Modules/xslt/XSLTransformer.php does not comply with psr-4 autoloading standard (rule: Wizdam\Modules\ => ./core/Modules). Skipping.
-Class ArrayItemIterator located in ./core/Kernel/ArrayItemIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class Core located in ./core/Kernel/Core.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreApplication located in ./core/Kernel/CoreApplication.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreComponentRouter located in ./core/Kernel/CoreComponentRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CorePageRouter located in ./core/Kernel/CorePageRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreProfiler located in ./core/Kernel/CoreProfiler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreDBProfiler located in ./core/Kernel/CoreProfiler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreRequest located in ./core/Kernel/CoreRequest.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreRouter located in ./core/Kernel/CoreRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreString located in ./core/Kernel/CoreString.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreWizdamEditorStaff located in ./core/Kernel/CoreWizdamEditorStaff.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class CoreWizdamStats located in ./core/Kernel/CoreWizdamStats.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class DataObject located in ./core/Kernel/DataObject.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class Dispatcher located in ./core/Kernel/Dispatcher.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class ItemIterator located in ./core/Kernel/ItemIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class JSONManager located in ./core/Kernel/JSONManager.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class JSONMessage located in ./core/Kernel/JSONMessage.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class Registry located in ./core/Kernel/Registry.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class RuntimeEnvironment located in ./core/Kernel/RuntimeEnvironment.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class Transcoder located in ./core/Kernel/Transcoder.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
-Class VirtualArrayIterator located in ./core/Kernel/VirtualArrayIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\ArrayItemIterator located in ./core/Kernel/ArrayItemIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\Core located in ./core/Kernel/Core.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class App\Pages\Core\CoreApplication located in ./core/Kernel/CoreApplication.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class App\Pages\Core\CoreComponentRouter located in ./core/Kernel/CoreComponentRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CorePageRouter located in ./core/Kernel/CorePageRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreProfiler located in ./core/Kernel/CoreProfiler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreDBProfiler located in ./core/Kernel/CoreProfiler.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreRequest located in ./core/Kernel/CoreRequest.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreRouter located in ./core/Kernel/CoreRouter.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreString located in ./core/Kernel/CoreString.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreWizdamEditorStaff\CoreWizdamEditorStaff located in ./core/Kernel/CoreWizdamEditorStaff.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\CoreWizdamStats located in ./core/Kernel/CoreWizdamStats.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\DataObject located in ./core/Kernel/DataObject.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\Dispatcher located in ./core/Kernel/Dispatcher.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\ItemIterator located in ./core/Kernel/ItemIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\JSONManager located in ./core/Kernel/JSONManager.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\JSONMessage located in ./core/Kernel/JSONMessage.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\Registry located in ./core/Kernel/Registry.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\RuntimeEnvironment located in ./core/Kernel/RuntimeEnvironment.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\Transcoder located in ./core/Kernel/Transcoder.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
+Class Core\Kernel\VirtualArrayIterator located in ./core/Kernel/VirtualArrayIterator.php does not comply with psr-4 autoloading standard (rule: Wizdam\Kernel\ => ./core/Kernel). Skipping.
 Class App\Pages\Layouteditor\LayoutEditorHandler located in ./app/Pages/LayoutEditor/LayoutEditorHandler.php does not comply with psr-4 autoloading standard (rule: App\Pages\ => ./app/Pages). Skipping.
 Class App\Pages\Layouteditor\SubmissionCommentsHandler located in ./app/Pages/LayoutEditor/SubmissionCommentsHandler.php does not comply with psr-4 autoloading standard (rule: App\Pages\ => ./app/Pages). Skipping.
 Class App\Pages\Layouteditor\SubmissionLayoutHandler located in ./app/Pages/LayoutEditor/SubmissionLayoutHandler.php does not comply with psr-4 autoloading standard (rule: App\Pages\ => ./app/Pages). Skipping.
