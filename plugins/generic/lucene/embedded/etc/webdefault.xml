@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!--
   * webdefault.xml
   *
@@ -463,4 +464,3 @@
     <realm-name>Solr Realm</realm-name>
   </login-config>
 </web-app>
-
