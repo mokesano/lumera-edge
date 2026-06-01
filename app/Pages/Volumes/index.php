@@ -1,5 +1,8 @@
 <?php
 declare(strict_types=1);
+
+namespace App\Pages\Volumes;
+
 /**
  * @file pages/volumes/index.php
  *
@@ -23,8 +26,7 @@ switch ($op) {
     case 'displayArchive':
     case 'view':
     case 'year':
-        define('HANDLER_CLASS', 'VolumesHandler');
-        import('app.Pages.volumes.VolumesHandler');
+        define('HANDLER_CLASS', \App\Pages\Volumes\VolumesHandler::class);
+        import('app.Pages.Volumes.VolumesHandler');
         break;
 }
-?>

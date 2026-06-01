@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Author;
+
 /**
  * @defgroup pages_author
  */
@@ -18,80 +20,78 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	//
-	// Article Submission
-	//
-	case 'submit':
-	case 'saveSubmit':
-	case 'submitSuppFile':
-	case 'saveSubmitSuppFile':
-	case 'deleteSubmitSuppFile':
-	case 'expediteSubmission':
-		define('HANDLER_CLASS', 'SubmitHandler');
-		import('app.Pages.author.SubmitHandler');
-		break;
-	//
-	// Submission Tracking
-	//
-	case 'deleteArticleFile':
-	case 'deleteSubmission':
-	case 'submission':
-	case 'editSuppFile':
-	case 'setSuppFileVisibility':
-	case 'saveSuppFile':
-	case 'addSuppFile':
-	case 'submissionReview':
-	case 'submissionEditing':
-	case 'uploadRevisedVersion':
-	case 'viewMetadata':
-	case 'saveMetadata':
-	case 'removeArticleCoverPage':
-	case 'uploadCopyeditVersion':
-	case 'completeAuthorCopyedit':
-	//
-	// Misc.
-	//
-	case 'downloadFile':
-	case 'viewFile':
-	case 'download':
-	//
-	// Proofreading Actions
-	//
-	case 'authorProofreadingComplete':
-	case 'proofGalley':
-	case 'proofGalleyTop':
-	case 'proofGalleyFile':
-	//
-	// Payment Actions
-	//
-	case 'paySubmissionFee':
-	case 'payFastTrackFee':
-	case 'payPublicationFee':
-		define('HANDLER_CLASS', 'TrackSubmissionHandler');
-		import('app.Pages.author.TrackSubmissionHandler');
-		break;
-	//
-	// Submission Comments
-	//
-	case 'viewEditorDecisionComments':
-	case 'viewCopyeditComments':
-	case 'postCopyeditComment':
-	case 'emailEditorDecisionComment':
-	case 'viewProofreadComments':
-	case 'viewLayoutComments':
-	case 'postLayoutComment':
-	case 'postProofreadComment':
-	case 'editComment':
-	case 'saveComment':
-	case 'deleteComment':
-		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
-		import('app.Pages.author.SubmissionCommentsHandler');
-		break;
-	case 'index':
-	case 'instructions':
-		define('HANDLER_CLASS', 'AuthorHandler');
-		import('app.Pages.author.AuthorHandler');
-		break;
+    //
+    // Article Submission
+    //
+    case 'submit':
+    case 'saveSubmit':
+    case 'submitSuppFile':
+    case 'saveSubmitSuppFile':
+    case 'deleteSubmitSuppFile':
+    case 'expediteSubmission':
+        define('HANDLER_CLASS', \App\Pages\Author\SubmitHandler::class);
+        import('app.Pages.Author.SubmitHandler');
+        break;
+    //
+    // Submission Tracking
+    //
+    case 'deleteArticleFile':
+    case 'deleteSubmission':
+    case 'submission':
+    case 'editSuppFile':
+    case 'setSuppFileVisibility':
+    case 'saveSuppFile':
+    case 'addSuppFile':
+    case 'submissionReview':
+    case 'submissionEditing':
+    case 'uploadRevisedVersion':
+    case 'viewMetadata':
+    case 'saveMetadata':
+    case 'removeArticleCoverPage':
+    case 'uploadCopyeditVersion':
+    case 'completeAuthorCopyedit':
+    //
+    // Misc.
+    //
+    case 'downloadFile':
+    case 'viewFile':
+    case 'download':
+    //
+    // Proofreading Actions
+    //
+    case 'authorProofreadingComplete':
+    case 'proofGalley':
+    case 'proofGalleyTop':
+    case 'proofGalleyFile':
+    //
+    // Payment Actions
+    //
+    case 'paySubmissionFee':
+    case 'payFastTrackFee':
+    case 'payPublicationFee':
+        define('HANDLER_CLASS', \App\Pages\Author\TrackSubmissionHandler::class);
+        import('app.Pages.Author.TrackSubmissionHandler');
+        break;
+    //
+    // Submission Comments
+    //
+    case 'viewEditorDecisionComments':
+    case 'viewCopyeditComments':
+    case 'postCopyeditComment':
+    case 'emailEditorDecisionComment':
+    case 'viewProofreadComments':
+    case 'viewLayoutComments':
+    case 'postLayoutComment':
+    case 'postProofreadComment':
+    case 'editComment':
+    case 'saveComment':
+    case 'deleteComment':
+        define('HANDLER_CLASS', \App\Pages\Author\SubmissionCommentsHandler::class);
+        import('app.Pages.Author.SubmissionCommentsHandler');
+        break;
+    case 'index':
+    case 'instructions':
+        define('HANDLER_CLASS', \App\Pages\Author\AuthorHandler::class);
+        import('app.Pages.Author.AuthorHandler');
+        break;
 }
-
-?>

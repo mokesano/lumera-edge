@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Authenticate;
+
 /**
  * @file pages/authenticate/index.php
  *
@@ -24,8 +26,7 @@ switch ($op) {
     case 'invoice':
     // Endpoint Sertifikat (Reviewer/Author) berdasarkan Hash-ID
     case 'certificate':
-        define('HANDLER_CLASS', 'AuthenticateHandler');
-        import('app.Pages.authenticate.AuthenticateHandler');
+        define('HANDLER_CLASS', \App\Pages\Authenticate\AuthenticateHandler::class);
+        import('app.Pages.Authenticate.AuthenticateHandler');
         break;
 }
-?>

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\SubscriptionManager;
+
 /**
  * @defgroup pages_subscriptionManager
  */
@@ -18,37 +20,35 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	case 'index':
-	case 'subscriptionsSummary':
-	case 'subscriptions':
-	case 'deleteSubscription':
-	case 'renewSubscription':
-	case 'editSubscription':
-	case 'createSubscription':
-	case 'selectSubscriber':
-	case 'updateSubscription':
-	case 'resetDateReminded':
-	case 'subscriptionTypes':
-	case 'moveSubscriptionType':
-	case 'deleteSubscriptionType':
-	case 'editSubscriptionType':
-	case 'createSubscriptionType':
-	case 'updateSubscriptionType':
-	case 'subscriptionPolicies':
-	case 'saveSubscriptionPolicies':
-	case 'createUser':
-	case 'updateUser':
-	case 'payments':
-	case 'savePaymentSettings':
-	case 'viewPayments':
-	case 'viewPayment':
-	case 'payMethodSettings':
-	case 'savePayMethodSettings':
-	case 'suggestUsername':
-	case 'userProfile':
-		define('HANDLER_CLASS', 'SubscriptionManagerHandler');
-		import('app.Pages.SubscriptionManager.SubscriptionManagerHandler');
-		break;
+    case 'index':
+    case 'subscriptionsSummary':
+    case 'subscriptions':
+    case 'deleteSubscription':
+    case 'renewSubscription':
+    case 'editSubscription':
+    case 'createSubscription':
+    case 'selectSubscriber':
+    case 'updateSubscription':
+    case 'resetDateReminded':
+    case 'subscriptionTypes':
+    case 'moveSubscriptionType':
+    case 'deleteSubscriptionType':
+    case 'editSubscriptionType':
+    case 'createSubscriptionType':
+    case 'updateSubscriptionType':
+    case 'subscriptionPolicies':
+    case 'saveSubscriptionPolicies':
+    case 'createUser':
+    case 'updateUser':
+    case 'payments':
+    case 'savePaymentSettings':
+    case 'viewPayments':
+    case 'viewPayment':
+    case 'payMethodSettings':
+    case 'savePayMethodSettings':
+    case 'suggestUsername':
+    case 'userProfile':
+        define('HANDLER_CLASS', \App\Pages\SubscriptionManager\SubscriptionManagerHandler::class);
+        import('app.Pages.SubscriptionManager.SubscriptionManagerHandler');
+        break;
 }
-
-?>

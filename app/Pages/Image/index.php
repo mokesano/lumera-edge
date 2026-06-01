@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Image;
+
 /**
  * @defgroup pages_image
  */
- 
+
 /**
  * @file pages/image/index.php
  *
@@ -14,12 +16,10 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	case 'issue':   // Akses: .../image/issue/...
-	case 'header':  // Akses: .../image/header/...
-	case 'article': // Akses: .../image/article/...
-		define('HANDLER_CLASS', 'ImageHandler');
-		import('app.Pages.image.ImageHandler');
-		break;
+    case 'issue':   // Akses: .../image/issue/...
+    case 'header':  // Akses: .../image/header/...
+    case 'article': // Akses: .../image/article/...
+        define('HANDLER_CLASS', \App\Pages\Image\ImageHandler::class);
+        import('app.Pages.Image.ImageHandler');
+        break;
 }
-
-?>

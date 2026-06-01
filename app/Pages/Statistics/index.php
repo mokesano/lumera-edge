@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Statistics;
+
 /**
  * @file pages/statistics/index.php
  *
@@ -10,15 +12,14 @@ declare(strict_types=1);
  *
  * @class LoginHandler
  * @ingroup pages_login
- * 
+ *
  * @brief URL Router untuk modul statistics ScholarWizdam
  */
 
 switch ($op) {
     case 'index':
     case 'journal':
-        define('HANDLER_CLASS', 'JournalStatsHandler');
-        import('app.Pages.statistics.JournalStatsHandler');
+        define('HANDLER_CLASS', \App\Pages\Statistics\JournalStatsHandler::class);
+        import('app.Pages.Statistics.JournalStatsHandler');
         break;
 }
-?>

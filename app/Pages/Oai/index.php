@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Oai;
+
 /**
  * @defgroup pages_oai
  */
- 
+
 /**
  * @file pages/oai/index.php
  *
@@ -13,15 +15,13 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_oai
- * @brief Handle Open Archives Initiative protocol interaction requests. 
+ * @brief Handle Open Archives Initiative protocol interaction requests.
  *
  */
 
 switch ($op) {
-	case 'index':
-		define('HANDLER_CLASS', 'OAIHandler');
-		import('app.Pages.oai.OAIHandler');
-		break;
+    case 'index':
+        define('HANDLER_CLASS', \App\Pages\Oai\OAIHandler::class);
+        import('app.Pages.Oai.OAIHandler');
+        break;
 }
-
-?>

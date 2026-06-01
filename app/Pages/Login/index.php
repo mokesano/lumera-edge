@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Login;
+
 /**
  * @defgroup pages_login
  */
- 
+
 /**
  * @file tools/index.php
  *
@@ -18,29 +20,27 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	case 'index':
-	case 'implicitAuthLogin':
-	case 'implicitAuthReturn':
-	case 'signIn':
-	case 'signOut':
-	case 'lostPassword':
-	case 'requestResetPassword':
-	case 'resetPassword':
-	case 'changePassword':
-	case 'savePassword':
-	case 'signInAsUser':
-	case 'signOutAsUser':
-	// --- [WIZDAM SSO] RUTE ORCID ---
+    case 'index':
+    case 'implicitAuthLogin':
+    case 'implicitAuthReturn':
+    case 'signIn':
+    case 'signOut':
+    case 'lostPassword':
+    case 'requestResetPassword':
+    case 'resetPassword':
+    case 'changePassword':
+    case 'savePassword':
+    case 'signInAsUser':
+    case 'signOutAsUser':
+    // --- [WIZDAM SSO] RUTE ORCID ---
     case 'orcid-auth':
     case 'orcid-callback':
     case 'orcid-unlink':
     // --- [WIZDAM SSO] RUTE GOOGLE ---
     case 'google-auth':
     case 'google-callback':
-    case 'google-unlink':    
-		define('HANDLER_CLASS', 'LoginHandler');
-		import('app.Pages.login.LoginHandler');
-		break;
+    case 'google-unlink':
+        define('HANDLER_CLASS', \App\Pages\Login\LoginHandler::class);
+        import('app.Pages.Login.LoginHandler');
+        break;
 }
-
-?>

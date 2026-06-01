@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Information;
+
 /**
  * @defgroup pages_information
  */
- 
+
 /**
  * @file pages/information/index.php
  *
@@ -13,20 +15,18 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_information
- * @brief Handle information requests. 
+ * @brief Handle information requests.
  *
  */
 
 switch ($op) {
-	case 'index':
-	case 'readers':
-	case 'authors':
-	case 'librarians':
-	case 'competingInterestGuidelines':
-	case 'sampleCopyrightWording':
-		define('HANDLER_CLASS', 'InformationHandler');
-		import('app.Pages.information.InformationHandler');
-		break;
+    case 'index':
+    case 'readers':
+    case 'authors':
+    case 'librarians':
+    case 'competingInterestGuidelines':
+    case 'sampleCopyrightWording':
+        define('HANDLER_CLASS', \App\Pages\Information\InformationHandler::class);
+        import('app.Pages.Information.InformationHandler');
+        break;
 }
-
-?>

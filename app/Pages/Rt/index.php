@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Rt;
+
 /**
  * @defgroup pages_rt
  */
- 
+
 /**
  * @file pages/rt/index.php
  *
@@ -13,24 +15,22 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_rt
- * @brief Handle Reading Tools requests. 
+ * @brief Handle Reading Tools requests.
  *
  */
 
 switch ($op) {
-	case 'bio':
-	case 'metadata':
-	case 'context':
-	case 'captureCite':
-	case 'printerFriendly':
-	case 'emailColleague':
-	case 'emailAuthor':
-	case 'suppFiles':
-	case 'suppFileMetadata':
-	case 'findingReferences':
-		define('HANDLER_CLASS', 'RTHandler');
-		import('app.Pages.rt.RTHandler');
-		break;
+    case 'bio':
+    case 'metadata':
+    case 'context':
+    case 'captureCite':
+    case 'printerFriendly':
+    case 'emailColleague':
+    case 'emailAuthor':
+    case 'suppFiles':
+    case 'suppFileMetadata':
+    case 'findingReferences':
+        define('HANDLER_CLASS', \App\Pages\Rt\RTHandler::class);
+        import('app.Pages.Rt.RTHandler');
+        break;
 }
-
-?>
