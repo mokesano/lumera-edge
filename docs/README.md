@@ -176,9 +176,9 @@ Core Kernel   →   App Domain   →   Pages / API
 ```php
 <?php
 
-use Wizdam\Core\CoreApplication;
-use Wizdam\App\Domain\publisher\AppPublisher;
-use Wizdam\App\Domain\submission\AppSubmission;
+use Lumera\Core\CoreApplication;
+use Lumera\App\Domain\publisher\AppPublisher;
+use Lumera\App\Domain\submission\AppSubmission;
 
 // Inisialisasi aplikasi
 $app = CoreApplication::getInstance();

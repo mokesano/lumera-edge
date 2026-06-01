@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Editassignment;
+namespace App\Domain\Submission\EditAssignment;
 
 /**
  * @file app/Domain/Submission/EditAssignment/EditAssignmentDAO.php

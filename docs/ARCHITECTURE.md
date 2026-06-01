@@ -169,8 +169,8 @@ Folder `core/Kernel/` berisi inti framework yang **tidak bergantung** pada logik
 ### Contoh Penggunaan
 
 ```php
-use Wizdam\Core\CoreApplication;
-use Wizdam\Core\CoreRequest;
+use Lumera\Core\CoreApplication;
+use Lumera\Core\CoreRequest;
 
 // Get application instance
 $app = CoreApplication::getInstance();
@@ -222,8 +222,8 @@ Folder `core/Modules/` berisi modul-modul fungsional yang dapat digunakan oleh a
 ### Contoh DAO Pattern
 
 ```php
-use Wizdam\Modules\db\DBConnection;
-use Wizdam\Modules\user\UserDAO;
+use Lumera\Modules\db\DBConnection;
+use Lumera\Modules\user\UserDAO;
 
 // Get DAO instance
 $userDao = new UserDAO();
@@ -288,9 +288,9 @@ Library modern yang dikelola Composer:
   },
   "autoload": {
     "psr-4": {
-      "Wizdam\\Core\\": "core/Kernel/",
-      "Wizdam\\Modules\\": "core/Modules/",
-      "Wizdam\\App\\": "app/Domain/"
+      "Lumera\\Core\\": "core/Kernel/",
+      "Lumera\\Modules\\": "core/Modules/",
+      "Lumera\\App\\": "app/Domain/"
     },
     "classmap": [
       "core/Library/adodb/",
@@ -344,9 +344,9 @@ app/
 
 | Namespace | Path | Purpose |
 |-----------|------|---------|
-| `Wizdam\Core\` | `core/Kernel/` | Framework core |
-| `Wizdam\Modules\` | `core/Modules/` | Framework modules |
-| `Wizdam\App\` | `app/Domain/` | Application classes |
+| `Lumera\Core\` | `core/Kernel/` | Framework core |
+| `Lumera\Modules\` | `core/Modules/` | Framework modules |
+| `Lumera\App\` | `app/Domain/` | Application classes |
 | `App\` | `app/` | Application root |
 
 ### Legacy Import Function
@@ -359,8 +359,8 @@ import('classes.core.CoreApplication');
 import('modules.db.DBConnection');
 
 // Modern style (direkomendasikan)
-use Wizdam\Core\CoreApplication;
-use Wizdam\Modules\db\DBConnection;
+use Lumera\Core\CoreApplication;
+use Lumera\Modules\db\DBConnection;
 ```
 
 Mapping fungsi `import()`:
@@ -369,8 +369,8 @@ Mapping fungsi `import()`:
 // core/Includes/functions.inc.php
 function import($path) {
     $mapping = [
-        'classes.' => 'Wizdam\\Modules\\',
-        'core.' => 'Wizdam\\Core\\',
+        'classes.' => 'Lumera\\Modules\\',
+        'core.' => 'Lumera\\Core\\',
         // ... mapping lainnya
     ];
     

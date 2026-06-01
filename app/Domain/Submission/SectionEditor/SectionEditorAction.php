@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Sectioneditor;
+namespace App\Domain\Submission\SectionEditor;
 
 /**
  * @file app/Domain/Submission/SectionEditor/SectionEditorAction.php
