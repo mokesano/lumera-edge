@@ -105,12 +105,6 @@ $response = [
             'contact' => 'rochmady@sangia.org'
         ],
         [
-            'name'    => 'Lumera Core Team',
-            'role'    => 'Lead Development',
-            'website' => 'https://lumera.sangia.org',
-            'contact' => 'tech@sangia.org'
-        ],
-        [
             'name'    => 'Susiana',
             'role'    => 'Backend Engineer',
             'website' => 'https://lumera.sangia.org',
@@ -121,6 +115,12 @@ $response = [
             'role'    => 'Frontend & UI/UX',
             'dribbble'=> 'https://dribbble.com/darsilan',
             'contact' => 'darsilan@sangia.org'
+        ],
+        [
+            'name'    => 'Lumera Core Team',
+            'role'    => 'Lead Development',
+            'website' => 'https://lumera.sangia.org',
+            'contact' => 'tech@sangia.org'
         ]
     ],
 
