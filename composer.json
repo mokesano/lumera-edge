@@ -119,7 +119,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Wizdam\\Tests\\": "tests/"
+            "Lumera\\Tests\\": "tests/"
         }
     },
     "config": {
