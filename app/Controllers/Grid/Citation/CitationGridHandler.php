@@ -20,7 +20,7 @@ namespace App\Controllers\Grid\Citation;
 import('app.Domain.Controllers.grid.citation.CoreCitationGridHandler');
 
 // import validation classes
-import('app.Domain.Handler.validation.HandlerValidatorJournal');
+import('app.Domain.Handler.Validation.HandlerValidatorJournal');
 import('app.Domain.Handler.validation.HandlerValidatorRoles');
 
 class CitationGridHandler extends CoreCitationGridHandler {
@@ -65,7 +65,7 @@ class CitationGridHandler extends CoreCitationGridHandler {
      */
     public function authorize($request, &$args, $roleAssignments) {
         // Make sure the user can edit the submission in the request.
-        import('app.Domain.Security.authorization.AppSubmissionAccessPolicy');
+        import('app.Domain.Security.Authorization.AppSubmissionAccessPolicy');
         $this->addPolicy(new AppSubmissionAccessPolicy($request, $args, $roleAssignments, 'assocId'));
         return parent::authorize($request, $args, $roleAssignments);
     }

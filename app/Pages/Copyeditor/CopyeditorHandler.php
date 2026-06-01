@@ -16,7 +16,7 @@ namespace App\Pages\Copyeditor;
  * @brief Handle requests for copyeditor functions.
  */
 
-import('app.Domain.Submission.copyeditor.CopyeditorAction');
+import('app.Domain.Submission.Copyeditor.CopyeditorAction');
 import('app.Domain.Handler.Handler');
 
 class CopyeditorHandler extends Handler {
@@ -180,7 +180,7 @@ class CopyeditorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'copyeditor'), 'user.role.copyeditor']]
                 : [['user', 'navigation.user'], ['copyeditor', 'user.role.copyeditor']];
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -195,7 +195,7 @@ class CopyeditorHandler extends Handler {
      */
     public function instructions($args, $request) {
         $this->setupTemplate();
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], ['copy'])) {
             $request->redirect(null, $request->getRequestedPage());
         }

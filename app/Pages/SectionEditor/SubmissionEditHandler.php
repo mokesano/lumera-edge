@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Pages\Sectioneditor;
+namespace App\Pages\SectionEditor;
 
 /**
  * @file app/Pages/SectionEditor/SubmissionEditHandler.php
@@ -187,7 +187,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
         $templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
 
-        import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
+        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
         $templateMgr->assign('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
@@ -276,7 +276,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
         $templateMgr->assign('lastDecision', $lastDecision);
 
-        import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
+        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
         $templateMgr->assign('reviewerRatingOptions', ReviewAssignment::getReviewerRatingOptions());
 
@@ -554,7 +554,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
         $submission = $this->submission;
 
-        import('app.Domain.SectionEditor.form.CreateReviewerForm');
+        import('app.Domain.SectionEditor.Form.CreateReviewerForm');
         $createReviewerForm = new CreateReviewerForm($articleId);
         $this->setupTemplate(true, $articleId);
 
@@ -951,7 +951,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
             $templateMgr->assign('articleId', $articleId);
             $templateMgr->assign('reviewId', $reviewId);
 
-            import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
+            import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
             $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
             $templateMgr->display('sectionEditor/reviewerRecommendation.tpl');
@@ -1454,7 +1454,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $submission = $this->submission;
         $this->setupTemplate(true, $articleId, 'summary');
 
-        import('app.Domain.Submission.form.SuppFileForm');
+        import('app.Domain.Submission.Form.SuppFileForm');
         $submitForm = new SuppFileForm($submission, $journal);
 
         if ($submitForm->isLocaleResubmit()) {
@@ -1486,7 +1486,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
         $this->setupTemplate(true, $articleId, 'summary');
 
-        import('app.Domain.Submission.form.SuppFileForm');
+        import('app.Domain.Submission.Form.SuppFileForm');
         $submitForm = new SuppFileForm($submission, $journal, $suppFileId);
         if ($submitForm->isLocaleResubmit()) {
             $submitForm->readInputData();
@@ -1531,7 +1531,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $suppFileId = (int) array_shift($args);
         $journal = $request->getJournal();
 
-        import('app.Domain.Submission.form.SuppFileForm');
+        import('app.Domain.Submission.Form.SuppFileForm');
         $submitForm = new SuppFileForm($submission, $journal, $suppFileId);
         $submitForm->readInputData();
 
@@ -1833,7 +1833,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $articleId = (int) $request->getUserVar('articleId'); 
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
     
-        import('app.Domain.Submission.form.ArticleGalleyForm');
+        import('app.Domain.Submission.Form.ArticleGalleyForm');
         $galleyForm = new ArticleGalleyForm($articleId);
         $createRemoteFlag = (bool) ((int) $request->getUserVar('createRemote')); 
         $galleyId = $galleyForm->execute($fileName, $createRemoteFlag);
@@ -1859,7 +1859,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.form.ArticleGalleyForm');
+        import('app.Domain.Submission.Form.ArticleGalleyForm');
         $submitForm = new ArticleGalleyForm($articleId, $galleyId);
         if ($submitForm->isLocaleResubmit()) {
             $submitForm->readInputData();
@@ -1881,7 +1881,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->setupTemplate(true, $articleId, 'editing');
         $submission = $this->submission;
     
-        import('app.Domain.Submission.form.ArticleGalleyForm');
+        import('app.Domain.Submission.Form.ArticleGalleyForm');
         $submitForm = new ArticleGalleyForm($articleId, $galleyId);
     
         $submitForm->readInputData();
@@ -2043,7 +2043,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $submission = $this->submission;
         $journal = $request->getJournal();
     
-        import('app.Domain.Submission.form.SuppFileForm');
+        import('app.Domain.Submission.Form.SuppFileForm');
     
         $suppFileForm = new SuppFileForm($submission, $journal);
         $suppFileForm->setData('title', [$submission->getLocale() => __('common.untitled')]);
@@ -2337,7 +2337,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $signoffDao = DAORegistry::getDAO('SignoffDAO');
     
         if ($userId && $articleId && $roleDao->userHasRole($journal->getId(), $userId, ROLE_ID_PROOFREADER)) {
-            import('app.Domain.Submission.proofreader.ProofreaderAction');
+            import('app.Domain.Submission.Proofreader.ProofreaderAction');
             ProofreaderAction::selectProofreader($userId, $submission, $request);
             $request->redirect(null, null, 'submissionEditing', $articleId);
         } else {
@@ -2423,7 +2423,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $request, $send?'':$request->url(null, null, 'notifyAuthorProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }
@@ -2441,7 +2441,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $request, $send?'':$request->url(null, null, 'thankAuthorProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }
@@ -2495,7 +2495,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $request, $send?'':$request->url(null, null, 'notifyProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }
@@ -2513,7 +2513,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $request, $send?'':$request->url(null, null, 'thankProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }
@@ -2580,7 +2580,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $signoff->setDateAcknowledged(null);
         $signoffDao->updateObject($signoff);
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $request, $send?'':$request->url(null, null, 'notifyLayoutEditorProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }
@@ -2598,7 +2598,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
         $this->validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
         $this->setupTemplate(true, $articleId, 'editing');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $request, $send?'':$request->url(null, null, 'thankLayoutEditorProofreader'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);
         }

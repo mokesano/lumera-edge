@@ -16,7 +16,7 @@ namespace App\Pages\Reviewer;
  * @brief Handle requests for submission tracking.
  */
 
-import('app.Pages.reviewer.ReviewerHandler');
+import('app.Pages.Reviewer.ReviewerHandler');
 
 class SubmissionReviewHandler extends ReviewerHandler {
     
@@ -75,7 +75,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
         $templateMgr->assign('journal', $journal);
         $templateMgr->assign('reviewGuidelines', $journal->getLocalizedSetting('reviewGuidelines'));
 
-        import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
+        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
         $templateMgr->assign('helpTopicId', 'editorial.reviewersRole.review');
         $templateMgr->display('reviewer/submission.tpl');

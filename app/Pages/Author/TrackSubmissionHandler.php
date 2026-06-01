@@ -16,7 +16,7 @@ namespace App\Pages\Author;
  * @brief Handle requests for submission tracking.
  */
 
-import('app.Pages.author.AuthorHandler');
+import('app.Pages.Author.AuthorHandler');
 
 class TrackSubmissionHandler extends AuthorHandler {
     
@@ -152,7 +152,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         $templateMgr->assign('revisedFile', $submission->getRevisedFile());
         $templateMgr->assign('suppFiles', $submission->getSuppFiles());
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorSubmission');
+        import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
         $templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
 
         // Set up required Payment Related Information
@@ -228,7 +228,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         $templateMgr->assign('revisedFile', $authorSubmission->getRevisedFile());
         $templateMgr->assign('suppFiles', $authorSubmission->getSuppFiles());
         $templateMgr->assign('lastEditorDecision', $lastDecision);
-        import('app.Domain.Submission.sectionEditor.SectionEditorSubmission');
+        import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
         $templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
         $templateMgr->assign('helpTopicId', 'editorial.authorsRole.review');
         $templateMgr->display('author/submissionReview.tpl');
@@ -249,7 +249,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
             $this->setupTemplate($request, true, $articleId, 'summary');
 
-            import('app.Domain.Submission.form.SuppFileForm');
+            import('app.Domain.Submission.Form.SuppFileForm');
 
             $submitForm = new SuppFileForm($authorSubmission, $journal);
 
@@ -278,7 +278,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
             $this->setupTemplate($request, true, $articleId, 'summary');
 
-            import('app.Domain.Submission.form.SuppFileForm');
+            import('app.Domain.Submission.Form.SuppFileForm');
 
             $journal = $request->getJournal();
             $submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
@@ -331,7 +331,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         $this->setupTemplate($request, true, $articleId, 'summary');
 
         if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
-            import('app.Domain.Submission.form.SuppFileForm');
+            import('app.Domain.Submission.Form.SuppFileForm');
 
             $journal = $request->getJournal();
             $submitForm = new SuppFileForm($authorSubmission, $journal, $suppFileId);
@@ -363,7 +363,7 @@ class TrackSubmissionHandler extends AuthorHandler {
         $this->setupTemplate($request, true, $articleId);
 
         AuthorAction::copyeditUnderway($submission);
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         ProofreaderAction::proofreadingUnderway($submission, 'SIGNOFF_PROOFREADING_AUTHOR');
 
         $templateMgr = TemplateManager::getManager();
@@ -551,7 +551,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
         $send = (int) $request->getUserVar('send');
 
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
 
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send?'':$request->url(null, 'author', 'authorProofreadingComplete'))) {
             $request->redirect(null, null, 'submissionEditing', $articleId);

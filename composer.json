@@ -68,15 +68,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Wizdam\\Modules\\": [
-                "core/Modules/"
-            ],
-            "Wizdam\\Kernel\\": [
-                "core/Kernel/"
-            ],
-            "Wizdam\\Core\\": [
-                "core/Includes/"
-            ],
             "App\\Domain\\": [
                 "app/Domain/"
             ],
@@ -94,6 +85,9 @@
             ]
         },
         "classmap": [
+            "core/Includes/",
+            "core/Modules/",
+            "core/Kernel/",
             "resources/smarty/plugins/",
             "plugins/gateways/",
             "plugins/generic/",
@@ -103,11 +97,29 @@
         ],
         "files": [
             "core/Includes/functions.php"
+        ],
+        "exclude-from-classmap": [
+            "plugins/generic/announcementFeed/SettingsForm.php",
+            "plugins/generic/customBlockManager/SettingsForm.php",
+            "plugins/generic/dataverse/classes/form/SettingsForm.php",
+            "plugins/generic/sword/SettingsForm.php",
+            "plugins/generic/webFeed/SettingsForm.php",
+            "plugins/importexport/datacite/classes/DOIExportDom.php",
+            "plugins/importexport/medra/classes/DOIExportDom.php",
+            "plugins/importexport/datacite/classes/DOIExportPlugin.php",
+            "plugins/importexport/medra/classes/DOIExportPlugin.php",
+            "plugins/importexport/datacite/classes/form/DOIExportSettingsForm.php",
+            "plugins/importexport/medra/classes/form/DOIExportSettingsForm.php",
+            "plugins/importexport/datacite/classes/PubObjectCache.php",
+            "plugins/importexport/doaj/classes/PubObjectCache.php",
+            "plugins/importexport/medra/classes/PubObjectCache.php",
+            "plugins/importexport/mets/MetsExportDom.php",
+            "core/Modules/pages/manager/CoreAnnouncementHandler.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Wizdam\\Tests\\": "tests/"
+            "Lumera\\Tests\\": "tests/"
         }
     },
     "config": {

@@ -33,7 +33,7 @@ class TrendsHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('app.Domain.Security.authorization.ContextRequiredPolicy');
+        import('core.Modules.security.authorization.ContextRequiredPolicy');
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);
     }

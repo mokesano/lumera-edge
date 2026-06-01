@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Pages\Sectioneditor;
+namespace App\Pages\SectionEditor;
 
 /**
  * @file app/Pages/SectionEditor/SectionEditorHandler.php
@@ -19,7 +19,7 @@ namespace App\Pages\Sectioneditor;
 // Filter section
 define('FILTER_SECTION_ALL', 0);
 
-import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+import('app.Domain.Submission.SectionEditor.SectionEditorAction');
 import('app.Domain.Handler.Handler');
 
 class SectionEditorHandler extends Handler {
@@ -253,7 +253,7 @@ class SectionEditorHandler extends Handler {
             ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $roleSymbolic), $roleKey], [$request->url(null, $roleSymbolic), 'article.submissions']]
             : [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $roleSymbolic), $roleKey]];
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, $roleSymbolic);
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -271,7 +271,7 @@ class SectionEditorHandler extends Handler {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         $this->setupTemplate();
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], ['copy', 'layout', 'proof', 'referenceLinking'])) {
             $request->redirect(null, null, 'index');
         }

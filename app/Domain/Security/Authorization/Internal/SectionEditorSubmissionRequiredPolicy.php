@@ -18,7 +18,7 @@ namespace App\Domain\Security\Authorization\Internal;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-import('app.Domain.Security.authorization.DataObjectRequiredPolicy');
+import('core.Modules.security.authorization.DataObjectRequiredPolicy');
 
 class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
     

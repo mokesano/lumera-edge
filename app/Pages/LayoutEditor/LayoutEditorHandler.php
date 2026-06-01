@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Pages\Layouteditor;
+namespace App\Pages\LayoutEditor;
 
 /**
  * @file app/Pages/LayoutEditor/LayoutEditorHandler.php
@@ -16,8 +16,8 @@ namespace App\Pages\Layouteditor;
  * @brief Handle requests for layout editor functions.
  */
 
-import('app.Domain.Submission.layoutEditor.LayoutEditorAction');
-import('app.Domain.Submission.proofreader.ProofreaderAction');
+import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
+import('app.Domain.Submission.Proofreader.ProofreaderAction');
 import('app.Domain.Handler.Handler');
 
 class LayoutEditorHandler extends Handler {
@@ -329,7 +329,7 @@ class LayoutEditorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'layoutEditor'), 'user.role.layoutEditor']]
                 : [[$request->url(null, 'user'), 'navigation.user']];
 
-        import('app.Domain.Submission.sectionEditor.SectionEditorAction');
+        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -344,7 +344,7 @@ class LayoutEditorHandler extends Handler {
      */
     public function instructions($args, $request) {
         $this->setupTemplate();
-        import('app.Domain.Submission.proofreader.ProofreaderAction');
+        import('app.Domain.Submission.Proofreader.ProofreaderAction');
         if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], ['layout', 'proof', 'referenceLinking'])) {
             $request->redirect(null, $request->getRequestedPage());
         }

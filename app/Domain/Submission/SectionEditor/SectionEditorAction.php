@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Sectioneditor;
+namespace App\Domain\Submission\SectionEditor;
 
 /**
  * @file app/Domain/Submission/SectionEditor/SectionEditorAction.php
@@ -18,7 +18,7 @@ namespace App\Domain\Submission\Sectioneditor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-import('app.Domain.Submission.common.Action');
+import('app.Domain.Submission.Common.Action');
 
 class SectionEditorAction extends Action {
 
@@ -87,7 +87,7 @@ class SectionEditorAction extends Action {
 
             $decisions = SectionEditorSubmission::getEditorDecisionOptions();
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_WIZDAM_EDITOR);
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_DECISION, 'log.editor.decision', ['editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])]);
         }
@@ -145,7 +145,7 @@ class SectionEditorAction extends Action {
             $reviewAssignment = $reviewAssignmentDao->getReviewAssignment($sectionEditorSubmission->getId(), $reviewerId, $round);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', ['reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()]);
         }
     }
@@ -170,8 +170,8 @@ class SectionEditorAction extends Action {
             $sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
-            import('app.Domain.Article.log.ArticleEventLogEntry');
+            import('app.Domain.Article.Log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleEventLogEntry');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_CLEAR, 'log.review.reviewCleared', ['reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()]);
         }
     }
@@ -244,7 +244,7 @@ class SectionEditorAction extends Action {
                 if ($email->isEnabled()) {
                     if ($reviewerAccessKeysEnabled) {
                         import('app.Domain.Security.AccessKeyManager');
-                        import('app.Pages.reviewer.ReviewerHandler');
+                        import('app.Pages.Reviewer.ReviewerHandler');
                         $accessKeyManager = new AccessKeyManager();
 
                         // Key lifetime is the typical review period plus four weeks
@@ -355,8 +355,8 @@ class SectionEditorAction extends Action {
                     $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
                     // Add log
-                    import('app.Domain.Article.log.ArticleLog');
-                    import('app.Domain.Article.log.ArticleEventLogEntry');
+                    import('app.Domain.Article.Log.ArticleLog');
+                    import('app.Domain.Article.Log.ArticleEventLogEntry');
                     ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_CANCEL, 'log.review.reviewCancelled', ['reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getId(), 'round' => $reviewAssignment->getRound()]);
                 } else {
                     if (!$request->getUserVar('continued')) {
@@ -411,7 +411,7 @@ class SectionEditorAction extends Action {
 
             if ($reviewerAccessKeysEnabled) {
                 import('app.Domain.Security.AccessKeyManager');
-                import('app.Pages.reviewer.ReviewerHandler');
+                import('app.Pages.Reviewer.ReviewerHandler');
                 $accessKeyManager = new AccessKeyManager();
 
                 // Key lifetime is the typical review period plus four weeks
@@ -562,8 +562,8 @@ class SectionEditorAction extends Action {
             $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
-            import('app.Domain.Article.log.ArticleEventLogEntry');
+            import('app.Domain.Article.Log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleEventLogEntry');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_RATE, 'log.review.reviewerRated', ['reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()]);
         }
     }
@@ -646,8 +646,8 @@ class SectionEditorAction extends Action {
                 // Add log
                 $sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
                 $sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
-                import('app.Domain.Article.log.ArticleLog');
-                import('app.Domain.Article.log.ArticleEventLogEntry');
+                import('app.Domain.Article.Log.ArticleLog');
+                import('app.Domain.Article.Log.ArticleEventLogEntry');
                 ArticleLog::logEvent(
                     $request,
                     $sectionEditorSubmission,
@@ -759,7 +759,7 @@ class SectionEditorAction extends Action {
             $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'round' => $reviewAssignment->getRound()]);
         }
     }
@@ -827,7 +827,7 @@ class SectionEditorAction extends Action {
         if (isset($reviewAssignment) && $reviewAssignment->getSubmissionId() == $sectionEditorSubmission->getId()) {
             $reviewFormId = $reviewAssignment->getReviewFormId();
             if ($reviewFormId != null) {
-                import('app.Domain.Submission.form.ReviewFormResponseForm');
+                import('app.Domain.Submission.Form.ReviewFormResponseForm');
                 $reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
                 $reviewForm->initData();
                 $reviewForm->display();
@@ -860,8 +860,8 @@ class SectionEditorAction extends Action {
             $signoffDao->updateObject($copyeditSignoff);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
-            import('app.Domain.Article.log.ArticleEventLogEntry');
+            import('app.Domain.Article.Log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleEventLogEntry');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_SET_FILE, 'log.copyedit.copyeditFileSet');
         }
     }
@@ -919,7 +919,7 @@ class SectionEditorAction extends Action {
 
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_RESUBMIT, 'log.review.resubmit');
         }
     }
@@ -949,7 +949,7 @@ class SectionEditorAction extends Action {
             $copyeditor = $userDao->getById($copyeditorId);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_ASSIGN, 'log.copyedit.copyeditorAssigned', ['copyeditorName' => $copyeditor->getFullName()]);
         }
     }
@@ -1310,7 +1310,7 @@ class SectionEditorAction extends Action {
             $sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_FILE, 'log.editor.editorFile', ['fileId' => $sectionEditorSubmission->getEditorFileId()]);
         }
     }
@@ -1382,7 +1382,7 @@ class SectionEditorAction extends Action {
         $signoffDao->updateObject($signoff);
 
         // Add log entry
-        import('app.Domain.Article.log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleLog');
         ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', ['copyeditorName' => $user->getFullName()]);
     }
 
@@ -1420,7 +1420,7 @@ class SectionEditorAction extends Action {
         }
 
         // Add log entry
-        import('app.Domain.Article.log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleLog');
         ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', ['copyeditorName' => $user->getFullName()]);
     }
 
@@ -1454,7 +1454,7 @@ class SectionEditorAction extends Action {
         $sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
         // Add log
-        import('app.Domain.Article.log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleLog');
         ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_ARCHIVE, 'log.editor.archived', ['articleId' => $sectionEditorSubmission->getId()]);
     }
 
@@ -1496,7 +1496,7 @@ class SectionEditorAction extends Action {
         if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
         // Add log
-        import('app.Domain.Article.log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleLog');
         ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_RESTORE, 'log.editor.restored');
     }
 
@@ -1570,7 +1570,7 @@ class SectionEditorAction extends Action {
         $userDao = DAORegistry::getDAO('UserDAO');
         if (HookRegistry::dispatch('SectionEditorAction::assignLayoutEditor', [&$submission, &$editorId])) return;
 
-        import('app.Domain.Article.log.ArticleLog');
+        import('app.Domain.Article.Log.ArticleLog');
 
         $layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
         $layoutProofSignoff = $signoffDao->build('SIGNOFF_PROOFREADING_LAYOUT', ASSOC_TYPE_ARTICLE, $submission->getId());
@@ -1698,7 +1698,7 @@ class SectionEditorAction extends Action {
      * @param string $direction u = up, d = down
      */
     public static function orderGalley($article, $galleyId, $direction) {
-        import('app.Domain.Submission.layoutEditor.LayoutEditorAction');
+        import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
         LayoutEditorAction::orderGalley($article, $galleyId, $direction);
     }
 
@@ -1708,7 +1708,7 @@ class SectionEditorAction extends Action {
      * @param int $galleyId
      */
     public static function deleteGalley($article, $galleyId) {
-        import('app.Domain.Submission.layoutEditor.LayoutEditorAction');
+        import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
         LayoutEditorAction::deleteGalley($article, $galleyId);
     }
 
@@ -1719,7 +1719,7 @@ class SectionEditorAction extends Action {
      * @param string $direction u = up, d = down
      */
     public static function orderSuppFile($article, $suppFileId, $direction) {
-        import('app.Domain.Submission.layoutEditor.LayoutEditorAction');
+        import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
         LayoutEditorAction::orderSuppFile($article, $suppFileId, $direction);
     }
 
@@ -1729,7 +1729,7 @@ class SectionEditorAction extends Action {
      * @param int $suppFileId
      */
     public static function deleteSuppFile($article, $suppFileId) {
-        import('app.Domain.Submission.layoutEditor.LayoutEditorAction');
+        import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
         LayoutEditorAction::deleteSuppFile($article, $suppFileId);
     }
 
@@ -1904,7 +1904,7 @@ class SectionEditorAction extends Action {
     public static function viewPeerReviewComments($article, $reviewId) {
         if (HookRegistry::dispatch('SectionEditorAction::viewPeerReviewComments', [&$article, &$reviewId])) return;
 
-        import('app.Domain.Submission.form.comment.PeerReviewCommentForm');
+        import('app.Domain.Submission.Form.Comment.PeerReviewCommentForm');
 
         $commentForm = new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->initData();
@@ -1922,7 +1922,7 @@ class SectionEditorAction extends Action {
     public static function postPeerReviewComment($article, $reviewId, $emailComment, $request) {
         if (HookRegistry::dispatch('SectionEditorAction::postPeerReviewComment', [&$article, &$reviewId, &$emailComment])) return;
 
-        import('app.Domain.Submission.form.comment.PeerReviewCommentForm');
+        import('app.Domain.Submission.Form.Comment.PeerReviewCommentForm');
 
         $commentForm = new PeerReviewCommentForm($article, $reviewId, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->readInputData();
@@ -1959,7 +1959,7 @@ class SectionEditorAction extends Action {
     public static function viewEditorDecisionComments($article) {
         if (HookRegistry::dispatch('SectionEditorAction::viewEditorDecisionComments', [&$article])) return;
 
-        import('app.Domain.Submission.form.comment.EditorDecisionCommentForm');
+        import('app.Domain.Submission.Form.Comment.EditorDecisionCommentForm');
 
         $commentForm = new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->initData();
@@ -1976,7 +1976,7 @@ class SectionEditorAction extends Action {
     public static function postEditorDecisionComment($article, $emailComment, $request) {
         if (HookRegistry::dispatch('SectionEditorAction::postEditorDecisionComment', [&$article, &$emailComment])) return;
 
-        import('app.Domain.Submission.form.comment.EditorDecisionCommentForm');
+        import('app.Domain.Submission.Form.Comment.EditorDecisionCommentForm');
 
         $commentForm = new EditorDecisionCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->readInputData();
@@ -2199,7 +2199,7 @@ class SectionEditorAction extends Action {
     public static function viewCopyeditComments($article) {
         if (HookRegistry::dispatch('SectionEditorAction::viewCopyeditComments', [&$article])) return;
 
-        import('app.Domain.Submission.form.comment.CopyeditCommentForm');
+        import('app.Domain.Submission.Form.Comment.CopyeditCommentForm');
 
         $commentForm = new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->initData();
@@ -2216,7 +2216,7 @@ class SectionEditorAction extends Action {
     public static function postCopyeditComment($article, $emailComment, $request) {
         if (HookRegistry::dispatch('SectionEditorAction::postCopyeditComment', [&$article, &$emailComment])) return;
 
-        import('app.Domain.Submission.form.comment.CopyeditCommentForm');
+        import('app.Domain.Submission.Form.Comment.CopyeditCommentForm');
 
         $commentForm = new CopyeditCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->readInputData();
@@ -2252,7 +2252,7 @@ class SectionEditorAction extends Action {
     public static function viewLayoutComments($article) {
         if (HookRegistry::dispatch('SectionEditorAction::viewLayoutComments', [&$article])) return;
 
-        import('app.Domain.Submission.form.comment.LayoutCommentForm');
+        import('app.Domain.Submission.Form.Comment.LayoutCommentForm');
 
         $commentForm = new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->initData();
@@ -2269,7 +2269,7 @@ class SectionEditorAction extends Action {
     public static function postLayoutComment($article, $emailComment, $request) {
         if (HookRegistry::dispatch('SectionEditorAction::postLayoutComment', [&$article, &$emailComment])) return;
 
-        import('app.Domain.Submission.form.comment.LayoutCommentForm');
+        import('app.Domain.Submission.Form.Comment.LayoutCommentForm');
 
         $commentForm = new LayoutCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->readInputData();
@@ -2305,7 +2305,7 @@ class SectionEditorAction extends Action {
     public static function viewProofreadComments($article) {
         if (HookRegistry::dispatch('SectionEditorAction::viewProofreadComments', [&$article])) return;
 
-        import('app.Domain.Submission.form.comment.ProofreadCommentForm');
+        import('app.Domain.Submission.Form.Comment.ProofreadCommentForm');
 
         $commentForm = new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->initData();
@@ -2322,7 +2322,7 @@ class SectionEditorAction extends Action {
     public static function postProofreadComment($article, $emailComment, $request) {
         if (HookRegistry::dispatch('SectionEditorAction::postProofreadComment', [&$article, &$emailComment])) return;
 
-        import('app.Domain.Submission.form.comment.ProofreadCommentForm');
+        import('app.Domain.Submission.Form.Comment.ProofreadCommentForm');
 
         $commentForm = new ProofreadCommentForm($article, Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
         $commentForm->readInputData();
@@ -2382,7 +2382,7 @@ class SectionEditorAction extends Action {
             $article = $articleDao->getArticle($reviewAssignment->getSubmissionId());
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', ['reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()]);
         }
     }
@@ -2431,7 +2431,7 @@ class SectionEditorAction extends Action {
             $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            import('app.Domain.Article.Log.ArticleLog');
             ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', ['reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()]);
         }
     }

@@ -47,7 +47,7 @@ switch ($op) {
 	case 'suggestUsername':
 	case 'userProfile':
 		define('HANDLER_CLASS', 'SubscriptionManagerHandler');
-		import('app.Pages.subscriptionManager.SubscriptionManagerHandler');
+		import('app.Pages.SubscriptionManager.SubscriptionManagerHandler');
 		break;
 }
 

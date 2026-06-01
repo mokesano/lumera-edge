@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Domain\Security\Authorization;
 
 /**
- * @file app/Domain/Security/Authorization/OjsSubmissionAccessPolicy.php
+ * @file app/Domain/Security/Authorization/AppSubmissionAccessPolicy.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -17,8 +17,8 @@ namespace App\Domain\Security\Authorization;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-import('app.Domain.Security.authorization.internal.JournalPolicy');
-import('app.Domain.Security.authorization.RoleBasedHandlerOperationPolicy');
+import('app.Domain.Security.Authorization.Internal.JournalPolicy');
+import('core.Modules.security.authorization.RoleBasedHandlerOperationPolicy');
 
 class AppSubmissionAccessPolicy extends JournalPolicy {
     
@@ -45,7 +45,7 @@ class AppSubmissionAccessPolicy extends JournalPolicy {
         // valid section editor submission in the request.
         // FIXME: We should find a way to check whether the user actually
         // is a (section) editor before we execute this expensive policy.
-        import('app.Domain.Security.authorization.internal.SectionEditorSubmissionRequiredPolicy');
+        import('app.Domain.Security.Authorization.Internal.SectionEditorSubmissionRequiredPolicy');
         $editorsPolicy->addPolicy(new SectionEditorSubmissionRequiredPolicy($request, $args, $submissionParameterName));
 
         $editorRolesPolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
@@ -59,7 +59,7 @@ class AppSubmissionAccessPolicy extends JournalPolicy {
         $sectionEditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_SECTION_EDITOR, $roleAssignments[ROLE_ID_SECTION_EDITOR]));
 
         // 2) ... but only if the requested submission has been explicitly assigned to them.
-        import('app.Domain.Security.authorization.internal.SectionSubmissionAssignmentPolicy');
+        import('app.Domain.Security.Authorization.Internal.SectionSubmissionAssignmentPolicy');
         $sectionEditorPolicy->addPolicy(new SectionSubmissionAssignmentPolicy($request));
         $editorRolesPolicy->addPolicy($sectionEditorPolicy);
 
@@ -75,14 +75,14 @@ class AppSubmissionAccessPolicy extends JournalPolicy {
 
         // 1) Copyeditors can only access editorial components when a valid
         //    copyeditor submission is in the request ...
-        import('app.Domain.Security.authorization.internal.CopyeditorSubmissionRequiredPolicy');
+        import('app.Domain.Security.Authorization.Internal.CopyeditorSubmissionRequiredPolicy');
         $copyeditorPolicy->addPolicy(new CopyeditorSubmissionRequiredPolicy($request, $args, $submissionParameterName));
 
         // 2) ... If that's the case then copyeditors can access all remote operations ...
         $copyeditorPolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, ROLE_ID_COPYEDITOR, $roleAssignments[ROLE_ID_SECTION_EDITOR]));
 
         // 3) ... but only if the requested submission has been explicitly assigned to them.
-        import('app.Domain.Security.authorization.internal.CopyeditorSubmissionAssignmentPolicy');
+        import('app.Domain.Security.Authorization.Internal.CopyeditorSubmissionAssignmentPolicy');
         $copyeditorPolicy->addPolicy(new CopyeditorSubmissionAssignmentPolicy($request));
 
         $submissionEditingPolicy->addPolicy($copyeditorPolicy);

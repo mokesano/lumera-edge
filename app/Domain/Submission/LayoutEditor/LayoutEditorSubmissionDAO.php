@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Layouteditor;
+namespace App\Domain\Submission\LayoutEditor;
 
 
 /**
@@ -23,7 +23,7 @@ namespace App\Domain\Submission\Layouteditor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.layoutEditor.LayoutEditorSubmission');
+import('app.Domain.Submission.LayoutEditor.LayoutEditorSubmission');
 
 class LayoutEditorSubmissionDAO extends DAO {
     /** Helper DAOs */

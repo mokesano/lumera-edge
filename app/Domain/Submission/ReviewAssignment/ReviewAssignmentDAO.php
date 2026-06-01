@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Reviewassignment;
+namespace App\Domain\Submission\ReviewAssignment;
 
 
 /**
@@ -20,8 +20,8 @@ namespace App\Domain\Submission\Reviewassignment;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.reviewAssignment.ReviewAssignment');
-import('app.Domain.Submission.reviewAssignment.CoreReviewAssignmentDAO');
+import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
+import('core.Modules.submission.reviewAssignment.CoreReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends CoreReviewAssignmentDAO {
     

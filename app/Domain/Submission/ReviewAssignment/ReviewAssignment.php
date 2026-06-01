@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Submission\Reviewassignment;
+namespace App\Domain\Submission\ReviewAssignment;
 
 
 /**
@@ -20,7 +20,7 @@ namespace App\Domain\Submission\Reviewassignment;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-import('app.Domain.Submission.reviewAssignment.CoreReviewAssignment');
+import('core.Modules.submission.reviewAssignment.CoreReviewAssignment');
 
 class ReviewAssignment extends CoreReviewAssignment {
     
@@ -94,7 +94,7 @@ class ReviewAssignment extends CoreReviewAssignment {
      */
     public static function getReviewerRecommendationOptions() {
         // Bring in reviewer constants
-        import('app.Domain.Submission.reviewer.ReviewerSubmission');
+        import('app.Domain.Submission.Reviewer.ReviewerSubmission');
 
         static $reviewerRecommendationOptions = [
             '' => 'common.chooseOne',
