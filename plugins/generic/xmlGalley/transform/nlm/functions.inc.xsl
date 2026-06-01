@@ -4,7 +4,7 @@
   * plugins/generic/xmlGalley/transform/nlm/functions.inc.xsl
   *
   * Copyright (c) 2006-2009 MJ Suhonos
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * External XSL functions to support XSL within the XML Galleys plugin.
   *

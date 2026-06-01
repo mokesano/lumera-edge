@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2013-2017 Sangia Publishing House
  * Copyright (c) 2003-2016 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Default Locale keys used by JavaScript.  May be overridden by the calling template
  *}

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
  * Contributed by Lepidus Tecnologia
  *
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AbntSettingsForm
  * @ingroup plugins_citationFormats_abnt

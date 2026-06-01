@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2017-2025 Wizdam Team Dev
  * Copyright (c) 2017-2025 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * [WIZDAM EDITION] - API v2 Configuration
  *}

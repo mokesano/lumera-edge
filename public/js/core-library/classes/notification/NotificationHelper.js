@@ -10,7 +10,7 @@ $.core.classes.notification = $.core.classes.notification || {};
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NotificationHelper
  * @ingroup js_classes_notification

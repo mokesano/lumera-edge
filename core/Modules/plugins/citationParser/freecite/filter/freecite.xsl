@@ -4,7 +4,7 @@
   *
   * Copyright (c) 2013-2019 Simon Fraser University
   * Copyright (c) 2000-2019 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Simple mapping from Freecite web service into
   * a flat XML for conversion into a PHP array

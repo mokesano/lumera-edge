@@ -10,7 +10,7 @@ declare(strict_types=1);
  *
  * Copyright (c) 2017-Current Sangia Publishing
  * Copyright (c) 2017-Current Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_publisherId
  * @brief Wrapper for Wizdam Publisher Id plugin.

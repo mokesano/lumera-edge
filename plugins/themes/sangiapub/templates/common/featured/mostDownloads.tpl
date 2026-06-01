@@ -2,7 +2,7 @@
  * templates/common/feature/mostDownloads.tpl
  *
  * Copyright (c) 2018-2025 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Most Downloads Articles - FIXED
  *

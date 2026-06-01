@@ -8,7 +8,7 @@ namespace App\Domain\Payment\Form;
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PaymentSettingsForm
  * @ingroup payments

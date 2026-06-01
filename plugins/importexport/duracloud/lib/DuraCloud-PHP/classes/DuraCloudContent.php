@@ -5,7 +5,7 @@ declare(strict_types=1);
  * @file core.Modules.DuraCloudContent.inc.php
  *
  * Copyright (c) 2011 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DuraCloudContent
  * @ingroup duracloud_classes

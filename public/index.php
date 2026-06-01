@@ -6,7 +6,7 @@ declare(strict_types=1);
  *
  * Copyright (c) Wizdam Project / Rochmady
  * Based on legacy open source components (c) Sangia Publishing House
- * Distributed under the GNU GPL v2.
+ * Distributed under the GNU GPL v3.
  *
  * @ingroup index
  * @brief System Entry Point.

@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2013-2015 Sangia Publishing House Library
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Form for payment settings.
  *}

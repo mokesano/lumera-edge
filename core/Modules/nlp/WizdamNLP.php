@@ -5,7 +5,7 @@ declare(strict_types=1);
  * @file core.Modules.lib/nlp/WizdamNLP.inc.php
  *
  * Copyright (c) 2025 Wizdam Fork Team
- * Distributed under the GNU GPL v2.
+ * Distributed under the GNU GPL v3.
  *
  * @class WizdamNLP
  * @ingroup wizdam_lib_nlp

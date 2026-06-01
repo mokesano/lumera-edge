@@ -8,7 +8,7 @@ namespace App\Domain\Handler\Validation;
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2003-2019 Rochmady and Wizdam Team
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class HandlerValidatorJournal
  * @ingroup handler_validation

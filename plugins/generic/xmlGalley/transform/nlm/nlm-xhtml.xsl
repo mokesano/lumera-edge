@@ -8,7 +8,7 @@
 	<!--  Copyright 2006, MJ Suhonos <mj@robotninja.com>               -->
 	<!--  Contributions by Alf Eaton <alf@hubmed.org>                  -->
 	<!--                                                               -->
- 	<!-- Distributed under the GNU GPL v2.							   -->
+ 	<!-- Distributed under the GNU GPL v3.							   -->
 	<!-- For full terms see the file docs/COPYING.					   -->
 	<!--                                                               -->
 	<!-- ============================================================= -->

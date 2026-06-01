@@ -5,7 +5,7 @@ declare(strict_types=1);
  * @file plugins/reports/counter/classes/CounterReport.inc.php
  *
  * Copyright (c) 2014 University of Pittsburgh
- * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3 or later. For full terms see the file docs/COPYING.
  *
  * @class CounterReport
  * @ingroup plugins_reports_counter

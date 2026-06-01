@@ -7,7 +7,7 @@ namespace App\Domain\Admin\Form;
  * @file app.Classes.admin.form.PublisherSettingsForm.php
  *
  * Copyright (c) 2013-2025 Lumera Edge Project
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PublisherSettingsForm
  * @ingroup admin_form

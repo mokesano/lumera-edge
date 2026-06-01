@@ -12,7 +12,7 @@ namespace App\Pages\Policies;
  *
  * Copyright (c) 2025 Wizdam Team
  * Copyright (c) 2025 Rochmady
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_policies
  * @brief Handle requests for journal policies.

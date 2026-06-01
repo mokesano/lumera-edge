@@ -2,7 +2,7 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  * Copyright (c) 2013-2019 Sangia Publishing House
- * Distributed under the GNU GPL v2.
+ * Distributed under the GNU GPL v3.
  * REFACTORED: Wizdam Edition (Single Line Header for XML Safety)
  *}
 	{if $article->getDatePublished()}
