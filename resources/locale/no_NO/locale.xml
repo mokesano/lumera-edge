@@ -5,7 +5,7 @@
   * locale/no_NO/locale.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the no_NO (Norsk) locale.
@@ -1020,4 +1020,3 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betaling er initiert men ennå ikke mottatt</message>
 	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført</message>
 </locale>
-

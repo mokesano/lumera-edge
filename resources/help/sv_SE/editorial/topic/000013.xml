@@ -5,7 +5,7 @@
   * 000013.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Layoutredaktörens roll - Index 
@@ -17,4 +17,3 @@
 		<![CDATA[<p>Layoutredaktören får en epost från Manusredaktören eller Sektionsredaktören med begäran om layout för ett manuskript som har genomgått redigeringsstadiet. En Layoutredaktör som inte kan ta sig an arbetet svarar Sektionsredaktören via epost.</p>]]>	
 	</section>
 </topic>
-

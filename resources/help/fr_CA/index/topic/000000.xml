@@ -5,7 +5,7 @@
   * 000000.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Index Help Page 
@@ -18,4 +18,3 @@
 		<p> Parce qu&#x2019;OJS a des rôles et des titres bien définis pour chaque fonction et procédure de la publication.&mdash; depuis le directeur de la revue qui voit à la mise en place de celui-ci, à l&#x2019;auteur qui révise les épreuves.&mdash; chaque sujet couvert dans  &#x00AB;&#x00A0;aide&#x00A0;&#x00BB; réfère à qui devrait s&#x2019;occuper de chaque tâche. Basé sur le même principe, l&#x2019;accès au document est déterminé par qui fait quoi, et où dans le système. La page d&#x2019;aide est spécifique au contexte. Ce que l&#x2019;on peut visioner dépend de son rôle. Les usagers peuvent avoir plus d&#x2019;un rôle dans OJS. Un évaluateur peut aussi être un auteur, et un Directeur de revue peut aussi être un rédacteur. Ce que quelqu&#x2019;un voit dépend aussi de l&#x2019;endroit où il travaille à l&#x2019;intérieur d&#x2019;OJS. Le rôle et l&#x2019;endroit déterminent quelles rubriques d&#x2019;aide apparaissent à l&#x2019;écran, bien que l&#x2019;usager puisse naviguer vers des sujets reliés pour explorer toutes les facettes du système.</p>]]>
 	</section>
 </topic>
-

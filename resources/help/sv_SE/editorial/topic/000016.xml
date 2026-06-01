@@ -5,7 +5,7 @@
   * 000016.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Redaktörens roll Manuskript - Under granskning
@@ -17,4 +17,3 @@
 		<![CDATA[<p>Manuskript i denna lista inväntar granskning och beslut från Sektionsredaktören om huruvida det accepterats eller refuserats. Omfattningen av granskningsprocessen finns beskriven i tidskriftens granskningspolicy (t ex, är varje sektion i tidskriften utsatt för oberoende granskning? Hur många granskare per manuskript?). När en Sektionsredaktör eller Redaktör klickar på en titel i granskningslistan kommer de till manuskriptets Sida Granskning. Om Sektionsredaktören accepterar manuskriptet flyttas det till listan Under redigering. Om det refuseras flyttas det till Arkivet.</p>]]>	
 	</section>
 </topic>
-

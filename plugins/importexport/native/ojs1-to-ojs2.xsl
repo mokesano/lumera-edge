@@ -4,7 +4,7 @@
   * plugins/importexport/native/ojs1-to-ojs2.xsl
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * This XSL stylesheet transforms OJS 1.x import XML into OJS 2.x import XML.

@@ -5,7 +5,7 @@
   * locale/it_IT/locale.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -1109,4 +1109,3 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
 	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
 </locale>
-

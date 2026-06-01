@@ -2,7 +2,7 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 <!--
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Plik językowy dla pl_PL
@@ -788,4 +788,3 @@ Redaktor techniczny, {$journalName}</body>
 		<description>Wiadomość od redaktora technicznego, zawiera prośbę do autora o dodatkowe informacje na temat bibliografii.</description>
 	</email_text>
 </email_texts>
-

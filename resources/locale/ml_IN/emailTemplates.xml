@@ -5,7 +5,7 @@
   * locale/ml_IN/emailTemplateData.xml
   *
   * Copyright (c) 2017-2026 Simon Fraser University
-  * Copyright (c) 2003-2019 John Willinsky
+  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -952,4 +952,3 @@ Copy-Editor, {$journalName}
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
 </email_texts>
-
