@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Domain\Sectioneditor\Form;
+namespace App\Domain\SectionEditor\Form;
 
 /**
  * @defgroup sectionEditor_form
