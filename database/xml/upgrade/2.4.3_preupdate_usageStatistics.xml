@@ -9,7 +9,7 @@
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * 2.4.3 database updates XML file; Make a copy of article galleys and published articles
-  * tables that has ojs default usage statistics.
+  * tables that has app default usage statistics.
   *
   -->
 

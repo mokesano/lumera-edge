@@ -279,7 +279,7 @@
   <!-- Lumera DataImportHandler request handler. Please do not change. -->
   <requestHandler name="/dih" class="org.apache.solr.handler.dataimport.DataImportHandler">
     <lst name="defaults">
-      <str name="config">dih-ojs.xml</str>
+      <str name="config">dih-app.xml</str>
     </lst>
   </requestHandler>
 

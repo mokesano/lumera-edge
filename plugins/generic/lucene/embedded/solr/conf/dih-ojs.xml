@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
-  * dih-ojs.xml
+  * dih-app.xml
   *
   * Copyright (c) 2017-2026 Sangia Publishing House
   * Copyright (c) 2024-2026 Rochmady and Lumera Teams
@@ -12,6 +13,7 @@
   * not have to change this configuration file. Be aware that changes may break
   * the Lumera/solr communication protocol.
   -->
+
 <dataConfig>
   <dataSource name="http-post" type="ContentStreamDataSource" />
   <dataSource name="field" type="FieldReaderDataSource" />

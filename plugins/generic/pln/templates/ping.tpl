@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plnplugin SYSTEM "ping.dtd"> 
+
+<!--
+  * ping.tpl
+  -->
+  
 <plnplugin>
-	<ojsInfo>
+	<appInfo>
 		<release>{$appVersion|escape}</release>
-	</ojsInfo>
+	</appInfo>
 	<pluginInfo>
 		<release>{$pluginVersion.release|escape}</release>
 		<releaseDate>{$pluginVersion.date|escape}</releaseDate>

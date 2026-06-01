@@ -36,7 +36,7 @@
 
 	<!-- #2961: Stage 1 of 2.2 schema upgrade: Do not drop columns yet -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<schema file="dbscripts/xml/ojs_schema_stage1.xml" />
+		<schema file="dbscripts/xml/app_schema_stage1.xml" />
 	</upgrade>
 
 	<!-- Various tasks for pre-2.2 versions that do not require DAOs -->
@@ -105,7 +105,7 @@
 
 	<!--
 	  - The 2.3.3 preupdate scripts have been broken into pieces because
-	  - the features they affect were added in different versions of OJS.
+	  - the features they affect were added in different versions of APP.
 	  -->
 	<upgrade minversion="2.0.0.0" maxversion="2.3.2.9">
 		<data file="dbscripts/xml/upgrade/2.3.3_preupdate1.xml" />
@@ -177,8 +177,8 @@
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 
-	<!-- OJS schema -->
-	<schema file="dbscripts/xml/ojs_schema.xml" />
+	<!-- APP schema -->
+	<schema file="dbscripts/xml/app_schema.xml" />
 
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
@@ -396,14 +396,14 @@
 		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml"/>
 	</upgrade>
 
-	<!-- Frontedge schema upgrade for OJS 2.x -->
+	<!-- Frontedge schema upgrade for APP legacy 2.x -->
     <upgrade minversion="2.0.0.0" maxversion="2.4.9.9">
         <code function="syncArticleIdentifiers" />
         <data file="dbscripts/xml/upgrade/frontedge_schema.xml" />
         <code function="migrateLegacyInvoicesToFrontedge" />
     </upgrade>
     
-    <!-- Prepare for Frontedge schema upgrade from OJS 3.x -->
+    <!-- Prepare for Frontedge schema upgrade from APP legacy 3.x -->
     <upgrade minversion="3.0.0.0" maxversion="3.9.9.9">
         <code function="syncArticleIdentifiers" />
         <data file="dbscripts/xml/upgrade/frontedge_schema.xml" />

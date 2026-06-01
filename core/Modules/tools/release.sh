@@ -7,10 +7,10 @@
 # Copyright (c) 2003-2019 John Willinsky
 # Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
 #
-# Script to create an automated (incremental) release of OJS.
+# Script to create an automated (incremental) release of APP.
 #
 # Usage: release.sh <stable-branch> <distrib dir> <github access token>
-#  <stable_branch>: the stable branch to release from (e.g. ojs-stable-2_4_5)
+#  <stable_branch>: the stable branch to release from (e.g. app-stable-2_4_5)
 #  <distrib dir>: a directory containing prior tarballs to use in generating patches
 #  <github access token>: an API token from https://github.com/settings/applications
 #
@@ -37,14 +37,14 @@ git checkout ${BRANCH}
 git pull
 cd ../..
 
-# Determine the tag of the last release on this branch (e.g. ojs-2_4_5-0)
+# Determine the tag of the last release on this branch (e.g. app-2_4_5-0)
 LASTTAG=`git describe --tags --abbrev=0 $BRANCH`
 
 # Parse the version number information from the tag
 [[ $LASTTAG =~ ([a-z]+)-([0-9]+)_([0-9]+)_([0-9]+)-([0-9]+) ]] && APPLICATION="${BASH_REMATCH[1]}" && MAJOR="${BASH_REMATCH[2]}" && MINOR="${BASH_REMATCH[3]}" && REVISION="${BASH_REMATCH[4]}" && LASTBUILD="${BASH_REMATCH[5]}"
 THISBUILD=$((LASTBUILD+1))
 
-# Calculate the tag of the next release (e.g. ojs-2_4_5-1
+# Calculate the tag of the next release (e.g. app-2_4_5-1
 THISTAG=`echo $LASTTAG | sed -r 's/(.*-)([0-9]+)/echo \1$((\2+1))/ge'`
 
 # Other useful bits and pieces
@@ -59,7 +59,7 @@ sed -i	-e "s/<tag>.*<\/tag>/<tag>${THISTAG}<\/tag>/" \
 	-e "s/<date>.*<\/date>/<date>${BUILDDATE}<\/date>/" \
 	-e "s/<package>.*<\/package>/<package>http:\/\/pkp.sfu.ca\/${APPLICATION}\/download\/${APPLICATION}-${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.tar.gz<\/package>/" \
 	-e "s/\(<patch .*_to_\).*\(\.patch\.gz\)/\1${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz/" \
-	-e "s/<\/version>/	<patch from=\"${MAJOR}.${MINOR}.${REVISION}.${LASTBUILD}\">http:\/\/pkp.sfu.ca\/${APPLICATION}\/download\/patch\/ojs-${LASTPATCHSUFFIX}_to_${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz<\/patch>\n<\/version>/" \
+	-e "s/<\/version>/	<patch from=\"${MAJOR}.${MINOR}.${REVISION}.${LASTBUILD}\">http:\/\/pkp.sfu.ca\/${APPLICATION}\/download\/patch\/app-${LASTPATCHSUFFIX}_to_${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}.patch.gz<\/patch>\n<\/version>/" \
 	dbscripts/xml/version.xml
 git add dbscripts/xml/version.xml
 

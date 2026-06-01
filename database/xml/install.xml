@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
+
 <!--
   * dbscripts/xml/install.xml
   *
@@ -34,11 +35,11 @@
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 
-	<!-- PKP data components -->
+	<!-- CORE data components -->
 	<data file="lib/pkp/xml/mutexData.xml" />
 	
-	<!-- OJS schema -->
-	<schema file="dbscripts/xml/ojs_schema.xml" />
+	<!-- APP schema -->
+	<schema file="dbscripts/xml/app_schema.xml" />
 
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />

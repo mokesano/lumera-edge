@@ -15,10 +15,10 @@ for API documentation.
 
 License
 -------
-OJS is licensed under the GNU General Public License v2. See the file
+APP is licensed under the GNU General Public License v2. See the file
 docs/COPYING for the complete terms of this license.
 
-Third parties are welcome to modify and redistribute OJS in entirety or parts
+Third parties are welcome to modify and redistribute APP in entirety or parts
 according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
 
@@ -27,7 +27,7 @@ System Requirements
 -------------------
 Recommended server requirements:
 
-	* PHP >= 4.2.x (including PHP 5.x) with cURL library support
+	* PHP >= 8.x with cURL library support
 
 As PKP does not have the resources to test every possible combination of
 software versions and platforms, no guarantee of correct operation or support is

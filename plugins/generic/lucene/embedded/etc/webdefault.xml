@@ -425,10 +425,10 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Solr Admin</web-resource-name>
-      <url-pattern>/ojs/admin/*</url-pattern>
-      <url-pattern>/ojs/admin</url-pattern>
-      <url-pattern>/ojs/select/*</url-pattern>
-      <url-pattern>/ojs/select</url-pattern>
+      <url-pattern>/app/admin/*</url-pattern>
+      <url-pattern>/app/admin</url-pattern>
+      <url-pattern>/app/select/*</url-pattern>
+      <url-pattern>/app/select</url-pattern>
       <url-pattern>/admin/*</url-pattern>
       <url-pattern>/admin</url-pattern>
       <url-pattern>/select/*</url-pattern>
@@ -443,12 +443,12 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Solr Update</web-resource-name>
-      <url-pattern>/ojs/update/*</url-pattern>
-      <url-pattern>/ojs/update</url-pattern>
+      <url-pattern>/app/update/*</url-pattern>
+      <url-pattern>/app/update</url-pattern>
       <url-pattern>/update/*</url-pattern>
       <url-pattern>/update</url-pattern>
-      <url-pattern>/ojs/dih/*</url-pattern>
-      <url-pattern>/ojs/dih</url-pattern>
+      <url-pattern>/app/dih/*</url-pattern>
+      <url-pattern>/app/dih</url-pattern>
       <url-pattern>/dih/*</url-pattern>
       <url-pattern>/dih</url-pattern>
     </web-resource-collection>
