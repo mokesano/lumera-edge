@@ -12,9 +12,6 @@ Lumera Edge adalah platform open-source untuk manajemen editorial dan penerbitan
   <a href="https://packagist.org/packages/lumera/lumera-edge">
     <img src="https://img.shields.io/badge/packagist-wizdam%2Flumera--edge-F28D1A?style=for-the-badge&logo=packagist&logoColor=white" alt="Packagist">
   </a>
-  <a href="https://github.com/mokesano/lumera-edge/actions">
-    <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge&logo=github-actions&logoColor=white" alt="Build Status">
-  </a>
   <a href="https://github.com/mokesano/lumera-edge/security/advisories">
     <img src="https://img.shields.io/badge/security-policy-important?style=for-the-badge&logo=github" alt="Security Policy">
   </a>
