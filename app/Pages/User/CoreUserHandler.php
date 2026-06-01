@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Pages\User;
 
+use App\Domain\Core\Application;
+use Core\Kernel\JSONMessage;
+
 /**
  * PSR-4 user utility handler for AJAX-style user actions.
  */
@@ -18,13 +21,14 @@ class CoreUserHandler extends UserHandler
     public function getInterests($args = [], $request = null)
     {
         if (!$request) {
+            import('app.Domain.Core.Application');
             $request = Application::get()->getRequest();
         }
 
         $filter = trim((string) $request->getUserVar('term'));
 
         import('core.Modules.user.InterestManager');
-        $interestManager = new InterestManager();
+        $interestManager = new \InterestManager();
         $interests = $interestManager->getAllInterests($filter);
 
         import('core.Kernel.JSONMessage');
