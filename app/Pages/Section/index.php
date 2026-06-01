@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Section;
+
 /**
  * @file pages/section/index.php
  *
@@ -14,14 +16,13 @@ switch ($op) {
     case 'articles':
     case '':
         // Jika hanya mengakses /section
-        define('HANDLER_CLASS', 'SectionHandler');
-        import('app.Pages.section.SectionHandler');
+        define('HANDLER_CLASS', \App\Pages\Section\SectionHandler::class);
+        import('app.Pages.Section.SectionHandler');
         break;
-        
+
     default:
         // Menangkap semua string dinamis (nama section) sebagai $op
-        define('HANDLER_CLASS', 'SectionHandler');
-        import('app.Pages.section.SectionHandler');
+        define('HANDLER_CLASS', \App\Pages\Section\SectionHandler::class);
+        import('app.Pages.Section.SectionHandler');
         break;
 }
-?>

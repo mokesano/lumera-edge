@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Payment;
+
 /**
  * @defgroup pages_payment
  */
- 
+
 /**
  * @file pages/payment/index.php
  *
@@ -18,10 +20,8 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	case 'plugin':
-		define('HANDLER_CLASS', 'PaymentHandler');
-		import('app.Pages.payment.PaymentHandler');
-		break;
+    case 'plugin':
+        define('HANDLER_CLASS', \App\Pages\Payment\PaymentHandler::class);
+        import('app.Pages.Payment.PaymentHandler');
+        break;
 }
-
-?>

@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Index;
+
 /**
  * @defgroup pages_index
  */
- 
+
 /**
  * @file pages/index/index.php
  *
@@ -13,15 +15,13 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_index
- * @brief Handle site index requests. 
+ * @brief Handle site index requests.
  *
  */
 
 switch ($op) {
-	case 'index':
-		define('HANDLER_CLASS', 'IndexHandler');
-		import('app.Pages.index.IndexHandler');
-		break;
+    case 'index':
+        define('HANDLER_CLASS', \App\Pages\Index\IndexHandler::class);
+        import('app.Pages.Index.IndexHandler');
+        break;
 }
-
-?>

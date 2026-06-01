@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Issue;
+
 /**
  * @defgroup pages_issue
  */
- 
+
 /**
  * @file pages/issue/index.php
  *
@@ -13,22 +15,20 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_issue
- * @brief Handle requests for issue functions. 
+ * @brief Handle requests for issue functions.
  *
  */
 
 switch ($op) {
-	case 'index':
-	case 'current':
-	case 'view':
-	case 'archive':
-	case 'viewIssue':
-	case 'viewDownloadInterstitial':
-	case 'viewFile':
-	case 'download':
-		define('HANDLER_CLASS', 'IssueHandler');
-		import('app.Pages.issue.IssueHandler');
-		break;
+    case 'index':
+    case 'current':
+    case 'view':
+    case 'archive':
+    case 'viewIssue':
+    case 'viewDownloadInterstitial':
+    case 'viewFile':
+    case 'download':
+        define('HANDLER_CLASS', \App\Pages\Issue\IssueHandler::class);
+        import('app.Pages.Issue.IssueHandler');
+        break;
 }
-
-?>

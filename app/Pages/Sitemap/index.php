@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Sitemap;
+
 /**
  * @defgroup pages_sitemap
  */
- 
+
 /**
  * @file pages/sitemap/index.php
  *
@@ -13,15 +15,13 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_sitemap
- * @brief Produce a sitemap in XML format for submitting to search engines. 
+ * @brief Produce a sitemap in XML format for submitting to search engines.
  *
  */
 
 switch ($op) {
-	case 'index':
-		define('HANDLER_CLASS', 'SitemapHandler');
-		import('app.Pages.sitemap.SitemapHandler');
-		break;
+    case 'index':
+        define('HANDLER_CLASS', \App\Pages\Sitemap\SitemapHandler::class);
+        import('app.Pages.Sitemap.SitemapHandler');
+        break;
 }
-
-?>

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Checkout;
+
 /**
  * @file pages/checkout/index.php
  *
@@ -20,12 +22,11 @@ switch ($op) {
     case 'index':
     case 'cart':
     case 'checkoutSubmit':
-	case 'billing':
-	case 'payment':
-	case 'finalize':
-	case 'updateCartAjax':
-		define('HANDLER_CLASS', 'CheckoutHandler');
-		import('app.Pages.checkout.CheckoutHandler');
-		break;
+    case 'billing':
+    case 'payment':
+    case 'finalize':
+    case 'updateCartAjax':
+        define('HANDLER_CLASS', \App\Pages\Checkout\CheckoutHandler::class);
+        import('app.Pages.Checkout.CheckoutHandler');
+        break;
 }
-?>

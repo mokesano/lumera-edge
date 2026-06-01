@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Document;
+
 /**
  * @file pages/document/index.php
  *
@@ -18,16 +20,15 @@ switch ($op) {
     // Letter of Acceptance
     //
     case 'loa':
-        define('HANDLER_CLASS', 'LoAHandler');
-        import('app.Pages.document.LoAHandler'); 
+        define('HANDLER_CLASS', \App\Pages\Document\LoAHandler::class);
+        import('app.Pages.Document.LoAHandler');
         break;
-        
-    // 
+
+    //
     // certificate fo Editor & Reviewer
     //
     case 'certificate':
-        define('HANDLER_CLASS', 'CertificateHandler');
-        import('app.Pages.document.CertificateHandler');
+        define('HANDLER_CLASS', \App\Pages\Document\CertificateHandler::class);
+        import('app.Pages.Document.CertificateHandler');
         break;
 }
-?>

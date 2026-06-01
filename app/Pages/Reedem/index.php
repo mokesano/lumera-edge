@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Reedem;
+
 /**
  * @file pages/redeem/index.php
  *
@@ -11,8 +13,7 @@ declare(strict_types=1);
 switch ($op) {
     case 'index':    // Dasbor dompet virtual
     case 'exchange': // Proses penukaran poin
-        define('HANDLER_CLASS', 'RedeemHandler');
-        import('app.Pages.redeem.RedeemHandler');
+        define('HANDLER_CLASS', \App\Pages\Reedem\RedeemHandler::class);
+        import('app.Pages.Reedem.RedeemHandler');
         break;
 }
-?>

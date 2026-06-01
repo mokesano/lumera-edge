@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Copyeditor;
+
 /**
  * @defgroup pages_copyeditor
  */
@@ -18,55 +20,53 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	//
-	// Assignment Tracking
-	//
-	case 'submission':
-	case 'completeCopyedit':
-	case 'completeFinalCopyedit':
-	case 'uploadCopyeditVersion':
-	//
-	// Misc.
-	//
-	case 'downloadFile':
-	case 'viewFile':
-	//
-	// Proofreading Actions
-	//
-	case 'authorProofreadingComplete':
-	case 'proofGalley':
-	case 'proofGalleyTop':
-	case 'proofGalleyFile':
-	//
-	// Metadata Actions
-	//
-	case 'viewMetadata':
-	case 'saveMetadata':
-	case 'removeArticleCoverPage':
-	//
-	// Citation Editing
-	//
-	case 'submissionCitations':
-		define('HANDLER_CLASS', 'SubmissionCopyeditHandler');
-		import('app.Pages.copyeditor.SubmissionCopyeditHandler');
-		break;
-	//
-	// Submission Comments
-	//
-	case 'viewLayoutComments':
-	case 'postLayoutComment':
-	case 'viewCopyeditComments':
-	case 'postCopyeditComment':
-	case 'editComment':
-	case 'saveComment':
-	case 'deleteComment':
-		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
-		import('app.Pages.copyeditor.SubmissionCommentsHandler');
-		break;
-	case 'index':
-	case 'instructions':
-		define('HANDLER_CLASS', 'CopyeditorHandler');
-		import('app.Pages.copyeditor.CopyeditorHandler');
+    //
+    // Assignment Tracking
+    //
+    case 'submission':
+    case 'completeCopyedit':
+    case 'completeFinalCopyedit':
+    case 'uploadCopyeditVersion':
+    //
+    // Misc.
+    //
+    case 'downloadFile':
+    case 'viewFile':
+    //
+    // Proofreading Actions
+    //
+    case 'authorProofreadingComplete':
+    case 'proofGalley':
+    case 'proofGalleyTop':
+    case 'proofGalleyFile':
+    //
+    // Metadata Actions
+    //
+    case 'viewMetadata':
+    case 'saveMetadata':
+    case 'removeArticleCoverPage':
+    //
+    // Citation Editing
+    //
+    case 'submissionCitations':
+        define('HANDLER_CLASS', \App\Pages\Copyeditor\SubmissionCopyeditHandler::class);
+        import('app.Pages.Copyeditor.SubmissionCopyeditHandler');
+        break;
+    //
+    // Submission Comments
+    //
+    case 'viewLayoutComments':
+    case 'postLayoutComment':
+    case 'viewCopyeditComments':
+    case 'postCopyeditComment':
+    case 'editComment':
+    case 'saveComment':
+    case 'deleteComment':
+        define('HANDLER_CLASS', \App\Pages\Copyeditor\SubmissionCommentsHandler::class);
+        import('app.Pages.Copyeditor.SubmissionCommentsHandler');
+        break;
+    case 'index':
+    case 'instructions':
+        define('HANDLER_CLASS', \App\Pages\Copyeditor\CopyeditorHandler::class);
+        import('app.Pages.Copyeditor.CopyeditorHandler');
 }
-
-?>

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Gifts;
+
 /**
  * @defgroup pages_gifts
  */
@@ -19,12 +21,10 @@ declare(strict_types=1);
  */
 
 switch ($op) {
-	case 'purchaseGiftSubscription':
-	case 'payPurchaseGiftSubscription':
-	case 'thankYou':
-		define('HANDLER_CLASS', 'GiftsHandler');
-		import('app.Pages.gifts.GiftsHandler');
-		break;
+    case 'purchaseGiftSubscription':
+    case 'payPurchaseGiftSubscription':
+    case 'thankYou':
+        define('HANDLER_CLASS', \App\Pages\Gifts\GiftsHandler::class);
+        import('app.Pages.Gifts.GiftsHandler');
+        break;
 }
-
-?>

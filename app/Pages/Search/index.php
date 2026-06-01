@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Pages\Search;
+
 /**
  * @defgroup pages_search
  */
@@ -25,9 +27,7 @@ switch ($op) {
     case 'titles':
     case 'categories':
     case 'category':
-        define('HANDLER_CLASS', 'SearchHandler');
-        import('app.Pages.search.SearchHandler');
+        define('HANDLER_CLASS', \App\Pages\Search\SearchHandler::class);
+        import('app.Pages.Search.SearchHandler');
         break;
 }
-
-?>
