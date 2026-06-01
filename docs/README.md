@@ -2,7 +2,7 @@
 
 Lumera Edge adalah platform open-source untuk manajemen editorial dan penerbitan ilmiah. Proyek ini menargetkan modernisasi workflow penerbitan dengan struktur aplikasi yang lebih modular, autoload Composer, dan standar kode PHP modern.
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/mokesano/lumera-edge">
     <img src="https://img.shields.io/badge/PHP-^8.1-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
   </a>
