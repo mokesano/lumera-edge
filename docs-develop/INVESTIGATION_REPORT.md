@@ -76,8 +76,8 @@ Ini menyebabkan:
 File-file di folder ini sudah di-mapping via PSR-4:
 ```json
 "psr-4": {
-    "Wizdam\\Modules\\": ["core/Modules/"],
-    "Wizdam\\Kernel\\": ["core/Kernel/"]
+    "Lumera\\Modules\\": ["core/Modules/"],
+    "Lumera\\Kernel\\": ["core/Kernel/"]
 }
 ```
 
@@ -190,7 +190,7 @@ app/
 core/
 ├── Modules/
 │   └── validation/
-│       ├── ValidatorDate.php     ✅ namespace Wizdam\Modules\Validation
+│       ├── ValidatorDate.php     ✅ namespace Lumera\Modules\Validation
 │       └── ...                   (atau tanpa namespace untuk legacy)
 └── ...
 ```

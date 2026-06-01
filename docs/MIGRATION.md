@@ -25,7 +25,7 @@ Lumera Edge 1.0 adalah hasil refactoring total dari Aplikasi Legacy v2.x dengan 
 
 | Aspek | Legacy v2.x | Lumera Edge 1.0 |
 |-------|---------|------------|
-| **Namespace** | Global (PKP*, OJS*) | PSR-4 (Wizdam\Core\*, Wizdam\App\*) |
+| **Namespace** | Global (PKP*, OJS*) | PSR-4 (Lumera\Core\*, Lumera\App\*) |
 | **Struktur** | `lib/pkp/`, `lib/ojs/`, `classes/` | `core/Kernel/`, `core/Modules/`, `app/` |
 | **Paradigma** | Journal-Centric | Publisher-Centric |
 | **Dependencies** | Manual includes | Composer + PSR-4 |
@@ -116,8 +116,8 @@ Application::getInstance();
 #### Cara Baru (Wizdam 1.0)
 ```php
 // PSR-4 autoloading (recommended)
-use Wizdam\Core\CoreApplication;
-use Wizdam\App\Classes\publisher\AppPublisher;
+use Lumera\Core\CoreApplication;
+use Lumera\App\Classes\publisher\AppPublisher;
 
 // Static calls
 CoreApplication::getInstance();
@@ -258,9 +258,9 @@ class MyCustomClass extends Application {
 **Sesudah:**
 ```php
 <?php
-namespace Wizdam\App\Classes\custom;
+namespace Lumera\App\Classes\custom;
 
-use Wizdam\Core\CoreApplication;
+use Lumera\Core\CoreApplication;
 
 class MyCustomClass extends CoreApplication {
     function __construct() {
@@ -296,11 +296,11 @@ $templateMgr->display('mycustom.tpl');
 **Kode baru (`app/Pages/mycustom/MyCustomHandler.inc.php`):**
 ```php
 <?php
-namespace Wizdam\App\Pages\mycustom;
+namespace Lumera\App\Pages\mycustom;
 
-use Wizdam\Core\CoreRequest;
-use Wizdam\Modules\security\Validation;
-use Wizdam\Core\CoreTemplateManager;
+use Lumera\Core\CoreRequest;
+use Lumera\Modules\security\Validation;
+use Lumera\Core\CoreTemplateManager;
 
 class MyCustomHandler {
     function index($args, $request) {
@@ -366,9 +366,9 @@ class MyPlugin extends GenericPlugin {
 **Plugin class baru:**
 ```php
 <?php
-namespace Wizdam\Plugins\Generic\MyPlugin;
+namespace Lumera\Plugins\Generic\MyPlugin;
 
-use Wizdam\Modules\plugins\GenericPlugin;
+use Lumera\Modules\plugins\GenericPlugin;
 
 class MyPlugin extends GenericPlugin {
     function register($category, $path) {
@@ -661,7 +661,7 @@ RENAME TABLE journals TO presses;
 require_once('lib/pkp/classes/core/Application.inc.php');
 
 // Correct (use autoloader)
-use Wizdam\Core\CoreApplication;
+use Lumera\Core\CoreApplication;
 ```
 
 ### Plugin Not Loading
