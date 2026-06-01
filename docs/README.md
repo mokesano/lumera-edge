@@ -4,12 +4,12 @@ Lumera Edge adalah platform open-source untuk manajemen editorial dan penerbitan
 
 <p align="center">
   <a href="https://github.com/mokesano/lumera-edge">
-    <img src="https://img.shields.io/badge/PHP-^8.4-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
+    <img src="https://img.shields.io/badge/PHP-^8.1-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
   </a>
   <a href="https://github.com/mokesano/lumera-edge/blob/main/docs/LICENSE">
     <img src="https://img.shields.io/badge/license-GPL%203.0--only-blue?style=for-the-badge" alt="License">
   </a>
-  <a href="https://packagist.org/packages/wizdam/lumera-edge">
+  <a href="https://packagist.org/packages/lumera/lumera-edge">
     <img src="https://img.shields.io/badge/packagist-wizdam%2Flumera--edge-F28D1A?style=for-the-badge&logo=packagist&logoColor=white" alt="Packagist">
   </a>
   <a href="https://github.com/mokesano/lumera-edge/actions">
@@ -17,9 +17,6 @@ Lumera Edge adalah platform open-source untuk manajemen editorial dan penerbitan
   </a>
   <a href="https://github.com/mokesano/lumera-edge/security/advisories">
     <img src="https://img.shields.io/badge/security-policy-important?style=for-the-badge&logo=github" alt="Security Policy">
-  </a>
-  <a href="https://github.com/mokesano/lumera-edge/releases">
-    <img src="https://img.shields.io/badge/release-v1.0.0--alpha-lightgrey?style=for-the-badge" alt="Release">
   </a>
 </p>
 
