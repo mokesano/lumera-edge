@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a060089c7c78afcbc1f67bc18637c61b",
+    "content-hash": "d7c713c346f625c5825055ed7629c2f4",
     "packages": [
         {
             "name": "adodb/adodb-php",
@@ -372,25 +372,26 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.10.5",
+            "version": "7.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "7c8d84b39e680315f687e8662a9d6fb0865c5148"
+                "reference": "c987f8ce84b8434fa430795eca0f3430663da72b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7c8d84b39e680315f687e8662a9d6fb0865c5148",
-                "reference": "7c8d84b39e680315f687e8662a9d6fb0865c5148",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c987f8ce84b8434fa430795eca0f3430663da72b",
+                "reference": "c987f8ce84b8434fa430795eca0f3430663da72b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^2.3",
-                "guzzlehttp/psr7": "^2.8",
+                "guzzlehttp/promises": "^2.5",
+                "guzzlehttp/psr7": "^2.11",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
-                "symfony/deprecation-contracts": "^2.2 || ^3.0"
+                "symfony/deprecation-contracts": "^2.5 || ^3.0",
+                "symfony/polyfill-php80": "^1.24"
             },
             "provide": {
                 "psr/http-client-implementation": "1.0"
@@ -479,7 +480,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.10.5"
+                "source": "https://github.com/guzzle/guzzle/tree/7.11.0"
             },
             "funding": [
                 {
@@ -495,24 +496,25 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-27T11:53:46+00:00"
+            "time": "2026-06-02T12:40:51+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "09e8a212562fb1fb6a512c4156ed71525969d6c2"
+                "reference": "4360e982f87f5f258bf872d094647791db2f4c8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/09e8a212562fb1fb6a512c4156ed71525969d6c2",
-                "reference": "09e8a212562fb1fb6a512c4156ed71525969d6c2",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/4360e982f87f5f258bf872d094647791db2f4c8e",
+                "reference": "4360e982f87f5f258bf872d094647791db2f4c8e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.5 || ^8.0"
+                "php": "^7.2.5 || ^8.0",
+                "symfony/deprecation-contracts": "^2.5 || ^3.0"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
@@ -562,7 +564,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.4.1"
+                "source": "https://github.com/guzzle/promises/tree/2.5.0"
             },
             "funding": [
                 {
@@ -578,27 +580,29 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-20T22:57:30+00:00"
+            "time": "2026-06-02T12:23:43+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.10.4",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "d2a1a094e396da8957e797489fddaf860c340cfc"
+                "reference": "bbb5e61349fa5cb822b3e87842b951088b76b81f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/d2a1a094e396da8957e797489fddaf860c340cfc",
-                "reference": "d2a1a094e396da8957e797489fddaf860c340cfc",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/bbb5e61349fa5cb822b3e87842b951088b76b81f",
+                "reference": "bbb5e61349fa5cb822b3e87842b951088b76b81f",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-factory": "^1.0",
                 "psr/http-message": "^1.1 || ^2.0",
-                "ralouphie/getallheaders": "^3.0"
+                "ralouphie/getallheaders": "^3.0",
+                "symfony/deprecation-contracts": "^2.5 || ^3.0",
+                "symfony/polyfill-php80": "^1.24"
             },
             "provide": {
                 "psr/http-factory-implementation": "1.0",
@@ -679,7 +683,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.10.4"
+                "source": "https://github.com/guzzle/psr7/tree/2.11.0"
             },
             "funding": [
                 {
@@ -695,7 +699,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-29T12:59:07+00:00"
+            "time": "2026-06-02T12:30:48+00:00"
         },
         {
             "name": "midtrans/midtrans-php",
@@ -2170,17 +2174,17 @@
             "time": "2026-02-14T00:12:28+00:00"
         },
         {
-            "name": "wizdamdebug/debug-toolbar",
-            "version": "v1.0.2.0",
+            "name": "wizdam/debug-toolbar",
+            "version": "v1.0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mokesano/DebugToolbar.git",
-                "reference": "b74e6b4cd464614da43d305cb45b201da5dbbba0"
+                "reference": "266362609542d571e43526cb459331436cc41274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mokesano/DebugToolbar/zipball/b74e6b4cd464614da43d305cb45b201da5dbbba0",
-                "reference": "b74e6b4cd464614da43d305cb45b201da5dbbba0",
+                "url": "https://api.github.com/repos/mokesano/DebugToolbar/zipball/266362609542d571e43526cb459331436cc41274",
+                "reference": "266362609542d571e43526cb459331436cc41274",
                 "shasum": ""
             },
             "require": {
@@ -2196,7 +2200,7 @@
             "type": "library",
             "extra": {
                 "wizdam": {
-                    "compatible-with": "OJS 2.4.8.5+",
+                    "compatible-with": "Lumera and legacy systems running PHP 8.0+",
                     "php-versions": [
                         "8.0",
                         "8.1",
@@ -2209,12 +2213,12 @@
             },
             "autoload": {
                 "psr-4": {
-                    "WizdamDebugToolbar\\": "src/"
+                    "DebugToolbar\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "WizdamDebugToolbar\\Tests\\": "tests/"
+                    "DebugToolbar\\Tests\\": "tests/"
                 }
             },
             "archive": {
@@ -2247,13 +2251,13 @@
                 "adodb",
                 "debug",
                 "debugbar",
-                "ojs",
+                "lumera",
                 "php84",
-                "toolbar",
-                "wizdam"
+                "sciecola",
+                "toolbar"
             ],
             "support": {
-                "source": "https://github.com/mokesano/DebugToolbar/tree/v1.0.2.0",
+                "source": "https://github.com/mokesano/DebugToolbar/tree/v1.0.2.1",
                 "issues": "https://github.com/mokesano/DebugToolbar/issues"
             },
             "funding": [
@@ -2262,7 +2266,7 @@
                     "url": "https://github.com/mokesano"
                 }
             ],
-            "time": "2026-05-27T05:23:16+00:00"
+            "time": "2026-06-03T10:05:05+00:00"
         },
         {
             "name": "xendit/xendit-php",
