@@ -4,8 +4,8 @@ const path = require('path');
 // Source: node_modules/tinymce
 const tinymceSrc = path.join(__dirname, '..', 'node_modules', 'tinymce');
 
-// Destination: public/js/lib/tinymce
-const tinymceDest = path.join(__dirname, '..', 'public', 'js', 'lib', 'tinymce');
+// Destination: public/js/tinymce
+const tinymceDest = path.join(__dirname, '..', 'public', 'js', 'tinymce');
 
 // Remove old version
 if (fs.existsSync(tinymceDest)) {
@@ -29,4 +29,4 @@ filesToRemove.forEach(file => {
     }
 });
 
-console.log('✓ TinyMCE successfully built and copied to public/js/lib/tinymce/');
+console.log('✓ TinyMCE successfully built and copied to public/js/tinymce/');

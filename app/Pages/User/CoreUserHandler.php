@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Pages\User;
 
 use App\Domain\Core\Application;
-use Core\Kernel\JSONMessage;
+use Lumera\Kernel\JSONMessage;
 
 /**
  * PSR-4 user utility handler for AJAX-style user actions.
