@@ -8,7 +8,7 @@ storage/cache/*
 !storage/cache/t_cache/.gitkeep
 !storage/cache/t_compile/.gitkeep
 !storage/cache/t_config/.gitkeep
-**/cache/*
+# **/cache/* core/Modules/cache/ and core/Modules/ModuleName/cache/ directories
 !**/cache/.gitkeep
 
 # Abaikan semua file .json.gz di seluruh repositori
