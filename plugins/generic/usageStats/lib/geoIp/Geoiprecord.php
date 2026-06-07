@@ -22,10 +22,10 @@ declare(strict_types=1);
 
 define("FULL_RECORD_LENGTH",50);
 
-require_once 'geoip.inc';
+require_once 'GeoIP.php';
 require_once 'geoipregionvars.php';
 
-class geoiprecord {
+class Geoiprecord {
   var $country_code;
   var $country_code3;
   var $country_name;
