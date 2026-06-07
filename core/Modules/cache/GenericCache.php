@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * @file core.Modules.cache/GenericCache.inc.php
+ * @file core/Modules/Cache/GenericCache.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -14,13 +14,7 @@ declare(strict_types=1);
  * @brief Provides implementation-independent caching. Although this class is intended
  * to be overridden with a more specific implementation, it can be used as the
  * null cache.
- * [WIZDAM EDITION] PHP 7.4+ Compatible with Smart Error Shims
  */
-
-// Pseudotype to represent a cache miss
-class generic_cache_miss {
-    // No properties or methods; this is just a marker class.
-}
 
 class GenericCache {
     
@@ -39,7 +33,7 @@ class GenericCache {
 
     /**
      * Object representing a cache miss
-     * @var generic_cache_miss
+     * @var GenericCacheMiss
      */
     public $cacheMiss;
 
@@ -51,16 +45,12 @@ class GenericCache {
 
     /**
      * Constructor.
-     * Instantiate a cache.
-     * @param $context string
-     * @param $cacheId string 
-     * @param $fallback callback 
      */
     public function __construct($context, $cacheId, $fallback) {
         $this->context = $context;
         $this->cacheId = $cacheId;
         $this->fallback = $fallback;
-        $this->cacheMiss = new generic_cache_miss;
+        $this->cacheMiss = new GenericCacheMiss;
     }
 
     /**
@@ -79,7 +69,6 @@ class GenericCache {
 
     /**
      * Get an object from cache, using the fallback if necessary.
-     * [MODERNISASI] Optimized type checking and callback
      * @param $id
      * @return mixed
      */
@@ -87,7 +76,7 @@ class GenericCache {
         $result = $this->getCache($id);
         
         // [WIZDAM] Menggunakan instanceof lebih cepat dan bersih daripada get_class
-        if ($result instanceof generic_cache_miss) {
+        if ($result instanceof GenericCacheMiss) {
             if ($this->fallback) {
                 // [MODERNISASI] Hapus & pada $this (PHP 7 objects are passed by handle)
                 // call_user_func aman untuk berbagai jenis callback
@@ -98,8 +87,7 @@ class GenericCache {
     }
 
     /**
-     * Set an object in the cache. This function should be overridden
-     * by subclasses.
+     * Set an object in the cache. This function should be overridden by subclasses.
      * @param $id
      * @param $value
      * @return mixed
@@ -117,9 +105,7 @@ class GenericCache {
     }
 
     /**
-     * Set the entire contents of the cache. May (should) be overridden
-     * by subclasses.
-     * [MODERNISASI] REMOVED REFERENCE (&) TO FIX PHP WARNING
+     * Set the entire contents of the cache. May (should) be overridden by subclasses.
      * @param $contents array of id -> value pairs
      * @return mixed
      */
@@ -133,8 +119,7 @@ class GenericCache {
     }
 
     /**
-     * Get an object from the cache. This function should be overridden
-     * by subclasses.
+     * Get an object from the cache. This function should be overridden by subclasses.
      * @param $id
      */
     public function getCache($id) {
@@ -142,8 +127,7 @@ class GenericCache {
     }
 
     /**
-     * Set an object in the cache. This function should be overridden
-     * by subclasses.
+     * Set an object in the cache. This function should be overridden by subclasses.
      * @param $id
      * @param $value
      */
@@ -184,5 +168,4 @@ class GenericCache {
         return time();
     }
 }
-
 ?>
