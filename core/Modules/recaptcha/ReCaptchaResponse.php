@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /*
  * This is a PHP library that handles calling reCAPTCHA.
  *    - Documentation and latest version
@@ -55,8 +57,6 @@ function _recaptcha_qsencode ($data) {
         $req=substr($req,0,strlen($req)-1);
         return $req;
 }
-
-
 
 /**
  * Submits an HTTP POST to a reCAPTCHA server
@@ -150,8 +150,6 @@ function recaptcha_get_html ($pubkey, $error = null, $use_ssl = false)
   		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
 	</noscript>';
 }
-
-
 
 
 /**
@@ -351,6 +349,5 @@ function recaptcha_mailhide_html($pubkey, $privkey, $email) {
 		"' onclick=\"window.open('" . htmlentities ($url) . "', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;\" title=\"Reveal this e-mail address\">...</a>@" . htmlentities ($emailparts [1]);
 
 }
-
 
 ?>
