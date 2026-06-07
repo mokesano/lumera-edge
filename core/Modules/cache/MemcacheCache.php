@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * @file core.Modules.cache/MemcacheCache.inc.php
+ * @file core/Modules/Cache/MemcacheCache.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
@@ -13,22 +13,12 @@ declare(strict_types=1);
  * @see GenericCache
  *
  * @brief Provides caching based on Memcache.
- * [WIZDAM EDITION] PHP 8 Safe & Modernized
  */
 
 import('core.Modules.cache.GenericCache');
 
-// FIXME This should use connection pooling
-// WARNING: This cache MUST be loaded in batch, or else many cache
-// misses will result.
-
-// Pseudotypes used to represent false and null values in the cache
-class memcache_false {
-}
-class memcache_null {
-}
-
 class MemcacheCache extends GenericCache {
+
     /**
      * Connection to use for caching.
      * @var Memcache
@@ -48,8 +38,7 @@ class MemcacheCache extends GenericCache {
     public $expire;
 
     /**
-     * Constructor
-     * Instantiate a cache. 
+     * Constructor.
      */
     public function __construct($context, $cacheId, $fallback, $hostname, $port) {
         parent::__construct($context, $cacheId, $fallback);
@@ -222,5 +211,4 @@ class MemcacheCache extends GenericCache {
         $this->contextChecked = false;
     }
 }
-
 ?>
