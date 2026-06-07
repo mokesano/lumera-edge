@@ -23,7 +23,7 @@ declare(strict_types=1);
 define("FULL_RECORD_LENGTH",50);
 
 require_once 'GeoIP.php';
-require_once 'geoipregionvars.php';
+require_once 'Geoipregionvars.php';
 
 class Geoiprecord {
   var $country_code;

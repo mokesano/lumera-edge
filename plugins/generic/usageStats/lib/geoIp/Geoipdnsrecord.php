@@ -22,8 +22,8 @@ declare(strict_types=1);
 
 define("FULL_RECORD_LENGTH",50);
 
-require_once 'geoip.inc';
-require_once 'geoipregionvars.php';
+require_once 'GeoIP.php';
+require_once 'Geoipregionvars.php';
 
 class Geoipdnsrecord {
   var $country_code;
