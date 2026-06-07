@@ -18,15 +18,10 @@ declare(strict_types=1);
 
 import('core.Modules.cache.GenericCache');
 
-// Helper class untuk menyimpan nilai boolean false
-// (Karena apcu_fetch mengembalikan false jika gagal, kita butuh cara membedakannya)
-class apc_false {};
-
 class APCuCache extends GenericCache {
     
     /**
-     * Construct
-     * Instantiate a cache.
+     * Construct.
      */
     public function __construct($context, $cacheId, $fallback) {
         parent::__construct($context, $cacheId, $fallback);
@@ -160,5 +155,4 @@ class APCuCache extends GenericCache {
         }
     }
 }
-
 ?>
