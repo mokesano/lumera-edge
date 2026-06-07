@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
@@ -118,7 +120,7 @@ define('SERVICES_JSON_SUPPRESS_ERRORS', 32);
  * $value = $json->decode($input);
  * </code>
  */
-class Services_JSON
+class ServicesJson
 {
     var $use;
 
@@ -815,64 +817,4 @@ class Services_JSON
         return false;
     }
 }
-
-if (class_exists('PEAR_Error')) {
-
-    class Services_JSON_Error extends PEAR_Error
-    {
-        /**
-         * @param string $message
-         * @param mixed $code
-         * @param mixed $mode
-         * @param mixed $options
-         * @param mixed $userinfo
-         */
-        public function __construct($message = 'unknown error', $code = null,
-                                     $mode = null, $options = null, $userinfo = null)
-        {
-            parent::PEAR_Error($message, $code, $mode, $options, $userinfo);
-        }
-
-        /**
-         * PHP 4 compatible constructor deprecated.
-         */
-        public function Services_JSON_Error($message = 'unknown error', $code = null,
-                                     $mode = null, $options = null, $userinfo = null)
-        {
-            self::__construct($message, $code, $mode, $options, $userinfo);
-        }
-    }
-
-} else {
-
-    /**
-     * @todo Ultimately, this class shall be descended from PEAR_Error
-     */
-    class Services_JSON_Error
-    {
-        /**
-         * @param string $message
-         * @param mixed $code
-         * @param mixed $mode
-         * @param mixed $options
-         * @param mixed $userinfo
-         */
-        public function __construct($message = 'unknown error', $code = null,
-                                     $mode = null, $options = null, $userinfo = null)
-        {
-
-        }
-
-        /**
-         * PHP 4 compatible constructor deprecated.
-         */
-        public function Services_JSON_Error($message = 'unknown error', $code = null,
-                                     $mode = null, $options = null, $userinfo = null)
-        {
-            self::__construct($message, $code, $mode, $options, $userinfo);
-        }
-    }
-
-}
-    
 ?>
