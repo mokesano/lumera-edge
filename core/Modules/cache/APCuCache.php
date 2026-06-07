@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * @file core.Modules.cache/APCuCache.inc.php
+ * @file core/Modules/Cache/APCuCache.php
  *
  * Copyright (c) 2013-2019 Sangia Publishing House
  * Copyright (c) 2000-2019 Rochmady and Wizdam Team
