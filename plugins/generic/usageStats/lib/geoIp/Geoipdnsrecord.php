@@ -1,6 +1,7 @@
 <?php
+declare(strict_types=1);
 
-/* geoipcity.inc
+/* @file Geoipdnsrecord.php
  *
  * Copyright (C) 2004 Maxmind LLC
  *
@@ -19,36 +20,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
  */
 
-/*
- * Changelog:
- *
- * 2005-01-13   Andrew Hill, Awarez Ltd. (http://www.awarez.net)
- *              Formatted file according to PEAR library standards.
- *              Changed inclusion of geoip.inc file to require_once, so that
- *                  this library can be used in the same script as geoip.inc.
- */
-
 define("FULL_RECORD_LENGTH",50);
 
 require_once 'geoip.inc';
 require_once 'geoipregionvars.php';
 
-class geoiprecord {
-  var $country_code;
-  var $country_code3;
-  var $country_name;
-  var $region;
-  var $city;
-  var $postal_code;
-  var $latitude;
-  var $longitude;
-  var $area_code;
-  var $dma_code;   # metro and dma code are the same. use metro_code
-  var $metro_code;
-  var $continent_code;
-}
-
-class geoipdnsrecord {
+class Geoipdnsrecord {
   var $country_code;
   var $country_code3;
   var $country_name;
@@ -66,7 +43,7 @@ class geoipdnsrecord {
 }
 
 function getrecordwithdnsservice($str){
-  $record = new geoipdnsrecord;
+  $record = new Geoipdnsrecord;
   $keyvalue = explode(";",$str);
   foreach ($keyvalue as $keyvalue2){
     list($key,$value) = explode("=",$keyvalue2);
@@ -115,7 +92,6 @@ function getrecordwithdnsservice($str){
   return $record;
 }
 
-
 function _get_record_v6($gi,$ipnum){
   $seek_country = _geoip_seek_country_v6($gi,$ipnum);
   if ($seek_country == $gi->databaseSegments) {
@@ -140,7 +116,7 @@ function _common_get_record($gi, $seek_country){
     fseek($gi->filehandle, $record_pointer, SEEK_SET);
     $record_buf = fread($gi->filehandle,FULL_RECORD_LENGTH);
   }
-  $record = new geoiprecord;
+  $record = new Geoipdnsrecord;
   $record_buf_pos = 0;
   $char = ord(substr($record_buf,$record_buf_pos,1));
     $record->country_code = $gi->GEOIP_COUNTRY_CODES[$char];
