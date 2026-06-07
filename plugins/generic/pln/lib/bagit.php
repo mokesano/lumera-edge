@@ -30,21 +30,10 @@ declare(strict_types=1);
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
 
-
 require_once 'Archive/Tar.php';
 require_once 'bagit_fetch.php';
 require_once 'bagit_manifest.php';
 require_once 'bagit_utils.php';
-
-
-/**
- * This is a class for all bag exceptions.
- */
-class BagItException extends Exception
-{
-
-}
-
 
 /**
  * This is the main class for interacting with a bag.
@@ -736,6 +725,5 @@ class BagIt
  * c-hanging-comment-ender-p: nil
  * End:
  */
-
 
 ?>
