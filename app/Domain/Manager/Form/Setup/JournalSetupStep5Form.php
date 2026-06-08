@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Manager\Form\Setup\JournalSetupForm;
+Lumera\Domain\File\PublicFileManager;
 namespace App\Domain\Manager\Form\Setup;
 
 /**
@@ -17,8 +19,6 @@ namespace App\Domain\Manager\Form\Setup;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep5Form extends JournalSetupForm {
     
@@ -158,7 +158,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
         $settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
         $faviconTypes = ['.ico', '.png', '.gif'];
 
-        import('app.Domain.File.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
         if ($fileManager->uploadedFileExists($settingName)) {
             $type = $fileManager->getUploadedFileType($settingName);
@@ -218,7 +218,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
         $settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
         $setting = $settingsDao->getSetting($journal->getId(), $settingName);
 
-        import('app.Domain.File.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
         if ($fileManager->removeJournalFile($journal->getId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
             $returner = $settingsDao->deleteSetting($journal->getId(), $settingName, $locale);
@@ -248,7 +248,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
         
         $settingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
-        import('app.Domain.File.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
         if ($fileManager->uploadedFileExists($settingName)) {
             $type = $fileManager->getUploadedFileType($settingName);

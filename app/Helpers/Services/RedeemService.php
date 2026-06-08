@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Redeem\RewardPointDAO;
 namespace App\Helpers\Services;
 
 /**
@@ -14,8 +15,6 @@ namespace App\Helpers\Services;
  * 
  * @brief Layanan pengelola dompet loyalti dan penukaran poin.
  */
-
-import('core.Modules.redeem.RewardPointDAO');
 
 class RedeemService {
 

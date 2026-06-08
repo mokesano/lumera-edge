@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleComment;
 namespace App\Domain\Article;
 
 /**
@@ -21,8 +22,6 @@ namespace App\Domain\Article;
  * - HookRegistry::dispatch
  * - Strict Integer Casting
  */
-
-import('app.Domain.Article.ArticleComment');
 
 class ArticleCommentDAO extends DAO {
     

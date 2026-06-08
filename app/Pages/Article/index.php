@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Article\ArticleHandler;
 namespace App\Pages\Article;
 
 /**
@@ -29,6 +30,6 @@ switch ($op) {
     case 'download':
     case 'downloadSuppFile':
         define('HANDLER_CLASS', \App\Pages\Article\ArticleHandler::class);
-        import('app.Pages.Article.ArticleHandler');
+        
         break;
 }

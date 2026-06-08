@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Billing\BillingHandler;
+Lumera\Pages\Billing\WebhookHandler;
 namespace App\Pages\Billing;
 
 /**
@@ -25,7 +27,7 @@ switch ($op) {
     case 'pay':       // Proses Pembayaran ke Payment Gateway
     case 'cancel':    // Pembatalan Tagihan
         define('HANDLER_CLASS', \App\Pages\Billing\BillingHandler::class);
-        import('app.Pages.Billing.BillingHandler');
+        
         break;
 
     //
@@ -36,6 +38,6 @@ switch ($op) {
     case 'webhook':
         define('HANDLER_CLASS', \App\Pages\Billing\WebhookHandler::class);
         // Asumsi WebhookHandler dipindahkan ke domain billing
-        import('app.Pages.Billing.WebhookHandler');
+        
         break;
 }

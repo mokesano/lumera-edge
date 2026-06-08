@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Core\Application;
+Lumera\Modules\User\InterestManager;
+Lumera\Kernel\JSONMessage;
 namespace App\Pages\User;
 
 use App\Domain\Core\Application;
@@ -21,17 +24,17 @@ class CoreUserHandler extends UserHandler
     public function getInterests($args = [], $request = null)
     {
         if (!$request) {
-            import('app.Domain.Core.Application');
+            
             $request = Application::get()->getRequest();
         }
 
         $filter = trim((string) $request->getUserVar('term'));
 
-        import('core.Modules.user.InterestManager');
+        
         $interestManager = new \InterestManager();
         $interests = $interestManager->getAllInterests($filter);
 
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage(true, $interests);
 
         header('Content-Type: application/json');

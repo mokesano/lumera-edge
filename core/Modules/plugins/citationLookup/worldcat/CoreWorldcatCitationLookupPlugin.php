@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
+namespace Lumera\Modules\plugins\citationLookup\worldcat;
+
 /**
  * @defgroup plugins_citationLookup_worldcat
  */
@@ -21,8 +24,6 @@ declare(strict_types=1);
  * - PHP 8.1+ Strict Compliance
  * - Explicit Visibility & Return Types
  */
-
-import('core.Modules.plugins.Plugin');
 
 class CoreWorldcatCitationLookupPlugin extends Plugin {
     

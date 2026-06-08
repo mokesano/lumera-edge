@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Modules\File\EditableLocaleFile;
+Lumera\Modules\File\EditableEmailFile;
+Lumera\Modules\File\FileManager;
+namespace Lumera\Plugins\Generic\translator;
+
 /**
  * @file plugins/generic/translator/TranslatorHandler.inc.php
  *
@@ -16,7 +23,6 @@ declare(strict_types=1);
  */
 
 require_once('TranslatorAction.inc.php');
-import('core.Modules.handler.Handler');
 
 class TranslatorHandler extends Handler {
     
@@ -65,7 +71,7 @@ class TranslatorHandler extends Handler {
         $rangeInfo = Handler::getRangeInfo('locales');
 
         $templateMgr = TemplateManager::getManager();
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('locales', new ArrayItemIterator(AppLocale::getAllLocales(), $rangeInfo->getPage(), $rangeInfo->getCount()));
         $templateMgr->assign('masterLocale', MASTER_LOCALE);
 
@@ -113,7 +119,7 @@ class TranslatorHandler extends Handler {
         $miscFilesRangeInfo = Handler::getRangeInfo('miscFiles');
         $emailsRangeInfo = Handler::getRangeInfo('emails');
 
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
         $templateMgr->assign('miscFiles', new ArrayItemIterator($miscFiles, $miscFilesRangeInfo->getPage(), $miscFilesRangeInfo->getCount()));
         $templateMgr->assign('emails', new ArrayItemIterator($emails, $emailsRangeInfo->getPage(), $emailsRangeInfo->getCount()));
@@ -206,7 +212,7 @@ class TranslatorHandler extends Handler {
         }
 
         // Save the changes file by file.
-        import('core.Modules.file.EditableLocaleFile');
+        
         foreach ($changesByFile as $filename => $changes) {
             $file = new EditableLocaleFile($locale, $filename);
             foreach ($changes as $key => $value) {
@@ -250,7 +256,7 @@ class TranslatorHandler extends Handler {
         }
 
         // Deal with email removals
-        import('core.Modules.file.EditableEmailFile');
+        
         // [SECURITY FIX] Save 'deleteEmail' Casting ke array sudah ada.
         $deleteEmails = (array) Request::getUserVar('deleteEmail');
         
@@ -316,8 +322,7 @@ class TranslatorHandler extends Handler {
             $templateMgr->assign('error', true);
         }
 
-
-        import('core.Modules.file.EditableLocaleFile');
+        
         $localeContentsRangeInfo = Handler::getRangeInfo('localeContents');
         $localeContents = EditableLocaleFile::load($filename);
 
@@ -346,7 +351,7 @@ class TranslatorHandler extends Handler {
 
         $templateMgr->assign('filename', $filename);
         $templateMgr->assign('locale', $locale);
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));
         $templateMgr->assign('referenceLocaleContents', EditableLocaleFile::load(TranslatorAction::determineReferenceFilename($locale, $filename)));
 
@@ -396,7 +401,7 @@ class TranslatorHandler extends Handler {
             Request::redirect(null, null, 'edit', $locale);
         }
 
-        import('core.Modules.file.EditableLocaleFile');
+        
         
         // [SECURITY FIX] Save 'changes' (data array string)
         $changes = (array) Request::getUserVar('changes');
@@ -523,11 +528,11 @@ class TranslatorHandler extends Handler {
             Request::redirect(null, null, 'edit', $locale);
         }
 
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
         $fileManager->copyFile(TranslatorAction::determineReferenceFilename($locale, $filename), $filename);
         $localeKeys = LocaleFile::load($filename);
-        import('core.Modules.file.EditableLocaleFile');
+        
         $file = new EditableLocaleFile($locale, $filename);
         // remove default translations from keys
         foreach (array_keys($localeKeys) as $key) {
@@ -558,7 +563,7 @@ class TranslatorHandler extends Handler {
 
         if (!in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
-        import('core.Modules.file.EditableEmailFile');
+        
         $file = new EditableEmailFile($locale, $this->getEmailTemplateFilename($locale));
 
         // [SECURITY FIX] Amankan 'subject' (string teks) dengan trim()
@@ -607,7 +612,7 @@ class TranslatorHandler extends Handler {
             }
         }
 
-        import('core.Modules.file.EditableEmailFile');
+        
         $file = new EditableEmailFile($locale, $targetFilename);
 
         // [SECURITY FIX] Amankan 'subject' (string teks) dengan trim()

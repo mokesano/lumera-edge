@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @defgroup plugins_metadata_nlm30_filter
  */
@@ -18,8 +21,6 @@ declare(strict_types=1);
  * @brief Filter that takes a list of NLM citation descriptions and joins
  * them into a single "best" citation.
  */
-
-import('core.Modules.filter.Filter');
 
 class Nlm30CitationDemultiplexerFilter extends Filter {
     /**
@@ -110,7 +111,6 @@ class Nlm30CitationDemultiplexerFilter extends Filter {
     public function getCitationOutputFilter() {
         return $this->_citationOutputFilter;
     }
-
 
     //
     // Implementing abstract template methods from Filter

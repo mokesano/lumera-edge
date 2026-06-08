@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Payment;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Payment;
  *
  * @brief Handle requests for payment functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class PaymentHandler extends Handler {
     

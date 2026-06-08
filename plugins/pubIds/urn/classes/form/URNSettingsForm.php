@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 /**
  * @file plugins/pubIds/urn/URNSettingsForm.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief Form for journal managers to setup URN plugin
  */
-
-import('core.Modules.form.Form');
 
 class URNSettingsForm extends Form {
 

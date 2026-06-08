@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\CoreHandler;
+Lumera\Domain\Handler\Validation\HandlerValidatorJournal;
+Lumera\Domain\Handler\Validation\HandlerValidatorSubmissionComment;
+Lumera\Modules\Captcha\CaptchaManager;
 namespace App\Domain\Handler;
 
 /**
@@ -16,10 +20,6 @@ namespace App\Domain\Handler;
  * @brief Base request handler application class
  * WIZDAM EDITION: PHP 8 Compatibility (Clean Inheritance) & Modular Security
  */
-
-import('app.Domain.Handler.CoreHandler');
-import('app.Domain.Handler.validation.HandlerValidatorJournal');
-import('app.Domain.Handler.validation.HandlerValidatorSubmissionComment');
 
 class Handler extends CoreHandler {
     
@@ -78,7 +78,7 @@ class Handler extends CoreHandler {
         // PILAR 3: DEFAULT CAPTCHA (Fallback)
         // Hanya render Captcha gambar jika Turnstile DAN reCAPTCHA dimatikan
         if (!$turnstileEnabled && !$reCaptchaEnabled) {
-            import('core.Modules.Captcha.CaptchaManager');
+            
             $captchaManager = new CaptchaManager();
             $captchaEnabled = $captchaManager->isEnabledForContext($context);
             
@@ -174,7 +174,7 @@ class Handler extends CoreHandler {
 
         // --- LAYER 2: FALLBACK DEFAULT CAPTCHA ---
         // Dieksekusi HANYA JIKA Turnstile OFF dan reCAPTCHA OFF
-        import('core.Modules.Captcha.CaptchaManager');
+        
         $captchaManager = new CaptchaManager();
         $captchaEnabled = $captchaManager->isEnabledForContext($context);
         

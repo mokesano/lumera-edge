@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CoreString;
+namespace Lumera\Modules\nlp;
+
 /**
  * @file core.Modules.lib/nlp/WizdamNLP.inc.php
  *
@@ -15,7 +18,7 @@ declare(strict_types=1);
 
 // Imports Wizdam untuk string utility
 if (!class_exists('CoreString')) {
-    import('core.Kernel.CoreString'); 
+     
 }
 
 class WizdamNLP {

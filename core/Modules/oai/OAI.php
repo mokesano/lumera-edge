@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Oai\OAIStruct;
+Lumera\Modules\Oai\OAIUtils;
+Lumera\Modules\Plugins\PluginRegistry;
+namespace Lumera\Modules\oai;
+
 /**
  * @defgroup oai
  */
@@ -19,10 +24,6 @@ declare(strict_types=1);
  * @brief Class to process and respond to OAI requests.
  * * REFACTORED: Wizdam Edition (PHP 7.4 - 8.x Modernization)
  */
-
-import('core.Modules.oai.OAIStruct');
-import('core.Modules.oai.OAIUtils');
-import('core.Modules.plugins.PluginRegistry');
 
 class OAI {
     /** @var OAIConfig configuration parameters */
@@ -107,7 +108,6 @@ class OAI {
                 break;
         }
     }
-
 
     //
     // Abstract implementation-specific functions
@@ -289,7 +289,6 @@ class OAI {
 
         $this->response($response);
     }
-
 
     /**
      * Handle OAI Identify request.
@@ -623,7 +622,6 @@ class OAI {
 
         $this->response($response);
     }
-
 
     //
     // Private helper functions

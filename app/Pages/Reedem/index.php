@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Reedem\RedeemHandler;
 namespace App\Pages\Reedem;
 
 /**
@@ -14,6 +15,6 @@ switch ($op) {
     case 'index':    // Dasbor dompet virtual
     case 'exchange': // Proses penukaran poin
         define('HANDLER_CLASS', \App\Pages\Reedem\RedeemHandler::class);
-        import('app.Pages.Reedem.RedeemHandler');
+        
         break;
 }

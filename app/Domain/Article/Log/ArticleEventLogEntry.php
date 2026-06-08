@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EventLogEntry;
 namespace App\Domain\Article\Log;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Article\Log;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.log.EventLogEntry');
 
 // Log entry associative types. All types must be defined here
 define('ARTICLE_LOG_TYPE_DEFAULT',             0);
@@ -97,7 +96,6 @@ define('ARTICLE_LOG_LAYOUT_UNASSIGN',            0x70000002);
 define('ARTICLE_LOG_LAYOUT_INITIATE',            0x70000003);
 define('ARTICLE_LOG_LAYOUT_GALLEY',              0x70000004);
 define('ARTICLE_LOG_LAYOUT_COMPLETE',            0x70000005);
-
 
 class ArticleEventLogEntry extends EventLogEntry {
     

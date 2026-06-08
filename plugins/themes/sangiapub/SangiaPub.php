@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ThemePlugin;
 /**
  * @file plugins/themes/sangiapub/SangiaPub.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief "sangiapub" theme plugin
  */
-
-import('core.Modules.plugins.ThemePlugin');
 
 class SangiaPub extends ThemePlugin {
     

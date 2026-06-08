@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Gift\CoreGiftDAO;
+Lumera\Domain\Gift\Gift;
+Lumera\Domain\Subscription\IndividualSubscription;
 namespace App\Domain\Gift;
 
 /**
@@ -17,12 +20,8 @@ namespace App\Domain\Gift;
  * @brief Wizdam extension of CoreGiftDAO
  */
 
-import('app.Domain.Gift.CoreGiftDAO');
-import('app.Domain.Gift.Gift');
-
 define('GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID', 0x10);
 define('GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING', 0x11);
-
 
 class GiftDAO extends CoreGiftDAO {
     
@@ -131,7 +130,7 @@ class GiftDAO extends CoreGiftDAO {
             }
         } else {
             // Otherwise, create a new individual subscription for user
-            import('app.Domain.Subscription.IndividualSubscription');
+            
             $subscription = new IndividualSubscription();
 
             $subscription->setJournalId($journalId);

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Wizdam\Statistics\StatsManager;
+Lumera\Modules\Security\Authorization\ContextRequiredPolicy;
+Lumera\Domain\Handler\Validation\HandlerValidatorJournal;
 namespace App\Pages\Statistics;
 
 /**
@@ -17,8 +21,7 @@ namespace App\Pages\Statistics;
  * @version 2.0 (Strict MVC Compliant)
  */
 
-import('app.Domain.Handler.Handler');
-import('lib.wizdam.statistics.StatsManager'); // Load Service Layer WIZDAM
+ // Load Service Layer WIZDAM
 
 class JournalStatsHandler extends Handler {
 
@@ -38,7 +41,7 @@ class JournalStatsHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('core.Modules.security.authorization.ContextRequiredPolicy');
+        
         // Parameter ke-3 adalah false untuk mengizinkan akses tanpa konteks jurnal
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);
@@ -61,7 +64,7 @@ class JournalStatsHandler extends Handler {
         // [WIZDAM] - Context-Aware Controller
         if ($journal) {
             // Validasi tambahan khusus untuk level jurnal
-            import('app.Domain.Handler.validation.HandlerValidatorJournal');
+            
             $this->addCheck(new HandlerValidatorJournal($this));
         }
 

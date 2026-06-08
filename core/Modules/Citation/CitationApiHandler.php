@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\CoreHandler;
+Lumera\Modules\Security\Authorization\CoreProcessAccessPolicy;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -21,7 +23,6 @@ namespace Lumera\Modules\Citation;
  */
 
 // import the base Handler
-import('core.Modules.handler.CoreHandler');
 
 class CitationApiHandler extends CoreHandler {
     
@@ -46,7 +47,6 @@ class CitationApiHandler extends CoreHandler {
         call_user_func_array([$this, '__construct'], $args);
     }
 
-
     //
     // Implement template methods from CoreHandler
     //
@@ -56,7 +56,7 @@ class CitationApiHandler extends CoreHandler {
      * [WIZDAM TRANSITION]: Signature kept loose for parent compatibility.
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('core.Modules.security.authorization.CoreProcessAccessPolicy');
+        
         
         // Ensure $request is the correct type before use, although CoreProcessAccessPolicy expects it.
         if (!($request instanceof CoreRequest)) {
@@ -69,7 +69,6 @@ class CitationApiHandler extends CoreHandler {
         
         return parent::authorize($request, $args, $roleAssignments);
     }
-
 
     //
     // Public handler methods

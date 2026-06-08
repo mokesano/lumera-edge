@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationOutputFormatFilter;
+namespace Lumera\Modules\plugins\citationOutput\apa\filter;
+
 /**
  * @defgroup plugins_citationOutput_apa_filter
  */
@@ -23,8 +26,6 @@ declare(strict_types=1);
  * - Modern Constructor
  * - Explicit Visibility & Type Hints
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationOutputFormatFilter');
 
 class Nlm30CitationSchemaApaFilter extends Nlm30CitationSchemaCitationOutputFormatFilter {
     

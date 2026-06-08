@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\MetadataPlugin;
+namespace Lumera\Modules\plugins\metadata\openurl10;
+
 /**
  * @defgroup plugins_metadata_openurl10
  */
@@ -21,8 +24,6 @@ declare(strict_types=1);
  * - PHP 8.1+ Strict Compliance
  * - Explicit Visibility & Return Types
  */
-
-import('core.Modules.plugins.MetadataPlugin');
 
 class CoreOpenurl10MetadataPlugin extends MetadataPlugin {
     

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\ConfirmationModal;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/RemoteActionConfirmationModal.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Class defining a simple confirmation modal with a remote action and ok/cancel buttons.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.ConfirmationModal');
 
 class RemoteActionConfirmationModal extends ConfirmationModal {
     /** @var string|null A URL to be called when the confirmation button is clicked. */

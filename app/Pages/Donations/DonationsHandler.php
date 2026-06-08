@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Pages\Donations;
 
 /**
@@ -19,8 +21,6 @@ namespace App\Pages\Donations;
  *
  * @brief Display a form for accepting donations.
  */
-
-import('app.Domain.Handler.Handler');
 
 class DonationsHandler extends Handler {
     
@@ -61,7 +61,7 @@ class DonationsHandler extends Handler {
             $args = $request->getRequestedArgs();
         }
     
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $journal = $request->getJournal();
 

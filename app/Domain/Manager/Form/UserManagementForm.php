@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Pages\Manager\PeopleHandler;
+Lumera\Domain\User\InterestManager;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Manager\Form;
 
 /**
@@ -17,8 +21,6 @@ namespace App\Domain\Manager\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class UserManagementForm extends Form {
 
@@ -146,7 +148,7 @@ class UserManagementForm extends Form {
         $journal = $requestObj->getJournal();
         $journalId = $journal == null ? 0 : $journal->getId();
         
-        import('app.Pages.manager.PeopleHandler');
+        
         $rolePrefs = PeopleHandler::retrieveRoleAssignmentPreferences($journalId);
         $activeRoles = [
             '' => 'manager.people.doNotEnroll',
@@ -213,7 +215,7 @@ class UserManagementForm extends Form {
             $userDao = DAORegistry::getDAO('UserDAO');
             $user = $userDao->getById($this->userId);
 
-            import('app.Domain.User.InterestManager');
+            
             $interestManager = new InterestManager();
 
             if ($user != null) {
@@ -450,7 +452,7 @@ class UserManagementForm extends Form {
 
             if ($sendNotify) {
                 // Send welcome email to user
-                import('app.Domain.Mail.MailTemplate');
+                
                 $mail = new MailTemplate('USER_REGISTER');
                 $mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
                 $mail->assignParams(['username' => $this->getData('username'), 'password' => $password, 'userFullName' => $user->getFullName()]);
@@ -461,7 +463,7 @@ class UserManagementForm extends Form {
 
         // Insert the user interests
         $interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
-        import('app.Domain.User.InterestManager');
+        
         $interestManager = new InterestManager();
         $interestManager->setInterestsForUser($user, $interests);
     }

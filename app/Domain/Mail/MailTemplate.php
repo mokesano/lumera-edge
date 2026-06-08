@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Mail\CoreMailTemplate;
 namespace App\Domain\Mail;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Mail;
  * [WIZDAM EDITION] Refactored for PHP 7.4 and ready for 8.1+ Strict Compliance
  * [FIXED] str_contains replaced with strpos for universal compatibility
  */
-
-import('app.Domain.Mail.CoreMailTemplate');
 
 class MailTemplate extends CoreMailTemplate {
     

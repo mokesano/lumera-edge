@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/CompositeFilter.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief An abstract base class for generic filters that compose other
  * filters into filter networks.
  */
-
-import('core.Modules.filter.PersistableFilter');
 
 class CompositeFilter extends PersistableFilter {
     /** @var array An ordered array of sub-filters */
@@ -158,7 +159,6 @@ class CompositeFilter extends PersistableFilter {
         return $settingsMapping;
     }
 
-
     //
     // Overridden methods from PersistableFilter
     //
@@ -247,7 +247,6 @@ class CompositeFilter extends PersistableFilter {
         return $filterInternalSettings;
     }
 
-
     //
     // Overridden methods from Filter
     //
@@ -261,7 +260,6 @@ class CompositeFilter extends PersistableFilter {
         }
         return true;
     }
-
 
     //
     // Overridden methods from DataObject
@@ -316,7 +314,6 @@ class CompositeFilter extends PersistableFilter {
         list($filter, $settingName) = $this->_resolveCompositeSettingName($compositeSettingName);
         return $filter->hasData($settingName, $locale);
     }
-
 
     //
     // Private helper methods

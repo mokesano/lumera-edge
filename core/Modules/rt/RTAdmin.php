@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Rt\RTStruct;
+namespace Lumera\Modules\rt;
+
 /**
  * @file core.Modules.rt/RTAdmin.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Class to process and respond to Reading Tools administration requests.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Visibility, Annotations)
  */
-
-import('core.Modules.rt.RTStruct');
 
 class RTAdmin {
 

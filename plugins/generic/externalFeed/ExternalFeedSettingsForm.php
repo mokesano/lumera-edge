@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\PublicFileManager;
+namespace Lumera\Plugins\Generic\externalFeed;
+
 /**
  * @file plugins/generic/externalFeed/ExternalFeedSettingsForm.inc.php
  *
@@ -18,8 +22,6 @@ declare(strict_types=1);
  * - Redirected template to 'templates/' folder.
  * - Cleaned up file upload naming logic.
  */
-
-import('core.Modules.form.Form');
 
 class ExternalFeedSettingsForm extends Form {
 
@@ -89,7 +91,7 @@ class ExternalFeedSettingsForm extends Form {
         $plugin = $this->plugin;
         $settingName = 'externalFeedStyleSheet';
 
-        import('core.Modules.file.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
 
         if ($fileManager->uploadedFileExists($settingName)) {
@@ -128,7 +130,7 @@ class ExternalFeedSettingsForm extends Form {
 
         $setting = $plugin->getSetting($journalId, $settingName);
 
-        import('core.Modules.file.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
 
         if ($fileManager->removeJournalFile($journalId, $setting['uploadName'])) {

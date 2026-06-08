@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Search\ArticleSearchIndex;
+Lumera\Modules\Issue\IssueAction;
+namespace Lumera\Plugins\Oaimetadataformats\nlm;
+
 /**
  * @defgroup oai_format_nlm
  */
@@ -202,7 +206,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
             "\t</front>\n";
 
         // Include body text (for search indexing only)
-        import('core.Modules.search.ArticleSearchIndex');
+        
         $text = '';
         $galleys = $article->getGalleys();
 
@@ -214,7 +218,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
         // Determine any access limitations. If there are, do not
         // provide the full-text.
-        import('core.Modules.issue.IssueAction');
+        
         $subscriptionRequired = IssueAction::subscriptionRequired($issue);
         $isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());
 

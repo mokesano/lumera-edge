@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Journal\Journal;
+Lumera\Modules\Metadata\MetadataTypeDescription;
 namespace App\Domain\Journal;
 
 /**
@@ -17,9 +19,6 @@ namespace App\Domain\Journal;
  * @brief Operations for retrieving and modifying Journal objects.
  * [WIZDAM EDITION] PHP 7.4+ Compatible & Cleaned References
  */
-
-import ('app.Domain.journal.Journal');
-import('core.Modules.metadata.MetadataTypeDescription');
 
 define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);

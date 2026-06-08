@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Subscription\SubscriptionDAO;
 namespace App\Domain\Issue;
 
 /**
@@ -152,14 +153,14 @@ class IssueAction {
             if (!$result && $journal->getSetting('subscriptionExpiryPartial')) {
                 if (isset($articleId)) {
                     if (isset($publishedArticle)) {
-                        import('core.Modules.subscription.SubscriptionDAO');
+                        
                         $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
                     }
                 } else if (isset($issueId)) {
                     $issueDao = DAORegistry::getDAO('IssueDAO');
                     $issue = $issueDao->getIssueById($issueId);
                     if (isset($issue) && $issue->getPublished()) {
-                        import('core.Modules.subscription.SubscriptionDAO');
+                        
                         $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }
                 }
@@ -187,14 +188,14 @@ class IssueAction {
                     $publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
                     $publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($articleId, null, true);
                     if (isset($publishedArticle)) {
-                        import('core.Modules.subscription.SubscriptionDAO');
+                        
                         $result = $subscriptionDao->isValidInstitutionalSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $publishedArticle->getDatePublished());
                     }
                 } else if (isset($issueId)) {
                     $issueDao = DAORegistry::getDAO('IssueDAO');
                     $issue = $issueDao->getIssueById($issueId);
                     if (isset($issue) && $issue->getPublished()) {
-                        import('core.Modules.subscription.SubscriptionDAO');
+                        
                         $result = $subscriptionDao->isValidInstitutionalSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }
                 }

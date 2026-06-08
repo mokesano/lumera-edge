@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Site\Version;
+Lumera\Modules\Site\VersionDAO;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
 namespace App\Pages\Admin;
 
 /**
@@ -15,11 +20,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for site administrative/maintenance functions.
  */
-
-import('core.Modules.site.Version');
-import('core.Modules.site.VersionDAO');
-import('core.Modules.site.VersionCheck');
-import('app.Pages.admin.AdminHandler');
 
 class AdminFunctionsHandler extends AdminHandler {
     
@@ -143,7 +143,7 @@ class AdminFunctionsHandler extends AdminHandler {
         // [SECURITY FIX] Sanitasi nama file untuk mencegah directory traversal
         $file = basename(trim((string) $request->getUserVar('file')));
         
-        import('core.Modules.scheduledTask.ScheduledTaskHelper');
+        
         ScheduledTaskHelper::downloadExecutionLog($file);
     }
     
@@ -152,7 +152,7 @@ class AdminFunctionsHandler extends AdminHandler {
      */
     public function clearScheduledTaskLogFiles() {
         $this->validate();
-        import('core.Modules.scheduledTask.ScheduledTaskHelper');
+        
         ScheduledTaskHelper::clearExecutionLogs();    
 
         Application::get()->getRequest()->redirect(null, 'admin');

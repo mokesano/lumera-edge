@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Proofreader\ProofreaderHandler;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Pages\Proofreader;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Proofreader;
  *
  * @brief Handle requests for proofreader submission functions.
  */
-
-import('app.Pages.proofreader.ProofreaderHandler');
 
 class SubmissionProofreadHandler extends ProofreaderHandler {
     
@@ -205,7 +205,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
         $galley = $galleyDao->getGalley($galleyId, $articleId);
 
-        import('app.Domain.File.ArticleFileManager'); 
+         
 
         if (isset($galley)) {
             if ($galley->isHTMLGalley()) {

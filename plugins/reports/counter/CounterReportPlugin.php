@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
+Lumera\Reports\Counter\Classes\CounterReport;
+Lumera\Modules\Statistics\StatisticsHelper;
+Lumera\Reports\Counter\Classes\LegacyJR1;
+Lumera\Modules\Notification\NotificationManager;
 /**
  * @file plugins/reports/counter/CounterReportPlugin.inc.php
  *
@@ -16,9 +21,6 @@ declare(strict_types=1);
 
 define('APP_METRIC_TYPE_LEGACY_COUNTER', 'wizdam::legacyCounterPlugin');
 define('COUNTER_CLASS_SUFFIX', '.inc.php');
-
-import('core.Modules.plugins.ReportPlugin');
-import('plugins.reports.counter.classes.CounterReport');
 
 class CounterReportPlugin extends ReportPlugin {
 
@@ -173,7 +175,7 @@ class CounterReportPlugin extends ReportPlugin {
     public function display($args, $request) {
         parent::display($args, $request);
         // We need these constants
-        import('core.Modules.statistics.StatisticsHelper');
+        
 
         $this->setBreadcrumbs();
         $available = $this->getValidReports();
@@ -190,7 +192,7 @@ class CounterReportPlugin extends ReportPlugin {
                         // Legacy reports are site-wide
                         Validation::redirectLogin();
                     }
-                    import('plugins.reports.counter.classes.LegacyJR1');
+                    
                     $r3jr1 = new LegacyJR1($this->getTemplatePath());
                     $r3jr1->display($request);
                     return;
@@ -238,7 +240,7 @@ class CounterReportPlugin extends ReportPlugin {
                         $errormessage = __('plugins.reports.counter.error.badRequest');
                     }
                     $user = Request::getUser();
-                    import('core.Modules.notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
             }

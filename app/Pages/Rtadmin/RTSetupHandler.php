@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Rtadmin\RTAdminHandler;
 namespace App\Pages\Rtadmin;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Rtadmin;
  *
  * @brief Handle Reading Tools administration requests -- setup section.
  */
-
-import('app.Pages.rtadmin.RTAdminHandler');
 
 class RTSetupHandler extends RTAdminHandler {
     

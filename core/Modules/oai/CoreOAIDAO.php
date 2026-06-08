@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Oai\OAIStruct;
+Lumera\Modules\Db\DBResultRange;
+namespace Lumera\Modules\oai;
+
 /**
  * @file core.Modules.oai/CoreOAIDAO.inc.php
  * HIGH PERFORMANCE BASE: Enables Pre-loading for OAI
@@ -10,9 +14,6 @@ declare(strict_types=1);
  * structure for fetching OAI Records and Identifiers.
  * * REFACTORED: Wizdam Edition (PHP 7.4 - 8.x Modernization)
  */
-
-import('core.Modules.oai.OAIStruct');
-import('core.Modules.db.DBResultRange');
 
 class CoreOAIDAO extends DAO {
 

@@ -1,6 +1,16 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Services\InvoiceService;
+Lumera\Modules\Services\QrCodeService;
+Lumera\Modules\Services\PdfService;
+Lumera\Modules\Services\PaymentSettingsService;
+Lumera\Domain\Security\SecurityHashService;
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Modules\Checkout\Payment\XenditGateway;
+Lumera\Modules\Checkout\Payment\MidtransGateway;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Billing;
 
 /**
@@ -17,14 +27,7 @@ namespace App\Pages\Billing;
  * Handler bertanggung jawab menampilkan daftar tagihan, merender rincian tagihan (HTML/PDF) melalui Smart Router, serta menangani antarmuka pembayaran dan pembatalan dengan validasi keamanan SHA-256 yang disediakan oleh SecurityHashService.
  */
 
-import('app.Domain.Handler.Handler');
-
 // Mengimpor Service Layer Wizdam Frontedge
-import('core.Modules.services.InvoiceService');
-import('core.Modules.services.QrCodeService');
-import('core.Modules.services.PdfService');
-import('core.Modules.services.PaymentSettingsService');
-import('app.Domain.Security.SecurityHashService');
 
 class BillingHandler extends Handler {
     
@@ -189,7 +192,7 @@ class BillingHandler extends Handler {
 
         $paymentType = $request->getUserVar('payment_type') ?: 'all';
 
-        import('core.Modules.validation.ValidatorCSRF');
+        
         if ($request->isPost()) {
             if (!ValidatorCSRF::checkToken($request->getUserVar('csrfToken'))) {
                 $this->_sendJsonResponse($request, 'error', __('billing.error.csrfInvalid'));
@@ -226,10 +229,10 @@ class BillingHandler extends Handler {
 
         // Factory Pattern
         if ($activeGatewayStr === 'xendit') {
-            import('core.Modules.checkout.payment.XenditGateway');
+            
             $gateway = new XenditGateway($settingsService->getXenditApiKey());
         } else {
-            import('core.Modules.checkout.payment.MidtransGateway');
+            
             $gateway = new MidtransGateway(
                 $settingsService->getMidtransServerKey(), 
                 $settingsService->isProduction()
@@ -280,7 +283,7 @@ class BillingHandler extends Handler {
             $success = $this->invoiceService->deleteInvoice($invoice);
             if ($success) {
                 // Berhasil dibatalkan, arahkan dengan Trivial Notification Sukses
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification(
                     $user->getId(), 
@@ -344,7 +347,7 @@ private function _handleHtmlView(object $invoice, string $qrCodeBase64, string $
      * HELPER: Melempar pengguna ke halaman Billing dengan notifikasi Error.
      */
     private function _redirectWithError($request, string $localeKey): void {
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = $request->getUser();
         
@@ -373,7 +376,7 @@ private function _handleHtmlView(object $invoice, string $qrCodeBase64, string $
         } else {
             // Jika request bukan AJAX tapi masuk ke endpoint yang seharusnya AJAX, alihkan
             if ($status === 'error') {
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $user = $request->getUser();
                 if ($user) {

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/languageToggle/LanguageToggleBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for language selector block plugin
  * [WIZDAM EDITION] Modernized. Ready for Smart Locale Strategy.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class LanguageToggleBlockPlugin extends BlockPlugin {
     

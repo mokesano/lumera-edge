@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Help\HelpMappingFile;
+namespace Lumera\Modules\help;
+
 /**
  * @file core.Modules.help/PluginHelpMappingFile.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Abstracts the plugin's help mapping XML files.
  */
-
-import('core.Modules.help.HelpMappingFile');
 
 class PluginHelpMappingFile extends HelpMappingFile {
     /** @var object */

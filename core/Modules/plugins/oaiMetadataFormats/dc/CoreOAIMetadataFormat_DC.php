@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Metadata\Dc11\Schema\Dc11Schema;
+namespace Lumera\Modules\plugins\oaiMetadataFormats\dc;
+
 /**
  * @file plugins/oaiMetadata/dc/CoreOAIMetadataFormat_DC.inc.php
  *
@@ -35,7 +38,7 @@ class CoreOAIMetadataFormat_DC extends OAIMetadataFormat {
             return '';
         }
         
-        import('plugins.metadata.dc11.schema.Dc11Schema');
+        
         
         // [MODERNISASI] Hapus =& (reference assignment) yang usang untuk object
         $dcDescription = $dataObject->extractMetadata(new Dc11Schema());

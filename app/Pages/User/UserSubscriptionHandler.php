@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Subscription\Form\UserInstitutionalSubscriptionForm;
+Lumera\Domain\Subscription\Form\UserIndividualSubscriptionForm;
+Lumera\Domain\Subscription\Subscription;
 namespace App\Pages\User;
 
 /**
@@ -16,8 +21,6 @@ namespace App\Pages\User;
  * @brief Handle requests for user subscriptions and memberships.
  * [WIZDAM EDITION] Extracted from bloated UserHandler for Single Responsibility Principle.
  */
-
-import('app.Pages.user.UserHandler');
 
 class UserSubscriptionHandler extends UserHandler {
 
@@ -74,7 +77,7 @@ class UserSubscriptionHandler extends UserHandler {
             $userInstitutionalSubscriptions = $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
         }
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
 
@@ -117,7 +120,7 @@ class UserSubscriptionHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
         if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
@@ -135,11 +138,11 @@ class UserSubscriptionHandler extends UserHandler {
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            import('app.Domain.Subscription.form.UserInstitutionalSubscriptionForm');
+            
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
         } else {
             $institutional = false;
-            import('app.Domain.Subscription.form.UserIndividualSubscriptionForm');
+            
             $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
         }
 
@@ -152,7 +155,7 @@ class UserSubscriptionHandler extends UserHandler {
             // Ensure subscription can be updated
             $subscription = $subscriptionDao->getSubscription($subscriptionId);
             $subscriptionStatus = $subscription->getStatus();
-            import('app.Domain.Subscription.Subscription');
+            
             $validStatus = [
                 SUBSCRIPTION_STATUS_ACTIVE,
                 SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
@@ -200,7 +203,7 @@ class UserSubscriptionHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
         if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
@@ -218,11 +221,11 @@ class UserSubscriptionHandler extends UserHandler {
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            import('app.Domain.Subscription.form.UserInstitutionalSubscriptionForm');
+            
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
         } else {
             $institutional = false;
-            import('app.Domain.Subscription.form.UserIndividualSubscriptionForm');
+            
             $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
         }
 
@@ -235,7 +238,7 @@ class UserSubscriptionHandler extends UserHandler {
             // Ensure subscription can be updated
             $subscription = $subscriptionDao->getSubscription($subscriptionId);
             $subscriptionStatus = $subscription->getStatus();
-            import('app.Domain.Subscription.Subscription');
+            
             $validStatus = [
                 SUBSCRIPTION_STATUS_ACTIVE,
                 SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT,
@@ -309,7 +312,7 @@ class UserSubscriptionHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
         if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
@@ -332,7 +335,7 @@ class UserSubscriptionHandler extends UserHandler {
 
         $subscription = $subscriptionDao->getSubscription($subscriptionId);
         $subscriptionStatus = $subscription->getStatus();
-        import('app.Domain.Subscription.Subscription');
+        
         $validStatus = [SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT];
 
         if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'user');
@@ -363,7 +366,7 @@ class UserSubscriptionHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
         if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'user');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'user');
@@ -388,7 +391,7 @@ class UserSubscriptionHandler extends UserHandler {
 
         if ($subscription->isNonExpiring()) $request->redirect(null, 'user');
 
-        import('app.Domain.Subscription.Subscription');
+        
         $subscriptionStatus = $subscription->getStatus();
         $validStatus = [
             SUBSCRIPTION_STATUS_ACTIVE,
@@ -419,7 +422,7 @@ class UserSubscriptionHandler extends UserHandler {
         $this->validate();
         $this->setupTemplate($request);
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
 
         $journal = $request->getJournal();

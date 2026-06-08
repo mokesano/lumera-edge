@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Pages\Volumes;
 
 /**
@@ -37,9 +42,6 @@ namespace App\Pages\Volumes;
  *   number = "0"  (integer 0 yang valid)          = VALID          → Kondisi B
  *   number = "1", "2", "Supplement", dst          = VALID          → Kondisi B
  */
-
-import('app.Domain.Handler.Handler');
-import('app.Domain.Issue.IssueAction');
 
 class VolumesHandler extends Handler {
 
@@ -157,7 +159,7 @@ class VolumesHandler extends Handler {
         // ---------------------------------------------------------------
         $volumeTitleString = AppLocale::translate('issue.volume') . ' ' . $volumeId;
 
-        import('app.Domain.File.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $coverPagePath = $request->getBaseUrl() . '/'
             . $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
@@ -220,7 +222,7 @@ class VolumesHandler extends Handler {
         // =================================================================
         $firstIssue = $issuesArray[0];
 
-        import('core.Kernel.ArrayItemIterator');
+        
         $issuesTemplateIterator = new ArrayItemIterator($issuesArray);
 
         $templateMgr->assign('issue',  $firstIssue);
@@ -280,10 +282,10 @@ class VolumesHandler extends Handler {
             return;
         }
 
-        import('core.Kernel.ArrayItemIterator');
+        
         $issuesTemplateIterator = new ArrayItemIterator($issuesArray);
 
-        import('app.Domain.File.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $coverPagePath = $request->getBaseUrl() . '/'
             . $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
@@ -347,7 +349,7 @@ class VolumesHandler extends Handler {
             return;
         }
 
-        import('app.Domain.File.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
 
         $locale      = AppLocale::getLocale();
@@ -389,7 +391,7 @@ class VolumesHandler extends Handler {
         $templateMgr->assign('issue', $issue);
 
         // Subscription
-        import('app.Domain.Issue.IssueAction');
+        
         $subscriptionRequired      = IssueAction::subscriptionRequired($issue);
         $subscribedUser            = IssueAction::subscribedUser($journal);
         $subscribedDomain          = IssueAction::subscribedDomain($journal);
@@ -430,7 +432,7 @@ class VolumesHandler extends Handler {
         $templateMgr->assign('showGalleyLinks',        $journal->getSetting('showGalleyLinks'));
 
         // Payment
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         if ($paymentManager->onlyPdfEnabled()) {
             $templateMgr->assign('restrictOnlyPdf', true);

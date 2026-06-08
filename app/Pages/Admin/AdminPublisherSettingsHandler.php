@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Classes\Admin\Form\PublisherSettingsForm;
+Lumera\Domain\Admin\Form\SiteSettingsForm;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Admin;
 
 /**
@@ -14,8 +19,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for changing publisher admin settings.
  */
-
-import('app.Pages.admin.AdminHandler');
 
 class AdminPublisherSettingsHandler extends AdminHandler {
     
@@ -49,7 +52,7 @@ class AdminPublisherSettingsHandler extends AdminHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Classes.admin.form.PublisherSettingsForm');
+        
 
         $settingsForm = new PublisherSettingsForm();
         if ($settingsForm->isLocaleResubmit()) {
@@ -74,8 +77,8 @@ class AdminPublisherSettingsHandler extends AdminHandler {
         
         $site = $request->getSite();
 
-        import('app.Domain.Admin.form.SiteSettingsForm');
-        import('app.Domain.File.PublicFileManager'); // [LUMERA EDGE] Explicit import
+        
+         // [LUMERA EDGE] Explicit import
 
         $settingsForm = new SiteSettingsForm();
         $settingsForm->readInputData();
@@ -107,7 +110,7 @@ class AdminPublisherSettingsHandler extends AdminHandler {
         } elseif ($settingsForm->validate()) {
             $settingsForm->execute();
             $user = $request->getUser();
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId());
             $request->redirect(null, null, 'index');

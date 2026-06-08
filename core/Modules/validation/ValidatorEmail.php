@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorRegExp;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorEmail.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Validation check for email addresses.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Explicit Static Method)
  */
-
-import('core.Modules.validation.ValidatorRegExp');
 
 class ValidatorEmail extends ValidatorRegExp {
     

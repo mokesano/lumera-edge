@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\RTAdmin;
+Lumera\Domain\Rt\RTDAO;
+Lumera\Domain\Rt\RTXMLParser;
 namespace App\Domain\Rt;
 
 /**
@@ -17,9 +20,6 @@ namespace App\Domain\Rt;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Rt.RTAdmin');
-import('app.Domain.Rt.RTDAO');
 
 define('RT_DIRECTORY', 'rt');
 define('DEFAULT_RT_LOCALE', 'en_US');
@@ -59,7 +59,7 @@ class JournalRTAdmin extends RTAdmin {
      * @param bool $deleteBeforeLoad
      */
     public function restoreVersions($deleteBeforeLoad = true) {
-        import('app.Domain.Rt.RTXMLParser');
+        
         $parser = new RTXMLParser();
 
         if ($deleteBeforeLoad) {
@@ -89,7 +89,7 @@ class JournalRTAdmin extends RTAdmin {
      * @param string $filename
      */
     public function importVersion($filename) {
-        import('app.Domain.Rt.RTXMLParser');
+        
         $parser = new RTXMLParser();
 
         $version = $parser->parse($filename);

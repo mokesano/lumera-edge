@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\FileCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core.Modules.cache/XCacheCache.inc.php
  *
@@ -18,7 +21,6 @@ declare(strict_types=1);
  */
 
 // Import FileCache sebagai pengganti
-import('core.Modules.cache.FileCache');
 
 class XCacheCache extends FileCache {
     

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/MemcacheNull.php
  *
@@ -15,12 +18,10 @@ declare(strict_types=1);
  * @brief Provides caching based on Memcache.
  */
 
-import('core.Modules.cache.GenericCache');
-
 // FIXME This should use connection pooling
 // WARNING: This cache MUST be loaded in batch, or else many cache
 // misses will result.
 
-class memcache_null {
+class MemcacheNull {
 }
 ?>

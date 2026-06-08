@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationOutput\Abnt\CoreAbntCitationOutputPlugin;
 /**
  * @defgroup plugins_citationOutput_abnt
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief ABNT citation style plug-in.
  */
-
-import('core.Modules.plugins.citationOutput.abnt.CoreAbntCitationOutputPlugin');
 
 class AbntCitationOutputPlugin extends CoreAbntCitationOutputPlugin {
     

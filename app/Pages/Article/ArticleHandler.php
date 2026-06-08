@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\RTDAO;
+Lumera\Domain\Rt\JournalRT;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Pages\Article;
 
 /**
@@ -15,10 +23,6 @@ namespace App\Pages\Article;
  *
  * @brief Handle requests for article functions.
  */
-
-import('app.Domain.Rt.RTDAO');
-import('app.Domain.Rt.JournalRT');
-import('app.Domain.Handler.Handler');
 
 class ArticleHandler extends Handler {
     
@@ -189,7 +193,7 @@ class ArticleHandler extends Handler {
         $templateMgr->assign('galleys', $galleys);
         
         if (!$galley) {
-            import('app.Domain.Issue.IssueAction');
+            
 
             if ($issue) {
                 $templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
@@ -200,7 +204,7 @@ class ArticleHandler extends Handler {
 
             $templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
-            import('app.Domain.Payment.AppPaymentManager');
+            
             $paymentManager = new AppPaymentManager($request);
             if ( $paymentManager->onlyPdfEnabled() ) {
                 $templateMgr->assign('restrictOnlyPdf', true);
@@ -211,7 +215,7 @@ class ArticleHandler extends Handler {
 
             // Article cover page.
             if (isset($article) && $article->getLocalizedFileName() && $article->getLocalizedShowCoverPage() && !$article->getLocalizedHideCoverPageAbstract()) {
-                import('app.Domain.File.PublicFileManager');
+                
                 $publicFileManager = new PublicFileManager();
                 $coverPagePath = $request->getBaseUrl() . '/';
                 $coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
@@ -445,7 +449,7 @@ class ArticleHandler extends Handler {
 
         // HookRegistry keeps & for object references in array
         if (!HookRegistry::dispatch('ArticleHandler::viewFile', [&$article, &$galley, &$fileId])) {
-            import('app.Domain.Submission.common.Action');
+            
             Action::viewFile($article->getId(), $fileId);
         }
     }
@@ -472,7 +476,7 @@ class ArticleHandler extends Handler {
         if ($article && $galley) {
             $fileId = $galley->getFileId();
             if (!HookRegistry::dispatch('ArticleHandler::downloadFile', [&$article, &$galley, &$fileId])) {
-                import('app.Domain.File.ArticleFileManager');
+                
                 $articleFileManager = new ArticleFileManager($article->getId());
                 $articleFileManager->downloadFile($fileId);
             }
@@ -500,7 +504,7 @@ class ArticleHandler extends Handler {
         }
 
         if ($article && $suppFile && !HookRegistry::dispatch('ArticleHandler::downloadSuppFile', [&$article, &$suppFile])) {
-            import('app.Domain.File.ArticleFileManager');
+            
             $articleFileManager = new ArticleFileManager($article->getId());
             if ($suppFile->getRemoteURL()) {
                 $request->redirectUrl($suppFile->getRemoteURL());
@@ -536,7 +540,7 @@ class ArticleHandler extends Handler {
         
         parent::validate(null, $request);
 
-        import('app.Domain.Issue.IssueAction');
+        
 
         $router = $request->getRouter();
         $journal = $router->getContext($request);
@@ -592,7 +596,7 @@ class ArticleHandler extends Handler {
                 // Subscription Access
                 $subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
 
-                import('app.Domain.Payment.AppPaymentManager');
+                
                 $paymentManager = new AppPaymentManager($request);
 
                 $purchasedIssue = false;

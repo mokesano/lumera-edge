@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataSchema;
+namespace Lumera\Modules\plugins\metadata\mods34\schema;
+
 /**
  * @defgroup plugins_metadata_mods34_schema
  */
@@ -41,9 +44,6 @@ declare(strict_types=1);
  * via constructor arguments.
  */
 
-
-import('core.Modules.metadata.MetadataSchema');
-
 class CoreMods34Schema extends MetadataSchema {
     
     /**
@@ -62,7 +62,6 @@ class CoreMods34Schema extends MetadataSchema {
             'plugins.metadata.mods34.schema.Mods34Schema',
             $assocTypes
         );
-
 
         //
         // titleInfo
@@ -120,7 +119,6 @@ class CoreMods34Schema extends MetadataSchema {
         // item should appear in separate MODS records or relatedItem elements.
         $this->addProperty('titleInfo/partName', METADATA_PROPERTY_TYPE_STRING, true, METADATA_PROPERTY_CARDINALITY_ONE, 'metadata.property.displayName.partName', 'metadata.property.validationMessage.partName');
 
-
         //
         // name
         //
@@ -134,7 +132,6 @@ class CoreMods34Schema extends MetadataSchema {
         ];
         $this->addProperty('name', $personResources, false, METADATA_PROPERTY_CARDINALITY_MANY, null, null, true);
 
-
         //
         // typeOfResource
         //
@@ -145,7 +142,6 @@ class CoreMods34Schema extends MetadataSchema {
         // enumerated values (see the controlled vocabulary).
         $this->addProperty('typeOfResource', [METADATA_PROPERTY_TYPE_VOCABULARY => 'mods34-typeOfResource'], false, METADATA_PROPERTY_CARDINALITY_ONE, null, null, true);
 
-
         //
         // genre
         //
@@ -154,7 +150,6 @@ class CoreMods34Schema extends MetadataSchema {
         // such as artistic, musical, literary composition, etc. genre contains terms that give more
         // specificity than the broad terms used in typeOfResource (see the controlled vocabulary).
         $this->addProperty('genre[@authority="marcgt"]', [METADATA_PROPERTY_TYPE_VOCABULARY => 'mods34-genre-marcgt'], false, METADATA_PROPERTY_CARDINALITY_ONE, null, null, true);
-
 
         //
         // originInfo
@@ -225,7 +220,6 @@ class CoreMods34Schema extends MetadataSchema {
         // resource, do not include the edition element.
         $this->addProperty('originInfo/edition', METADATA_PROPERTY_TYPE_STRING, true);
 
-
         //
         // language
         //
@@ -241,7 +235,6 @@ class CoreMods34Schema extends MetadataSchema {
         // the list would be huge. See http://www.loc.gov/standards/iso639-2/php/code_list.php
         // for a complete list. Use the (B)-type codes when two codes exist.
         $this->addProperty('language/languageTerm[@type="code" @authority="iso639-2b"]', METADATA_PROPERTY_TYPE_STRING, false, METADATA_PROPERTY_CARDINALITY_ONE, null, null, true);
-
 
         //
         // physicalDescription
@@ -277,7 +270,6 @@ class CoreMods34Schema extends MetadataSchema {
         // We use the extent field for the number of pages of a book only.
         $this->addProperty('physicalDescription/extent', METADATA_PROPERTY_TYPE_INTEGER);
 
-
         //
         // abstract
         //
@@ -289,14 +281,12 @@ class CoreMods34Schema extends MetadataSchema {
         // element is repeatable.
         $this->addProperty('abstract', METADATA_PROPERTY_TYPE_STRING, true);
 
-
         //
         // note
         //
 
         // General textual information relating to a resource.
         $this->addProperty('note', METADATA_PROPERTY_TYPE_STRING, true, METADATA_PROPERTY_CARDINALITY_MANY);
-
 
         //
         // subject
@@ -360,7 +350,6 @@ class CoreMods34Schema extends MetadataSchema {
         $this->addProperty('subject/temporal[@encoding="w3cdtf" @point="start"]', METADATA_PROPERTY_TYPE_DATE);
         $this->addProperty('subject/temporal[@encoding="w3cdtf" @point="end"]', METADATA_PROPERTY_TYPE_DATE);
 
-
         //
         // identifier
         //
@@ -370,7 +359,6 @@ class CoreMods34Schema extends MetadataSchema {
         $this->addProperty('identifier[@type="doi"]');
         $this->addProperty('identifier[@type="uri"]', METADATA_PROPERTY_TYPE_URI);
 
-
         //
         // location
         //
@@ -378,7 +366,6 @@ class CoreMods34Schema extends MetadataSchema {
         // "location" identifies the institution or repository holding the resource, or a remote
         // location in the form of a URL where it is available.
         $this->addProperty('location/url[@usage="primary display"]', METADATA_PROPERTY_TYPE_URI);
-
 
         //
         // recordInfo

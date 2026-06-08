@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
+namespace Lumera\Modules\plugins;
+
 /**
  * @file core.Modules.plugins/MetadataPlugin.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Abstract class for metadata plugins
  */
-
-import('core.Modules.plugins.Plugin');
 
 // Define the well-known file name for controlled vocabulary data.
 define('METADATA_PLUGIN_VOCAB_DATAFILE', 'controlledVocabs.xml');

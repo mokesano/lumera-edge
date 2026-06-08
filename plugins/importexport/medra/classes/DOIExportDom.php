@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+namespace Lumera\Plugins\Importexport\medra\classes;
+
 /**
  * @file plugins/importexport/.../classes/DOIExportDom.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Onix for DOI (O4DOI) XML export format implementation.
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 define('DOI_EXPORT_FILETYPE_PDF', 'PDF');
 define('DOI_EXPORT_FILETYPE_HTML', 'HTML');

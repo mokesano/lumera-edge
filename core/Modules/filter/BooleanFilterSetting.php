@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\FilterSetting;
+Lumera\Modules\Form\Validation\FormValidatorBoolean;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/BooleanFilterSetting.inc.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  * @brief Class that describes a configurable filter setting which must
  * be either true or false.
  */
-
-import('core.Modules.filter.FilterSetting');
-import('core.Modules.form.validation.FormValidatorBoolean');
 
 class BooleanFilterSetting extends FilterSetting {
     
@@ -41,7 +42,6 @@ class BooleanFilterSetting extends FilterSetting {
         );
         self::__construct($name, $displayName, $validationMessage);
     }
-
 
     //
     // Implement abstract template methods from FilterSetting

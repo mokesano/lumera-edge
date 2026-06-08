@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Issue\IssueCover;
+Lumera\Domain\Issue\IssuePublication;
+Lumera\Domain\Issue\IssueAccess;
+Lumera\Domain\Issue\IssueDisplay;
+Lumera\Domain\Issue\IssuePubIdService;
 namespace App\Domain\Issue;
 
 /**
@@ -20,12 +25,6 @@ namespace App\Domain\Issue;
  *
  * @brief Class for Issue. Core entity representing a journal issue.
  */
-
-import('app.Domain.Issue.IssueCover');
-import('app.Domain.Issue.IssuePublication');
-import('app.Domain.Issue.IssueAccess');
-import('app.Domain.Issue.IssueDisplay');
-import('app.Domain.Issue.IssuePubIdService');
 
 // --- IDENTITY CONSTANTS (ISSUEACCESS) ---
 define('ISSUE_ACCESS_OPEN', 1);

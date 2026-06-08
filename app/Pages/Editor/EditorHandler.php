@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\SectionEditor\SectionEditorHandler;
+Lumera\Domain\Submission\Editor\EditorAction;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
 namespace App\Pages\Editor;
 
 /**
@@ -16,8 +22,6 @@ namespace App\Pages\Editor;
  * @brief Handle requests for editor functions.
  */
 
-import('app.Pages.SectionEditor.SectionEditorHandler');
-
 define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
 define('EDITOR_SECTION_ISSUES', 2);
@@ -25,8 +29,6 @@ define('EDITOR_SECTION_ISSUES', 2);
 // Filter editor
 define('FILTER_EDITOR_ALL', 0);
 define('FILTER_EDITOR_ME', 1);
-
-import ('app.Domain.submission.editor.EditorAction');
 
 class EditorHandler extends SectionEditorHandler {
     
@@ -78,7 +80,7 @@ class EditorHandler extends SectionEditorHandler {
         $templateMgr->assign('fieldOptions', $this->_getSearchFieldOptions());
         $templateMgr->assign('dateFieldOptions', $this->_getDateFieldOptions());
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         // Note: register_function is legacy Smarty. Consider update if upgrading Smarty.
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
@@ -154,7 +156,7 @@ class EditorHandler extends SectionEditorHandler {
                     $submissionsArray = array_reverse($submissionsArray);
                 }
                 // Convert submission array back to an ItemIterator class
-                import('core.Kernel.ArrayItemIterator');
+                
                 $submissions = ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
             } else {
                 $rawSubmissions = $editorSubmissionDao->_getUnfilteredEditorSubmissions(
@@ -174,7 +176,6 @@ class EditorHandler extends SectionEditorHandler {
                 );
                 $submissions = new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
             }
-
 
             // If only result is returned from a search, fast-forward to it
             if ($search && $submissions && $submissions->getCount() == 1) {
@@ -362,7 +363,7 @@ class EditorHandler extends SectionEditorHandler {
         $templateMgr->assign('fieldOptions', $this->_getSearchFieldOptions());
         $templateMgr->assign('dateFieldOptions', $this->_getDateFieldOptions());
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
 
@@ -607,7 +608,7 @@ class EditorHandler extends SectionEditorHandler {
 
         if ($article->getJournalId() == $journal->getId() && ($status == STATUS_DECLINED || $status == STATUS_ARCHIVED)) {
             // Delete article files
-            import('app.Domain.File.ArticleFileManager');
+            
             $articleFileManager = new ArticleFileManager($articleId);
             $articleFileManager->deleteArticleTree();
 
@@ -653,7 +654,7 @@ class EditorHandler extends SectionEditorHandler {
             $pageHierarchy = [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'], [$request->url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues']];
         }
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

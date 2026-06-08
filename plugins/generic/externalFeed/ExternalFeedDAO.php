@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+Lumera\Generic\ExternalFeed\ExternalFeed;
+namespace Lumera\Plugins\Generic\externalFeed;
+
 /**
  * @file plugins/generic/externalFeed/ExternalFeedDAO.inc.php
  *
@@ -18,8 +22,6 @@ declare(strict_types=1);
  * - Added automatic cache flushing.
  * - Strict Constructor & Visibility.
  */
-
-import('core.Modules.db.DAO');
 
 class ExternalFeedDAO extends DAO {
 
@@ -98,10 +100,10 @@ class ExternalFeedDAO extends DAO {
         // DAOResultFactory callback di PHP 7.4 — gunakan import() langsung
         $externalFeedPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
         if ($externalFeedPlugin !== null) {
-            $externalFeedPlugin->import('ExternalFeed');
+            $externalFeedPlugin->
         } else {
             // Fallback: import langsung via path tanpa bergantung pada registry
-            import('plugins.generic.externalFeed.ExternalFeed');
+            
         }
 
         $externalFeed = new ExternalFeed();

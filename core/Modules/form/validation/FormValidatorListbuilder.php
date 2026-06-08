@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Controllers\Listbuilder\ListbuilderHandler;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorListbuilder.inc.php
  *
@@ -15,8 +19,6 @@ declare(strict_types=1);
  * contains at least one valid user id.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorListbuilder extends FormValidator {
 
@@ -57,7 +59,7 @@ class FormValidatorListbuilder extends FormValidator {
      */
     public function isValid() {
         $value = $this->getFieldValue();
-        import('core.Modules.controllers.listbuilder.ListbuilderHandler');
+        
         
         // [WIZDAM] PHP 8 Fix: $request was undefined in original code.
         // Retrieve request from the Application context.

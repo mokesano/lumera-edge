@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Listbuilder\ListbuilderHandler;
+Lumera\Modules\Controllers\Listbuilder\ListbuilderList;
+Lumera\Modules\Controllers\Grid\Feature\OrderMultipleListsItemsFeature;
+namespace Lumera\Modules\controllers\listbuilder;
+
 /**
  * @file core.Modules.controllers/listbuilder/MultipleListsListbuilderHandler.inc.php
  *
@@ -14,9 +19,6 @@ declare(strict_types=1);
  * @brief Class defining basic operations for handling multiple lists listbuilder UI elements
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.listbuilder.ListbuilderHandler');
-import('core.Modules.controllers.listbuilder.ListbuilderList');
 
 define_exposed('LISTBUILDER_SOURCE_TYPE_NONE', 3);
 
@@ -45,7 +47,6 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
         self::__construct();
     }
 
-
     //
     // Getters and Setters
     //
@@ -68,7 +69,6 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
     public function getLists(): array {
         return $this->_lists;
     }
-
 
     //
     // Protected methods.
@@ -141,7 +141,7 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
 
         // Multiple lists listbuilder always have orderable rows.
         // We don't have any other requirement for it.
-        import('core.Modules.controllers.grid.feature.OrderMultipleListsItemsFeature');
+        
         return [new OrderMultipleListsItemsFeature()];
     }
 
@@ -185,7 +185,6 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
         return false;
     }
 
-
     //
     // Protected template methods.
     //
@@ -203,7 +202,6 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
 
         fatalError('ABSTRACT METHOD');
     }
-
 
     //
     // Publicly (remotely) available listbuilder functions
@@ -224,7 +222,6 @@ class MultipleListsListbuilderHandler extends ListbuilderHandler {
 
         return parent::fetch($args, $request);
     }
-
 
     //
     // Private helper methods.

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\BookForReview;
+Lumera\Modules\File\PublicFileManager;
+namespace Lumera\Plugins\Generic\booksForReview\pages;
+
 /**
  * @file plugins/generic/booksForReview/pages/BooksForReviewHandler.inc.php
  *
@@ -14,8 +19,6 @@ declare(strict_types=1);
  * @brief Handle requests for public book for review functions. 
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.handler.Handler');
 
 class BooksForReviewHandler extends Handler {
 
@@ -31,7 +34,7 @@ class BooksForReviewHandler extends Handler {
 
         $bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
 
-        $bfrPlugin->import('core.Modules.BookForReview');
+        $bfrPlugin->
         $searchField = null;
         $searchMatch = null;
         
@@ -69,7 +72,7 @@ class BooksForReviewHandler extends Handler {
             $templateMgr->assign($param, $sanitizedValue);
         }
 
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $coverPagePath = $request->getBaseUrl() . '/';
         $coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
@@ -108,13 +111,13 @@ class BooksForReviewHandler extends Handler {
         // Ensure book for review is valid and for this journal
         if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
             $book = $bfrDao->getBookForReview($bookId);
-            $bfrPlugin->import('core.Modules.BookForReview');
+            $bfrPlugin->
 
             // Ensure book is still available
             if ($book->getStatus() == BFR_STATUS_AVAILABLE) {
                 $isAuthor = Validation::isAuthor();
 
-                import('core.Modules.file.PublicFileManager');
+                
                 $publicFileManager = new PublicFileManager();
                 $coverPagePath = $request->getBaseUrl() . '/';
                 $coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';

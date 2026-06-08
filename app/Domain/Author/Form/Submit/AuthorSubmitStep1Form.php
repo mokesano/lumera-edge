@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Author\Form\Submit\AuthorSubmitForm;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Form for Step 1 of author article submission.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-
-import('app.Domain.Author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep1Form extends AuthorSubmitForm {
 
@@ -82,7 +81,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
         $templateMgr->assign('sectionOptions', ['0' => __('author.submit.selectSection')] + $sectionDao->getSectionTitles($journal->getId(), !$isEditor));
 
         // Set up required Payment Related Information
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($this->request);
         if ($paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
             $templateMgr->assign('authorFees', true);

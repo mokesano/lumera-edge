@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\PubObjectCache;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Importexport\medra\classes;
+
 /**
  * @file plugins/importexport/common/classes/DOIExportPlugin.inc.php
  *
@@ -14,8 +20,6 @@ declare(strict_types=1);
  * @brief Base class for DOI export/registration plugins.
  * [WIZDAM EDITION] Refactored for PHP 7.4/8.0+ (Strict Types, NotificationManager Integration)
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
 
 // Export types.
 define('DOI_EXPORT_ISSUES', 0x01);
@@ -81,7 +85,7 @@ class DOIExportPlugin extends ImportExportPlugin {
         if (!($this->_cache instanceof PubObjectCache)) {
             // Instantiate the cache.
             if (!class_exists('PubObjectCache')) { 
-                $this->import('core.Modules.PubObjectCache');
+                $this->
             }
             $this->_cache = new PubObjectCache();
         }
@@ -1038,7 +1042,6 @@ class DOIExportPlugin extends ImportExportPlugin {
         return $errorKeys[$exportType];
     }
 
-
     //
     // Private helper methods
     //
@@ -1124,7 +1127,7 @@ class DOIExportPlugin extends ImportExportPlugin {
         unset($articles);
 
         // Instantiate article iterator.
-        import('core.Kernel.VirtualArrayIterator');
+        
         $iterator = new VirtualArrayIterator($articleData, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
         // Prepare and display the article template.
@@ -1183,7 +1186,7 @@ class DOIExportPlugin extends ImportExportPlugin {
         unset($galleys);
 
         // Instantiate galley iterator.
-        import('core.Kernel.VirtualArrayIterator');
+        
         $iterator = new VirtualArrayIterator($galleyData, $totalGalleys, $rangeInfo->getPage(), $rangeInfo->getCount());
 
         // Prepare and display the galley template.
@@ -1526,7 +1529,7 @@ class DOIExportPlugin extends ImportExportPlugin {
         // Optimization: Instantiate directly without static caching if simpler, 
         // or check class existence if lazy loading is needed.
         if (!class_exists('NotificationManager')) {
-            import('core.Modules.notification.NotificationManager');
+            
         }
         $notificationManager = new NotificationManager();
 

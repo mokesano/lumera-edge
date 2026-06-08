@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Pages\User;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\User;
  *
  * @brief Handle requests for user dashboard (User Home).
  */
-
-import('app.Pages.user.UserHandler');
 
 class UserIndexHandler extends UserHandler {
     
@@ -124,7 +124,7 @@ class UserIndexHandler extends UserHandler {
                     || $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journalId, true)) ? true : false;
             $templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
 
-            import('app.Domain.Payment.AppPaymentManager');
+            
             $paymentManager = new AppPaymentManager($request);
             $acceptGiftPayments = $paymentManager->acceptGiftPayments();
             $templateMgr->assign('acceptGiftPayments', $acceptGiftPayments);

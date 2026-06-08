@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+namespace Lumera\Plugins\Gateways\metsGateway;
+
 /**
  * @file plugins/gateways/metsGateway/MetsGatewayPlugin.inc.php
  *
@@ -15,10 +19,7 @@ declare(strict_types=1);
  * * [WIZDAM EDITION v3.4] Refactored for PHP 8.x Strict Compliance
  */
 
-import('core.Modules.plugins.GatewayPlugin');
-import('core.Modules.xml.XMLCustomWriter');
-
-class METSGatewayPlugin extends GatewayPlugin {
+class MetsGatewayPlugin extends GatewayPlugin {
     
     /** @var int|null */
     protected $journalId;
@@ -105,7 +106,7 @@ class METSGatewayPlugin extends GatewayPlugin {
                 // [FIX CRITICAL] Force Integer Cast untuk Strict Typing Constructor
                 $journalId = (int) $journal->getId();
 
-                $this->import('SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journalId);
 
                 if ($request->getUserVar('save')) {
@@ -219,7 +220,7 @@ class METSGatewayPlugin extends GatewayPlugin {
         // Mengutamakan objek Journal yang dipassing, backup ke Request jika perlu
         $this->journalId = (int) $journal->getId();
 
-        $this->import('MetsExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument();
         $root = XMLCustomWriter::createElement($doc, 'METS:mets');
         XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');

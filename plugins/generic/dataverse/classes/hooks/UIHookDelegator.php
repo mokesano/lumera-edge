@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\dataverse\classes\hooks;
+
 /**
  * @file plugins/generic/dataverse/classes/hooks/UIHookDelegator.inc.php
  * 
@@ -297,7 +300,7 @@ class UIHookDelegator {
         
         $type = $notification->getType();
         
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         switch ($type) {

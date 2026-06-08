@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+namespace Lumera\Plugins\Gateways\resolver;
+
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Simple resolver gateway plugin
  */
-
-import('core.Modules.plugins.GatewayPlugin');
 
 class ResolverPlugin extends GatewayPlugin {
 

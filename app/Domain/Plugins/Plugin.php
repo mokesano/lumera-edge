@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\CorePlugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\Plugins;
  *
  * @brief Abstract class for plugins
  */
-
-import('app.Domain.Plugins.CorePlugin');
 
 class Plugin extends CorePlugin {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImplicitAuthPlugin;
 /**
  * @file plugins/generic/implicitAuth/shibboleth/ShibAuthPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Shibboleth plugin class
  * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.plugins.ImplicitAuthPlugin');
 
 class ShibAuthPlugin extends ImplicitAuthPlugin {
 
@@ -170,7 +169,6 @@ class ShibAuthPlugin extends ImplicitAuthPlugin {
 
         return true;
     }
-
 
     /**
      * Register a new user. 

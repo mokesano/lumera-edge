@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\File\FileManager;
+namespace Lumera\Plugins\Generic\customLocale;
+
 /**
  * @file plugins/generic/customLocale/CustomLocalePlugin.inc.php
  *
@@ -15,7 +19,6 @@ declare(strict_types=1);
  */
 
 define('CUSTOM_LOCALE_DIR', 'customLocale');
-import('core.Modules.plugins.GenericPlugin');
 
 class CustomLocalePlugin extends GenericPlugin {
     
@@ -62,7 +65,7 @@ class CustomLocalePlugin extends GenericPlugin {
                 $publicFilesDir = Config::getVar('files', 'public_files_dir');
                 $customLocalePathBase = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR;
 
-                import('core.Modules.file.FileManager');
+                
                 $fileManager = new FileManager();
                 foreach ($localeFiles as $localeFile) {
                     $customLocalePath = $customLocalePathBase . $localeFile->getFilename();
@@ -103,7 +106,7 @@ class CustomLocalePlugin extends GenericPlugin {
         $publicFilesDir = Config::getVar('files', 'public_files_dir');
         $customLocalePath = $publicFilesDir . DIRECTORY_SEPARATOR . 'journals' . DIRECTORY_SEPARATOR . $journalId . DIRECTORY_SEPARATOR . CUSTOM_LOCALE_DIR . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . $localeFilename;
 
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
         if ($fileManager->fileExists($customLocalePath)) {
             AppLocale::registerLocaleFile($locale, $customLocalePath, false);
@@ -184,7 +187,7 @@ class CustomLocalePlugin extends GenericPlugin {
     public function manage(string $verb, array $args, string $message, array $messageParams, $request = NULL): bool {
         if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
-        $this->import('CustomLocaleHandler');
+        $this->
         $customLocaleHandler = new CustomLocaleHandler($this->getName());
         switch ($verb) {
             case 'edit':

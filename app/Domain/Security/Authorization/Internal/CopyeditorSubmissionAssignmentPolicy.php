@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
 namespace App\Domain\Security\Authorization\Internal;
 
 /**
@@ -19,8 +20,6 @@ namespace App\Domain\Security\Authorization\Internal;
  * authorization context.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class CopyeditorSubmissionAssignmentPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

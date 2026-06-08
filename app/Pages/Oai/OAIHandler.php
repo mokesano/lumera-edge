@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Oai\CoreOAI;
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Oai;
 
 /**
@@ -17,9 +19,6 @@ namespace App\Pages\Oai;
  */
 
 define('SESSION_DISABLE_INIT', 1);
-
-import('app.Domain.Oai.CoreOAI');
-import('app.Domain.Handler.Handler');
 
 class OAIHandler extends Handler {
 

@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\BookForReview;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\BookForReviewAuthor;
+namespace Lumera\Plugins\Generic\booksForReview\classes\form;
+
 /**
  * @file plugins/generic/booksForReview/classes/form/BookForReviewForm.inc.php
  *
@@ -14,8 +20,6 @@ declare(strict_types=1);
  * @brief Form for journal managers to create/edit books for review.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe (Removed create_function & each).
  */
-
-import('core.Modules.form.Form');
 
 define('BFR_COVER_PAGE_IMAGE_NAME', 'coverPage');
 
@@ -47,7 +51,7 @@ class BookForReviewForm extends Form {
     public function __construct($parentPluginName, $bookId = null) {
         $this->parentPluginName = $parentPluginName;
         $bfrPlugin = PluginRegistry::getPlugin('generic', $parentPluginName);
-        $bfrPlugin->import('core.Modules.BookForReview');
+        $bfrPlugin->
 
         // [MODERNISASI] Parent Construct
         parent::__construct($bfrPlugin->getTemplatePath() . 'editor' . '/' . 'bookForReviewForm.tpl');
@@ -279,7 +283,7 @@ class BookForReviewForm extends Form {
      */
     public function validate() {
         // Verify that book cover image, if supplied, is actually an image.
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         if ($publicFileManager->uploadedFileExists(BFR_COVER_PAGE_IMAGE_NAME)) {
             $type = $publicFileManager->getUploadedFileType(BFR_COVER_PAGE_IMAGE_NAME);
@@ -300,8 +304,8 @@ class BookForReviewForm extends Form {
      */
     public function execute($object = null) {
         $bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $bfrPlugin->import('core.Modules.BookForReview');
-        $bfrPlugin->import('core.Modules.BookForReviewAuthor');
+        $bfrPlugin->
+        $bfrPlugin->
 
         $bfrDao = DAORegistry::getDAO('BookForReviewDAO');
         $journal = Request::getJournal();
@@ -382,7 +386,7 @@ class BookForReviewForm extends Form {
         }
 
         // Handle book for review cover image
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $formLocale = $this->getFormLocale();
         if ($publicFileManager->uploadedFileExists(BFR_COVER_PAGE_IMAGE_NAME)) {

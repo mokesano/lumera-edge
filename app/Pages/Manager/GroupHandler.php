@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Manager\Form\GroupForm;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for editorial team management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class GroupHandler extends ManagerHandler {
     
@@ -166,7 +166,7 @@ class GroupHandler extends ManagerHandler {
         }
 
         $this->setupTemplate($group, true);
-        import('app.Domain.Manager.form.GroupForm');
+        
 
         $templateMgr = TemplateManager::getManager();
 
@@ -213,7 +213,7 @@ class GroupHandler extends ManagerHandler {
         }
         $this->setupTemplate($group);
 
-        import('app.Domain.Manager.form.GroupForm');
+        
 
         $groupForm = new GroupForm($group);
         $groupForm->readInputData();

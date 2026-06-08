@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Subscription\Form\GiftIndividualSubscriptionForm;
 namespace App\Pages\Gifts;
 
 /**
@@ -19,8 +22,6 @@ namespace App\Pages\Gifts;
  *
  * @brief Handle requests to buy gifts.
  */
-
-import('app.Domain.Handler.Handler');
 
 class GiftsHandler extends Handler {
     
@@ -57,14 +58,14 @@ class GiftsHandler extends Handler {
         $journal = $request->getJournal();
         if (!$journal) $request->redirect(null, 'index');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.form.GiftIndividualSubscriptionForm');
+        
         $giftSubscriptionForm = new GiftIndividualSubscriptionForm($request);
         $giftSubscriptionForm->initData();
         $giftSubscriptionForm->display();
@@ -82,7 +83,7 @@ class GiftsHandler extends Handler {
         $journal = $request->getJournal();
         if (!$journal) $request->redirect(null, 'index');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
         if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
@@ -93,7 +94,7 @@ class GiftsHandler extends Handler {
         // If buyer is logged in, save buyer user id as part of gift details
         $buyerUserId = $user ? (int) $user->getId() : null;
 
-        import('app.Domain.Subscription.form.GiftIndividualSubscriptionForm');
+        
         $giftSubscriptionForm = new GiftIndividualSubscriptionForm($request, $buyerUserId);
         $giftSubscriptionForm->readInputData();
 

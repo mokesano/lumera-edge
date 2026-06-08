@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Author\Form\Submit\AuthorSubmitForm;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,8 +18,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Form for Step 2 of author article submission.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep2Form extends AuthorSubmitForm {
 
@@ -89,7 +89,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
      * @return bool
      */
     public function uploadSubmissionFile($fileName) {
-        import('app.Domain.File.ArticleFileManager');
+        
 
         $articleFileManager = new ArticleFileManager($this->articleId);
         $articleDao = DAORegistry::getDAO('ArticleDAO');

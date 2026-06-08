@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Article\Article;
+Lumera\Modules\Submission\Common\Action;
 namespace App\Domain\Journal;
 
 /**
@@ -82,7 +84,7 @@ class JournalStatisticsDAO extends DAO {
     public function getArticleStatistics($journalId, $sectionIds = null, $dateStart = null, $dateEnd = null) {
         // Bring in status constants
         if (!class_exists('Article')) {
-            import('core.Modules.article.Article');
+            
         }
 
         $params = array((int) $journalId);
@@ -153,7 +155,7 @@ class JournalStatisticsDAO extends DAO {
                     }
                 }
 
-                import('core.Modules.submission.common.Action');
+                
                 switch ($row['decision']) {
                     case SUBMISSION_EDITOR_DECISION_ACCEPT:
                         $returner['submissionsAccept']++;

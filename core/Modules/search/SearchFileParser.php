@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Search\SearchHTMLParser;
+Lumera\Modules\Search\SearchHelperParser;
+namespace Lumera\Modules\search;
+
 /**
  * @defgroup search
  */
@@ -99,7 +103,6 @@ class SearchFileParser {
         return fgets($this->fp, 4096);
     }
 
-
     //
     // Static methods
     //
@@ -131,11 +134,11 @@ class SearchFileParser {
             case 'text/xml':
             case 'application/xhtml':
             case 'application/xml':
-                import('core.Modules.search.SearchHTMLParser');
+                
                 $returner = new SearchHTMLParser($path);
                 break;
             default:
-                import('core.Modules.search.SearchHelperParser');
+                
                 $returner = new SearchHelperParser($type, $path);
         }
         return $returner;

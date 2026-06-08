@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Role;
+namespace Lumera\Modules\security;
+
 /**
  * @file core.Modules.security/UserGroup.inc.php
  *
@@ -16,7 +19,6 @@ declare(strict_types=1);
  */
 
 // Bring in role constants.
-import('core.Modules.security.Role');
 
 class UserGroup extends DataObject {
     

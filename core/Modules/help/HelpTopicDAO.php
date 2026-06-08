@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Help\HelpTopic;
+Lumera\Modules\Help\CoreHelp;
+Lumera\Modules\Help\HelpTopicSection;
+namespace Lumera\Modules\help;
+
 /**
  * @file core.Modules.help/HelpTopicDAO.inc.php
  *
@@ -15,9 +20,7 @@ declare(strict_types=1);
  * @brief Operations for retrieving HelpTopic objects.
  */
 
-import('core.Modules.help.HelpTopic');
-import('core.Modules.help.CoreHelp');
-import('core.Modules.help.HelpTopicSection'); // Import yang hilang
+ // Import yang hilang
 
 class HelpTopicDAO extends XMLDAO {
     

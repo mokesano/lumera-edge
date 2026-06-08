@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\UserGroup;
+namespace Lumera\Modules\security;
+
 /**
  * @file core.Modules.security/UserGroupAssignment.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Describes user roles within the system and the associated permissions.
  */
-
-import('core.Modules.security.UserGroup');
 
 class UserGroupAssignment extends DataObject {
     /** @var UserGroup the UserGroup object associated with this assignment **/

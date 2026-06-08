@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\XMLDAO;
+Lumera\Modules\Site\Version;
+namespace Lumera\Modules\site;
+
 /**
  * @file core.Modules.site/VersionCheck.inc.php
  *
@@ -16,9 +20,6 @@ declare(strict_types=1);
  */
 
 define('VERSION_CODE_PATH', 'dbscripts/xml/version.xml');
-
-import('core.Modules.db.XMLDAO');
-import('core.Modules.site.Version');
 
 class VersionCheck {
 

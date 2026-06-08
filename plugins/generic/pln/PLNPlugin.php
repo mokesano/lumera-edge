@@ -1,6 +1,20 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\Config\Config;
+Lumera\Modules\Article\PublishedArticle;
+Lumera\Modules\Issue\Issue;
+Lumera\Modules\Deposit;
+Lumera\Modules\DepositObject;
+Lumera\Modules\DepositPackage;
+Lumera\Modules\DepositDAO;
+Lumera\Modules\DepositObjectDAO;
+Lumera\Modules\Form\PLNSettingsForm;
+Lumera\Modules\Form\PLNStatusForm;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\pln;
+
 /**
  * @file plugins/generic/pln/PLNPlugin.inc.php
  *
@@ -15,11 +29,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.GenericPlugin');
-import('core.Modules.Config.Config');
-import('core.Modules.article.PublishedArticle');
-import('core.Modules.issue.Issue');
 
 define('PLN_PLUGIN_NAME','plnplugin');
 
@@ -111,9 +120,9 @@ class PLNPlugin extends GenericPlugin {
             if ($this->getEnabled()) {
             
                 $this->registerDAOs();
-                $this->import('core.Modules.Deposit');
-                $this->import('core.Modules.DepositObject');
-                $this->import('core.Modules.DepositPackage');
+                $this->
+                $this->
+                $this->
             
                 HookRegistry::register('PluginRegistry::loadCategory', [$this, 'callbackLoadCategory']);            
                 HookRegistry::register('JournalDAO::deleteJournalById', [$this, 'callbackDeleteJournalById']);
@@ -130,8 +139,8 @@ class PLNPlugin extends GenericPlugin {
      */    
     public function registerDAOs() {
         
-        $this->import('core.Modules.DepositDAO');
-        $this->import('core.Modules.DepositObjectDAO');
+        $this->
+        $this->
         
         $depositDao = new DepositDAO($this->getName());
         DAORegistry::registerDAO('DepositDAO', $depositDao);
@@ -243,7 +252,7 @@ class PLNPlugin extends GenericPlugin {
         $plugins =& $args[1]; // Reference needed to modify plugin list
         switch ($category) {
             case 'gateways':
-                $this->import('PLNGatewayPlugin');
+                $this->
                 $gatewayPlugin = new PLNGatewayPlugin($this->getName());
                 $plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] = $gatewayPlugin;
                 break;
@@ -399,7 +408,7 @@ class PLNPlugin extends GenericPlugin {
             case 'settings':
                 $templateMgr = TemplateManager::getManager();
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
-                $this->import('core.Modules.form.PLNSettingsForm');
+                $this->
                 $form = new PLNSettingsForm($this, $journal->getId());
 
                 if (Request::getUserVar('save')) {
@@ -425,7 +434,7 @@ class PLNPlugin extends GenericPlugin {
             case 'status':
                 $templateMgr = TemplateManager::getManager();
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
-                $this->import('core.Modules.form.PLNStatusForm');
+                $this->
                 $form = new PLNStatusForm($this, $journal->getId());
                 
                 if (Request::getUserVar('reset')) {
@@ -619,7 +628,7 @@ class PLNPlugin extends GenericPlugin {
     public function createJournalManagerNotification($journalId, $notificationType) {
         $roleDao = DAORegistry::getDAO('RoleDAO');
         $journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER,$journalId);
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         // TODO: this currently gets sent to all journal managers - perhaps only limit to the technical contact's account?
         while ($journalManager = $journalManagers->next()) {

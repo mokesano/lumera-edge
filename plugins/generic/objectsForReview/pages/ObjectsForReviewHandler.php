@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\ReviewObjectMetadata;
+namespace Lumera\Plugins\Generic\objectsForReview\pages;
+
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewHandler.inc.php
  *
@@ -15,8 +20,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
 
 class ObjectsForReviewHandler extends Handler {
 
@@ -151,14 +154,14 @@ class ObjectsForReviewHandler extends Handler {
         $templateMgr->assign('isAuthor', $isAuthor);
         $templateMgr->assign('authorAssignments', $authorAssignments);
 
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $coverPagePath = $request->getBaseUrl() . '/';
         $coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
         $templateMgr->assign('coverPagePath', $coverPagePath);
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+        $ofrPlugin->
         $templateMgr->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
         $templateMgr->assign('additionalInformation', $ofrPlugin->getSetting($journalId, 'additionalInformation'));
         $templateMgr->assign('ofrListing', true);
@@ -222,14 +225,14 @@ class ObjectsForReviewHandler extends Handler {
             $templateMgr->assign('authorAssignments', $authorAssignments);
 
             // Cover page path
-            import('core.Modules.file.PublicFileManager');
+            
             $publicFileManager = new PublicFileManager();
             $coverPagePath = $request->getBaseUrl() . '/';
             $coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
             $templateMgr->assign('coverPagePath', $coverPagePath);
 
             $ofrPlugin = $this->_getObjectsForReviewPlugin();
-            $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+            $ofrPlugin->
             $templateMgr->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
             $templateMgr->assign('locale', AppLocale::getLocale());
             $templateMgr->assign('ofrListing', false);

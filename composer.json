@@ -80,7 +80,11 @@
             "Lumera\\Plugins\\Generic\\": "plugins/generic/",
             "Lumera\\Plugins\\Importexport\\": "plugins/importexport/",
             "Lumera\\Plugins\\Oaimetadataformats\\": "plugins/oaiMetadataFormats/",
-            "Lumera\\Plugins\\Paymethod\\": "plugins/paymethod/"
+            "Lumera\\Plugins\\Paymethod\\": "plugins/paymethod/",
+            "Lumera\\Plugins\\Paymethod\\Manual\\": "plugins/paymethod/manual/",
+            "Lumera\\Plugins\\Paymethod\\Paypal\\": "plugins/paymethod/paypal/",
+            "Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\": "plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/",
+            "Lumera\\Plugins\\Generic\\Pln\\Lib\\": "plugins/generic/pln/lib/"
         },
         "files": [
             "core/Includes/functions.php"

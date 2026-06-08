@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\Plugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -13,7 +14,6 @@ namespace App\Domain\Plugins;
  */
 
 define('AUTH_PLUGIN_CATEGORY', 'auth');
-import('app.Domain.Plugins.Plugin');
 
 class AuthPlugin extends Plugin {
 

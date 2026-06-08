@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\Form\ReviewObjectTypeForm;
+Lumera\Modules\Form\ReviewObjectMetadataForm;
+Lumera\Modules\ReviewObjectType;
+Lumera\Modules\ReviewObjectMetadata;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\objectsForReview\pages;
+
 /**
  * @file plugins/generic/objectsForReview/pages/ReviewObjectTypesEditorHandler.inc.php
  *
@@ -13,8 +22,6 @@ declare(strict_types=1);
  *
  * @brief Handle requests for editor objects for review functions.
  */
-
-import('core.Modules.handler.Handler');
 
 class ReviewObjectTypesEditorHandler extends Handler {
 
@@ -32,7 +39,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$types = $reviewObjectTypeDao->getTypeIdsAlphabetizedByContext($journalId);
 		$totalResults = count($types);
 		$types = array_slice($types, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-		import('core.Kernel.VirtualArrayIterator');
+		
 		$results = new VirtualArrayIterator($types, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		$this->setupTemplate($request);
@@ -82,7 +89,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		}
 
 		$plugin = $this->_getObjectsForReviewPlugin();
-		$plugin->import('core.Modules.form.ReviewObjectTypeForm');
+		$plugin->
 		$reviewObjectTypeForm = new ReviewObjectTypeForm(OBJECTS_FOR_REVIEW_PLUGIN_NAME, $typeId);
 		if ($reviewObjectTypeForm->isLocaleResubmit()) {
 			$reviewObjectTypeForm->readInputData();
@@ -111,7 +118,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		}
 
 		$plugin = $this->_getObjectsForReviewPlugin();
-		$plugin->import('core.Modules.form.ReviewObjectTypeForm');
+		$plugin->
 		$reviewObjectTypeForm = new ReviewObjectTypeForm(OBJECTS_FOR_REVIEW_PLUGIN_NAME, $typeId);
 		$reviewObjectTypeForm->readInputData();
 		if (!$typeId) {
@@ -394,7 +401,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		}
 
 		$plugin = $this->_getObjectsForReviewPlugin();
-		$plugin->import('core.Modules.form.ReviewObjectMetadataForm');
+		$plugin->
 		$reviewObjectMetadataForm = new ReviewObjectMetadataForm(OBJECTS_FOR_REVIEW_PLUGIN_NAME, $typeId, $metadataId);
 		if ($reviewObjectMetadataForm->isLocaleResubmit()) {
 			$reviewObjectMetadataForm->readInputData();
@@ -424,7 +431,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		}
 
 		$plugin = $this->_getObjectsForReviewPlugin();
-		$plugin->import('core.Modules.form.ReviewObjectMetadataForm');
+		$plugin->
 		$reviewObjectMetadataForm = new ReviewObjectMetadataForm(OBJECTS_FOR_REVIEW_PLUGIN_NAME, $typeId, $metadataId);
 		$reviewObjectMetadataForm->readInputData();
 		$formLocale = $reviewObjectMetadataForm->getFormLocale();
@@ -626,7 +633,6 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$request->redirect(null, 'editor', 'reviewObjectMetadata', array($typeId));
 	}
 
-
 	/**
 	 * Ensure that we have a journal, plugin is enabled, and user is editor.
 	 * @see CoreHandler::authorize()
@@ -745,8 +751,8 @@ class ReviewObjectTypesEditorHandler extends Handler {
 		$plugin = $this->_getObjectsForReviewPlugin();
 		if (!isset($journal) || !isset($reviewObjects) || !isset($locales) || !isset($action)) return false;
 		$journalId = $journal->getId();
-		$plugin->import('core.Modules.ReviewObjectType');
-		$plugin->import('core.Modules.ReviewObjectMetadata');
+		$plugin->
+		$plugin->
 		$reviewObjectTypeDao = DAORegistry::getDAO('ReviewObjectTypeDAO');
 		$reviewObjectMetadataDao = DAORegistry::getDAO('ReviewObjectMetadataDAO');
 		$onlyCommonMetadata = false;
@@ -896,7 +902,7 @@ class ReviewObjectTypesEditorHandler extends Handler {
 	 */
 	function _createTrivialNotification($notificationType, &$request) {
 		$user = $request->getUser();
-		import('core.Modules.notification.NotificationManager');
+		
 		$notificationManager = new NotificationManager();
 		$notificationManager->createTrivialNotification($user->getId(), $notificationType);
 	}

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Mods34\CoreMods34MetadataPlugin;
 /**
  * @defgroup plugins_metadata_mods34
  */
@@ -17,9 +18,6 @@ declare(strict_types=1);
  *
  * @brief MODS 3.4 metadata plugin
  */
-
-
-import('core.Modules.plugins.metadata.mods34.CoreMods34MetadataPlugin');
 
 class Mods34MetadataPlugin extends CoreMods34MetadataPlugin {
     

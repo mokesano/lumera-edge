@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Subscription\InstitutionalSubscription;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +23,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form class for user purchase of institutional subscription.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class UserInstitutionalSubscriptionForm extends Form {
     /** @var $request CoreRequest */
@@ -74,7 +74,6 @@ class UserInstitutionalSubscriptionForm extends Form {
                     $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1) && 
                     $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;
         }));
-
 
         // Ensure institution name is provided
         $this->addCheck(new FormValidator($this, 'institutionName', 'required', 'user.subscriptions.form.institutionNameRequired'));
@@ -165,7 +164,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 
         // If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
         if ($ipRangeProvided) {    
-            import('app.Domain.Subscription.InstitutionalSubscription');
+            
             // [WIZDAM FIX] Replaced create_function with Closure
             $this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', function($ipRange, $regExp) {
                 return CoreString::regexp_match($regExp, $ipRange);
@@ -196,7 +195,7 @@ class UserInstitutionalSubscriptionForm extends Form {
         $insert = false;
 
         if (!isset($this->subscription)) {
-            import('app.Domain.Subscription.InstitutionalSubscription');
+            
             $subscription = new InstitutionalSubscription();
             $subscription->setJournalId($journalId);
             $subscription->setUserId($this->userId);
@@ -208,7 +207,7 @@ class UserInstitutionalSubscriptionForm extends Form {
             $subscription = $this->subscription;
         }
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($this->request);
         $paymentPlugin = $paymentManager->getPaymentPlugin();
         

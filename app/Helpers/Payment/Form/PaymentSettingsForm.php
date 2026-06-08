@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Services\PaymentSettingsService;
+Lumera\Modules\Form\Validation\FormValidatorCSRF;
+Lumera\Modules\Validation\ValidatorCSRF;
 namespace App\Helpers\Payment\Form;
 
 /**
@@ -14,9 +18,6 @@ namespace App\Helpers\Payment\Form;
  * 
  * @brief Form untuk mengatur Payment Gateway Keys di level Admin.
  */
-
-import('core.Modules.form.Form');
-import('core.Modules.services.PaymentSettingsService');
 
 class PaymentSettingsForm extends Form {
 
@@ -32,7 +33,7 @@ class PaymentSettingsForm extends Form {
         $this->settingsService = new PaymentSettingsService();
 
         // [WIZDAM SECURITY] Gunakan Validator CSRF yang kita buat sebelumnya!
-        import('core.Modules.form.validation.FormValidatorCSRF');
+        
         $this->addCheck(new FormValidatorCSRF($this));
         
         $this->addCheck(new FormValidatorPost($this));
@@ -46,7 +47,7 @@ class PaymentSettingsForm extends Form {
         $templateMgr = TemplateManager::getManager($validRequest);
         
         // [WIZDAM SECURITY] Gunakan Validator CSRF
-        import('core.Modules.validation.ValidatorCSRF');
+        
         $sessionId = $validRequest->getSession()->getId();
         $templateMgr->assign('csrfToken', ValidatorCSRF::generateToken($sessionId));
 

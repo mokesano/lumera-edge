@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Checkout\Services\CartService;
+Lumera\Modules\Checkout\Services\InvoiceService;
+Lumera\Domain\Security\SecurityHashService;
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Order;
 
 /**
@@ -17,12 +23,7 @@ namespace App\Pages\Order;
  * dan melakukan Checkout untuk men-generate Invoice resmi ke domain Billing.
  */
 
-import('app.Domain.Handler.Handler');
-
 // Mengimpor Service Layer Wizdam Frontedge
-import('core.Modules.checkout.services.CartService');
-import('core.Modules.checkout.services.InvoiceService');
-import('app.Domain.Security.SecurityHashService');
 
 class OrderHandler extends Handler {
     
@@ -102,7 +103,7 @@ class OrderHandler extends Handler {
             $this->_redirectWithError($request, 'order.error.invalidMethod', 'cart');
         }
 
-        import('core.Modules.validation.ValidatorCSRF');
+        
         if (!ValidatorCSRF::checkToken($request->getUserVar('csrfToken'))) {
             $this->_redirectWithError($request, 'order.error.csrfInvalid', 'cart');
         }
@@ -128,7 +129,7 @@ class OrderHandler extends Handler {
             $hash = $this->securityHashService->generateHash('invoice', (int) $invoice->getId());
 
             // 6. Buat Notifikasi Sukses
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification(
                 $user->getId(), 
@@ -151,7 +152,7 @@ class OrderHandler extends Handler {
      * Menggantikan penggunaan die() demi UX yang sempurna.
      */
     private function _redirectWithError($request, string $localeKey, string $targetOp = 'cart'): void {
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = $request->getUser();
         

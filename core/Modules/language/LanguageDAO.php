@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Language\Language;
+namespace Lumera\Modules\language;
+
 /**
  * @file core.Modules.language/LanguageDAO.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Operations for retrieving and modifying Language objects.
  *
  */
-
-import('core.Modules.language.Language');
 
 class LanguageDAO extends DAO {
 

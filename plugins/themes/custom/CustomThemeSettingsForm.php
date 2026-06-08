@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\PublicFileManager;
 /**
  * @file plugins/themes/custom/CustomThemeSettingsForm.inc.php
  *
@@ -13,9 +15,6 @@ declare(strict_types=1);
  *
  * @brief Form for journal managers to modify custom theme plugin settings
  */
-
-import('core.Modules.form.Form');
-import('core.Modules.file.PublicFileManager');
 
 class CustomThemeSettingsForm extends Form
 {

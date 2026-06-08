@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Proofreader\SubmissionProofreadHandler;
 namespace App\Pages\Proofreader;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Proofreader;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.proofreader.SubmissionProofreadHandler');
 
 class SubmissionCommentsHandler extends ProofreaderHandler {
     

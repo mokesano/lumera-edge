@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Plugins\Generic\sword;
+
 /**
  * @file plugins/generic/sword/SettingsForm.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.form.Form');
 
 class SettingsForm extends Form {
 

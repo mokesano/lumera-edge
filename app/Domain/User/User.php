@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\User\CoreUser;
 namespace App\Domain\User;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\User;
  *
  * @brief Basic class describing users existing in the system.
  */
-
-import('app.Domain.User.CoreUser');
 
 class User extends CoreUser {
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Manager\Form;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Manager\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class ReviewFormForm extends Form {
 

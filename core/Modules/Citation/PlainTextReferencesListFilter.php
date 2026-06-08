@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Citation\TemplateBasedReferencesListFilter;
+Lumera\Modules\Citation\PlainTextReferencesList;
+Lumera\Modules\Filter\SetFilterSetting;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -17,9 +20,6 @@ namespace Lumera\Modules\Citation;
  * based on the configured ordering type and citation output filter.
  */
 
-import('core.Modules.Citation.TemplateBasedReferencesListFilter');
-import('core.Modules.Citation.PlainTextReferencesList');
-
 class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     
     /**
@@ -27,7 +27,7 @@ class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
      */
     public function __construct($filterGroup) {
         // Add the persistable filter settings.
-        import('core.Modules.filter.SetFilterSetting');
+        
         $this->addSetting(new SetFilterSetting('ordering', null, null,
                 [REFERENCES_LIST_ORDERING_ALPHABETICAL, REFERENCES_LIST_ORDERING_NUMERICAL]));
 

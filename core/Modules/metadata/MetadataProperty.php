@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorControlledVocab;
+Lumera\Modules\Validation\ValidatorUri;
+namespace Lumera\Modules\metadata;
+
 /**
  * @file core.Modules.metadata/MetadataProperty.inc.php
  *
@@ -159,7 +163,6 @@ class MetadataProperty {
         if (is_null($validationMessage)) $validationMessage = 'metadata.property.validationMessage.'.$name;
         assert(is_string($validationMessage));
 
-
         // Initialize the class
         $this->_name = (string)$name;
         $this->_assocTypes = $assocTypes;
@@ -271,7 +274,6 @@ class MetadataProperty {
         return $this->_mandatory;
     }
 
-
     //
     // Public methods
     //
@@ -372,7 +374,7 @@ class MetadataProperty {
 
                             if (is_integer($value)) {
                                 // Validate with controlled vocabulary validator
-                                import('core.Modules.validation.ValidatorControlledVocab');
+                                
                                 $validator = new ValidatorControlledVocab($symbolic, $assocType, $assocId);
                                 if ($validator->isValid($value)) {
                                     return array(METADATA_PROPERTY_TYPE_VOCABULARY => $allowedTypeParam);
@@ -383,7 +385,7 @@ class MetadataProperty {
 
                         case METADATA_PROPERTY_TYPE_URI:
                             // Validate with the URI validator
-                            import('core.Modules.validation.ValidatorUri');
+                            
                             $validator = new ValidatorUri();
                             if ($validator->isValid($value)) return array(METADATA_PROPERTY_TYPE_URI => null);
                             break;

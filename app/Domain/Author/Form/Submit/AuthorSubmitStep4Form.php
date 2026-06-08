@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Author\Form\Submit\AuthorSubmitForm;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Form for Step 4 of author article submission.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep4Form extends AuthorSubmitForm {
     /**

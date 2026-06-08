@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Datacite\Classes\DOIExportDom;
+namespace Lumera\Plugins\Importexport\datacite\classes;
+
 /**
  * @file plugins/importexport/datacite/classes/DataciteExportDom.inc.php
  *
@@ -15,7 +18,7 @@ declare(strict_types=1);
  */
 
 if (!class_exists('DOIExportDom')) { // Bug #7848
-	import('plugins.importexport.datacite.classes.DOIExportDom');
+	
 }
 
 // XML attributes
@@ -84,7 +87,6 @@ class DataciteExportDom extends DOIExportDom {
         $args = func_get_args();
         return call_user_func_array(array($this, '__construct'), $args);
     }
-
 
 	//
 	// Public methods
@@ -212,7 +214,6 @@ class DataciteExportDom extends DOIExportDom {
 		return $doc;
 	}
 
-
 	//
 	// Implementation of template methods from DOIExportDom
 	//
@@ -316,7 +317,6 @@ class DataciteExportDom extends DOIExportDom {
 		assert(!empty($publisher));
 		return $publisher;
 	}
-
 
 	//
 	// Protected helper methods
@@ -702,7 +702,6 @@ class DataciteExportDom extends DOIExportDom {
 
 		return $alternateIdentifiersElement;
 	}
-
 
 	/**
 	 * Generate related identifiers element list.

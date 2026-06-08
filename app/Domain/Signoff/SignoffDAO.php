@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Signoff\CoreSignoffDAO;
 namespace App\Domain\Signoff;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Signoff;
  *
  * @brief Operations for retrieving and modifying Signoff objects.
  */
-
-import('app.Domain.Signoff.CoreSignoffDAO');
 
 class SignoffDAO extends CoreSignoffDAO {
     

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\googleAnalytics;
+
 /**
  * @file plugins/generic/googleAnalytics/GoogleAnalyticsPlugin.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class GoogleAnalyticsPlugin extends GenericPlugin {
 
@@ -304,7 +305,7 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
                 $journal = Request::getJournal();
 
-                $this->import('GoogleAnalyticsSettingsForm');
+                $this->
                 $form = new GoogleAnalyticsSettingsForm($this, $journal->getId());
                 
                 if (Request::getUserVar('save')) {

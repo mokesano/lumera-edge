@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\LayoutEditor\LayoutEditorAction;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
 namespace App\Pages\LayoutEditor;
 
 /**
@@ -15,10 +20,6 @@ namespace App\Pages\LayoutEditor;
  *
  * @brief Handle requests for layout editor functions.
  */
-
-import('app.Domain.Submission.LayoutEditor.LayoutEditorAction');
-import('app.Domain.Submission.Proofreader.ProofreaderAction');
-import('app.Domain.Handler.Handler');
 
 class LayoutEditorHandler extends Handler {
     
@@ -195,7 +196,7 @@ class LayoutEditorHandler extends Handler {
             SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
         ]);
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         // Note: register_function might be deprecated depending on Smarty version.
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
@@ -329,7 +330,7 @@ class LayoutEditorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'layoutEditor'), 'user.role.layoutEditor']]
                 : [[$request->url(null, 'user'), 'navigation.user']];
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -344,17 +345,15 @@ class LayoutEditorHandler extends Handler {
      */
     public function instructions($args, $request) {
         $this->setupTemplate();
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
         if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], ['layout', 'proof', 'referenceLinking'])) {
             $request->redirect(null, $request->getRequestedPage());
         }
     }
 
-
     //
     // Validation
     //
-
 
     /**
      * Validate that the user is the assigned layout editor for the submission.

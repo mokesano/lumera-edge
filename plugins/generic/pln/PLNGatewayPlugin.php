@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Modules\Db\DBResultRange;
+Lumera\Kernel\ArrayItemIterator;
+namespace Lumera\Plugins\Generic\pln;
+
 /**
  * @file plugins/generic/pln/PLNGatewayPlugin.inc.php
  *
@@ -14,11 +20,6 @@ declare(strict_types=1);
  * @brief Gateway component of web feed plugin
  *
  */
-
-import('core.Modules.plugins.GatewayPlugin');
-import('core.Modules.site.VersionCheck');
-import('core.Modules.db.DBResultRange');
-import('core.Kernel.ArrayItemIterator');
 
 define('PLN_PLUGIN_PING_ARTICLE_COUNT', 12);
 

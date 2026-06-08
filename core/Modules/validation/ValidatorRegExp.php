@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\Validator;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorRegExp.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Validation check using a regular expression.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor & Visibility)
  */
-
-import ('core.Modules.validation.Validator');
 
 class ValidatorRegExp extends Validator {
 
@@ -56,7 +57,6 @@ class ValidatorRegExp extends Validator {
     public function isValid($value) {
         return (boolean)CoreString::regexp_match_get($this->_regExp, $value, $this->_matches);
     }
-
 
     //
     // Protected methods for use by sub-classes

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Captcha\Captcha;
 namespace Lumera\Modules\Captcha;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Captcha;
  *
  * @brief Operations for retrieving and modifying Captcha keys.
  */
-
-import('core.Modules.Captcha.Captcha');
 
 class CaptchaDAO extends DAO {
     

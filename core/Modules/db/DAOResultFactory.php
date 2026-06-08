@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\ItemIterator;
+Lumera\Modules\Db\DBResultRange;
+namespace Lumera\Modules\db;
+
 /**
  * @file core.Modules.db/DAOResultFactory.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Wrapper around ADORecordSet providing "factory" features for generating
  * objects from DAOs.
  */
-
-import('core.Kernel.ItemIterator');
 
 class DAOResultFactory extends ItemIterator {
     
@@ -255,7 +257,7 @@ class DAOResultFactory extends ItemIterator {
      * @return object
      */
     public function getLastPageRangeInfo() {
-        import('core.Modules.db.DBResultRange');
+        
         $returner = new DBResultRange($this->count, $this->pageCount);
         return $returner;
     }

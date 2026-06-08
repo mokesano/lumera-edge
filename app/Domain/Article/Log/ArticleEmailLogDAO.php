@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EmailLogDAO;
+Lumera\Domain\Article\Log\ArticleEmailLogEntry;
 namespace App\Domain\Article\Log;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Article\Log;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.log.EmailLogDAO');
-import('app.Domain.Article.log.ArticleEmailLogEntry');
 
 class ArticleEmailLogDAO extends EmailLogDAO {
     

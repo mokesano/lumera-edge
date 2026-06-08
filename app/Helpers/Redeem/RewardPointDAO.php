@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace App\Helpers\Redeem;
 
 /**
@@ -14,8 +15,6 @@ namespace App\Helpers\Redeem;
  * 
  * @brief Data Access Object untuk tabel reward_points. Menggunakan pendekatan Ledger.
  */
-
-import('core.Modules.db.DAO');
 
 class RewardPointDAO extends DAO {
 

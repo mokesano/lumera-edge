@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\EditAssignment\EditAssignment;
 namespace App\Domain\Submission\EditAssignment;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Submission\EditAssignment;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.EditAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {
     

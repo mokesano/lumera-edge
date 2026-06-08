@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\Form\SubscriptionForm;
+Lumera\Domain\Subscription\IndividualSubscription;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +22,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form class for individual subscription create/edits.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.form.SubscriptionForm');
 
 class IndividualSubscriptionForm extends SubscriptionForm {
 
@@ -93,7 +92,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
     public function execute() {
         $insert = false;
         if (!isset($this->subscription)) {
-            import('app.Domain.Subscription.IndividualSubscription');
+            
             $this->subscription = new IndividualSubscription();
             $insert = true;
         }

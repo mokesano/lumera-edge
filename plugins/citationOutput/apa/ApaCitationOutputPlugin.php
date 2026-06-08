@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationOutput\Apa\CoreApaCitationOutputPlugin;
 /**
  * @defgroup plugins_citationOutput_apa
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief APA citation style plug-in.
  */
-
-import('core.Modules.plugins.citationOutput.apa.CoreApaCitationOutputPlugin');
 
 class ApaCitationOutputPlugin extends CoreApaCitationOutputPlugin {
     

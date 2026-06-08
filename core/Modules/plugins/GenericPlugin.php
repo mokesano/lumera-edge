@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\LazyLoadPlugin;
+namespace Lumera\Modules\plugins;
+
 /**
  * @file core.Modules.plugins/GenericPlugin.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  * - Parent constructor call updated to parent::__construct
  * - Removed reference operators (&)
  */
-
-import('core.Modules.plugins.LazyLoadPlugin');
 
 class GenericPlugin extends LazyLoadPlugin {
     

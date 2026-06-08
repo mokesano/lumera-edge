@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
+namespace Lumera\Plugins\Oaimetadataformats\rfc1807;
+
 /**
  * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief rfc1807 metadata format plugin for OAI.
  */
-
-import('core.Modules.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin {
 

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\AuthSource;
+namespace Lumera\Modules\security;
+
 /**
  * @file core.Modules.security/AuthSourceDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying AuthSource objects.
  */
-
-import('core.Modules.security.AuthSource');
 
 class AuthSourceDAO extends DAO {
     /** @var array List of loaded authentication plugins */

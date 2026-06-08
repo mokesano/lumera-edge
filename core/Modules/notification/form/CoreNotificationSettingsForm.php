@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Modules\notification\form;
+
 /**
  * @defgroup notification_form
  */
@@ -17,8 +20,6 @@ declare(strict_types=1);
  *
  * @brief Form to edit notification settings.
  */
-
-import('core.Modules.form.Form');
 
 class CoreNotificationSettingsForm extends Form {
     

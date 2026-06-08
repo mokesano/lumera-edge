@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
+namespace Lumera\Modules\security\authorization;
+
 /**
  * @file core.Modules.security/authorization/HandlerOperationPolicy.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Abstract base class that provides infrastructure
  * to control access to handler operations.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class HandlerOperationPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */
@@ -77,7 +78,6 @@ class HandlerOperationPolicy extends AuthorizationPolicy {
     public function getOperations() {
         return $this->_operations;
     }
-
 
     //
     // Private helper methods

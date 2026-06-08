@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Install\CoreInstallHandler;
 /**
  * @defgroup pages_install
  */
@@ -23,7 +24,7 @@ switch ($op) {
 	case 'upgrade':
 	case 'installUpgrade':
 		define('HANDLER_CLASS', 'CoreInstallHandler');
-		import('app.Pages.install.CoreInstallHandler');
+		
 		break;
 }
 

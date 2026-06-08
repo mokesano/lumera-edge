@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Payment\Payment;
+namespace Lumera\Modules\payment;
+
 /**
  * @file core.Modules.payment/QueuedPayment.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Queued (unfulfilled) payment data structure
  *
  */
-
-import('core.Modules.payment.Payment');
 
 class QueuedPayment extends Payment {
     

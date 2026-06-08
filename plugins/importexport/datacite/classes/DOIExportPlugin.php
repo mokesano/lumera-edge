@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\PubObjectCache;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Importexport\datacite\classes;
+
 /**
  * @file plugins/importexport/.../classes/DOIExportPlugin.inc.php
  *
@@ -13,9 +19,6 @@ declare(strict_types=1);
  *
  * @brief Base class for DOI export/registration plugins.
  */
-
-
-import('core.Modules.plugins.ImportExportPlugin');
 
 // Export types.
 define('DOI_EXPORT_ISSUES', 0x01);
@@ -54,20 +57,18 @@ class DOIExportPlugin extends ImportExportPlugin {
 		if (!($this->_cache instanceof PubObjectCache)) {
 			// Instantiate the cache.
 			if (!class_exists('PubObjectCache')) { // Bug #7848
-				$this->import('core.Modules.PubObjectCache');
+				$this->
 			}
 			$this->_cache = new PubObjectCache();
 		}
 		return $this->_cache;
 	}
 
-
 	//
 	// Private Properties
 	//
 	/** @var boolean */
 	private $_checkedForTar = false;
-
 
 	//
 	// Constructor
@@ -94,7 +95,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$args = func_get_args();
 		call_user_func_array(array($this, '__construct'), $args);
 	}
-
 
 	//
 	// Implement template methods from CorePlugin
@@ -147,7 +147,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 
 		return $localeFilenames;
 	}
-
 
 	//
 	// Implement template methods from ImportExportPlugin
@@ -491,7 +490,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 		}
 		return false;
 	}
-
 
 	//
 	// Protected template methods
@@ -1052,7 +1050,6 @@ class DOIExportPlugin extends ImportExportPlugin {
 		return $errorKeys[$exportType];
 	}
 
-
 	//
 	// Private helper methods
 	//
@@ -1139,7 +1136,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		unset($articles);
 
 		// Instantiate article iterator.
-		import('core.Kernel.VirtualArrayIterator');
+		
 		$iterator = new VirtualArrayIterator($articleData, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the article template.
@@ -1202,7 +1199,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		unset($galleys);
 
 		// Instantiate galley iterator.
-		import('core.Kernel.VirtualArrayIterator');
+		
 		$iterator = new VirtualArrayIterator($galleyData, $totalGalleys, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 		// Prepare and display the galley template.
@@ -1571,7 +1568,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		static $notificationManager = null;
 
 		if (is_null($notificationManager)) {
-			import('core.Modules.notification.NotificationManager');
+			
 			$notificationManager = new NotificationManager();
 		}
 

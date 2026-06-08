@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
+namespace Lumera\Modules\plugins;
+
 /**
  * @file core.Modules.plugins/CachedPlugin.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  * - Constructor updated to __construct
  * - Parent constructor call updated
  */
-
-import('core.Modules.plugins.Plugin');
 
 class LazyLoadPlugin extends Plugin {
     

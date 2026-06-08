@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Medra\Classes\Form\DOIExportSettingsForm;
+namespace Lumera\Plugins\Importexport\medra\classes\form;
+
 /**
  * @file plugins/importexport/medra/classes/form/MedraSettingsForm.inc.php
  *
@@ -15,7 +18,7 @@ declare(strict_types=1);
  */
 
 if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
-    import('plugins.importexport.medra.classes.form.DOIExportSettingsForm');
+    
 }
 
 class MedraSettingsForm extends DOIExportSettingsForm {

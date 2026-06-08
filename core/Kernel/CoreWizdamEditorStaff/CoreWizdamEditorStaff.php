@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\RoleDAO;
+Lumera\Modules\User\UserDAO;
+Lumera\Modules\User\UserSettingsDAO;
+Lumera\Modules\Journal\JournalDAO;
+Lumera\Modules\User\User;
+Lumera\Modules\I18n\CountryDAO;
 namespace Lumera\Kernel\CoreWizdamEditorStaff;
 
 /**
@@ -17,12 +23,12 @@ namespace Lumera\Kernel\CoreWizdamEditorStaff;
  */
 
 // Import DAO yang dibutuhkan
-// import('core.Modules.security.RoleDAO');
-// import('core.Modules.user.UserDAO');
-// import('core.Modules.user.UserSettingsDAO');
-// import('core.Modules.journal.JournalDAO');
-// import('core.Modules.user.User');
-// import('core.Modules.i18n.CountryDAO'); // Path yang benar
+// 
+// 
+// 
+// 
+// 
+//  // Path yang benar
 
 class CoreWizdamEditorStaff {
 

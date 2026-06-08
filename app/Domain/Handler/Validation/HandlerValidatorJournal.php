@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Validation\HandlerValidator;
 namespace App\Domain\Handler\Validation;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\Handler\Validation;
  *
  * @brief Class to validate if a Journal is present
  */
-
-import('app.Domain.Handler.Validation.HandlerValidator');
 
 class HandlerValidatorJournal extends HandlerValidator {
     

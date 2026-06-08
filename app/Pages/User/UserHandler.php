@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Captcha\CaptchaManager;
 namespace App\Pages\User;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\User;
  *
  * @brief Handle requests for user functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class UserHandler extends Handler {
     
@@ -287,7 +287,7 @@ class UserHandler extends Handler {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         $captchaId = (int) array_shift($args);
-        import('core.Modules.Captcha.CaptchaManager');
+        
         $captchaManager = new CaptchaManager();
         if ($captchaManager->isEnabled()) {
             $captchaDao = DAORegistry::getDAO('CaptchaDAO');

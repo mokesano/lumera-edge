@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\BookForReview;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\booksForReview\pages;
+
 /**
  * @file plugins/generic/booksForReview/pages/BooksForReviewAuthorHandler.inc.php
  *
@@ -15,8 +21,6 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
 
-import('core.Modules.handler.Handler');
-
 class BooksForReviewAuthorHandler extends Handler {
 
     /**
@@ -30,7 +34,7 @@ class BooksForReviewAuthorHandler extends Handler {
         $journalId = $journal->getId();
 
         $bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-        $bfrPlugin->import('core.Modules.BookForReview');
+        $bfrPlugin->
         
         $path = !isset($args) || empty($args) ? null : $args[0];
         $user = $request->getUser();
@@ -90,7 +94,7 @@ class BooksForReviewAuthorHandler extends Handler {
 
         // Ensure book for review is for this journal
         if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-            import('core.Modules.mail.MailTemplate');
+            
             $email = new MailTemplate('BFR_BOOK_REQUESTED');
             
             // [SECURITY FIX] Amankan 'send' sebagai flag boolean
@@ -102,7 +106,7 @@ class BooksForReviewAuthorHandler extends Handler {
                 // Update book for review as requested
                 $book = $bfrDao->getBookForReview($bookId);
                 $status = $book->getStatus();
-                $bfrPlugin->import('core.Modules.BookForReview');
+                $bfrPlugin->
 
                 // Ensure book for review is avaliable
                 if ($status == BFR_STATUS_AVAILABLE) {
@@ -116,7 +120,7 @@ class BooksForReviewAuthorHandler extends Handler {
 
                     $email->send();
 
-                    import('core.Modules.notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $notificationManager->createTrivialNotification($userId, NOTIFICATION_TYPE_BOOK_REQUESTED);
                 }
@@ -130,7 +134,7 @@ class BooksForReviewAuthorHandler extends Handler {
                 if (!$continuedFlag) {
                     $book = $bfrDao->getBookForReview($bookId);
                     $status = $book->getStatus();
-                    $bfrPlugin->import('core.Modules.BookForReview');
+                    $bfrPlugin->
 
                     // Ensure book for review is avaliable
                     if ($status == BFR_STATUS_AVAILABLE) {

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Reports\Counter\Classes\CounterReport;
 /**
  * @file plugins/reports/counter/classes/reports/CounterReportJR1.inc.php
  *
@@ -11,8 +12,6 @@ declare(strict_types=1);
  * @ingroup plugins_reports_counter
  * * @brief Journal Report 1
  */
-
-import('plugins.reports.counter.classes.CounterReport');
 
 class CounterReportJR1 extends CounterReport {
     

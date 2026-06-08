@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\Tools;
+
+use Lumera\Modules\CliTool\ScheduledTaskTool;
+
 /**
  * @file core/Modules/Tools/RunScheduledTasks.php
  *
@@ -14,10 +18,6 @@ declare(strict_types=1);
  * @brief CLI tool to execute a set of scheduled tasks.
  * [WIZDAM EDITION] Scheduled Task Runner Implementation.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.CliTool.ScheduledTaskTool');
 
 class RunScheduledTasks extends ScheduledTaskTool {
     
@@ -45,7 +45,8 @@ class RunScheduledTasks extends ScheduledTaskTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new RunScheduledTasks($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new RunScheduledTasks($argv);
+    $tool->execute();
+}

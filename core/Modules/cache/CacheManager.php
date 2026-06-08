@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\FileCache;
+Lumera\Modules\Cache\APCuCache;
+Lumera\Modules\Cache\MemcacheCache;
+Lumera\Modules\Cache\GenericCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core.Modules.cache/CacheManager.inc.php
  *
@@ -14,8 +20,6 @@ declare(strict_types=1);
  * @brief Provides cache management functions.
  * [WIZDAM EDITION] Optimized for PHP 7.4/8.x, APCu support, and .wiz Binary Cache
  */
-
-import('core.Modules.cache.FileCache');
 
 define('CACHE_TYPE_FILE', 1);
 define('CACHE_TYPE_OBJECT', 2);
@@ -94,12 +98,12 @@ class CacheManager {
             case 'apc':
             case 'apcu': // [MODERNISASI] Support config 'apcu' secara eksplisit
                 // Ensure e-rename file APCCache.inc.php to APCuCache.inc.php
-                import('core.Modules.cache.APCuCache');
+                
                 $cache = new APCuCache($context, $cacheId, $fallback);
                 break;
                 
             case 'memcache':
-                import('core.Modules.cache.MemcacheCache');
+                
                 $cache = new MemcacheCache(
                     $context, $cacheId, $fallback,
                     Config::getVar('cache','memcache_hostname'),
@@ -113,7 +117,7 @@ class CacheManager {
                 break;
                 
             case 'none':
-                import('core.Modules.cache.GenericCache');
+                
                 $cache = new GenericCache($context, $cacheId, $fallback);
                 break;
                 

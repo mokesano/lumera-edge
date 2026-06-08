@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Index\IndexHandler;
 namespace App\Pages\Index;
 
 /**
@@ -22,6 +23,6 @@ namespace App\Pages\Index;
 switch ($op) {
     case 'index':
         define('HANDLER_CLASS', \App\Pages\Index\IndexHandler::class);
-        import('app.Pages.Index.IndexHandler');
+        
         break;
 }

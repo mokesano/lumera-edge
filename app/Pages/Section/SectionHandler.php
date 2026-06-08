@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\VirtualArrayIterator;
 namespace App\Pages\Section;
 
 /**
@@ -19,8 +21,6 @@ namespace App\Pages\Section;
  * Supports Dynamic RESTful Slugs (e.g., /section/sosial-ekonomi-pertanian)
  * Supports Sub-routes: /section/slug/about, /section/slug/articles
  */
-
-import('app.Domain.Handler.Handler');
 
 class SectionHandler extends Handler {
 
@@ -204,7 +204,7 @@ class SectionHandler extends Handler {
         $offset       = ($currentPage - 1) * $itemsPerPage;
         $pageArticles = array_slice($allFiltered, $offset, $itemsPerPage);
 
-        import('core.Kernel.VirtualArrayIterator');
+        
         $articlesIterator = new VirtualArrayIterator(
             $pageArticles,
             $totalCount,

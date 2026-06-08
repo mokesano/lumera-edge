@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\LinkActionRequest;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/Modal.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
 
 define('MODAL_WIDTH_DEFAULT', '710');
 define('MODAL_WIDTH_AUTO', 'auto');
-
-import('core.Modules.linkAction.request.LinkActionRequest');
 
 class Modal extends LinkActionRequest {
     /** @var string|null The localized title of the modal. */
@@ -95,7 +96,6 @@ class Modal extends LinkActionRequest {
     public function getWidth() {
         return $this->_width;
     }
-
 
     //
     // Overridden methods from LinkActionRequest

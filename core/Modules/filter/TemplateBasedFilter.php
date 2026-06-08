@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/TemplateBasedFilter.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Abstract base class for all filters that transform
  * their input via smarty templates.
  */
-
-import('core.Modules.filter.PersistableFilter');
 
 class TemplateBasedFilter extends PersistableFilter {
     
@@ -38,7 +39,6 @@ class TemplateBasedFilter extends PersistableFilter {
         );
         self::__construct($filterGroup);
     }
-
 
     //
     // Abstract template methods
@@ -75,7 +75,6 @@ class TemplateBasedFilter extends PersistableFilter {
         // Must be implemented by sub-classes.
         assert(false);
     }
-
 
     //
     // Implement template methods from Filter

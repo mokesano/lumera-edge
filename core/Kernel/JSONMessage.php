@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\JSONManager;
 namespace Lumera\Kernel;
 
 /**
@@ -185,7 +186,7 @@ class JSONMessage {
         }
 
         // Encode the object.
-        import('core.Kernel.JSONManager');
+        
         $jsonManager = new JSONManager();
         return $jsonManager->encode($jsonObject);
     }

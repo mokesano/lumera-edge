@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Openurl10Nlm30CitationSchemaCrosswalkFilter;
+namespace Lumera\Modules\plugins\citationParser\freecite\filter;
+
 /**
  * @defgroup plugins_citationParser_freecite_filter
  */
@@ -23,8 +27,6 @@ declare(strict_types=1);
  * - Removed reference operators
  * - Explicit Type Hints
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
 
 if (!defined('FREECITE_WEBSERVICE')) {
     define('FREECITE_WEBSERVICE', 'http://freecite.library.brown.edu/citations/create');
@@ -86,7 +88,7 @@ class FreeciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
         // Convert the genre
         if (isset($metadata['genre'])) {
             $genre = $metadata['genre'];
-            import('core.Modules.plugins.metadata.nlm30.filter.Openurl10Nlm30CitationSchemaCrosswalkFilter');
+            
             $genreMap = Openurl10Nlm30CitationSchemaCrosswalkFilter::_getOpenurl10GenreTranslationMapping();
             $metadata['[@publication-type]'] = $genreMap[$genre] ?? $genre;
             unset($metadata['genre']);

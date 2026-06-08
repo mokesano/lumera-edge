@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Document\LoAHandler;
+Lumera\Pages\Document\CertificateHandler;
 namespace App\Pages\Document;
 
 /**
@@ -21,7 +23,7 @@ switch ($op) {
     //
     case 'loa':
         define('HANDLER_CLASS', \App\Pages\Document\LoAHandler::class);
-        import('app.Pages.Document.LoAHandler');
+        
         break;
 
     //
@@ -29,6 +31,6 @@ switch ($op) {
     //
     case 'certificate':
         define('HANDLER_CLASS', \App\Pages\Document\CertificateHandler::class);
-        import('app.Pages.Document.CertificateHandler');
+        
         break;
 }

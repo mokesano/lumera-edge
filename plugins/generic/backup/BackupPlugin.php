@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\backup;
+
 /**
  * @file plugins/generic/backup/BackupPlugin.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Plugin to allow generation of a backup extract
  * [WIZDAM EDITION] Modernized. PHP 8 Safe CLI Execution & Resource Mgmt.
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class BackupPlugin extends GenericPlugin {
     
@@ -263,7 +265,7 @@ class BackupPlugin extends GenericPlugin {
                 $this->updateSetting(0, 'enabled', true);
                 
                 // [WIZDAM] Gunakan NotificationManager
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->createTrivialNotification(
                     $request->getUser()->getId(),
@@ -276,7 +278,7 @@ class BackupPlugin extends GenericPlugin {
                 $this->updateSetting(0, 'enabled', false);
                 
                 // [WIZDAM] Gunakan NotificationManager
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->createTrivialNotification(
                     $request->getUser()->getId(),

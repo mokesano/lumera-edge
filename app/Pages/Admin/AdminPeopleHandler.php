@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Domain\User\UserAction;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for people management functions.
  */
-
-import('app.Pages.admin.AdminHandler');
 
 class AdminPeopleHandler extends AdminHandler {
     
@@ -65,7 +65,7 @@ class AdminPeopleHandler extends AdminHandler {
 
         if (!empty($oldUserIds) && !empty($newUserId)) {
             // Both user IDs have been selected. Merge the accounts.
-            import('app.Domain.User.UserAction');
+            
             foreach ($oldUserIds as $oldUserId) {
                 UserAction::mergeUsers($oldUserId, $newUserId);
             }

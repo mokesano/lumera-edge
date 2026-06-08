@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Plugins\Generic\staticPages;
+
 /**
  * @file plugins/generic/staticPages/StaticPagesSettingsForm.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * Form for journal managers to modify Static Page content and title
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class StaticPagesSettingsForm extends Form {
 

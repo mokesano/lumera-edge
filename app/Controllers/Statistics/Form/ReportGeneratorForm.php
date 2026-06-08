@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Controllers\Statistics\Form;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Controllers\Statistics\Form;
  *
  * @brief Form to generate custom statistics reports.
  */
-
-import('core.Modules.form.Form');
 
 define('TIME_FILTER_OPTION_YESTERDAY', 0);
 define('TIME_FILTER_OPTION_CURRENT_MONTH', 1);

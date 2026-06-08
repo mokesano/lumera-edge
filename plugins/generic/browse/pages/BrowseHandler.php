@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Kernel\VirtualArrayIterator;
+namespace Lumera\Plugins\Generic\browse\pages;
+
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  * @brief Handle requests for additional browse functions.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.handler.Handler');
-import("core.Kernel.VirtualArrayIterator");
 
 class BrowseHandler extends Handler {
 

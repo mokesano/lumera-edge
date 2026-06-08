@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Admin\Form;
 
 /**
@@ -11,8 +12,6 @@ namespace App\Domain\Admin\Form;
  * @brief Form to manage static "About Site" settings (Mission, History, Leadership, Awards).
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.Form');
 
 class AboutSiteForm extends Form {
 

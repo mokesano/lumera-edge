@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Copyeditor\SubmissionCopyeditHandler;
 namespace App\Pages\Copyeditor;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Copyeditor;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.copyeditor.SubmissionCopyeditHandler');
 
 class SubmissionCommentsHandler extends CopyeditorHandler {
     

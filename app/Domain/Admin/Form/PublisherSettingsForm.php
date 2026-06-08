@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Admin\Form\CorePublisherSettingsForm;
 namespace App\Domain\Admin\Form;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Admin\Form;
  * @brief Form to edit publisher settings.
  * [LUMERA EDGE EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Admin.form.CorePublisherSettingsForm');
 
 class PublisherSettingsForm extends CorePublisherSettingsForm {
     

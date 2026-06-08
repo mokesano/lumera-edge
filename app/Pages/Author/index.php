@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Author\SubmitHandler;
+Lumera\Pages\Author\TrackSubmissionHandler;
+Lumera\Pages\Author\SubmissionCommentsHandler;
+Lumera\Pages\Author\AuthorHandler;
 namespace App\Pages\Author;
 
 /**
@@ -30,7 +34,7 @@ switch ($op) {
     case 'deleteSubmitSuppFile':
     case 'expediteSubmission':
         define('HANDLER_CLASS', \App\Pages\Author\SubmitHandler::class);
-        import('app.Pages.Author.SubmitHandler');
+        
         break;
     //
     // Submission Tracking
@@ -70,7 +74,7 @@ switch ($op) {
     case 'payFastTrackFee':
     case 'payPublicationFee':
         define('HANDLER_CLASS', \App\Pages\Author\TrackSubmissionHandler::class);
-        import('app.Pages.Author.TrackSubmissionHandler');
+        
         break;
     //
     // Submission Comments
@@ -87,11 +91,11 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\Author\SubmissionCommentsHandler::class);
-        import('app.Pages.Author.SubmissionCommentsHandler');
+        
         break;
     case 'index':
     case 'instructions':
         define('HANDLER_CLASS', \App\Pages\Author\AuthorHandler::class);
-        import('app.Pages.Author.AuthorHandler');
+        
         break;
 }

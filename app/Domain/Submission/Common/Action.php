@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Common\CoreAction;
+Lumera\Domain\Submission\Form\MetadataForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Submission\Form\Comment\EditCommentForm;
 namespace App\Domain\Submission\Common;
 
 /**
@@ -22,7 +28,6 @@ namespace App\Domain\Submission\Common;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-
 /* These constants correspond to editing decision "decision codes". */
 define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
@@ -43,8 +48,6 @@ define('SUBMISSION_FIELD_DATE_SUBMITTED', 4);
 define('SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE', 5);
 define('SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE', 6);
 define('SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE', 7);
-
-import('app.Domain.Submission.common.CoreAction');
 
 class Action extends CoreAction {
     
@@ -81,7 +84,7 @@ class Action extends CoreAction {
     public static function viewMetadata($article, $journal) {
         // [WIZDAM] HookRegistry::dispatch
         if (!HookRegistry::dispatch('Action::viewMetadata', [&$article, &$journal])) {
-            import('app.Domain.Submission.form.MetadataForm');
+            
             $metadataForm = new MetadataForm($article, $journal);
             if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
                 $metadataForm->readInputData();
@@ -103,7 +106,7 @@ class Action extends CoreAction {
         $router = $request->getRouter();
 
         if (!HookRegistry::dispatch('Action::saveMetadata', [&$article])) {
-            import('app.Domain.Submission.form.MetadataForm');
+            
             $journal = $request->getJournal();
             $metadataForm = new MetadataForm($article, $journal);
             $metadataForm->readInputData();
@@ -178,7 +181,7 @@ class Action extends CoreAction {
                 $metadataForm->execute($request);
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds();
                 foreach ($notificationUsers as $userRole) {
@@ -190,7 +193,7 @@ class Action extends CoreAction {
 
                 // Add log entry
                 $user = $request->getUser();
-                import('app.Domain.Article.log.ArticleLog');
+                
                 ArticleLog::logEvent($request, $article, ARTICLE_LOG_METADATA_UPDATE, 'log.editor.metadataModified', ['editorName' => $user->getFullName()]);
 
                 return true;
@@ -206,7 +209,7 @@ class Action extends CoreAction {
      * @return boolean
      */
     public static function downloadFile($articleId, $fileId, $revision = null) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($articleId);
         return $articleFileManager->downloadFile($fileId, $revision);
     }
@@ -219,7 +222,7 @@ class Action extends CoreAction {
      * @return boolean
      */
     public static function viewFile($articleId, $fileId, $revision = null) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($articleId);
         return $articleFileManager->downloadFile($fileId, $revision, true);
     }
@@ -279,7 +282,7 @@ class Action extends CoreAction {
      */
     public static function editComment($article, $comment) {
         if (!HookRegistry::dispatch('Action::editComment', [&$article, &$comment])) {
-            import('app.Domain.Submission.form.comment.EditCommentForm');
+            
 
             $commentForm = new EditCommentForm($article, $comment);
             $commentForm->initData();
@@ -296,7 +299,7 @@ class Action extends CoreAction {
      */
     public static function saveComment($article, $comment, $emailComment, $request) {
         if (!HookRegistry::dispatch('Action::saveComment', [&$article, &$comment, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.EditCommentForm');
+            
 
             $commentForm = new EditCommentForm($article, $comment);
             $commentForm->readInputData();
@@ -305,7 +308,7 @@ class Action extends CoreAction {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(true, false);
                 foreach ($notificationUsers as $userRole) {

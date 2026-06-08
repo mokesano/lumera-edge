@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\Mail;
+namespace Lumera\Modules\mail;
+
 /**
  * @file core.Modules.mail/SMTPMailer.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  *
  * TODO: TLS support
  */
-
-import('core.Modules.mail.Mail');
 
 class SMTPMailer {
 

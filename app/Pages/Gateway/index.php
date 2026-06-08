@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Gateway\GatewayHandler;
 namespace App\Pages\Gateway;
 
 /**
@@ -24,6 +25,6 @@ switch ($op) {
     case 'lockss':
     case 'plugin':
         define('HANDLER_CLASS', \App\Pages\Gateway\GatewayHandler::class);
-        import('app.Pages.Gateway.GatewayHandler');
+        
         break;
 }

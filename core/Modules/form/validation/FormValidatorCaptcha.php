@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorCaptcha.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Form validation check captcha values.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorCaptcha extends FormValidator {
     /** @var string Name of the captcha ID field in the form */

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Notification\Notification;
+namespace Lumera\Modules\notification;
+
 /**
  * @file core.Modules.notification/NotificationDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying Notification objects.
  */
-
-import('core.Modules.notification.Notification');
 
 class NotificationDAO extends DAO {
     

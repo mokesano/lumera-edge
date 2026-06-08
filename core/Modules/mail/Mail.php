@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\SMTPMailer;
+namespace Lumera\Modules\mail;
+
 /**
  * @defgroup mail
  */
@@ -523,7 +526,6 @@ class Mail extends DataObject {
         return $this->getAddressArrayString($this->getBccs(), false);
     }
 
-
     /**
      * Send the email.
      * @return boolean
@@ -654,7 +656,7 @@ class Mail extends DataObject {
             // Removed & from reference
             $smtp = Registry::get('smtpMailer', true, null);
             if ($smtp === null) {
-                import('core.Modules.mail.SMTPMailer');
+                
                 $smtp = new SMTPMailer();
             }
             $sent = $smtp->mail($this, $recipients, $subject, $mailBody, $headers);

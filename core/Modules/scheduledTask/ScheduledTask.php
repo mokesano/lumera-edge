@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
+Lumera\Modules\File\PrivateFileManager;
+namespace Lumera\Modules\scheduledTask;
+
 /**
  * @file core.Modules.scheduledTask/ScheduledTask.inc.php
  *
@@ -17,8 +21,6 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Modernized for PHP 7.4/8.x
  */
 
-import('core.Modules.scheduledTask.ScheduledTaskHelper');
-
 class ScheduledTask {
 
     /** @var array task arguments */
@@ -33,7 +35,6 @@ class ScheduledTask {
     /** @var ScheduledTaskHelper */
     protected $_helper;
 
-
     /**
      * Constructor.
      * [MODERNISASI] Native Constructor
@@ -47,7 +48,7 @@ class ScheduledTask {
         AppLocale::requireComponents(LOCALE_COMPONENT_CORE_ADMIN, LOCALE_COMPONENT_CORE_COMMON);
         
         // Check the scheduled task execution log folder.
-        import('core.Modules.file.PrivateFileManager');
+        
         $fileMgr = new PrivateFileManager();
 
         $scheduledTaskFilesPath = realpath($fileMgr->getBasePath()) . DIRECTORY_SEPARATOR . SCHEDULED_TASK_EXECUTION_LOG_DIR;
@@ -78,7 +79,6 @@ class ScheduledTask {
         }
         self::__construct($args);
     }
-
 
     //
     // Protected methods.
@@ -135,7 +135,6 @@ class ScheduledTask {
         }
     }
 
-
     //
     // Protected abstract methods.
     //
@@ -146,7 +145,6 @@ class ScheduledTask {
         // In case task does not implement it.
         fatalError("ScheduledTask does not implement executeActions()!\n");
     }
-
 
     //
     // Public methods.

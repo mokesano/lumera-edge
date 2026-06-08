@@ -1,6 +1,23 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CoreProfiler;
+Lumera\Kernel\Core;
+Lumera\Kernel\CoreString;
+Lumera\Kernel\Registry;
+Lumera\Modules\Config\Config;
+Lumera\Kernel\Request;
+Lumera\Modules\Db\DAORegistry;
+Lumera\Modules\Db\XMLDAO;
+Lumera\Modules\Cache\CacheManager;
+Lumera\Modules\Security\Validation;
+Lumera\Modules\Session\SessionManager;
+Lumera\Modules\Template\TemplateManager;
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\Plugins\PluginRegistry;
+Lumera\Modules\Plugins\HookRegistry;
+Lumera\Modules\I18n\AppLocale;
+Lumera\Kernel\Dispatcher;
 namespace Lumera\Kernel;
 
 /**
@@ -62,7 +79,7 @@ class CoreApplication {
         if (defined('E_NOTICE')) $errorReportingLevel &= ~E_NOTICE;
         @error_reporting($errorReportingLevel);
 
-        import('core.Kernel.CoreProfiler');
+        
         $wizdamProfiler = new CoreProfiler();
 
         Console::logMemory('', 'CoreApplication::construct');
@@ -70,10 +87,10 @@ class CoreApplication {
 
         mt_srand((int) ((double) microtime() * 1000000));
 
-        import('core.Kernel.Core');
-        import('core.Kernel.CoreString');
-        import('core.Kernel.Registry');
-        import('core.Modules.Config.Config');
+        
+        
+        
+        
 
         if ((bool) Config::getVar('debug', 'display_errors')) {
             @ini_set('display_errors', '0');
@@ -82,21 +99,21 @@ class CoreApplication {
         Registry::set('application', $this);
         
         // Request dibuat DI SINI, sebelum komponen lain memintanya.
-        import('core.Kernel.Request');
+        
         $request = new Request();
         Registry::set('request', $request);
         // ---------------------------
 
-        import('core.Modules.db.DAORegistry');
-        import('core.Modules.db.XMLDAO');
-        import('core.Modules.cache.CacheManager');
-        import('core.Modules.security.Validation');
-        import('core.Modules.session.SessionManager');
-        import('core.Modules.template.TemplateManager');
-        import('core.Modules.notification.NotificationManager');
-        import('core.Modules.plugins.PluginRegistry');
-        import('core.Modules.plugins.HookRegistry');
-        import('core.Modules.i18n.AppLocale');
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         CoreString::init();
         set_error_handler([$this, 'errorHandler']);
@@ -160,7 +177,7 @@ class CoreApplication {
         $dispatcher = Registry::get('dispatcher', true, null);
 
         if ($dispatcher === null) {
-            import('core.Kernel.Dispatcher');
+            
             $dispatcher = new Dispatcher();
             Registry::set('dispatcher', $dispatcher);
 
@@ -497,7 +514,7 @@ class CoreApplication {
         $user = $request->getUser();
 
         if ($user instanceof User) {
-            import('core.Modules.notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             
             switch ($type) {

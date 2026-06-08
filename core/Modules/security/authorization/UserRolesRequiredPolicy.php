@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
+namespace Lumera\Modules\security\authorization;
+
 /**
  * @file core.Modules.security/authorization/UserRolesRequiredPolicy.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Policy to build an authorized user roles object. Because we may have
  * users with no roles, we don't deny access when no user roles are found.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class UserRolesRequiredPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

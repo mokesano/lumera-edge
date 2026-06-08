@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorRegExp;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorISSN.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Validation check for ISSNs.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Type Safety, Visibility)
  */
-
-import('core.Modules.validation.ValidatorRegExp');
 
 class ValidatorISSN extends ValidatorRegExp {
     

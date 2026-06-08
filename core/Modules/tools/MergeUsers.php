@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\User\UserAction;
+namespace Lumera\Modules\Tools;
+
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\User\UserDAO;
+
 /**
  * @file core/Modules/Tools/MergeUsers.php
  *
@@ -14,8 +22,6 @@ declare(strict_types=1);
  * @brief CLI tool for merging two Wizdam 2 user accounts.
  * [WIZDAM EDITION] Modernized CLI User Merge Tool.
  */
-
-require(__DIR__ . '/bootstrap.php');
 
 class MergeUsers extends CommandLineTool {
 
@@ -99,7 +105,7 @@ class MergeUsers extends CommandLineTool {
         }
 
         // Both user IDs are valid. Merge the accounts.
-        import('core.Modules.user.UserAction');
+        
         // [WIZDAM] Casting IDs to int for strict safety, although DAO should handle it.
         UserAction::mergeUsers((int)$oldUserId, (int)$newUserId);
 
@@ -113,5 +119,8 @@ class MergeUsers extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new MergeUsers($argv ?? []);
-$tool->execute();
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new MergeUsers($argv);
+    $tool->execute();
+}

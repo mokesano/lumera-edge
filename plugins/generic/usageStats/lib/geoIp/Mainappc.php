@@ -1,6 +1,10 @@
 #!/usr/bin/php -q
 <?php
 
+declare(strict_types=1);
+
+namespace Lumera\Plugins\Generic\usageStats\lib\geoIp;
+
 set_time_limit('300');
 
 include("GeoIP.php");

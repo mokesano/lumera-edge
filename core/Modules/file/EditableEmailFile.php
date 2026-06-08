@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\EditableFile;
+namespace Lumera\Modules\file;
+
 /**
  * @file core.Modules.file/EditableEmailFile.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief This class supports updating for email XML files.
  *
  */
-
-import('core.Modules.file.EditableFile');
 
 class EditableEmailFile {
     /** @var string Locale code */

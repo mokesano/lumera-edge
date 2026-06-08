@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Validation\HandlerValidator;
+namespace Lumera\Modules\handler\validation;
+
 /**
  * @file core.Modules.handler/HandlerValidatorPolicy.inc.php
  *
@@ -16,8 +19,6 @@ declare(strict_types=1);
  * NB: This class is deprecated and only exists for backward compatibility.
  * Please use AuthorizationPolicy classes for authorization from now on.
  */
-
-import('core.Modules.handler.validation.HandlerValidator');
 
 class HandlerValidatorPolicy extends HandlerValidator {
     /** @var AuthorizationPolicy */

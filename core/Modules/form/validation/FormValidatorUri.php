@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorUri;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorUri.inc.php
  *
@@ -16,9 +20,6 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-
-import('core.Modules.form.validation.FormValidator');
-
 class FormValidatorUri extends FormValidator {
     
     /**
@@ -30,7 +31,7 @@ class FormValidatorUri extends FormValidator {
      * @param array|null $allowedSchemes the allowed URI schemes
      */
     public function __construct($form, $field, $type, $message, ?array $allowedSchemes = null) {
-        import('core.Modules.validation.ValidatorUri');
+        
         $validator = new ValidatorUri($allowedSchemes);
         parent::__construct($form, $field, $type, $message, $validator);
     }

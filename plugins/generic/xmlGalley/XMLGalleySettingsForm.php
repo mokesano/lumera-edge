@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Plugins\Generic\xmlGalley;
+
 /**
  * @file plugins/generic/xmlGalley/XMLGalleySettingsForm.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Form for journal managers to modify Article XML Galley plugin settings
  * MODERNIZED FOR SCHOLARWIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class XMLGalleySettingsForm extends Form {
     

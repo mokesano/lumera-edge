@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\Validator;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorInSet.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Validation check for known sets.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Type Hinting, Visibility)
  */
-
-import('core.Modules.validation.Validator');
 
 class ValidatorInSet extends Validator {
 

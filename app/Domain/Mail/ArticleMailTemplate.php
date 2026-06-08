@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Mail\MailTemplate;
+Lumera\Domain\Article\Log\ArticleEmailLogEntry;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Mail;
 
 /**
@@ -20,8 +24,7 @@ namespace App\Domain\Mail;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-import('app.Domain.Mail.MailTemplate');
-import('app.Domain.Article.log.ArticleEmailLogEntry'); // Bring in log constants
+ // Bring in log constants
 
 class ArticleMailTemplate extends MailTemplate {
 
@@ -174,11 +177,11 @@ class ArticleMailTemplate extends MailTemplate {
         $entry->setBccs($this->getBccString());
 
         // Add log entry
-        import('app.Domain.Article.log.ArticleLog');
+        
         $logEntryId = ArticleLog::logEmail((int) $this->article->getId(), $entry, $request);
 
         // Add attachments
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($article->getId());
         foreach ($this->getAttachmentFiles() as $attachment) {
             $articleFileManager->temporaryFileToArticleFile(

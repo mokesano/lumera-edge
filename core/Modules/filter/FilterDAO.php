@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/FilterDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying Filter objects.
  */
-
-import('core.Modules.filter.Filter');
 
 class FilterDAO extends DAO {
     /** @var array names of additional settings for the currently persisted/retrieved filter */
@@ -308,7 +309,6 @@ class FilterDAO extends DAO {
             $groupSymbolic
         );
 
-
         // 2) Instantiate and return all transformations in the
         //    result set that comply with the current runtime
         //    environment.
@@ -388,7 +388,6 @@ class FilterDAO extends DAO {
         return true;
     }
 
-
     //
     // Overridden methods from DAO
     //
@@ -413,7 +412,6 @@ class FilterDAO extends DAO {
         $this->localeFieldNames = null;
     }
 
-
     //
     // Implement template methods from DAO
     //
@@ -433,7 +431,6 @@ class FilterDAO extends DAO {
         return parent::getLocaleFieldNames() + $this->localeFieldNames;
     }
 
-
     //
     // Protected helper methods
     //
@@ -445,7 +442,6 @@ class FilterDAO extends DAO {
         // Ignore parameters, use hardcoded values
         return parent::getInsertId('filters', 'filter_id', $callHooks);
     }
-
 
     //
     // Private helper methods

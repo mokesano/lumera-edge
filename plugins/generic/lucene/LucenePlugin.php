@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Generic\Lucene\Classes\SolrWebService;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\Form\LuceneSettingsForm;
+namespace Lumera\Plugins\Generic\lucene;
+
 /**
  * @file plugins/generic/lucene/LucenePlugin.inc.php
  *
@@ -15,9 +21,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.GenericPlugin');
-import('plugins.generic.lucene.classes.SolrWebService');
 
 define('LUCENE_PLUGIN_DEFAULT_RANKING_BOOST', 1.0); // Default: No boost (=weight factor one).
 
@@ -44,7 +47,6 @@ class LucenePlugin extends GenericPlugin {
 	/** @var array */
 	protected $_facets;
 
-
 	/**
 	 * Constructor
 	 */
@@ -62,7 +64,6 @@ class LucenePlugin extends GenericPlugin {
         $args = func_get_args();
         call_user_func_array(array($this, '__construct'), $args);
     }
-
 
 	//
 	// Getters and Setters
@@ -100,13 +101,12 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	public function getMailTemplate($emailKey, $journal = null) {
 		if (!isset($this->_mailTemplates[$emailKey])) {
-			import('core.Modules.mail.MailTemplate');
+			
 			$mailTemplate = new MailTemplate($emailKey, null, null, $journal, true, true);
 			$this->_mailTemplates[$emailKey] = $mailTemplate;
 		}
 		return $this->_mailTemplates[$emailKey];
 	}
-
 
 	//
 	// Implement template methods from CorePlugin.
@@ -236,7 +236,6 @@ class LucenePlugin extends GenericPlugin {
 		return parent::getTemplatePath() . 'templates/';
 	}
 
-
 	//
 	// Implement template methods from GenericPlugin.
 	//
@@ -264,7 +263,7 @@ class LucenePlugin extends GenericPlugin {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager();
 				$templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
-				$this->import('core.Modules.form.LuceneSettingsForm');
+				$this->
 				$form = new LuceneSettingsForm($this);
 				if (Request::getUserVar('save')) {
 					$form->readInputData();
@@ -290,7 +289,6 @@ class LucenePlugin extends GenericPlugin {
 		}
 	}
 
-
 	//
 	// Application level hook implementations.
 	//
@@ -311,7 +309,7 @@ class LucenePlugin extends GenericPlugin {
 		if (empty($enabledFacetCategories)) return false;
 
 		// Instantiate the block plug-in for facets.
-		$this->import('LuceneFacetsBlockPlugin');
+		$this->
 		$luceneFacetsBlockPlugin = new LuceneFacetsBlockPlugin($this->getName());
 
 		// Add the plug-in to the registry.
@@ -349,7 +347,6 @@ class LucenePlugin extends GenericPlugin {
 		$handlerFile =& $args[2];
 		$handlerFile = $this->getPluginPath() . '/' . 'LuceneHandler.inc.php';
 	}
-
 
 	//
 	// Data-access level hook implementations.
@@ -752,7 +749,6 @@ class LucenePlugin extends GenericPlugin {
 		return false;
 	}
 
-
 	//
 	// View level hook implementations.
 	//
@@ -902,7 +898,6 @@ class LucenePlugin extends GenericPlugin {
 		$output .= $smarty->fetch($this->getTemplatePath() . 'additionalSectionMetadata.tpl');
 		return false;
 	}
-
 
 	//
 	// Private helper methods

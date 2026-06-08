@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 namespace Lumera\Modules\CliTool;
-
 /**
  * @file core/Modules/CliTool/InstallTool.php
  *
@@ -15,11 +14,6 @@ namespace Lumera\Modules\CliTool;
  *
  * @brief CLI tool for installing a Lumera app. Modernized CLI Installer.
  */
-
-import('core.Modules.install.Install');
-import('core.Modules.install.form.InstallForm');
-import('core.Modules.site.Version');
-import('core.Modules.site.VersionCheck');
 
 class InstallTool extends CommandLineTool {
 

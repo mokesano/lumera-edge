@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Checkout\Invoice;
+Lumera\Modules\Checkout\InvoiceDAO;
 namespace App\Helpers\Checkout\Services;
 
 /**
@@ -14,9 +16,6 @@ namespace App\Helpers\Checkout\Services;
  * 
  * @brief Jantung pengelola tagihan. Menangani bisnis proses pembayaran.
  */
-
-import('core.Modules.checkout.Invoice');
-import('core.Modules.checkout.InvoiceDAO');
 
 class InvoiceService {
     

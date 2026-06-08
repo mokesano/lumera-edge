@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\customBlockManager;
+
 /**
  * @file plugins/generic/customBlockManager/CustomBlockManagerPlugin.inc.php
  *
@@ -11,8 +14,6 @@ declare(strict_types=1);
  * @class CustomBlockManagerPlugin
  * @ingroup GenericPlugin
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class CustomBlockManagerPlugin extends GenericPlugin {
     
@@ -77,7 +78,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
         $category = $args[0];
         
         if ($category === 'blocks') {
-            $this->import('CustomBlockPlugin');
+            $this->
             $journal = Request::getJournal();
             
             if ($journal) {
@@ -134,7 +135,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
      */
     public function manage(string $verb, array $args, string $message, array $messageParams, $request = NULL): bool {
         if ($verb === 'settings') {
-            $this->import('CustomBlockPlugin');
+            $this->
             $journal = Request::getJournal();
             $templateMgr = TemplateManager::getManager();
             
@@ -147,7 +148,7 @@ class CustomBlockManagerPlugin extends GenericPlugin {
             );
             $templateMgr->assign('pageHierarchy', $pageCrumbs);
 
-            $this->import('SettingsForm'); 
+            $this-> 
             // FIX: Pastikan pakai $journal->getId()
             $form = new SettingsForm($this, $journal->getId());
 

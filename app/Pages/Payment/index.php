@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Payment\PaymentHandler;
 namespace App\Pages\Payment;
 
 /**
@@ -22,6 +23,6 @@ namespace App\Pages\Payment;
 switch ($op) {
     case 'plugin':
         define('HANDLER_CLASS', \App\Pages\Payment\PaymentHandler::class);
-        import('app.Pages.Payment.PaymentHandler');
+        
         break;
 }

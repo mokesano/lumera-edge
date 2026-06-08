@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\ItemIterator;
+namespace Lumera\Modules\db;
+
 /**
  * @file core.Modules.db/DBRowIterator.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Wrapper around ADORecordSet providing "factory" features 
  * for generating objects from DAOs.
  */
-
-import('core.Kernel.ItemIterator');
 
 class DBRowIterator extends ItemIterator {
     

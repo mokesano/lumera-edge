@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
+Lumera\Modules\Oai\OAIStruct;
+namespace Lumera\Modules\plugins;
+
 /**
  * @file core.Modules.classes/plugins/OAIMetadataFormatPlugin.inc.php
  *
@@ -9,9 +13,6 @@ declare(strict_types=1);
  *
  * @brief Abstract class for OAI Metadata format plugins
  */
-
-import('core.Modules.plugins.Plugin');
-import('core.Modules.oai.OAIStruct');
 
 class OAIMetadataFormatPlugin extends Plugin {
 

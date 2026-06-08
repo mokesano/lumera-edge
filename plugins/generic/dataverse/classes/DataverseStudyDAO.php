@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+Lumera\Generic\Dataverse\Classes\DataverseStudy;
+namespace Lumera\Plugins\Generic\dataverse\classes;
+
 /**
  * @file plugins/generic/dataverse/classes/DataverseStudyDAO.inc.php
  *
@@ -15,8 +19,7 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Modernized for PHP 8.4, Strict Typing, and Null-Safety.
  */
 
-import('core.Modules.db.DAO');
-import('plugins.generic.dataverse.classes.DataverseStudy'); // [WIZDAM FIX] Import absolut
+ // [WIZDAM FIX] Import absolut
 
 class DataverseStudyDAO extends DAO {
     

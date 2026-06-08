@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\Article\Log\ArticleLog;
+Lumera\Modules\File\ArticleFileManager;
+Lumera\Modules\Search\ArticleSearchIndex;
+namespace Lumera\Plugins\Importexport\native;
+
 /**
  * @file plugins/importexport/native/NativeImportDom.inc.php
  *
@@ -14,8 +21,6 @@ declare(strict_types=1);
  * @brief Native import/export plugin DOM functions for import
  * [WIZDAM EDITION] Refactored for PHP 8.0+ (Static Methods, Strict Types, Reference Cleanup)
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 class NativeImportDom {
     
@@ -364,7 +369,7 @@ class NativeImportDom {
         if (($node = $coverNode->getChildByName('caption'))) $issue->setCoverPageDescription($node->getValue(), $locale);
 
         if (($node = $coverNode->getChildByName('image'))) {
-            import('core.Modules.file.PublicFileManager');
+            
             $publicFileManager = new PublicFileManager();
             $newName = 'cover_issue_' . $issue->getId()."_{$locale}"  . '.';
 
@@ -445,7 +450,7 @@ class NativeImportDom {
         if (($node = $coverNode->getChildByName('altText'))) $article->setCoverPageAltText($node->getValue(), $locale);
 
         if (($node = $coverNode->getChildByName('image'))) {
-            import('core.Modules.file.PublicFileManager');
+            
             $publicFileManager = new PublicFileManager();
             $newName = 'cover_article_' . $article->getId()."_{$locale}"  . '.';
 
@@ -854,7 +859,7 @@ class NativeImportDom {
         }
 
         // Log the import in the article event log.
-        import('core.Modules.article.log.ArticleLog');
+        
         ArticleLog::logEventHeadless(
             $journal, $user->getId(), $article,
             ARTICLE_LOG_ARTICLE_IMPORT,
@@ -902,7 +907,7 @@ class NativeImportDom {
         $articleDao->updateLocaleFields($article);
 
         /* --- Galleys --- */
-        import('core.Modules.file.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($article->getId());
 
         $hasErrors = false;
@@ -932,7 +937,7 @@ class NativeImportDom {
         if ($hasErrors) return false;
 
         // Index the inserted article.
-        import('core.Modules.search.ArticleSearchIndex');
+        
         $articleSearchIndex = new ArticleSearchIndex();
         $articleSearchIndex->articleMetadataChanged($article);
         $articleSearchIndex->articleFilesChanged($article);

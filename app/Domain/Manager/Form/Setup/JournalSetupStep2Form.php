@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Manager\Form\Setup\JournalSetupForm;
 namespace App\Domain\Manager\Form\Setup;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Manager\Form\Setup;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep2Form extends JournalSetupForm {
     

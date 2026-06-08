@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Payment\AppPaymentAction;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for configuring payments.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class ManagerPaymentHandler extends ManagerHandler {
     
@@ -50,7 +50,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::payments($args);
     }
      
@@ -66,7 +66,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         $success = AppPaymentAction::savePaymentSettings($args);
 
         if ($success) {
@@ -91,7 +91,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::viewPayments($args);
     }
 
@@ -104,7 +104,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::viewPayment($args);
     }
 
@@ -117,7 +117,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::payMethodSettings();
     }
     
@@ -133,7 +133,7 @@ class ManagerPaymentHandler extends ManagerHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         $success = AppPaymentAction::savePayMethodSettings();
 
         if ($success) {

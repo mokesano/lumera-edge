@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\SubscriptionManager\SubscriptionManagerHandler;
 namespace App\Pages\SubscriptionManager;
 
 /**
@@ -49,6 +50,6 @@ switch ($op) {
     case 'suggestUsername':
     case 'userProfile':
         define('HANDLER_CLASS', \App\Pages\SubscriptionManager\SubscriptionManagerHandler::class);
-        import('app.Pages.SubscriptionManager.SubscriptionManagerHandler');
+        
         break;
 }

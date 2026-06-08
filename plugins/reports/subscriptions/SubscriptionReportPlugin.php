@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
 /**
  * @file plugins/reports/subscriptions/SubscriptionReportPlugin.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief Subscription report plugin
  */
-
-import('core.Modules.plugins.ReportPlugin');
 
 class SubscriptionReportPlugin extends ReportPlugin {
     

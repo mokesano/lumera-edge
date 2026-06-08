@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Rt\RTStruct;
+namespace Lumera\Modules\rt;
+
 /**
  * @defgroup rt
  */
@@ -19,8 +22,6 @@ declare(strict_types=1);
  * @brief Class to process and respond to Reading Tools requests.
  * * REFACTORED: Wizdam Edition (PHP 8 Compatibility, Visibility, Annotations)
  */
-
-import('core.Modules.rt.RTStruct');
 
 class RT {
 

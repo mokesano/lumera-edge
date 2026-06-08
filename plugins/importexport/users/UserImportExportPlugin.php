@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\File\FileManager;
+namespace Lumera\Plugins\Importexport\users;
+
 /**
  * @file plugins/importexport/users/UserImportExportPlugin.inc.php
  *
@@ -13,9 +18,6 @@ declare(strict_types=1);
  *
  * @brief Users import/export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 class UserImportExportPlugin extends ImportExportPlugin {
 
@@ -97,13 +99,13 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
         switch ($command) {
             case 'confirm':
-                $this->import('UserXMLParser');
+                $this->
                 $templateMgr->assign('helpTopicId', 'journal.users.importUsers');
 
                 $sendNotify = (bool) Request::getUserVar('sendNotify');
                 $continueOnError = (bool) Request::getUserVar('continueOnError');
 
-                import('core.Modules.file.FileManager');
+                
                 $fileManager = new FileManager();
                 
                 if (($userFile = $fileManager->getUploadedFilePath('userFile')) !== false) {
@@ -133,7 +135,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
                 break;
 
             case 'import':
-                $this->import('UserXMLParser');
+                $this->
                 $userKeys = (array) Request::getUserVar('userKeys');
                 if (empty($userKeys)) $userKeys = [];
                 
@@ -202,7 +204,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
                 break;
 
             case 'exportAll':
-                $this->import('UserExportDom');
+                $this->
                 $usersResult = $roleDao->getUsersByJournalId($journal->getId());
                 $users = $usersResult->toArray();
                 
@@ -216,7 +218,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
                 break;
 
             case 'exportByRole':
-                $this->import('UserExportDom');
+                $this->
                 $users = [];
                 $rolePaths = [];
                 
@@ -274,12 +276,12 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
         switch ($command) {
             case 'import':
-                $this->import('UserXMLParser');
+                $this->
 
                 $sendNotify = in_array('send_notify', $flags);
                 $continueOnError = in_array('continue_on_error', $flags);
 
-                import('core.Modules.file.FileManager');
+                
 
                 // Import the uploaded file
                 $parser = new UserXMLParser($journal->getId());
@@ -303,7 +305,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
                 return true;
 
             case 'export':
-                $this->import('UserExportDom');
+                $this->
                 $roleDao = DAORegistry::getDAO('RoleDAO');
                 $rolePaths = null;
                 

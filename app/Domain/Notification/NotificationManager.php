@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Notification\CoreNotificationManager;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Notification;
 
 /**
@@ -16,8 +18,6 @@ namespace App\Domain\Notification;
  * @see Notification
  * @brief Class for Notification Manager.
  */
-
-import('app.Domain.Notification.CoreNotificationManager');
 
 class NotificationManager extends CoreNotificationManager {
     
@@ -361,7 +361,7 @@ class NotificationManager extends CoreNotificationManager {
         $journal = $request->getJournal();
         if (!$journal) return array();
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
 
         $settings = array(

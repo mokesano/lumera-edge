@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\piwik;
+
 /**
  * @file plugins/generic/piwik/PiwikPlugin.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Piwik plugin class
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class PiwikPlugin extends GenericPlugin {
 
@@ -216,7 +217,7 @@ class PiwikPlugin extends GenericPlugin {
 				break;
 			case 'settings':
 				if ($this->getEnabled()) {
-					$this->import('PiwikSettingsForm');
+					$this->
 					$form = new PiwikSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();

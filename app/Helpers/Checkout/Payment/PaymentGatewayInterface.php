@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Checkout\Invoice;
 namespace App\Helpers\Checkout\Payment;
 
 /**
@@ -14,8 +15,6 @@ namespace App\Helpers\Checkout\Payment;
  * 
  * @brief Kontrak standar untuk semua penyedia Payment Gateway di ekosistem WIZDAM.
  */
-
-import('core.Modules.checkout.Invoice');
 
 interface PaymentGatewayInterface {
     

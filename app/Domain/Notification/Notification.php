@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Notification\CoreNotification;
+Lumera\Domain\Notification\NotificationDAO;
 namespace App\Domain\Notification;
 
 /**
@@ -49,9 +51,6 @@ define('NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED', 0x3000007);
 define('NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED',    0x3000008);
 define('NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED',      0x3000009);
 define('NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED',     0x300000A);
-
-import('app.Domain.Notification.CoreNotification');
-import('app.Domain.Notification.NotificationDAO');
 
 class Notification extends CoreNotification {
 

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
+Lumera\Modules\Payment\AppPaymentManager;
 /**
  * @file plugins/blocks/subscription/SubscriptionBlockPlugin.inc.php
  *
@@ -14,8 +16,6 @@ declare(strict_types=1);
  * @brief Class for subscription block plugin
  * [WIZDAM EDITION] Modernized. Reference safe for PHP 8.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class SubscriptionBlockPlugin extends BlockPlugin {
     
@@ -110,7 +110,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
             }
         }
 
-        import('core.Modules.payment.AppPaymentManager');
+        
         // [MODERNISASI] Hapus referensi &
         $paymentManager = new AppPaymentManager($request);
 

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Citation\TemplateBasedReferencesListFilter;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @file plugins/metadata/nlm30/filter/CoreSubmissionNlm30XmlFilter.inc.php
  *
@@ -20,8 +23,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.Citation.TemplateBasedReferencesListFilter');
 
 class CoreSubmissionNlm30XmlFilter extends TemplateBasedReferencesListFilter {
     /**

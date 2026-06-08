@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Rt\Form;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Rt\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class SearchForm extends Form {
 
@@ -111,7 +110,6 @@ class SearchForm extends Form {
         $templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
         parent::display($request, $template);
     }
-
 
     /**
      * Assign form data to user-submitted data.

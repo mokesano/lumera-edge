@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Rtadmin\RTAdminHandler;
+Lumera\Domain\Rt\Form\ContextForm;
+Lumera\Kernel\ArrayItemIterator;
 namespace App\Pages\Rtadmin;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Rtadmin;
  *
  * @brief Handle Reading Tools administration requests -- contexts section.
  */
-
-import('app.Pages.rtadmin.RTAdminHandler');
 
 class RTContextHandler extends RTAdminHandler {
     
@@ -58,7 +59,7 @@ class RTContextHandler extends RTAdminHandler {
         $versionId = isset($args[0]) ? (int)$args[0] : 0;
         $version = $rtDao->getVersion($versionId, $journal->getId());
 
-        import('app.Domain.Rt.form.ContextForm');
+        
         $contextForm = new ContextForm(null, $versionId);
 
         if (isset($args[1]) && $args[1]=='save') {
@@ -100,7 +101,7 @@ class RTContextHandler extends RTAdminHandler {
             // [WIZDAM] Removed assign_by_ref
             $templateMgr->assign('version', $version);
 
-            import('core.Kernel.ArrayItemIterator');
+            
             $templateMgr->assign('contexts', new ArrayItemIterator($version->getContexts(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
             $templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
@@ -130,7 +131,7 @@ class RTContextHandler extends RTAdminHandler {
         $context = $rtDao->getContext($contextId);
 
         if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-            import('app.Domain.Rt.form.ContextForm');
+            
             $this->setupTemplate(true, $version, $context);
             $contextForm = new ContextForm($contextId, $versionId);
             $contextForm->initData();
@@ -186,7 +187,7 @@ class RTContextHandler extends RTAdminHandler {
         $context = $rtDao->getContext($contextId);
 
         if (isset($version) && isset($context) && $context->getVersionId() == $version->getVersionId()) {
-            import('app.Domain.Rt.form.ContextForm');
+            
             $contextForm = new ContextForm($contextId, $versionId);
             $contextForm->readInputData();
             $contextForm->execute();

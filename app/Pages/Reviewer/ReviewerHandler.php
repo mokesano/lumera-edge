@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Reviewer\ReviewerAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\Submission\ReviewAssignment\ReviewAssignment;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Security\AccessKeyManager;
 namespace App\Pages\Reviewer;
 
 /**
@@ -15,9 +21,6 @@ namespace App\Pages\Reviewer;
  *
  * @brief Handle requests for reviewer functions.
  */
-
-import('app.Domain.Submission.Reviewer.ReviewerAction');
-import('app.Domain.Handler.Handler');
 
 class ReviewerHandler extends Handler {
 
@@ -106,7 +109,7 @@ class ReviewerHandler extends Handler {
             }
 
             // Convert submission array back to an ItemIterator class
-            import('core.Kernel.ArrayItemIterator');
+            
             $submissions = ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
         } else {
             $submissions = $reviewerSubmissionDao->getReviewerSubmissionsByReviewerId($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
@@ -117,10 +120,10 @@ class ReviewerHandler extends Handler {
         $templateMgr->assign('pageToDisplay', $page);
         $templateMgr->assign('submissions', $submissions);
 
-        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
+        
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
         $templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
@@ -148,7 +151,7 @@ class ReviewerHandler extends Handler {
             define('REVIEWER_ACCESS_KEY_SESSION_VAR', 'ReviewerAccessKey');
         }
 
-        import('app.Domain.Security.AccessKeyManager');
+        
         $accessKeyManager = new AccessKeyManager();
 
         $session = $request->getSession();

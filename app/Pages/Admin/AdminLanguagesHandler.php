@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Modules\I18n\LanguageAction;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for changing site language settings.
  */
-
-import('app.Pages.admin.AdminHandler');
 
 class AdminLanguagesHandler extends AdminHandler {
     
@@ -70,7 +71,7 @@ class AdminLanguagesHandler extends AdminHandler {
         $templateMgr->assign('uninstalledLocales', array_diff(array_keys(AppLocale::getAllLocales()), $site->getInstalledLocales()));
         $templateMgr->assign('helpTopicId', 'site.siteManagement');
 
-        import('core.Modules.i18n.LanguageAction');
+        
         $languageAction = new LanguageAction();
         if ($languageAction->isDownloadAvailable()) {
             $templateMgr->assign('downloadAvailable', true);
@@ -126,7 +127,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
         $user = $request->getUser();
 
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $notificationManager->createTrivialNotification($user->getId());
 
@@ -219,7 +220,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
             $user = $request->getUser();
 
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId());
         }
@@ -248,7 +249,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
             $user = $request->getUser();
 
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId());
         }
@@ -302,7 +303,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
         $locale = trim((string) $request->getUserVar('locale'));
 
-        import('core.Modules.i18n.LanguageAction');
+        
         $languageAction = new LanguageAction();
 
         if (!$languageAction->isDownloadAvailable()) $request->redirect(null, null, 'languages');
@@ -323,7 +324,7 @@ class AdminLanguagesHandler extends AdminHandler {
 
         $user = $request->getUser();
 
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $params = ['locale' => $locale];
         $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_LOCALE_INSTALLED, $params);

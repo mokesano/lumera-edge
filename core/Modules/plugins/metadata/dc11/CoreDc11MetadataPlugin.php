@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\MetadataPlugin;
+namespace Lumera\Modules\plugins\metadata\dc11;
+
 /**
  * @defgroup plugins_metadata_dc11
  */
@@ -18,9 +21,6 @@ declare(strict_types=1);
  * @brief Abstract base class for Dublin Core version 1.1 metadata plugins
  */
 
-
-import('core.Modules.plugins.MetadataPlugin');
-
 class CoreDc11MetadataPlugin extends MetadataPlugin {
 
 	/**
@@ -29,7 +29,6 @@ class CoreDc11MetadataPlugin extends MetadataPlugin {
     function __construct() {
         parent::__construct();
     }
-
 
 	//
 	// Override protected template methods from CorePlugin

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Search\SearchFileParser;
+Lumera\Kernel\CoreString;
+namespace Lumera\Modules\search;
+
 /**
  * @file core.Modules.search/SearchHTMLParser.inc.php
  *
@@ -13,9 +17,6 @@ declare(strict_types=1);
  *
  * @brief Class to extract text from an HTML file.
  */
-
-import('core.Modules.search.SearchFileParser');
-import('core.Kernel.CoreString');
 
 class SearchHTMLParser extends SearchFileParser {
 

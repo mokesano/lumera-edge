@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\FilterSetting;
+Lumera\Modules\Form\Validation\FormValidatorInSet;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/SetFilterSetting.inc.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  * @brief Class that describes a configurable filter setting which must
  * be one of a given set of values.
  */
-
-import('core.Modules.filter.FilterSetting');
-import('core.Modules.form.validation.FormValidatorInSet');
 
 class SetFilterSetting extends FilterSetting {
     /** @var array */

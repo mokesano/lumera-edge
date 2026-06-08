@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+namespace Lumera\Plugins\Importexport\pubmed;
+
 /**
  * @file plugins/importexport/pubmed/PubMedExportDom.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief PubMed XML export plugin DOM functions
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 define('PUBMED_DTD_URL', 'http://www.ncbi.nlm.nih.gov:80/entrez/query/static/PubMed.dtd');
 define('PUBMED_DTD_ID', '-//NLM//DTD PubMed 2.0//EN');

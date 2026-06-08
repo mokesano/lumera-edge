@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorArrayCustom.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Form validation check with a custom user function performing the validation check of an array of fields.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorArrayCustom extends FormValidator {
 
@@ -90,7 +91,6 @@ class FormValidatorArrayCustom extends FormValidator {
     public function isLocaleField() {
         return $this->_isLocaleField;
     }
-
 
     //
     // Public methods

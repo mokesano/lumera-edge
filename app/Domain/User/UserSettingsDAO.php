@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\User\CoreUserSettingsDAO;
 namespace App\Domain\User;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\User;
  * @brief Operations for retrieving and modifying user settings.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.User.CoreUserSettingsDAO');
 
 class UserSettingsDAO extends CoreUserSettingsDAO {
     

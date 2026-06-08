@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EmailLogEntry;
 namespace App\Domain\Article\Log;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Article\Log;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.log.EmailLogEntry');
 
 // Editor events                      0x30000000
 define('ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR',             0x30000001);

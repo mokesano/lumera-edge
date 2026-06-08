@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CoreApplication;
+Lumera\Domain\Statistics\StatisticsHelper;
+Lumera\Kernel\Request;
+Lumera\Domain\Help\Help;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Core;
 
 /**
@@ -16,10 +21,6 @@ namespace App\Domain\Core;
  *
  * @brief Class describing this application.
  */
-
-import('core.Kernel.CoreApplication');
-import('app.Domain.Statistics.StatisticsHelper');
-import('core.Kernel.Request');
 
 define('PHP_REQUIRED_VERSION', '7.4.0');
 
@@ -243,7 +244,7 @@ class Application extends CoreApplication {
      * @return object
      */
     public function instantiateHelp(): object {
-        import('app.Domain.Help.Help');
+        
         return new Help();
     }
 
@@ -430,7 +431,7 @@ class Application extends CoreApplication {
      * @return AppPaymentManager
      */
     public static function getPaymentManager($journal = null) {
-        import('app.Domain.Payment.AppPaymentManager');
+        
         
         // Resolve journal jika tidak disuplai
         if ($journal === null) {

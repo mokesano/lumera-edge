@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\PublicFileManager;
 namespace Lumera\Modules\Admin\Form;
 
 /**
@@ -21,7 +23,6 @@ namespace Lumera\Modules\Admin\Form;
  */
 
 define('PUBLISHER_MIN_PASSWORD_LENGTH', 12);
-import('core.Modules.form.Form');
 
 class CorePublisherSettingsForm extends Form {
     
@@ -179,7 +180,7 @@ class CorePublisherSettingsForm extends Form {
      * Uploads custom site stylesheet.
      */
     public function uploadSiteStyleSheet() {
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         
         // [WIZDAM] Fetch site via singleton for file operations
@@ -207,7 +208,7 @@ class CorePublisherSettingsForm extends Form {
      * @param string $locale
      */
     public function uploadPageHeaderTitleImage($locale) {
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         
         // [WIZDAM] Fetch site via singleton

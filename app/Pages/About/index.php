@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\About\AboutHandler;
 namespace App\Pages\About;
 
 /**
@@ -39,6 +40,6 @@ switch($op) {
     case 'insights':
     case 'statistics':
         define('HANDLER_CLASS', \App\Pages\About\AboutHandler::class);
-        import('app.Pages.About.AboutHandler');
+        
         break;
 }

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Information;
 
 /**
@@ -15,9 +16,6 @@ namespace App\Pages\Information;
  *
  * @brief Display journal information.
  */
-
-
-import('app.Domain.Handler.Handler');
 
 class InformationHandler extends Handler {
     

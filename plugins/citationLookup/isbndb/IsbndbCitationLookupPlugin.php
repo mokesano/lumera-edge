@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationLookup\Isbndb\CoreIsbndbCitationLookupPlugin;
 /**
  * @defgroup plugins_citationLookup_isbndb
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief ISBNdb citation database connector plug-in.
  */
-
-import('core.Modules.plugins.citationLookup.isbndb.CoreIsbndbCitationLookupPlugin');
 
 class IsbndbCitationLookupPlugin extends CoreIsbndbCitationLookupPlugin {
     

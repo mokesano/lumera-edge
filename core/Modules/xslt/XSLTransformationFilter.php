@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+Lumera\Modules\Xslt\XSLTransformer;
+Lumera\Modules\Filter\FilterSetting;
+namespace Lumera\Modules\xslt;
+
 /**
  * @file core.Modules.metadata/XSLTransformationFilter.inc.php
  *
@@ -15,9 +20,6 @@ declare(strict_types=1);
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
 
-import('core.Modules.filter.PersistableFilter');
-import('core.Modules.xslt.XSLTransformer');
-
 class XSLTransformationFilter extends PersistableFilter {
     
     /**
@@ -28,7 +30,7 @@ class XSLTransformationFilter extends PersistableFilter {
         if (!substr($filterGroup->getInputType(), 0, 5) == 'xml::') fatalError('XSL filters need XML as input.');
 
         // Instantiate the settings of this filter
-        import('core.Modules.filter.FilterSetting');
+        
         $this->addSetting(new FilterSetting('xsl', null, null));
         $this->addSetting(new FilterSetting('xslType', null, null));
         $this->addSetting(new FilterSetting('resultType', null, null, FORM_VALIDATOR_OPTIONAL_VALUE));
@@ -108,7 +110,6 @@ class XSLTransformationFilter extends PersistableFilter {
         $this->setData('resultType', $resultType);
     }
 
-
     //
     // Implement template methods from PersistableFilter
     //
@@ -118,7 +119,6 @@ class XSLTransformationFilter extends PersistableFilter {
     public function getClassName() {
         return 'core.Modules.xslt.XSLTransformationFilter';
     }
-
 
     //
     // Implement template methods from Filter

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\Xml;
 /**
  * @defgroup xml
  */
@@ -21,8 +22,6 @@ declare(strict_types=1);
 // The default character encodings
 define('XML_PARSER_SOURCE_ENCODING', Config::getVar('i18n', 'client_charset'));
 define('XML_PARSER_TARGET_ENCODING', Config::getVar('i18n', 'client_charset'));
-
-import('core.Modules.xml.XMLParserDOMHandler');
 
 class CoreXMLParser {
 
@@ -119,7 +118,7 @@ class CoreXMLParser {
         xml_set_element_handler($parser, [$this->handler, "startElement"], [$this->handler, "endElement"]);
         xml_set_character_data_handler($parser, [$this->handler, "characterData"]);
 
-        import('core.Modules.file.FileWrapper');
+        
         $wrapper = FileWrapper::wrapper($file);
 
         // Handle responses of various types
@@ -267,7 +266,7 @@ class CoreXMLParser {
      * @return array a struct of the form ($TAG => array('attributes' => array( ... ), 'value' => $VALUE), ... )
      */
     public function parseStruct($file, $tagsToMatch = array()) {
-        import('core.Modules.file.FileWrapper');
+        
         $wrapper = FileWrapper::wrapper($file);
         $fileContents = $wrapper->contents();
         if (!$fileContents) {
@@ -305,42 +304,3 @@ class CoreXMLParser {
     }
 
 }
-
-/**
- * Interface for handler class used by XMLParser.
- * All XML parser handler classes must implement these methods.
- */
-class CoreXMLParserHandler {
-
-    /**
-     * Callback function to act as the start element handler.
-     */
-    public function startElement($parser, $tag, $attributes) {
-        // WIZDAM FIX: Removed reference from $parser
-    }
-
-    /**
-     * Callback function to act as the end element handler.
-     */
-    public function endElement($parser, $tag) {
-        // WIZDAM FIX: Removed reference from $parser
-    }
-
-    /**
-     * Callback function to act as the character data handler.
-     */
-    public function characterData($parser, $data) {
-        // WIZDAM FIX: Removed reference from $parser
-    }
-
-    /**
-     * Returns a resulting data structure representing the parsed content.
-     * The format of this object is specific to the handler.
-     * @return mixed
-     */
-    public function getResult() {
-        return null;
-    }
-}
-
-?>

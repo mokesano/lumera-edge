@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+namespace Lumera\Plugins\Importexport\medra;
+
 /**
  * @file plugins/importexport/medra/MedraInfoSender.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Scheduled task to register DOIs to the Medra server.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class MedraInfoSender extends ScheduledTask {
     

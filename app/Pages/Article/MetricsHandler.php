@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Article\ArticleHandler;
 namespace App\Pages\Article;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Article;
  * 
  * @brief Menangani permintaan untuk halaman "metrik" kustom sebuah artikel.
  */
-
-import('app.Pages.article.ArticleHandler');
 
 class MetricsHandler extends ArticleHandler {
 

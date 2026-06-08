@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Validation\HandlerValidator;
 namespace App\Domain\Handler\Validation;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\Handler\Validation;
  *
  * @brief Class to validate that a comment exists (by id) and that the current user has access
  */
-
-import('app.Domain.Handler.Validation.HandlerValidator');
 
 class HandlerValidatorSubmissionComment extends HandlerValidator {
     /** @var int */

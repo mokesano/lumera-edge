@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Issue\Issue;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\File\IssueFileManager;
 namespace App\Domain\Issue;
 
 /**
@@ -16,8 +19,6 @@ namespace App\Domain\Issue;
  *
  * @brief Operations for retrieving and modifying Issue objects.
  */
-
-import ('app.Domain.issue.Issue');
 
 class IssueDAO extends DAO {
     /** @var array Cache storage */
@@ -486,7 +487,7 @@ class IssueDAO extends DAO {
      * @param $issue Issue
      */
     public function deleteIssue($issue) {
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
 
         if (is_array($issue->getFileName(null))) foreach ($issue->getFileName(null) as $fileName) {
@@ -511,7 +512,7 @@ class IssueDAO extends DAO {
         $issueFileDao = DAORegistry::getDAO('IssueFileDAO');
         $issueFileDao->deleteIssueFiles($issueId);
 
-        import('core.Modules.file.IssueFileManager');
+        
         $issueFileManager = new IssueFileManager($issueId);
         $issueFileManager->deleteIssueTree();
 

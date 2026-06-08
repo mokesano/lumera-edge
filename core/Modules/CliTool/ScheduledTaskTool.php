@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
+Lumera\Modules\ScheduledTask\ScheduledTaskDAO;
+Lumera\Modules\Xml\XMLParser;
 namespace Lumera\Modules\CliTool;
 
 /**
@@ -22,10 +26,7 @@ if (!defined('TASKS_REGISTRY_FILE')) {
     define('TASKS_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/scheduledTasks.xml');
 }
 
-import('core.Modules.scheduledTask.ScheduledTask');
-import('core.Modules.scheduledTask.ScheduledTaskHelper');
-import('core.Modules.scheduledTask.ScheduledTaskDAO');
-import('core.Modules.xml.XMLParser'); // [WIZDAM] Explicit Import
+ // [WIZDAM] Explicit Import
 
 class ScheduledTaskTool extends CommandLineTool {
 

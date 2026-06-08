@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ThemePlugin;
+Lumera\Modules\File\PublicFileManager;
 /**
  * @file plugins/themes/custom/CustomThemePlugin.inc.php
  *
@@ -13,8 +15,6 @@ declare(strict_types=1);
  *
  * @brief "Custom" theme plugin
  */
-
-import('core.Modules.plugins.ThemePlugin');
 
 class CustomThemePlugin extends ThemePlugin
 {
@@ -80,7 +80,7 @@ class CustomThemePlugin extends ThemePlugin
     {
         $journal = Request::getJournal();
         if ($journal && $this->getSetting($journal->getId(), 'customThemePerJournal')) {
-            import('core.Modules.file.PublicFileManager');
+            
             $fileManager = new PublicFileManager();
             return $fileManager->getJournalFilesPath($journal->getId());
         }
@@ -177,7 +177,7 @@ class CustomThemePlugin extends ThemePlugin
         $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
         $templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
-        $this->import('CustomThemeSettingsForm');
+        $this->
         
         // Strict typing in Form constructor requires int
         $form = new CustomThemeSettingsForm($this, (int) $journalId);

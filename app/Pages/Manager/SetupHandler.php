@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Modules\Manager\Form\Setup$formClass;
+Lumera\Domain\File\JournalFileManager;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for journal setup functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class SetupHandler extends ManagerHandler {
     
@@ -59,7 +60,7 @@ class SetupHandler extends ManagerHandler {
         if ($step >= 1 && $step <= 5) {
 
             $formClass = "JournalSetupStep{$step}Form";
-            import("core.Modules.manager.form.setup.$formClass");
+            
 
             $setupForm = new $formClass();
             if ($setupForm->isLocaleResubmit()) {
@@ -96,7 +97,7 @@ class SetupHandler extends ManagerHandler {
             $this->setupTemplate(true);
 
             $formClass = "JournalSetupStep{$step}Form";
-            import("core.Modules.manager.form.setup.$formClass");
+            
 
             $setupForm = new $formClass();
             $setupForm->readInputData();
@@ -219,7 +220,7 @@ class SetupHandler extends ManagerHandler {
                     $router = $request->getRouter();
                     $journal = $router->getContext($request);
                     $templates = $journal->getSetting('templates');
-                    import('app.Domain.File.JournalFileManager');
+                    
                     $journalFileManager = new JournalFileManager($journal);
                     if ((int) $request->getUserVar('addTemplate')) {
                         // Add a layout template
@@ -412,7 +413,7 @@ class SetupHandler extends ManagerHandler {
         $router = $request->getRouter();
         $journal = $router->getContext($request);
         $templates = $journal->getSetting('templates');
-        import('app.Domain.File.JournalFileManager');
+        
         $journalFileManager = new JournalFileManager($journal);
         $templateId = (int) array_shift($args);
         if ($templateId >= count($templates) || $templateId < 0) $request->redirect(null, null, 'setup');

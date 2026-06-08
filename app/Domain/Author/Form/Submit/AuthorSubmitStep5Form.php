@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Author\Form\Submit\AuthorSubmitForm;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Article\Log\ArticleLog;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,8 +20,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Form for Step 5 of author article submission.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep5Form extends AuthorSubmitForm {
     
@@ -79,7 +81,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
         $templateMgr->assign('journal', $journal);
 
         // Set up required Payment Related Information
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($this->request);
         if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
             $templateMgr->assign('authorFees', true);
@@ -125,7 +127,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
      * @return bool
      */
     public function validate($callHooks = true) {
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($this->request);
         if ( $paymentManager->submissionEnabled() ) {
             if (!parent::validate()) return false;
@@ -215,7 +217,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
         $sectionEditors = $this->assignEditors($article);
 
         // Send author notification email
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $mail = new ArticleMailTemplate($article, 'SUBMISSION_ACK', null, null, null, false);
         $mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
         if ($mail->isEnabled()) {
@@ -248,7 +250,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
             $mail->send($this->request);
         }
 
-        import('app.Domain.Article.log.ArticleLog');
+        
         ArticleLog::logEvent($this->request, $article, ARTICLE_LOG_ARTICLE_SUBMIT, 'log.author.submitted', ['authorName' => $user->getFullName(), 'submissionId' => $article->getId()]);
 
         return $this->articleId;

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\User\User;
+Lumera\Domain\User\CoreUserDAO;
 namespace App\Domain\User;
 
 /**
@@ -17,9 +19,6 @@ namespace App\Domain\User;
  * @brief Basic class describing users existing in the system.
  * [WIZDAM EDITION] PHP 7.4+ Compatible
  */
-
-import('app.Domain.User.User');
-import('app.Domain.User.CoreUserDAO');
 
 class UserDAO extends CoreUserDAO {
     

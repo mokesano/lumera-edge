@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\PaymentGatewayInterface;
+Lumera\Modules\Invoice\Invoice;
 namespace App\Helpers\Payment;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Helpers\Payment;
  */
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
-
-import('app.Domain.Payment.PaymentGatewayInterface');
-import('core.Modules.invoice.Invoice');
 
 use Midtrans\Config;
 use Midtrans\Snap;

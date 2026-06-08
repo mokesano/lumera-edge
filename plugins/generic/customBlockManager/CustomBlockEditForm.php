@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\PublicFileManager;
+namespace Lumera\Plugins\Generic\customBlockManager;
+
 /**
  * @file plugins/generic/customBlockManager/CustomBlockEditForm.inc.php
  *
@@ -13,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Form for editing individual custom block content.
  */
-
-import('core.Modules.form.Form');
 
 class CustomBlockEditForm extends Form {
 
@@ -129,7 +131,7 @@ class CustomBlockEditForm extends Form {
         $templateMgr = TemplateManager::getManager();
         $additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
         
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         
         $baseUrl = Request::getBaseUrl();

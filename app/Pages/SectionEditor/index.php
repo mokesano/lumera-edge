@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\SectionEditor\SubmissionEditHandler;
+Lumera\Pages\SectionEditor\SubmissionCommentsHandler;
+Lumera\Pages\SectionEditor\SectionEditorHandler;
 namespace App\Pages\SectionEditor;
 
 /**
@@ -144,7 +147,7 @@ switch ($op) {
     case 'waivePublicationFee':
     case 'downloadLayoutTemplate':
         define('HANDLER_CLASS', \App\Pages\SectionEditor\SubmissionEditHandler::class);
-        import('app.Pages.SectionEditor.SubmissionEditHandler');
+        
         break;
     //
     // Submission Comments
@@ -165,11 +168,11 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\SectionEditor\SubmissionCommentsHandler::class);
-        import('app.Pages.SectionEditor.SubmissionCommentsHandler');
+        
         break;
     case 'index':
     case 'instructions':
         define('HANDLER_CLASS', \App\Pages\SectionEditor\SectionEditorHandler::class);
-        import('app.Pages.SectionEditor.SectionEditorHandler');
+        
         break;
 }

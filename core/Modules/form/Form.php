@@ -1,6 +1,33 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\FormError;
+Lumera\Modules\Form\FormBuilderVocabulary;
+Lumera\Modules\Form\Validation\FormValidatorAlphaNum;
+Lumera\Modules\Form\Validation\FormValidatorArray;
+Lumera\Modules\Form\Validation\FormValidatorArrayCustom;
+Lumera\Modules\Form\Validation\FormValidatorControlledVocab;
+Lumera\Modules\Form\Validation\FormValidatorCustom;
+Lumera\Modules\Form\Validation\FormValidatorCaptcha;
+Lumera\Modules\Form\Validation\FormValidatorReCaptcha;
+Lumera\Modules\Form\Validation\FormValidatorDate;
+Lumera\Modules\Form\Validation\FormValidatorEmail;
+Lumera\Modules\Form\Validation\FormValidatorInSet;
+Lumera\Modules\Form\Validation\FormValidatorLength;
+Lumera\Modules\Form\Validation\FormValidatorListbuilder;
+Lumera\Modules\Form\Validation\FormValidatorLocale;
+Lumera\Modules\Form\Validation\FormValidatorLocaleEmail;
+Lumera\Modules\Form\Validation\FormValidatorPost;
+Lumera\Modules\Form\Validation\FormValidatorRegExp;
+Lumera\Modules\Form\Validation\FormValidatorUri;
+Lumera\Modules\Form\Validation\FormValidatorUrl;
+Lumera\Modules\Form\Validation\FormValidatorLocaleUrl;
+Lumera\Modules\Form\Validation\FormValidatorISSN;
+Lumera\Modules\Form\Validation\FormValidatorORCID;
+Lumera\Modules\Form\Validation\FormValidatorCSRF;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Modules\form;
+
 /**
  * @defgroup form
  */
@@ -23,32 +50,7 @@ declare(strict_types=1);
  * - HTML Entity Handling
  */
 
-import('core.Modules.form.FormError');
-import('core.Modules.form.FormBuilderVocabulary');
-
 // Import all form validators for convenient use in sub-classes
-import('core.Modules.form.validation.FormValidatorAlphaNum');
-import('core.Modules.form.validation.FormValidatorArray');
-import('core.Modules.form.validation.FormValidatorArrayCustom');
-import('core.Modules.form.validation.FormValidatorControlledVocab');
-import('core.Modules.form.validation.FormValidatorCustom');
-import('core.Modules.form.validation.FormValidatorCaptcha');
-import('core.Modules.form.validation.FormValidatorReCaptcha');
-import('core.Modules.form.validation.FormValidatorDate');
-import('core.Modules.form.validation.FormValidatorEmail');
-import('core.Modules.form.validation.FormValidatorInSet');
-import('core.Modules.form.validation.FormValidatorLength');
-import('core.Modules.form.validation.FormValidatorListbuilder');
-import('core.Modules.form.validation.FormValidatorLocale');
-import('core.Modules.form.validation.FormValidatorLocaleEmail');
-import('core.Modules.form.validation.FormValidatorPost');
-import('core.Modules.form.validation.FormValidatorRegExp');
-import('core.Modules.form.validation.FormValidatorUri');
-import('core.Modules.form.validation.FormValidatorUrl');
-import('core.Modules.form.validation.FormValidatorLocaleUrl');
-import('core.Modules.form.validation.FormValidatorISSN');
-import('core.Modules.form.validation.FormValidatorORCID');
-import('core.Modules.form.validation.FormValidatorCSRF');
 
 class Form {
 
@@ -123,7 +125,6 @@ class Form {
         self::__construct($template, $callHooks, $requiredLocale, $supportedLocales);
     }
 
-
     //
     // Setters and Getters
     //
@@ -182,7 +183,6 @@ class Form {
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->setCacheability(CACHEABILITY_NO_STORE);
-
 
         // Attach this form object to the Form Builder Vocabulary
         $fbv = $templateMgr->getFBV();
@@ -285,7 +285,7 @@ class Form {
 
             if (!$this->isValid() && $user) {
                 // Create a form error notification.
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification(
                     $user->getId(), NOTIFICATION_TYPE_FORM_ERROR, array('contents' => $this->getErrorsArray())

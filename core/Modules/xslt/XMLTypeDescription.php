@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\TypeDescription;
+Lumera\Modules\Filter\TypeDescriptionFactory;
+namespace Lumera\Modules\xslt;
+
 /**
  * @file core.Modules.filter/XMLTypeDescription.inc.php
  *
@@ -25,9 +29,6 @@ declare(strict_types=1);
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
 
-import('core.Modules.filter.TypeDescription');
-import('core.Modules.filter.TypeDescriptionFactory');
-
 define('XML_TYPE_DESCRIPTION_VALIDATE_NONE', '*');
 define('XML_TYPE_DESCRIPTION_VALIDATE_SCHEMA', 'schema');
 define('XML_TYPE_DESCRIPTION_VALIDATE_DTD', 'dtd');
@@ -40,7 +41,6 @@ class XMLTypeDescription extends TypeDescription {
 
     /** @var string a validation document as string or filename pointer (xsd or rng only) */
     public $_validationSource;
-
 
     /**
      * Constructor
@@ -60,7 +60,6 @@ class XMLTypeDescription extends TypeDescription {
         self::__construct($typeName);
     }
 
-
     //
     // Setters and Getters
     //
@@ -70,7 +69,6 @@ class XMLTypeDescription extends TypeDescription {
     public function getNamespace() {
         return TYPE_DESCRIPTION_NAMESPACE_XML;
     }
-
 
     //
     // Implement abstract template methods from TypeDescription

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Submission\ReviewAssignment\CoreReviewAssignment;
+namespace Lumera\Modules\submission\reviewAssignment;
+
 /**
  * @file core.Modules.submission/reviewAssignment/CoreReviewAssignmentDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Class for DAO relating reviewers to submissions.
  */
-
-import('core.Modules.submission.reviewAssignment.CoreReviewAssignment');
 
 class CoreReviewAssignmentDAO extends DAO {
     
@@ -52,7 +53,6 @@ class CoreReviewAssignmentDAO extends DAO {
     public function getReviewRoundJoin() {
         return false;
     }
-
 
     //
     // Public methods.

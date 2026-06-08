@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\SubscriptionType;
 namespace App\Domain\Subscription;
-
 
 /**
  * @file app/Domain/Subscription/SubscriptionTypeDAO.php
@@ -18,8 +18,6 @@ namespace App\Domain\Subscription;
  * @brief Operations for retrieving and modifying SubscriptionType objects.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.SubscriptionType');
 
 class SubscriptionTypeDAO extends DAO {
     /**

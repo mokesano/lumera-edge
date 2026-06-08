@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Group\Group;
+namespace Lumera\Modules\group;
+
 /**
  * @file core.Modules.group/GroupDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying Group objects.
  */
-
-import ('core.Modules.group.Group');
 
 class GroupDAO extends DAO {
     

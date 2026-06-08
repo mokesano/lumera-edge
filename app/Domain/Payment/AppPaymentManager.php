@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\AppQueuedPayment;
+Lumera\Domain\Payment\PaymentManager;
+Lumera\Modules\Services\InvoiceService;
+Lumera\Domain\Payment\AppCompletedPayment;
+Lumera\Domain\Subscription\InstitutionalSubscription;
+Lumera\Domain\Subscription\SubscriptionAction;
+Lumera\Domain\Subscription\IndividualSubscription;
+Lumera\Domain\Gift\Gift;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Payment;
 
 /**
@@ -17,9 +26,6 @@ namespace App\Domain\Payment;
  * @brief Provides payment management functions.
  * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Payment.AppQueuedPayment');
-import('app.Domain.Payment.PaymentManager');
 
 define('PAYMENT_TYPE_MEMBERSHIP',         0x000000001);
 define('PAYMENT_TYPE_RENEW_SUBSCRIPTION', 0x000000002);
@@ -151,7 +157,7 @@ class AppPaymentManager extends PaymentManager {
                 
                 // ========================================================
                 // [SEMANTIC CHECKOUT BRIDGE]
-                import('core.Modules.services.InvoiceService');
+                
                 $checkoutInvoiceService = new InvoiceService();
                 
                 $feeType = 'PUBLICATION';
@@ -235,7 +241,7 @@ class AppPaymentManager extends PaymentManager {
      * @return AppCompletedPayment
      */
     public function createCompletedPayment($queuedPayment, $payMethod) {
-        import('app.Domain.Payment.AppCompletedPayment');
+        
         $payment = new AppCompletedPayment();
         $payment->setJournalId($queuedPayment->getJournalId());
         $payment->setType($queuedPayment->getType());
@@ -396,7 +402,7 @@ class AppPaymentManager extends PaymentManager {
                 // Update subscription end date now that payment is completed
                 if ($institutional) {
                     // Still requires approval from JM/SM since includes domain and IP ranges
-                    import('app.Domain.Subscription.InstitutionalSubscription');
+                    
                     $subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
                     if ($subscription->isNonExpiring()) {
                         $institutionalSubscriptionDao->updateSubscription($subscription);
@@ -407,11 +413,11 @@ class AppPaymentManager extends PaymentManager {
                     // Notify JM/SM of completed online purchase
                     $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
                     if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-                        import('app.Domain.Subscription.SubscriptionAction');
+                        
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
                     }
                 } else {
-                    import('app.Domain.Subscription.IndividualSubscription');
+                    
                     $subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
                     if ($subscription->isNonExpiring()) {
                         $individualSubscriptionDao->updateSubscription($subscription);
@@ -421,7 +427,7 @@ class AppPaymentManager extends PaymentManager {
                     // Notify JM/SM of completed online purchase
                     $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
                     if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-                        import('app.Domain.Subscription.SubscriptionAction');
+                        
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_PURCHASE_INDL');
                     }
                 }
@@ -449,7 +455,7 @@ class AppPaymentManager extends PaymentManager {
                     // Notify JM/SM of completed online purchase
                     $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
                     if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-                        import('app.Domain.Subscription.SubscriptionAction');
+                        
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INSTL');
                     }
                 } else {
@@ -458,7 +464,7 @@ class AppPaymentManager extends PaymentManager {
                     // Notify JM/SM of completed online purchase
                     $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
                     if ($journalSettingsDao->getSetting($subscription->getJournalId(), 'enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-                        import('app.Domain.Subscription.SubscriptionAction');
+                        
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($subscription, 'SUBSCRIPTION_RENEW_INDL');
                     }
                 }
@@ -532,7 +538,7 @@ class AppPaymentManager extends PaymentManager {
                 }
 
                 // Update gift status (make it redeemable) and add recipient user account reference
-                import('app.Domain.Gift.Gift');
+                
                 $gift->setStatus(GIFT_STATUS_NOT_REDEEMED);
                 $gift->setRecipientUserId($userId);
                 $giftDao->updateObject($gift);
@@ -548,7 +554,7 @@ class AppPaymentManager extends PaymentManager {
                 $giftJournalName = $journal->getTitle($giftLocale);
                 $giftContactSignature = $journal->getSetting('contactName');
 
-                import('app.Domain.Mail.MailTemplate');
+                
                 $mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
                 $mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
                 $mail->assignParams([

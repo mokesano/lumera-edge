@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Dc11\CoreDc11MetadataPlugin;
 /**
  * @defgroup plugins_metadata_dc11
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief Dublin Core version 1.1 metadata plugin
  */
-
-import('core.Modules.plugins.metadata.dc11.CoreDc11MetadataPlugin');
 
 class Dc11MetadataPlugin extends CoreDc11MetadataPlugin {
 

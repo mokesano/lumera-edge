@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\stopForumSpam;
+
 /**
  * @file plugins/generic/stopForumSpam/StopForumSpamPlugin.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  */
 
 define('STOP_FORUM_SPAM_API_ENDPOINT', 'http://www.stopforumspam.com/api?');
-
-import('core.Modules.plugins.GenericPlugin');
 
 class StopForumSpamPlugin extends GenericPlugin {
     
@@ -227,7 +228,7 @@ class StopForumSpamPlugin extends GenericPlugin {
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
                 $journal = $request->getJournal();
 
-                $this->import('StopForumSpamSettingsForm');
+                $this->
                 $form = new StopForumSpamSettingsForm($this, $journal->getId());
                 if (Request::getUserVar('save')) {
                     $form->readInputData();

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataSchema;
+namespace Lumera\Modules\plugins\metadata\nlm30\schema;
+
 /**
  * @defgroup plugins_metadata_nlm30_schema
  */
@@ -29,8 +32,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.metadata.MetadataSchema');
 
 class Nlm30NameSchema extends MetadataSchema {
     

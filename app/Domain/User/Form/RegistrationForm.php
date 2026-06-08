@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Captcha\CaptchaManager;
+Lumera\Domain\User\InterestManager;
+Lumera\Domain\Mail\MailTemplate;
+Lumera\Domain\Security\AccessKeyManager;
 namespace App\Domain\User\Form;
 
 /**
@@ -22,8 +27,6 @@ namespace App\Domain\User\Form;
  * WIZDAM MODERNIZATION:
  * - TRUE MODULAR SECURITY: Decoupled Default Captcha, reCAPTCHA, and Turnstile
  */
-
-import('core.Modules.form.Form');
 
 class RegistrationForm extends Form {
 
@@ -62,7 +65,7 @@ class RegistrationForm extends Form {
             // PILAR 3: DEFAULT CAPTCHA (Gambar) (HANYA JIKA TURNSTILE & RECAPTCHA OFF)
             if (!$this->turnstileEnabled && !$this->reCaptchaEnabled) {
                 if (Config::getVar('captcha', 'captcha') && Config::getVar('captcha', 'captcha_on_register')) {
-                    import('core.Modules.Captcha.CaptchaManager');
+                    
                     $captchaManager = new CaptchaManager();
                     if ($captchaManager->isEnabled()) {
                         $this->captchaEnabled = true;
@@ -272,7 +275,7 @@ class RegistrationForm extends Form {
         
         // 1. Eksekusi logic UI berdasarkan Flag
         if ($this->captchaEnabled) {
-            import('core.Modules.Captcha.CaptchaManager');
+            
             $captchaManager = new CaptchaManager();
             $captcha = $captchaManager->createCaptcha();
             if ($captcha) {
@@ -535,7 +538,7 @@ class RegistrationForm extends Form {
             if (!$userId) { return false; }
 
             $interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
-            import('app.Domain.User.InterestManager');
+            
             $interestManager = new InterestManager();
             $interestManager->setInterestsForUser($user, $interests);
 
@@ -565,9 +568,9 @@ class RegistrationForm extends Form {
         }
 
         if (!$this->existingUser) {
-            import('app.Domain.Mail.MailTemplate');
+            
             if ($requireValidation) {
-                import('app.Domain.Security.AccessKeyManager');
+                
                 $accessKeyManager = new AccessKeyManager();
                 $accessKey = $accessKeyManager->createKey('RegisterContext', $user->getId(), null, Config::getVar('email', 'validation_timeout'));
 

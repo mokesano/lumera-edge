@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\RTDAO;
+Lumera\Domain\Rt\JournalRT;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Comment\Form\CommentForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Issue\IssueAction;
 namespace App\Pages\Comment;
 
 /**
@@ -15,10 +21,6 @@ namespace App\Pages\Comment;
  *
  * @brief Handle requests for user comments.
  */
-
-import('app.Domain.Rt.RTDAO');
-import('app.Domain.Rt.JournalRT');
-import('app.Domain.Handler.Handler');
 
 class CommentHandler extends Handler {
     
@@ -139,7 +141,7 @@ class CommentHandler extends Handler {
                 Validation::redirectLogin();
         }
 
-        import('app.Domain.Comment.form.CommentForm');
+        
         $commentForm = new CommentForm(null, $articleId, $galleyId, isset($parent) ? $parentId : null);
         $commentForm->initData();
 
@@ -149,7 +151,7 @@ class CommentHandler extends Handler {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $articleDao = DAORegistry::getDAO('ArticleDAO');
                 $article = $articleDao->getArticle($articleId);
@@ -229,7 +231,7 @@ class CommentHandler extends Handler {
         $issue = $issueDao->getIssueByArticleId($articleId);
 
         if (isset($issue) && isset($article)) {
-            import('app.Domain.Issue.IssueAction');
+            
             $subscriptionRequired = IssueAction::subscriptionRequired($issue);
             $subscribedUser = IssueAction::subscribedUser($journal, $issue->getId(), $articleId);
 

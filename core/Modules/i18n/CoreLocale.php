@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\I18n\LocaleFile;
+Lumera\Modules\Db\DBDataXMLParser;
+namespace Lumera\Modules\i18n;
+
 /**
  * @defgroup i18n
  */
@@ -18,8 +22,6 @@ declare(strict_types=1);
  * @brief Provides methods for loading locale data and translating strings identified by unique keys
  * WIZDAM EDITION: PHP 8 Compatibility, Registry State Fixes
  */
-
-import('core.Modules.i18n.LocaleFile');
 
 if (!defined('LOCALE_REGISTRY_FILE')) {
     define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . DIRECTORY_SEPARATOR . 'locales.xml');
@@ -393,7 +395,7 @@ class CoreLocale {
      */
     public static function installLocale($locale) {
         // Install default locale-specific data
-        import('core.Modules.db.DBDataXMLParser');
+        
 
         $emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
         $emailTemplateDao->installEmailTemplateData($emailTemplateDao->getMainEmailTemplateDataFilename($locale));

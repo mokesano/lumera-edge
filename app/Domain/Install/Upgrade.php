@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Install\Installer;
+Lumera\Domain\Search\ArticleSearchIndex;
+Lumera\Domain\Submission\Author\AuthorAction;
+Lumera\Domain\Subscription\InstitutionalSubscription;
+Lumera\Domain\Article\Article;
+Lumera\Generic\UsageStats\GeoLocationTool;
 namespace App\Domain\Install;
 
 /**
@@ -19,8 +25,6 @@ namespace App\Domain\Install;
  *
  * [WIZDAM FORK v3.4] - PHP 8.4+ Strict Mode
  */
-
-import('core.Modules.install.Installer');
 
 class Upgrade extends Installer {
 
@@ -51,7 +55,7 @@ class Upgrade extends Installer {
      * @return bool
      */
     public function rebuildSearchIndex(): bool {
-        import('app.Domain.Search.ArticleSearchIndex');
+        
         $articleSearchIndex = new ArticleSearchIndex();
         $articleSearchIndex->rebuildIndex();
         return true;
@@ -66,7 +70,7 @@ class Upgrade extends Installer {
         $journalDao = DAORegistry::getDAO('JournalDAO');
         $articleDao = DAORegistry::getDAO('ArticleDAO');
         $authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
-        import('app.Domain.Submission.author.AuthorAction');
+        
 
         $journals = $journalDao->getJournals();
         while ($journal = $journals->next()) {
@@ -537,7 +541,6 @@ class Upgrade extends Installer {
             }
         }
 
-
         return true;
     }
 
@@ -601,7 +604,7 @@ class Upgrade extends Installer {
      * @return bool
      */
     public function separateSubscriptions(): bool {
-        import('app.Domain.Subscription.InstitutionalSubscription');
+        
         $subscriptionDao = DAORegistry::getDAO('SubscriptionDAO');
 
         // Retrieve all subscriptions from pre-2.3 subscriptions table
@@ -888,7 +891,6 @@ class Upgrade extends Installer {
         $result->Close();
         unset($result);
 
-
         // Retrieve all settings from pre-2.4 notification_settings table
         $result = $notificationDao->retrieve('SELECT * FROM notification_settings_old');
         while (!$result->EOF) {
@@ -958,13 +960,12 @@ class Upgrade extends Installer {
         return true;
     }
 
-
     /**
      * For 2.3.7 Upgrade -- Remove author revised file upload IDs erroneously added to copyedit signoff
      * @return bool
      */
     public function removeAuthorRevisedFilesFromSignoffs(): bool {
-        import('app.Domain.Article.Article');
+        
         $signoffDao = DAORegistry::getDAO('SignoffDAO'); /* @var $signoffDao SignoffDAO */
 
         $result = $signoffDao->retrieve(
@@ -1138,11 +1139,11 @@ class Upgrade extends Installer {
         $metricsDao->purgeLoadBatch($loadId);
 
         $plugin = PluginRegistry::getPlugin('generic', 'usagestatsplugin');
-        $plugin->import('UsageStatsTemporaryRecordDAO');
+        $plugin->
         $tempStatsDao = new UsageStatsTemporaryRecordDAO();
         $tempStatsDao->deleteByLoadId($loadId);
 
-        import('plugins.generic.usageStats.GeoLocationTool');
+        
         $geoLocationTool = new GeoLocationTool();
 
         $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */

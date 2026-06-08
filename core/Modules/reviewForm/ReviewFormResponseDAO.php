@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ReviewForm\ReviewFormResponse;
+namespace Lumera\Modules\reviewForm;
+
 /**
  * @file core.Modules.reviewForm/ReviewFormResponseDAO.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Operations for retrieving and modifying ReviewFormResponse objects.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility, Hook Dispatch)
  */
-
-import ('core.Modules.reviewForm.ReviewFormResponse');
 
 class ReviewFormResponseDAO extends DAO {
 

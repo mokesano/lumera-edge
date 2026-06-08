@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\JournalRTAdmin;
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Rtadmin;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Pages\Rtadmin;
  * @brief Handle Reading Tools administration requests.
  * [WIZDAM CLEANUP] Amputasi total fitur "Validate URLs" dan cURL usang.
  */
-
-import('app.Domain.Rt.JournalRTAdmin');
-import('app.Domain.Handler.Handler');
 
 class RTAdminHandler extends Handler {
     

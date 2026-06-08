@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\PubIdPlugin;
 /**
  * @file plugins/pubIds/urn/URNPubIdPlugin.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief URN plugin class
  */
-
-import('core.Modules.plugins.PubIdPlugin');
 
 class URNPubIdPlugin extends PubIdPlugin {
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationParser\Freecite\CoreFreeciteCitationParserPlugin;
 /**
  * @defgroup plugins_citationParser_freecite
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief FreeCite citation extraction connector plug-in.
  */
-
-import('core.Modules.plugins.citationParser.freecite.CoreFreeciteCitationParserPlugin');
 
 class FreeciteCitationParserPlugin extends CoreFreeciteCitationParserPlugin {
     

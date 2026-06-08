@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\File\TemporaryFileManager;
+namespace Lumera\Plugins\Importexport\native;
+
 /**
  * @file plugins/importexport/native/NativeImportExportPlugin.inc.php
  *
@@ -13,9 +19,6 @@ declare(strict_types=1);
  *
  * @brief Native import/export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 define('NATIVE_DTD_ID', '-//Wizdam//Wizdam Articles and Issues XML//EN');
 
@@ -157,7 +160,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
                 if ($rangeInfo->isValid()) {
                     $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
                 }
-                import('core.Kernel.VirtualArrayIterator');
+                
                 $iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
                 $templateMgr->assign('articles', $iterator);
                 $templateMgr->display($this->getTemplatePath() . 'articles.tpl');
@@ -165,7 +168,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
             case 'import':
                 AppLocale::requireComponents(LOCALE_COMPONENT_WIZDAM_EDITOR, LOCALE_COMPONENT_WIZDAM_AUTHOR);
-                import('core.Modules.file.TemporaryFileManager');
+                
                 $issueDao = DAORegistry::getDAO('IssueDAO');
                 $sectionDao = DAORegistry::getDAO('SectionDAO');
                 $user = $request->getUser();
@@ -243,7 +246,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportIssue($journal, $issue, $outputFile = null): bool {
-        $this->import('NativeExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument('issue', NATIVE_DTD_ID, $this->getDTDUrl());
         $issueNode = NativeExportDom::generateIssueDom($doc, $journal, $issue);
         XMLCustomWriter::appendChild($doc, $issueNode);
@@ -271,7 +274,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportArticle($journal, $issue, $section, $article, $outputFile = null): bool {
-        $this->import('NativeExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument('article', NATIVE_DTD_ID, $this->getDTDUrl());
         $articleNode = NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
         XMLCustomWriter::appendChild($doc, $articleNode);
@@ -297,7 +300,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportIssues($journal, array $issues, $outputFile = null): bool {
-        $this->import('NativeExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument('issues', NATIVE_DTD_ID, $this->getDTDUrl());
         $issuesNode = XMLCustomWriter::createElement($doc, 'issues');
         XMLCustomWriter::appendChild($doc, $issuesNode);
@@ -327,7 +330,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportArticles($results, $outputFile = null): bool {
-        $this->import('NativeExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument('articles', NATIVE_DTD_ID, $this->getDTDUrl());
         $articlesNode = XMLCustomWriter::createElement($doc, 'articles');
         XMLCustomWriter::appendChild($doc, $articlesNode);
@@ -393,7 +396,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
         $rootNodeName = $this->getRootNodeName($doc);
 
-        $this->import('NativeImportDom');
+        $this->
 
         switch ($rootNodeName) {
             case 'issues':
@@ -450,7 +453,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
             return;
         }
 
-        $this->import('NativeImportDom');
+        $this->
         if ($xmlFile && NativeImportDom::isRelativePath($xmlFile)) {
             $xmlFile = PWD . '/' . $xmlFile;
         }

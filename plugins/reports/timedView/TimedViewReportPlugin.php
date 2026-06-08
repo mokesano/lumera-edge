@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
 /**
  * @file plugins/reports/timedView/TimedViewReportPlugin.inc.php
  *
@@ -17,8 +18,6 @@ declare(strict_types=1);
 define('TIMED_VIEW_REPORT_YEAR_OFFSET_PAST', '-20');
 define('TIMED_VIEW_REPORT_YEAR_OFFSET_FUTURE', '+0');
 define('APP_METRIC_TYPE_TIMED_VIEWS', 'wizdam::timedViews');
-
-import('core.Modules.plugins.ReportPlugin');
 
 class TimedViewReportPlugin extends ReportPlugin {
     
@@ -54,7 +53,7 @@ class TimedViewReportPlugin extends ReportPlugin {
         $success = parent::register($category, $path, $mainContextId);
 
         if($success) {
-            $this->import('TimedViewReportForm');
+            $this->
             $this->addLocaleData();
         }
         return $success;

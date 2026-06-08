@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Wizdam\Lib\Recaptcha\Recaptchalib;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorReCaptcha.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Form validation check reCaptcha values.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorReCaptcha extends FormValidator {
     /** @var string reCaptcha challenge form field name */
@@ -69,7 +71,7 @@ class FormValidatorReCaptcha extends FormValidator {
      * @return boolean
      */
     public function isValid() {
-        import('lib.wizdam.lib.recaptcha.recaptchalib');
+        
         $privateKey = Config::getVar('captcha', 'recaptcha_private_key');
         $reCaptchaVersion = (int) Config::getVar('captcha', 'recaptcha_version', RECAPTCHA_VERSION_LEGACY);
         

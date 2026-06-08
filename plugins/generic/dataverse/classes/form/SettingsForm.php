@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Generic\Tinymce\TinyMCEPlugin;
+Lumera\Modules\Api\DataverseApiClient;
+namespace Lumera\Plugins\Generic\dataverse\classes\form;
+
 /**
  * @file plugins/generic/dataverse/classes/form/SettingsForm.inc.php
  *
@@ -14,9 +19,6 @@ declare(strict_types=1);
  * @brief Plugin settings: set data policies, define terms of use, configure workflows. 
  * [WIZDAM EDITION] Modernized for PHP 8.4 with Dependency Injection.
  */
-
-import('core.Modules.form.Form');
-import('plugins.generic.tinymce.TinyMCEPlugin');
 
 class SettingsForm extends Form {
 
@@ -205,7 +207,7 @@ class SettingsForm extends Form {
         if ($this->getData('fetchTermsOfUse') === "0") return true;
 
         // [WIZDAM FIX] Inject DataverseApiClient to fetch terms of use
-        $this->_plugin->import('core.Modules.api.DataverseApiClient');
+        $this->_plugin->
         $apiClient = new DataverseApiClient($this->_plugin);
         $dvTermsOfUse = $apiClient->getTermsOfUse($this->_journalId);
         

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\usageStats;
+
 /**
  * @file plugins/generic/usageStats/UsageStatsSettingsForm.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Form for journal managers to modify usage statistics plugin settings.
  * MODERNIZED FOR PHP 7.4+ (Fork Version)
  */
-
-import('core.Modules.form.Form');
 
 class UsageStatsSettingsForm extends Form {
 
@@ -105,7 +107,7 @@ class UsageStatsSettingsForm extends Form {
         // Make sure optional columns data makes sense.
         if (in_array(STATISTICS_DIMENSION_CITY, $optionalColumns) && !in_array(STATISTICS_DIMENSION_REGION, $optionalColumns)) {
             $user = Request::getUser();
-            import('core.Modules.notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification(
                 $user->getId(), NOTIFICATION_TYPE_WARNING, array('contents' => __('plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion'))

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Validation\HandlerValidatorPolicy;
+Lumera\Modules\Security\Authorization\RoleBasedHandlerOperationPolicy;
+namespace Lumera\Modules\handler\validation;
+
 /**
  * @file core.Modules.handler/HandlerValidatorRoles.inc.php
  *
@@ -15,9 +19,6 @@ declare(strict_types=1);
  *
  * NB: Deprecated - please use RoleBasedHandlerOperationPolicy instead.
  */
-
-import('core.Modules.handler.validation.HandlerValidatorPolicy');
-import('core.Modules.security.authorization.RoleBasedHandlerOperationPolicy');
 
 class HandlerValidatorRoles extends HandlerValidatorPolicy {
     /**

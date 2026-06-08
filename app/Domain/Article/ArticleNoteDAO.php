@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleNote;
+Lumera\Domain\Note\NoteDAO;
 namespace App\Domain\Article;
 
 /**
@@ -20,9 +22,6 @@ namespace App\Domain\Article;
  * - PHP 8.x Compatibility (Constructor, Ref removal)
  * - Strict Integer Casting
  */
-
-import('app.Domain.Article.ArticleNote');
-import('app.Domain.Note.NoteDAO');
 
 class ArticleNoteDAO extends NoteDAO {
     

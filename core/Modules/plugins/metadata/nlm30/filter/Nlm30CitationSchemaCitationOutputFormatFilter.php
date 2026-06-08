@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\TemplateBasedFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30CitationSchemaCitationOutputFormatFilter.inc.php
  *
@@ -15,9 +19,6 @@ declare(strict_types=1);
  * NLM citation metadata descriptions into citation output formats
  * via smarty template.
  */
-
-import('core.Modules.filter.TemplateBasedFilter');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
 
 // This is a brand name so doesn't have to be translated...
 define('GOOGLE_SCHOLAR_TAG', '[Google Scholar]');

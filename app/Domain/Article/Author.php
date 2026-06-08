@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\CoreAuthor;
 namespace App\Domain\Article;
 
 /**
@@ -21,8 +22,6 @@ namespace App\Domain\Article;
  * - Strict SHIM
  * - Visibility explicit
  */
-
-import('app.Domain.Submission.CoreAuthor');
 
 class Author extends CoreAuthor {
     

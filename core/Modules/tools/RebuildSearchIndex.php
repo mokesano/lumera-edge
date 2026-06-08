@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\Tools;
+
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\Search\ArticleSearchIndex;
+
 /**
  * @file core/Modules/Tools/RebuildSearchIndex.php
  *
@@ -14,10 +21,6 @@ declare(strict_types=1);
  * @brief CLI tool to rebuild the article keyword search database.
  * [WIZDAM EDITION] Modernized Search Index Tool.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.search.ArticleSearchIndex');
 
 class RebuildSearchIndex extends CommandLineTool {
 
@@ -106,7 +109,8 @@ class RebuildSearchIndex extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new RebuildSearchIndex($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new RebuildSearchIndex($argv);
+    $tool->execute();
+}

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Oai\CoreOAIDAO;
+Lumera\Domain\Issue\Issue;
 namespace App\Domain\Oai;
 
 /**
@@ -15,9 +17,6 @@ namespace App\Domain\Oai;
  *
  * [WIZDAM EDITION] REFACTOR: PHP 8.1+ Compatibility, HookRegistry::dispatch
  */
-
-import('app.Domain.Oai.CoreOAIDAO');
-import('app.Domain.Issue.Issue');
 
 class OAIDAO extends CoreOAIDAO {
 

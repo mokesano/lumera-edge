@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridRow;
+namespace Lumera\Modules\controllers\grid\citation;
+
 /**
  * @file core.Modules.controllers/grid/citation/CoreCitationGridRow.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief The citation grid row definition
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-
-import('core.Modules.controllers.grid.GridRow');
 
 class CoreCitationGridRow extends GridRow {
     /** @var int */
@@ -43,7 +44,6 @@ class CoreCitationGridRow extends GridRow {
         }
         self::__construct();
     }
-
 
     //
     // Getters and Setters
@@ -80,7 +80,6 @@ class CoreCitationGridRow extends GridRow {
     public function getIsCurrentItem(): bool {
         return $this->isCurrentItem;
     }
-
 
     //
     // Overridden methods from GridRow

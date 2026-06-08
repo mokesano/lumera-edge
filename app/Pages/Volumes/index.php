@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Volumes\VolumesHandler;
 namespace App\Pages\Volumes;
 
 /**
@@ -27,6 +28,6 @@ switch ($op) {
     case 'view':
     case 'year':
         define('HANDLER_CLASS', \App\Pages\Volumes\VolumesHandler::class);
-        import('app.Pages.Volumes.VolumesHandler');
+        
         break;
 }

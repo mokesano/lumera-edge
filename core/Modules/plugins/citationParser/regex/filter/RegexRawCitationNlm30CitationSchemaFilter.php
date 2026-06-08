@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+namespace Lumera\Modules\plugins\citationParser\regex\filter;
+
 /**
  * @defgroup plugins_citationParser_regex_filter
  */
@@ -28,8 +31,6 @@ declare(strict_types=1);
  * - Removed reference operators
  * - Short Array Syntax
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
 
 class RegexRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
     

@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\PubObjectCache;
+Lumera\Modules\DOAJExportDom;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Importexport\doaj;
+
 /**
  * @file plugins/importexport/doaj/DOAJPlugin.inc.php
  *
@@ -13,9 +22,6 @@ declare(strict_types=1);
  *
  * @brief DOAJ import/export plugin
  */
-
-import('core.Modules.xml.XMLCustomWriter');
-import('core.Modules.plugins.ImportExportPlugin');
 
 // Export types.
 define('DOAJ_EXPORT_ISSUES', 0x01);
@@ -57,7 +63,7 @@ class DOAJPlugin extends ImportExportPlugin {
         if (!$this->_cache instanceof PubObjectCache) {
             // Instantiate the cache.
             if (!class_exists('PubObjectCache')) { // Bug #7848
-                $this->import('core.Modules.PubObjectCache');
+                $this->
             }
             $this->_cache = new PubObjectCache();
         }
@@ -148,7 +154,7 @@ class DOAJPlugin extends ImportExportPlugin {
      * @return bool
      */
     protected function _exportJournal($journal, $selectedObjects, $outputFile = null): bool {
-        $this->import('core.Modules.DOAJExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument();
 
         $journalNode = DOAJExportDom::generateJournalDom($doc, $journal, $selectedObjects);
@@ -255,7 +261,7 @@ class DOAJPlugin extends ImportExportPlugin {
         unset($issueIterator);
 
         // Instantiate issue iterator.
-        import('core.Kernel.ArrayItemIterator');
+        
         $rangeInfo = Handler::getRangeInfo('issues');
         $iterator = new ArrayItemIterator($issues, $rangeInfo->getPage(), $rangeInfo->getCount());
 
@@ -294,7 +300,7 @@ class DOAJPlugin extends ImportExportPlugin {
             $paginatedArticles = array_slice($articles, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
             
             // Instantiate article iterator.
-            import('core.Kernel.VirtualArrayIterator');
+            
             $iterator = new VirtualArrayIterator($paginatedArticles, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
             // Prepare and display the article template.
@@ -487,7 +493,7 @@ class DOAJPlugin extends ImportExportPlugin {
         static $notificationManager = null;
 
         if (is_null($notificationManager)) {
-            import('core.Modules.notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
         }
 

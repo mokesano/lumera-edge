@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+namespace Lumera\Modules\plugins\citationParser\parscit\filter;
+
 /**
  * @defgroup plugins_citationParser_parscit_filter
  */
@@ -23,8 +26,6 @@ declare(strict_types=1);
  * - Removed reference operators
  * - Explicit Type Hints
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
 
 if (!defined('PARSCIT_WEBSERVICE')) {
     define('PARSCIT_WEBSERVICE', 'http://aye.comp.nus.edu.sg/parsCit/parsCit.cgi');

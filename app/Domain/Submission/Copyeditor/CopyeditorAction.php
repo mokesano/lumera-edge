@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Article\Log\ArticleEventLogEntry;
+Lumera\Domain\Submission\Form\Comment\LayoutCommentForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Submission\Form\Comment\CopyeditCommentForm;
 namespace App\Domain\Submission\Copyeditor;
 
 /**
@@ -18,8 +26,6 @@ namespace App\Domain\Submission\Copyeditor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.common.Action');
 
 class CopyeditorAction extends Action {
 
@@ -70,7 +76,7 @@ class CopyeditorAction extends Action {
         }
 
         $user = $request->getUser();
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 
         $editAssignments = $copyeditorSubmission->getEditAssignments();
@@ -94,7 +100,7 @@ class CopyeditorAction extends Action {
             $signoffDao->updateObject($authorSignoff);
 
             // Add log entry
-            import('app.Domain.Article.log.ArticleLog');
+            
             ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', ['copyeditorName' => $user->getFullName()]);
 
             return true;
@@ -141,7 +147,7 @@ class CopyeditorAction extends Action {
         }
 
         $user = $request->getUser();
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $email = new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 
         $editAssignments = $copyeditorSubmission->getEditAssignments();
@@ -162,7 +168,7 @@ class CopyeditorAction extends Action {
                 $layoutSignoff = $signoffDao->build('SIGNOFF_LAYOUT', ASSOC_TYPE_ARTICLE, $copyeditorSubmission->getId());
 
                 if (!$layoutSignoff->getFileId()) {
-                    import('app.Domain.File.ArticleFileManager');
+                    
                     $articleFileManager = new ArticleFileManager($copyeditorSubmission->getId());
                     if ($layoutFileId = $articleFileManager->copyToLayoutFile($copyEdFile->getFileId(), $copyEdFile->getRevision())) {
                         $layoutSignoff->setFileId($layoutFileId);
@@ -172,8 +178,8 @@ class CopyeditorAction extends Action {
             }
 
             // Add log entry
-            import('app.Domain.Article.log.ArticleLog');
-            import('app.Domain.Article.log.ArticleEventLogEntry');
+            
+            
             ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', ['copyeditorName' => $user->getFullName()]);
 
             return true;
@@ -238,7 +244,7 @@ class CopyeditorAction extends Action {
             if ($update) {
                 // Add log entry
                 $user = $request->getUser();
-                import('app.Domain.Article.log.ArticleLog');
+                
                 ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', ['copyeditorName' => $user->getFullName()]);
             }
         }
@@ -254,7 +260,7 @@ class CopyeditorAction extends Action {
         // [WIZDAM] Strict Type Guard
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
         $copyeditorSubmissionDao = DAORegistry::getDAO('CopyeditorSubmissionDAO');
         $signoffDao = DAORegistry::getDAO('SignoffDAO');
@@ -294,7 +300,7 @@ class CopyeditorAction extends Action {
             $signoffDao->updateObject($signoff);
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            
             ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_COPYEDITOR_FILE, 'log.copyedit.copyeditorFile', ['copyeditorName' => $user->getFullName(), 'fileId' => $fileId]);
         }
     }
@@ -310,7 +316,7 @@ class CopyeditorAction extends Action {
     public static function viewLayoutComments($article) {
         // [WIZDAM] HookRegistry::dispatch
         if (!HookRegistry::dispatch('CopyeditorAction::viewLayoutComments', [&$article])) {
-            import('app.Domain.Submission.form.comment.LayoutCommentForm');
+            
 
             $commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
             $commentForm->initData();
@@ -330,7 +336,7 @@ class CopyeditorAction extends Action {
 
         // [WIZDAM] HookRegistry::dispatch
         if (!HookRegistry::dispatch('CopyeditorAction::postLayoutComment', [&$article, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.LayoutCommentForm');
+            
 
             $commentForm = new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
             $commentForm->readInputData();
@@ -339,7 +345,7 @@ class CopyeditorAction extends Action {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(true, false);
                 foreach ($notificationUsers as $userRole) {
@@ -368,7 +374,7 @@ class CopyeditorAction extends Action {
     public static function viewCopyeditComments($article) {
         // [WIZDAM] HookRegistry::dispatch
         if (!HookRegistry::dispatch('CopyeditorAction::viewCopyeditComments', [&$article])) {
-            import('app.Domain.Submission.form.comment.CopyeditCommentForm');
+            
 
             $commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
             $commentForm->initData();
@@ -388,7 +394,7 @@ class CopyeditorAction extends Action {
 
         // [WIZDAM] HookRegistry::dispatch
         if (!HookRegistry::dispatch('CopyeditorAction::postCopyeditComment', [&$article, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.CopyeditCommentForm');
+            
 
             $commentForm = new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
             $commentForm->readInputData();
@@ -397,7 +403,7 @@ class CopyeditorAction extends Action {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(true, false);
                 foreach ($notificationUsers as $userRole) {

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\RedirectAction;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/PostAndRedirectAction.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * to detailed description.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.RedirectAction');
 
 class PostAndRedirectAction extends RedirectAction {
 
@@ -56,7 +57,6 @@ class PostAndRedirectAction extends RedirectAction {
     public function getPostUrl(): string {
         return $this->_postUrl;
     }
-
 
     //
     // Overridden protected methods from LinkActionRequest

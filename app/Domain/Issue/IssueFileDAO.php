@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\CoreFileDAO;
+Lumera\Domain\Issue\IssueFile;
 namespace App\Domain\Issue;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Domain\Issue;
  *
  * @brief Operations for retrieving and modifying IssueFile objects.
  */
-
-import('app.Domain.File.CoreFileDAO');
-import('app.Domain.Issue.IssueFile');
 
 class IssueFileDAO extends CoreFileDAO {
 

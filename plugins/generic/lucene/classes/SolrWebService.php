@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Webservice\WebServiceRequest;
+Lumera\Modules\Webservice\XmlWebService;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Generic\Lucene\Classes\SolrSearchRequest;
+Lumera\Modules\Search\ArticleSearch;
+Lumera\Modules\Db\DBResultRange;
+Lumera\Modules\Issue\IssueAction;
+namespace Lumera\Plugins\Generic\lucene\classes;
+
 /**
  * @file plugins/generic/lucene/classes/SolrWebService.inc.php
  *
@@ -38,13 +47,6 @@ define('SOLR_AUTOSUGGEST_FACETING', 0x02);
 // be indexed in a single batch.
 define('SOLR_INDEXING_MAX_BATCHSIZE', 200);
 
-
-import('core.Modules.webservice.WebServiceRequest');
-import('core.Modules.webservice.XmlWebService');
-import('core.Modules.xml.XMLCustomWriter');
-import('plugins.generic.lucene.classes.SolrSearchRequest');
-import('core.Modules.search.ArticleSearch');
-
 class SolrWebService extends XmlWebService {
 
 	/** @var string The solr search handler name we place our searches on. */
@@ -73,7 +75,6 @@ class SolrWebService extends XmlWebService {
 
 	/** @var boolean Whether the proxy settings in the config.inc.php should be considered for the web service request. */
 	private $_useProxySettings = false;
-
 
 	/**
 	 * Constructor
@@ -125,7 +126,6 @@ class SolrWebService extends XmlWebService {
         call_user_func_array(array($this, '__construct'), $args);
 	}
 
-
 	//
 	// Getters and Setters
 	//
@@ -136,7 +136,6 @@ class SolrWebService extends XmlWebService {
 	public function getServiceMessage() {
 		return (string)$this->_serviceMessage;
 	}
-
 
 	/**
 	 * Retrieve a journal (possibly from the cache).
@@ -172,7 +171,6 @@ class SolrWebService extends XmlWebService {
 
 		return $issue;
 	}
-
 
 	//
 	// Public API
@@ -722,7 +720,6 @@ class SolrWebService extends XmlWebService {
 		return SOLR_STATUS_ONLINE;
 	}
 
-
 	//
 	// Field cache implementation
 	//
@@ -846,7 +843,6 @@ class SolrWebService extends XmlWebService {
 		return $this->_fieldCache;
 	}
 
-
 	//
 	// Private helper methods
 	//
@@ -901,7 +897,6 @@ class SolrWebService extends XmlWebService {
 		}
 		return $autosuggestUrl;
 	}
-
 
 	/**
 	 * Returns the solr endpoint to retrieve
@@ -1134,7 +1129,7 @@ class SolrWebService extends XmlWebService {
 	 */
 	private function _indexingTransaction($sendXmlCallback, $batchSize = SOLR_INDEXING_MAX_BATCHSIZE, $journalId = null) {
 		// Retrieve a batch of "changed" articles.
-		import('core.Modules.db.DBResultRange');
+		
 		$range = new DBResultRange($batchSize);
 		$articleDao = DAORegistry::getDAO('ArticleDAO'); /* @var $articleDao ArticleDAO */
 		$changedArticlesIterator = $articleDao->getBySetting(
@@ -1997,7 +1992,7 @@ class SolrWebService extends XmlWebService {
 		if (!$issue->getPublished() || $article->getStatus() != STATUS_PUBLISHED) return false;
 
 		// Make sure the requesting party is authorized to acces the article/issue.
-		import('core.Modules.issue.IssueAction');
+		
 		$subscriptionRequired = IssueAction::subscriptionRequired($issue, $journal);
 		if ($subscriptionRequired) {
 			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getId(), $article->getId());

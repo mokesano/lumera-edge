@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Core\Application;
 /**
  * @defgroup index
  */
@@ -55,7 +56,6 @@ require(BASE_SYS_DIR . '/core/Includes/functions.php');
 
 // Initialize the application environment
 // [WIZDAM] We use the import function to load the core Application class.
-import('app.Domain.core.Application');
 
 // [WIZDAM MODERNISASI PSR-4] Use fully qualified class bootstrap
 // Since Application is now in namespace App\Domain\Core, we must reference it properly.

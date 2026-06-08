@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EventLogEntry;
+namespace Lumera\Modules\log;
+
 /**
  * @file core.Modules.log/EventLogDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Class for inserting/accessing event log entries.
  */
-
-import ('core.Modules.log.EventLogEntry');
 
 class EventLogDAO extends DAO {
     

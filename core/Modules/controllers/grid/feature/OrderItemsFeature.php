@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\GridFeature;
+Lumera\Modules\LinkAction\Request\NullAction;
+namespace Lumera\Modules\controllers\grid\feature;
+
 /**
  * @file core.Modules.controllers/grid/feature/OrderItemsFeature.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Base class for grid widgets ordering functionality.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.feature.GridFeature');
 
 class OrderItemsFeature extends GridFeature {
 
@@ -43,7 +45,6 @@ class OrderItemsFeature extends GridFeature {
         }
         self::__construct($overrideRowTemplate);
     }
-
 
     //
     // Getters and setters.
@@ -74,7 +75,6 @@ class OrderItemsFeature extends GridFeature {
         }
     }
 
-
     //
     // Extended methods from GridFeature.
     //
@@ -90,7 +90,6 @@ class OrderItemsFeature extends GridFeature {
             'saveItemsSequenceUrl' => $router->url($request, null, null, 'saveSequence', null, $grid->getRequestArgs())
         ]);
     }
-
 
     //
     // Hooks implementation.
@@ -113,7 +112,7 @@ class OrderItemsFeature extends GridFeature {
         $grid = $args['grid'];
 
         if ($this->isOrderActionNecessary()) {
-            import('core.Modules.linkAction.request.NullAction');
+            
             $grid->addAction(
                 new LinkAction(
                     'orderItems',
@@ -137,7 +136,6 @@ class OrderItemsFeature extends GridFeature {
         return [];
     }
 
-
     //
     // Protected methods.
     //
@@ -151,7 +149,7 @@ class OrderItemsFeature extends GridFeature {
             $row->setTemplate('controllers/grid/gridRow.tpl');
         }
 
-        import('core.Modules.linkAction.request.NullAction');
+        
         $row->addAction(
             new LinkAction(
                 'moveItem',

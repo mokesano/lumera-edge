@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+namespace Lumera\Modules\metadata;
+
 /**
  * @file core.Modules.metadata/CrosswalkFilter.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  * class that must be sub-classed by specific cross-walk
  * implementations.
  */
-
-import('core.Modules.filter.Filter');
 
 class CrosswalkFilter extends Filter {
     

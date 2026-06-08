@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Author\Form\Submit\AuthorSubmitForm;
+Lumera\Modules\Validation\ValidatorORCID;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,8 +18,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Form for Step 3 of author article submission.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Author.form.submit.AuthorSubmitForm');
 
 class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
@@ -59,7 +59,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
         ));
 
         // Add ORCiD validation
-        import('core.Modules.validation.ValidatorORCID');
+        
         // [WIZDAM] Replaced create_function with Closure
         $this->addCheck(new FormValidatorArrayCustom(
             $this, 'authors', 'required', 'user.profile.form.orcidInvalid',

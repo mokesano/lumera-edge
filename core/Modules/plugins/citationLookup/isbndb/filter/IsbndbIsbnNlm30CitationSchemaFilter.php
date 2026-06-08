@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationLookup\Isbndb\Filter\IsbndbNlm30CitationSchemaFilter;
+namespace Lumera\Modules\plugins\citationLookup\isbndb\filter;
+
 /**
  * @file plugins/citationLookup/isbndb/filter/IsbndbIsbnNlm30CitationSchemaFilter.inc.php
  *
@@ -19,8 +22,6 @@ declare(strict_types=1);
  * - Removed obsolete reference operators (&)
  * - Modernized directory handling (__DIR__)
  */
-
-import('core.Modules.plugins.citationLookup.isbndb.filter.IsbndbNlm30CitationSchemaFilter');
 
 class IsbndbIsbnNlm30CitationSchemaFilter extends IsbndbNlm30CitationSchemaFilter {
     

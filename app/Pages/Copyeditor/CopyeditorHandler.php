@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Copyeditor\CopyeditorAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
 namespace App\Pages\Copyeditor;
 
 /**
@@ -15,9 +20,6 @@ namespace App\Pages\Copyeditor;
  *
  * @brief Handle requests for copyeditor functions.
  */
-
-import('app.Domain.Submission.Copyeditor.CopyeditorAction');
-import('app.Domain.Handler.Handler');
 
 class CopyeditorHandler extends Handler {
     
@@ -152,7 +154,7 @@ class CopyeditorHandler extends Handler {
             SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
         ]);
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         // Note: register_function is legacy Smarty. Consider update if upgrading Smarty.
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
@@ -180,7 +182,7 @@ class CopyeditorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'copyeditor'), 'user.role.copyeditor']]
                 : [['user', 'navigation.user'], ['copyeditor', 'user.role.copyeditor']];
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -195,7 +197,7 @@ class CopyeditorHandler extends Handler {
      */
     public function instructions($args, $request) {
         $this->setupTemplate();
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
         if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], ['copy'])) {
             $request->redirect(null, $request->getRequestedPage());
         }

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+namespace Lumera\Plugins\Generic\usageStats;
+
 /**
  * @file plugins/generic/usageStats/UsageStatsHandler.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Handle usage stats page requests (opt-out, privacy information)
  */
-
-import('core.Modules.handler.Handler');
 
 class UsageStatsHandler extends Handler {
 

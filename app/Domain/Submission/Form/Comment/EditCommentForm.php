@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Mail\ArticleMailTemplate;
 namespace App\Domain\Submission\Form\Comment;
-
 
 /**
  * @file app/Domain/Submission/Form/Comment/EditCommentForm.php
@@ -18,8 +19,6 @@ namespace App\Domain\Submission\Form\Comment;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class EditCommentForm extends Form {
 
@@ -318,7 +317,7 @@ class EditCommentForm extends Form {
      * @param object $request CoreRequest
      */
     public function email($recipients, $request) {
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $email = new ArticleMailTemplate($this->article, 'SUBMISSION_COMMENT');
         $journal = $request->getJournal();
         if ($journal) $email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));

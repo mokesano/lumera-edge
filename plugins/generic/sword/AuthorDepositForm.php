@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Sword\AppSwordDeposit;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Generic\sword;
+
 /**
  * @file plugins/generic/sword/AuthorDepositForm.inc.php
  *
@@ -15,8 +20,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.form.Form');
 
 class AuthorDepositForm extends Form {
     
@@ -103,13 +106,13 @@ class AuthorDepositForm extends Form {
      */
     public function execute($object = null) {
         $user = $request->getUser();
-        import('core.Modules.sword.AppSwordDeposit');
+        
         $deposit = new AppSwordDeposit($this->article);
         $deposit->setMetadata();
         $deposit->addEditorial();
         $deposit->createPackage();
 
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         $allowAuthorSpecify = $this->swordPlugin->getSetting($this->article->getJournalId(), 'allowAuthorSpecify');
@@ -158,7 +161,7 @@ class AuthorDepositForm extends Form {
      * @return array
      */
     public function _getDepositableDepositPoints() {
-        import('core.Modules.sword.AppSwordDeposit');
+        
         $depositPoints = $this->swordPlugin->getSetting($this->article->getJournalId(), 'depositPoints');
         
         if (!is_array($depositPoints)) return [];

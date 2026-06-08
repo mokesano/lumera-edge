@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\Plugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Plugins;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Signature Fixes
  */
-
-import('app.Domain.Plugins.Plugin');
 
 class PaymethodPlugin extends Plugin {
     

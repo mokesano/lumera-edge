@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Wizdam\Statistics\JournalStatsDAO;
 namespace App\Services\Statistics;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Services\Statistics;
  * @brief Service Layer untuk Kalkulasi dan Payload Statistik [WIZDAM EDITION]
  * @version 2.0 (Strict MVC & Micro-Payloads Compliant)
  */
-
-import('lib.wizdam.statistics.JournalStatsDAO');
 
 class StatsManager {
 

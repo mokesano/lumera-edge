@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\usageEvent;
+
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Provide usage event to other statistics plugins.
  * * REFACTORED: Wizdam Edition (HookRegistry::dispatch + instanceof modernization)
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 // Our own and OA-S classification types.
 define('USAGE_EVENT_PLUGIN_CLASSIFICATION_BOT', 'bot');
@@ -98,7 +99,6 @@ class UsageEventPlugin extends GenericPlugin {
         return [];
     }
 
-
     //
     // Public methods.
     //
@@ -109,7 +109,6 @@ class UsageEventPlugin extends GenericPlugin {
     public function getUniqueSiteId() {
         return $this->getSetting(0, 'uniqueSiteId');
     }
-
 
     //
     // Hook implementations.
@@ -133,7 +132,6 @@ class UsageEventPlugin extends GenericPlugin {
         }
         return false;
     }
-
 
     //
     // Private helper methods.

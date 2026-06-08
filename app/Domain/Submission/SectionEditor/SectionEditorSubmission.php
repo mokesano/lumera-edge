@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
 namespace App\Domain\Submission\SectionEditor;
-
 
 /**
  * @file app/Domain/Submission/SectionEditor/SectionEditorSubmission.php
@@ -19,8 +19,6 @@ namespace App\Domain\Submission\SectionEditor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.Article');
 
 class SectionEditorSubmission extends Article {
 

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\Tools;
+
+use Lumera\Modules\CliTool\InstallTool;
+
 /**
  * @file core/Modules/tools/install.php
  *
@@ -13,10 +17,6 @@ declare(strict_types=1);
  * @brief CLI tool for installing Lumera Edge.
  * [LUMERA EDGE EDITION] Modernized CLI Installer Child.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.CliTool.InstallTool');
 
 class AppInstallTool extends InstallTool {
     /**
@@ -62,8 +62,10 @@ class AppInstallTool extends InstallTool {
     }
 }
 
-// [LUMERA EDGE] Safe instantiation
-$tool = new AppInstallTool($argv ?? []);
-$tool->execute();
-
-?>
+// [LUMERA EDGE] Safe instantiation - Only run when executed directly as CLI script
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    // CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new AppInstallTool($argv);
+    $tool->execute();
+}

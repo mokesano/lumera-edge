@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationLookup\Worldcat\CoreWorldcatCitationLookupPlugin;
 /**
  * @defgroup plugins_citationLookup_worldcat
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief WorldCat citation database connector plug-in.
  */
-
-import('core.Modules.plugins.citationLookup.worldcat.CoreWorldcatCitationLookupPlugin');
 
 class WorldcatCitationLookupPlugin extends CoreWorldcatCitationLookupPlugin {
     

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridDataProvider;
+namespace Lumera\Modules\controllers\grid;
+
 /**
  * @file core.Modules.controllers/grid/CategoryGridDataProvider.inc.php
  *
@@ -17,7 +20,6 @@ declare(strict_types=1);
  */
 
 // Import base class.
-import('core.Modules.controllers.grid.GridDataProvider');
 
 class CategoryGridDataProvider extends GridDataProvider {
 
@@ -77,7 +79,6 @@ class CategoryGridDataProvider extends GridDataProvider {
         $this->dataProvider = $dataProvider;
     }
 
-
     //
     // Overriden methods from GridDataProvider
     //
@@ -96,7 +97,6 @@ class CategoryGridDataProvider extends GridDataProvider {
 
         parent::setAuthorizedContext($authorizedContext);
     }
-
 
     //
     // Template methods to be implemented by subclasses

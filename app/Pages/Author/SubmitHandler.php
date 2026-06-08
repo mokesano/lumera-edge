@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Author\AuthorHandler;
+Lumera\Modules\Author\Form\Submit$formClass;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Author\Form\Submit\AuthorSubmitSuppFileForm;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Submission\Editor\EditorAction;
 namespace App\Pages\Author;
 
 /**
@@ -15,8 +21,6 @@ namespace App\Pages\Author;
  *
  * @brief Handle requests for author article submission.
  */
-
-import('app.Pages.author.AuthorHandler');
 
 class SubmitHandler extends AuthorHandler {
     
@@ -78,7 +82,7 @@ class SubmitHandler extends AuthorHandler {
         $this->setupTemplate($request, true);
 
         $formClass = "AuthorSubmitStep{$step}Form";
-        import("core.Modules.author.form.submit.$formClass");
+        
 
         $submitForm = new $formClass($article, $journal, $request);
         if ($submitForm->isLocaleResubmit()) {
@@ -104,7 +108,7 @@ class SubmitHandler extends AuthorHandler {
         $article = $this->article;
 
         $formClass = "AuthorSubmitStep{$step}Form";
-        import("core.Modules.author.form.submit.$formClass");
+        
 
         $submitForm = new $formClass($article, $journal, $request);
         $submitForm->readInputData();
@@ -196,7 +200,7 @@ class SubmitHandler extends AuthorHandler {
 
                 if ($step == 5) {
                     // Send a notification to associated users
-                    import('app.Domain.Notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $articleDao = DAORegistry::getDAO('ArticleDAO');
                     $article = $articleDao->getArticle($articleId);
@@ -245,7 +249,7 @@ class SubmitHandler extends AuthorHandler {
         $article = $this->article;
         $this->setupTemplate($request, true);
 
-        import('app.Domain.Author.form.submit.AuthorSubmitSuppFileForm');
+        
         $submitForm = new AuthorSubmitSuppFileForm($article, $journal);
         $submitForm->setData('title', [$article->getLocale() => __('common.untitled')]);
         $suppFileId = $submitForm->execute();
@@ -267,7 +271,7 @@ class SubmitHandler extends AuthorHandler {
         $article = $this->article;
         $this->setupTemplate($request, true);
 
-        import('app.Domain.Author.form.submit.AuthorSubmitSuppFileForm');
+        
         $submitForm = new AuthorSubmitSuppFileForm($article, $journal, $suppFileId);
 
         if ($submitForm->isLocaleResubmit()) {
@@ -292,7 +296,7 @@ class SubmitHandler extends AuthorHandler {
         $article = $this->article;
         $this->setupTemplate($request, true);
 
-        import('app.Domain.Author.form.submit.AuthorSubmitSuppFileForm');
+        
         $submitForm = new AuthorSubmitSuppFileForm($article, $journal, $suppFileId);
         $submitForm->readInputData();
 
@@ -310,7 +314,7 @@ class SubmitHandler extends AuthorHandler {
      * @param CoreRequest $request
      */
     public function deleteSubmitSuppFile($args, $request) {
-        import('app.Domain.File.ArticleFileManager');
+        
 
         $articleId = (int) $request->getUserVar('articleId');
         $suppFileId = (int) array_shift($args);
@@ -345,7 +349,7 @@ class SubmitHandler extends AuthorHandler {
 
         // The author must also be an editor to perform this task.
         if (Validation::isEditor($journal->getId()) && $article->getSubmissionFileId()) {
-            import('app.Domain.Submission.editor.EditorAction');
+            
             EditorAction::expediteSubmission($article, $request);
             $request->redirect(null, 'editor', 'submissionEditing', [$article->getId()]);
         }

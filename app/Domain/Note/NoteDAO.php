@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Note\CoreNoteDAO;
+Lumera\Domain\Note\Note;
 namespace App\Domain\Note;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Note;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Note.CoreNoteDAO');
-import('app.Domain.Note.Note');
 
 class NoteDAO extends CoreNoteDAO {
     /** @var ArticleFileDAO */

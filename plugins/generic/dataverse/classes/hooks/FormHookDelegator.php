@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\File\ArticleFileManager;
+Lumera\Modules\DataverseFile;
+namespace Lumera\Plugins\Generic\dataverse\classes\hooks;
+
 /**
  * @file plugins/generic/dataverse/classes/hooks/FormHookDelegator.inc.php
  * 
@@ -59,7 +64,7 @@ class FormHookDelegator {
             $metadataReplaced = $this->studyService->replaceStudyMetadata($form->article, $study, $journal);
             
             $user = Registry::get('request')->getUser();
-            import('core.Modules.notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId(), $metadataReplaced ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
         }
@@ -128,7 +133,7 @@ class FormHookDelegator {
         if ($publishData == 'dataverse') {
             if ($form->suppFile && $form->suppFile->getFileId()) return true;
             
-            import('core.Modules.file.ArticleFileManager');
+            
             $articleId = isset($form->article) ? $form->article->getId() : $form->articleId;
             $articleFileManager = new ArticleFileManager($articleId);
             if (!$articleFileManager->uploadedFileExists('uploadSuppFile')) return false;
@@ -204,7 +209,7 @@ class FormHookDelegator {
                 break;
             case 'dataverse':
                 if (!isset($dvFile)) {
-                    $this->plugin->import('core.Modules.DataverseFile');
+                    $this->plugin->
                     $dvFile = new DataverseFile();
                     $dvFile->setSuppFileId($form->suppFile->getId());
                     $dvFile->setSubmissionId($form->articleId);
@@ -225,7 +230,7 @@ class FormHookDelegator {
         $article = $form->article;
         $journal = Registry::get('request')->getJournal();
         
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = Registry::get('request')->getUser();
 
@@ -270,7 +275,7 @@ class FormHookDelegator {
                     $this->studyService->replaceStudyMetadata($article, $study, $journal);
                     $notificationManager->createTrivialNotification($user->getId(), $deposited ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED: NOTIFICATION_TYPE_DATAVERSE_ERROR);
                 } else {
-                    import('core.Modules.file.ArticleFileManager');
+                    
                     $fileName = 'uploadSuppFile';
                     $articleFileManager = new ArticleFileManager($article->getId());
                     if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -346,7 +351,7 @@ class FormHookDelegator {
             }
             
             $user = Registry::get('request')->getUser();
-            import('core.Modules.notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId(), $fileDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_UPDATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
         }
@@ -396,7 +401,7 @@ class FormHookDelegator {
                     }
                     $this->studyService->depositFiles($study, $suppFiles, $journal->getId());
                 }
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();               
                 $user = Registry::get('request')->getUser();
                 $notificationManager->createTrivialNotification($user->getId(), isset($study) ? NOTIFICATION_TYPE_DATAVERSE_STUDY_CREATED : NOTIFICATION_TYPE_DATAVERSE_ERROR);

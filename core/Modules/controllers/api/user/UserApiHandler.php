@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\CoreHandler;
+Lumera\Kernel\JSONMessage;
+Lumera\Modules\Security\Authorization\CoreSiteAccessPolicy;
+namespace Lumera\Modules\controllers\api\user;
+
 /**
  * @defgroup controllers_api_user
  */
@@ -20,10 +25,8 @@ declare(strict_types=1);
  */
 
 // import the base Handler
-import('core.Modules.handler.CoreHandler');
 
 // import JSON class for API responses
-import('core.Kernel.JSONMessage');
 
 class UserApiHandler extends CoreHandler {
     
@@ -47,7 +50,6 @@ class UserApiHandler extends CoreHandler {
         self::__construct();
     }
 
-
     //
     // Implement template methods from CoreHandler
     //
@@ -58,7 +60,7 @@ class UserApiHandler extends CoreHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('core.Modules.security.authorization.CoreSiteAccessPolicy');
+        
         $this->addPolicy(new CoreSiteAccessPolicy(
             $request,
             ['updateUserMessageState'],
@@ -66,7 +68,6 @@ class UserApiHandler extends CoreHandler {
         ));
         return parent::authorize($request, $args, $roleAssignments);
     }
-
 
     //
     // Public handler methods

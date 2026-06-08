@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Plugins\Generic\referral;
+
 /**
  * @file plugins/generic/referral/ReferralForm.inc.php
  *
@@ -16,8 +19,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.form.Form');
 
 class ReferralForm extends Form {
     

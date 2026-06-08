@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DBDataXMLParser;
+Lumera\Modules\Db\DBConnection;
 namespace Lumera\Modules\CliTool;
 
 /**
@@ -17,9 +19,7 @@ namespace Lumera\Modules\CliTool;
  * [WIZDAM EDITION] Modernized CLI Tool Base Class.
  */
 
-
-import('core.Modules.db.DBDataXMLParser');
-import('core.Modules.db.DBConnection'); // [WIZDAM] Explicitly import DBConnection
+ // [WIZDAM] Explicitly import DBConnection
 
 class XmlToSqlTool extends CommandLineTool {
 

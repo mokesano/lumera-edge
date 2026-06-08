@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\ReviewObjectMetadata;
+namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
+
 /**
  * @file plugins/generic/objectsForReview/classes/form/ReviewObjectMetadataForm.inc.php
  *
@@ -15,8 +19,6 @@ declare(strict_types=1);
  * @brief Form for creating and modifying review object metadata.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.form.Form');
 
 class ReviewObjectMetadataForm extends Form {
 
@@ -44,7 +46,7 @@ class ReviewObjectMetadataForm extends Form {
         $journal = Request::getJournal();
         $journalId = $journal->getId();
 
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+        $ofrPlugin->
         $reviewObjectMetadataDao = DAORegistry::getDAO('ReviewObjectMetadataDAO');
         
         if (!empty($metadataId)) {
@@ -93,7 +95,7 @@ class ReviewObjectMetadataForm extends Form {
         $templateMgr->assign('reviewObjectTypeId', $this->reviewObjectTypeId);
 
         $ofrPlugin = PluginRegistry::getPlugin('generic', OBJECTS_FOR_REVIEW_PLUGIN_NAME);
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+        $ofrPlugin->
         $templateMgr->assign('multipleOptionsTypes', ReviewObjectMetadata::getMultipleOptionsTypes());
         // in order to be able to search for an element in the array in the javascript function 'togglePossibleResponses':
         $templateMgr->assign('multipleOptionsTypesString', ';'.implode(';', ReviewObjectMetadata::getMultipleOptionsTypes()).';');
@@ -135,7 +137,7 @@ class ReviewObjectMetadataForm extends Form {
         $journal = Request::getJournal();
         $journalId = $journal->getId();
 
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+        $ofrPlugin->
         $reviewObjectMetadataDao = DAORegistry::getDAO('ReviewObjectMetadataDAO');
         
         if ($this->reviewObjectMetadata == null) {

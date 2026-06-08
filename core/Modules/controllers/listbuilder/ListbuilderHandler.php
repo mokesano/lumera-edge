@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridHandler;
+Lumera\Modules\Controllers\Listbuilder\ListbuilderGridRow;
+Lumera\Modules\Controllers\Listbuilder\ListbuilderGridColumn;
+Lumera\Modules\Controllers\Listbuilder\MultilingualListbuilderGridColumn;
+Lumera\Modules\LinkAction\Request\NullAction;
+Lumera\Kernel\JSONManager;
+namespace Lumera\Modules\controllers\listbuilder;
+
 /**
  * @file core.Modules.controllers/listbuilder/ListbuilderHandler.inc.php
  *
@@ -14,11 +22,6 @@ declare(strict_types=1);
  * @brief Class defining basic operations for handling Listbuilder UI elements
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.GridHandler');
-import('core.Modules.controllers.listbuilder.ListbuilderGridRow');
-import('core.Modules.controllers.listbuilder.ListbuilderGridColumn');
-import('core.Modules.controllers.listbuilder.MultilingualListbuilderGridColumn');
 
 /* Listbuilder source types: text-based, pulldown, ... */
 define_exposed('LISTBUILDER_SOURCE_TYPE_TEXT', 0);
@@ -70,7 +73,7 @@ class ListbuilderHandler extends GridHandler {
         parent::initialize($request);
 
         if ($addItemLink) {
-            import('core.Modules.linkAction.request.NullAction');
+            
             $this->addAction(
                 new LinkAction(
                     'addItem',
@@ -227,7 +230,7 @@ class ListbuilderHandler extends GridHandler {
         if (!$insertionCallback) $insertionCallback = [$this, 'insertEntry'];
         if (!$updateCallback) $updateCallback = [$this, 'updateEntry'];
 
-        import('core.Kernel.JSONManager');
+        
         $jsonManager = new JSONManager();
         
         // [WIZDAM] Critical Fix: Treat data as string for decoding.
@@ -317,7 +320,6 @@ class ListbuilderHandler extends GridHandler {
         
         return new JSONMessage(true);
     }
-
 
     /**
      * Load the set of options for a select list type listbuilder.

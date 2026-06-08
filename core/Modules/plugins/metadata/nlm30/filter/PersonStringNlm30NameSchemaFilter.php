@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30PersonStringFilter;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @file plugins/metadata/nlm30/filter/PersonStringNlm30NameSchemaFilter.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Reference Fixes
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30PersonStringFilter');
 
 class PersonStringNlm30NameSchemaFilter extends Nlm30PersonStringFilter {
     /** @var int */
@@ -109,7 +110,6 @@ class PersonStringNlm30NameSchemaFilter extends Nlm30PersonStringFilter {
         $this->_filterDegrees = (bool) $filterDegrees;
     }
 
-
     //
     // Implement template methods from Filter
     //
@@ -151,7 +151,6 @@ class PersonStringNlm30NameSchemaFilter extends Nlm30PersonStringFilter {
                 assert(false);
         }
     }
-
 
     //
     // Private helper methods

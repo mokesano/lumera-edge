@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Codelist\CodelistItem;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Modules\Codelist;
  *
  * @brief Basic class describing a BIC Qualifier.
  */
-
-import('core.Modules.Codelist.CodelistItem');
 
 class Qualifier extends CodelistItem {
 

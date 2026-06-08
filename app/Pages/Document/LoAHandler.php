@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Services\LoAService;
+Lumera\Modules\Services\PdfService;
+Lumera\Modules\Services\QrCodeService;
+Lumera\Domain\Security\SecurityHashService;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Document;
 
 /**
@@ -17,13 +23,7 @@ namespace App\Pages\Document;
  * Terintegrasi dengan Smart Router, SecurityHashService, dan Ownership Validation.
  */
 
-import('app.Domain.Handler.Handler');
-
 // Memanggil WIZDAM Services dari folder semantik
-import('core.Modules.services.LoAService');
-import('core.Modules.services.PdfService');
-import('core.Modules.services.QrCodeService');
-import('app.Domain.Security.SecurityHashService');
 
 class LoAHandler extends Handler {
     
@@ -158,7 +158,7 @@ class LoAHandler extends Handler {
      * HELPER: Mengalihkan pengguna kembali dengan Notifikasi Error.
      */
     private function _redirectWithError($request, string $localeKey): void {
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = $request->getUser();
         

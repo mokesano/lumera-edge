@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Filter\EmailFilterSetting;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaOpenurl10CrosswalkFilter;
+namespace Lumera\Modules\plugins\citationLookup\crossref\filter;
+
 /**
  * @defgroup plugins_citationLookup_crossref_filter
  */
@@ -23,9 +28,6 @@ declare(strict_types=1);
  * - Full Type Hinting & Return Types
  * - Removal of deprecated reference operators
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
-import('core.Modules.filter.EmailFilterSetting');
 
 // Asumsikan konstanta ini didefinisikan di global atau config, 
 // tapi jika tidak, define di sini tidak masalah.
@@ -155,7 +157,7 @@ class CrossrefNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
      */
     private function _prepareOpenurl10Search(MetadataDescription $citationDescription): ?array {
         // Crosswalk to OpenURL.
-        import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaOpenurl10CrosswalkFilter');
+        
         
         $nlm30Openurl10Filter = new Nlm30CitationSchemaOpenurl10CrosswalkFilter();
         $openurl10Citation = $nlm30Openurl10Filter->execute($citationDescription);

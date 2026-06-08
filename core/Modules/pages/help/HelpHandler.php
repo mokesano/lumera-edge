@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Help\HelpToc;
+Lumera\Modules\Help\HelpTocDAO;
+Lumera\Modules\Help\HelpTopic;
+Lumera\Modules\Help\HelpTopicDAO;
+Lumera\Modules\Help\HelpTopicSection;
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\Help\Help;
+namespace Lumera\Modules\pages\help;
+
 /**
  * @file core.Modules.pages/help/HelpHandler.inc.php
  *
@@ -22,12 +31,8 @@ if (!defined('HELP_DEFAULT_TOPIC')) define('HELP_DEFAULT_TOPIC', 'index/topic/00
 if (!defined('HELP_DEFAULT_TOC')) define('HELP_DEFAULT_TOC', 'index/toc/000000');
 
 // Imports (Wizdam Core Pathing)
-import('core.Modules.help.HelpToc');
-import('core.Modules.help.HelpTocDAO');
-import('core.Modules.help.HelpTopic');
-import('core.Modules.help.HelpTopicDAO');
-import('core.Modules.help.HelpTopicSection');
-import('core.Modules.handler.Handler'); // Akan otomatis mencari Handler terdekat (Core/App)
+
+ // Akan otomatis mencari Handler terdekat (Core/App)
 
 class HelpHandler extends Handler {
     
@@ -69,7 +74,7 @@ class HelpHandler extends Handler {
         $this->setupTemplate();
         $templateMgr = TemplateManager::getManager();
         
-        import('core.Modules.help.Help');
+        
         $help = Help::getHelp(); 
 
         $templateMgr->assign('helpToc', $help->getTableOfContents());

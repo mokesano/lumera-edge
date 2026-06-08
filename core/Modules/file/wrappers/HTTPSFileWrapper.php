@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\Wrappers\HTTPFileWrapper;
+namespace Lumera\Modules\file\wrappers;
+
 /**
  * @file core.Modules.file/wrappers/HTTPSFileWrapper.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * (for when allow_url_fopen is disabled).
  *
  */
-
-import('core.Modules.file.wrappers.HTTPFileWrapper');
 
 class HTTPSFileWrapper extends HTTPFileWrapper {
     /**

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\File\FileManager;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for files browser functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class FilesHandler extends ManagerHandler {
     
@@ -53,7 +53,7 @@ class FilesHandler extends ManagerHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.File.FileManager');
+        
         $fileManager = new FileManager();
 
         $templateMgr = TemplateManager::getManager();
@@ -119,7 +119,7 @@ class FilesHandler extends ManagerHandler {
         
         $currentPath = $this->_getRealFilesDir($request, $currentDir);
 
-        import('app.Domain.File.FileManager');
+        
         $fileManager = new FileManager();
         if ($fileManager->uploadedFileExists('file')) {
             $destPath = $currentPath . '/' . $this->_cleanFileName($fileManager->getUploadedFileName('file'));
@@ -148,7 +148,7 @@ class FilesHandler extends ManagerHandler {
             $currentPath = $this->_getRealFilesDir($request, $currentDir);
             $newDir = $currentPath . '/' . $this->_cleanFileName($dirName);
 
-            import('app.Domain.File.FileManager');
+            
             $fileManager = new FileManager();
             @$fileManager->mkdir($newDir);
         }
@@ -173,7 +173,7 @@ class FilesHandler extends ManagerHandler {
         
         $currentPath = $this->_getRealFilesDir($request, $currentDir);
 
-        import('app.Domain.File.FileManager');
+        
         $fileManager = new FileManager();
 
         if (@is_file($currentPath)) {
@@ -185,7 +185,6 @@ class FilesHandler extends ManagerHandler {
 
         $request->redirect(null, null, 'files', explode('/', $parentDir));
     }
-
 
     //
     // Helper functions

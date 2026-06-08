@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridHandler;
+Lumera\Modules\Controllers\Grid\Filter\CoreFilterGridRow;
+Lumera\Modules\Controllers\Grid\Filter\FilterGridCellProvider;
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Controllers\Grid\Filter\Form\FilterForm;
+namespace Lumera\Modules\controllers\grid\filter;
+
 /**
  * @file core.Modules.controllers/grid/filter/CoreFilterGridHandler.inc.php
  *
@@ -16,15 +23,10 @@ declare(strict_types=1);
  */
 
 // import grid base classes
-import('core.Modules.controllers.grid.GridHandler');
 
 // import filter grid specific classes
-import('core.Modules.controllers.grid.filter.CoreFilterGridRow');
-import('core.Modules.controllers.grid.filter.FilterGridCellProvider');
 
 // import metadata framework classes
-import('core.Modules.metadata.MetadataDescription');
-
 
 class CoreFilterGridHandler extends GridHandler {
     /** @var DataObject|null the context (journal, press, conference) for which we manage filters */
@@ -115,7 +117,6 @@ class CoreFilterGridHandler extends GridHandler {
         return $this->_filterGroupSymbolic;
     }
 
-
     //
     // Overridden methods from CoreHandler
     //
@@ -186,7 +187,6 @@ class CoreFilterGridHandler extends GridHandler {
         );
     }
 
-
     //
     // Overridden methods from GridHandler
     //
@@ -198,7 +198,6 @@ class CoreFilterGridHandler extends GridHandler {
         // Return a filter row
         return new CoreFilterGridRow();
     }
-
 
     //
     // Public Filter Grid Actions
@@ -228,7 +227,7 @@ class CoreFilterGridHandler extends GridHandler {
         }
 
         // Form handling
-        import('core.Modules.controllers.grid.filter.form.FilterForm');
+        
         
         // Strict Type Safety: Ensure null is not passed where string is expected
         $formTitle = $this->getTitle() ?? ''; 
@@ -260,7 +259,7 @@ class CoreFilterGridHandler extends GridHandler {
         $filter = $this->getFilterFromArgs($request, $args, true);
 
         // Form initialization
-        import('core.Modules.controllers.grid.filter.form.FilterForm');
+        
         
         // Type Safety
         $formTitle = $this->getTitle() ?? ''; 
@@ -320,7 +319,6 @@ class CoreFilterGridHandler extends GridHandler {
         header('Content-Type: application/json');
         return $json->getString();
     }
-
 
     //
     // Protected helper functions

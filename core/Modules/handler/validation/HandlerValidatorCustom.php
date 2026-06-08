@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Validation\HandlerValidator;
+namespace Lumera\Modules\handler\validation;
+
 /**
  * @file core.Modules.handler/HandlerValidatorCustom.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Class to represent a page validation check.
  */
-
-import('core.Modules.handler.validation.HandlerValidator');
 
 class HandlerValidatorCustom extends HandlerValidator {
     /** @var callable The user supplied function to call */

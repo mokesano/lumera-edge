@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ReviewObjectType;
+namespace Lumera\Plugins\Generic\objectsForReview\classes;
+
 /**
  * @file plugins/generic/objectsForReview/classes/ReviewObjectTypeDAO.inc.php
  *
@@ -92,7 +95,7 @@ class ReviewObjectTypeDAO extends DAO {
      */
     public function newDataObject() {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ReviewObjectType');
+        $ofrPlugin->
         return new ReviewObjectType();
     }
 

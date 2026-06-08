@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorName;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorName.inc.php
  *
@@ -10,8 +14,6 @@ declare(strict_types=1);
  * @brief Form validation check for person names (Given Name / Surname).
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorName extends FormValidator {
     
@@ -23,7 +25,7 @@ class FormValidatorName extends FormValidator {
      * @param string $message the error message for validation failures
      */
     public function __construct($form, $field, $type, $message) {
-        import('core.Modules.validation.ValidatorName');
+        
         $validator = new ValidatorName();
         
         // Meneruskan parameter secara utuh ke parent, termasuk $type!

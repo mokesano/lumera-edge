@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\pln\classes;
+
 /**
  * @file plugins/generic/pln/classes/Deposit.inc.php
  *

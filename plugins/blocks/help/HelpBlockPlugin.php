@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/help/HelpBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for help block plugin
  * [WIZDAM EDITION] Modernized. Future Home of Wizdam Chat Assistant.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class HelpBlockPlugin extends BlockPlugin {
     

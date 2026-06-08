@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\PubIdPlugin;
 /**
  * @file plugins/pubIds/doi/DOIPubIdPlugin.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief DOI plugin class
  */
-
-import('core.Modules.plugins.PubIdPlugin');
 
 class DOIPubIdPlugin extends PubIdPlugin {
 

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Kernel\CoreStats;
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Pages\Manager\StatisticsHandler;
 namespace App\Pages\About;
 
 /**
@@ -15,8 +20,6 @@ namespace App\Pages\About;
  *
  * @brief Handle requests for editor functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class AboutHandler extends Handler {
     
@@ -79,7 +82,7 @@ class AboutHandler extends Handler {
             }
             
             // Hide membership if the payment method is not configured
-            import('app.Domain.Payment.AppPaymentManager');
+            
             $paymentManager = new AppPaymentManager($request);
             $templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
@@ -103,7 +106,6 @@ class AboutHandler extends Handler {
             $templateMgr->display('about/site.tpl');
         }
     }
-
 
     /**
      * Setup common template variables.
@@ -551,7 +553,7 @@ class AboutHandler extends Handler {
         $templateMgr->assign('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
         // --- AKHIR MODIFIKASI UTAMA ---
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 
@@ -593,7 +595,7 @@ class AboutHandler extends Handler {
         $individualSubscriptionTypes = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false, false);
         $institutionalSubscriptionTypes = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
 
@@ -626,7 +628,7 @@ class AboutHandler extends Handler {
         
         $journal = $request->getJournal();
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
 
         $membershipEnabled = $paymentManager->membershipEnabled();
@@ -830,7 +832,7 @@ class AboutHandler extends Handler {
         $templateMgr = TemplateManager::getManager($request);
 
         // 3. --- MULAI BLOK CoreStats ---
-        import('core.Kernel.CoreStats');
+        
         $refreshStats = $request->getUserVar('refresh_stats');
         $forceRefresh = trim((string) $refreshStats) == 'true';
 
@@ -873,8 +875,8 @@ class AboutHandler extends Handler {
      * @return array
      */
     public function _getPublicStatisticsNames() {
-        import('app.Pages.manager.ManagerHandler');
-        import('app.Pages.manager.StatisticsHandler');
+        
+        
         // Note: _getPublicStatisticsNames is protected in StatisticsHandler refactor.
         // If strict mode prevents access, this needs adaptation. 
         // For now assuming we can access or reflect it, or simply duplicate the list.

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\RT;
+Lumera\Domain\Rt\RTDAO;
+Lumera\Domain\Rt\JournalRT;
+Lumera\Pages\Article\ArticleHandler;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Pages\Rt;
 
 /**
@@ -15,13 +20,6 @@ namespace App\Pages\Rt;
  *
  * @brief Handle Reading Tools requests.
  */
-
-import('app.Domain.Rt.RT');
-
-import('app.Domain.Rt.RTDAO');
-import('app.Domain.Rt.JournalRT');
-
-import('app.Pages.article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
     
@@ -368,7 +366,7 @@ class RTHandler extends ArticleHandler {
             $request->redirect(null, $router->getRequestedPage($request));
         }
 
-        import('app.Domain.Mail.MailTemplate');
+        
         $email = new MailTemplate('EMAIL_LINK');
 
         // [SECURITY FIX] Amankan 'send' sebagai flag boolean with (int) trim()
@@ -428,7 +426,7 @@ class RTHandler extends ArticleHandler {
             $request->redirect(null, $router->getRequestedPage($request));
         }
 
-        import('app.Domain.Mail.MailTemplate');
+        
         $email = new MailTemplate();
         $email->setAddressFieldsEnabled(false);
 

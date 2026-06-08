@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorCSRF;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.classes/form/validation/FormValidatorCSRF.inc.php
  *
@@ -9,8 +13,6 @@ declare(strict_types=1);
  * @brief Form validation check untuk CSRF Token. 
  * Memanggil ValidatorCSRF dari core validation.
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorCSRF extends FormValidator {
 
@@ -29,7 +31,7 @@ class FormValidatorCSRF extends FormValidator {
      * @return bool
      */
     public function isValid(): bool {
-        import('core.Modules.validation.ValidatorCSRF');
+        
         
         $request = Application::get()->getRequest();
         $clientToken = $request->getUserVar('csrfToken');

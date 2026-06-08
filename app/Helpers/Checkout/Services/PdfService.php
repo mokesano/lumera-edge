@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Checkout\Invoice;
+Lumera\Modules\Checkout\Services\InvoiceService;
 namespace App\Helpers\Checkout\Services;
 
 /**
@@ -16,7 +18,6 @@ namespace App\Helpers\Checkout\Services;
  */
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
-import('core.Modules.checkout.Invoice');
 
 use Mpdf\Mpdf;
 use Mpdf\Output\Destination;
@@ -47,7 +48,7 @@ class PdfService {
      */
     public function generateInvoicePdf(Invoice $invoice, string $qrCodeBase64): void {
         // 1. Panggil InvoiceService untuk merakit Data Transfer Object Array
-        import('core.Modules.checkout.services.InvoiceService');
+        
         $invoiceService = new InvoiceService();
         $flatData = $invoiceService->getInvoiceSummary($invoice);
 

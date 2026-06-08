@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
+namespace Lumera\Plugins\Generic\announcementFeed;
+
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedBlockPlugin.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Class for block component of announcement feed plugin
  * [WIZDAM EDITION] Modernized & Safe Parent Bypass
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin {
     

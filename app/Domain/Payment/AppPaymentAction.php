@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Payment\Form\PaymentSettingsForm;
+Lumera\Modules\Payment\Form\PayMethodSettingsForm;
 namespace App\Domain\Payment;
 
 /**
@@ -27,7 +29,7 @@ class AppPaymentAction {
      * @param array $args
      */
     public static function payments($args) {
-        import('core.Modules.payment.form.PaymentSettingsForm');
+        
         $form = new PaymentSettingsForm();
 
         self::assignCommonFormVars();
@@ -46,7 +48,7 @@ class AppPaymentAction {
      * @return bool
      */
     public static function savePaymentSettings($args) {
-        import('core.Modules.payment.form.PaymentSettingsForm');
+        
         $form = new PaymentSettingsForm();
         $form->readInputData();
 
@@ -100,7 +102,7 @@ class AppPaymentAction {
      * Display form to edit program settings.
      */
     public static function payMethodSettings() {
-        import('core.Modules.payment.form.PayMethodSettingsForm');
+        
         $form = new PayMethodSettingsForm();
         
         self::assignCommonFormVars();
@@ -113,7 +115,7 @@ class AppPaymentAction {
      * @return bool
      */
     public static function savePayMethodSettings() {
-        import('core.Modules.payment.form.PayMethodSettingsForm');
+        
         $form = new PayMethodSettingsForm();
         $form->readInputData();
 
@@ -126,7 +128,6 @@ class AppPaymentAction {
         $form->display();
         return false;
     }
-
 
     // 
     // PRIVATE HELPER METHODS (Modularity & Testability)

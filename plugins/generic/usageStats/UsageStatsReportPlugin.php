@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
+namespace Lumera\Plugins\Generic\usageStats;
+
 /**
  * @file plugins/generic/usageStats/UsageStatsReportPlugin.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Default statistics report plugin (and metrics provider)
  */
-
-import('core.Modules.plugins.ReportPlugin');
 
 define('APP_METRIC_TYPE_COUNTER', 'wizdam::counter');
 

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\Form\SubscriptionForm;
+Lumera\Domain\Subscription\InstitutionalSubscription;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +22,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form class for institutional subscription create/edits.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.form.SubscriptionForm');
 
 class InstitutionalSubscriptionForm extends SubscriptionForm {
     /**
@@ -159,7 +158,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
     public function execute() {
         $insert = false;
         if (!isset($this->subscription)) {
-            import('app.Domain.Subscription.InstitutionalSubscription');
+            
             $this->subscription = new InstitutionalSubscription();
             $insert = true;
         }

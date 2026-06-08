@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\User\InterestEntry;
+Lumera\Modules\ControlledVocab\ControlledVocabEntryDAO;
+namespace Lumera\Modules\user;
+
 /**
  * @file core.Modules.user/InterestsEntryDAO.inc.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying a user's review interests.
  */
-
-import('core.Modules.user.InterestEntry');
-import('core.Modules.ControlledVocab.ControlledVocabEntryDAO');
 
 class InterestEntryDAO extends ControlledVocabEntryDAO {
     

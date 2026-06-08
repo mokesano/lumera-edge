@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Search\ArticleSearch;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\User\UserDAO;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Kernel\VirtualArrayIterator;
 namespace App\Pages\Search;
 
 /**
@@ -15,9 +20,6 @@ namespace App\Pages\Search;
  *
  * @brief Handle site index requests.
  */
-
-import('app.Domain.Search.ArticleSearch');
-import('app.Domain.Handler.Handler');
 
 class SearchHandler extends Handler {
     
@@ -210,7 +212,7 @@ class SearchHandler extends Handler {
         $journal = $request->getJournal();
         $authorDao = DAORegistry::getDAO('AuthorDAO');
         
-        import('app.Domain.User.UserDAO');
+        
         $userDao = DAORegistry::getDAO('UserDAO');
 
         if (isset($args[0]) && $args[0] == 'view') {
@@ -320,7 +322,7 @@ class SearchHandler extends Handler {
                 $journalId = $article->getJournalId();
 
                 if (!isset($issues[$issueId])) {
-                    import('app.Domain.Issue.IssueAction');
+                    
                     $issue = $issueDao->getIssueById($issueId);
                     $issues[$issueId] = $issue;
                     $issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
@@ -408,7 +410,7 @@ class SearchHandler extends Handler {
                 $authors[$key] = $author;
             }
 
-            import('core.Kernel.VirtualArrayIterator');
+            
             $itemsPerPage = ($rangeInfo && $rangeInfo->isValid()) ? $rangeInfo->getCount() : max(1, count($authors));
             $authorsIterator = new VirtualArrayIterator($authors, $authorsFactory->getCount(), $authorsFactory->getPage(), $itemsPerPage);
 
@@ -465,7 +467,7 @@ class SearchHandler extends Handler {
             }
         }
         
-        import('core.Kernel.VirtualArrayIterator');
+        
         // Masukkan array yang sudah diekstrak tadi ke Iterator
         $results = new VirtualArrayIterator($resultsArray, $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 

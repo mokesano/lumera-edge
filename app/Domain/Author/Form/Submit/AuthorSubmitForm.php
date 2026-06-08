@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -20,8 +21,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Base class for journal author submit forms.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.Form');
 
 class AuthorSubmitForm extends Form {
     /** @var CoreRequest|null */

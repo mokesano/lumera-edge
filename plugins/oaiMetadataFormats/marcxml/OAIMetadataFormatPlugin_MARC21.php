@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
+namespace Lumera\Plugins\Oaimetadataformats\marcxml;
+
 /**
  * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormatPlugin_MARC21.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief marc21 metadata format plugin for OAI.
  */
-
-import('core.Modules.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin {
 

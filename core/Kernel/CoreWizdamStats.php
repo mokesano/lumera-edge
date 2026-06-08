@@ -1,6 +1,17 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DBConnection;
+Lumera\Modules\Cache\CacheManager;
+Lumera\Kernel\Core;
+Lumera\Modules\Config\Config;
+Lumera\Modules\Journal\JournalDAO;
+Lumera\Modules\Article\ArticleDAO;
+Lumera\Modules\Article\ArticleGalleyDAO;
+Lumera\Modules\Issue\IssueDAO;
+Lumera\Modules\Article\PublishedArticleDAO;
+Lumera\Modules\Submission\ReviewAssignment\ReviewAssignmentDAO;
+Lumera\Modules\Article\AuthorDAO;
 namespace Lumera\Kernel;
 
 /**
@@ -17,17 +28,8 @@ namespace Lumera\Kernel;
  */
 
 // Import kelas-kelas yang diperlukan
-import('core.Modules.db.DBConnection');
-import('core.Modules.cache.CacheManager');
-import('core.Kernel.Core');
-import('core.Modules.Config.Config');
-import('core.Modules.journal.JournalDAO');
-import('core.Modules.article.ArticleDAO');
-import('core.Modules.article.ArticleGalleyDAO');
-import('core.Modules.issue.IssueDAO');
-import('core.Modules.article.PublishedArticleDAO');
-import('core.Modules.submission.reviewAssignment.ReviewAssignmentDAO');
-import('core.Modules.article.AuthorDAO'); // Diperlukan untuk SiteWideStats
+
+ // Diperlukan untuk SiteWideStats
 
 class CoreWizdamStats {
 
@@ -540,7 +542,6 @@ class CoreWizdamStats {
         }
     }
 
-
     /**
      * Helper untuk cek DB (dari journal-insight.txt)
      */
@@ -755,7 +756,6 @@ class CoreWizdamStats {
             if ($result && !$result->EOF) $metrics['last_article_mod'] = $result->fields['last_mod'];
             if($result) $result->Close();
 
-
             if (empty($metrics['total_articles']) && empty($metrics['total_views'])) {
                 // error_log("WizdamStats: HASH generation failed - no metrics found for JID: " . $journalId);
                 return ''; // Return empty if no data found
@@ -773,7 +773,6 @@ class CoreWizdamStats {
             return ''; // Return empty on error
         }
     }
-
 
     /*******************************************************
      * MESIN #2: STATISTIK SELURUH SITUS (SITE-WIDE)

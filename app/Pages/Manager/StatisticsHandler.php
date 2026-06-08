@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for statistics functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class StatisticsHandler extends ManagerHandler {
     
@@ -393,7 +392,6 @@ class StatisticsHandler extends ManagerHandler {
         }
         fclose($fp);
     }
-
 
     //
     // Private helper methods.

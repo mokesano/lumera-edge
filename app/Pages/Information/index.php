@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Information\InformationHandler;
 namespace App\Pages\Information;
 
 /**
@@ -27,6 +28,6 @@ switch ($op) {
     case 'competingInterestGuidelines':
     case 'sampleCopyrightWording':
         define('HANDLER_CLASS', \App\Pages\Information\InformationHandler::class);
-        import('app.Pages.Information.InformationHandler');
+        
         break;
 }

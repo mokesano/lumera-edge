@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\ReviewObjectType;
+Lumera\Modules\ReviewObjectMetadata;
+namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
+
 /**
  * @file plugins/generic/objectsForReview/classes/form/ReviewObjectTypeForm.inc.php
  *
@@ -15,8 +20,6 @@ declare(strict_types=1);
  * @brief Form for journal managers to create/edit review object types.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.form.Form');
 
 class ReviewObjectTypeForm extends Form {
 
@@ -38,7 +41,7 @@ class ReviewObjectTypeForm extends Form {
         $journal = Request::getJournal();
         $journalId = $journal->getId();
 
-        $ofrPlugin->import('core.Modules.ReviewObjectType');
+        $ofrPlugin->
         $reviewObjectTypeDao = DAORegistry::getDAO('ReviewObjectTypeDAO');
         if (!empty($typeId)) {
             $this->reviewObjectType = $reviewObjectTypeDao->getById((int) $typeId, $journalId);
@@ -116,7 +119,7 @@ class ReviewObjectTypeForm extends Form {
         $journal = Request::getJournal();
         $journalId = $journal->getId();
 
-        $ofrPlugin->import('core.Modules.ReviewObjectType');
+        $ofrPlugin->
         $reviewObjectTypeDao = DAORegistry::getDAO('ReviewObjectTypeDAO');
         
         if ($this->reviewObjectType == null) {
@@ -134,7 +137,7 @@ class ReviewObjectTypeForm extends Form {
             $reviewObjectTypeDao->updateObject($reviewObjectType);
         } else {
             //install common metadata
-            $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+            $ofrPlugin->
             $multipleOptionsTypes = ReviewObjectMetadata::getMultipleOptionsTypes();
             $dtdTypes = ReviewObjectMetadata::getMetadataDTDTypes();
 

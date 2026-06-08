@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\Api\DataverseApiClient;
+namespace Lumera\Plugins\Generic\dataverse\pages;
+
 /**
  * @file plugins/generic/dataverse/pages/DataverseHandler.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Handle Dataverse page requests.
  * [WIZDAM EDITION] Modernized for PHP 8.4, Native REST API, and LSP Compliance.
  */
-
-import('core.Modules.handler.Handler');
 
 class DataverseHandler extends Handler {
 
@@ -82,7 +84,7 @@ class DataverseHandler extends Handler {
         
         // [WIZDAM REST API FIX] Mengarahkan pengambilan Terms of Use ke API Client yang baru
         if ((bool) $dataversePlugin->getSetting($journal->getId(), 'fetchTermsOfUse')) {
-            $dataversePlugin->import('core.Modules.api.DataverseApiClient');
+            $dataversePlugin->
             $apiClient = new DataverseApiClient($dataversePlugin);
             
             // Ekstrak alias Dataverse dari URL tujuan

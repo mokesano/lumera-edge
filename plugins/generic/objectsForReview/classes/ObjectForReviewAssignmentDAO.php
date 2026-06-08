@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ObjectForReviewAssignment;
+Lumera\Modules\ReviewObjectMetadata;
+namespace Lumera\Plugins\Generic\objectsForReview\classes;
+
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewAssignmentDAO.inc.php
  *
@@ -19,7 +23,6 @@ declare(strict_types=1);
 /* These constants are used for user-selectable search fields. */
 define('OFR_FIELD_TITLE',         'title');
 define('OFR_FIELD_ABSTRACT', 'description');
-
 
 class ObjectForReviewAssignmentDAO extends DAO {
 
@@ -101,7 +104,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
      */
     public function newDataObject() {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         return new ObjectForReviewAssignment();
     }
 
@@ -313,7 +316,6 @@ class ObjectForReviewAssignmentDAO extends DAO {
         return $incompleteAssignements;
     }
 
-
     /**
      * Retrieve all assignments matching a particular context ID.
      * @param $contextId int
@@ -331,8 +333,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
      */
      public function getAllByContextId($contextId, $searchType = null, $search = null, $searchMatch = null, $status = null, $userId = null, $editorId = null, $filterType = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
+        $ofrPlugin->
 
         $params = array();
 
@@ -518,7 +520,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
      */
     public function getStatusCounts($contextId, $userId = null) {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         $counts = array();
         $counts[OFR_STATUS_AVAILABLE] = $this->getStatusCount($contextId, OFR_STATUS_AVAILABLE, $userId);
         $counts[OFR_STATUS_REQUESTED] = $this->getStatusCount($contextId, OFR_STATUS_REQUESTED, $userId);

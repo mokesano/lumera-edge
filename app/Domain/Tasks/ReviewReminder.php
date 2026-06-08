@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Security\AccessKeyManager;
 namespace App\Domain\Tasks;
-
 
 /**
  * @file app/Domain/Tasks/ReviewReminder.php
@@ -16,8 +18,6 @@ namespace App\Domain\Tasks;
  *
  * @brief Class to perform automated reminders for reviewers.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 define('REVIEW_REMIND_AUTO', 'REVIEW_REMIND_AUTO');
 define('REVIEW_REQUEST_REMIND_AUTO', 'REVIEW_REQUEST_REMIND_AUTO');
@@ -65,7 +65,7 @@ class ReviewReminder extends ScheduledTask {
         $reviewer = $userDao->getUser($reviewAssignment->getReviewerId());
         if (!isset($reviewer)) return false;
 
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
 
         $reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
@@ -78,7 +78,7 @@ class ReviewReminder extends ScheduledTask {
 
         $urlParams = array();
         if ($reviewerAccessKeysEnabled) {
-            import('app.Domain.Security.AccessKeyManager');
+            
             $accessKeyManager = new AccessKeyManager();
 
             // Key lifetime is the typical review period plus four weeks

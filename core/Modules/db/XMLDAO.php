@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLParser;
+namespace Lumera\Modules\db;
+
 /**
  * @file core.Modules.db/XMLDAO.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying objects from an XML data source.
  */
-
-import('core.Modules.xml.XMLParser');
 
 class XMLDAO {
     

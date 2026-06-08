@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Announcement\CoreAnnouncement;
 namespace Lumera\Modules\Announcement;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Announcement;
  *
  * @brief Operations for retrieving and modifying Announcement objects.
  */
-
-import('core.Modules.Announcement.CoreAnnouncement');
 
 class CoreAnnouncementDAO extends DAO {
     

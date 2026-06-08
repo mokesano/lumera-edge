@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Currency\Currency;
+namespace Lumera\Modules\currency;
+
 /**
  * @file core.Modules.currency/CurrencyDAO.inc.php
  *
@@ -16,8 +19,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.currency.Currency');
 
 class CurrencyDAO extends DAO {
 

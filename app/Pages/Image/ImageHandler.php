@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\File\FileManager;
+Lumera\Domain\File\PublicFileManager;
 namespace App\Pages\Image;
 
 /**
@@ -16,9 +19,6 @@ namespace App\Pages\Image;
  * @brief Custom handler untuk melayani permintaan gambar dengan resizing dinamis dan caching.
  * Custom Image Resizing & Caching Handler
  */
-
-import('app.Domain.Handler.Handler');
-import('app.Domain.File.FileManager');
 
 class ImageHandler extends Handler {
 
@@ -117,7 +117,7 @@ class ImageHandler extends Handler {
         }
 
         // 3. Setup Path
-        import('app.Domain.File.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $journalBase = $publicFileManager->getJournalFilesPath($journal->getId());
         

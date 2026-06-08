@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\usageStats\lib\geoIp;
+
 /* @file Geoiprecord.php
  *
  * Copyright (C) 2004 Maxmind LLC

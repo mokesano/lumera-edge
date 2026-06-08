@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/keywordCloud/KeywordCloudBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for keyword cloud block plugin
  * [WIZDAM STATUS] DEPRECATED UI PATTERN. Safe for PHP 8, but recommended for removal.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 define('KEYWORD_BLOCK_MAX_ITEMS', 20);
 define('KEYWORD_BLOCK_CACHE_DAYS', 2);

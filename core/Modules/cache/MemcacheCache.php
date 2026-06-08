@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/MemcacheCache.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Provides caching based on Memcache.
  */
-
-import('core.Modules.cache.GenericCache');
 
 class MemcacheCache extends GenericCache {
 
@@ -167,7 +168,6 @@ class MemcacheCache extends GenericCache {
 
         return [];
     }
-
 
     /**
      * Get the time at which the data was cached.

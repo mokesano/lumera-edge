@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
+namespace Lumera\Plugins\Generic\lucene;
+
 /**
  * @file plugins/generic/lucene/LuceneFacetsBlockPlugin.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class LuceneFacetsBlockPlugin extends BlockPlugin {
 
@@ -113,7 +114,6 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
         return $seq;
     }
 
-
     //
     // Implement template methods from LazyLoadPlugin
     //
@@ -125,7 +125,6 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
         $plugin = $this->_getLucenePlugin();
         return $plugin->getEnabled();
     }
-
 
     //
     // Implement template methods from BlockPlugin
@@ -182,7 +181,6 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
         $templateMgr->assign('facets', $facets);
         return parent::getContents($templateMgr, $request);
     }
-
 
     //
     // Private helper methods

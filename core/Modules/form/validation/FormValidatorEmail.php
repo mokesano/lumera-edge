@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidatorRegExp;
+Lumera\Modules\Validation\ValidatorEmail;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorEmail.inc.php
  *
@@ -15,9 +19,6 @@ declare(strict_types=1);
  * @brief Form validation check for email addresses.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidatorRegExp');
-import('core.Modules.validation.ValidatorEmail');
 
 class FormValidatorEmail extends FormValidator {
     

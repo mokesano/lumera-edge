@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
 namespace App\Domain\Article;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Article;
  * @brief Published article class.
  * [WIZDAM EDITION] PHP 7.4+ Compatible, Strict Types & Fatal Error Fix
  */
-
-import('app.Domain.Article.Article');
 
 class PublishedArticle extends Article {
 

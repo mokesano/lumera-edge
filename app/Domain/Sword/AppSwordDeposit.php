@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\FileManager;
 namespace App\Domain\Sword;
-
 
 /**
  * @file app/Domain/Sword/AppSwordDeposit.php
@@ -206,7 +206,7 @@ class AppSwordDeposit {
      * Clean up after a deposit, i.e. removing all created files.
      */
     public function cleanup() {
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
 
         $fileManager->rmtree($this->outPath);

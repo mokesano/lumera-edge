@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Services\LoAService;
+Lumera\Modules\Services\InvoiceService;
+Lumera\Modules\Services\CertificateService;
+Lumera\Domain\Security\SecurityHashService;
 namespace App\Pages\Authenticate;
 
 /**
@@ -16,13 +21,9 @@ namespace App\Pages\Authenticate;
  * Terlindungi oleh SecurityHashService (SHA-256). Tidak membutuhkan otentikasi login.
  */
 
-import('app.Domain.Handler.Handler');
-
 // [WIZDAM BRIDGE] Memanggil WIZDAM Services
-import('core.Modules.services.LoAService');
-import('core.Modules.services.InvoiceService');
-import('core.Modules.services.CertificateService'); // Layanan sertifikat
-import('app.Domain.Security.SecurityHashService');
+
+ // Layanan sertifikat
 
 class AuthenticateHandler extends Handler {
 

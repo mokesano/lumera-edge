@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\PolicySet;
+namespace Lumera\Modules\security\authorization;
+
 /**
  * @file core.Modules.security/authorization/AuthorizationDecisionManager.inc.php
  *
@@ -24,8 +27,6 @@ declare(strict_types=1);
  * manager will deny access (=whitelist approach, deny if none
  * applicable).
  */
-
-import('core.Modules.security.authorization.PolicySet');
 
 define('AUTHORIZATION_NOT_APPLICABLE', 0x03);
 
@@ -122,7 +123,6 @@ class AuthorizationDecisionManager {
         return $this->_authorizedContext;
     }
 
-
     //
     // Public methods
     //
@@ -151,7 +151,6 @@ class AuthorizationDecisionManager {
 
         return $decision;
     }
-
 
     //
     // Private helper methods

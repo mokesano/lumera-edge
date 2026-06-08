@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\MetadataPlugin;
+namespace Lumera\Modules\plugins\metadata\mods34;
+
 /**
  * @defgroup plugins_metadata_mods34
  */
@@ -18,9 +21,6 @@ declare(strict_types=1);
  * @brief Abstract base class for MODS metadata plugins
  */
 
-
-import('core.Modules.plugins.MetadataPlugin');
-
 class CoreMods34MetadataPlugin extends MetadataPlugin {
 
 	/**
@@ -29,7 +29,6 @@ class CoreMods34MetadataPlugin extends MetadataPlugin {
     function __construct() {
         parent::__construct();
     }
-
 
 	//
 	// Override protected template methods from CorePlugin

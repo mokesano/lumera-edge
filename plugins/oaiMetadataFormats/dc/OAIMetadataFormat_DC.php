@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OaiMetadataFormats\Dc\CoreOAIMetadataFormat_DC;
+namespace Lumera\Plugins\Oaimetadataformats\dc;
+
 /**
  * @defgroup oai_format
  */
@@ -19,8 +22,6 @@ declare(strict_types=1);
  * @brief OAI metadata format class -- Dublin Core.
  * [WIZDAM EDITION] REFACTOR: PHP 8.1+ Compatibility
  */
-
-import('core.Modules.plugins.oaiMetadataFormats.dc.CoreOAIMetadataFormat_DC');
 
 class OAIMetadataFormat_DC extends CoreOAIMetadataFormat_DC {
 

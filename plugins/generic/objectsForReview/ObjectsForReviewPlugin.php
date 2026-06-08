@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\ReviewObjectTypeDAO;
+Lumera\Modules\ReviewObjectMetadataDAO;
+Lumera\Modules\ObjectForReviewPersonDAO;
+Lumera\Modules\ObjectForReviewDAO;
+Lumera\Modules\ObjectForReviewSettingsDAO;
+Lumera\Modules\ObjectForReviewAssignmentDAO;
+namespace Lumera\Plugins\Generic\objectsForReview;
+
 /**
  * @file plugins/generic/objectsForReview/ObjectsForReviewPlugin.inc.php
  *
@@ -13,8 +22,6 @@ declare(strict_types=1);
  *
  * @brief Object for review plugin class
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 define('OFR_MODE_FULL',         0x01);
 define('OFR_MODE_METADATA',     0x02);
@@ -37,7 +44,6 @@ define('NOTIFICATION_TYPE_OFR_AUTHOR_MAILED',     NOTIFICATION_TYPE_OFR_PLUGIN_B
 define('NOTIFICATION_TYPE_OFR_AUTHOR_REMOVED',    NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000E);
 define('NOTIFICATION_TYPE_OFR_SUBMISSION_ASSIGNED',   NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x000000F);
 define('NOTIFICATION_TYPE_OFR_SETTINGS_SAVED',    NOTIFICATION_TYPE_OFR_PLUGIN_BASE + 0x0000010);
-
 
 class ObjectsForReviewPlugin extends GenericPlugin {
     
@@ -188,12 +194,12 @@ class ObjectsForReviewPlugin extends GenericPlugin {
      * Instantiate and register the DAOs.
      */
     public function registerDAOs() {
-        $this->import('core.Modules.ReviewObjectTypeDAO');
-        $this->import('core.Modules.ReviewObjectMetadataDAO');
-        $this->import('core.Modules.ObjectForReviewPersonDAO');
-        $this->import('core.Modules.ObjectForReviewDAO');
-        $this->import('core.Modules.ObjectForReviewSettingsDAO');
-        $this->import('core.Modules.ObjectForReviewAssignmentDAO');
+        $this->
+        $this->
+        $this->
+        $this->
+        $this->
+        $this->
 
         $reviewObjectTypeDao = new ReviewObjectTypeDAO($this->getName());
         DAORegistry::registerDAO('ReviewObjectTypeDAO', $reviewObjectTypeDao);

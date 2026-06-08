@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Checkout\Payment\PaymentGatewayInterface;
+Lumera\Modules\Checkout\Invoice;
 namespace App\Helpers\Checkout\Payment;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Helpers\Checkout\Payment;
  */
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
-
-import('core.Modules.checkout.payment.PaymentGatewayInterface');
-import('core.Modules.checkout.Invoice');
 
 use Xendit\Configuration;
 use Xendit\Invoice\InvoiceApi;

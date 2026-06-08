@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Medra\Classes\DOIExportPlugin;
+Lumera\Modules\O4DOIExportDom;
+Lumera\Modules\MedraWebservice;
+namespace Lumera\Plugins\Importexport\medra;
+
 /**
  * @file plugins/importexport/medra/MedraExportPlugin.inc.php
  *
@@ -15,7 +20,7 @@ declare(strict_types=1);
  */
 
 if (!class_exists('DOIExportPlugin')) { // Bug #7848
-    import('plugins.importexport.medra.classes.DOIExportPlugin');
+    
 }
 
 // O4DOI schemas.
@@ -78,7 +83,6 @@ class MedraExportPlugin extends DOIExportPlugin {
         return __('plugins.importexport.medra.description');
     }
 
-
     //
     // Implement template methods from DOIExportPlugin
     //
@@ -120,7 +124,7 @@ class MedraExportPlugin extends DOIExportPlugin {
         assert(!is_null($schema));
 
         // Create the XML DOM and document.
-        $this->import('core.Modules.O4DOIExportDom');
+        $this->
         $dom = new O4DOIExportDom($request, $this, $schema, $journal, $this->getCache(), $exportIssuesAs);
         $doc = $dom->generate($objects);
         if ($doc === false) {
@@ -149,7 +153,7 @@ class MedraExportPlugin extends DOIExportPlugin {
     public function registerDoi($request, $journal, $objects, $file) {
         // Use a different endpoint for testing and
         // production.
-        $this->import('core.Modules.MedraWebservice');
+        $this->
         $endpoint = ($this->isTestMode($request) ? MEDRA_WS_ENDPOINT_DEV : MEDRA_WS_ENDPOINT);
 
         // Get credentials.

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationPlugin;
 /**
  * @file plugins/citationFormats/abnt/AbntCitationPlugin.inc.php
  *
@@ -15,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief ABNT citation format plugin
  */
-
-import('core.Modules.plugins.CitationPlugin');
 
 class AbntCitationPlugin extends CitationPlugin {
     
@@ -126,7 +125,7 @@ class AbntCitationPlugin extends CitationPlugin {
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
                 $journal = Request::getJournal();
 
-                $this->import('AbntSettingsForm');
+                $this->
                 $form = new AbntSettingsForm($this, (int) $journal->getId());
                 if (Request::getUserVar('save')) {
                     $form->readInputData();

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\JSONMessage;
+Lumera\Controllers\Statistics\Form\ReportGeneratorForm;
 namespace App\Controllers\Statistics;
 
 /**
@@ -15,9 +18,6 @@ namespace App\Controllers\Statistics;
  *
  * @brief Handle requests for report generator functions.
  */
-
-import('app.Domain.Handler.Handler');
-import('core.Kernel.JSONMessage');
 
 class ReportGeneratorHandler extends Handler {
     
@@ -226,7 +226,7 @@ class ReportGeneratorHandler extends Handler {
             $reportTemplate = null;
         }
 
-        import('app.controllers.statistics.form.ReportGeneratorForm');
+        
         $reportGeneratorForm = new ReportGeneratorForm(
             $columns, 
             $optionalColumns,

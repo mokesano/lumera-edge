@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Submission\CoreAuthor;
+namespace Lumera\Modules\submission;
+
 /**
  * @file core.Modules.submission/CoreAuthorDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Operations for retrieving and modifying CoreAuthor objects.
  */
-
-import('core.Modules.submission.CoreAuthor');
 
 class CoreAuthorDAO extends DAO {
     

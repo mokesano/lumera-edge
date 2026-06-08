@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\tinymce;
+
 /**
  * @file plugins/generic/tinymce/TinyMCEPlugin.inc.php
  *
@@ -15,9 +18,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-
-import('core.Modules.plugins.GenericPlugin');
 
 // Define TinyMCE paths with unix-style separators for inclusion in browser.
 define('TINYMCE_INSTALL_PATH', 'public/js/lib/tinymce');

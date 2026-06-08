@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Journal\Section;
 namespace App\Domain\Journal;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Journal;
  *
  * @brief Operations for retrieving and modifying Section objects.
  */
-
-import ('app.Domain.journal.Section');
 
 class SectionDAO extends DAO {
 

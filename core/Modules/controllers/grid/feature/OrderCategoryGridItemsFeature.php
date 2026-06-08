@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
+Lumera\Kernel\JSONManager;
+namespace Lumera\Modules\controllers\grid\feature;
+
 /**
  * @file core.Modules.controllers/grid/feature/OrderCategoryGridItemsFeature.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Implements category grid ordering functionality.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.feature.OrderItemsFeature');
 
 // Constants used for defining scope of ordering
 define_exposed('ORDER_CATEGORY_GRID_CATEGORIES_ONLY', 0x01);
@@ -59,7 +61,6 @@ class OrderCategoryGridItemsFeature extends OrderItemsFeature {
         return (int) $options['type'];
     }
 
-
     //
     // Extended methods from GridFeature.
     //
@@ -69,7 +70,6 @@ class OrderCategoryGridItemsFeature extends OrderItemsFeature {
     public function getJSClass(): string {
         return '$.wizdam.classes.features.OrderCategoryGridItemsFeature';
     }
-
 
     //
     // Hooks implementation.
@@ -103,7 +103,7 @@ class OrderCategoryGridItemsFeature extends OrderItemsFeature {
         $request = $args['request'];
         $grid = $args['grid'];
 
-        import('core.Kernel.JSONManager');
+        
         $jsonManager = new JSONManager();
         $data = $jsonManager->decode($request->getUserVar('data'));
         
@@ -142,7 +142,6 @@ class OrderCategoryGridItemsFeature extends OrderItemsFeature {
         // Save rows sequence, if this grid has also orderable rows inside each category.
         $this->_saveRowsInCategoriesSequence($grid, $gridCategoryElements, $data);
     }
-
 
     //
     // Private helper methods.

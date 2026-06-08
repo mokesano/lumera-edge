@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Codelist\ONIXCodelistItem;
+Lumera\Modules\Codelist\ONIXParserDOMHandler;
+Lumera\Modules\Xslt\XSLTransformer;
+Lumera\Modules\File\FileManager;
+Lumera\Modules\File\TemporaryFileManager;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -17,8 +22,6 @@ namespace Lumera\Modules\Codelist;
  * @brief Parent class for operations involving Codelist objects.
  *
  */
-
-import('core.Modules.Codelist.ONIXCodelistItem');
 
 class ONIXCodelistItemDAO extends DAO {
 
@@ -99,12 +102,12 @@ class ONIXCodelistItemDAO extends DAO {
             $xmlDao = new XMLDAO();
             $listName = $this->getListName(); // i.e., 'List30'
             
-            import('core.Modules.Codelist.ONIXParserDOMHandler');
+            
             $handler = new ONIXParserDOMHandler($listName);
 
-            import('core.Modules.xslt.XSLTransformer');
-            import('core.Modules.file.FileManager');
-            import('core.Modules.file.TemporaryFileManager');
+            
+            
+            
 
             $temporaryFileManager = new TemporaryFileManager();
             $fileManager = new FileManager();

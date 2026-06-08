@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Crossref\Classes\DOIExportDom;
+namespace Lumera\Plugins\Importexport\crossref\classes;
+
 /**
  * @file plugins/importexport/crossref/classes/CrossRefExportDom.inc.php
  *
@@ -15,9 +18,8 @@ declare(strict_types=1);
  * MODERNIZED FOR WIZDAM FORK
  */
 
-
 if (!class_exists('DOIExportDom')) { // Bug #7848
-    import('plugins.importexport.crossref.classes.DOIExportDom');
+    
 }
 
 // XML attributes
@@ -57,7 +59,6 @@ class CrossRefExportDom extends DOIExportDom {
         $args = func_get_args();
         call_user_func_array(array($this, '__construct'), $args);
     }
-
 
     //
     // Public methods
@@ -180,7 +181,6 @@ class CrossRefExportDom extends DOIExportDom {
 
         return $publicationObjects;
     }
-
 
     //
     // Private helper methods

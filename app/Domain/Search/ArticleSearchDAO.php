@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Search\ArticleSearch;
+Lumera\Domain\Article\Article;
+Lumera\Modules\Db\DBRowIterator;
 namespace App\Domain\Search;
 
 /**
@@ -18,8 +21,7 @@ namespace App\Domain\Search;
  * [WIZDAM EDITION] FULLTEXT Optimized & PHP 8+ Compatible.
  */
 
-import('app.Domain.Search.ArticleSearch');
-import('app.Domain.Article.Article'); // Import STATUS_PUBLISHED for type safety
+ // Import STATUS_PUBLISHED for type safety
 
 class ArticleSearchDAO extends DAO {
     // [WIZDAM] Simpan cache di properti class, bukan static variable lokal
@@ -115,7 +117,7 @@ class ArticleSearchDAO extends DAO {
      * @return DBRowIterator
      */
     public function getPhraseResults($journal, array $phrase, ?string $publishedFrom = null, ?string $publishedTo = null, $type = null, int $limit = 500, int $cacheHours = 24) {
-        import('core.Modules.db.DBRowIterator');
+        
         
         if (empty($phrase)) {
             return new DBRowIterator(false);

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\SubscriptionDAO;
+Lumera\Domain\Subscription\InstitutionalSubscription;
 namespace App\Domain\Subscription;
-
 
 /**
  * @file app/Domain/Subscription/InstitutionalSubscriptionDAO.php
@@ -18,9 +19,6 @@ namespace App\Domain\Subscription;
  * @brief Operations for retrieving and modifying InstitutionalSubscription objects.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.SubscriptionDAO');
-import('app.Domain.Subscription.InstitutionalSubscription');
 
 define('SUBSCRIPTION_INSTITUTION_NAME',	0x20);
 define('SUBSCRIPTION_DOMAIN',			0x21);

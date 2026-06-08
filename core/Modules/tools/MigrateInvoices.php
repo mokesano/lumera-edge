@@ -1,12 +1,17 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\Tools;
+
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\Payment\InvoiceDAO;
+
 /**
  * @file tools/migrateInvoices.php
  * @brief CLI tool untuk migrasi Queued & Completed Payments secara sekuensial.
  */
-
-require(__DIR__ . '/bootstrap.php');
 
 class MigrateInvoices extends CommandLineTool {
 
@@ -64,6 +69,8 @@ class MigrateInvoices extends CommandLineTool {
     }
 }
 
-$tool = new MigrateInvoices($argv ?? []);
-$tool->execute();
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new MigrateInvoices($argv);
+    $tool->execute();
+}

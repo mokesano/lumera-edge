@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\SectionEditor\SectionEditorSubmission;
 namespace App\Domain\Submission\Editor;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Submission\Editor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
 
 class EditorSubmission extends SectionEditorSubmission {
 

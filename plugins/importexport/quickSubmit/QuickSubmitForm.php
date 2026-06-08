@@ -1,6 +1,20 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Validation\ValidatorORCID;
+Lumera\Modules\Issue\IssueAction;
+Lumera\Modules\File\TemporaryFileManager;
+Lumera\Modules\File\ArticleFileManager;
+Lumera\Modules\Article\ArticleHTMLGalley;
+Lumera\Modules\Article\ArticleGalley;
+Lumera\Modules\Search\ArticleSearchIndex;
+Lumera\Modules\Submission\Author\AuthorAction;
+Lumera\Modules\Submission\SectionEditor\SectionEditorAction;
+Lumera\Modules\Author\Form\Submit\AuthorSubmitForm;
+Lumera\Modules\Submission\Editor\EditorAction;
+namespace Lumera\Plugins\Importexport\quickSubmit;
+
 /**
  * @file plugins/importexport/quickSubmit/QuickSubmitForm.inc.php
  *
@@ -13,8 +27,6 @@ declare(strict_types=1);
  *
  * @brief Form for QuickSubmit one-page submission plugin
  */
-
-import('core.Modules.form.Form');
 
 class QuickSubmitForm extends Form {
     
@@ -104,7 +116,7 @@ class QuickSubmitForm extends Form {
         ));
 
         // Add ORCiD validation
-        import('core.Modules.validation.ValidatorORCID');
+        
         $this->addCheck(new FormValidatorArrayCustom(
             $this, 
             'authors', 
@@ -181,10 +193,10 @@ class QuickSubmitForm extends Form {
         $countries = $countryDao->getCountries();
         $templateMgr->assign('countries', $countries);
 
-        import('core.Modules.issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-        import('core.Modules.file.TemporaryFileManager');
+        
         $temporaryFileManager = new TemporaryFileManager();
         $tempFileId = $this->getData('tempFileId');
         if (isset($tempFileId[$formLocale]) && $tempFileId[$formLocale] > 0) {
@@ -296,7 +308,7 @@ class QuickSubmitForm extends Form {
      * @return int|false TemporaryFile ID
      */
     public function uploadSubmissionFile($fileName) {
-        import('core.Modules.file.TemporaryFileManager');
+        
         $temporaryFileManager = new TemporaryFileManager();
         $request = $this->request;
         $user = $request->getUser();
@@ -403,8 +415,8 @@ class QuickSubmitForm extends Form {
         $articleDao->updateLocaleFields($article);
 
         // Add the submission files as galleys
-        import('core.Modules.file.TemporaryFileManager');
-        import('core.Modules.file.ArticleFileManager');
+        
+        
         $tempFileIds = $this->getData('tempFileId');
         $temporaryFileManager = new TemporaryFileManager();
         $articleFileManager = new ArticleFileManager($articleId);
@@ -418,10 +430,10 @@ class QuickSubmitForm extends Form {
                 $fileType = $temporaryFile->getFileType();
 
                 if (strstr($fileType, 'html')) {
-                    import('core.Modules.article.ArticleHTMLGalley');
+                    
                     $galley = new ArticleHTMLGalley();
                 } else {
-                    import('core.Modules.article.ArticleGalley');
+                    
                     $galley = new ArticleGalley();
                 }
                 $galley->setArticleId($articleId);
@@ -458,7 +470,7 @@ class QuickSubmitForm extends Form {
             }
 
             // Update file search index
-            import('core.Modules.search.ArticleSearchIndex');
+            
             $articleSearchIndex = new ArticleSearchIndex();
             if (isset($galley)) {
                 $articleSearchIndex->articleFileChanged(
@@ -468,18 +480,17 @@ class QuickSubmitForm extends Form {
             $articleSearchIndex->articleChangesFinished();
         }
 
-
         // Designate this as the review version by default.
         $authorSubmissionDao = DAORegistry::getDAO('AuthorSubmissionDAO');
         $authorSubmission = $authorSubmissionDao->getAuthorSubmission($articleId);
-        import('core.Modules.submission.author.AuthorAction');
+        
         AuthorAction::designateReviewVersion($authorSubmission, true);
 
         // Accept the submission
         $sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
         $articleFileManager = new ArticleFileManager($articleId);
         $sectionEditorSubmission->setReviewFile($articleFileManager->getFile($article->getSubmissionFileId()));
-        import('core.Modules.submission.sectionEditor.SectionEditorAction');
+        
         SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT, $this->request);
 
         // Create signoff infrastructure
@@ -507,13 +518,13 @@ class QuickSubmitForm extends Form {
         $signoffDao->updateObject($proofProofreaderSignoff);
         $signoffDao->updateObject($proofLayoutEditorSignoff);
 
-        import('core.Modules.author.form.submit.AuthorSubmitForm');
+        
         AuthorSubmitForm::assignEditors($article);
 
         $articleDao->updateArticle($article);
 
         // Add to end of editing queue
-        import('core.Modules.submission.editor.EditorAction');
+        
         if (isset($galley)) EditorAction::expediteSubmission($article, $this->request);
 
         if ($this->getData('destination') == "issue") {
@@ -528,7 +539,7 @@ class QuickSubmitForm extends Form {
         $citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $articleId, $rawCitationList);
 
         // Index article.
-        import('core.Modules.search.ArticleSearchIndex');
+        
         $articleSearchIndex = new ArticleSearchIndex();
         $articleSearchIndex->articleMetadataChanged($article);
         $articleSearchIndex->articleChangesFinished();

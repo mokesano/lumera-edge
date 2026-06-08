@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Modules\Notification\NotificationManager;
+namespace Lumera\Plugins\Importexport\crossref;
+
 /**
  * @file plugins/importexport/crossref/CrossrefInfoSender.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  * @brief Scheduled task to send article information to the ALM server.
  * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
-
 
 class CrossrefInfoSender extends ScheduledTask {
 
@@ -108,7 +109,7 @@ class CrossrefInfoSender extends ScheduledTask {
             if ($notify) {
                 $roleDao = DAORegistry::getDAO('RoleDAO');
                 $journalManagers = $roleDao->getUsersByRoleId(ROLE_ID_JOURNAL_MANAGER, $journal->getId());
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 while ($journalManager = $journalManagers->next()) {
                     $notificationManager->createTrivialNotification($journalManager->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('plugins.importexport.crossref.notification.failed')));

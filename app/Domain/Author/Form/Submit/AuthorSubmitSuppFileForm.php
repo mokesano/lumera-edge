@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Author\Form\Submit;
 
 /**
@@ -16,8 +18,6 @@ namespace App\Domain\Author\Form\Submit;
  * @brief Supplementary file author submission form.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.Form');
 
 class AuthorSubmitSuppFileForm extends Form {
     /** @var int the ID of the article */
@@ -187,7 +187,7 @@ class AuthorSubmitSuppFileForm extends Form {
      * @return int the supplementary file ID
      */
     public function execute($object = null) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($this->articleId);
         $suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 

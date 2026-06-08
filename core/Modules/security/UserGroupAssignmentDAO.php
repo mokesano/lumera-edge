@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\UserGroupAssignment;
+namespace Lumera\Modules\security;
+
 /**
  * @file core.Modules.security/UserGroupAssignmentDAO.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
  * to be changed for zero- or double-context applications when user groups
  * are ported over to them.
  */
-
-import('core.Modules.security.UserGroupAssignment');
 
 class UserGroupAssignmentDAO extends DAO {
     
@@ -117,7 +118,6 @@ class UserGroupAssignmentDAO extends DAO {
         return $assignments;
     }
 
-
     /**
      * Retrieve user group assignments for a user
      * @param $userId int
@@ -140,7 +140,6 @@ class UserGroupAssignmentDAO extends DAO {
 
         return $returner;
     }
-
 
     /**
      * Insert an assignment

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
+namespace Lumera\Modules\security\authorization;
+
 /**
  * @file core.Modules.security/authorization/UserRequiredPolicy.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Policy to deny access if a context cannot be found in the request.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class UserRequiredPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

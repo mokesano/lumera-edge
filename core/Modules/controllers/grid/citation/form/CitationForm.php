@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Metadata\DateStringNormalizerFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\PersonStringNlm30NameSchemaFilter;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
+namespace Lumera\Modules\controllers\grid\citation\form;
+
 /**
  * @file core.Modules.controllers/grid/citation/form/CitationForm.inc.php
  *
@@ -14,8 +22,6 @@ declare(strict_types=1);
  * @brief Form for adding/editing a citation.
  * [WIZDAM EDITION] Refactored for PHP 8.x (Removed create_function)
  */
-
-import('core.Modules.form.Form');
 
 define('CITATION_FORM_FULL_TEMPLATE', 'controllers/grid/citation/form/citationForm.tpl');
 define('CITATION_FORM_COMPARISON_TEMPLATE', 'controllers/grid/citation/form/citationFormErrorsAndComparison.tpl');
@@ -204,7 +210,7 @@ class CitationForm extends Form {
         }
 
         // Extract data from citation form fields and inject it into the citation
-        import('core.Modules.metadata.MetadataDescription');
+        
         $metadataSchemas = $citation->getSupportedMetadataSchemas();
         foreach($metadataSchemas as $metadataSchema) { /* @var $metadataSchema MetadataSchema */
             // Instantiate a meta-data description for the given schema
@@ -240,7 +246,7 @@ class CitationForm extends Form {
                             break;
 
                         case isset($allowedTypes[METADATA_PROPERTY_TYPE_DATE]):
-                            import('core.Modules.metadata.DateStringNormalizerFilter');
+                            
                             $dateStringFilter = new DateStringNormalizerFilter();
                             assert($dateStringFilter->supportsAsInput($fieldValue));
                             $typedFieldValues = [$dateStringFilter->execute($fieldValue)];
@@ -258,7 +264,7 @@ class CitationForm extends Form {
                             }
 
                             // Try to transform the field to a name composite.
-                            import('core.Modules.plugins.metadata.nlm30.filter.PersonStringNlm30NameSchemaFilter');
+                            
                             $personStringFilter = new PersonStringNlm30NameSchemaFilter($assocType, PERSON_STRING_FILTER_MULTIPLE);
                             assert($personStringFilter->supportsAsInput($fieldValue));
                             $typedFieldValues = $personStringFilter->execute($fieldValue);
@@ -304,7 +310,6 @@ class CitationForm extends Form {
         }
         return true;
     }
-
 
     /**
      * Fetch the form.
@@ -456,12 +461,11 @@ class CitationForm extends Form {
                 'articleTitle' => strip_tags($assocObject->getLocalizedTitle()),
                 'rawCitation' => strip_tags($citation->getRawCitation())
             ];
-            import('core.Modules.mail.MailTemplate');
+            
             $mail = new MailTemplate('CITATION_EDITOR_AUTHOR_QUERY', null, false, null, true, true);
             $mail->assignParams($emailParams);
             $templateMgr->assign('authorQuerySubject', $mail->getSubject());
             $templateMgr->assign('authorQueryBody', $mail->getBody());
-
 
             /////////////////////////////////////////////////////
             // Expert Citation Services Results
@@ -548,7 +552,7 @@ class CitationForm extends Form {
                 // name arrays to strings.
                 $allowedAssocTypes = $allowedTypes[METADATA_PROPERTY_TYPE_COMPOSITE];
                 assert(in_array(ASSOC_TYPE_AUTHOR, $allowedAssocTypes) || in_array(ASSOC_TYPE_EDITOR, $allowedAssocTypes));
-                import('core.Modules.plugins.metadata.nlm30.filter.Nlm30NameSchemaPersonStringFilter');
+                
                 $personStringFilter = new Nlm30NameSchemaPersonStringFilter(PERSON_STRING_FILTER_MULTIPLE);
                 assert($personStringFilter->supportsAsInput($value));
                 $stringValue = $personStringFilter->execute($value);

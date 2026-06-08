@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Article\ArticleGalleyDAO;
+namespace Lumera\Plugins\Generic\xmlGalley;
+
 /**
  * @file plugins/generic/xmlGalley/ArticleXMLGalleyDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Extended DAO methods for XML-derived galleys
  * * MODERNIZED & BUG #5152 RESOLVED FOR WIZDAM FORK
  */
-
-import('core.Modules.article.ArticleGalleyDAO');
 
 class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/authorBios/AuthorBiosBlockPlugin.inc.php
  *
@@ -16,8 +17,6 @@ declare(strict_types=1);
  * Note: Core Wizdam has its own author display logic. This plugin is modernized 
  * only for safety/fallback purposes to prevent PHP 8 Fatal Errors.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class AuthorBiosBlockPlugin extends BlockPlugin {
     

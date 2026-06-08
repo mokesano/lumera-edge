@@ -1,8 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Submission\Form\Comment\PeerReviewCommentForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Submission\Form\ReviewFormResponseForm;
+Lumera\Domain\Submission\Form\Comment\EditCommentForm;
 namespace App\Domain\Submission\Reviewer;
-
 
 /**
  * @file app/Domain/Submission/Reviewer/ReviewerAction.php
@@ -18,8 +25,6 @@ namespace App\Domain\Submission\Reviewer;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Submission.common.Action');
 
 class ReviewerAction extends Action {
 
@@ -72,7 +77,7 @@ class ReviewerAction extends Action {
         // Only confirm the review for the reviewer if
         // he has not previously done so.
         if ($reviewAssignment->getDateConfirmed() == null) {
-            import('app.Domain.Mail.ArticleMailTemplate');
+            
             $email = new ArticleMailTemplate($reviewerSubmission, $decline ? 'REVIEW_DECLINE' : 'REVIEW_CONFIRM');
             
             // Must explicitly set sender because we may be here on an access
@@ -94,7 +99,7 @@ class ReviewerAction extends Action {
                 $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
                 // Add log
-                import('app.Domain.Article.log.ArticleLog');
+                
                 ArticleLog::logEventHeadless(
                     $request->getJournal(), 
                     (int) $reviewer->getId(), 
@@ -176,7 +181,7 @@ class ReviewerAction extends Action {
         // Only record the reviewers recommendation if
         // no recommendation has previously been submitted.
         if ($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') {
-            import('app.Domain.Mail.ArticleMailTemplate');
+            
             $email = new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
             // Must explicitly set sender because we may be here on an access
             // key, in which case the user is not technically logged in
@@ -195,7 +200,7 @@ class ReviewerAction extends Action {
                 $reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
 
                 // Add log
-                import('app.Domain.Article.log.ArticleLog');
+                
                 ArticleLog::logEventHeadless(
                     $request->getJournal(), 
                     (int) $reviewer->getId(), 
@@ -255,7 +260,7 @@ class ReviewerAction extends Action {
         // [WIZDAM] Strict Type Guard
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
-        import('app.Domain.File.ArticleFileManager');
+        
         $reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
         $reviewAssignment = $reviewAssignmentDao->getById($reviewId);
 
@@ -285,7 +290,7 @@ class ReviewerAction extends Action {
             $reviewer = $userDao->getUser($reviewAssignment->getReviewerId());
 
             // Add log
-            import('app.Domain.Article.log.ArticleLog');
+            
             ArticleLog::logEventHeadless(
                 $request->getJournal(), 
                 (int) $reviewer->getId(), 
@@ -304,7 +309,7 @@ class ReviewerAction extends Action {
      * @param int|null $revision If null, then all revisions are deleted.
      */
     public function deleteReviewerVersion($reviewId, $fileId, $revision = null) {
-        import('app.Domain.File.ArticleFileManager');
+        
 
         // [WIZDAM] Modern Request Usage
         $request = Application::get()->getRequest();
@@ -327,7 +332,7 @@ class ReviewerAction extends Action {
      */
     public function viewPeerReviewComments($user, $article, $reviewId) {
         if (!HookRegistry::dispatch('ReviewerAction::viewPeerReviewComments', [&$user, &$article, &$reviewId])) {
-            import('app.Domain.Submission.form.comment.PeerReviewCommentForm');
+            
 
             $commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
             $commentForm->setUser($user);
@@ -350,7 +355,7 @@ class ReviewerAction extends Action {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         if (!HookRegistry::dispatch('ReviewerAction::postPeerReviewComment', [&$user, &$article, &$reviewId, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.PeerReviewCommentForm');
+            
 
             $commentForm = new PeerReviewCommentForm($article, $reviewId, ROLE_ID_REVIEWER);
             $commentForm->setUser($user);
@@ -360,7 +365,7 @@ class ReviewerAction extends Action {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(false, false);
                 foreach ($notificationUsers as $userRole) {
@@ -393,7 +398,7 @@ class ReviewerAction extends Action {
      */
     public function editReviewFormResponse($reviewId, $reviewFormId) {
         if (!HookRegistry::dispatch('ReviewerAction::editReviewFormResponse', [$reviewId, $reviewFormId])) {
-            import('app.Domain.Submission.form.ReviewFormResponseForm');
+            
 
             $reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
             $reviewForm->initData();
@@ -412,7 +417,7 @@ class ReviewerAction extends Action {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         if (!HookRegistry::dispatch('ReviewerAction::saveReviewFormResponse', [$reviewId, $reviewFormId])) {
-            import('app.Domain.Submission.form.ReviewFormResponseForm');
+            
 
             $reviewForm = new ReviewFormResponseForm($reviewId, $reviewFormId);
             $reviewForm->readInputData();
@@ -420,7 +425,7 @@ class ReviewerAction extends Action {
                 $reviewForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
                 $reviewAssignment = $reviewAssignmentDao->getById($reviewId);
@@ -509,7 +514,7 @@ class ReviewerAction extends Action {
         $reviewId = (method_exists($comment, 'getReviewId')) ? $comment->getReviewId() : null;
 
         if (!HookRegistry::dispatch('ReviewerAction::editComment', [&$article, &$comment, &$reviewId])) {
-            import('app.Domain.Submission.form.comment.EditCommentForm');
+            
 
             $commentForm = new EditCommentForm($article, $comment);
             $commentForm->initData();

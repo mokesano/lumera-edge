@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\CrosswalkFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
+Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10JournalSchema;
+Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10BookSchema;
+Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10DissertationSchema;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30Openurl10CrosswalkFilter.inc.php
  *
@@ -20,12 +27,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.metadata.CrosswalkFilter');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
-import('core.Modules.plugins.metadata.openurl10.schema.Openurl10JournalSchema');
-import('core.Modules.plugins.metadata.openurl10.schema.Openurl10BookSchema');
-import('core.Modules.plugins.metadata.openurl10.schema.Openurl10DissertationSchema');
 
 class Nlm30Openurl10CrosswalkFilter extends CrosswalkFilter {
     

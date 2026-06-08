@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Tasks;
-
 
 /**
  * @file app/Domain/Tasks/SubscriptionExpiryReminder.php
@@ -16,8 +17,6 @@ namespace App\Domain\Tasks;
  *
  * @brief Class to perform automated reminders for reviewers.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 define('SECONDS_PER_WEEK', 7 * 24 * 60 * 60);
 
@@ -97,7 +96,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
             'subscriptionContactSignature' => $subscriptionContactSignature
         );
 
-        import('app.Domain.Mail.MailTemplate');
+        
         $mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), false, $journal, false, true);
         $mail->setFrom($subscriptionEmail, $subscriptionName);
         $mail->addRecipient($user->getEmail(), $user->getFullName());
@@ -120,7 +119,6 @@ class SubscriptionExpiryReminder extends ScheduledTask {
             if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeWeeks')) {
                 $beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder');
                 $expiryTime = time() + (SECONDS_PER_WEEK * $beforeWeeks);
-
 
                 // Retrieve all subscriptions that match expiry date
                 $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');

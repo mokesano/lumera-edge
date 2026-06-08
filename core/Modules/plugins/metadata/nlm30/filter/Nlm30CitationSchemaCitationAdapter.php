@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataDataObjectAdapter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30NameSchema;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30PersonStringFilter;
+namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30CitationSchemaCitationAdapter.inc.php
  *
@@ -18,9 +23,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Reference Compatibility
  */
-
-import('core.Modules.metadata.MetadataDataObjectAdapter');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30NameSchema');
 
 class Nlm30CitationSchemaCitationAdapter extends MetadataDataObjectAdapter {
 
@@ -162,7 +164,7 @@ class Nlm30CitationSchemaCitationAdapter extends MetadataDataObjectAdapter {
                         } else {
                             // The only non-structured data allowed here
                             // is the et-al string.
-                            import('core.Modules.plugins.metadata.nlm30.filter.Nlm30PersonStringFilter');
+                            
                             assert($name == PERSON_STRING_FILTER_ETAL);
                         }
                     }

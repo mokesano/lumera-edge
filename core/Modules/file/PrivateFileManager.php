@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\FileManager;
+namespace Lumera\Modules\file;
+
 /**
  * @file core.Modules.file/PrivateFileManager.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Class defining operations for private file management.
  */
-
-import('core.Modules.file.FileManager');
 
 class PrivateFileManager extends FileManager {
     

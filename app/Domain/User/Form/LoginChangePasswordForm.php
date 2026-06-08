@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\User\Form;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\User\Form;
  *
  * @brief Form to change a user's password in order to login.
  */
-
-import('core.Modules.form.Form');
 
 class LoginChangePasswordForm extends Form {
 

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\Mail;
+Lumera\Modules\File\PrivateFileManager;
+namespace Lumera\Modules\scheduledTask;
+
 /**
  * @file core.Modules.scheduledTask/ScheduledTaskHelper.inc.php
  *
@@ -66,7 +70,7 @@ class ScheduledTaskHelper {
      */
     public function getMail() {
         // Instantiate a mail object.
-        import('core.Modules.mail.Mail');
+        
         return new Mail();
     }
 
@@ -198,7 +202,7 @@ class ScheduledTaskHelper {
      * [MODERNISASI] Defined as static
      */
     public static function clearExecutionLogs() {
-        import('core.Modules.file.PrivateFileManager');
+        
         $fileMgr = new PrivateFileManager();
     
         $fileMgr->rmtree($fileMgr->getBasePath() . DIRECTORY_SEPARATOR . SCHEDULED_TASK_EXECUTION_LOG_DIR);    
@@ -209,12 +213,11 @@ class ScheduledTaskHelper {
      * @param $file string
      */
     public function downloadExecutionLog($file) {
-        import('core.Modules.file.PrivateFileManager');
+        
         $fileMgr = new PrivateFileManager();
 
         $fileMgr->downloadFile($fileMgr->getBasePath() . DIRECTORY_SEPARATOR . SCHEDULED_TASK_EXECUTION_LOG_DIR . DIRECTORY_SEPARATOR . $file);    
     }
-
 
     //
     // Private helper methods.

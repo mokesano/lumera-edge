@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/ApcFalse.php
  *
@@ -16,9 +19,7 @@ declare(strict_types=1);
  * [WIZDAM] Renamed from APCCache to APCuCache to reflect modern PHP usage.
  */
 
-import('core.Modules.cache.GenericCache');
-
 // Helper class untuk menyimpan nilai boolean false
 // (Karena apcu_fetch mengembalikan false jika gagal, kita butuh cara membedakannya)
-class apc_false {};
+class ApcFalse {};
 ?>

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\BookForReviewAuthor;
+namespace Lumera\Plugins\Generic\booksForReview\classes;
+
 /**
  * @file plugins/generic/booksForReview/classes/BookForReviewAuthorDAO.inc.php
  *
@@ -122,7 +125,7 @@ class BookForReviewAuthorDAO extends DAO {
     public function _returnAuthorFromRow($row) {
         // [MODERNISASI] Hapus referensi & pada PluginRegistry
         $bfrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $bfrPlugin->import('core.Modules.BookForReviewAuthor');
+        $bfrPlugin->
 
         $author = new BookForReviewAuthor();
         $author->setId($row['author_id']);

@@ -1,8 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Search\ArticleSearchIndex;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\Submission\Form\Comment\LayoutCommentForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Submission\Form\Comment\ProofreadCommentForm;
 namespace App\Domain\Submission\LayoutEditor;
-
 
 /**
  * @defgroup submission_layoutEditor_LayoutEditorAction
@@ -22,8 +29,6 @@ namespace App\Domain\Submission\LayoutEditor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.common.Action');
 
 class LayoutEditorAction extends Action {
 
@@ -75,7 +80,7 @@ class LayoutEditorAction extends Action {
      * @param int $galleyId
      */
     public static function deleteGalley($article, $galleyId) {
-        import('app.Domain.File.ArticleFileManager');
+        
 
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
         $galley = $galleyDao->getGalley($galleyId, $article->getId());
@@ -85,7 +90,7 @@ class LayoutEditorAction extends Action {
 
             if ($galley->getFileId()) {
                 $articleFileManager->deleteFile($galley->getFileId());
-                import('app.Domain.Search.ArticleSearchIndex');
+                
                 $articleSearchIndex = new ArticleSearchIndex();
                 $articleSearchIndex->articleFileDeleted(
                     (int) $article->getId(),
@@ -117,7 +122,7 @@ class LayoutEditorAction extends Action {
      * @param int|null $revision
      */
     public static function deleteArticleImage($submission, $fileId, $revision) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
         
         if (HookRegistry::dispatch('LayoutEditorAction::deleteArticleImage', [&$submission, &$fileId, &$revision])) return;
@@ -164,7 +169,7 @@ class LayoutEditorAction extends Action {
         
         if (isset($suppFile) && !HookRegistry::dispatch('LayoutEditorAction::deleteSuppFile', [&$article, &$suppFile])) {
             if ($suppFile->getFileId()) {
-                import('app.Domain.File.ArticleFileManager');
+                
                 $articleFileManager = new ArticleFileManager($article->getId());
                 $articleFileManager->deleteFile($suppFile->getFileId());
             }
@@ -174,7 +179,7 @@ class LayoutEditorAction extends Action {
             // supp file so that idempotent search plug-ins
             // correctly update supp file meta-data.
             if ($suppFile->getFileId()) {
-                import('app.Domain.Search.ArticleSearchIndex');
+                
                 $articleSearchIndex = new ArticleSearchIndex();
                 $articleSearchIndex->articleFileDeleted($article->getId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
                 $articleSearchIndex->articleChangesFinished();
@@ -206,7 +211,7 @@ class LayoutEditorAction extends Action {
             return true;
         }
 
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $email = new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
 
         $editAssignments = $submission->getEditAssignments();
@@ -223,7 +228,7 @@ class LayoutEditorAction extends Action {
 
             // Add log entry
             $user = $request->getUser();
-            import('app.Domain.Article.log.ArticleLog');
+            
             ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_COMPLETE, 'log.layout.layoutEditComplete', ['editorName' => $user->getFullName()]);
 
             return true;
@@ -258,7 +263,7 @@ class LayoutEditorAction extends Action {
      * @param object $submission
      */
     public static function uploadLayoutVersion($submission) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($submission->getId());
         $signoffDao = DAORegistry::getDAO('SignoffDAO');
         $layoutEditorSubmissionDao = DAORegistry::getDAO('LayoutEditorSubmissionDAO');
@@ -287,7 +292,7 @@ class LayoutEditorAction extends Action {
      */
     public static function viewLayoutComments($article) {
         if (!HookRegistry::dispatch('LayoutEditorAction::viewLayoutComments', [&$article])) {
-            import('app.Domain.Submission.form.comment.LayoutCommentForm');
+            
 
             $commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
             $commentForm->initData();
@@ -306,7 +311,7 @@ class LayoutEditorAction extends Action {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         if (!HookRegistry::dispatch('LayoutEditorAction::postLayoutComment', [&$article, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.LayoutCommentForm');
+            
 
             $commentForm = new LayoutCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
             $commentForm->readInputData();
@@ -315,7 +320,7 @@ class LayoutEditorAction extends Action {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(true, false);
                 foreach ($notificationUsers as $userRole) {
@@ -342,7 +347,7 @@ class LayoutEditorAction extends Action {
      */
     public static function viewProofreadComments($article) {
         if (!HookRegistry::dispatch('LayoutEditorAction::viewProofreadComments', [&$article])) {
-            import('app.Domain.Submission.form.comment.ProofreadCommentForm');
+            
 
             $commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
             $commentForm->initData();
@@ -361,7 +366,7 @@ class LayoutEditorAction extends Action {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         if (!HookRegistry::dispatch('LayoutEditorAction::postProofreadComment', [&$article, &$emailComment])) {
-            import('app.Domain.Submission.form.comment.ProofreadCommentForm');
+            
 
             $commentForm = new ProofreadCommentForm($article, ROLE_ID_LAYOUT_EDITOR);
             $commentForm->readInputData();
@@ -370,7 +375,7 @@ class LayoutEditorAction extends Action {
                 $commentForm->execute();
 
                 // Send a notification to associated users
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationUsers = $article->getAssociatedUserIds(true, false);
                 foreach ($notificationUsers as $userRole) {

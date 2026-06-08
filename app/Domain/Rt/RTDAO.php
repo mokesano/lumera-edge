@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Rt\JournalRT;
 namespace App\Domain\Rt;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Rt;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Rt.JournalRT');
 
 class RTDAO extends DAO {
     

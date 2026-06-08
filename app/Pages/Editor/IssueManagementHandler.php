@@ -1,6 +1,17 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Editor\EditorHandler;
+Lumera\Domain\Article\ArticleTombstoneManager;
+Lumera\Domain\Issue\Form\IssueForm;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Domain\Issue\Form\IssueGalleyForm;
+Lumera\Domain\File\IssueFileManager;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\Search\ArticleSearchIndex;
+Lumera\Domain\Mail\MassMail;
+Lumera\Modules\Validation\ValidatorEmail;
 namespace App\Pages\Editor;
 
 /**
@@ -15,8 +26,6 @@ namespace App\Pages\Editor;
  *
  * @brief Handle requests for issue management in publishing.
  */
-
-import('app.Pages.editor.EditorHandler');
 
 class IssueManagementHandler extends EditorHandler {
     
@@ -123,7 +132,7 @@ class IssueManagementHandler extends EditorHandler {
         
         if (isset($publishedArticles) && !empty($publishedArticles)) {
             // Insert article tombstone if the issue is published
-            import('app.Domain.Article.ArticleTombstoneManager');
+            
             $articleTombstoneManager = new ArticleTombstoneManager();
             foreach ($publishedArticles as $article) {
                 if ($isBackIssue) {
@@ -161,10 +170,10 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate();
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-        import('app.Domain.Issue.form.IssueForm');
+        
 
         $templateMgr = TemplateManager::getManager();
-        import('app.Domain.Issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
         $templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
@@ -187,7 +196,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate();
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-        import('app.Domain.Issue.form.IssueForm');
+        
         $issueForm = new IssueForm('editor/issues/createIssue.tpl');
 
         $issueForm->readInputData();
@@ -197,7 +206,7 @@ class IssueManagementHandler extends EditorHandler {
             $this->futureIssues($args, $request);
         } else {
             $templateMgr = TemplateManager::getManager();
-            import('app.Domain.Issue.IssueAction');
+            
             $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
             $templateMgr->assign('helpTopicId', 'publishing.createIssue');
             $issueForm->display();
@@ -216,10 +225,10 @@ class IssueManagementHandler extends EditorHandler {
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
         $templateMgr = TemplateManager::getManager();
-        import('app.Domain.Issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-        import('app.Domain.Issue.form.IssueForm');
+        
 
         $issueForm = new IssueForm('editor/issues/issueData.tpl');
 
@@ -253,10 +262,10 @@ class IssueManagementHandler extends EditorHandler {
 
         $journal = $request->getJournal();
 
-        import('app.Domain.Issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
-        import('app.Domain.Issue.form.IssueForm');
+        
         $issueForm = new IssueForm('editor/issues/issueData.tpl');
         $issueForm->readInputData();
 
@@ -296,7 +305,7 @@ class IssueManagementHandler extends EditorHandler {
         $journal = $request->getJournal();
         $issue = $this->issue;
 
-        import('app.Domain.File.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $publicFileManager->removeJournalFile($journal->getId(), $issue->getFileName($formLocale));
         $issue->setFileName('', $formLocale);
@@ -320,7 +329,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate($issueId, true);
         $issue = $this->issue;
 
-        import('app.Domain.File.PublicFileManager');
+        
         $journal = $request->getJournal();
         $publicFileManager = new PublicFileManager();
         $publicFileManager->removeJournalFile($journal->getId(), $issue->getStyleFileName());
@@ -345,7 +354,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
         $templateMgr = TemplateManager::getManager();
-        import('app.Domain.Issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
         $templateMgr->assign('issueId', $issueId);
@@ -371,7 +380,7 @@ class IssueManagementHandler extends EditorHandler {
         $issueId = (int) array_shift($args);
         $this->validate($issueId, true);
 
-        import('app.Domain.Issue.form.IssueGalleyForm');
+        
         $galleyForm = new IssueGalleyForm($issueId);
 
         $galleyId = $galleyForm->execute();
@@ -390,7 +399,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate($issueId, true);
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-        import('app.Domain.Issue.form.IssueGalleyForm');
+        
         $submitForm = new IssueGalleyForm($issueId, $galleyId);
 
         if ($submitForm->isLocaleResubmit()) {
@@ -413,7 +422,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate($issueId, true);
         $this->setupTemplate(EDITOR_SECTION_ISSUES);
 
-        import('app.Domain.Issue.form.IssueGalleyForm');
+        
         $submitForm = new IssueGalleyForm($issueId, $galleyId);
 
         $submitForm->readInputData();
@@ -464,7 +473,7 @@ class IssueManagementHandler extends EditorHandler {
         $galley = $galleyDao->getGalley($galleyId, $issueId);
 
         if (isset($galley)) {
-            import('app.Domain.File.IssueFileManager');
+            
             $issueFileManager = new IssueFileManager($issueId);
 
             if ($galley->getFileId()) {
@@ -526,7 +535,7 @@ class IssueManagementHandler extends EditorHandler {
         $galley = $issueGalleyDao->getGalley($galleyId, $issueId);
 
         if ($galley && $galley->getFileId()) {
-            import('app.Domain.File.IssueFileManager');
+            
             $issueFileManager = new IssueFileManager($issueId);
             
             // Gunakan fungsi viewFile yang baru dibuat
@@ -553,7 +562,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate($issueId, true);
     
         if ($fileId) {
-            import('app.Domain.File.IssueFileManager');
+            
             $issueFileManager = new IssueFileManager($issueId);
             
             // Parameter ketiga adalah $inline. 
@@ -574,7 +583,7 @@ class IssueManagementHandler extends EditorHandler {
         $this->validate($issueId, true);
 
         if ($fileId) {
-            import('app.Domain.File.IssueFileManager');
+            
             $issueFileManager = new IssueFileManager($issueId);
             return $issueFileManager->downloadFile($fileId, null, true); // TRUE = Inline
         }
@@ -655,7 +664,7 @@ class IssueManagementHandler extends EditorHandler {
             ARTICLE_ACCESS_OPEN => AppLocale::Translate('editor.issues.open')
         ]);
 
-        import('app.Domain.Issue.IssueAction');
+        
         $templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
         $templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 
@@ -689,7 +698,7 @@ class IssueManagementHandler extends EditorHandler {
         $articles = $publishedArticleDao->getPublishedArticles($issueId);
 
         // insert article tombstone, if an article is removed from a published issue
-        import('app.Domain.Article.ArticleTombstoneManager');
+        
         $articleTombstoneManager = new ArticleTombstoneManager();
         $issueDao = DAORegistry::getDAO('IssueDAO');
         $issue = $issueDao->getIssueById($issueId, $journal->getId());
@@ -708,7 +717,7 @@ class IssueManagementHandler extends EditorHandler {
                         // We are not in a form so we cannot send form errors.
                         // Let's at least send a notification to give some feedback
                         // to the user.
-                        import('app.Domain.Notification.NotificationManager');
+                        
                         $notificationManager = new NotificationManager();
                         AppLocale::requireComponents([LOCALE_COMPONENT_APP_EDITOR]);
                         $message = 'editor.publicIdentificationExists';
@@ -974,7 +983,7 @@ class IssueManagementHandler extends EditorHandler {
                     $articleDao->updateLocaleFields($article);
 
                     if (!$articleSearchIndex) {
-                        import('app.Domain.Search.ArticleSearchIndex');
+                        
                         $articleSearchIndex = new ArticleSearchIndex();
                     }
                     $articleSearchIndex->articleMetadataChanged($publishedArticle);
@@ -1017,7 +1026,7 @@ class IssueManagementHandler extends EditorHandler {
         if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
         // Send a notification to associated users
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $roleDao = DAORegistry::getDAO('RoleDAO');
         $notificationUsers = [];
@@ -1068,7 +1077,7 @@ class IssueManagementHandler extends EditorHandler {
         $issueDao->updateIssue($issue);
 
         // insert article tombstones for all articles
-        import('app.Domain.Article.ArticleTombstoneManager');
+        
         $articleTombstoneManager = new ArticleTombstoneManager();
         $publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
         $publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
@@ -1101,7 +1110,7 @@ class IssueManagementHandler extends EditorHandler {
         $user = $request->getUser();
         $templateMgr = TemplateManager::getManager();
 
-        import('app.Domain.Mail.MassMail');
+        
         $email = new MassMail('PUBLISH_NOTIFY');
 
         // [SECURITY FIX] Secure casting
@@ -1136,7 +1145,7 @@ class IssueManagementHandler extends EditorHandler {
                     $recipients = null;
             }
 
-            import('core.Modules.validation.ValidatorEmail');
+            
             $emails = [];
             while ($recipients && !$recipients->eof()) {
                 $recipient = $recipients->next();
@@ -1249,7 +1258,6 @@ class IssueManagementHandler extends EditorHandler {
                 Request::redirect(null, null, 'createIssue');
             }
         }
-
 
         if (!Validation::isEditor($journal->getId())) {
             if (isset($journal) && $allowLayoutEditor && Validation::isLayoutEditor($journal->getId())) {

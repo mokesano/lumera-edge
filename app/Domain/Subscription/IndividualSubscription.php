@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\Subscription;
 namespace App\Domain\Subscription;
-
 
 /**
  * @defgroup subscription
@@ -22,8 +22,6 @@ namespace App\Domain\Subscription;
  * @brief Basic class describing an individual (non-institutional) subscription.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.Subscription');
 
 class IndividualSubscription extends Subscription {
 

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Install\Installer;
+Lumera\Modules\File\FileManager;
+namespace Lumera\Modules\install;
+
 /**
  * @defgroup install
  */
@@ -22,8 +26,6 @@ declare(strict_types=1);
  * - Create the database (optionally), and install the database tables and initial data.
  * - Update the config file with installation parameters.
  */
-
-import('core.Modules.install.Installer');
 
 class CoreInstall extends Installer {
 
@@ -101,7 +103,6 @@ class CoreInstall extends Installer {
         return parent::preInstall();
     }
 
-
     //
     // Installer actions
     //
@@ -128,7 +129,7 @@ class CoreInstall extends Installer {
         } else {
             // Create required subdirectories
             $dirsToCreate = $this->getCreateDirectories();
-            import('core.Modules.file.FileManager');
+            
             $fileManager = new FileManager();
             foreach ($dirsToCreate as $dirName) {
                 $dirToCreate = $this->getParam('filesDir') . '/' . $dirName;
@@ -150,7 +151,7 @@ class CoreInstall extends Installer {
         } else {
             // Create required subdirectories
             $dirsToCreate = $this->getCreateDirectories();
-            import('core.Modules.file.FileManager');
+            
             $fileManager = new FileManager();
             foreach ($dirsToCreate as $dirName) {
                 $dirToCreate = $publicFilesDir . '/' . $dirName;

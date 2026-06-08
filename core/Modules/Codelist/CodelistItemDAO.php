@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Codelist\CodelistItem;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Codelist;
  *
  * @brief Parent class for operations involving Codelist objects.
  */
-
-import('core.Modules.Codelist.CodelistItem');
 
 class CodelistItemDAO extends DAO {
 

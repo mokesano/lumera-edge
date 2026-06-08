@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Announcement\AnnouncementHandler;
 namespace App\Pages\Announcement;
 
 /**
@@ -23,6 +24,6 @@ switch ($op) {
     case 'index':
     case 'view':
         define('HANDLER_CLASS', \App\Pages\Announcement\AnnouncementHandler::class);
-        import('app.Pages.Announcement.AnnouncementHandler');
+        
         break;
 }

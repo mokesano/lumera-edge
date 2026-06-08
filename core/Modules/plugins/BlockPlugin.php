@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\LazyLoadPlugin;
+namespace Lumera\Modules\plugins;
+
 /**
  * @file core.Modules.plugins/BlockPlugin.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
 define('BLOCK_CONTEXT_LEFT_SIDEBAR',		0x00000001);
 define('BLOCK_CONTEXT_RIGHT_SIDEBAR',		0x00000002);
 define('BLOCK_CONTEXT_HOMEPAGE',		0x00000003);
-
-import('core.Modules.plugins.LazyLoadPlugin');
 
 class BlockPlugin extends LazyLoadPlugin {
     
@@ -96,7 +97,6 @@ class BlockPlugin extends LazyLoadPlugin {
 	function setBlockContext($context) {
 		return $this->updateContextSpecificSetting($this->getSettingMainContext(), 'context', $context, 'int');
 	}
-
 
 	/**
 	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.

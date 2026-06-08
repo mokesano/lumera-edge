@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\User\InterestManager;
+namespace Lumera\Modules\user;
+
 /**
  * @defgroup user
  */
@@ -600,7 +603,7 @@ class CoreUser extends DataObject {
      */
     public function getUserInterests() {
         if (Config::getVar('debug', 'deprecation_warnings')) trigger_error('Deprecated function.');
-        import('core.Modules.user.InterestManager');
+        
         $interestManager = new InterestManager();
         return $interestManager->getInterestsForUser($this);
     }
@@ -610,7 +613,7 @@ class CoreUser extends DataObject {
      * @return string
      */
     public function getInterestString() {
-        import('core.Modules.user.InterestManager');
+        
         $interestManager = new InterestManager();
         return $interestManager->getInterestsString($this);
     }

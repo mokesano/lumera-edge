@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorInSet;
+namespace Lumera\Modules\form\validation;
+
 /**
  * @file core.Modules.form/validation/FormValidatorInSet.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  * @brief Form validation check that checks if value is within a certain set.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorInSet extends FormValidator {
 
@@ -57,7 +59,7 @@ class FormValidatorInSet extends FormValidator {
      * @return boolean
      */
     public function isValid() {
-        import('core.Modules.validation.ValidatorInSet');
+        
         $validator = new ValidatorInSet($this->_acceptedValues);
         return $this->isEmptyAndOptional() || $validator->isValid($this->getFieldValue());
     }

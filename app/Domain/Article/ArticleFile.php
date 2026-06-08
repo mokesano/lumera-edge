@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\SubmissionFile;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Article;
 
 /**
@@ -20,8 +22,6 @@ namespace App\Domain\Article;
  * - PHP 8.x Compatibility (Constructors, Visibility)
  * - Null Safety on File Paths
  */
-
-import('app.Domain.Submission.SubmissionFile');
 
 /* File type IDs */
 define('ARTICLE_FILE_SUBMISSION', 0x000001);
@@ -70,7 +70,7 @@ class ArticleFile extends SubmissionFile {
 
         $journalId = $article->getJournalId();
 
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($this->getArticleId());
         
         return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .

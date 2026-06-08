@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/APCuCache.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Provides caching based on APCu's variable store.
  * [WIZDAM] Renamed from APCCache to APCuCache to reflect modern PHP usage.
  */
-
-import('core.Modules.cache.GenericCache');
 
 class APCuCache extends GenericCache {
     

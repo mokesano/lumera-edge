@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+namespace Lumera\Modules\db;
+
 /**
  * @file core.Modules.db/DAORegistry.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  * @brief Maintains a static list of DAO objects so each DAO is instantiated only once.
  * MODERNIZED FOR PHP 7.4+
  */
-
-import('core.Modules.db.DAO');
 
 class DAORegistry {
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Wizdam\Trends\MostPopularDAO;
 namespace App\Services\Trends;
 
 /**
@@ -27,7 +28,7 @@ class WizdamTrendsManager {
      * @param CoreRequest $request The current request object for URL generation.
      */
     public static function assignMostPopularPayload(TemplateManager $templateMgr, ?Journal $journal, CoreRequest $request): void {
-        import('lib.wizdam.trends.MostPopularDAO');
+        
         $popularDao = new MostPopularDAO();
         
         $articlesPayload = [];

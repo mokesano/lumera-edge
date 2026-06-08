@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
+namespace Lumera\Modules\security\authorization;
+
 /**
  * @file core.Modules.security/authorization/PolicySet.inc.php
  *
@@ -23,7 +26,6 @@ define('COMBINING_PERMIT_OVERRIDES', 0x02);
 
 // Include the authorization policy class which contains
 // definitions for the deny and permit effects.
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class PolicySet {
     /** @var array */

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\dataverse\classes\api;
+
 /**
  * @file plugins/generic/dataverse/classes/api/DataverseApiClient.inc.php
  * 

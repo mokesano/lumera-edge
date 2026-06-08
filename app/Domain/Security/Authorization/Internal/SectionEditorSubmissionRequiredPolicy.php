@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\DataObjectRequiredPolicy;
 namespace App\Domain\Security\Authorization\Internal;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Security\Authorization\Internal;
  * editor submission.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.security.authorization.DataObjectRequiredPolicy');
 
 class SectionEditorSubmissionRequiredPolicy extends DataObjectRequiredPolicy {
     

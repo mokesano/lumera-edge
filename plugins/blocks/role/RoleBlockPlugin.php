@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/role/RoleBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for role block plugin
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class RoleBlockPlugin extends BlockPlugin {
     

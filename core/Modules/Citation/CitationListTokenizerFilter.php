@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Citation;
  * @brief Class that takes an unformatted list of citations
  * and returns an array of raw citation strings.
  */
-
-import('core.Modules.filter.Filter');
 
 class CitationListTokenizerFilter extends Filter {
     

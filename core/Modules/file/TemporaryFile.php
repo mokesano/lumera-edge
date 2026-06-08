@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\CoreFile;
+Lumera\Modules\File\CoreTemporaryFileManager;
+namespace Lumera\Modules\file;
+
 /**
  * @file core.Modules.file/TemporaryFile.inc.php
  *
@@ -14,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief Temporary file class.
  */
-
-import('core.Modules.file.CoreFile');
 
 class TemporaryFile extends CoreFile {
 
@@ -41,7 +43,7 @@ class TemporaryFile extends CoreFile {
      * @return string
      */
     public function getFilePath() {
-        import('core.Modules.file.CoreTemporaryFileManager');
+        
         $temporaryFileManager = new CoreTemporaryFileManager();
         return $temporaryFileManager->getBasePath() . $this->getFileName();
     }

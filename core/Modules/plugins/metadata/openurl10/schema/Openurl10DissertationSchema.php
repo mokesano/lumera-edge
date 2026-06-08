@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10BaseSchema;
+namespace Lumera\Modules\plugins\metadata\openurl10\schema;
+
 /**
  * @defgroup plugins_metadata_openurl10_schema
  */
@@ -21,8 +24,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.plugins.metadata.openurl10.schema.Openurl10BaseSchema');
 
 // "dissertation" is not defined as genre in the standard. We only use it internally.
 define('OPENURL10_PSEUDOGENRE_DISSERTATION', 'dissertation');

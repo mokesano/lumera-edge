@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\FileWrapper;
+namespace Lumera\Modules\file;
+
 /**
  * @file core.Modules.file/EditableFile.inc.php
  *
@@ -27,7 +30,7 @@ class EditableFile {
      * @param $filename string
      */
     public function __construct($filename) {
-        import('core.Modules.file.FileWrapper');
+        
         $this->filename = $filename;
         // Modernisasi: Hapus &
         $wrapper = FileWrapper::wrapper($this->filename);

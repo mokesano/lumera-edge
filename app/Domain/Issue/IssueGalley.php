@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Issue\IssueFile;
 namespace App\Domain\Issue;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Issue;
  *
  * @brief A galley is a final presentation version of the full-text of an issue.
  */
-
-import('app.Domain.Issue.IssueFile');
 
 class IssueGalley extends IssueFile {
 

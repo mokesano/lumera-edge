@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Install\CoreInstall;
 namespace App\Domain\Install;
 
 /**
@@ -25,8 +26,6 @@ namespace App\Domain\Install;
 // Default installation data
 define('INSTALLER_DEFAULT_SITE_TITLE', 'common.wizdamEditorialSystems');
 define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 12);
-
-import('core.Modules.install.CoreInstall');
 
 class Install extends CoreInstall {
 

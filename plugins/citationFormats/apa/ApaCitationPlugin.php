@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationPlugin;
 /**
  * @file plugins/citationFormats/apa/ApaCitationPlugin.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief APA citation format plugin
  */
-
-import('core.Modules.plugins.CitationPlugin');
 
 class ApaCitationPlugin extends CitationPlugin {
     

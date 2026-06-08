@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridColumn;
+namespace Lumera\Modules\controllers\listbuilder;
+
 /**
  * @file core.Modules.controllers/listbuilder/ListbuilderGridColumn.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Represents a column within a listbuilder.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.GridColumn');
 
 class ListbuilderGridColumn extends GridColumn {
 

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Manager\Form\SectionForm;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for section management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class SectionHandler extends ManagerHandler {
     
@@ -88,7 +88,7 @@ class SectionHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Manager.form.SectionForm');
+        
 
         $sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
         if ($sectionForm->isLocaleResubmit()) {
@@ -111,7 +111,7 @@ class SectionHandler extends ManagerHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Manager.form.SectionForm');
+        
         $sectionForm = new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 
         // [SECURITY FIX] Amankan 'editorAction' (string key) dengan trim()

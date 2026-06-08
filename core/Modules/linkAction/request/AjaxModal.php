@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\Modal;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/AjaxModal.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief A modal that retrieves its content from via AJAX.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.Modal');
 
 class AjaxModal extends Modal {
     /** @var string The URL to be loaded into the modal. */
@@ -56,7 +57,6 @@ class AjaxModal extends Modal {
     public function getUrl(): string {
         return $this->_url;
     }
-
 
     //
     // Overridden methods from LinkActionRequest

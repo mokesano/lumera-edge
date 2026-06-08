@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\DataObjectGridCellProvider;
+namespace Lumera\Modules\controllers\grid\citation;
+
 /**
  * @file core.Modules.controllers/grid/citation/CoreCitationGridCellProvider.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Grid cell provider for the citation editor grid.
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-
-import('core.Modules.controllers.grid.DataObjectGridCellProvider');
 
 class CoreCitationGridCellProvider extends DataObjectGridCellProvider {
     
@@ -62,7 +63,6 @@ class CoreCitationGridCellProvider extends DataObjectGridCellProvider {
         
         return $templateVars;
     }
-
 
     /**
      * @see GridCellProvider::getCellActions()

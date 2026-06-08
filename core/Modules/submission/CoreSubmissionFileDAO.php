@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\CoreFileDAO;
+Lumera\Modules\File\FileManager;
+namespace Lumera\Modules\submission;
+
 /**
  * @file core.Modules.submission/CoreSubmissionFileDAO.inc.php
  *
@@ -20,8 +24,6 @@ declare(strict_types=1);
  * instantiates and uses delegates internally to provide the right database
  * access behaviour depending on the type of the accessed file.
  */
-
-import('core.Modules.file.CoreFileDAO');
 
 class CoreSubmissionFileDAO extends CoreFileDAO {
     
@@ -48,7 +50,6 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
         self::__construct();
     }
 
-
     //
     // Public methods
     //
@@ -70,7 +71,6 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
         $revisions = $this->_getInternally($submissionId, $fileStage, $fileId, $revision);
         return $this->_checkAndReturnRevision($revisions);
     }
-
 
     /**
      * Retrieve the latest revision of a file.
@@ -282,7 +282,7 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
             $targetFilePath = $updatedFile->getFilePath();
             // assert($previousFilePath != $targetFilePath && !file_exists($targetFilePath));
             
-            import('core.Modules.file.FileManager');
+            
             $fileManager = new FileManager();
             $fileManager->copyFile($previousFilePath, $targetFilePath);
 
@@ -458,7 +458,6 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
         return $newSubmissionFile;
     }
 
-
     //
     // Abstract template methods to be implemented by subclasses.
     //
@@ -501,7 +500,6 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
         assert(false);
     }
 
-
     //
     // Protected helper methods
     //
@@ -518,7 +516,6 @@ class CoreSubmissionFileDAO extends CoreFileDAO {
         // Let the DAO delegate instantiate the file implementation.
         return $daoDelegate->fromRow($row);
     }
-
 
     //
     // Private helper methods

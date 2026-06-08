@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Subscription\IndividualSubscription;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +23,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form class for user purchase of individual subscription.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class UserIndividualSubscriptionForm extends Form {
     /** @var $request CoreRequest */
@@ -160,7 +160,7 @@ class UserIndividualSubscriptionForm extends Form {
         $insert = false;
 
         if (!isset($this->subscription)) {
-            import('app.Domain.Subscription.IndividualSubscription');
+            
             $subscription = new IndividualSubscription();
             $subscription->setJournalId($journalId);
             $subscription->setUserId($this->userId);
@@ -172,7 +172,7 @@ class UserIndividualSubscriptionForm extends Form {
             $subscription = $this->subscription;
         }
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($this->request);
         $paymentPlugin = $paymentManager->getPaymentPlugin();
         

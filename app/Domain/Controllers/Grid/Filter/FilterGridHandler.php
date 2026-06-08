@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Controllers\Grid\Filter\CoreFilterGridHandler;
+Lumera\Domain\Handler\Validation\HandlerValidatorJournal;
+Lumera\Domain\Handler\Validation\HandlerValidatorRoles;
+Lumera\Domain\Security\Authorization\AppJournalAccessPolicy;
 namespace App\Domain\Controllers\Grid\Filter;
 
 /**
@@ -17,11 +21,7 @@ namespace App\Domain\Controllers\Grid\Filter;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-import('app.Domain.Controllers.grid.filter.CoreFilterGridHandler');
-
 // import validation classes
-import('app.Domain.Handler.Validation.HandlerValidatorJournal');
-import('app.Domain.Handler.validation.HandlerValidatorRoles');
 
 class FilterGridHandler extends CoreFilterGridHandler {
     
@@ -49,7 +49,6 @@ class FilterGridHandler extends CoreFilterGridHandler {
         self::__construct();
     }
 
-
     //
     // Implement template methods from CoreHandler
     //
@@ -65,7 +64,7 @@ class FilterGridHandler extends CoreFilterGridHandler {
         if (!$request) $request = Application::get()->getRequest();
 
         // Make sure the user can change the journal setup.
-        import('app.Domain.Security.Authorization.AppJournalAccessPolicy');
+        
         $this->addPolicy(new AppJournalAccessPolicy($request, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }

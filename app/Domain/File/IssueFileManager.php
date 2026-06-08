@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\FileManager;
+Lumera\Domain\Issue\IssueFile;
 namespace App\Domain\File;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\File;
  * Issue directory structure:
  * [issue id]/public
  */
-
-import('app.Domain.File.FileManager');
-import('app.Domain.Issue.IssueFile');
 
 class IssueFileManager extends FileManager {
 

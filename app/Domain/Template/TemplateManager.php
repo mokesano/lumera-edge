@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Search\ArticleSearch;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Domain\Template\CoreTemplateManager;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Help\Help;
 namespace App\Domain\Template;
 
 /**
@@ -17,10 +22,6 @@ namespace App\Domain\Template;
  * Currently integrated with Smarty (from http://smarty.php.net/).
  * WIZDAM EDITION: Singleton Fix & PHP 8 Compatibility
  */
-
-import('app.Domain.Search.ArticleSearch');
-import('app.Domain.File.PublicFileManager');
-import('app.Domain.Template.CoreTemplateManager');
 
 class TemplateManager extends CoreTemplateManager {
     
@@ -110,7 +111,7 @@ class TemplateManager extends CoreTemplateManager {
                     $this->addStyleSheet($this->request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . $journalStyleSheet['uploadName']);
                 }
 
-                import('app.Domain.Payment.AppPaymentManager');
+                
                 $paymentManager = new AppPaymentManager($this->request);
                 $this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 
@@ -181,7 +182,7 @@ class TemplateManager extends CoreTemplateManager {
      * @return numerical help topic id
      */
     public function smartyGetHelpId($params, &$smarty) {
-        import('app.Domain.Help.Help');
+        
         $help = Help::getHelp();
         if (isset($params) && !empty($params)) {
             if (isset($params['key'])) {
@@ -209,7 +210,7 @@ class TemplateManager extends CoreTemplateManager {
      * @return anchor link to related help topic
      */
     public function smartyHelpTopic($params, &$smarty) {
-        import('app.Domain.Help.Help');
+        
         $help = Help::getHelp();
         if (isset($params) && !empty($params)) {
             $translatedKey = isset($params['key']) ? $help->translate($params['key']) : $help->translate('');

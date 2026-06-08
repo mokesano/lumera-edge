@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+namespace Lumera\Plugins\Paymethod\Paypal;
+
 /**
  * @file plugins/paymethod/paypal/PayPalDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Operations for retrieving and modifying Transactions objects.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.db.DAO');
 
 class PayPalDAO extends DAO {
     
@@ -100,5 +101,3 @@ class PayPalDAO extends DAO {
         return $returner;
     }
 }
-
-?>

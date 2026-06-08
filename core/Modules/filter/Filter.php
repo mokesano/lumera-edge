@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
+Lumera\Modules\Filter\TypeDescription;
+Lumera\Modules\Filter\TypeDescriptionFactory;
+Lumera\Kernel\RuntimeEnvironment;
+namespace Lumera\Modules\filter;
+
 /**
  * @file core.Modules.filter/Filter.inc.php
  *
@@ -15,10 +21,6 @@ declare(strict_types=1);
  * generic data processors that take in a well-specified data type
  * and return another well-specified data type.
  */
-
-import('core.Kernel.DataObject');
-import('core.Modules.filter.TypeDescription');
-import('core.Modules.filter.TypeDescriptionFactory');
 
 class Filter extends DataObject {
     /** @var TypeDescription */
@@ -239,7 +241,6 @@ class Filter extends DataObject {
         return $this->_runtimeEnvironment;
     }
 
-
     //
     // Abstract template methods to be implemented by subclasses
     //
@@ -343,7 +344,7 @@ class Filter extends DataObject {
             // If we found any runtime restrictions then construct a
             // runtime environment from the settings.
             if ($hasRuntimeSettings) {
-                import('core.Kernel.RuntimeEnvironment');
+                
                 $this->_runtimeEnvironment = new RuntimeEnvironment($phpVersionMin, $phpVersionMax, $phpExtensions, $externalPrograms);
             } else {
                 // Set null so that we don't try to construct

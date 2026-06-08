@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Crossref\Classes\DOIExportPlugin;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\CrossRefExportDom;
+Lumera\Kernel\JSONManager;
+namespace Lumera\Plugins\Importexport\crossref;
+
 /**
  * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
@@ -16,7 +22,7 @@ declare(strict_types=1);
  */
 
 if (!class_exists('DOIExportPlugin')) { // Bug #7848
-    import('plugins.importexport.crossref.classes.DOIExportPlugin');
+    
 }
 
 define('CROSSREF_STATUS_SUBMITTED', 'submitted');
@@ -63,7 +69,6 @@ class CrossRefExportPlugin extends DOIExportPlugin {
         $args = func_get_args();
         call_user_func_array(array($this, '__construct'), $args);
     }
-
 
     //
     // Implement template methods from ImportExportPlugin
@@ -112,7 +117,6 @@ class CrossRefExportPlugin extends DOIExportPlugin {
         }
         return $success;
     }
-
 
     //
     // Implement template methods from DOIExportPlugin
@@ -275,7 +279,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
             $articleData = array_slice($articleData, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
         }
         // Instantiate article iterator.
-        import('core.Kernel.VirtualArrayIterator');
+        
         $iterator = new VirtualArrayIterator($articleData, $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
         // Prepare and display the article template.
@@ -324,7 +328,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
         // Additional locale file.
         AppLocale::requireComponents(array(LOCALE_COMPONENT_WIZDAM_EDITOR));
 
-        $this->import('core.Modules.CrossRefExportDom');
+        $this->
         $dom = new CrossRefExportDom($request, $this, $journal, $this->getCache());
         $doc = $dom->generate($objects);
         if ($doc === false) {
@@ -348,7 +352,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
      */
     public function processMarkRegistered($request, $exportType, $objects, $journal): void {
         $articleDao = DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
-        $this->import('core.Modules.CrossRefExportDom');
+        $this->
         $dom = new CrossRefExportDom($request, $this, $journal, $this->getCache());
         $statusUpdatePossible = $this->getSetting($journal->getId(), 'username') && $this->getSetting($journal->getId(), 'password');
         foreach($objects as $object) {
@@ -442,7 +446,7 @@ class CrossRefExportPlugin extends DOIExportPlugin {
      */
     public function updateDepositStatus($request, $journal, $article) {
         $articleDao = DAORegistry::getDAO('ArticleDAO');  /* @var $articleDao ArticleDAO */
-        import('core.Kernel.JSONManager');
+        
         $jsonManager = new JSONManager();
 
         // Prepare HTTP session.

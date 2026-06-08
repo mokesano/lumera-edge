@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+namespace Lumera\Plugins\Generic\googleViewer;
+
 /**
  * @file plugins/generic/googleViewer/GoogleViewerPlugin.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class GoogleViewerPlugin extends GenericPlugin {
 

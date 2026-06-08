@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+namespace Lumera\Plugins\Generic\customBlockManager;
+
 /**
  * @file plugins/generic/customBlockManager/SettingsForm.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief Form for custom block manager settings.
  */
-
-import('core.Modules.form.Form');
 
 class SettingsForm extends Form {
 

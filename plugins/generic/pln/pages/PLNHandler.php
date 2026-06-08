@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+namespace Lumera\Plugins\Generic\pln\pages;
+
 /**
  * @file plugins/generic/pln/pages/PLNHandler.inc.php
  *
@@ -15,8 +18,6 @@ declare(strict_types=1);
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
 
 class PLNHandler extends Handler {
 

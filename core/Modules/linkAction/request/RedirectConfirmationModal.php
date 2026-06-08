@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\ConfirmationModal;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/RedirectConfirmationModal.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Class defining a simple confirmation modal with a redirect url and ok/cancel buttons.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.ConfirmationModal');
 
 class RedirectConfirmationModal extends ConfirmationModal {
     /** @var string|null A URL to be redirected to when the confirmation button is clicked. */

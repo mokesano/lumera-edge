@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ControlledVocab\ControlledVocabDAO;
 namespace App\Domain\Journal\Categories;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Journal\Categories;
  * @brief Operations for retrieving and modifying Category objects
  * [WIZDAM] Cache mechanism updated to use .wiz extension
  */
-
-import('core.Modules.ControlledVocab.ControlledVocabDAO');
 
 define('CATEGORY_SYMBOLIC', 'category');
 

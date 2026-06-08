@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationAdapter;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -26,10 +29,6 @@ define('CITATION_CHECKED', 0x02);
 define('CITATION_PARSED', 0x03);
 define('CITATION_LOOKED_UP', 0x04);
 define('CITATION_APPROVED', 0x05);
-
-import('core.Kernel.DataObject');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter');
 
 class Citation extends DataObject {
 

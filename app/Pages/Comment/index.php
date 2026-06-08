@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Comment\CommentHandler;
 namespace App\Pages\Comment;
 
 /**
@@ -24,6 +25,6 @@ switch ($op) {
     case 'add':
     case 'delete':
         define('HANDLER_CLASS', \App\Pages\Comment\CommentHandler::class);
-        import('app.Pages.Comment.CommentHandler');
+        
         break;
 }

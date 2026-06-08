@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\LinkActionRequest;
+namespace Lumera\Modules\linkAction\request;
+
 /**
  * @file core.Modules.linkAction/request/AjaxAction.inc.php
  *
@@ -17,8 +20,6 @@ declare(strict_types=1);
 
 define('AJAX_REQUEST_TYPE_GET', 'get');
 define('AJAX_REQUEST_TYPE_POST', 'post');
-
-import('core.Modules.linkAction.request.LinkActionRequest');
 
 class AjaxAction extends LinkActionRequest {
 
@@ -70,7 +71,6 @@ class AjaxAction extends LinkActionRequest {
     public function getRequestType(): string {
         return $this->_requestType;
     }
-
 
     //
     // Overridden protected methods from LinkActionRequest

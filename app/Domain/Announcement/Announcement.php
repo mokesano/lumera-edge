@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Announcement\CoreAnnouncement;
 namespace App\Domain\Announcement;
 
 /**
@@ -24,8 +25,6 @@ namespace App\Domain\Announcement;
  * - PHP 8.x Compatibility (Constructor)
  * - Strict SHIM
  */
-
-import('app.Domain.Announcement.CoreAnnouncement');
 
 class Announcement extends CoreAnnouncement {
     

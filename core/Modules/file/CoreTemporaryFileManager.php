@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\PrivateFileManager;
+namespace Lumera\Modules\file;
+
 /**
  * @file core.Modules.file/CoreTemporaryFileManager.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Class defining operations for temporary file management.
  */
-
-import('core.Modules.file.PrivateFileManager');
 
 class CoreTemporaryFileManager extends PrivateFileManager {
     

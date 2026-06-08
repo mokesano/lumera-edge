@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Subscription\SubscriptionAction;
+Lumera\Domain\Manager\Form\UserManagementForm;
+Lumera\Domain\Payment\AppPaymentAction;
 namespace App\Pages\SubscriptionManager;
 
 /**
@@ -15,8 +19,6 @@ namespace App\Pages\SubscriptionManager;
  *
  * @brief Handle requests for subscription management functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class SubscriptionManagerHandler extends Handler {
     
@@ -64,7 +66,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::subscriptionsSummary();
     }
 
@@ -91,7 +93,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate();
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::subscriptions($institutional);
     }
 
@@ -120,7 +122,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate();
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::deleteSubscription($args, $institutional);
 
         $request->redirect(null, null, 'subscriptions', $redirect);
@@ -151,7 +153,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate();
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::renewSubscription($args, $institutional);
 
         $request->redirect(null, null, 'subscriptions', $redirect);
@@ -182,7 +184,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate(true, $institutional);
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         $editSuccess = SubscriptionAction::editSubscription($args, $institutional);
 
         if (!$editSuccess) {
@@ -224,7 +226,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate(true, $institutional);
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::selectSubscriber($args, $institutional);
     }
 
@@ -253,7 +255,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->setupTemplate(true, $institutional);
 
         array_shift($args);
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         $updateSuccess = SubscriptionAction::updateSubscription($args, $institutional);
 
         // [SECURITY FIX] Amankan 'createAnother' sebagai flag boolean dengan (int) trim()
@@ -292,7 +294,7 @@ class SubscriptionManagerHandler extends Handler {
 
         array_shift($args);
         $subscriptionId = (int) $args[0];
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::resetDateReminded($args, $institutional);
 
         $request->redirect(null, null, 'editSubscription', [$redirect, $subscriptionId]);
@@ -314,7 +316,7 @@ class SubscriptionManagerHandler extends Handler {
         $templateMgr->addJavaScript('public/js/core-library/lib/jquery/plugins/jquery.tablednd.js');
         $templateMgr->addJavaScript('public/js/core-library/functions/tablednd.js');
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::subscriptionTypes();
     }
 
@@ -330,7 +332,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::moveSubscriptionType($args);
 
         $request->redirect(null, null, 'subscriptionTypes');
@@ -348,7 +350,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::deleteSubscriptionType($args);
 
         $request->redirect(null, null, 'subscriptionTypes');
@@ -369,7 +371,7 @@ class SubscriptionManagerHandler extends Handler {
         $templateMgr = TemplateManager::getManager();
         $templateMgr->append('pageHierarchy', [$request->url(null, 'subscriptionManager', 'subscriptionTypes'), 'subscriptionManager.subscriptionTypes']);
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         $editSuccess = SubscriptionAction::editSubscriptionType($args);
 
         if (!$editSuccess) {
@@ -401,7 +403,7 @@ class SubscriptionManagerHandler extends Handler {
         $templateMgr = TemplateManager::getManager();
         $templateMgr->append('pageHierarchy', [$request->url(null, 'subscriptionManager', 'subscriptionTypes'), 'subscriptionManager.subscriptionTypes']);
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         $updateSuccess = SubscriptionAction::updateSubscriptionType();
 
         // [SECURITY FIX] Amankan 'createAnother' sebagai flag boolean dengan (int) trim()
@@ -426,7 +428,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::subscriptionPolicies($args, $request);
     }
 
@@ -442,7 +444,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Subscription.SubscriptionAction');
+        
         SubscriptionAction::saveSubscriptionPolicies($args, $request);
     }
 
@@ -462,7 +464,7 @@ class SubscriptionManagerHandler extends Handler {
 
         $templateMgr = TemplateManager::getManager();
 
-        import('app.Domain.Manager.form.UserManagementForm');
+        
 
         $templateMgr->assign('currentUrl', $request->url(null, null, 'createUser'));
         $userForm = new UserManagementForm();
@@ -488,7 +490,7 @@ class SubscriptionManagerHandler extends Handler {
 
         $journal = $request->getJournal();
 
-        import('app.Domain.Manager.form.UserManagementForm');
+        
 
         $userForm = new UserManagementForm();
         $userForm->readInputData();
@@ -535,7 +537,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::payments($args);
     }
 
@@ -551,7 +553,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         $success = AppPaymentAction::savePaymentSettings($args);
 
         if ($success) {
@@ -579,7 +581,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::viewPayments($args);
     }
 
@@ -595,7 +597,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::viewPayment($args);
     }
 
@@ -611,7 +613,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         AppPaymentAction::payMethodSettings();
     }
 
@@ -627,7 +629,7 @@ class SubscriptionManagerHandler extends Handler {
         $this->validate($request);
         $this->setupTemplate();
 
-        import('app.Domain.Payment.AppPaymentAction');
+        
         $success = AppPaymentAction::savePayMethodSettings();
 
         if ($success) {

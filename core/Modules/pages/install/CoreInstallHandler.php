@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Install\Form\InstallForm;
+Lumera\Modules\Install\Form\UpgradeForm;
+Lumera\Modules\Handler\Handler;
+namespace Lumera\Modules\pages\install;
+
 /**
  * @file pages/install/CoreInstallHandler.inc.php
  *
@@ -15,10 +20,6 @@ declare(strict_types=1);
  *
  * [WIZDAM EDITION] REFACTOR: PHP 8.1+ Compatibility, Logic Fixes, Strict Types
  */
-
-import('core.Modules.install.form.InstallForm');
-import('core.Modules.install.form.UpgradeForm');
-import('core.Modules.handler.Handler');
 
 class CoreInstallHandler extends Handler {
 

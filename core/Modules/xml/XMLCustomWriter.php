@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLNode;
+Lumera\Modules\Xml\XMLComment;
+namespace Lumera\Modules\xml;
+
 /**
  * @file core.Modules.xml/XMLCustomWriter.inc.php
  *
@@ -14,9 +18,6 @@ declare(strict_types=1);
  * @brief Wrapper class for writing XML documents using PHP 4.x or 5.x
  * * REFACTORED: Wizdam Edition (PHP 8 Static Methods, No References)
  */
-
-import ('core.Modules.xml.XMLNode');
-import ('core.Modules.xml.XMLComment');
 
 class XMLCustomWriter {
     

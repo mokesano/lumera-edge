@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\ItemIterator;
+Lumera\Modules\Db\DBResultRange;
 namespace Lumera\Kernel;
 
 /**
@@ -15,9 +17,6 @@ namespace Lumera\Kernel;
  *
  * @brief Provides paging and iteration for arrays.
  */
-
-
-import('core.Kernel.ItemIterator');
 
 class ArrayItemIterator extends ItemIterator {
 
@@ -185,7 +184,7 @@ class ArrayItemIterator extends ItemIterator {
      * @return object DBResultRange
      */
     public function getLastPageRangeInfo() {
-        import('core.Modules.db.DBResultRange');
+        
         $returner = new DBResultRange(
             $this->itemsPerPage,
             $this->getPageCount()

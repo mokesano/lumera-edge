@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Rt\RTHandler;
 namespace App\Pages\Rt;
 
 /**
@@ -31,6 +32,6 @@ switch ($op) {
     case 'suppFileMetadata':
     case 'findingReferences':
         define('HANDLER_CLASS', \App\Pages\Rt\RTHandler::class);
-        import('app.Pages.Rt.RTHandler');
+        
         break;
 }

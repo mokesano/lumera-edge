@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\File\ArticleFileManager;
+namespace Lumera\Plugins\Importexport\erudit;
+
 /**
  * @file plugins/importexport/erudit/EruditExportDom.inc.php
  *
@@ -13,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Erudit plugin DOM functions for export
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 class EruditExportDom {
 
@@ -130,7 +132,6 @@ class EruditExportDom {
         XMLCustomWriter::setAttribute($digdistNode, 'id', 'wizdam-dist-' . $journal->getId() . '-' . $issue->getId() . '-' . $article->getId());
         XMLCustomWriter::appendChild($adminNode, $digdistNode);
 
-
         $dtdNode = XMLCustomWriter::createElement($doc, 'dtd');
         XMLCustomWriter::appendChild($adminNode, $dtdNode);
         XMLCustomWriter::setAttribute($dtdNode, 'name', 'Erudit Article');
@@ -149,7 +150,6 @@ class EruditExportDom {
         XMLCustomWriter::appendChild($frontMatterNode, $titleGroupNode);
 
         XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getTitle($article->getLocale())));
-
 
         /* --- authorgr --- */
 
@@ -177,7 +177,6 @@ class EruditExportDom {
             $authorNum++;
         }
 
-
         /* --- abstract and keywords --- */
         foreach ((array) $article->getAbstract(null) as $locale => $abstract) {
             $abstract = strip_tags($abstract);
@@ -203,7 +202,7 @@ class EruditExportDom {
         $bodyNode = XMLCustomWriter::createElement($doc, 'body');
         XMLCustomWriter::appendChild($root, $bodyNode);
 
-        import('core.Modules.file.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($article->getId());
         $file = $articleFileManager->getFile($galley->getFileId());
 

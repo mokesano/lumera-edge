@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleFile;
 namespace App\Domain\Article;
 
 /**
@@ -20,8 +21,6 @@ namespace App\Domain\Article;
  * - PHP 8.x Compatibility (Constructor hierarchy fix, Ref removal)
  * - Null Safety
  */
-
-import('app.Domain.Article.ArticleFile');
 
 class ArticleGalley extends ArticleFile {
 

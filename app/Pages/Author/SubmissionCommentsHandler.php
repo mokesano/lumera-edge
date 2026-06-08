@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Author\TrackSubmissionHandler;
 namespace App\Pages\Author;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Author;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.author.TrackSubmissionHandler');
 
 class SubmissionCommentsHandler extends AuthorHandler {
     

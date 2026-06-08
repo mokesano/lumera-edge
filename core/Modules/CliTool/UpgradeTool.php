@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\CliTool;
 /**
  * @file core.Modules.cliTool/UpgradeTool.php
  *
@@ -15,12 +16,7 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Modernized CLI Upgrade Tool.
  */
 
-
 define('RUNNING_UPGRADE', 1);
-
-import('core.Modules.install.Upgrade');
-import('core.Modules.site.Version');
-import('core.Modules.site.VersionCheck');
 
 class UpgradeTool extends CommandLineTool {
 

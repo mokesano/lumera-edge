@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Filter\FilterSetting;
+Lumera\Modules\Metadata\MetadataDescription;
+namespace Lumera\Modules\plugins\citationLookup\worldcat\filter;
+
 /**
  * @defgroup plugins_citationLookup_worldcat_filter
  */
@@ -25,10 +30,6 @@ declare(strict_types=1);
  * - Modernized DOM handling
  * - Removed reference operators
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
-import('core.Modules.filter.FilterSetting');
-import('core.Modules.metadata.MetadataDescription');
 
 // Define constants safely
 if (!defined('WORLDCAT_WEBSERVICE_SEARCH')) {

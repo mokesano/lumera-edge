@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorRegExp;
+Lumera\Modules\Validation\ValidatorISNI;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorORCID.inc.php
  *
@@ -15,8 +19,6 @@ declare(strict_types=1);
  * @brief Validation check for ORCID iDs.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Visibility, Explicit Static)
  */
-
-import('core.Modules.validation.ValidatorRegExp');
 
 class ValidatorORCID extends ValidatorRegExp {
     
@@ -57,7 +59,7 @@ class ValidatorORCID extends ValidatorRegExp {
         // Combine parts to form the 16-character string for checksum validation
         $orcid = $matches[1] . $matches[2] . $matches[3] . $matches[4];
 
-        import('core.Modules.validation.ValidatorISNI');
+        
         $validator = new ValidatorISNI();
         return $validator->isValid($orcid);
     }

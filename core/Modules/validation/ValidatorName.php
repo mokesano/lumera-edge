@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\Validator;
+namespace Lumera\Modules\validation;
+
 /**
  * @file core.Modules.validation/ValidatorName.inc.php
  *
@@ -10,8 +13,6 @@ declare(strict_types=1);
  * @brief Validation check for person names (Given Name / Surname).
  * Rejects dummy characters, repeating single characters, and universal dummy abbreviations.
  */
-
-import('core.Modules.validation.Validator');
 
 class ValidatorName extends Validator {
     

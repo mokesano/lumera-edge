@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EmailLogEntry;
+namespace Lumera\Modules\log;
+
 /**
  * @file core.Modules.log/EmailLogDAO.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Class for inserting/accessing email log entries.
  */
-
-import ('core.Modules.log.EmailLogEntry');
 
 class EmailLogDAO extends DAO {
     
@@ -237,7 +238,6 @@ class EmailLogDAO extends DAO {
     public function getInsertLogId() {
         return $this->getInsertId('email_log', 'log_id');
     }
-
 
     //
     // Private helper methods.

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+namespace Lumera\Plugins\Importexport\doaj\classes;
+
 /**
  * @file plugins/importexport/doaj/DOAJExportDom.inc.php
  *
@@ -13,8 +16,6 @@ declare(strict_types=1);
  *
  * @brief DOAJ import/export plugin DOM functions for export
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 class DOAJExportDom {
 
@@ -93,7 +94,6 @@ class DOAJExportDom {
             // check for selected articles:
             $articleId = $pubArticle->getArticleId();
             if (!empty($selectedArticles) && !in_array($articleId, $selectedArticles)) continue;
-
 
             $section = $sectionDao->getSection($pubArticle->getSectionId());
             $articleNode = self::generateArticleDom($doc, $journal, $issue, $section, $pubArticle);

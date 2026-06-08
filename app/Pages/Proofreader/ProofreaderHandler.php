@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
 namespace App\Pages\Proofreader;
 
 /**
@@ -15,9 +19,6 @@ namespace App\Pages\Proofreader;
  *
  * @brief Handle requests for proofreader functions.
  */
-
-import('app.Domain.Submission.Proofreader.ProofreaderAction');
-import('app.Domain.Handler.Handler');
 
 class ProofreaderHandler extends Handler {
     
@@ -138,7 +139,7 @@ class ProofreaderHandler extends Handler {
             SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
         ]);
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
         $templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
@@ -165,7 +166,7 @@ class ProofreaderHandler extends Handler {
             ? [[Request::url(null, 'user'), 'navigation.user'], [Request::url(null, 'proofreader'), 'user.role.proofreader']]
             : [[Request::url(null, 'user'), 'navigation.user'], [Request::url(null, 'proofreader'), 'user.role.proofreader']];
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);

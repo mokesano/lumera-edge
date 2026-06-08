@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace App\Helpers\Cart;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Helpers\Cart;
  * @brief Data Access Object untuk operasi tabel cart_items (MyISAM).
  * Terisolasi di dalam direktori Wizdam Frontedge.
  */
-
-import('core.Modules.db.DAO');
 
 class CartItemDAO extends DAO {
 

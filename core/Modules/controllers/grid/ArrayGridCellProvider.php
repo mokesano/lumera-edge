@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridCellProvider;
+namespace Lumera\Modules\controllers\grid;
+
 /**
  * @file core.Modules.controllers/grid/ArrayGridCellProvider.inc.php
  *
@@ -14,8 +17,6 @@ declare(strict_types=1);
  * @brief Base class for a cell provider that can retrieve labels from arrays
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards & Performance.
  */
-
-import('core.Modules.controllers.grid.GridCellProvider');
 
 class ArrayGridCellProvider extends GridCellProvider {
     

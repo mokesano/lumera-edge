@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\Plugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\Plugins;
  *
  * @brief Abstract class for theme plugins
  */
-
-import('app.Domain.Plugins.Plugin');
 
 class ThemePlugin extends Plugin {
 
