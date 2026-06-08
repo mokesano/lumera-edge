@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/importExport.php
+ * @file core/Modules/Tools/ImportExport.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class importExport
+ * @class ImportExport
  * @ingroup tools
  *
  * @brief CLI tool to perform import/export tasks
@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 require(__DIR__ . '/bootstrap.php');
 
-class importExport extends CommandLineTool {
+class ImportExport extends CommandLineTool {
 
     /** @var string|null */
     protected $command = '';
@@ -27,7 +27,6 @@ class importExport extends CommandLineTool {
 
     /**
      * Constructor.
-     * @param array $argv command-line arguments (see usage)
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);
@@ -96,6 +95,7 @@ class importExport extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new importExport($argv ?? []);
+$tool = new ImportExport($argv ?? []);
 $tool->execute();
+
 ?>

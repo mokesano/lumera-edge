@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/dbXMLtoSQL.php
+ * @file core/Modules/Tools/DbXmlToSql.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class dbXMLtoSQL
+ * @class DbXmlToSql
  * @ingroup tools
  *
  * @brief CLI tool to output the SQL statements corresponding to an XML database schema.
@@ -22,7 +22,7 @@ import('core.Modules.cliTool.XmlToSqlTool');
 /** Default XML file to parse if none is specified */
 define('DATABASE_XML_FILE', 'dbscripts/xml/wizdam_schema.xml');
 
-class dbXMLtoSQL extends XmlToSqlTool {
+class DbXmlToSql extends XmlToSqlTool {
     /**
      * Constructor.
      * @param array $argv command-line arguments
@@ -48,7 +48,7 @@ class dbXMLtoSQL extends XmlToSqlTool {
 }
 
 // [WIZDAM] Safe instantiation using Null Coalescing Operator
-$tool = new dbXMLtoSQL($argv ?? []);
+$tool = new DbXmlToSql($argv ?? []);
 $tool->execute();
 
 ?>
