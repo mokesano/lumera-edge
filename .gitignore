@@ -1,47 +1,33 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.class
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# Dependency directories
+core/Library/
 
-# Dependencies
-vendor/
-node_modules/
-composer.lock
+# Composer artifacts
+core/Library/composer/
 
-# Logs and temp files
+# Executable binaries
+core/Library/bin/
+
+# Cache and temporary files
+core/Library/.phpunit.cache/
+core/Library/.php_cs.cache/
+core/Library/.php_cs.dist.cache/
+core/Library/.phpstan/cache/
+
+# IDE and editor files
+.core/Library/.vscode/
+.core/Library/.idea/
+
+# Log files
 *.log
-*.tmp
-*.swp
-*.swo
 
-# Environment
+# Environment files
 .env
 .env.local
-.env.*
-
-# Editors
-.vscode/
-.idea/
+*.env.*
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Build directories
-dist/
-build/
-target/
 ```
