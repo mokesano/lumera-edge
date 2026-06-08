@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/poToCountries.php
+ * @file core/Modules/Tools/PoToCountries.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class poToCountries
+ * @class PoToCountries
  * @ingroup tools
  *
  * @brief CLI tool to convert a .PO file for ISO3166 into the countries.xml format
@@ -25,7 +25,8 @@ if (!is_executable(PO_TO_CSV_TOOL)) {
     exit(1);
 }
 
-class poToCountries extends CommandLineTool {
+class PoToCountries extends CommandLineTool {
+
     /** @var string */
     protected string $locale = '';
 
@@ -33,8 +34,7 @@ class poToCountries extends CommandLineTool {
     protected string $translationFile = '';
 
     /**
-     * Constructor
-     * @param array $argv
+     * Constructor.
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);
@@ -163,7 +163,7 @@ XML;
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new poToCountries($argv ?? []);
+$tool = new PoToCountries($argv ?? []);
 $tool->execute();
 
 ?>

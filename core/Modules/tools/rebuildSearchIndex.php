@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/rebuildSearchIndex.php
+ * @file core/Modules/Tools/RebuildSearchIndex.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class rebuildSearchIndex
+ * @class RebuildSearchIndex
  * @ingroup tools
  *
  * @brief CLI tool to rebuild the article keyword search database.
@@ -19,11 +19,10 @@ require(__DIR__ . '/bootstrap.php');
 
 import('core.Modules.search.ArticleSearchIndex');
 
-class rebuildSearchIndex extends CommandLineTool {
+class RebuildSearchIndex extends CommandLineTool {
 
     /**
-     * Constructor. (Implicitly inherits parent's __construct)
-     * @param array $argv
+     * Constructor.
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);
@@ -107,7 +106,7 @@ class rebuildSearchIndex extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new rebuildSearchIndex($argv ?? []);
+$tool = new RebuildSearchIndex($argv ?? []);
 $tool->execute();
 
 ?>

@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/runScheduledTasks.php
+ * @file core/Modules/Tools/RunScheduledTasks.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class runScheduledTasks
+ * @class RunScheduledTasks
  * @ingroup tools
  *
  * @brief CLI tool to execute a set of scheduled tasks.
@@ -19,12 +19,10 @@ require(__DIR__ . '/bootstrap.php');
 
 import('core.Modules.cliTool.ScheduledTaskTool');
 
-class runScheduledTasks extends ScheduledTaskTool {
+class RunScheduledTasks extends ScheduledTaskTool {
+    
     /**
      * Constructor.
-     * @param array $argv command-line arguments
-     * If specified, the first parameter should be the path to
-     * a tasks XML descriptor file (other than the default)
      */
     public function __construct(array $argv = []) {
         // [WIZDAM FIX] Call parent::__construct which handles argument parsing and file validation.
@@ -47,6 +45,7 @@ class runScheduledTasks extends ScheduledTaskTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new runScheduledTasks($argv ?? []);
+$tool = new RunScheduledTasks($argv ?? []);
 $tool->execute();
+
 ?>

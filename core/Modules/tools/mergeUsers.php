@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/mergeUsers.php
+ * @file core/Modules/Tools/MergeUsers.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class mergeUsers
+ * @class MergeUsers
  * @ingroup tools
  *
  * @brief CLI tool for merging two Wizdam 2 user accounts.
@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 require(__DIR__ . '/bootstrap.php');
 
-class mergeUsers extends CommandLineTool {
+class MergeUsers extends CommandLineTool {
 
     /** @var string The username to keep (all roles/content transferred to this user). */
     protected string $username1 = '';
@@ -113,5 +113,5 @@ class mergeUsers extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new mergeUsers($argv ?? []);
+$tool = new MergeUsers($argv ?? []);
 $tool->execute();

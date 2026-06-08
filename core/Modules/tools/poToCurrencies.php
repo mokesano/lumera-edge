@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * @file tools/poToCurrencies.php
+ * @file core/Modules/Tools/PoToCurrencies.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class poToCurrencies
+ * @class PoToCurrencies
  * @ingroup tools
  *
  * @brief CLI tool to convert a .PO file for ISO4217 into the currencies.xml format
@@ -25,7 +25,8 @@ if (!is_executable(PO_TO_CSV_TOOL)) {
     exit(1);
 }
 
-class poToCurrencies extends CommandLineTool {
+class PoToCurrencies extends CommandLineTool {
+
     /** @var string The target locale (e.g., 'id_ID') */
     protected string $locale = '';
 
@@ -33,8 +34,7 @@ class poToCurrencies extends CommandLineTool {
     protected string $translationFile = '';
 
     /**
-     * Constructor
-     * @param array $argv
+     * Constructor.
      */
     public function __construct(array $argv = []) {
         parent::__construct($argv);
@@ -166,7 +166,7 @@ XML;
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new poToCurrencies($argv ?? []);
+$tool = new PoToCurrencies($argv ?? []);
 $tool->execute();
 
 ?>
