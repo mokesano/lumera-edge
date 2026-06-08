@@ -1,53 +1,43 @@
-# Lumera Edge .gitignore
-
-# PHP compiled files
-*.phpc
-
-# Abaikan seluruh isi storage/cache/ kecuali .gitkeep di folder inti
-storage/cache/*
-!storage/cache/t_cache/.gitkeep
-!storage/cache/t_compile/.gitkeep
-!storage/cache/t_config/.gitkeep
-# **/cache/* core/Modules/cache/ and core/Modules/ModuleName/cache/ directories
-!**/cache/.gitkeep
-
-# Abaikan semua file .json.gz di seluruh repositori
-*.json.gz
-*.gz
-*.cache
-
+```
 # Dependencies
 vendor/
-core/Libraries/
-core/Library/
 node_modules/
+composer.lock
 
-# Compiled and build artifacts
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-
-# Logs and temp files
+# PHP specific
+*.php~
+*.php.bak
 *.log
 *.tmp
-*.swp
 
-# Environment
+# Cache and temporary files
+.cache/
+.tmp/
+*.cache
+*.tmp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
 .env
 .env.local
 *.env.*
 
-# Editors
-.vscode/
-.idea/
+# Coverage and testing
+.coverage
+coverage/
+htmlcov/
 
-# Cache directories
-.cache/
-__pycache__/
-*.pyc
-*.pyo
-.Python
+# Build and distribution
+dist/
+build/
+target/
+```
