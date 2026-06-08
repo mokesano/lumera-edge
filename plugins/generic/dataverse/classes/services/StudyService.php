@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\DataverseStudy;
+Lumera\Modules\DataverseFile;
+Lumera\Modules\Notification\NotificationManager;
 namespace Lumera\Plugins\Generic\dataverse\classes\services;
 
 /**
@@ -158,7 +161,7 @@ class StudyService {
 
         $study = null;
         if ($datasetData && isset($datasetData['persistentId'])) {
-            $this->plugin->import('core.Modules.DataverseStudy');
+            $this->plugin->
             $study = new DataverseStudy();
             $study->setSubmissionId($article->getId());
             // Di Native API, URI dan ID direpresentasikan oleh Persistent ID (DOI)
@@ -203,7 +206,7 @@ class StudyService {
 
         $allUploaded = true;
         
-        $this->plugin->import('core.Modules.DataverseFile');         
+        $this->plugin->         
         $dvFileDao = DAORegistry::getDAO('DataverseFileDAO');
 
         foreach ($suppFiles as $suppFile) {
@@ -245,7 +248,7 @@ class StudyService {
      * @return bool
      */
     public function releaseStudy($study, $journal, $user, $request): bool {
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();       
         $persistentId = (string) $study->getPersistentUri();
 
@@ -285,7 +288,7 @@ class StudyService {
             $dataverseStudyDao->deleteStudy($study);
         }
 
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $notificationManager->createTrivialNotification($userId, $studyDeleted ? NOTIFICATION_TYPE_DATAVERSE_STUDY_DELETED : NOTIFICATION_TYPE_DATAVERSE_ERROR);
         

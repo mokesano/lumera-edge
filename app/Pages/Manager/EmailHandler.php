@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\Manager\Form\EmailTemplateForm;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Domain\File\FileManager;
+Lumera\Modules\Xml\XMLParser;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +22,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for email management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class EmailHandler extends ManagerHandler {
     
@@ -59,7 +64,7 @@ class EmailHandler extends ManagerHandler {
         $emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
         $emailTemplates = $emailTemplateDao->getEmailTemplates(AppLocale::getLocale(), $journal->getId());
 
-        import('core.Kernel.ArrayItemIterator');
+        
         $emailTemplates = ArrayItemIterator::fromRangeInfo($emailTemplates, $rangeInfo);
 
         $templateMgr = TemplateManager::getManager();
@@ -94,7 +99,7 @@ class EmailHandler extends ManagerHandler {
 
         $emailKey = !isset($args) || empty($args) ? null : $args[0];
 
-        import('app.Domain.Manager.form.EmailTemplateForm');
+        
 
         $emailTemplateForm = new EmailTemplateForm($emailKey, $journal);
         $emailTemplateForm->initData();
@@ -114,7 +119,7 @@ class EmailHandler extends ManagerHandler {
         if (!$request) $request = Application::get()->getRequest();
         $journal = $request->getJournal();
 
-        import('app.Domain.Manager.form.EmailTemplateForm');
+        
 
         // [SECURITY FIX] Terapkan trim() untuk sanitasi string
         $emailKey = trim((string) $request->getUserVar('emailKey'));
@@ -270,7 +275,7 @@ class EmailHandler extends ManagerHandler {
      */
     public function exportEmails($args, $request) {
         $this->validate();
-        import('core.Modules.xml.XMLCustomWriter');
+        
         
         // [SECURITY FIX] Gunakan array_map untuk memaksa semua elemen menjadi integer
         $selectedEmailKeys = (array) $request->getUserVar('tplId');
@@ -329,7 +334,7 @@ class EmailHandler extends ManagerHandler {
      */
     public function uploadEmails($args, $request) {
         $this->validate();
-        import('app.Domain.File.FileManager');
+        
         $fileManager = new FileManager();
 
         $journal = $request->getJournal();
@@ -368,7 +373,7 @@ class EmailHandler extends ManagerHandler {
      */
     protected function _saveEmailTemplates($filePath, $journal) {
         $this->validate();
-        import('core.Modules.xml.XMLParser');
+        
         $emailTemplateDao = DAORegistry::getDAO('EmailTemplateDAO');
         
         $xmlParser = new XMLParser();
@@ -443,7 +448,7 @@ class EmailHandler extends ManagerHandler {
      */
     protected function _showMessage($request, $success = true) {
         $this->validate();
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         AppLocale::requireComponents(LOCALE_COMPONENT_CORE_MANAGER);

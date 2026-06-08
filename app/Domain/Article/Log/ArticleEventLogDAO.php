@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Log\EventLogDAO;
+Lumera\Domain\Article\Log\ArticleEventLogEntry;
 namespace App\Domain\Article\Log;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Article\Log;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.log.EventLogDAO');
-import('app.Domain.Article.log.ArticleEventLogEntry');
 
 class ArticleEventLogDAO extends EventLogDAO {
     

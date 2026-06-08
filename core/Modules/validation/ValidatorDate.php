@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorRegExp;
 namespace Lumera\Modules\validation;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\validation;
  * @brief Validation check for dates.  Accepts truncated dates, such as year, or year and month.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Static Method Fix)
  */
-
-import('core.Modules.validation.ValidatorRegExp');
 
 define('DATE_FORMAT_ISO', 0x01);
 define('VALIDATOR_DATE_SCOPE_DAY', 1);
@@ -77,7 +76,6 @@ class ValidatorDate extends ValidatorRegExp {
             return ($minScope == VALIDATOR_DATE_SCOPE_YEAR);
         }
     }
-
 
     //
     // Public static methods

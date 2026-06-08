@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Note\Note;
 namespace App\Domain\Article;
 
 /**
@@ -20,8 +21,6 @@ namespace App\Domain\Article;
  * - PHP 8.x Compatibility (Constructor)
  * - Strict SHIM
  */
-
-import('app.Domain.Note.Note');
 
 class ArticleNote extends Note {
     

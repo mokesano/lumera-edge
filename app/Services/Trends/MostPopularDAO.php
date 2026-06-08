@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace App\Services\Trends;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Services\Trends;
  * [WIZDAM] - Exclusive DAO for Most Popular metrics.
  * Menangani pengambilan data statistik performa artikel dengan performa tinggi.
  */
-
-import('core.Modules.db.DAO');
 
 class MostPopularDAO extends DAO {
 

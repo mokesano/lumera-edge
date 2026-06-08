@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminPublisherSettingsHandler;
+Lumera\Pages\Admin\AdminPressHandler;
+Lumera\Pages\Admin\AdminLanguagesHandler;
+Lumera\Pages\Admin\AuthSourcesHandler;
+Lumera\Pages\Admin\AdminPeopleHandler;
+Lumera\Pages\Admin\AdminPaymentHandler;
+Lumera\Pages\Admin\AdminFunctionsHandler;
+Lumera\Pages\Admin\AdminCategoriesHandler;
+Lumera\Pages\Admin\AdminHandler;
 namespace App\Pages\Admin;
 
 /**
@@ -25,7 +34,7 @@ switch ($op) {
     case 'settings':
     case 'saveSettings':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminPublisherSettingsHandler::class);
-        import('app.Pages.Admin.AdminPublisherSettingsHandler');
+        
         break;
     //
     // Press Management
@@ -37,7 +46,7 @@ switch ($op) {
     case 'deletePress':
     case 'movePress':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminPressHandler::class);
-        import('app.Pages.Admin.AdminPressHandler');
+        
         break;
     //
     // Languages
@@ -50,7 +59,7 @@ switch ($op) {
     case 'reloadDefaultEmailTemplates':
     case 'downloadLocale':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminLanguagesHandler::class);
-        import('app.Pages.Admin.AdminLanguagesHandler');
+        
         break;
     //
     // Authentication sources
@@ -62,14 +71,14 @@ switch ($op) {
     case 'updateAuthSource':
     case 'deleteAuthSource':
         define('HANDLER_CLASS', \App\Pages\Admin\AuthSourcesHandler::class);
-        import('app.Pages.Admin.AuthSourcesHandler');
+        
         break;
     //
     // Merge users
     //
     case 'mergeUsers':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminPeopleHandler::class);
-        import('app.Pages.Admin.AdminPeopleHandler');
+        
         break;
     //
     // AREA ADMIN WIZDAM PAYMENT ---
@@ -77,7 +86,7 @@ switch ($op) {
     case 'payment-settings':
     case 'save-payment-settings':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminPaymentHandler::class);
-        import('app.Pages.Admin.AdminPaymentHandler');
+        
         break;
     //
     // Administrative functions
@@ -90,7 +99,7 @@ switch ($op) {
     case 'downloadScheduledTaskLogFile':
     case 'clearScheduledTaskLogFiles':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminFunctionsHandler::class);
-        import('app.Pages.Admin.AdminFunctionsHandler');
+        
         break;
 
     //
@@ -106,13 +115,13 @@ switch ($op) {
     case 'moveCategory':
     case 'setCategoriesEnabled':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminCategoriesHandler::class);
-        import('app.Pages.Admin.AdminCategoriesHandler');
+        
         break;
 
     case 'index':
     case 'aboutPublisher':
     case 'saveAboutPublisher':
         define('HANDLER_CLASS', \App\Pages\Admin\AdminHandler::class);
-        import('app.Pages.Admin.AdminHandler');
+        
         break;
 }

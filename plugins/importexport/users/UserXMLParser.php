@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLParser;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\User\User;
 namespace Lumera\Plugins\Importexport\users;
 
 /**
@@ -16,8 +19,6 @@ namespace Lumera\Plugins\Importexport\users;
  * @brief Class to import and export user data from an XML format.
  * See dbscripts/xml/dtd/users.dtd for the XML schema used.
  */
-
-import('core.Modules.xml.XMLParser');
 
 class UserXMLParser {
 
@@ -208,7 +209,7 @@ class UserXMLParser {
 
         if ($sendNotify) {
             // Set up mail template to send to added users
-            import('core.Modules.mail.MailTemplate');
+            
             $mail = new MailTemplate('USER_REGISTER');
 
             $journalDao = DAORegistry::getDAO('JournalDAO');
@@ -404,11 +405,9 @@ class UserXMLParser {
     }
 }
 
-
 /**
  * Helper class representing a user imported from a user data file.
  */
-import('core.Modules.user.User');
 
 class ImportedUser extends User {
 

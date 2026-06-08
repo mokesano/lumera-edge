@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleGalley;
+Lumera\Domain\Article\ArticleHTMLGalley;
 namespace App\Domain\Article;
 
 /**
@@ -21,9 +23,6 @@ namespace App\Domain\Article;
  * - Strict Integer Casting
  * - Hook Dispatch
  */
-
-import('app.Domain.Article.ArticleGalley');
-import('app.Domain.Article.ArticleHTMLGalley');
 
 class ArticleGalleyDAO extends DAO {
     /** Helper file DAOs. */
@@ -554,7 +553,6 @@ class ArticleGalleyDAO extends DAO {
     public function getInsertGalleyId() {
         return $this->getInsertId('article_galleys', 'galley_id');
     }
-
 
     //
     // Extra routines specific to HTML galleys.

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace Lumera\Plugins\Generic\staticPages;
 
 /**
@@ -18,7 +19,6 @@ namespace Lumera\Plugins\Generic\staticPages;
  */
  
  
-import('core.Modules.db.DAO');
 
 class StaticPagesDAO extends DAO {
     
@@ -162,7 +162,7 @@ class StaticPagesDAO extends DAO {
      */
     public function _returnStaticPageFromRow($row) {
         $staticPagesPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $staticPagesPlugin->import('StaticPage');
+        $staticPagesPlugin->
 
         $staticPage = new StaticPage();
         $staticPage->setId($row['static_page_id']);

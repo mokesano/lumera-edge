@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CoreRouter;
 namespace Lumera\Kernel;
 
 /**
@@ -19,8 +20,6 @@ namespace Lumera\Kernel;
 
 define('ROUTER_DEFAULT_PAGE', './pages/index/index.php');
 define('ROUTER_DEFAULT_OP', 'index');
-
-import('core.Kernel.CoreRouter');
 
 class CorePageRouter extends CoreRouter {
     

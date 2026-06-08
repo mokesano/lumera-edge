@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\FilterGroup;
 namespace Lumera\Modules\filter;
 
 /**
@@ -27,7 +28,7 @@ class FilterHelper {
     public static function installFilterGroups($filterGroupsNode) {
         // Install filter groups.
         $filterGroupDao = DAORegistry::getDAO('FilterGroupDAO'); /* @var $filterGroupDao FilterGroupDAO */
-        import('core.Modules.filter.FilterGroup');
+        
 
         foreach ($filterGroupsNode->getChildren() as $filterGroupNode) { /* @var $filterGroupNode XMLNode */
             $filterGroupSymbolic = $filterGroupNode->getAttribute('symbolic');

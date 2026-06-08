@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Plugins\PubIdPluginHelper;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Search\ArticleSearchIndex;
 namespace App\Domain\Submission\Form;
 
 /**
@@ -22,8 +26,6 @@ namespace App\Domain\Submission\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class ArticleGalleyForm extends Form {
     /** @var int|null the ID of the article */
@@ -128,7 +130,7 @@ class ArticleGalleyForm extends Form {
         }
 
         // Verify additional fields from public identifer plug-ins.
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->validate((int) $journal->getId(), $this, $this->galley);
 
@@ -151,7 +153,7 @@ class ArticleGalleyForm extends Form {
             $this->_data = [];
         }
         // consider the additional field names from the public identifer plugins
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->init($this, $this->galley);
 
@@ -172,7 +174,7 @@ class ArticleGalleyForm extends Form {
             ]
         );
         // consider the additional field names from the public identifer plugins
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->readInputData($this);
     }
@@ -185,7 +187,7 @@ class ArticleGalleyForm extends Form {
      */
     public function execute($fileName = null, $createRemote = false) {
         $request = Application::get()->getRequest();
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($this->articleId);
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
@@ -210,7 +212,7 @@ class ArticleGalleyForm extends Form {
                 }
 
                 // Update file search index
-                import('app.Domain.Search.ArticleSearchIndex');
+                
                 $articleSearchIndex = new ArticleSearchIndex();
                 $articleSearchIndex->articleFileChanged(
                     (int) $this->articleId, 
@@ -244,7 +246,7 @@ class ArticleGalleyForm extends Form {
             }
 
             // consider the additional field names from the public identifer plugins
-            import('app.Domain.Plugins.PubIdPluginHelper');
+            
             $pubIdPluginHelper = new PubIdPluginHelper();
             $pubIdPluginHelper->execute($this, $galley);
 
@@ -327,7 +329,7 @@ class ArticleGalleyForm extends Form {
 
         if ($fileId) {
             // Update file search index
-            import('app.Domain.Search.ArticleSearchIndex');
+            
             $articleSearchIndex = new ArticleSearchIndex();
             // [WIZDAM] Pastikan baris 331 juga menggunakan casting integer
             $articleSearchIndex->articleFileChanged((int)$this->articleId, (int)ARTICLE_SEARCH_GALLEY_FILE, (int)$galley->getFileId());
@@ -344,7 +346,7 @@ class ArticleGalleyForm extends Form {
      * Upload an image to an HTML galley.
      */
     public function uploadImage() {
-        import('app.Domain.File.ArticleFileManager');
+        
         $fileManager = new ArticleFileManager($this->articleId);
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
@@ -372,7 +374,7 @@ class ArticleGalleyForm extends Form {
      * @param int $imageId the file ID of the image
      */
     public function deleteImage($imageId) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $fileManager = new ArticleFileManager($this->articleId);
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 

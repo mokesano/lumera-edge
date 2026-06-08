@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\SectionEditor\SectionEditorSubmission;
+Lumera\Domain\Submission\Author\AuthorSubmission;
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\Submission\Reviewer\ReviewerSubmission;
 namespace App\Domain\Submission\SectionEditor;
-
 
 /**
  * @file app/Domain/Submission/SectionEditor/SectionEditorSubmissionDAO.php
@@ -23,12 +26,7 @@ namespace App\Domain\Submission\SectionEditor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.SectionEditor.SectionEditorSubmission');
-
 // Bring in editor decision constants
-import('app.Domain.Submission.Author.AuthorSubmission');
-import('app.Domain.Submission.Common.Action');
-import('app.Domain.Submission.Reviewer.ReviewerSubmission');
 
 class SectionEditorSubmissionDAO extends DAO {
     // [WIZDAM] Properties initialized to null for cPanel linter compatibility
@@ -156,7 +154,6 @@ class SectionEditorSubmissionDAO extends DAO {
         $sectionEditorSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
         $sectionEditorSubmission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
         $sectionEditorSubmission->setEditorFile($this->articleFileDao->getArticleFile($row['editor_file_id']));
-
 
         for ($i = 1; $i <= $row['current_round']; $i++) {
             $sectionEditorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);

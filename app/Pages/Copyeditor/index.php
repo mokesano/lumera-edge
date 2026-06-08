@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Copyeditor\SubmissionCopyeditHandler;
+Lumera\Pages\Copyeditor\SubmissionCommentsHandler;
+Lumera\Pages\Copyeditor\CopyeditorHandler;
 namespace App\Pages\Copyeditor;
 
 /**
@@ -50,7 +53,7 @@ switch ($op) {
     //
     case 'submissionCitations':
         define('HANDLER_CLASS', \App\Pages\Copyeditor\SubmissionCopyeditHandler::class);
-        import('app.Pages.Copyeditor.SubmissionCopyeditHandler');
+        
         break;
     //
     // Submission Comments
@@ -63,10 +66,10 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\Copyeditor\SubmissionCommentsHandler::class);
-        import('app.Pages.Copyeditor.SubmissionCommentsHandler');
+        
         break;
     case 'index':
     case 'instructions':
         define('HANDLER_CLASS', \App\Pages\Copyeditor\CopyeditorHandler::class);
-        import('app.Pages.Copyeditor.CopyeditorHandler');
+        
 }

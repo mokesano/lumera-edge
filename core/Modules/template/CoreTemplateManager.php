@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Kernel\JSONMessage;
+Lumera\Modules\Form\FormBuilderVocabulary;
+Lumera\Modules\LinkAction\Request\NullAction;
 namespace Lumera\Modules\template;
 
 /**
@@ -393,7 +397,7 @@ class CoreTemplateManager extends Smarty {
         
         // [WIZDAM CSRF] - AUTOMATIC ACTION-BASED TOKEN INJECTION
         // 1. Import library yang dibutuhkan
-        import('core.Modules.validation.ValidatorCSRF');
+        
         $request = Application::get()->getRequest();
         $router = $request->getRouter();
         
@@ -477,7 +481,7 @@ class CoreTemplateManager extends Smarty {
      * @return string JSON message with the template rendered
      */
     public function fetchJson($template, $status = true) {
-        import('core.Kernel.JSONMessage');
+        
 
         $json = new JSONMessage($status, $this->fetch($template));
         header('Content-Type: application/json');
@@ -586,7 +590,7 @@ class CoreTemplateManager extends Smarty {
      */
     public function &getFBV() {
         if(!$this->fbv) {
-            import('core.Modules.form.FormBuilderVocabulary');
+            
             $this->fbv = new FormBuilderVocabulary();
         }
         return $this->fbv;
@@ -723,7 +727,7 @@ class CoreTemplateManager extends Smarty {
         $image = isset($params['image'])?$params['image']:null;
         $translate = isset($params['translate'])?false:true;
 
-        import('core.Modules.linkAction.request.NullAction');
+        
         $key = $translate ? __($key) : $key;
         
         // Smarty assignment
@@ -1683,7 +1687,6 @@ class CoreTemplateManager extends Smarty {
         } elseif(isset($params['keyTranslated'])) {
             $keyHtml = "<span class='text'>" . $params['keyTranslated'] . "</span>";
         } else $keyHtml = "";
-
 
         if(isset($params['canClose'])) {
             $canClose = $params['canClose'];

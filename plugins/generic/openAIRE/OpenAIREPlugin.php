@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\openAIRE;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Plugins\Generic\openAIRE;
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
 
-import('core.Modules.plugins.GenericPlugin');
-
 class OpenAIREPlugin extends GenericPlugin {
 
     /**
@@ -32,7 +31,7 @@ class OpenAIREPlugin extends GenericPlugin {
         $success = parent::register($category, $path);
         
         if ($success && $this->getEnabled()) {
-            $this->import('OpenAIREDAO');
+            $this->
             $openAIREDao = new OpenAIREDAO();
             DAORegistry::registerDAO('OpenAIREDAO', $openAIREDao);
 
@@ -171,7 +170,6 @@ class OpenAIREPlugin extends GenericPlugin {
         $userVars[] = 'projectID';
         return false;
     }
-
 
     /*
      * OAI interface

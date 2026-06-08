@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Captcha\CaptchaManager;
 namespace App\Domain\Comment\Form;
 
 /**
@@ -22,8 +24,6 @@ namespace App\Domain\Comment\Form;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  * - TRUE MODULAR SECURITY: Decoupled Default Captcha, reCAPTCHA, and Turnstile
  */
-
-import('core.Modules.form.Form');
 
 class CommentForm extends Form {
 
@@ -84,7 +84,7 @@ class CommentForm extends Form {
         // PILAR 3: DEFAULT CAPTCHA (HANYA JIKA TURNSTILE & RECAPTCHA OFF)
         if (!$this->turnstileEnabled && !$this->reCaptchaEnabled) {
             if (Config::getVar('captcha', 'captcha') && Config::getVar('captcha', 'captcha_on_comments')) {
-                import('core.Modules.Captcha.CaptchaManager');
+                
                 $captchaManager = new CaptchaManager();
                 if ($captchaManager->isEnabled()) {
                     $this->captchaEnabled = true;
@@ -254,7 +254,7 @@ class CommentForm extends Form {
         // 3. Default Captcha
         $templateMgr->assign('captchaEnabled', $this->captchaEnabled);
         if ($this->captchaEnabled) {
-            import('core.Modules.Captcha.CaptchaManager');
+            
             $captchaManager = new CaptchaManager();
             $captcha = $captchaManager->createCaptcha();
             if ($captcha) {
@@ -271,7 +271,6 @@ class CommentForm extends Form {
 
         parent::display($request, $template);
     }
-
 
     /**
      * Assign form data to user-submitted data.

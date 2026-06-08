@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\announcementFeed;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Generic\announcementFeed;
  *
  * @brief Form for journal managers to modify announcement feed plugin settings
  */
-
-import('core.Modules.form.Form');
 
 class SettingsForm extends Form {
 

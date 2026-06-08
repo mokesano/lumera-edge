@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Reviewer\ReviewerHandler;
+Lumera\Domain\Submission\ReviewAssignment\ReviewAssignment;
 namespace App\Pages\Reviewer;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Reviewer;
  *
  * @brief Handle requests for submission tracking.
  */
-
-import('app.Pages.Reviewer.ReviewerHandler');
 
 class SubmissionReviewHandler extends ReviewerHandler {
     
@@ -75,7 +75,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
         $templateMgr->assign('journal', $journal);
         $templateMgr->assign('reviewGuidelines', $journal->getLocalizedSetting('reviewGuidelines'));
 
-        import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
+        
         $templateMgr->assign('reviewerRecommendationOptions', ReviewAssignment::getReviewerRecommendationOptions());
         $templateMgr->assign('helpTopicId', 'editorial.reviewersRole.review');
         $templateMgr->display('reviewer/submission.tpl');

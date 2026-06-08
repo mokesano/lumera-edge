@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Modules\controllers\grid\filter\form;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\controllers\grid\filter\form;
  * New filter instances are based on filter templates.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.Form');
 
 class FilterForm extends Form {
     /** @var Filter|null the filter being edited */

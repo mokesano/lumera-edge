@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\Wrappers\ResourceWrapper;
+Lumera\Modules\File\Wrappers\HTTPFileWrapper;
+Lumera\Modules\File\Wrappers\HTTPSFileWrapper;
+Lumera\Modules\File\Wrappers\FTPFileWrapper;
 namespace Lumera\Modules\file;
 
 /**
@@ -109,7 +113,6 @@ class FileWrapper {
         return feof($this->fp);
     }
 
-
     //
     // Static
     //
@@ -125,7 +128,7 @@ class FileWrapper {
             $wrapper = new FileWrapper($source, $info);
         } elseif (is_resource($source)) {
             // $source is an already-opened file descriptor.
-            import('core.Modules.file.wrappers.ResourceWrapper');
+            
             $wrapper = new ResourceWrapper($source);
         } else {
             // $source should be a URL.
@@ -151,17 +154,17 @@ class FileWrapper {
 
             switch ($scheme) {
                 case 'http':
-                    import('core.Modules.file.wrappers.HTTPFileWrapper');
+                    
                     $wrapper = new HTTPFileWrapper($source, $info);
                     $wrapper->addHeader('User-Agent', $userAgent);
                     break;
                 case 'https':
-                    import('core.Modules.file.wrappers.HTTPSFileWrapper');
+                    
                     $wrapper = new HTTPSFileWrapper($source, $info);
                     $wrapper->addHeader('User-Agent', $userAgent);
                     break;
                 case 'ftp':
-                    import('core.Modules.file.wrappers.FTPFileWrapper');
+                    
                     $wrapper = new FTPFileWrapper($source, $info);
                     break;
                 default:

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Manager\Form\LanguageSettingsForm;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for changing journal language settings.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class JournalLanguagesHandler extends ManagerHandler {
     
@@ -50,7 +51,7 @@ class JournalLanguagesHandler extends ManagerHandler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('app.Domain.Manager.form.LanguageSettingsForm');
+        
 
         $settingsForm = new LanguageSettingsForm();
         $settingsForm->initData();
@@ -69,7 +70,7 @@ class JournalLanguagesHandler extends ManagerHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Manager.form.LanguageSettingsForm');
+        
 
         $settingsForm = new LanguageSettingsForm();
         $settingsForm->readInputData();
@@ -77,7 +78,7 @@ class JournalLanguagesHandler extends ManagerHandler {
         if ($settingsForm->validate()) {
             $settingsForm->execute();
             $user = $request->getUser();
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId());
             $request->redirect(null, null, 'index');
@@ -123,7 +124,7 @@ class JournalLanguagesHandler extends ManagerHandler {
         $user = $request->getUser();
 
         // Display a notification
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $notificationManager->createTrivialNotification($user->getId());
         $request->redirect(null, null, 'languages');

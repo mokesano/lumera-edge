@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Statistics\JournalStatsHandler;
 namespace App\Pages\Statistics;
 
 /**
@@ -20,6 +21,6 @@ switch ($op) {
     case 'index':
     case 'journal':
         define('HANDLER_CLASS', \App\Pages\Statistics\JournalStatsHandler::class);
-        import('app.Pages.Statistics.JournalStatsHandler');
+        
         break;
 }

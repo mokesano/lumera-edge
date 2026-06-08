@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\ObjectForReview;
+Lumera\Modules\ObjectForReviewPerson;
+Lumera\Modules\ReviewObjectMetadata;
+Lumera\Modules\File\PublicFileManager;
 namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
 
 /**
@@ -17,8 +22,6 @@ namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
  * @brief Object for review form.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe (Closures, Constructors, References).
  */
-
-import('core.Modules.form.Form');
 
 class ObjectForReviewForm extends Form {
 
@@ -257,9 +260,9 @@ class ObjectForReviewForm extends Form {
      */
     public function execute($object = null) {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ObjectForReview');
-        $ofrPlugin->import('core.Modules.ObjectForReviewPerson');
-        $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+        $ofrPlugin->
+        $ofrPlugin->
+        $ofrPlugin->
 
         $journal = Request::getJournal();
         $journalId = $journal->getId();
@@ -317,7 +320,7 @@ class ObjectForReviewForm extends Form {
         }
 
         // Handle object for review cover image
-        import('core.Modules.file.PublicFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $coverPageAltText = $this->getData('coverPageAltText');
         $coverPageMetadataId = $reviewObjectMetadataDao->getMetadataId($this->reviewObjectTypeId, REVIEW_OBJECT_METADATA_KEY_COVERPAGE);
@@ -339,7 +342,6 @@ class ObjectForReviewForm extends Form {
                 $objectForReview->updateSetting((int) $coverPageMetadataId, $coverPageSetting, 'object');
             }
         }
-
 
         $ofrPersonDao = DAORegistry::getDAO('ObjectForReviewPersonDAO');
         // Insert/update persons

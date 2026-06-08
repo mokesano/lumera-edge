@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationParser\Regex\CoreRegexCitationParserPlugin;
 /**
  * @defgroup plugins_citationParser_regex
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief Regular extraction based citation extraction plug-in.
  */
-
-import('core.Modules.plugins.citationParser.regex.CoreRegexCitationParserPlugin');
 
 class RegexCitationParserPlugin extends CoreRegexCitationParserPlugin {
     

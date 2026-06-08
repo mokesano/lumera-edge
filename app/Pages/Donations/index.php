@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Donations\DonationsHandler;
 namespace App\Pages\Donations;
 
 /**
@@ -24,6 +25,6 @@ switch ($op) {
     case 'index':
     case 'thankYou':
         define('HANDLER_CLASS', \App\Pages\Donations\DonationsHandler::class);
-        import('app.Pages.Donations.DonationsHandler');
+        
         break;
 }

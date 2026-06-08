@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Generic\UsageStats\UsageStatsReportPlugin;
+Lumera\Modules\File\PrivateFileManager;
 namespace Lumera\Plugins\Generic\usageStats;
 
 /**
@@ -16,9 +19,6 @@ namespace Lumera\Plugins\Generic\usageStats;
  * @brief Provide usage statistics to data objects.
  * MODERNIZED FOR PHP 7.4+ & Wizdam FORK
  */
-
-
-import('core.Modules.plugins.GenericPlugin');
 
 class UsageStatsPlugin extends GenericPlugin {
 
@@ -42,9 +42,8 @@ class UsageStatsPlugin extends GenericPlugin {
 
         // The upgrade and install processes will need access
         // to constants defined in that report plugin.
-        import('plugins.generic.usageStats.UsageStatsReportPlugin');
+        
     }
-
 
     //
     // Public methods.
@@ -55,10 +54,9 @@ class UsageStatsPlugin extends GenericPlugin {
      * @return UsageStatsReportPlugin
      */
     public function getReportPlugin() {
-        $this->import('UsageStatsReportPlugin');
+        $this->
         return new UsageStatsReportPlugin();
     }
-
 
     //
     // Implement methods from CorePlugin.
@@ -178,7 +176,7 @@ class UsageStatsPlugin extends GenericPlugin {
     public function manage(string $verb, array $args, string $message, array $messageParams, $request = NULL): bool {
         $returner = parent::manage($verb, $args, $message, $messageParams);
         if (!$returner) return false;
-        $this->import('UsageStatsSettingsForm');
+        $this->
 
         $templateMgr = TemplateManager::getManager();
         // Modernized: Removed &
@@ -207,7 +205,6 @@ class UsageStatsPlugin extends GenericPlugin {
         return true;
     }
 
-
     //
     // Implement template methods from GenericPlugin.
     //
@@ -226,7 +223,6 @@ class UsageStatsPlugin extends GenericPlugin {
         return $verbs;
     }
 
-
     //
     // Hook implementations.
     //
@@ -244,7 +240,7 @@ class UsageStatsPlugin extends GenericPlugin {
         if ($category == 'reports') {
             $plugin = $this->getReportPlugin();        }
         if ($category ==  'blocks' && $this->getSetting(CONTEXT_ID_NONE, 'dataPrivacyOption')) {
-            $this->import('UsageStatsOptoutBlockPlugin');
+            $this->
             $plugin = new UsageStatsOptoutBlockPlugin($this->getName());
         }
 
@@ -357,7 +353,7 @@ class UsageStatsPlugin extends GenericPlugin {
         /** Geo location tool wrapper class. If changing the geo location tool
         * is required, change the code inside this class, keeping the public
         * interface. */
-        $this->import('GeoLocationTool');
+        $this->
 
         $null = null;
         $tool = new GeoLocationTool();
@@ -373,7 +369,7 @@ class UsageStatsPlugin extends GenericPlugin {
     * @return string
     */
     public function getFilesPath() {
-        import('core.Modules.file.PrivateFileManager');
+        
         $fileMgr = new PrivateFileManager();
 
         return realpath($fileMgr->getBasePath()) . DIRECTORY_SEPARATOR . 'usageStats';
@@ -467,7 +463,7 @@ class UsageStatsPlugin extends GenericPlugin {
 
         $usageLogEntry = implode(' ', $desiredParams) . PHP_EOL;
 
-        import('core.Modules.file.PrivateFileManager');
+        
         $fileMgr = new PrivateFileManager();
 
         // Get the current day filename.

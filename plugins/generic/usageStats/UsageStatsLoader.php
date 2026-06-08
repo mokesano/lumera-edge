@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Task\FileLoader;
 namespace Lumera\Plugins\Generic\usageStats;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\usageStats;
  * * MODERNIZED FOR PHP 7.4+ (Wizdam Protocol v2.1)
  * * Optimized for Connection Pooling & Memory Management
  */
-
-import('core.Modules.task.FileLoader');
 
 /** 
  * These are rules defined by the COUNTER project.
@@ -106,7 +105,7 @@ class UsageStatsLoader extends FileLoader {
             $geoLocationTool = StatisticsHelper::getGeoLocationTool();
             $this->_geoLocationTool = $geoLocationTool;
 
-            $plugin->import('UsageStatsTemporaryRecordDAO');
+            $plugin->
             $statsDao = new UsageStatsTemporaryRecordDAO();
             DAORegistry::registerDAO('UsageStatsTemporaryRecordDAO', $statsDao);
 
@@ -326,7 +325,6 @@ class UsageStatsLoader extends FileLoader {
             }
         }
     }
-
 
     //
     // Private helper methods.

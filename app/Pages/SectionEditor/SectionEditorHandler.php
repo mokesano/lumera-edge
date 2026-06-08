@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
 namespace App\Pages\SectionEditor;
 
 /**
@@ -18,9 +22,6 @@ namespace App\Pages\SectionEditor;
 
 // Filter section
 define('FILTER_SECTION_ALL', 0);
-
-import('app.Domain.Submission.SectionEditor.SectionEditorAction');
-import('app.Domain.Handler.Handler');
 
 class SectionEditorHandler extends Handler {
     
@@ -212,7 +213,7 @@ class SectionEditorHandler extends Handler {
             SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
         ]);
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         $templateMgr->register_function('print_issue_id', [$issueAction, 'smartyPrintIssueId']);
         $templateMgr->assign('sort', $sort);
@@ -253,7 +254,7 @@ class SectionEditorHandler extends Handler {
             ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $roleSymbolic), $roleKey], [$request->url(null, $roleSymbolic), 'article.submissions']]
             : [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, $roleSymbolic), $roleKey]];
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, $roleSymbolic);
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -271,7 +272,7 @@ class SectionEditorHandler extends Handler {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         $this->setupTemplate();
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
         if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], ['copy', 'layout', 'proof', 'referenceLinking'])) {
             $request->redirect(null, null, 'index');
         }

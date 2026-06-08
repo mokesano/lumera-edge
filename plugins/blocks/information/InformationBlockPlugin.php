@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/information/InformationBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for information block plugin
  * [WIZDAM EDITION] Repurposed: Author/Reviewer/Editor Information Center
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class InformationBlockPlugin extends BlockPlugin {
     

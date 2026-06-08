@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\browse\classes\form;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\browse\classes\form;
  * @brief Form for journal managers to setup browse plugin
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.form.Form');
 
 class BrowseSettingsForm extends Form {
 

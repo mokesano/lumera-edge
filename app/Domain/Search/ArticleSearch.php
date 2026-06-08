@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Search\ArticleSearchIndex;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Kernel\VirtualArrayIterator;
 namespace App\Domain\Search;
 
 /**
@@ -32,8 +35,6 @@ define('ARTICLE_SEARCH_SUPPLEMENTARY_FILE_METADATA', 0x00000300);
 define('ARTICLE_SEARCH_INDEX_TERMS',        0x00000078);
 
 define('ARTICLE_SEARCH_DEFAULT_RESULT_LIMIT', 20);
-
-import('app.Domain.Search.ArticleSearchIndex');
 
 class ArticleSearch {
 
@@ -364,7 +365,7 @@ class ArticleSearch {
                 if (!isset($issueCache[$issueId])) {
                     $issue = $issueDao->getIssueById($issueId);
                     $issueCache[$issueId] = $issue;
-                    import('app.Domain.Issue.IssueAction');
+                    
                     $issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
                 }
 
@@ -445,7 +446,7 @@ class ArticleSearch {
 
         $results = ArticleSearch::formatResults($results);
 
-        import('core.Kernel.VirtualArrayIterator');
+        
         $returner = new VirtualArrayIterator($results, $totalResults, $page, $itemsPerPage);
         return $returner;
     }

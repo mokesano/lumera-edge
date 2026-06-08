@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security\authorization;
  * @brief Policy enforcing restricted site access when the context
  * contains such a setting.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class RestrictedSiteAccessPolicy extends AuthorizationPolicy {
     /** @var CoreRouter */

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Form\Validation\FormValidatorCSRF;
+Lumera\Domain\File\PublicFileManager;
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Domain\User\InterestManager;
 namespace App\Domain\User\Form;
 
 /**
@@ -15,8 +20,6 @@ namespace App\Domain\User\Form;
  *
  * @brief Form to edit user profile.
  */
-
-import('core.Modules.form.Form');
 
 class ProfileForm extends Form {
 
@@ -52,7 +55,7 @@ class ProfileForm extends Form {
         $this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getId(), true), true));
         
         // [WIZDAM SECURITY] Gunakan Validator CSRF yang kita buat sebelumnya!
-        import('core.Modules.form.validation.FormValidatorCSRF');
+        
         $this->addCheck(new FormValidatorCSRF($this));
         
         $this->addCheck(new FormValidatorPost($this));
@@ -79,7 +82,7 @@ class ProfileForm extends Form {
         $profileImage = $user->getSetting('profileImage');
         if (!$profileImage) return false;
 
-        import('app.Domain.File.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
         if ($fileManager->removeSiteFile($profileImage['uploadName'])) {
             return $user->updateSetting('profileImage', null);
@@ -94,7 +97,7 @@ class ProfileForm extends Form {
      * @return boolean
      */
     public function uploadProfileImage() {
-        import('app.Domain.File.PublicFileManager');
+        
         $fileManager = new PublicFileManager();
 
         $user = $this->user;
@@ -311,7 +314,7 @@ class ProfileForm extends Form {
         }
         
         // Panggil Engine CSRF yang sudah Anda buat
-        import('core.Modules.validation.ValidatorCSRF');
+        
         $templateMgr->assign('csrfToken', ValidatorCSRF::generateToken());
 
         $templateMgr->assign('profileImage', $user->getSetting('profileImage'));
@@ -337,7 +340,7 @@ class ProfileForm extends Form {
         $user = $request->getUser();
         if (!$user) return; // Safety
 
-        import('app.Domain.User.InterestManager');
+        
         $interestManager = new InterestManager();
 
         $this->_data = array(
@@ -453,7 +456,7 @@ class ProfileForm extends Form {
 
         // Insert the user interests
         $interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
-        import('app.Domain.User.InterestManager');
+        
         $interestManager = new InterestManager();
         $interestManager->setInterestsForUser($user, $interests);
 

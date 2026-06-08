@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Notification\Notification;
+Lumera\Modules\Mail\MailTemplate;
 namespace Lumera\Modules\notification;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\notification;
  * @see Notification
  * @brief Class for Notification Manager.
  */
-
-import('core.Modules.notification.Notification');
 
 class CoreNotificationManager {
     
@@ -229,7 +229,6 @@ class CoreNotificationManager {
                 return __('notification.notification');
         }
     }
-
 
     /**
      * Iterate through the localized params for a notification's locale key.
@@ -454,7 +453,7 @@ class CoreNotificationManager {
         $user = $userDao->getById($userId);
         AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 
-        import('core.Modules.mail.MailTemplate');
+        
         $site = $request->getSite();
         $mail = new MailTemplate('NOTIFICATION', null, null, null, false, true);
         $mail->setReplyTo($site->getLocalizedContactEmail(), $site->getLocalizedContactName());
@@ -484,7 +483,7 @@ class CoreNotificationManager {
         AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 
         foreach ($mailList as $recipient) {
-            import('core.Modules.mail.MailTemplate');
+            
             $context = $request->getContext();
             $site = $request->getSite();
             $router = $request->getRouter();
@@ -511,7 +510,7 @@ class CoreNotificationManager {
      * @param $template string The mail template to use
      */
     public function sendMailingListEmail($request, $email, $token, $template) {
-        import('core.Modules.mail.MailTemplate');
+        
         $site = $request->getSite();
         $router = $request->getRouter();
         $dispatcher = $router->getDispatcher();

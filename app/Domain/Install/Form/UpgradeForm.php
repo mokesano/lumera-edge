@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Install\Upgrade;
+Lumera\Modules\Form\Form;
 namespace App\Domain\Install\Form;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Domain\Install\Form;
  * @brief Form for system upgrades.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('app.Domain.Install.Upgrade');
-import('core.Modules.form.Form');
 
 class UpgradeForm extends Form {
 

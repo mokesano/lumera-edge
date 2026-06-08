@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+Lumera\Modules\Xml\XMLCustomWriter;
 namespace Lumera\Modules\plugins\metadata\mods34\filter;
 
 /**
@@ -19,10 +21,6 @@ namespace Lumera\Modules\plugins\metadata\mods34\filter;
  *
  * @brief Class that converts a meta-data description to a MODS 3.4 XML document.
  */
-
-
-import('core.Modules.filter.PersistableFilter');
-import('core.Modules.xml.XMLCustomWriter');
 
 class Mods34DescriptionXmlFilter extends PersistableFilter {
     
@@ -49,7 +47,6 @@ class Mods34DescriptionXmlFilter extends PersistableFilter {
         call_user_func_array([$this, '__construct'], $args);
     }
 
-
     //
     // Implement template methods from PersistableFilter
     //
@@ -59,7 +56,6 @@ class Mods34DescriptionXmlFilter extends PersistableFilter {
     public function getClassName() {
         return 'core.Modules.plugins.metadata.mods34.filter.Mods34DescriptionXmlFilter';
     }
-
 
     //
     // Implement template methods from Filter

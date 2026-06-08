@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\User\InterestManager;
 namespace Lumera\Plugins\Importexport\users;
 
 /**
@@ -15,8 +17,6 @@ namespace Lumera\Plugins\Importexport\users;
  *
  * @brief User plugin DOM functions for export
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 define('USERS_DTD_URL', 'http://wizdam.sfu.ca/wizdam/dtds/users.dtd');
 define('USERS_DTD_ID', '-//Wizdam/Wizdam Users XML//EN');
@@ -100,7 +100,7 @@ class UserExportDom {
                 }
             }
 
-            import('core.Modules.user.InterestManager');
+            
             $interestManager = new InterestManager();
             $interests = $interestManager->getInterestsForUser($user);
             if (is_array($interests)) {

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Mail\CoreEmailTemplateDAO;
+Lumera\Domain\Mail\EmailTemplate;
 namespace App\Domain\Mail;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Mail;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Signature Polyfill
  */
-
-import('app.Domain.Mail.CoreEmailTemplateDAO');
-import('app.Domain.Mail.EmailTemplate');
 
 class EmailTemplateDAO extends CoreEmailTemplateDAO {
     

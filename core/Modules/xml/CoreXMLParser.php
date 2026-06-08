@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 namespace Lumera\Modules\Xml;
-
 /**
  * @defgroup xml
  */
@@ -23,8 +22,6 @@ namespace Lumera\Modules\Xml;
 // The default character encodings
 define('XML_PARSER_SOURCE_ENCODING', Config::getVar('i18n', 'client_charset'));
 define('XML_PARSER_TARGET_ENCODING', Config::getVar('i18n', 'client_charset'));
-
-import('core.Modules.xml.XMLParserDOMHandler');
 
 class CoreXMLParser {
 
@@ -121,7 +118,7 @@ class CoreXMLParser {
         xml_set_element_handler($parser, [$this->handler, "startElement"], [$this->handler, "endElement"]);
         xml_set_character_data_handler($parser, [$this->handler, "characterData"]);
 
-        import('core.Modules.file.FileWrapper');
+        
         $wrapper = FileWrapper::wrapper($file);
 
         // Handle responses of various types
@@ -269,7 +266,7 @@ class CoreXMLParser {
      * @return array a struct of the form ($TAG => array('attributes' => array( ... ), 'value' => $VALUE), ... )
      */
     public function parseStruct($file, $tagsToMatch = array()) {
-        import('core.Modules.file.FileWrapper');
+        
         $wrapper = FileWrapper::wrapper($file);
         $fileContents = $wrapper->contents();
         if (!$fileContents) {

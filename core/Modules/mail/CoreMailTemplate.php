@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\Mail;
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\TemporaryFileManager;
 namespace Lumera\Modules\mail;
 
 /**
@@ -17,8 +20,6 @@ namespace Lumera\Modules\mail;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.mail.Mail');
 
 define('MAIL_ERROR_INVALID_EMAIL', 0x000001);
 
@@ -184,7 +185,7 @@ class CoreMailTemplate extends Mail {
      * @return void
      */
     public function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = []) {
-        import('core.Modules.form.Form');
+        
         $form = new Form($alternateTemplate != null ? $alternateTemplate : 'email/email.tpl');
         
         // [WIZDAM] Request Singleton
@@ -321,7 +322,7 @@ class CoreMailTemplate extends Mail {
      * @param int $userId
      */
     public function _handleAttachments($userId) {
-        import('core.Modules.file.TemporaryFileManager');
+        
         $temporaryFileManager = new TemporaryFileManager();
 
         $this->attachmentsEnabled = true;
@@ -370,7 +371,7 @@ class CoreMailTemplate extends Mail {
      * @param int $userId
      */
     public function _clearAttachments($userId) {
-        import('core.Modules.file.TemporaryFileManager');
+        
         $temporaryFileManager = new TemporaryFileManager();
 
         // [WIZDAM] Request Singleton

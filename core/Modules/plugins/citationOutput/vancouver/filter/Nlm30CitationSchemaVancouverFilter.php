@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationOutputFormatFilter;
 namespace Lumera\Modules\plugins\citationOutput\vancouver\filter;
 
 /**
@@ -25,8 +26,6 @@ namespace Lumera\Modules\plugins\citationOutput\vancouver\filter;
  * - Modern Constructor
  * - Explicit Visibility & Type Hints
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationOutputFormatFilter');
 
 class Nlm30CitationSchemaVancouverFilter extends Nlm30CitationSchemaCitationOutputFormatFilter {
     

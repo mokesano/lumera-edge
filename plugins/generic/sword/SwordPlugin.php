@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\Sword\AppSwordDeposit;
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\Mail\ArticleMailTemplate;
 namespace Lumera\Plugins\Generic\sword;
 
 /**
@@ -26,8 +30,6 @@ define('SWORD_DEPOSIT_TYPE_MANAGER',            4);
 define('NOTIFICATION_TYPE_SWORD_ENABLED',       NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000001);
 define('NOTIFICATION_TYPE_SWORD_DEPOSIT_COMPLETE',      NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000003);
 define('NOTIFICATION_TYPE_SWORD_AUTO_DEPOSIT_COMPLETE',     NOTIFICATION_TYPE_PLUGIN_BASE + 0x0000004);
-
-import('core.Modules.plugins.GenericPlugin');
 
 class SwordPlugin extends GenericPlugin {
 
@@ -117,7 +119,7 @@ class SwordPlugin extends GenericPlugin {
 
         switch ($category) {
             case 'importexport':
-                $this->import('SwordImportExportPlugin');
+                $this->
                 $plugin = new SwordImportExportPlugin();
                 
                 // [FIX] Set nama parent TERLEBIH DAHULU sebelum memanggil getPluginPath()
@@ -167,9 +169,9 @@ class SwordPlugin extends GenericPlugin {
         // The most recent decision was an "Accept"; perform auto deposits.
         $journal = Request::getJournal();
         $depositPoints = $this->getSetting($journal->getId(), 'depositPoints');
-        import('core.Modules.sword.AppSwordDeposit');
+        
 
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         $sendDepositNotification = $this->getSetting($journal->getId(), 'allowAuthorSpecify') ? true : false;
@@ -203,7 +205,7 @@ class SwordPlugin extends GenericPlugin {
         if ($sendDepositNotification) {
             $submittingUser = $sectionEditorSubmission->getUser();
 
-            import('core.Modules.mail.ArticleMailTemplate');
+            
             $contactName = $journal->getSetting('contactName');
             $contactEmail = $journal->getSetting('contactEmail');
             $mail = new ArticleMailTemplate($sectionEditorSubmission, 'SWORD_DEPOSIT_NOTIFICATION', null, null, $journal, true, true);
@@ -236,7 +238,7 @@ class SwordPlugin extends GenericPlugin {
         $type = $notification->getType();
         assert(isset($type));
 
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         switch ($type) {
@@ -292,7 +294,7 @@ class SwordPlugin extends GenericPlugin {
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
                 $journal = $request->getJournal();
 
-                $this->import('SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journal->getId());
 
                 // [WIZDAM FIX] Tangkap aksi Cancel secara eksplisit
@@ -338,7 +340,7 @@ class SwordPlugin extends GenericPlugin {
                 if ($depositPointId == '') $depositPointId = null;
                 else $depositPointId = (int) $depositPointId;
                 
-                $this->import('DepositPointForm');
+                $this->
                 $form = new DepositPointForm($this, $journal->getId(), $depositPointId);
 
                 // [WIZDAM FIX] Tangkap aksi Cancel dan kembalikan ke halaman Settings SWORD

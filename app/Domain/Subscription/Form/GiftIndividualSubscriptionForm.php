@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Gift\Gift;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +23,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form class for purchase of individual subscription gift.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class GiftIndividualSubscriptionForm extends Form {
     /** @var $request CoreRequest */
@@ -152,8 +152,8 @@ class GiftIndividualSubscriptionForm extends Form {
         $journalId = $journal->getId();
 
         // Create new gift and save details
-        import('app.Domain.Gift.Gift');
-        import('app.Domain.Payment.AppPaymentManager');
+        
+        
         $paymentManager = new AppPaymentManager($this->request);
         $paymentPlugin = $paymentManager->getPaymentPlugin();
 

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+Lumera\Modules\Db\DBResultRange;
 namespace Lumera\Plugins\Generic\announcementFeed;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\announcementFeed;
  * @brief Gateway component of announcement feed plugin
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.plugins.GatewayPlugin');
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
     
@@ -161,7 +161,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
         $journalId = $journal->getId();
         
         if ($limitRecentItems && $recentItems > 0) {
-            import('core.Modules.db.DBResultRange');
+            
             $rangeInfo = new DBResultRange($recentItems, 1);
             $announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo);
         } else {

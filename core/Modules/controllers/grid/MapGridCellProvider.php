@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\grid;
  * @brief Base class for a cell provider that can retrieve labels from arrays
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-
-import('core.Modules.controllers.grid.GridCellProvider');
 
 class MapGridCellProvider extends GridCellProvider {
     

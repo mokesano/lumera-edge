@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Notification\NotificationDAO;
 namespace Lumera\Modules\notification;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\notification;
  * @see NotificationDAO
  * @brief Class for Notification.
  */
-
-import('core.Modules.notification.NotificationDAO');
 
 define('UNSUBSCRIBED_USER_NOTIFICATION',            0);
 

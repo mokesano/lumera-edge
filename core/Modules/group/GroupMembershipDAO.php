@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Group\GroupMembership;
 namespace Lumera\Modules\group;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\group;
  *
  * @brief Operations for retrieving and modifying group membership info.
  */
-
-import ('core.Modules.group.GroupMembership');
 
 class GroupMembershipDAO extends DAO {
     /** @var UserDAO */

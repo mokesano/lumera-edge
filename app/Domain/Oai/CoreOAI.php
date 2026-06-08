@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Oai\OAI;
+Lumera\Domain\Oai\OAIDAO;
 namespace App\Domain\Oai;
 
 /**
@@ -24,9 +26,6 @@ namespace App\Domain\Oai;
  *
  * [WIZDAM EDITION] REFACTOR: PHP 8.1+ Compatibility, Strict Types, Structured Returns
  */
-
-import('app.Domain.Oai.OAI');
-import('app.Domain.Oai.OAIDAO');
 
 class CoreOAI extends OAI {
     /** @var Site $site Associated site object */
@@ -106,7 +105,6 @@ class CoreOAI extends OAI {
         }
         return $this->dao->getSetJournalSectionId($journalSpec, $sectionSpec, $this->journalId);
     }
-
 
     //
     // OAI interface functions

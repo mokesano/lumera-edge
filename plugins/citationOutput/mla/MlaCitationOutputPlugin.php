@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationOutput\Mla\CoreMlaCitationOutputPlugin;
 /**
  * @defgroup plugins_citationOutput_mla
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief MLA citation style plug-in.
  */
-
-import('core.Modules.plugins.citationOutput.mla.CoreMlaCitationOutputPlugin');
 
 class MlaCitationOutputPlugin extends CoreMlaCitationOutputPlugin {
     

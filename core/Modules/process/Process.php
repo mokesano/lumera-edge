@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
 namespace Lumera\Modules\process;
 
 /**
@@ -24,8 +25,6 @@ namespace Lumera\Modules\process;
 
 // Process types
 define('PROCESS_TYPE_CITATION_CHECKING', 0x01);
-
-import('core.Kernel.DataObject');
 
 class Process extends DataObject {
     

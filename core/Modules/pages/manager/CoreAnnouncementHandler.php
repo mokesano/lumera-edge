@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Modules\Manager\Form\AnnouncementForm;
+Lumera\Modules\Manager\Form\AnnouncementTypeForm;
 namespace Lumera\Modules\pages\manager;
 
 /**
@@ -18,8 +21,6 @@ namespace Lumera\Modules\pages\manager;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  * FIX: Removed recursive constructor calls (Infinite Loop).
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class CoreAnnouncementHandler extends ManagerHandler {
     
@@ -131,7 +132,7 @@ class CoreAnnouncementHandler extends ManagerHandler {
 
         // Ensure announcement is valid and for this context
         if ($this->_announcementIsValid($request, $announcementId)) {
-            import('core.Modules.manager.form.AnnouncementForm');
+            
 
             $templateMgr = TemplateManager::getManager();
             $templateMgr->append('pageHierarchy', [$request->url(null, 'manager', 'announcements'), 'manager.announcements']);
@@ -181,7 +182,7 @@ class CoreAnnouncementHandler extends ManagerHandler {
 
         $router = $request->getRouter();
 
-        import('core.Modules.manager.form.AnnouncementForm');
+        
 
         $announcementId = $request->getUserVar('announcementId') == null ? null : (int) $request->getUserVar('announcementId');
         $announcementDao = DAORegistry::getDAO('AnnouncementDAO');
@@ -289,7 +290,7 @@ class CoreAnnouncementHandler extends ManagerHandler {
 
         // Ensure announcement type is valid and for this context
         if ($this->_announcementTypeIsValid($request, $typeId)) {
-            import('core.Modules.manager.form.AnnouncementTypeForm');
+            
 
             $templateMgr = TemplateManager::getManager();
             $templateMgr->append('pageHierarchy', [$request->url(null, 'manager', 'announcementTypes'), 'manager.announcementTypes']);
@@ -337,7 +338,7 @@ class CoreAnnouncementHandler extends ManagerHandler {
 
         $router = $request->getRouter();
 
-        import('core.Modules.manager.form.AnnouncementTypeForm');
+        
 
         $typeId = $request->getUserVar('typeId') == null ? null : (int) $request->getUserVar('typeId');
         $announcementTypeDao = DAORegistry::getDAO('AnnouncementTypeDAO');
@@ -390,7 +391,6 @@ class CoreAnnouncementHandler extends ManagerHandler {
         }
     }
 
-
     //
     // Protected methods.
     //
@@ -403,7 +403,6 @@ class CoreAnnouncementHandler extends ManagerHandler {
         // must be implemented by sub-classes
         assert(false);
     }
-
 
     //
     // Private helper methods.

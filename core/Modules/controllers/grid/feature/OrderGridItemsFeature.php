@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
+Lumera\Kernel\JSONManager;
 namespace Lumera\Modules\controllers\grid\feature;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\controllers\grid\feature;
  * @brief Implements grid ordering functionality.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.feature.OrderItemsFeature');
 
 class OrderGridItemsFeature extends OrderItemsFeature {
 
@@ -43,7 +43,6 @@ class OrderGridItemsFeature extends OrderItemsFeature {
         self::__construct($overrideRowTemplate);
     }
 
-
     //
     // Extended methods from GridFeature.
     //
@@ -53,7 +52,6 @@ class OrderGridItemsFeature extends OrderItemsFeature {
     public function getJSClass(): string {
         return '$.wizdam.classes.features.OrderGridItemsFeature';
     }
-
 
     //
     // Hooks implementation.
@@ -65,7 +63,7 @@ class OrderGridItemsFeature extends OrderItemsFeature {
         $request = $args['request'];
         $grid = $args['grid'];
 
-        import('core.Kernel.JSONManager');
+        
         $jsonManager = new JSONManager();
         $data = $jsonManager->decode($request->getUserVar('data'));
 

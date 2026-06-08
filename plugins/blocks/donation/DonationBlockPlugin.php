@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
+Lumera\Modules\Payment\AppPaymentManager;
 /**
  * @file plugins/blocks/donation/DonationBlockPlugin.inc.php
  *
@@ -14,8 +16,6 @@ declare(strict_types=1);
  * @brief Class for donation block plugin
  * [WIZDAM EDITION] Modernized PHP 8
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class DonationBlockPlugin extends BlockPlugin {
     
@@ -98,7 +98,7 @@ class DonationBlockPlugin extends BlockPlugin {
         $journal = $request->getJournal(); 
         if (!$journal) return '';
         
-        import('core.Modules.payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         
         // Cek apakah donasi aktif di Payment Settings

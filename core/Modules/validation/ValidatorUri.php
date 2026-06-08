@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\ValidatorRegExp;
 namespace Lumera\Modules\validation;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\validation;
  * @brief Validation check for URIs.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Explicit Static Method)
  */
-
-import('core.Modules.validation.ValidatorRegExp');
 
 class ValidatorUri extends ValidatorRegExp {
     

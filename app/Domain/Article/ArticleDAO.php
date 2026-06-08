@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Search\ArticleSearchIndex;
+Lumera\Modules\Validation\ValidatorISSN;
 namespace App\Domain\Article;
 
 /**
@@ -17,8 +21,6 @@ namespace App\Domain\Article;
  * @brief Operations for retrieving and modifying Article objects.
  * [WIZDAM EDITION] PHP 8+ Compatible & Optimized
  */
-
-import('app.Domain.Article.Article');
 
 class ArticleDAO extends DAO {
 
@@ -165,7 +167,6 @@ class ArticleDAO extends DAO {
         $result->Close();
         return $returner;
     }
-
 
     /**
      * Find articles by querying article settings.
@@ -462,7 +463,7 @@ class ArticleDAO extends DAO {
         $suppFileDao->deleteSuppFilesByArticle($articleId);
 
         // Delete article files
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileDao = DAORegistry::getDAO('ArticleFileDAO');
         $articleFiles = $articleFileDao->getArticleFilesByArticle($articleId);
 
@@ -480,7 +481,7 @@ class ArticleDAO extends DAO {
         $this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
         $this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
 
-        import('app.Domain.Search.ArticleSearchIndex');
+        
         $articleSearchIndex = new ArticleSearchIndex();
         $articleSearchIndex->articleDeleted($articleId);
         $articleSearchIndex->articleChangesFinished();
@@ -947,7 +948,7 @@ class ArticleDAO extends DAO {
         // Rekonstruksi ke format ber-hyphen (1234-567X) agar bisa ditelan ValidatorISSN
         $reconstructedIssn = substr($extractedIssn, 0, 4) . '-' . substr($extractedIssn, 4, 4);
 
-        import('core.Modules.validation.ValidatorISSN');
+        
         $validator = new ValidatorISSN();
         
         return $validator->isValid($reconstructedIssn);
@@ -988,7 +989,7 @@ class ArticleDAO extends DAO {
         // Ambil Raw ISSN (Biasanya formatnya XXXX-XXXX)
         $rawIssn = $journal ? ($journal->getSetting('onlineIssn') ? $journal->getSetting('onlineIssn') : $journal->getSetting('printIssn')) : '';
         
-        import('core.Modules.validation.ValidatorISSN');
+        
         $validator = new ValidatorISSN();
 
         // Cek kelayakan matematis MENGGUNAKAN RAW ISSN (yang masih ada tanda hubungnya)

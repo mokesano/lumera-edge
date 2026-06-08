@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CoreRequest;
 namespace App\Domain\Core;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Core;
  * <journal_id> is assumed to be "index" for top-level site requests.
  * WIZDAM EDITION: PHP 8 Compatibility (Static & Strict Types)
  */
-
-import('core.Kernel.CoreRequest');
 
 class Request extends CoreRequest {
     

@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\SectionEditor\SubmissionEditHandler;
+Lumera\Pages\SectionEditor\SubmissionCommentsHandler;
+Lumera\Pages\Editor\IssueManagementHandler;
+Lumera\Pages\Editor\EditorHandler;
 namespace App\Pages\Editor;
 
 /**
@@ -144,7 +148,7 @@ switch ($op) {
     case 'waivePublicationFee':
     case 'downloadLayoutTemplate':
         define('HANDLER_CLASS', \App\Pages\SectionEditor\SubmissionEditHandler::class);
-        import('app.Pages.SectionEditor.SubmissionEditHandler');
+        
         break;
     //
     // Submission Comments
@@ -165,7 +169,7 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\SectionEditor\SubmissionCommentsHandler::class);
-        import('app.Pages.SectionEditor.SubmissionCommentsHandler');
+        
         break;
     //
     // Issue
@@ -201,7 +205,7 @@ switch ($op) {
     case 'unpublishIssue':
     case 'notifyUsers':
         define('HANDLER_CLASS', \App\Pages\Editor\IssueManagementHandler::class);
-        import('app.Pages.Editor.IssueManagementHandler');
+        
         break;
     case 'index':
     case 'submissions':
@@ -211,5 +215,5 @@ switch ($op) {
     case 'deleteSubmission':
     case 'instructions':
         define('HANDLER_CLASS', \App\Pages\Editor\EditorHandler::class);
-        import('app.Pages.Editor.EditorHandler');
+        
 }

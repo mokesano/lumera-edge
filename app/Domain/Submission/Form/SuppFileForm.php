@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Plugins\PubIdPluginHelper;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Search\ArticleSearchIndex;
 namespace App\Domain\Submission\Form;
-
 
 /**
  * @file app/Domain/Submission/Form/SuppFileForm.php
@@ -18,8 +21,6 @@ namespace App\Domain\Submission\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class SuppFileForm extends Form {
     /** @var int|null the ID of the supplementary file */
@@ -168,7 +169,7 @@ class SuppFileForm extends Form {
         }
 
         // Verify additional fields from public identifer plug-ins.
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->validate($journal->getId(), $this, $this->suppFile);
 
@@ -204,7 +205,7 @@ class SuppFileForm extends Form {
             ];
         }
         // consider the additional field names from the public identifer plugins
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->init($this, $suppFile);
 
@@ -234,7 +235,7 @@ class SuppFileForm extends Form {
             ]
         );
         // consider the additional field names from the public identifer plugins
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->readInputData($this);
     }
@@ -246,13 +247,13 @@ class SuppFileForm extends Form {
      * @return int the supplementary file ID
      */
     public function execute($fileName = null, $createRemote = false) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFileManager = new ArticleFileManager($this->article->getId());
         $suppFileDao = DAORegistry::getDAO('SuppFileDAO');
 
         $fileName = isset($fileName) ? $fileName : 'uploadSuppFile';
 
-        import('app.Domain.Search.ArticleSearchIndex');
+        
         $articleSearchIndex = new ArticleSearchIndex();
         
         if (isset($this->suppFile)) {
@@ -331,7 +332,7 @@ class SuppFileForm extends Form {
         $suppFile->setShowReviewers($this->getData('showReviewers') == 1 ? 1 : 0);
         $suppFile->setStoredPubId('publisher-id', $this->getData('publicSuppFileId'));
         // consider the additional field names from the public identifer plugins
-        import('app.Domain.Plugins.PubIdPluginHelper');
+        
         $pubIdPluginHelper = new PubIdPluginHelper();
         $pubIdPluginHelper->execute($this, $suppFile);
     }

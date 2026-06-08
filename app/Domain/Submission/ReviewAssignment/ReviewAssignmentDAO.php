@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\ReviewAssignment\ReviewAssignment;
+Lumera\Modules\Submission\ReviewAssignment\CoreReviewAssignmentDAO;
 namespace App\Domain\Submission\ReviewAssignment;
-
 
 /**
  * @file app/Domain/Submission/ReviewAssignment/ReviewAssignmentDAO.php
@@ -19,9 +20,6 @@ namespace App\Domain\Submission\ReviewAssignment;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.ReviewAssignment.ReviewAssignment');
-import('core.Modules.submission.reviewAssignment.CoreReviewAssignmentDAO');
 
 class ReviewAssignmentDAO extends CoreReviewAssignmentDAO {
     

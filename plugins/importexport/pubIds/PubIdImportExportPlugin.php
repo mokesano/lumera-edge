@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\File\TemporaryFileManager;
 namespace Lumera\Plugins\Importexport\pubIds;
 
 /**
@@ -15,9 +18,6 @@ namespace Lumera\Plugins\Importexport\pubIds;
  *
  * @brief Public identifier import/export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 define('PID_DTD_URL', 'http://wizdam.sfu.ca/wizdam/dtds/2.3/pubIds.dtd');
 define('PID_DTD_ID', '-//Wizdam//Wizdam PubIds XML//EN');
@@ -138,7 +138,7 @@ class PubIdImportExportPlugin extends ImportExportPlugin {
                 $templateMgr->display($this->getTemplatePath() . 'selectIssue.tpl');
                 break;
             case 'import':
-                import('core.Modules.file.TemporaryFileManager');
+                
                 $user = $request->getUser();
                 $temporaryFileManager = new TemporaryFileManager();
 

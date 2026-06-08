@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+Lumera\Modules\Metadata\MetadataDescription;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -22,9 +24,6 @@ namespace Lumera\Modules\metadata;
  * These adapters have to be persistable as they'll be provided
  * by plug-ins via the filter registry.
  */
-
-import('core.Modules.filter.PersistableFilter');
-import('core.Modules.metadata.MetadataDescription');
 
 class MetadataDataObjectAdapter extends PersistableFilter {
     /** @var MetadataSchema */
@@ -193,7 +192,6 @@ class MetadataDataObjectAdapter extends PersistableFilter {
         return $this->_targetDataObject;
     }
 
-
     //
     // Abstract template methods
     //
@@ -234,7 +232,6 @@ class MetadataDataObjectAdapter extends PersistableFilter {
         return $this->getMetadataFieldNames($translated);
     }
 
-
     //
     // Implement template methods from Filter
     //
@@ -274,7 +271,6 @@ class MetadataDataObjectAdapter extends PersistableFilter {
 
         return $output;
     }
-
 
     //
     // Protected helper methods

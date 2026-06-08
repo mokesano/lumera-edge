@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Modules\manager\form;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\manager\form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class CoreAnnouncementForm extends Form {
     /** @var int|null the ID of the announcement being edited */
@@ -93,7 +92,6 @@ class CoreAnnouncementForm extends Form {
         self::__construct($contextId, $announcementId);
     }
 
-
     //
     // Getters and setters.
     //
@@ -104,7 +102,6 @@ class CoreAnnouncementForm extends Form {
     public function getContextId() {
         return $this->_contextId;
     }
-
 
     //
     // Extended methods from Form.
@@ -234,7 +231,6 @@ class CoreAnnouncementForm extends Form {
         return $announcement;
     }
 
-
     //
     // Protected methods.
     //
@@ -247,7 +243,6 @@ class CoreAnnouncementForm extends Form {
     public function setDateExpire($announcement) {
         return false;
     }
-
 
     //
     // Private methods.

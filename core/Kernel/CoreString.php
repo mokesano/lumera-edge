@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\Transcoder;
 namespace Lumera\Kernel;
 
 /**
@@ -558,7 +559,6 @@ class CoreString {
         return $result;
     }
 
-
     /**
      * Strip unsafe HTML from the input text. Covers XSS attacks.
      * @param string $input input string
@@ -739,7 +739,7 @@ class CoreString {
      * @return string
      */
     public static function utf8_normalize(string $str): string {
-        import('core.Kernel.Transcoder');
+        
 
         if (self::hasMBString()) {
             // NB: CP-1252 often segfaults; we've left it out here but it will detect as 'ISO-8859-1'

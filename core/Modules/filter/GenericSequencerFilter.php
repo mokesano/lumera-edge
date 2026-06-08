@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\CompositeFilter;
 namespace Lumera\Modules\filter;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Modules\filter;
  * passes its output to the next filter and so on and finally returns
  * the result of the last filter in the chain to the caller.
  */
-
-import('core.Modules.filter.CompositeFilter');
 
 class GenericSequencerFilter extends CompositeFilter {
     
@@ -46,7 +45,6 @@ class GenericSequencerFilter extends CompositeFilter {
         self::__construct($filterGroup, $displayName);
     }
 
-
     //
     // Implementing abstract template methods from PersistableFilter
     //
@@ -56,7 +54,6 @@ class GenericSequencerFilter extends CompositeFilter {
     public function getClassName() {
         return 'core.Modules.filter.GenericSequencerFilter';
     }
-
 
     //
     // Implementing abstract template methods from Filter

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Domain\Admin\Form\JournalSiteSettingsForm;
+Lumera\Domain\Notification\NotificationManager;
+Lumera\Domain\File\FileManager;
+Lumera\Domain\File\PublicFileManager;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +20,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for journal management in site administration.
  */
-
-import('app.Pages.admin.AdminHandler');
 
 class AdminJournalHandler extends AdminHandler {
     
@@ -76,7 +79,7 @@ class AdminJournalHandler extends AdminHandler {
         $this->validate();
         $this->setupTemplate();
 
-        import('app.Domain.Admin.form.JournalSiteSettingsForm');
+        
         $settingsForm = new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 
         if ($settingsForm->isLocaleResubmit()) {
@@ -99,7 +102,7 @@ class AdminJournalHandler extends AdminHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Admin.form.JournalSiteSettingsForm');
+        
 
         $journalId = (int) $request->getUserVar('journalId');
         $settingsForm = new JournalSiteSettingsForm($journalId);
@@ -112,7 +115,7 @@ class AdminJournalHandler extends AdminHandler {
 
             $user = $request->getUser();
 
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification($user->getId());
             $request->redirect(null, null, 'journals');
@@ -140,13 +143,13 @@ class AdminJournalHandler extends AdminHandler {
             if ($journalDao->deleteJournalById($journalId)) {
                 // Delete journal file tree
                 // FIXME move this somewhere better.
-                import('app.Domain.File.FileManager');
+                
                 $fileManager = new FileManager();
 
                 $journalPath = Config::getVar('files', 'files_dir') . '/journals/' . $journalId;
                 $fileManager->rmtree($journalPath);
 
-                import('app.Domain.File.PublicFileManager');
+                
                 $publicFileManager = new PublicFileManager();
                 $publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
             }

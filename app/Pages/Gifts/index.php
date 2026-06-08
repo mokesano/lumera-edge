@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Gifts\GiftsHandler;
 namespace App\Pages\Gifts;
 
 /**
@@ -25,6 +26,6 @@ switch ($op) {
     case 'payPurchaseGiftSubscription':
     case 'thankYou':
         define('HANDLER_CLASS', \App\Pages\Gifts\GiftsHandler::class);
-        import('app.Pages.Gifts.GiftsHandler');
+        
         break;
 }

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\CoreFileDAO;
+Lumera\Domain\Article\ArticleFile;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Article;
 
 /**
@@ -21,9 +24,6 @@ namespace App\Domain\Article;
  * - Strict Integer Casting
  * - Hook Dispatch
  */
-
-import('app.Domain.File.CoreFileDAO');
-import('app.Domain.Article.ArticleFile');
 
 class ArticleFileDAO extends CoreFileDAO {
 
@@ -209,7 +209,7 @@ class ArticleFileDAO extends CoreFileDAO {
      * @return array ArticleFiles
      */
     public function getArticleFilesByAssocId($assocId, $fileStage) {
-        import('app.Domain.File.ArticleFileManager');
+        
         $articleFiles = array();
 
         $result = $this->retrieve(

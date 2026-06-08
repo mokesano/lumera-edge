@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Search\SearchFileParser;
 namespace Lumera\Modules\search;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\search;
  *
  * @brief Class to extract text from a file using an external helper program.
  */
-
-import('core.Modules.search.SearchFileParser');
 
 class SearchHelperParser extends SearchFileParser {
 

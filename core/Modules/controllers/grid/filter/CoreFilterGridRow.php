@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridRow;
 namespace Lumera\Modules\controllers\grid\filter;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\grid\filter;
  * @brief The filter grid row definition
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.GridRow');
 
 class CoreFilterGridRow extends GridRow {
     

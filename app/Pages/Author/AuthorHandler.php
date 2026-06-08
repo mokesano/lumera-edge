@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Author\AuthorAction;
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Issue\IssueAction;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
 namespace App\Pages\Author;
 
 /**
@@ -15,9 +22,6 @@ namespace App\Pages\Author;
  *
  * @brief Handle requests for journal author functions.
  */
-
-import('app.Domain.Submission.Author.AuthorAction');
-import('app.Domain.Handler.Handler');
 
 class AuthorHandler extends Handler {
     /** @var AuthorSubmission|null */
@@ -124,7 +128,7 @@ class AuthorHandler extends Handler {
                 $submissionsArray = array_reverse($submissionsArray);
             }
             // Convert submission array back to an ItemIterator class
-            import('core.Kernel.ArrayItemIterator');
+            
             $submissions = ArrayItemIterator::fromRangeInfo($submissionsArray, $rangeInfo);
         } else {
             $submissions = $authorSubmissionDao->getAuthorSubmissions($user->getId(), $journal->getId(), $active, $rangeInfo, $sort, $sortDirection);
@@ -140,7 +144,7 @@ class AuthorHandler extends Handler {
         $templateMgr->assign('submissions', $submissions);
 
         // assign payment 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
 
         if ( $paymentManager->isConfigured() ) {        
@@ -153,7 +157,7 @@ class AuthorHandler extends Handler {
             $templateMgr->assign('completedPaymentDAO', $completedPaymentDAO);
         }
 
-        import('app.Domain.Issue.IssueAction');
+        
         $issueAction = new IssueAction();
         
         // Note: register_function might be deprecated depending on Smarty version, consider registering plugin/modifier.
@@ -244,7 +248,7 @@ class AuthorHandler extends Handler {
         $pageHierarchy = $subclass ? [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'author'), 'user.role.author'], [$request->url(null, 'author'), 'article.submissions']]
             : [[$request->url(null, 'user'), 'navigation.user'], [$request->url(null, 'author'), 'user.role.author']];
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         $submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
         if (isset($submissionCrumb)) {
             $pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
@@ -258,7 +262,7 @@ class AuthorHandler extends Handler {
      * @param CoreRequest $request
      */
     public function instructions($args, $request = null) {
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
         

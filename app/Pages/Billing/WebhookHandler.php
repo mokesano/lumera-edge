@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Services\InvoiceService;
+Lumera\Modules\Services\PaymentSettingsService;
+Lumera\Domain\Payment\MidtransGateway;
+Lumera\Domain\Payment\XenditGateway;
 namespace App\Pages\Billing;
 
 /**
@@ -17,11 +22,7 @@ namespace App\Pages\Billing;
  * Dilengkapi dengan pengamanan Signature, Idempotency, dan Retry-Handling.
  */
 
-import('app.Domain.Handler.Handler');
-
 // Memanggil WIZDAM Services dari folder semantik
-import('core.Modules.services.InvoiceService');
-import('core.Modules.services.PaymentSettingsService');
 
 class WebhookHandler extends Handler {
     
@@ -60,13 +61,13 @@ class WebhookHandler extends Handler {
 
         // Inisialisasi Gateway menggunakan Factory Pattern sederhana
         if ($gatewayName === 'midtrans') {
-            import('app.Domain.Payment.MidtransGateway');
+            
             $gateway = new MidtransGateway(
                 $settingsService->getMidtransServerKey(), 
                 $settingsService->isProduction()
             );
         } elseif ($gatewayName === 'xendit') {
-            import('app.Domain.Payment.XenditGateway');
+            
             $gateway = new XenditGateway(
                 $settingsService->getXenditApiKey(),
                 $settingsService->getXenditWebhookToken()

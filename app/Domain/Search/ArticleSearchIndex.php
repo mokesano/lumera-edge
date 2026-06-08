@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Library\Nlp\SearchFileParser;
+Lumera\Library\Nlp\SearchHTMLParser;
+Lumera\Library\Nlp\SearchHelperParser;
+Lumera\Domain\Journal\Journal;
+Lumera\Domain\File\ArticleFileManager;
 namespace App\Domain\Search;
 
 /**
@@ -17,10 +22,7 @@ namespace App\Domain\Search;
  * [WIZDAM EDITION] High Performance & PHP 8+ Compatible.
  */
 
-import('core.library.nlp.SearchFileParser');
-import('core.library.nlp.SearchHTMLParser');
-import('core.library.nlp.SearchHelperParser');
-import('app.Domain.journal.Journal'); // [WIZDAM] Explicit Import
+ // [WIZDAM] Explicit Import
 
 define('SEARCH_STOPWORDS_FILE', 'core/Library/nlp/stopwords.txt');
 define('SEARCH_KEYWORD_MAX_LENGTH', 40);
@@ -91,7 +93,7 @@ class ArticleSearchIndex {
         );
 
         if ($hookResult === false || is_null($hookResult)) {
-            import('app.Domain.File.ArticleFileManager');
+            
             $fileManager = new ArticleFileManager($articleId);
             $file = $fileManager->getFile($fileId);
 

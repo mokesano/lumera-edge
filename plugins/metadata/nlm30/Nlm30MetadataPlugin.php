@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\CoreNlm30MetadataPlugin;
 /**
  * @defgroup plugins_metadata_nlm30
  */
@@ -17,9 +18,6 @@ declare(strict_types=1);
  *
  * @brief NLM 3.0 metadata plugin
  */
-
-
-import('core.Modules.plugins.metadata.nlm30.CoreNlm30MetadataPlugin');
 
 class Nlm30MetadataPlugin extends CoreNlm30MetadataPlugin {
     

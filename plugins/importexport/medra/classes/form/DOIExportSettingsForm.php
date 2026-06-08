@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Importexport\medra\classes\form;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Importexport\medra\classes\form;
  *
  * @brief Form base class for journal managers to setup DOI export plug-ins.
  */
-
-import('core.Modules.form.Form');
 
 class DOIExportSettingsForm extends Form {
 

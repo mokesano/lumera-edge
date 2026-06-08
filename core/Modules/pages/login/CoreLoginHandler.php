@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\User\Form\LoginChangePasswordForm;
 namespace Lumera\Modules\pages\login;
 
 /**
@@ -18,8 +21,6 @@ namespace Lumera\Modules\pages\login;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  * - Integrated Modular Security: Turnstile & reCAPTCHA v2/v3
  */
-
-import('core.Modules.handler.Handler');
 
 class CoreLoginHandler extends Handler {
 
@@ -360,7 +361,7 @@ class CoreLoginHandler extends Handler {
             $templateMgr->display('user/lostPassword.tpl');
         } else {
             $site = $request->getSite();
-            import('core.Modules.mail.MailTemplate');
+            
             $mail = new MailTemplate('PASSWORD_RESET_CONFIRM');
             $this->_setMailFrom($request, $mail, $site);
             $mail->assignParams([
@@ -427,7 +428,7 @@ class CoreLoginHandler extends Handler {
             $userDao->updateObject($user);
 
             // Send email with new password
-            import('core.Modules.mail.MailTemplate');
+            
             $mail = new MailTemplate('PASSWORD_RESET');
             $this->_setMailFrom($request, $mail, $site);
             $mail->assignParams([
@@ -443,7 +444,7 @@ class CoreLoginHandler extends Handler {
             $templateMgr->assign('backLinkLabel',  'user.login');
             $templateMgr->display('common/message.tpl');
         } else {
-            import('core.Modules.user.form.LoginChangePasswordForm');
+            
 
             $passwordForm = new LoginChangePasswordForm($confirmHash);
             $passwordForm->initData();
@@ -463,7 +464,7 @@ class CoreLoginHandler extends Handler {
         $this->validate();
         $this->setupTemplate($request);
 
-        import('core.Modules.user.form.LoginChangePasswordForm');
+        
 
         $passwordForm = new LoginChangePasswordForm();
         $passwordForm->initData();
@@ -489,7 +490,7 @@ class CoreLoginHandler extends Handler {
         if ($oneStepReset) {
             $confirmHash = trim((string) $request->getUserVar('confirmHash'));
         }
-        import('core.Modules.user.form.LoginChangePasswordForm');
+        
         $passwordForm = new LoginChangePasswordForm($confirmHash);
         $passwordForm->readInputData();
 

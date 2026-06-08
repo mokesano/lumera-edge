@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\CoreFile;
 namespace Lumera\Modules\submission;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\submission;
  *
  * @brief Submission file class.
  */
-
-import('core.Modules.file.CoreFile');
 
 class SubmissionFile extends CoreFile {
     
@@ -36,7 +35,6 @@ class SubmissionFile extends CoreFile {
         }
         self::__construct();
     }
-
 
     //
     // Getters and Setters
@@ -230,7 +228,6 @@ class SubmissionFile extends CoreFile {
         return $this->getData('viewable');
     }
 
-
     /**
      * Set viewable.
      * @param $viewable boolean
@@ -238,7 +235,6 @@ class SubmissionFile extends CoreFile {
     public function setViewable($viewable) {
         return $this->SetData('viewable', $viewable);
     }
-
 
     //
     // Public methods

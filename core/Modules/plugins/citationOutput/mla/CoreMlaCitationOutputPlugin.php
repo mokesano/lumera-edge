@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
 namespace Lumera\Modules\plugins\citationOutput\mla;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\plugins\citationOutput\mla;
  * - PHP 8.1+ Strict Compliance
  * - Explicit Visibility & Return Types
  */
-
-import('core.Modules.plugins.Plugin');
 
 class CoreMlaCitationOutputPlugin extends Plugin {
     

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridRow;
+Lumera\Modules\LinkAction\Request\NullAction;
 namespace Lumera\Modules\controllers\listbuilder;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\controllers\listbuilder;
  * @brief Handle list builder row requests.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.GridRow');
 
 class ListbuilderGridRow extends GridRow {
 
@@ -55,7 +55,6 @@ class ListbuilderGridRow extends GridRow {
         $this->_hasDeleteItemLink = $hasDeleteItemLink;
     }
 
-
     //
     // Overridden template methods
     //
@@ -76,7 +75,7 @@ class ListbuilderGridRow extends GridRow {
 
         if ($this->_hasDeleteItemLink) {
             // Add deletion action (handled in JS-land)
-            import('core.Modules.linkAction.request.NullAction');
+            
             $this->addAction(
                 new LinkAction(
                     'delete',

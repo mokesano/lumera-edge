@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataDataObjectAdapter;
 namespace Lumera\Modules\plugins\metadata\mods34\filter;
 
 /**
@@ -19,9 +20,6 @@ namespace Lumera\Modules\plugins\metadata\mods34\filter;
  * injects/extracts MODS schema compliant meta-data into/from
  * a Submission object.
  */
-
-
-import('core.Modules.metadata.MetadataDataObjectAdapter');
 
 class Mods34SchemaSubmissionAdapter extends MetadataDataObjectAdapter {
     
@@ -46,7 +44,6 @@ class Mods34SchemaSubmissionAdapter extends MetadataDataObjectAdapter {
         $args = func_get_args();
         call_user_func_array([$this, '__construct'], $args);
     }
-
 
     //
     // Implement template methods from MetadataDataObjectAdapter

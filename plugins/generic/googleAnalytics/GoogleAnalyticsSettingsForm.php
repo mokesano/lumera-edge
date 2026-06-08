@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\googleAnalytics;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Plugins\Generic\googleAnalytics;
 define('GOOGLE_ANALYTICS_SITE_ENABLE', 1);
 define('GOOGLE_ANALYTICS_SITE_DISABLE', -1);
 define('GOOGLE_ANALYTICS_SITE_UNCHANGED', 0);
-
-import('core.Modules.form.Form');
 
 class GoogleAnalyticsSettingsForm extends Form {
 

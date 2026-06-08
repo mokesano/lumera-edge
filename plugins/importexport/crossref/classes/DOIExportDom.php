@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
 namespace Lumera\Plugins\Importexport\crossref\classes;
 
 /**
@@ -16,9 +17,6 @@ namespace Lumera\Plugins\Importexport\crossref\classes;
  * @brief Onix for DOI (O4DOI) XML export format implementation.
  * MODERNIZED FOR WIZDAM FORK
  */
-
-
-import('core.Modules.xml.XMLCustomWriter');
 
 define('DOI_EXPORT_FILETYPE_PDF', 'PDF');
 define('DOI_EXPORT_FILETYPE_HTML', 'HTML');
@@ -52,7 +50,6 @@ class DOIExportDom {
     public function _addError($errorTranslationKey, $param = null) {
         $this->_errors[] = [$errorTranslationKey, $param];
     }
-
 
     //
     // Protected properties
@@ -126,7 +123,6 @@ class DOIExportDom {
         return $this->_cache;
     }
 
-
     //
     // Constructor
     //
@@ -160,7 +156,6 @@ class DOIExportDom {
         call_user_func_array(array($this, '__construct'), $args);
     }
 
-
     //
     // Public methods
     //
@@ -183,7 +178,6 @@ class DOIExportDom {
     public function generate($objects) {
         assert(false);
     }
-
 
     //
     // Protected template methods
@@ -219,7 +213,6 @@ class DOIExportDom {
     public function getXmlSchemaLocation() {
         assert(false);
     }
-
 
     //
     // Protected helper methods

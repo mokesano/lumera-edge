@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Webservice\WebService;
+Lumera\Modules\Xslt\XSLTransformer;
 namespace Lumera\Modules\webservice;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\webservice;
  * @brief A web service that returns XML data.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
-
-import('core.Modules.webservice.WebService');
-import('core.Modules.xslt.XSLTransformer');
 
 class XmlWebService extends WebService {
     /** @var integer */
@@ -67,7 +66,6 @@ class XmlWebService extends WebService {
 
         $this->_returnType = $returnType;
     }
-
 
     /**
      * @see WebService::call()

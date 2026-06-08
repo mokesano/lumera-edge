@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\GridFeature;
+Lumera\Modules\LinkAction\Request\NullAction;
 namespace Lumera\Modules\controllers\grid\feature;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\controllers\grid\feature;
  * @brief Transform default grid categories in accordions.
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-
-import('core.Modules.controllers.grid.feature.GridFeature');
-import('core.Modules.linkAction.request.NullAction');
 
 class GridCategoryAccordionFeature extends GridFeature {
 
@@ -49,7 +48,6 @@ class GridCategoryAccordionFeature extends GridFeature {
     public function getJSClass(): string {
         return '$.wizdam.classes.features.GridCategoryAccordionFeature';
     }
-
 
     //
     // Hooks implementation.

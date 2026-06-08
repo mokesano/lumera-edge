@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\EditableFile;
 namespace Lumera\Modules\file;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\file;
  * @brief This extension of LocaleFile.inc.php supports updating.
  *
  */
-
-import('core.Modules.file.EditableFile');
 
 class EditableLocaleFile extends LocaleFile {
     /** @var EditableFile */

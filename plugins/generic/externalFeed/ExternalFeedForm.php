@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\externalFeed;
 
 /**
@@ -19,8 +20,6 @@ namespace Lumera\Plugins\Generic\externalFeed;
  * - Removed obsolete var keywords.
  * - Strict type casting for security.
  */
-
-import('core.Modules.form.Form');
 
 class ExternalFeedForm extends Form {
 
@@ -82,7 +81,7 @@ class ExternalFeedForm extends Form {
         $templateMgr->assign('feedId', $this->feedId);
 
         $plugin = $this->plugin; 
-        $plugin->import('ExternalFeed');
+        $plugin->
 
         parent::display($request, $template);
     }
@@ -145,7 +144,7 @@ class ExternalFeedForm extends Form {
         $plugin = $this->plugin;
 
         $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
-        $plugin->import('ExternalFeed');
+        $plugin->
 
         // Logic penentuan Update atau Insert
         $feed = null;

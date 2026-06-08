@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleFile;
 namespace App\Domain\Article;
 
 /**
@@ -21,8 +22,6 @@ namespace App\Domain\Article;
  * - Null Safety
  * - Strict Typing
  */
-
-import('app.Domain.Article.ArticleFile');
 
 class SuppFile extends ArticleFile {
 

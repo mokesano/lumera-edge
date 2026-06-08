@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Checkout\Services\RedeemService;
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Reedem;
 
 /**
@@ -16,9 +20,6 @@ namespace App\Pages\Reedem;
  * @brief Menangani domain Loyalti (Dompet Virtual). Tempat Editor/Reviewer 
  * melihat saldo "Recognition Points" dan riwayat mutasinya.
  */
-
-import('app.Domain.Handler.Handler');
-import('core.Modules.checkout.services.RedeemService');
 
 class RedeemHandler extends Handler {
     
@@ -96,7 +97,7 @@ class RedeemHandler extends Handler {
             $this->_redirectWithError($request, 'redeem.error.invalidMethod');
         }
 
-        import('core.Modules.validation.ValidatorCSRF');
+        
         if (!ValidatorCSRF::checkToken($request->getUserVar('csrfToken'))) {
             $this->_redirectWithError($request, 'redeem.error.csrfInvalid');
         }
@@ -113,7 +114,7 @@ class RedeemHandler extends Handler {
             $this->redeemService->exchangePoints((int) $user->getId(), $pointsToRedeem);
 
             // Jika berhasil, beri notifikasi trivial sukses
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $notificationManager->createTrivialNotification(
                 $user->getId(), 
@@ -141,7 +142,7 @@ class RedeemHandler extends Handler {
      * @return void
      */
     private function _redirectWithError($request, string $localeKey): void {
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = $request->getUser();
         

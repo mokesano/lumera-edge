@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\PubIdPlugin;
 /**
  * @class PublisherIdPlugin
  * [WIZDAM] Plugin khusus untuk mengelola Publisher ID (Custom Identifier)
  * Modernized for ScholarWizdam (PHP 7.4/8.x Compatibility)
  */
-
-import('core.Modules.plugins.PubIdPlugin');
 
 class PublisherIdPlugin extends PubIdPlugin {
     /**

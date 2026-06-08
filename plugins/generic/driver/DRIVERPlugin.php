@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\driver;
 
 /**
@@ -21,8 +22,6 @@ define('DRIVER_ACCESS_CLOSED', 1);
 define('DRIVER_ACCESS_EMBARGOED', 2);
 define('DRIVER_ACCESS_DELAYED', 3);
 define('DRIVER_ACCESS_RESTRICTED', 4);
-
-import('core.Modules.plugins.GenericPlugin');
 
 class DRIVERPlugin extends GenericPlugin {
 
@@ -53,7 +52,7 @@ class DRIVERPlugin extends GenericPlugin {
     public function register(string $category, string $path): bool {
         $success = parent::register($category, $path);
         if ($success && $this->getEnabled()) {
-            $this->import('DRIVERDAO');
+            $this->
             $driverDao = new DRIVERDAO();
             DAORegistry::registerDAO('DRIVERDAO', $driverDao);
 
@@ -133,7 +132,6 @@ class DRIVERPlugin extends GenericPlugin {
         return false;
     }
 
-
     /**
      * Change OAI record or identifier to consider the DRIVER set
      */
@@ -212,7 +210,6 @@ class DRIVERPlugin extends GenericPlugin {
             return $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
         }
     }
-
 
     /**
      * Check if it's a DRIVER article.

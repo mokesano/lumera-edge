@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+Lumera\Modules\Db\DBResultRange;
 namespace Lumera\Plugins\Generic\webFeed;
 
 /**
@@ -12,8 +14,6 @@ namespace Lumera\Plugins\Generic\webFeed;
  * @brief Gateway component of web feed plugin
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.plugins.GatewayPlugin');
 
 class WebFeedGatewayPlugin extends GatewayPlugin {
 
@@ -149,7 +149,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
         $publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
         if ($displayItems == 'recent' && $recentItems > 0) {
-            import('core.Modules.db.DBResultRange');
+            
             $rangeInfo = new DBResultRange($recentItems, 1);
             $publishedArticleObjects = $publishedArticleDao->getPublishedArticlesByJournalId(
                 $journal->getId(), $rangeInfo, true

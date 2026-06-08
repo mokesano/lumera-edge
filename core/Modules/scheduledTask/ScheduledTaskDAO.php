@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
 namespace Lumera\Modules\scheduledTask;
 
 /**
@@ -21,8 +22,6 @@ namespace Lumera\Modules\scheduledTask;
  * @brief Operations for retrieving and modifying Scheduled Task data.
  * [WIZDAM EDITION] Database-backed Task Registry (PHP 7.4/8.x Compatible)
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class ScheduledTaskDAO extends DAO {
     

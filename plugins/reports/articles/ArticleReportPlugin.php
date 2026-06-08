@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
+Lumera\Modules\Article\Article;
 /**
  * @file plugins/reports/articles/ArticleReportPlugin.inc.php
  *
@@ -12,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief Article report plugin
  */
-
-import('core.Modules.plugins.ReportPlugin');
 
 class ArticleReportPlugin extends ReportPlugin {
     
@@ -27,7 +27,7 @@ class ArticleReportPlugin extends ReportPlugin {
     public function register(string $category, string $path, $mainContextId = null): bool {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && Config::getVar('general', 'installed')) {
-            $this->import('ArticleReportDAO');
+            $this->
             $articleReportDAO = new ArticleReportDAO();
             DAORegistry::registerDAO('ArticleReportDAO', $articleReportDAO);
         }
@@ -88,7 +88,7 @@ class ArticleReportPlugin extends ReportPlugin {
 
         AppLocale::requireComponents(LOCALE_COMPONENT_WIZDAM_EDITOR, LOCALE_COMPONENT_WIZDAM_SUBMISSION);
 
-        import('core.Modules.article.Article');
+        
         $decisionMessages = [
             SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
             SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),
@@ -126,7 +126,7 @@ class ArticleReportPlugin extends ReportPlugin {
         $fp = fopen('php://output', 'wt');
         CoreString::fputcsv($fp, array_values($columns));
 
-        import('core.Modules.article.Article'); // Bring in getStatusMap function
+         // Bring in getStatusMap function
         $statusMap = Article::getStatusMap();
 
         $authorIndex = 0;

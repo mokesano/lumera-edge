@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DBDataXMLParser;
+Lumera\Modules\Form\Form;
+Lumera\Domain\File\FileManager;
+Lumera\Domain\Rt\JournalRTAdmin;
 namespace App\Domain\Admin\Form;
 
 /**
@@ -16,9 +20,6 @@ namespace App\Domain\Admin\Form;
  * @brief Form for site administrator to edit basic journal settings.
  * [WIZDAM EDITION] Refactored for PHP 8.x (Removed create_function)
  */
-
-import('core.Modules.db.DBDataXMLParser');
-import('core.Modules.form.Form');
 
 class JournalSiteSettingsForm extends Form {
 
@@ -185,7 +186,7 @@ class JournalSiteSettingsForm extends Form {
             }
 
             // Make the file directories for the journal
-            import('app.Domain.File.FileManager');
+            
             $fileManager = new FileManager();
             $filesDir = Config::getVar('files', 'files_dir');
             $publicFilesDir = Config::getVar('files', 'public_files_dir');
@@ -208,7 +209,7 @@ class JournalSiteSettingsForm extends Form {
             ]);
 
             // Install the default RT versions.
-            import('app.Domain.Rt.JournalRTAdmin');
+            
             $journalRtAdmin = new JournalRTAdmin($journalId);
             $journalRtAdmin->restoreVersions(false);
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Oai\OAIHandler;
 namespace App\Pages\Oai;
 
 /**
@@ -22,6 +23,6 @@ namespace App\Pages\Oai;
 switch ($op) {
     case 'index':
         define('HANDLER_CLASS', \App\Pages\Oai\OAIHandler::class);
-        import('app.Pages.Oai.OAIHandler');
+        
         break;
 }

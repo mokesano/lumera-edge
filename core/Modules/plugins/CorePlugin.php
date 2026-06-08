@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Help\Help;
+Lumera\Modules\Help\PluginHelpMappingFile;
 namespace Lumera\Modules\plugins;
 
 /**
@@ -352,9 +354,9 @@ class CorePlugin {
      */
     public function addHelpData($locale = null): bool {
         if ($locale == '') $locale = AppLocale::getLocale();
-        import('core.Modules.help.Help');
+        
         $help = Help::getHelp();
-        import('core.Modules.help.PluginHelpMappingFile');
+        
         $pluginHelpMapping = new PluginHelpMappingFile($this);
         $help->addMappingFile($pluginHelpMapping);
         return true;

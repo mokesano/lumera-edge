@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Manager\Form\UserManagementForm;
+Lumera\Domain\User\UserAction;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for people management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class PeopleHandler extends ManagerHandler {
     
@@ -502,7 +503,7 @@ class PeopleHandler extends ManagerHandler {
             return $templateMgr->display('common/error.tpl');
         }
 
-        import('app.Domain.Manager.form.UserManagementForm');
+        
 
         $templateMgr->assign('roleSettings', $this->retrieveRoleAssignmentPreferences($journal->getId()));
 
@@ -555,7 +556,7 @@ class PeopleHandler extends ManagerHandler {
         }
 
         if (!empty($oldUserIds) && !empty($newUserId)) {
-            import('app.Domain.User.UserAction');
+            
             foreach ($oldUserIds as $oldUserId) {
                 UserAction::mergeUsers($oldUserId, $newUserId);
             }
@@ -768,7 +769,7 @@ class PeopleHandler extends ManagerHandler {
             return $templateMgr->display('common/error.tpl');
         }
 
-        import('app.Domain.Manager.form.UserManagementForm');
+        
 
         $userForm = new UserManagementForm($userId);
 

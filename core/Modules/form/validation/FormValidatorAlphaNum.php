@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorRegExp;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -18,8 +20,6 @@ namespace Lumera\Modules\form\validation;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-import('core.Modules.form.validation.FormValidator');
-
 class FormValidatorAlphaNum extends FormValidator {
     
     /**
@@ -30,7 +30,7 @@ class FormValidatorAlphaNum extends FormValidator {
      * @param string $message the error message for validation failures (i18n key)
      */
     public function __construct($form, $field, $type, $message) {
-        import('core.Modules.validation.ValidatorRegExp');
+        
         // Regex: Alphanumeric start, optionally followed by groups of (dash/underscore + alphanumeric). Case insensitive.
         $validator = new ValidatorRegExp('/^[A-Z0-9]+([\-_][A-Z0-9]+)*$/i');
         parent::__construct($form, $field, $type, $message, $validator);

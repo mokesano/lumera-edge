@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
 namespace Lumera\Modules\controllers\grid\feature;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\grid\feature;
  * @brief Implements listbuilder ordering functionality.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.feature.OrderItemsFeature');
 
 class OrderListbuilderItemsFeature extends OrderItemsFeature {
 

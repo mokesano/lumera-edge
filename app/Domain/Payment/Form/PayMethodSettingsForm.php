@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Payment\Form;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Payment\Form;
  * @brief Form for managers to modify Payment Plugin settings
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class PayMethodSettingsForm extends Form {
     

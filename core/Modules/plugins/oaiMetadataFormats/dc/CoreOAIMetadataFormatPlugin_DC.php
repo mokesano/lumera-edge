@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
 namespace Lumera\Modules\plugins\oaiMetadataFormats\dc;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\plugins\oaiMetadataFormats\dc;
  * @brief dc metadata format plugin for OAI.
  * * REFACTORED: Wizdam Edition (PHP 7.4 - 8.x Modernization)
  */
-
-import('core.Modules.plugins.OAIMetadataFormatPlugin');
 
 class CoreOAIMetadataFormatPlugin_DC extends OAIMetadataFormatPlugin {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\HandlerOperationPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security\authorization;
  * @brief Class to control access to handler operations via role based access
  * control.
  */
-
-import('core.Modules.security.authorization.HandlerOperationPolicy');
 
 class RoleBasedHandlerOperationPolicy extends HandlerOperationPolicy {
     /** @var array the target roles */
@@ -88,7 +87,6 @@ class RoleBasedHandlerOperationPolicy extends HandlerOperationPolicy {
 
         return AUTHORIZATION_PERMIT;
     }
-
 
     //
     // Private helper methods

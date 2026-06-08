@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
 namespace Lumera\Modules\cache;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Modules\cache;
  * @brief Provides caching based on compressed binary files on the filesystem.
  * [WIZDAM EDITION] Serialized + GZIP Compressed Cache (.wiz)
  */
-
-import('core.Modules.cache.GenericCache');
 
 class FileCache extends GenericCache {
     

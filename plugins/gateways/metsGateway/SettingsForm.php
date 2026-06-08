@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Gateways\metsGateway;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Gateways\metsGateway;
  *
  * @brief Form for METS gateway plugin settings
  */
-
-import('core.Modules.form.Form');
 
 class SettingsForm extends Form {
 

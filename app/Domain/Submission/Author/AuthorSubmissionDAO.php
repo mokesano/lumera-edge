@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Author\AuthorSubmission;
 namespace App\Domain\Submission\Author;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Submission\Author;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.author.AuthorSubmission');
 
 class AuthorSubmissionDAO extends DAO {
     public $articleDao = null;

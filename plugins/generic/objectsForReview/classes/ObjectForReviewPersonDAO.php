@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ObjectForReviewPerson;
 namespace Lumera\Plugins\Generic\objectsForReview\classes;
 
 /**
@@ -90,7 +91,7 @@ class ObjectForReviewPersonDAO extends DAO {
      */
     public function newDataObject() {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ObjectForReviewPerson');
+        $ofrPlugin->
         return new ObjectForReviewPerson();
     }
 

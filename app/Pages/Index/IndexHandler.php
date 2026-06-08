@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\CoreStats;
+Lumera\Pages\Issue\IssueHandler;
+Lumera\Kernel\CoreEditorStaff;
+Lumera\Wizdam\Trends\WizdamTrendsManager;
 namespace App\Pages\Index;
 
 /**
@@ -15,9 +20,6 @@ namespace App\Pages\Index;
  *
  * @brief Handle site index requests.
  */
-
-import('app.Domain.Handler.Handler');
-import('core.Kernel.CoreStats');
 
 class IndexHandler extends Handler {
     
@@ -77,7 +79,7 @@ class IndexHandler extends Handler {
             $issueDao = DAORegistry::getDAO('IssueDAO');
             $issue = $issueDao->getCurrentIssue($journal->getId(), true);
             if ($displayCurrentIssue && isset($issue)) {
-                import('app.Pages.issue.IssueHandler');
+                
                 // The current issue TOC/cover page should be displayed below the custom home page.
                 IssueHandler::_setupIssueTemplate($request, $issue);
             }
@@ -96,7 +98,7 @@ class IndexHandler extends Handler {
             
             // --- MODIFIKASI DIMULAI (WIZDAM Editor Staff) ---
             // 1. Import kelas handler baru dari core
-            import('core.Kernel.CoreEditorStaff');
+            
             
             // 2. jumlah staff yang ingin ditampilkan (sesuai kebutuhan)
             $maxStaffToShow = 3; 
@@ -133,7 +135,7 @@ class IndexHandler extends Handler {
             // --- AKHIR BLOK WIZDAM STATS JURNAL SELESAI ---
             
             // --- [TRENDS] WIZDAM Most Popular ---
-            import('lib.wizdam.trends.WizdamTrendsManager');
+            
             WizdamTrendsManager::assignMostPopularPayload($templateMgr, $journal, $request);
             
             $templateMgr->display('index/journal.tpl');
@@ -236,7 +238,7 @@ class IndexHandler extends Handler {
             ]);
             
             // --- [TRENDS] WIZDAM Most Popular ---
-            import('lib.wizdam.trends.WizdamTrendsManager');
+            
             WizdamTrendsManager::assignMostPopularPayload($templateMgr, $journal, $request);
 
             $templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));

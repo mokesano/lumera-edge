@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\CoreFile;
 namespace App\Domain\Issue;
 
 /**
@@ -16,11 +17,8 @@ namespace App\Domain\Issue;
  * @brief Issue file class.
  */
 
-import('app.Domain.File.CoreFile');
-
 /* File content type IDs */
 define('ISSUE_FILE_PUBLIC', 0x000001);
-
 
 class IssueFile extends CoreFile {
 

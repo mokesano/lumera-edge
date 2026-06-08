@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\Form\BrowseSettingsForm;
 namespace Lumera\Plugins\Generic\browse;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\browse;
  * @brief Browse by additional objects plugin class.
  * * MODERNIZED FOR PHP 7.4+ & Wizdam FORK
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class BrowsePlugin extends GenericPlugin {
     
@@ -185,7 +185,7 @@ class BrowsePlugin extends GenericPlugin {
                 $templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
                 $journal = Request::getJournal();
 
-                $this->import('core.Modules.form.BrowseSettingsForm');
+                $this->
                 $form = new BrowseSettingsForm($this, $journal->getId());
 
                 if (Request::getUserVar('save')) {

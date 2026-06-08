@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Sitemap;
 
 /**
@@ -15,9 +17,6 @@ namespace App\Pages\Sitemap;
  *
  * @brief Produce a sitemap in XML format for submitting to search engines.
  */
-
-import('core.Modules.xml.XMLCustomWriter');
-import('app.Domain.Handler.Handler');
 
 define('SITEMAP_XSD_URL', 'http://www.sitemaps.org/schemas/sitemap/0.9');
 

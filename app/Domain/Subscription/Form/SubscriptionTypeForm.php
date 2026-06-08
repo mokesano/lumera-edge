@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @file app/Domain/Subscription/Form/SubscriptionTypeForm.php
@@ -17,8 +17,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Form for journal managers to create/edit subscription types.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class SubscriptionTypeForm extends Form {
     /** @var typeId int the ID of the subscription type being edited */

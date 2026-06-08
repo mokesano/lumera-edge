@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLParser;
+Lumera\Modules\Rt\RTStruct;
 namespace Lumera\Modules\rt;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Modules\rt;
  * @brief Class to parse Reading Tools data from an XML format.
  * * REFACTORED: Wizdam Edition (PHP 8 Compatibility, Visibility, No References)
  */
-
-import('core.Modules.xml.XMLParser');
-import('core.Modules.rt.RTStruct');
 
 class RTXMLParser {
 
@@ -45,7 +44,6 @@ class RTXMLParser {
         return $version;
     }
 
-
     /**
      * Parse all RT version XML files in a directory.
      * @param $dir string path to the directory
@@ -68,11 +66,9 @@ class RTXMLParser {
         return $versions;
     }
 
-
     //
     // PRIVATE
     //
-
 
     /**
      * Parse version entity.

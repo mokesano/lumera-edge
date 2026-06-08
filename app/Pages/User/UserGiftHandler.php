@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\Payment\AppPaymentManager;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\User;
 
 /**
@@ -16,8 +19,6 @@ namespace App\Pages\User;
  * @brief Handle requests for user gifts and redemptions.
  * [WIZDAM EDITION] Extracted from UserHandler.
  */
-
-import('app.Pages.user.UserHandler');
 
 class UserGiftHandler extends UserHandler {
 
@@ -43,7 +44,7 @@ class UserGiftHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
 
         // Ensure gift payments are enabled
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptGiftPayments = $paymentManager->acceptGiftPayments();
         if (!$acceptGiftPayments) $request->redirect(null, 'user');
@@ -89,7 +90,7 @@ class UserGiftHandler extends UserHandler {
         if (!$journal) $request->redirect(null, 'user');
 
         // Ensure gift payments are enabled
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $acceptGiftPayments = $paymentManager->acceptGiftPayments();
         if (!$acceptGiftPayments) $request->redirect(null, 'user');
@@ -109,7 +110,7 @@ class UserGiftHandler extends UserHandler {
         );
 
         // Report redeem status to user
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
 
         switch ($status) {

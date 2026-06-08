@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Author;
+Lumera\Domain\Article\Article;
+Lumera\Domain\Submission\CoreAuthorDAO;
 namespace App\Domain\Article;
 
 /**
@@ -21,10 +24,6 @@ namespace App\Domain\Article;
  * - Strict Integer/String Casting
  * - Optimized Profile Mapping Logic
  */
-
-import('app.Domain.Article.Author');
-import('app.Domain.Article.Article');
-import('app.Domain.Submission.CoreAuthorDAO');
 
 class AuthorDAO extends CoreAuthorDAO {
     

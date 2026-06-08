@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+Lumera\Modules\Filter\FilterGroup;
 namespace Lumera\Modules\filter;
 
 /**
@@ -39,9 +41,6 @@ namespace Lumera\Modules\filter;
  * filter pipelines. The hierarchical relation is represented via parent-
  * child relationships. See CompositeFilter for more details.
  */
-
-import('core.Modules.filter.Filter');
-import('core.Modules.filter.FilterGroup');
 
 define('FILTER_GROUP_TEMPORARY_ONLY', '$$$temporary$$$');
 
@@ -91,7 +90,6 @@ class PersistableFilter extends Filter {
         );
         self::__construct($filterGroup);
     }
-
 
     //
     // Setters and Getters
@@ -257,7 +255,6 @@ class PersistableFilter extends Filter {
         return $localizedSettingNames;
     }
 
-
     //
     // Public static helper methods
     //
@@ -288,7 +285,6 @@ class PersistableFilter extends Filter {
         $temporaryGroup->setOutputType($outputType);
         return $temporaryGroup;
     }
-
 
     //
     // Protected helper methods

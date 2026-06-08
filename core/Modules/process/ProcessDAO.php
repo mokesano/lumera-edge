@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Process\Process;
 namespace Lumera\Modules\process;
 
 /**
@@ -42,7 +43,6 @@ namespace Lumera\Modules\process;
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
 
-
 // Define the max number of seconds a process is allowed to run.
 // We assume that no process should run longer than
 // 15 minutes. So we clean all processes that have a time
@@ -63,8 +63,6 @@ define('PROCESS_MAX_PARALLELISM', 20);
 // manages to guess a key. Defining this time too short can lead
 // to problems when networks are slow.
 define('PROCESS_MAX_KEY_VALID', 10);
-
-import('core.Modules.process.Process');
 
 class ProcessDAO extends DAO {
     

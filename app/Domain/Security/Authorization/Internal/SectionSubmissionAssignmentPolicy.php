@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
 namespace App\Domain\Security\Authorization\Internal;
 
 /**
@@ -18,8 +19,6 @@ namespace App\Domain\Security\Authorization\Internal;
  * NB: This policy expects a previously authorized section editor
  * submission in the authorization context.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class SectionSubmissionAssignmentPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Comment\Comment;
 namespace Lumera\Modules\Comment;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Comment;
  *
  * @brief Operations for retrieving and modifying Comment objects.
  */
-
-import('core.Modules.Comment.Comment');
 
 define ('SUBMISSION_COMMENT_RECURSE_ALL', -1);
 

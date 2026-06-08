@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Modules\form\validation;
  * 'false', a value of '1' is considered 'true'.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FormValidatorBoolean extends FormValidator {
     

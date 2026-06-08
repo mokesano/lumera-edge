@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridRow;
+Lumera\Modules\Controllers\Grid\GridCategoryRowCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\controllers\grid;
  * @brief Class defining basic operations for handling the category row in a grid
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-import('core.Modules.controllers.grid.GridRow');
-import('core.Modules.controllers.grid.GridCategoryRowCellProvider');
 
 class GridCategoryRow extends GridRow {
     /** @var string empty row locale key */
@@ -46,7 +46,6 @@ class GridCategoryRow extends GridRow {
         }
         self::__construct();
     }
-
 
     //
     // Getters/Setters

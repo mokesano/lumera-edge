@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\PaymethodPlugin;
+Lumera\Modules\Payment\AppPaymentManager;
+Lumera\Modules\Mail\MailTemplate;
 namespace Lumera\Plugins\Paymethod\Manual;
 
 /**
@@ -16,8 +19,6 @@ namespace Lumera\Plugins\Paymethod\Manual;
  * @brief Manual payment plugin class
  * [WIZDAM EDITION] Fixed PHP 8 ArgumentCountError & Parameter Mismatch
  */
-
-import('core.Modules.plugins.PaymethodPlugin');
 
 class ManualPaymentPlugin extends PaymethodPlugin {
     
@@ -336,7 +337,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
         $queuedPaymentId = isset($args[1]) ? ((int) $args[1]) : 0;
 
         // Bypass Application kernel, direct instantiation
-        import('core.Modules.payment.AppPaymentManager');
+        
         if (!class_exists('AppPaymentManager')) {
             error_log("ManualPaymentPlugin: AppPaymentManager class not found.");
             $request->redirect(null, 'index');
@@ -349,7 +350,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
         switch ($op) {
             case 'notify':
-                import('core.Modules.mail.MailTemplate');
+                
                 AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
                 
                 $contactName = $context->getSetting('contactName');

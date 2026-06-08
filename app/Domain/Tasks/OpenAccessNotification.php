@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Tasks;
-
 
 /**
  * @defgroup tasks
@@ -20,8 +21,6 @@ namespace App\Domain\Tasks;
  *
  * @brief Class to perform automated email notifications when an issue becomes open access.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class OpenAccessNotification extends ScheduledTask {
 
@@ -59,7 +58,7 @@ class OpenAccessNotification extends ScheduledTask {
     public function sendNotification ($users, $journal, $issue) {
         if ($users->getCount() != 0) {
 
-            import('app.Domain.Mail.MailTemplate');
+            
             $email = new MailTemplate('OPEN_ACCESS_NOTIFY', $journal->getPrimaryLocale(), false, $journal, false, true);
 
             $email->setSubject($email->getSubject($journal->getPrimaryLocale()));

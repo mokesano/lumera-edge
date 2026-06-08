@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Codelist\Qualifier;
+Lumera\Modules\Codelist\CodelistItemDAO;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\Codelist;
  *
  * @brief Operations for retrieving and modifying Subject Qualifier objects.
  */
-
-import('core.Modules.Codelist.Qualifier');
-import('core.Modules.Codelist.CodelistItemDAO');
 
 class QualifierDAO extends CodelistItemDAO {
 

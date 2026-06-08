@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\FileManager;
 namespace App\Domain\File;
 
 /**
@@ -15,9 +16,6 @@ namespace App\Domain\File;
  *
  * @brief Class defining operations for private journal file management.
  */
-
-
-import('app.Domain.File.FileManager');
 
 class JournalFileManager extends FileManager {
 

@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\LayoutEditor\LayoutEditorSubmission;
 namespace App\Domain\Submission\LayoutEditor;
-
 
 /**
  * @file app/Domain/Submission/LayoutEditor/LayoutEditorSubmissionDAO.php
@@ -22,8 +22,6 @@ namespace App\Domain\Submission\LayoutEditor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.LayoutEditor.LayoutEditorSubmission');
 
 class LayoutEditorSubmissionDAO extends DAO {
     /** Helper DAOs */
@@ -376,7 +374,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 
         return $articleIds;
     }
-
 
     /**
      * Map a column heading value to a database value for sorting

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\Plugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Plugins;
  *
  * Contributed by Dan Galewsky, University of Texas
  */
-
-import('app.Domain.Plugins.Plugin');
 
 class ImplicitAuthPlugin extends Plugin {
     

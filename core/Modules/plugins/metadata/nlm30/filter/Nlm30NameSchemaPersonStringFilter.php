@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30PersonStringFilter;
 namespace Lumera\Modules\plugins\metadata\nlm30\filter;
 
 /**
@@ -19,8 +20,6 @@ namespace Lumera\Modules\plugins\metadata\nlm30\filter;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Reference Fixes
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30PersonStringFilter');
 
 class Nlm30NameSchemaPersonStringFilter extends Nlm30PersonStringFilter {
     /** @var string */
@@ -99,7 +98,6 @@ class Nlm30NameSchemaPersonStringFilter extends Nlm30PersonStringFilter {
     public function setDelimiter($delimiter) {
         $this->_delimiter = $delimiter;
     }
-
 
     //
     // Implement template methods from Filter

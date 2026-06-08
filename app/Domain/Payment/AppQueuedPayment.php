@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\QueuedPayment;
+Lumera\Domain\Gift\Gift;
 namespace App\Domain\Payment;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Domain\Payment;
  *
  * @brief Queued payment data structure for Wizdam-specific payment management.
  */
-
-import('app.Domain.Payment.QueuedPayment');
 
 class AppQueuedPayment extends QueuedPayment {
     
@@ -269,7 +269,7 @@ class AppQueuedPayment extends QueuedPayment {
 
                 // Try to return gift details in description
                 if ($gift) {
-                    import('app.Domain.Gift.Gift');
+                    
 
                     if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
                         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
 namespace Lumera\Modules\plugins\citationLookup\isbndb;
 
 /**
@@ -22,8 +23,6 @@ namespace Lumera\Modules\plugins\citationLookup\isbndb;
  * - PHP 8.1+ Strict Compliance
  * - Explicit Type Hinting & Return Types
  */
-
-import('core.Modules.plugins.Plugin');
 
 class CoreIsbndbCitationLookupPlugin extends Plugin {
     

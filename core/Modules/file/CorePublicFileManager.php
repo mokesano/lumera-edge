@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\FileManager;
 namespace Lumera\Modules\file;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\file;
  *
  * @brief Wrapper class for uploading files to a site/journal's public directory.
  */
-
-import('core.Modules.file.FileManager');
 
 class CorePublicFileManager extends FileManager {
 

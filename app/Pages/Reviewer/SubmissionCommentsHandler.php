@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Reviewer\SubmissionReviewHandler;
 namespace App\Pages\Reviewer;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Reviewer;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.reviewer.SubmissionReviewHandler');
 
 class SubmissionCommentsHandler extends ReviewerHandler {
     

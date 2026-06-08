@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DBDataXMLParser;
+Lumera\Modules\Site\Version;
+Lumera\Modules\Site\VersionDAO;
+Lumera\Modules\Config\ConfigParser;
+Lumera\Modules\Filter\FilterHelper;
+Lumera\Modules\File\FileManager;
+Lumera\Modules\Site\VersionCheck;
 namespace Lumera\Modules\install;
 
 /**
@@ -25,11 +32,6 @@ define('INSTALLER_ERROR_DB', 2);
 
 // Default data
 define('INSTALLER_DEFAULT_LOCALE', 'en_US');
-
-import('core.Modules.db.DBDataXMLParser');
-import('core.Modules.site.Version');
-import('core.Modules.site.VersionDAO');
-import('core.Modules.Config.ConfigParser');
 
 require_once './core/Library/adodb/adodb-xmlschema.inc.php';
 
@@ -85,7 +87,6 @@ class Installer {
 
     /** @var Logger|object logging object */
     public $logger;
-
 
     /**
      * Constructor.
@@ -225,7 +226,6 @@ class Installer {
         return $result;
     }
 
-
     /**
      * Record message to installation log.
      * @param string $message
@@ -235,7 +235,6 @@ class Installer {
             call_user_func([$this->logger, 'log'], $message);
         }
     }
-
 
     //
     // Main actions
@@ -311,7 +310,6 @@ class Installer {
         return $result;
     }
 
-
     //
     // Installer Parsing
     //
@@ -367,7 +365,6 @@ class Installer {
             $this->actions[] = ['type' => $node->getName(), 'file' => $newFileName, 'attr' => $node->getAttributes()];
         }
     }
-
 
     //
     // Installer Execution
@@ -500,7 +497,6 @@ class Installer {
 
         return true;
     }
-
 
     //
     // Accessors
@@ -673,7 +669,7 @@ class Installer {
 
         // Get the filter helper.
         if ($filterHelper === false) {
-            import('core.Modules.filter.FilterHelper');
+            
             $filterHelper = new FilterHelper();
         }
 
@@ -743,7 +739,7 @@ class Installer {
      * @return bool
      */
     public function fileExists($filePath) {
-        import('core.Modules.file.FileManager');
+        
         $fileMgr = new FileManager();
 
         return $fileMgr->fileExists(realpath($filePath));
@@ -756,7 +752,7 @@ class Installer {
      */
     public function addPluginVersions() {
         $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
-        import('core.Modules.site.VersionCheck');
+        
         $fileManager = new FileManager();
         $categories = PluginRegistry::getCategories();
         foreach ($categories as $category) {

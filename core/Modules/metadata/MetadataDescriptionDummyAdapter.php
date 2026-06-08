@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataDataObjectAdapter;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\metadata;
  * @brief Class that simulates a metadata adapter for metadata
  * description object for direct metadata description persistence.
  */
-
-import('core.Modules.metadata.MetadataDataObjectAdapter');
 
 class MetadataDescriptionDummyAdapter extends MetadataDataObjectAdapter {
     
@@ -57,7 +56,6 @@ class MetadataDescriptionDummyAdapter extends MetadataDataObjectAdapter {
     public function getClassName() {
         return 'core.Modules.metadata.MetadataDescriptionDummyAdapter';
     }
-
 
     //
     // Implement template methods from MetadataDataObjectAdapter

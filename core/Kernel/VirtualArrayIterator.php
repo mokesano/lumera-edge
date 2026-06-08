@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\ItemIterator;
 namespace Lumera\Kernel;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Kernel;
  * @brief Provides paging and iteration for "virtual" arrays -- arrays for which only
  * the current "page" is available, but are much bigger in entirety.
  */
-
-import('core.Kernel.ItemIterator');
 
 class VirtualArrayIterator extends ItemIterator {
 

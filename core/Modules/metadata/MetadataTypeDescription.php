@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\ClassTypeDescription;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -24,8 +25,6 @@ namespace Lumera\Modules\metadata;
  * The assoc form must be the final part of a ASSOC_TYPE_* definition.
  * It can be '*' to designate any assoc type.
  */
-
-import('core.Modules.filter.ClassTypeDescription');
 
 define('ASSOC_TYPE_ANY', -1);
 
@@ -83,7 +82,6 @@ class MetadataTypeDescription extends ClassTypeDescription {
     public function getAssocType() {
         return $this->_assocType;
     }
-
 
     //
     // Implement abstract template methods from TypeDescription

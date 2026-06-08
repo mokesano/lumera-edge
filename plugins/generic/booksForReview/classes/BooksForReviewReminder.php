@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\BookForReviewDAO;
+Lumera\Modules\BookForReviewAuthorDAO;
 namespace Lumera\Plugins\Generic\booksForReview\classes;
 
 /**
@@ -16,8 +20,6 @@ namespace Lumera\Plugins\Generic\booksForReview\classes;
  * @brief Class to perform automated reminders for book reviewers.
  * [WIZDAM EDITION] Modernized. Uses PHP DateTime for accurate calculation.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class BooksForReviewReminder extends ScheduledTask {
 
@@ -66,7 +68,7 @@ class BooksForReviewReminder extends ScheduledTask {
             'editorialContactSignature' => strip_tags($book->getEditorContactSignature())
         );
 
-        import('core.Modules.mail.MailTemplate');
+        
         $mail = new MailTemplate($emailKey);
 
         $mail->setFrom($book->getEditorEmail(), $book->getEditorFullName());
@@ -86,8 +88,8 @@ class BooksForReviewReminder extends ScheduledTask {
 
         if ($bfrPlugin) {
             $bfrPluginName = $bfrPlugin->getName();
-            $bfrPlugin->import('core.Modules.BookForReviewDAO');
-            $bfrPlugin->import('core.Modules.BookForReviewAuthorDAO');
+            $bfrPlugin->
+            $bfrPlugin->
 
             // Register DAO (Idempotent: DAORegistry handle duplicates)
             $bfrAuthorDao = new BookForReviewAuthorDAO($bfrPluginName);

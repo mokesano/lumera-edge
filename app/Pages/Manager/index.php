@@ -1,6 +1,22 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\SetupHandler;
+Lumera\Pages\Manager\PeopleHandler;
+Lumera\Pages\Manager\SectionHandler;
+Lumera\Pages\Manager\ReviewFormHandler;
+Lumera\Pages\Manager\EmailHandler;
+Lumera\Pages\Manager\JournalLanguagesHandler;
+Lumera\Pages\Manager\FilesHandler;
+Lumera\Pages\Manager\SubscriptionHandler;
+Lumera\Pages\Manager\ImportExportHandler;
+Lumera\Pages\Manager\PluginHandler;
+Lumera\Pages\Manager\PluginManagementHandler;
+Lumera\Pages\Manager\GroupHandler;
+Lumera\Pages\Manager\StatisticsHandler;
+Lumera\Pages\Manager\ManagerPaymentHandler;
+Lumera\Pages\Manager\AnnouncementHandler;
+Lumera\Pages\Manager\ManagerHandler;
 namespace App\Pages\Manager;
 
 /**
@@ -29,7 +45,7 @@ switch ($op) {
     case 'downloadLayoutTemplate':
     case 'resetPermissions':
         define('HANDLER_CLASS', \App\Pages\Manager\SetupHandler::class);
-        import('app.Pages.Manager.SetupHandler');
+        
         break;
     //
     // People Management
@@ -51,7 +67,7 @@ switch ($op) {
     case 'updateUser':
     case 'userProfile':
         define('HANDLER_CLASS', \App\Pages\Manager\PeopleHandler::class);
-        import('app.Pages.Manager.PeopleHandler');
+        
         break;
     //
     // Section Management
@@ -63,7 +79,7 @@ switch ($op) {
     case 'deleteSection':
     case 'moveSection':
         define('HANDLER_CLASS', \App\Pages\Manager\SectionHandler::class);
-        import('app.Pages.Manager.SectionHandler');
+        
         break;
     //
     // Review Form Management
@@ -86,7 +102,7 @@ switch ($op) {
     case 'moveReviewFormElement':
     case 'copyReviewFormElement':
         define('HANDLER_CLASS', \App\Pages\Manager\ReviewFormHandler::class);
-        import('app.Pages.Manager.ReviewFormHandler');
+        
         break;
     //
     // E-mail Management
@@ -103,7 +119,7 @@ switch ($op) {
     case 'enableEmail':
     case 'resetAllEmails':
         define('HANDLER_CLASS', \App\Pages\Manager\EmailHandler::class);
-        import('app.Pages.Manager.EmailHandler');
+        
         break;
     //
     // Languages
@@ -112,7 +128,7 @@ switch ($op) {
     case 'saveLanguageSettings':
     case 'reloadLocalizedDefaultSettings':
         define('HANDLER_CLASS', \App\Pages\Manager\JournalLanguagesHandler::class);
-        import('app.Pages.Manager.JournalLanguagesHandler');
+        
         break;
     //
     // Files Browser
@@ -122,7 +138,7 @@ switch ($op) {
     case 'fileMakeDir':
     case 'fileDelete':
         define('HANDLER_CLASS', \App\Pages\Manager\FilesHandler::class);
-        import('app.Pages.Manager.FilesHandler');
+        
         break;
     //
     // Subscription Policies
@@ -151,14 +167,14 @@ switch ($op) {
     case 'updateSubscription':
     case 'resetDateReminded':
         define('HANDLER_CLASS', \App\Pages\Manager\SubscriptionHandler::class);
-        import('app.Pages.Manager.SubscriptionHandler');
+        
         break;
     //
     // Import/Export
     //
     case 'importexport':
         define('HANDLER_CLASS', \App\Pages\Manager\ImportExportHandler::class);
-        import('app.Pages.Manager.ImportExportHandler');
+        
         break;
     //
     // Plugin Management
@@ -166,11 +182,11 @@ switch ($op) {
     case 'plugins':
     case 'plugin':
         define('HANDLER_CLASS', \App\Pages\Manager\PluginHandler::class);
-        import('app.Pages.Manager.PluginHandler');
+        
         break;
     case 'managePlugins':
         define('HANDLER_CLASS', \App\Pages\Manager\PluginManagementHandler::class);
-        import('app.Pages.Manager.PluginManagementHandler');
+        
         break;
     //
     // Group Management
@@ -187,7 +203,7 @@ switch ($op) {
     case 'moveGroup':
     case 'moveMembership':
         define('HANDLER_CLASS', \App\Pages\Manager\GroupHandler::class);
-        import('app.Pages.Manager.GroupHandler');
+        
         break;
     //
     // Statistics Functions
@@ -199,7 +215,7 @@ switch ($op) {
     case 'reportGenerator':
     case 'generateReport':
         define('HANDLER_CLASS', \App\Pages\Manager\StatisticsHandler::class);
-        import('app.Pages.Manager.StatisticsHandler');
+        
         break;
     //
     // Payment
@@ -211,7 +227,7 @@ switch ($op) {
     case 'viewPayments':
     case 'viewPayment':
         define('HANDLER_CLASS', \App\Pages\Manager\ManagerPaymentHandler::class);
-        import('app.Pages.Manager.ManagerPaymentHandler');
+        
         break;
     //
     //    announcements
@@ -230,10 +246,10 @@ switch ($op) {
     case 'editAnnouncementType':
     case 'updateAnnouncementType':
         define('HANDLER_CLASS', \App\Pages\Manager\AnnouncementHandler::class);
-        import('app.Pages.Manager.AnnouncementHandler');
+        
         break;
     case 'index':
     case 'email':
         define('HANDLER_CLASS', \App\Pages\Manager\ManagerHandler::class);
-        import('app.Pages.Manager.ManagerHandler');
+        
 }

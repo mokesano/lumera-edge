@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\AuthPlugin;
+Lumera\Domain\Security\AuthSourceDAO;
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Domain\Security\Form\AuthSourceSettingsForm;
 namespace App\Pages\Admin;
 
 /**
@@ -15,10 +19,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for authentication source management in site administration.
  */
-
-import('app.Domain.Plugins.AuthPlugin');
-import('app.Domain.Security.AuthSourceDAO');
-import('app.Pages.admin.AdminHandler');
 
 class AuthSourcesHandler extends AdminHandler {
     
@@ -128,7 +128,7 @@ class AuthSourcesHandler extends AdminHandler {
         
         $this->setupTemplate($request, true);
 
-        import('app.Domain.Security.form.AuthSourceSettingsForm');
+        
         $form = new AuthSourceSettingsForm((int) array_shift($args));
         $form->initData();
         $form->display();
@@ -145,7 +145,7 @@ class AuthSourcesHandler extends AdminHandler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Security.form.AuthSourceSettingsForm');
+        
         $form = new AuthSourceSettingsForm((int) array_shift($args));
         $form->readInputData();
         $form->execute();

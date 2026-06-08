@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Datacite\Classes\Form\DOIExportSettingsForm;
 namespace Lumera\Plugins\Importexport\datacite\classes\form;
 
 /**
@@ -18,9 +19,8 @@ namespace Lumera\Plugins\Importexport\datacite\classes\form;
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
 
-
 if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
-    import('plugins.importexport.datacite.classes.form.DOIExportSettingsForm');
+    
 }
 
 class DataciteSettingsForm extends DOIExportSettingsForm {

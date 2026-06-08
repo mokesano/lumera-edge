@@ -1,6 +1,17 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PersistableFilter;
+Lumera\Modules\Filter\BooleanFilterSetting;
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30NameSchema;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\PersonStringNlm30NameSchemaFilter;
+Lumera\Modules\Metadata\DateStringNormalizerFilter;
+Lumera\Modules\Webservice\XmlWebService;
+Lumera\Modules\Xml\XMLHelper;
+Lumera\Modules\Xslt\XSLTransformationFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
 namespace Lumera\Modules\plugins\metadata\nlm30\filter;
 
 /**
@@ -16,20 +27,6 @@ namespace Lumera\Modules\plugins\metadata\nlm30\filter;
  * @brief Abstract base class for all filters that transform
  * NLM citation metadata descriptions.
  */
-
-import('core.Modules.filter.PersistableFilter');
-import('core.Modules.filter.BooleanFilterSetting');
-
-import('core.Modules.metadata.MetadataDescription');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30CitationSchema');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30NameSchema');
-import('core.Modules.plugins.metadata.nlm30.filter.PersonStringNlm30NameSchemaFilter');
-import('core.Modules.metadata.DateStringNormalizerFilter');
-
-import('core.Modules.webservice.XmlWebService');
-
-import('core.Modules.xml.XMLHelper');
-import('core.Modules.xslt.XSLTransformationFilter');
 
 class Nlm30CitationSchemaFilter extends PersistableFilter {
     /** @var array */
@@ -129,7 +126,7 @@ class Nlm30CitationSchemaFilter extends PersistableFilter {
      * @return array
      */
     public function constructSearchStrings($searchTemplates, $citationDescription) {
-        import('core.Modules.plugins.metadata.nlm30.filter.Nlm30NameSchemaPersonStringFilter');
+        
         $personStringFilter = new Nlm30NameSchemaPersonStringFilter();
 
         $firstAuthorSurname = $firstAuthor = '';

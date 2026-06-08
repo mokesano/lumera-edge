@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationLookup\Pubmed\CorePubmedCitationLookupPlugin;
 /**
  * @defgroup plugins_citationLookup_pubmed
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief PubMed citation database connector plug-in.
  */
-
-import('core.Modules.plugins.citationLookup.pubmed.CorePubmedCitationLookupPlugin');
 
 class PubmedCitationLookupPlugin extends CorePubmedCitationLookupPlugin {
     

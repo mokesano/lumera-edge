@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 namespace Lumera\Modules\Xml;
-
 /**
  * @file core.Modules.xml/XMLParserDOMHandler.inc.php
  *
@@ -18,8 +17,6 @@ namespace Lumera\Modules\Xml;
  * This handler parses an XML document into a tree structure of XMLNode objects.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
-
-import('core.Modules.xml.XMLNode');
 
 class XMLParserDOMHandler extends CoreXMLParserHandler {
 

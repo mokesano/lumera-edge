@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\Notification\NotificationManager;
 namespace Lumera\Plugins\Generic\announcementFeed;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\announcementFeed;
  * @brief Annoucement Feed plugin class
  * [WIZDAM EDITION] Modernized. PHP 8 Safe & Strict Standards.
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class AnnouncementFeedPlugin extends GenericPlugin {
     
@@ -87,12 +87,12 @@ class AnnouncementFeedPlugin extends GenericPlugin {
         
         switch ($category) {
             case 'blocks':
-                $this->import('AnnouncementFeedBlockPlugin');
+                $this->
                 $blockPlugin = new AnnouncementFeedBlockPlugin($this->getName());
                 $plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] = $blockPlugin;
                 break;
             case 'gateways':
-                $this->import('AnnouncementFeedGatewayPlugin');
+                $this->
                 $gatewayPlugin = new AnnouncementFeedGatewayPlugin($this->getName());
                 $plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] = $gatewayPlugin;
                 break;
@@ -176,7 +176,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
                 $templateMgr = TemplateManager::getManager();
                 $templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
-                $this->import('SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journal->getId());
 
                 if ($request->getUserVar('save')) {
@@ -185,7 +185,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
                         $form->execute();
                         
                         // [WIZDAM MODERNIZATION] Use NotificationManager
-                        import('core.Modules.notification.NotificationManager');
+                        
                         $notificationMgr = new NotificationManager();
                         $notificationMgr->createTrivialNotification(
                             $request->getUser()->getId(),

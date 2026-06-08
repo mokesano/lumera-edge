@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Submission\Common\Action;
+Lumera\Modules\Db\DBRowIterator;
 /**
  * @file plugins/reports/articles/ArticleReportDAO.inc.php
  *
@@ -13,9 +15,6 @@ declare(strict_types=1);
  *
  * @brief Article report DAO
  */
-
-import('core.Modules.submission.common.Action');
-import('core.Modules.db.DBRowIterator');
 
 class ArticleReportDAO extends DAO {
     

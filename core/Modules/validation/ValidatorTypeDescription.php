@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\PrimitiveTypeDescription;
 namespace Lumera\Modules\validation;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\validation;
  * additional validation (via standard validator classes).
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, Visibility, No Ref Params)
  */
-
-import('core.Modules.filter.PrimitiveTypeDescription');
 
 class ValidatorTypeDescription extends PrimitiveTypeDescription {
     /** @var string the validator class name */
@@ -54,7 +53,6 @@ class ValidatorTypeDescription extends PrimitiveTypeDescription {
     public function getNamespace() {
         return TYPE_DESCRIPTION_NAMESPACE_VALIDATOR;
     }
-
 
     //
     // Implement abstract template methods from TypeDescription

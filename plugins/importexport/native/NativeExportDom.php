@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\File\ArticleFileManager;
 namespace Lumera\Plugins\Importexport\native;
 
 /**
@@ -15,10 +18,6 @@ namespace Lumera\Plugins\Importexport\native;
  *
  * @brief Native import/export plugin DOM functions for export
  */
-
-import('core.Modules.xml.XMLCustomWriter');
-import('core.Modules.file.PublicFileManager');
-import('core.Modules.file.ArticleFileManager');
 
 class NativeExportDom {
 

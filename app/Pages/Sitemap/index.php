@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Sitemap\SitemapHandler;
 namespace App\Pages\Sitemap;
 
 /**
@@ -22,6 +23,6 @@ namespace App\Pages\Sitemap;
 switch ($op) {
     case 'index':
         define('HANDLER_CLASS', \App\Pages\Sitemap\SitemapHandler::class);
-        import('app.Pages.Sitemap.SitemapHandler');
+        
         break;
 }

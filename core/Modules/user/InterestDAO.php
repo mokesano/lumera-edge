@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ControlledVocab\ControlledVocabDAO;
+Lumera\Kernel\ArrayItemIterator;
 namespace Lumera\Modules\user;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\user;
  *
  * @brief Operations for retrieving and modifying a user's review interests.
  */
-
-import('core.Modules.ControlledVocab.ControlledVocabDAO');
 
 define('CONTROLLED_VOCAB_INTEREST', 'interest');
 
@@ -114,7 +114,7 @@ class InterestDAO extends ControlledVocabDAO {
         });
 
         // Turn back into an iterator.
-        import('core.Kernel.ArrayItemIterator');
+        
         return new ArrayItemIterator($interests);
     }
 

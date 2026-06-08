@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationOutput\Vancouver\CoreVancouverCitationOutputPlugin;
 /**
  * @defgroup plugins_citationOutput_vancouver
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief Vancouver citation style plug-in.
  */
-
-import('core.Modules.plugins.citationOutput.vancouver.CoreVancouverCitationOutputPlugin');
 
 class VancouverCitationOutputPlugin extends CoreVancouverCitationOutputPlugin {
     

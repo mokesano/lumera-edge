@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Rtadmin\RTAdminHandler;
+Lumera\Domain\Rt\Form\SearchForm;
+Lumera\Kernel\ArrayItemIterator;
 namespace App\Pages\Rtadmin;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Rtadmin;
  *
  * @brief Handle Reading Tools administration requests -- contexts section.
  */
-
-import('app.Pages.rtadmin.RTAdminHandler');
 
 class RTSearchHandler extends RTAdminHandler {
     
@@ -61,7 +62,7 @@ class RTSearchHandler extends RTAdminHandler {
         $contextId = isset($args[1]) ? (int)$args[1] : 0;
         $context = $rtDao->getContext($contextId);
 
-        import('app.Domain.Rt.form.SearchForm');
+        
         $searchForm = new SearchForm(null, $contextId, $versionId);
 
         if (isset($args[2]) && $args[2]=='save') {
@@ -108,7 +109,7 @@ class RTSearchHandler extends RTAdminHandler {
             $templateMgr->assign('version', $version);
             $templateMgr->assign('context', $context);
             
-            import('core.Kernel.ArrayItemIterator');
+            
             $templateMgr->assign('searches', new ArrayItemIterator($context->getSearches(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 
             $templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
@@ -140,7 +141,7 @@ class RTSearchHandler extends RTAdminHandler {
         $search = $rtDao->getSearch($searchId);
 
         if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
-            import('app.Domain.Rt.form.SearchForm');
+            
             $this->setupTemplate(true, $version, $context, $search);
             $searchForm = new SearchForm($searchId, $contextId, $versionId);
             $searchForm->initData();
@@ -200,7 +201,7 @@ class RTSearchHandler extends RTAdminHandler {
         $search = $rtDao->getSearch($searchId);
 
         if (isset($version) && isset($context) && isset($search) && $context->getVersionId() == $version->getVersionId() && $search->getContextId() == $context->getContextId()) {
-            import('app.Domain.Rt.form.SearchForm');
+            
             $searchForm = new SearchForm($searchId, $contextId, $versionId);
             $searchForm->readInputData();
             $searchForm->execute();

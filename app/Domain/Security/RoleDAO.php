@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Security\Role;
 namespace App\Domain\Security;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Security;
  * @brief Operations for retrieving and modifying Role objects.
  * [WIZDAM EDITION] PHP 7.4+ Compatible
  */
-
-import('app.Domain.Security.Role');
 
 class RoleDAO extends DAO {
     

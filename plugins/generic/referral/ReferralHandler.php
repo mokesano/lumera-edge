@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
 namespace Lumera\Plugins\Generic\referral;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\referral;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
 
 class ReferralHandler extends Handler {
     
@@ -61,7 +60,7 @@ class ReferralHandler extends Handler {
         list($plugin, $referral, $article) = $this->validate($referralId);
         $this->setupTemplate();
 
-        $plugin->import('ReferralForm');
+        $plugin->
         $templateMgr = TemplateManager::getManager();
 
         if ($referralId == null) {
@@ -105,7 +104,7 @@ class ReferralHandler extends Handler {
         }
         $this->setupTemplate();
 
-        $plugin->import('ReferralForm');
+        $plugin->
 
         $referralForm = new ReferralForm($plugin, $article, $referralId);
         $referralForm->readInputData();

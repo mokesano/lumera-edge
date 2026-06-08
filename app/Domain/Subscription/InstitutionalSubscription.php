@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\Subscription;
 namespace App\Domain\Subscription;
-
 
 /**
  * @defgroup subscription
@@ -23,11 +23,8 @@ namespace App\Domain\Subscription;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-import('app.Domain.Subscription.Subscription');
-
 define('SUBSCRIPTION_IP_RANGE_RANGE', '-');
 define('SUBSCRIPTION_IP_RANGE_WILDCARD', '*');
-
 
 class InstitutionalSubscription extends Subscription {
 

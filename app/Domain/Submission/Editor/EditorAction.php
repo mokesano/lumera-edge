@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Article\Log\ArticleLog;
+Lumera\Domain\Submission\Editor\EditorAction;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
+Lumera\Domain\Article\Log\ArticleEventLogEntry;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Search\ArticleSearchIndex;
 namespace App\Domain\Submission\Editor;
 
 /**
@@ -17,8 +25,6 @@ namespace App\Domain\Submission\Editor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.SectionEditor.SectionEditorAction');
 
 class EditorAction extends SectionEditorAction {
     
@@ -56,7 +62,7 @@ class EditorAction extends SectionEditorAction {
             }
         }
 
-        import('app.Domain.Mail.ArticleMailTemplate');
+        
         $email = new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
         if ($user->getId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
@@ -85,7 +91,7 @@ class EditorAction extends SectionEditorAction {
             $editorSubmissionDao->updateEditorSubmission($editorSubmission);
 
             // Add log
-            import('app.Domain.Article.Log.ArticleLog');
+            
             ArticleLog::logEvent($request, $editorSubmission, ARTICLE_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', ['editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId]);
             return true;
         } else {
@@ -116,9 +122,9 @@ class EditorAction extends SectionEditorAction {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
         $user = $request->getUser();
 
-        import('app.Domain.Submission.Editor.EditorAction');
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
+        
+        
 
         $sectionEditorSubmissionDao = DAORegistry::getDAO('SectionEditorSubmissionDAO');
         $sectionEditorSubmission = $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getId());
@@ -126,8 +132,8 @@ class EditorAction extends SectionEditorAction {
         $submissionFile = $sectionEditorSubmission->getSubmissionFile();
 
         // Add a log entry before doing anything.
-        import('app.Domain.Article.Log.ArticleLog');
-        import('app.Domain.Article.Log.ArticleEventLogEntry');
+        
+        
         ArticleLog::logEvent($request, $article, ARTICLE_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', ['editorName' => $user->getFullName()]);
 
         // 1. Ensure that an editor is assigned.
@@ -157,7 +163,7 @@ class EditorAction extends SectionEditorAction {
         
         if (empty($galleys)) {
             // No galley present -- use copyediting file.
-            import('app.Domain.File.ArticleFileManager');
+            
             $copyeditFile = $sectionEditorSubmission->getFileBySignoffType('SIGNOFF_COPYEDITING_INITIAL');
             
             if ($copyeditFile) {
@@ -192,7 +198,7 @@ class EditorAction extends SectionEditorAction {
                 $galleyDao->insertGalley($galley);
 
                 // Update file search index
-                import('app.Domain.Search.ArticleSearchIndex');
+                
                 $articleSearchIndex = new ArticleSearchIndex();
                 $articleSearchIndex->articleFileChanged($article->getId(), ARTICLE_SEARCH_GALLEY_FILE, $fileId);
             }

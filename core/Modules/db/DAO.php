@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DBConnection;
+Lumera\Modules\Db\DAOResultFactory;
+Lumera\Kernel\DataObject;
+Lumera\Kernel\JSONMessage;
 namespace Lumera\Modules\db;
 
 /**
@@ -22,10 +26,6 @@ namespace Lumera\Modules\db;
  *
  * [MODERNISASI] Refactored for PHP 7.4+ Compatibility
  */
-
-import('core.Modules.db.DBConnection');
-import('core.Modules.db.DAOResultFactory');
-import('core.Kernel.DataObject');
 
 define('SORT_DIRECTION_ASC', 0x00001);
 define('SORT_DIRECTION_DESC', 0x00002);
@@ -635,7 +635,7 @@ class DAO {
         }
 
         // Create and render the JSON message
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage(true);
         $json->setEvent('dataChanged', $eventData);
         header('Content-Type: application/json');

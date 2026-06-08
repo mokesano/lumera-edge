@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Manager\Form\CoreAnnouncementForm;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Domain\Manager\Form;
 
 /**
@@ -21,8 +23,6 @@ namespace App\Domain\Manager\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Manager.form.CoreAnnouncementForm');
 
 class AnnouncementForm extends CoreAnnouncementForm {
     
@@ -110,7 +110,7 @@ class AnnouncementForm extends CoreAnnouncementForm {
 
         if ($this->getData('notificationToggle')) {
             // Send a notification to associated users
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             $roleDao = DAORegistry::getDAO('RoleDAO');
             

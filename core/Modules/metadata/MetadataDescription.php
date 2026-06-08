@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -22,8 +23,6 @@ namespace Lumera\Modules\metadata;
  * RDF: assertions of predicate-object pairs) about a given Wizdam application
  * entity instance (DCMI abstract model: described resource, RDF: subject).
  */
-
-import('core.Kernel.DataObject');
 
 define('METADATA_DESCRIPTION_REPLACE_ALL', 0x01);
 define('METADATA_DESCRIPTION_REPLACE_PROPERTIES', 0x02);
@@ -475,7 +474,6 @@ class MetadataDescription extends DataObject {
         assert($property instanceof MetadataProperty);
         return $property->getTranslated();
     }
-
 
     //
     // Private helper methods

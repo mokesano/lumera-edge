@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Controllers\Grid\Citation\CoreCitationGridHandler;
+Lumera\Domain\Handler\Validation\HandlerValidatorJournal;
+Lumera\Domain\Handler\Validation\HandlerValidatorRoles;
+Lumera\Domain\Security\Authorization\AppSubmissionAccessPolicy;
 namespace App\Controllers\Grid\Citation;
 
 /**
@@ -16,11 +20,7 @@ namespace App\Controllers\Grid\Citation;
  * @brief Handle Wizdam specific parts of citation grid requests.
  */
 
-import('app.Domain.Controllers.grid.citation.CoreCitationGridHandler');
-
 // import validation classes
-import('app.Domain.Handler.Validation.HandlerValidatorJournal');
-import('app.Domain.Handler.validation.HandlerValidatorRoles');
 
 class CitationGridHandler extends CoreCitationGridHandler {
     
@@ -52,7 +52,6 @@ class CitationGridHandler extends CoreCitationGridHandler {
         self::__construct();
     }
 
-
     //
     // Implement template methods from CoreHandler
     //
@@ -66,7 +65,7 @@ class CitationGridHandler extends CoreCitationGridHandler {
      */
     public function authorize($request, &$args, $roleAssignments) {
         // Make sure the user can edit the submission in the request.
-        import('app.Domain.Security.Authorization.AppSubmissionAccessPolicy');
+        
         $this->addPolicy(new AppSubmissionAccessPolicy($request, $args, $roleAssignments, 'assocId'));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -91,7 +90,6 @@ class CitationGridHandler extends CoreCitationGridHandler {
 
         parent::initialize($request, $args);
     }
-
 
     //
     // Override methods from CoreCitationGridHandler

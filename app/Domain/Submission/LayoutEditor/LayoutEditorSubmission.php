@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
 namespace App\Domain\Submission\LayoutEditor;
-
 
 /**
  * @defgroup submission_layoutEditor
@@ -23,8 +23,6 @@ namespace App\Domain\Submission\LayoutEditor;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.Article');
 
 class LayoutEditorSubmission extends Article {
 
@@ -84,7 +82,6 @@ class LayoutEditorSubmission extends Article {
     public function setSuppFiles($suppFiles) {
         return $this->setData('suppFiles', $suppFiles);
     }
-
 
     // FIXME These should probably be in an abstract "Submission" base class
 

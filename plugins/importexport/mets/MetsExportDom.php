@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Modules\Config\Config;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\File\FileManager;
 namespace Lumera\Plugins\Importexport\mets;
 
 /**
@@ -16,8 +20,6 @@ namespace Lumera\Plugins\Importexport\mets;
  * @brief MetsExportDom export plugin DOM functions for export
  * [WIZDAM EDITION] Refactored for PHP 7.4/8.0+ (Static Methods, Strict Types, XML DOM)
  */
-
-import('core.Modules.xml.XMLCustomWriter');
 
 class MetsExportDom {
 
@@ -241,7 +243,7 @@ class MetsExportDom {
 
         XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'issue');
         
-        import('core.Modules.Config.Config');
+        
         $base_url = Config::getVar('general', 'base_url');
         $url = $base_url . '/index.php/' . $journal->getPath() . '/issue/view/' . $issue->getId();
         
@@ -665,8 +667,8 @@ class MetsExportDom {
      * @param Journal $journal
      */
     public static function generateArticleHtmlGalleyImageFileDom(DOMDocument $doc, DOMElement $root, $article, $galley, $imageFile, $useAttribute, Journal $journal): void {
-        import('core.Modules.file.PublicFileManager');
-        import('core.Modules.file.FileManager');
+        
+        
         
         $fileManager = new FileManager();
         $contentWrapper = Request::getUserVar('contentWrapper');
@@ -710,8 +712,8 @@ class MetsExportDom {
      * @param Journal $journal
      */
     public static function generateArticleFileDom(DOMDocument $doc, DOMElement $root, $article, $galleyFile, $useAttribute, Journal $journal): void {
-        import('core.Modules.file.PublicFileManager');
-        import('core.Modules.file.FileManager');
+        
+        
         
         $fileManager = new FileManager();
         $contentWrapper = Request::getUserVar('contentWrapper');
@@ -754,8 +756,8 @@ class MetsExportDom {
      * @param Journal $journal
      */
     public static function generateArticleSuppFileDom(DOMDocument $doc, DOMElement $root, $article, SuppFile $suppFile, Journal $journal): void {
-        import('core.Modules.file.PublicFileManager');
-        import('core.Modules.file.FileManager');
+        
+        
         
         $fileManager = new FileManager();
         $contentWrapper = Request::getUserVar('contentWrapper');

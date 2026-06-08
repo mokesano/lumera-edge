@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Security\Authorization\ContextRequiredPolicy;
 namespace App\Pages\Trends;
 
 /**
@@ -13,8 +15,6 @@ namespace App\Pages\Trends;
  * [WIZDAM] - Hub/Landing Page untuk semua metrik Trends ScholarWizdam.
  * URL Target: /{context}/trends
  */
-
-import('app.Domain.Handler.Handler');
 
 class TrendsHandler extends Handler {
 
@@ -33,7 +33,7 @@ class TrendsHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('core.Modules.security.authorization.ContextRequiredPolicy');
+        
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);
     }

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\AccessKey;
 namespace Lumera\Modules\security;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security;
  *
  * @brief Operations for retrieving and modifying AccessKey objects.
  */
-
-import('core.Modules.security.AccessKey');
 
 class AccessKeyDAO extends DAO {
     

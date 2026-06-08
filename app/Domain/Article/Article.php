@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Submission;
 namespace App\Domain\Article;
 
 /**
@@ -54,8 +55,6 @@ define ('PERMISSIONS_FIELD_COPYRIGHT_YEAR', 3);
 define ('ARTICLE_ACCESS_ISSUE_DEFAULT', 0);
 define ('ARTICLE_ACCESS_OPEN', 1);
 define ('ARTICLE_ACCESS_SUBSCRIPTION', 2);
-
-import('app.Domain.Submission.Submission');
 
 class Article extends Submission {
     
@@ -913,7 +912,6 @@ class Article extends Submission {
 
         return $signoff->getUserId();
     }
-
 
     // --- WIZDAM EXTENSION: eLocator & PII ---
 

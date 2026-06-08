@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
 namespace App\Helpers\Checkout;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Helpers\Checkout;
  * 
  * @brief Data Object yang merepresentasikan satu entitas Tagihan (Global Level).
  */
-
-import('core.Kernel.DataObject');
 
 class Invoice extends DataObject {
     

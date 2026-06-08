@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\CorePageRouter;
 namespace App\Domain\Core;
 
 /**
@@ -21,8 +22,6 @@ namespace App\Domain\Core;
  * - Native Routing Support
  * - [v2] Degradasi Routing Bertingkat: Issue → Volume → Year → Archive
  */
-
-import('core.Kernel.CorePageRouter');
 
 class PageRouter extends CorePageRouter {
 

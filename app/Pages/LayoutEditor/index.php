@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Editor\IssueManagementHandler;
+Lumera\Pages\LayoutEditor\SubmissionLayoutHandler;
+Lumera\Pages\LayoutEditor\SubmissionCommentsHandler;
+Lumera\Pages\LayoutEditor\LayoutEditorHandler;
 namespace App\Pages\LayoutEditor;
 
 /**
@@ -33,7 +37,7 @@ switch ($op) {
     case 'removeCoverPage':
     case 'removeStyleFile':
         define('HANDLER_CLASS', \App\Pages\Editor\IssueManagementHandler::class);
-        import('app.Pages.Editor.IssueManagementHandler');
+        
         break;
     case 'viewMetadata':
     //
@@ -63,7 +67,7 @@ switch ($op) {
     //
     case 'layoutEditorProofreadingComplete':
         define('HANDLER_CLASS', \App\Pages\LayoutEditor\SubmissionLayoutHandler::class);
-        import('app.Pages.LayoutEditor.SubmissionLayoutHandler');
+        
         break;
     //
     // Submission Comments
@@ -76,7 +80,7 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\LayoutEditor\SubmissionCommentsHandler::class);
-        import('app.Pages.LayoutEditor.SubmissionCommentsHandler');
+        
         break;
     case 'index':
     case 'submissions':
@@ -85,6 +89,6 @@ switch ($op) {
     case 'instructions':
     case 'completeProofreader':
         define('HANDLER_CLASS', \App\Pages\LayoutEditor\LayoutEditorHandler::class);
-        import('app.Pages.LayoutEditor.LayoutEditorHandler');
+        
         break;
 }

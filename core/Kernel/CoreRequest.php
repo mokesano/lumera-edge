@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\JSONMessage;
 namespace Lumera\Kernel;
 
 /**
@@ -94,7 +95,6 @@ class CoreRequest {
         return $instance->_dispatcher;
     }
 
-
     /**
      * Perform an HTTP redirect to an absolute or relative (to base system URL) URL.
      * @param $url string (exclude protocol for local redirects)
@@ -130,7 +130,7 @@ class CoreRequest {
      * @param $url string
      */
     public static function redirectUrlJson($url) {
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage(true);
         $json->setEvent('redirectRequested', $url);
         header('Content-Type: application/json');

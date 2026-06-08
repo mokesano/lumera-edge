@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\coins;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Generic\coins;
  *
  * @brief COinS plugin class
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class CoinsPlugin extends GenericPlugin {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLNode;
 namespace Lumera\Plugins\Importexport\medra\classes;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Plugins\Importexport\medra\classes;
  * NB: We do not use PHP's SoapClient because it is not PHP4 compatible and
  * it doesn't support multipart SOAP messages.
  */
-
-import('core.Modules.xml.XMLNode');
 
 define('MEDRA_WS_ENDPOINT_DEV', 'https://medra.dev.cineca.it/servlet/ws/medraWS');
 define('MEDRA_WS_ENDPOINT', 'https://www.medra.org/servlet/ws/medraWS');

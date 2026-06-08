@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Filter\FilterGridHandler;
 namespace Lumera\Modules\controllers\grid\filter;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\grid\filter;
  * @brief Defines the filters that will be configured in this grid.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.filter.FilterGridHandler');
 
 class ParserFilterGridHandler extends FilterGridHandler {
     

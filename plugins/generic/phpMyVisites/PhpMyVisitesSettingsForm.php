@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\phpMyVisites;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Generic\phpMyVisites;
  *
  * @brief Form for journal managers to modify phpMyVisites plugin settings
  */
-
-import('core.Modules.form.Form');
 
 class PhpMyVisitesSettingsForm extends Form {
 

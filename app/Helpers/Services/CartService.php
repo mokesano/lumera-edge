@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cart\CartItemDAO;
+Lumera\Modules\Services\TaxVatService;
+Lumera\Modules\Services\RedeemService;
+Lumera\Modules\Services\DiscountService;
 namespace App\Helpers\Services;
 
 /**
@@ -15,11 +19,6 @@ namespace App\Helpers\Services;
  * @brief Layanan pengelola keranjang belanja (B2C) yang mengorkestrasi logika 
  * database dan kalkulasi finansial melalui Service Layer terkait.
  */
-
-import('core.Modules.cart.CartItemDAO');
-import('core.Modules.services.TaxVatService');
-import('core.Modules.services.RedeemService');
-import('core.Modules.services.DiscountService');
 
 class CartService {
     

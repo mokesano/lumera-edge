@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\Payment;
+Lumera\Domain\Gift\Gift;
 namespace App\Domain\Payment;
 
 /**
@@ -20,7 +22,6 @@ namespace App\Domain\Payment;
  *
  * @brief Class describing a payment ready to be in the database.
  */
-import('app.Domain.Payment.Payment');
 
 class AppCompletedPayment extends Payment {
     
@@ -266,7 +267,7 @@ class AppCompletedPayment extends Payment {
 
                 // Try to return gift details in description
                 if ($gift) {
-                    import('app.Domain.Gift.Gift');
+                    
 
                     if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
                         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');

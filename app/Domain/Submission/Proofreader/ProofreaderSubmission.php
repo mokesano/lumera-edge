@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
 namespace App\Domain\Submission\Proofreader;
-
 
 /**
  * @defgroup submission_proofreader
@@ -23,8 +23,6 @@ namespace App\Domain\Submission\Proofreader;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.Article');
 
 class ProofreaderSubmission extends Article {
 
@@ -84,7 +82,6 @@ class ProofreaderSubmission extends Article {
     public function setSuppFiles($suppFiles) {
         return $this->setData('suppFiles', $suppFiles);
     }
-
 
     /**
      * Get the galleys for an article.

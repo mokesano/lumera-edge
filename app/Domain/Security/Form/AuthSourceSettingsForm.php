@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Security\Form;
 
 /**
@@ -20,8 +21,6 @@ namespace App\Domain\Security\Form;
  *
  * @brief Form for editing authentication source settings.
  */
-
-import('core.Modules.form.Form');
 
 class AuthSourceSettingsForm extends Form {
 

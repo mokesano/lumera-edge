@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Search\SearchHandler;
 namespace App\Pages\Search;
 
 /**
@@ -28,6 +29,6 @@ switch ($op) {
     case 'categories':
     case 'category':
         define('HANDLER_CLASS', \App\Pages\Search\SearchHandler::class);
-        import('app.Pages.Search.SearchHandler');
+        
         break;
 }

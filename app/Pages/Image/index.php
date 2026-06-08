@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Image\ImageHandler;
 namespace App\Pages\Image;
 
 /**
@@ -20,6 +21,6 @@ switch ($op) {
     case 'header':  // Akses: .../image/header/...
     case 'article': // Akses: .../image/article/...
         define('HANDLER_CLASS', \App\Pages\Image\ImageHandler::class);
-        import('app.Pages.Image.ImageHandler');
+        
         break;
 }

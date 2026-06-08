@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Copyeditor\CopyeditorHandler;
+Lumera\Domain\Submission\Proofreader\ProofreaderAction;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\Submission\SectionEditor\SectionEditorAction;
 namespace App\Pages\Copyeditor;
 
 /**
@@ -15,8 +19,6 @@ namespace App\Pages\Copyeditor;
  *
  * @brief Handle requests for submission tracking.
  */
-
-import('app.Pages.Copyeditor.CopyeditorHandler');
 
 class SubmissionCopyeditHandler extends CopyeditorHandler {
     
@@ -173,7 +175,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
         $send = (int) $request->getUserVar('send') === 1;
 
-        import('app.Domain.Submission.Proofreader.ProofreaderAction');
+        
 
         if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_COMPLETE', $request, $send ? '' : $request->url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
             $request->redirect(null, null, 'submission', $articleId);
@@ -226,7 +228,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
         $galley = $galleyDao->getGalley($galleyId, $articleId);
 
-        import('app.Domain.File.ArticleFileManager'); // FIXME
+         // FIXME
 
         if (isset($galley)) {
             if ($galley->isHTMLGalley()) {
@@ -291,12 +293,11 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
             $request->redirect(null, null, 'viewMetadata', $articleId);
         }
 
-        import('app.Domain.Submission.SectionEditor.SectionEditorAction');
+        
         if (SectionEditorAction::removeArticleCoverPage($this->submission, $formLocale)) {
             $request->redirect(null, null, 'viewMetadata', $articleId);
         }
     }
-
 
     //
     // Citation Editing

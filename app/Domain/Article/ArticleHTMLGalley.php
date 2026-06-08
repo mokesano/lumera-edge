@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleGalley;
+Lumera\Domain\File\ArticleFileManager;
+Lumera\Domain\File\PublicFileManager;
 namespace App\Domain\Article;
 
 /**
@@ -19,8 +22,6 @@ namespace App\Domain\Article;
  * - PHP 8.x Compatibility (Constructor, Regex Callback, Ref removal)
  * - Null Safety for Image/File Iteration
  */
-
-import('app.Domain.Article.ArticleGalley');
 
 class ArticleHTMLGalley extends ArticleGalley {
 
@@ -59,7 +60,7 @@ class ArticleHTMLGalley extends ArticleGalley {
      * @return string
      */
     public function getHTMLContents() {
-        import('app.Domain.File.ArticleFileManager');
+        
         $fileManager = new ArticleFileManager($this->getArticleId());
         $contents = $fileManager->readFile($this->getFileId());
         $journal = Request::getJournal();
@@ -198,14 +199,14 @@ class ArticleHTMLGalley extends ArticleGalley {
                     break;
                 case 'sitepublic':
                     array_shift($urlParts);
-                    import ('app.Domain.file.PublicFileManager');
+                    
                     $publicFileManager = new PublicFileManager();
                     $url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
                     break;
                 case 'public':
                     array_shift($urlParts);
                     $journal = Request::getJournal();
-                    import ('app.Domain.file.PublicFileManager');
+                    
                     $publicFileManager = new PublicFileManager();
                     if ($journal) {
                         $url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');

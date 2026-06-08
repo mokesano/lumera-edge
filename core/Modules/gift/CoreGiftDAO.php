@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Gift\CoreGift;
 namespace Lumera\Modules\gift;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\gift;
  *
  * @brief Operations for retrieving and modifying Gift objects.
  */
-
-import('core.Modules.gift.CoreGift');
 
 define('GIFT_REDEEM_STATUS_SUCCESS', 0x01);
 define('GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID', 0x2);

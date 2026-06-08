@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\LinkActionRequest;
 namespace Lumera\Modules\linkAction\request;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\linkAction\request;
  * @brief This action does nothing.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.LinkActionRequest');
 
 class NullAction extends LinkActionRequest {
 

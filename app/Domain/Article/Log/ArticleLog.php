@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Log\ArticleEventLogEntry;
+Lumera\Domain\Article\Log\ArticleEmailLogEntry;
 namespace App\Domain\Article\Log;
 
 /**
@@ -21,9 +23,6 @@ namespace App\Domain\Article\Log;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.log.ArticleEventLogEntry');
-import('app.Domain.Article.log.ArticleEmailLogEntry');
 
 class ArticleLog {
     

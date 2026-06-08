@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\sword;
 
 /**
@@ -19,8 +20,6 @@ namespace Lumera\Plugins\Generic\sword;
  */
 
 define('SWORD_PASSWORD_SLUG', '******');
-
-import('core.Modules.form.Form');
 
 class DepositPointForm extends Form {
 

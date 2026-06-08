@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+Lumera\Modules\Db\DBResultRange;
+Lumera\Modules\Checkout\Invoice;
+Lumera\Domain\Payment\AppQueuedPayment;
+Lumera\Domain\Payment\QueuedPayment;
 namespace App\Helpers\Checkout;
 
 /**
@@ -15,12 +20,6 @@ namespace App\Helpers\Checkout;
  * @brief Operations for retrieving and modifying Invoice objects. 
  * Memiliki fitur Legacy Bridge ke tabel completed_payments bawaan Wizdam.
  */
-
-import('core.Modules.db.DAO');
-import('core.Modules.db.DBResultRange');
-import('core.Modules.checkout.Invoice');
-import('app.Domain.Payment.AppQueuedPayment');
-import('app.Domain.Payment.QueuedPayment');
 
 class InvoiceDAO extends DAO {
 

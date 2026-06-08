@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\security\authorization;
  *
  * @brief Class to control access to handler operations based on protocol.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class HttpsPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

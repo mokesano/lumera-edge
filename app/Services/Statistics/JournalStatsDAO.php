@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace App\Services\Statistics;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Services\Statistics;
  * 
  * @brief DAO Terpadu untuk seluruh Statistik Jurnal.
  */
-
-import('core.Modules.db.DAO');
 
 // Pastikan konstanta Wizdam tersedia
 if (!defined('ASSOC_TYPE_JOURNAL')) define('ASSOC_TYPE_JOURNAL', 256);

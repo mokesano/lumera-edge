@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
 namespace Lumera\Modules\pages\announcement;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\pages\announcement;
  *
  * [WIZDAM EDITION] PHP 8.1+ Compatibility, Strict Types, Visibility Modifiers
  */
-
-import('core.Modules.handler.Handler');
 
 class CoreAnnouncementHandler extends Handler {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Importexport\crossref\classes\form;
 
 /**
@@ -16,9 +17,6 @@ namespace Lumera\Plugins\Importexport\crossref\classes\form;
  * @brief Form base class for journal managers to setup DOI export plug-ins.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-
-import('core.Modules.form.Form');
 
 class DOIExportSettingsForm extends Form {
 
@@ -46,7 +44,6 @@ class DOIExportSettingsForm extends Form {
     public function getPlugIn() {
         return $this->_plugin;
     }
-
 
     //
     // Constructor
@@ -79,7 +76,6 @@ class DOIExportSettingsForm extends Form {
         $args = func_get_args();
         call_user_func_array(array($this, '__construct'), $args);
     }
-
 
     //
     // Implement template methods from Form
@@ -116,7 +112,6 @@ class DOIExportSettingsForm extends Form {
             $plugin->updateSetting($this->getJournalId(), $settingName, $this->getData($settingName), $settingType);
         }
     }
-
 
     //
     // Protected template methods

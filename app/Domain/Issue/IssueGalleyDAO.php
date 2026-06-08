@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Issue\IssueGalley;
 namespace App\Domain\Issue;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Issue;
  *
  * @brief Operations for retrieving and modifying IssueGalley objects.
  */
-
-import('app.Domain.Issue.IssueGalley');
 
 class IssueGalleyDAO extends DAO {
 

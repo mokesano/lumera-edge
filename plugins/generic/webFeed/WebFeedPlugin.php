@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\webFeed;
 
 /**
@@ -11,9 +12,6 @@ namespace Lumera\Plugins\Generic\webFeed;
  *
  * @brief Web Feeds plugin class — MODERNIZED FOR PHP 7.4+ & Wizdam FORK
  */
-
-
-import('core.Modules.plugins.GenericPlugin');
 
 class WebFeedPlugin extends GenericPlugin {
 
@@ -73,14 +71,14 @@ class WebFeedPlugin extends GenericPlugin {
 
         switch ($category) {
             case 'blocks':
-                $this->import('WebFeedBlockPlugin');
+                $this->
                 $blockPlugin = new WebFeedBlockPlugin();
                 $blockPlugin->parentPluginName = $this->getName();
                 $args[1][$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] = $blockPlugin;
                 break;
 
             case 'gateways':
-                $this->import('WebFeedGatewayPlugin');
+                $this->
                 $gatewayPlugin = new WebFeedGatewayPlugin();
                 $gatewayPlugin->parentPluginName = $this->getName();
                 $args[1][$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] = $gatewayPlugin;
@@ -226,7 +224,7 @@ class WebFeedPlugin extends GenericPlugin {
                 $templateMgr = TemplateManager::getManager();
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
 
-                $this->import('SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journal->getId());
 
                 if ($request->getUserVar('save')) {

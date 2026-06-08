@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Services\InvoiceService;
 namespace App\Helpers\Services;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Helpers\Services;
  * @brief Jantung verifikasi LoA. Berhubungan erat dengan InvoiceService untuk
  * memastikan LoA hanya terbit dan terverifikasi jika APC telah LUNAS.
  */
-
-import('core.Modules.services.InvoiceService');
 
 class LoAService {
     

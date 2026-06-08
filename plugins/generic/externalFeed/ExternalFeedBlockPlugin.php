@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
+Lumera\SimplePie;
+Lumera\Kernel\CoreString;
 namespace Lumera\Plugins\Generic\externalFeed;
 
 /**
@@ -20,8 +23,6 @@ namespace Lumera\Plugins\Generic\externalFeed;
  * - Redirected template to 'templates/' folder.
  * - Strict Syntax Compliance.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {
     
@@ -128,8 +129,8 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
         $requestedPage = Request::getRequestedPage();
         $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
         
-        $plugin->import('simplepie.SimplePie');
-        import('core.Kernel.CoreString');
+        $plugin->
+        
     
         $feeds = $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
         $externalFeeds = array();

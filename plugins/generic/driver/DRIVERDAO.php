@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+Lumera\Modules\Oai\OAIDAO;
 namespace Lumera\Plugins\Generic\driver;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\driver;
  * @brief DAO operations for DRIVER.
  * * FIXED: Updated for PHP 7.4 Compatibility & Modernized OAI Core
  */
-
-import('core.Modules.oai.OAIDAO');
 
 class DRIVERDAO extends OAIDAO {
 

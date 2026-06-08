@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\TypeDescription;
+Lumera\Modules\Filter\TypeDescriptionFactory;
 namespace Lumera\Modules\filter;
 
 /**
@@ -15,9 +17,6 @@ namespace Lumera\Modules\filter;
  *
  * @brief Class that describes a primitive input/output type.
  */
-
-import('core.Modules.filter.TypeDescription');
-import('core.Modules.filter.TypeDescriptionFactory');
 
 class PrimitiveTypeDescription extends TypeDescription {
     /** @var string a PHP primitive type, e.g. 'string' */
@@ -45,7 +44,6 @@ class PrimitiveTypeDescription extends TypeDescription {
         self::__construct($typeName);
     }
 
-
     //
     // Setters and Getters
     //
@@ -55,7 +53,6 @@ class PrimitiveTypeDescription extends TypeDescription {
     public function getNamespace() {
         return TYPE_DESCRIPTION_NAMESPACE_PRIMITIVE;
     }
-
 
     //
     // Implement abstract template methods from TypeDescription
@@ -83,7 +80,6 @@ class PrimitiveTypeDescription extends TypeDescription {
 
         return true;
     }
-
 
     //
     // Private helper methods

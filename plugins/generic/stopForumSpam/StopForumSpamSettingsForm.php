@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\stopForumSpam;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\stopForumSpam;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.form.Form');
 
 class StopForumSpamSettingsForm extends Form {
 

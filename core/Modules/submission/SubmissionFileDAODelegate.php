@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace Lumera\Modules\submission;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\submission;
  * @brief Abstract class to support DAO delegates that provide operations
  * to retrieve and modify SubmissionFile objects.
  */
-
-import('core.Modules.db.DAO');
 
 class SubmissionFileDAODelegate extends DAO {
     
@@ -38,7 +37,6 @@ class SubmissionFileDAODelegate extends DAO {
         }
         self::__construct();
     }
-
 
     //
     // Abstract public methods to be implemented by subclasses.
@@ -103,7 +101,6 @@ class SubmissionFileDAODelegate extends DAO {
     public function newDataObject() {
         assert(false);
     }
-
 
     //
     // Protected helper methods

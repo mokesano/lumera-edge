@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Login\CoreLoginHandler;
 namespace App\Pages\Login;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Pages\Login;
  * - Added ORCID SSO Integration
  * - Added Google SSO Integration
  */
-
-import('app.Pages.login.CoreLoginHandler');
 
 class LoginHandler extends CoreLoginHandler {
 

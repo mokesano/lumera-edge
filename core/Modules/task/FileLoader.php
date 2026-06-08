@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Modules\File\FileManager;
 namespace Lumera\Modules\task;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Modules\task;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 define('FILE_LOADER_RETURN_TO_STAGING', 0x01);
 
@@ -110,7 +110,6 @@ class FileLoader extends ScheduledTask {
         call_user_func_array([$this, '__construct'], $args);
     }
 
-
     //
     // Getters and setters.
     //
@@ -161,7 +160,6 @@ class FileLoader extends ScheduledTask {
     public function setCompressArchives($compressArchives) {
         $this->_compressArchives = (bool) $compressArchives;
     }
-
 
     //
     // Public methods
@@ -242,7 +240,7 @@ class FileLoader extends ScheduledTask {
                 if ($install) {
                     // Try installing the folder if it is missing.
                     if ($fileManager === null) {
-                        import('core.Modules.file.FileManager');
+                        
                         $fileManager = new FileManager();
                     }
                     $fileManager->mkdirtree($path);
@@ -259,7 +257,6 @@ class FileLoader extends ScheduledTask {
         }
         return true;
     }
-
 
     //
     // Protected methods.
@@ -287,7 +284,6 @@ class FileLoader extends ScheduledTask {
     public function getName() {
         return __('admin.fileLoader');
     }
-
 
     //
     // Private helper methods.

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Modules\controllers\grid;
  * @see ColumnBasedGridCellProvider
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
-
-import('core.Modules.controllers.grid.GridCellProvider');
 
 class DataObjectGridCellProvider extends GridCellProvider {
     /** 
@@ -69,7 +68,6 @@ class DataObjectGridCellProvider extends GridCellProvider {
     public function getLocale() {
         return $this->locale;
     }
-
 
     //
     // Template methods from GridCellProvider

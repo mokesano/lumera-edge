@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridHandler;
+Lumera\Modules\Controllers\Grid\GridCategoryRow;
+Lumera\Modules\Controllers\Grid\NullGridCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -18,8 +21,6 @@ namespace Lumera\Modules\controllers\grid;
  */
 
 // import grid classes
-import('core.Modules.controllers.grid.GridHandler');
-import('core.Modules.controllers.grid.GridCategoryRow');
 
 // empty category constant
 define('GRID_CATEGORY_NONE', 'NONE');
@@ -39,7 +40,7 @@ class CategoryGridHandler extends GridHandler {
     public function __construct($dataProvider = null) {
         parent::__construct($dataProvider);
 
-        import('core.Modules.controllers.grid.NullGridCellProvider');
+        
         $this->addColumn(new GridColumn(
             'indent', 
             null, 
@@ -63,7 +64,6 @@ class CategoryGridHandler extends GridHandler {
         self::__construct($dataProvider);
     }
 
-
     //
     // Getters and setters.
     //
@@ -82,7 +82,6 @@ class CategoryGridHandler extends GridHandler {
     public function setEmptyCategoryRowText($translationKey) {
         $this->emptyCategoryRowText = $translationKey;
     }
-
 
     //
     // Public handler methods
@@ -111,7 +110,6 @@ class CategoryGridHandler extends GridHandler {
         // Render and return the JSON message.
         return $json->getString();
     }
-
 
     //
     // Extended methods from GridHandler
@@ -151,7 +149,6 @@ class CategoryGridHandler extends GridHandler {
 
         return $args;
     }
-
 
     /**
      * @see GridHandler::getJSHandler()
@@ -233,7 +230,6 @@ class CategoryGridHandler extends GridHandler {
             $secondColumn->addFlag('firstColumn', true);
         }
     }
-
 
     //
     // Protected methods to be overridden/used by subclasses
@@ -346,7 +342,6 @@ class CategoryGridHandler extends GridHandler {
 
         return parent::renderRowInternally($request, $row);
     }
-
 
     //
     // Private helper methods

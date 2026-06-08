@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Modules\File\FileManager;
+Lumera\Modules\File\EditableLocaleFile;
 namespace Lumera\Plugins\Generic\customLocale;
 
 /**
@@ -18,7 +22,6 @@ namespace Lumera\Plugins\Generic\customLocale;
 
 require_once('CustomLocalePlugin.inc.php');
 require_once('CustomLocaleAction.inc.php');
-import('core.Modules.handler.Handler');
 
 class CustomLocaleHandler extends Handler {
 
@@ -59,7 +62,7 @@ class CustomLocaleHandler extends Handler {
         $rangeInfo = Handler::getRangeInfo('locales');
 
         $templateMgr = TemplateManager::getManager();
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('locales', new ArrayItemIterator($journal->getSupportedLocaleNames(), $rangeInfo->getPage(), $rangeInfo->getCount()));
         $templateMgr->assign('masterLocale', MASTER_LOCALE);
         $templateMgr->display($plugin->getTemplatePath() . 'index.tpl');
@@ -86,7 +89,7 @@ class CustomLocaleHandler extends Handler {
         $templateMgr = TemplateManager::getManager();
         $localeFilesRangeInfo = Handler::getRangeInfo('localeFiles');
 
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('localeFiles', new ArrayItemIterator($localeFiles, $localeFilesRangeInfo->getPage(), $localeFilesRangeInfo->getCount()));
         $templateMgr->assign('locale', $locale);
         $templateMgr->assign('masterLocale', MASTER_LOCALE);
@@ -116,10 +119,10 @@ class CustomLocaleHandler extends Handler {
 
         $templateMgr = TemplateManager::getManager();
 
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
 
-        import('core.Modules.file.EditableLocaleFile');
+        
         $journal = Request::getJournal();
         $journalId = $journal->getId();
         $publicFilesDir = Config::getVar('files', 'public_files_dir');
@@ -157,7 +160,7 @@ class CustomLocaleHandler extends Handler {
 
         $templateMgr->assign('filename', $filename);
         $templateMgr->assign('locale', $locale);
-        import('core.Kernel.ArrayItemIterator');
+        
         $templateMgr->assign('referenceLocaleContents', new ArrayItemIterator($referenceLocaleContents, $referenceLocaleContentsRangeInfo->getPage(), $referenceLocaleContentsRangeInfo->getCount()));
         $templateMgr->assign('localeContents', $localeContents);
 
@@ -195,10 +198,10 @@ class CustomLocaleHandler extends Handler {
         $customFilePath = $customFilesDir . DIRECTORY_SEPARATOR . $filename;
 
         // Create empty custom locale file if it doesn't exist
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
 
-        import('core.Modules.file.EditableLocaleFile');
+        
         if (!$fileManager->fileExists($customFilePath)) {
             $numParentDirs = substr_count($customFilePath, DIRECTORY_SEPARATOR); 
             $parentDirs = '';

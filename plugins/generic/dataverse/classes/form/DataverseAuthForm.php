@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\dataverse\classes\form;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Plugins\Generic\dataverse\classes\form;
  */
 
 define('DATAVERSE_PLUGIN_PASSWORD_SLUG', '********');
-
-import('core.Modules.form.Form');
 
 class DataverseAuthForm extends Form {
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Section\SectionHandler;
 namespace App\Pages\Section;
 
 /**
@@ -17,12 +18,12 @@ switch ($op) {
     case '':
         // Jika hanya mengakses /section
         define('HANDLER_CLASS', \App\Pages\Section\SectionHandler::class);
-        import('app.Pages.Section.SectionHandler');
+        
         break;
 
     default:
         // Menangkap semua string dinamis (nama section) sebagai $op
         define('HANDLER_CLASS', \App\Pages\Section\SectionHandler::class);
-        import('app.Pages.Section.SectionHandler');
+        
         break;
 }

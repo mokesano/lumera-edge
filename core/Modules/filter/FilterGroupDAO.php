@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\FilterGroup;
 namespace Lumera\Modules\filter;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\filter;
  *
  * @brief Operations for retrieving and modifying FilterGroup objects.
  */
-
-import('core.Modules.filter.FilterGroup');
 
 class FilterGroupDAO extends DAO {
     
@@ -183,7 +182,6 @@ class FilterGroupDAO extends DAO {
         return $this->deleteObject($filterGroup);
     }
 
-
     //
     // Public helper methods (FIXED VISIBILITY)
     //
@@ -207,7 +205,6 @@ class FilterGroupDAO extends DAO {
     protected function newDataObject() {
         return new FilterGroup();
     }
-
 
     //
     // Private helper methods

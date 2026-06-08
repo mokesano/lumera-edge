@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Group\Group;
 namespace App\Domain\Manager\Form;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Manager\Form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
-import('core.Modules.group.Group');
 
 class GroupForm extends Form {
     /** @var Group|null the group being edited */

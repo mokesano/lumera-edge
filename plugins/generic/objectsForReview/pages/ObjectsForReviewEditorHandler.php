@@ -1,6 +1,18 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Pages\Editor\EditorHandler;
+Lumera\Modules\ObjectForReviewAssignment;
+Lumera\Modules\Form\ObjectsForReviewSettingsForm;
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\Form\ObjectForReviewForm;
+Lumera\Modules\File\PublicFileManager;
+Lumera\Modules\ReviewObjectMetadata;
+Lumera\Modules\Security\Validation;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\Submission\Common\Action;
+Lumera\Modules\Form\ObjectForReviewAssignmentForm;
 namespace Lumera\Plugins\Generic\objectsForReview\pages;
 
 /**
@@ -17,8 +29,6 @@ namespace Lumera\Plugins\Generic\objectsForReview\pages;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
 
 class ObjectsForReviewEditorHandler extends Handler {
 
@@ -83,7 +93,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         }
 
         // Filter by editor
-        import('app.Pages.editor.EditorHandler');
+        
         
         $user = $request->getUser();
         $filterEditorOptions = [
@@ -161,7 +171,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
         $mode = $ofrPlugin->getSetting($journalId, 'mode');
 
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         $path = !isset($args) || empty($args) ? null : $args[0];
         $template = 'objectsForReviewAssignments.tpl';
         
@@ -242,7 +252,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $journalId = $journal->getId();
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.form.ObjectsForReviewSettingsForm');
+        $ofrPlugin->
         $settingsForm = new ObjectsForReviewSettingsForm($ofrPlugin, $journalId);
         
         // [SECURITY FIX] Amankan flag boolean 'save'
@@ -256,7 +266,7 @@ class ObjectsForReviewEditorHandler extends Handler {
                     
                     // Notification
                     $user = $request->getUser();
-                    import('core.Modules.notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_OFR_SETTINGS_SAVED);
 
@@ -307,7 +317,7 @@ class ObjectsForReviewEditorHandler extends Handler {
             $templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.create');
         }
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.form.ObjectForReviewForm');
+        $ofrPlugin->
         $ofrForm = new ObjectForReviewForm($ofrPlugin->getName(), $objectId, $reviewObjectTypeId);
         $ofrForm->initData();
         $ofrForm->display($request);
@@ -333,7 +343,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         }
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.form.ObjectForReviewForm');
+        $ofrPlugin->
         $ofrForm = new ObjectForReviewForm($ofrPlugin->getName(), $objectId, $reviewObjectTypeId);
         $ofrForm->readInputData();
 
@@ -437,12 +447,12 @@ class ObjectsForReviewEditorHandler extends Handler {
         $coverPageSetting = $objectForReview->getCoverPage();
         if ($coverPageSetting) {
             // Delete cover image file from the filesystem
-            import('core.Modules.file.PublicFileManager');
+            
             $publicFileManager = new PublicFileManager();
             $publicFileManager->removeJournalFile($journalId, $coverPageSetting['fileName']);
             // Delete object for review setting
             $ofrPlugin = $this->_getObjectsForReviewPlugin();
-            $ofrPlugin->import('core.Modules.ReviewObjectMetadata');
+            $ofrPlugin->
             $metadataId = $objectForReview->getMetadataId(REVIEW_OBJECT_METADATA_KEY_COVERPAGE);
             $ofrSettingsDao = DAORegistry::getDAO('ObjectForReviewSettingsDAO');
             $ofrSettingsDao->deleteSetting($objectId, $metadataId);
@@ -553,7 +563,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $templateMgr->assign('users', $users);
         $templateMgr->assign('usersAssigned', $usersAssigned);
 
-        import('core.Modules.security.Validation');
+        
         $templateMgr->assign('isJournalManager', Validation::isJournalManager());
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
@@ -616,7 +626,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $redirect = true;
         // Ensure the assignment exists
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         if (!$this->_ensureAssignmentExists($assignmentId, $journalId, OFR_STATUS_REQUESTED)) {
             $request->redirect(null, 'editor', 'objectsForReview', $returnPage);
         }
@@ -650,7 +660,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
         // Ensure the assignment exists
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         if (!$this->_ensureAssignmentExists($assignmentId, $journalId, OFR_STATUS_REQUESTED)) {
             $request->redirect(null, 'editor', 'objectsForReview', $returnPage);
         }
@@ -658,7 +668,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $ofrAssignment = $ofrAssignmentDao->getById($assignmentId);
 
         $redirect = true;
-        import('core.Modules.mail.MailTemplate');
+        
         $email = new MailTemplate('OFR_OBJECT_DENIED');
         
         // [SECURITY FIX] Amankan flag boolean 'send'
@@ -693,7 +703,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 
         // Ensure the assignment exists
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
         if (!$this->_ensureAssignmentExists($assignmentId, $journalId, OFR_STATUS_ASSIGNED)) {
             $request->redirect(null, 'editor', 'objectsForReview', $returnPage);
         }
@@ -701,7 +711,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $ofrAssignment = $ofrAssignmentDao->getById($assignmentId);
 
         $redirect = true;
-        import('core.Modules.mail.MailTemplate');
+        
         $email = new MailTemplate('OFR_OBJECT_MAILED');
         
         // [SECURITY FIX] Amankan flag boolean 'send'
@@ -755,7 +765,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         }
 
         $redirect = true;
-        import('core.Modules.mail.MailTemplate');
+        
         $email = new MailTemplate('OFR_REVIEWER_REMOVED');
         
         // [SECURITY FIX] Amankan flag boolean 'send'
@@ -831,7 +841,7 @@ class ObjectsForReviewEditorHandler extends Handler {
                 $searchMatch = 'contains'; // Set default aman
             }
         }
-        import('core.Modules.submission.common.Action');
+        
         $fieldOptions = [
             SUBMISSION_FIELD_TITLE => 'article.title',
             SUBMISSION_FIELD_ID => 'article.submissionId',
@@ -957,7 +967,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         $templateMgr->assign('pageTitle', 'plugins.generic.objectsForReview.editor.edit');
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.form.ObjectForReviewAssignmentForm');
+        $ofrPlugin->
         $ofrAssignmentForm = new ObjectForReviewAssignmentForm($ofrPlugin->getName(), $assignmentId, $objectId);
         $ofrAssignmentForm->initData();
         $mode = $ofrPlugin->getSetting($journalId, 'mode');
@@ -993,7 +1003,7 @@ class ObjectsForReviewEditorHandler extends Handler {
         }
 
         $ofrPlugin = $this->_getObjectsForReviewPlugin();
-        $ofrPlugin->import('core.Modules.form.ObjectForReviewAssignmentForm');
+        $ofrPlugin->
         $ofrAssignmentForm = new ObjectForReviewAssignmentForm($ofrPlugin->getName(), $assignmentId, $objectId);
         $ofrAssignmentForm->readInputData();
         if ($ofrAssignmentForm->validate()) {
@@ -1181,7 +1191,7 @@ class ObjectsForReviewEditorHandler extends Handler {
      * @param CoreRequest $request
      */
     protected function _assign($ofrAssignment, $objectForReview, $author, $returnUrl, $request) {
-        import('core.Modules.mail.MailTemplate');
+        
         $email = new MailTemplate('OFR_OBJECT_ASSIGNED');
         // [SECURITY FIX] Amankan flag boolean 'send'
         $send = (int) trim($request->getUserVar('send') ?? '');
@@ -1309,7 +1319,7 @@ class ObjectsForReviewEditorHandler extends Handler {
      */
     protected function _createTrivialNotification($notificationType, $request) {
         $user = $request->getUser();
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $notificationManager->createTrivialNotification($user->getId(), $notificationType);
     }

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\AppQueuedPayment;
+Lumera\Modules\Services\InvoiceService;
 namespace App\Helpers\Services;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Helpers\Services;
  * 
  * Menggunakan tabel 'queued_payments' sebagai pangkalan data keranjang sementara (Stateful Cart).
  */
-
-import('app.Domain.Payment.AppQueuedPayment');
-import('core.Modules.services.InvoiceService');
 
 class CheckoutService {
 

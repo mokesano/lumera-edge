@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Help\HelpMappingFile;
 namespace App\Domain\Help;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Help;
  * @brief Abstracts the built-in help mapping XML file.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Help.HelpMappingFile');
 
 class AppHelpMappingFile extends HelpMappingFile {
     

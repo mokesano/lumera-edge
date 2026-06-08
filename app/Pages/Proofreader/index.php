@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Proofreader\SubmissionProofreadHandler;
+Lumera\Pages\Proofreader\SubmissionCommentsHandler;
+Lumera\Pages\Proofreader\ProofreaderHandler;
 namespace App\Pages\Proofreader;
 
 /**
@@ -35,7 +38,7 @@ switch ($op) {
     case 'proofGalleyFile':
     case 'viewMetadata':
         define('HANDLER_CLASS', \App\Pages\Proofreader\SubmissionProofreadHandler::class);
-        import('app.Pages.Proofreader.SubmissionProofreadHandler');
+        
         break;
     //
     // Submission Comments
@@ -48,10 +51,10 @@ switch ($op) {
     case 'deleteComment':
     case 'saveComment':
         define('HANDLER_CLASS', \App\Pages\Proofreader\SubmissionCommentsHandler::class);
-        import('app.Pages.Proofreader.SubmissionCommentsHandler');
+        
         break;
     case 'index':
     case 'instructions':
         define('HANDLER_CLASS', \App\Pages\Proofreader\ProofreaderHandler::class);
-        import('app.Pages.Proofreader.ProofreaderHandler');
+        
 }

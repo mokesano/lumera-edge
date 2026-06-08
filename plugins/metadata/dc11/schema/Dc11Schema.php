@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Dc11\Schema\CoreDc11Schema;
 /**
  * @defgroup plugins_metadata_dc11_schema
  */
@@ -18,8 +19,6 @@ declare(strict_types=1);
  *
  * @brief Wizdam-specific implementation of the Dc11Schema.
  */
-
-import('core.Modules.plugins.metadata.dc11.schema.CoreDc11Schema');
 
 class Dc11Schema extends CoreDc11Schema {
 

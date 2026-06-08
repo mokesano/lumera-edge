@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Policies\PoliciesHandler;
 namespace App\Pages\Policies;
 
 /**
@@ -30,12 +31,12 @@ switch ($op) {
     case 'section-policies':
     case 'view':
         define('HANDLER_CLASS', \App\Pages\Policies\PoliciesHandler::class);
-        import('app.Pages.Policies.PoliciesHandler');
+        
         break;
 
     // [PENTING] Menangkap semua custom slug (retraction, publication-ethics, dll)
     default:
         define('HANDLER_CLASS', \App\Pages\Policies\PoliciesHandler::class);
-        import('app.Pages.Policies.PoliciesHandler');
+        
         break;
 }

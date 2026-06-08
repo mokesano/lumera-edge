@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Kernel\VirtualArrayIterator;
 namespace Lumera\Plugins\Generic\referral;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Plugins\Generic\referral;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class ReferralPlugin extends GenericPlugin {
     
@@ -53,8 +53,8 @@ class ReferralPlugin extends GenericPlugin {
                 // [PHP 8 NOTE] Removed & from $this as objects are passed by reference implicitly
                 HookRegistry::register ('TemplateManager::display', [$this, 'handleTemplateDisplay']);
                 HookRegistry::register ('LoadHandler', [$this, 'handleLoadHandler']);
-                $this->import('Referral');
-                $this->import('ReferralDAO');
+                $this->
+                $this->
                 $referralDao = new ReferralDAO();
                 DAORegistry::registerDAO('ReferralDAO', $referralDao);
             }
@@ -93,7 +93,7 @@ class ReferralPlugin extends GenericPlugin {
                 $templateMgr->register_function('plugin_url', [$this, 'smartyPluginUrl']);
                 $journal = Request::getJournal();
 
-                $this->import('ReferralPluginSettingsForm');
+                $this->
                 $form = new ReferralPluginSettingsForm($this, $journal->getId());
                 if (Request::getUserVar('save')) {
                     $form->readInputData();
@@ -152,7 +152,7 @@ class ReferralPlugin extends GenericPlugin {
         $sourceFile = $args[2];
 
         if ($page === 'referral') {
-            $this->import('ReferralHandler');
+            $this->
             Registry::set('plugin', $this);
             define('HANDLER_CLASS', 'ReferralHandler');
             return true;
@@ -190,7 +190,7 @@ class ReferralPlugin extends GenericPlugin {
                     $referralsArray[] = $referral;
                 }
                 // Turn the array back into an interator for display
-                import('core.Kernel.VirtualArrayIterator');
+                
                 $referrals = new VirtualArrayIterator($referralsArray, $referrals->getCount(), $referrals->getPage(), $rangeInfo->getCount());
 
                 $templateMgr->assign('articleTitles', $articleTitles);

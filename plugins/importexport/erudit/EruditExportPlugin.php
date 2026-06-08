@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Kernel\VirtualArrayIterator;
 namespace Lumera\Plugins\Importexport\erudit;
 
 /**
@@ -15,9 +18,6 @@ namespace Lumera\Plugins\Importexport\erudit;
  *
  * @brief Erudit english DTD article export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 class EruditExportPlugin extends ImportExportPlugin {
 
@@ -125,7 +125,7 @@ class EruditExportPlugin extends ImportExportPlugin {
                     $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage() - 1), $rangeInfo->getCount());
                 }
                 
-                import('core.Kernel.VirtualArrayIterator');
+                
                 $iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
                 
                 $templateMgr->assign('articles', $iterator);
@@ -144,7 +144,7 @@ class EruditExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportArticle($journal, $issue, $article, $galley, $outputFile = null): bool {
-        $this->import('EruditExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
         
         // Static call as per recent refactoring

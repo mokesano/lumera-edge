@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Reviewer\SubmissionReviewHandler;
+Lumera\Pages\Reviewer\SubmissionCommentsHandler;
+Lumera\Pages\Reviewer\ReviewerHandler;
 namespace App\Pages\Reviewer;
-
 
 /**
  * @defgroup pages_reviewer
@@ -41,7 +43,7 @@ switch ($op) {
     case 'editReviewFormResponse':
     case 'saveReviewFormResponse':
         define('HANDLER_CLASS', \App\Pages\Reviewer\SubmissionReviewHandler::class);
-        import('app.Pages.Reviewer.SubmissionReviewHandler');
+        
         break;
     //
     // Submission Comments
@@ -52,10 +54,10 @@ switch ($op) {
     case 'saveComment':
     case 'deleteComment':
         define('HANDLER_CLASS', \App\Pages\Reviewer\SubmissionCommentsHandler::class);
-        import('app.Pages.Reviewer.SubmissionCommentsHandler');
+        
         break;
     case 'index':
         define('HANDLER_CLASS', \App\Pages\Reviewer\ReviewerHandler::class);
-        import('app.Pages.Reviewer.ReviewerHandler');
+        
         break;
 }

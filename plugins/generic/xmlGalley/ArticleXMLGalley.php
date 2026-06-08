@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Article\ArticleHTMLGalley;
+Lumera\Modules\Article\SuppFileDAO;
+Lumera\Modules\File\JournalFileManager;
+Lumera\Modules\File\FileManager;
+Lumera\Modules\File\TemporaryFileManager;
 namespace Lumera\Plugins\Generic\xmlGalley;
 
 /**
@@ -16,9 +21,6 @@ namespace Lumera\Plugins\Generic\xmlGalley;
  * @brief Article XML galley model object
  * MODERNIZED FOR SCHOLARWIZDAM FORK (PHP 7/8 Ready)
  */
-
-import('core.Modules.article.ArticleHTMLGalley');
-import('core.Modules.article.SuppFileDAO');
 
 class ArticleXMLGalley extends ArticleHTMLGalley {
     
@@ -122,7 +124,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
                     break;
                 case 'custom';
                     // get file path for custom XSL sheet
-                    import('core.Modules.file.JournalFileManager');
+                    
                     $journalFileManager = new JournalFileManager($journal);
                     $xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getId(), 'customXSL');
                     break;
@@ -203,7 +205,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
      * @return boolean
      */
     public function viewFileContents() {
-        import('core.Modules.file.FileManager');
+        
         $fileManager = new FileManager();
         $pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace($fileManager->parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
@@ -243,7 +245,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
             }
 
             // create temporary FO file and write the contents
-            import('core.Modules.file.TemporaryFileManager');
+            
             $temporaryFileManager = new TemporaryFileManager();
             $tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getId() . '.fo';
 

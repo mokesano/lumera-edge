@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLNode;
 namespace Lumera\Modules\xml;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\xml;
  * @brief Extension of XMLNode for a simple DOM-style comment.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
-
-import ('core.Modules.xml.XMLNode');
 
 class XMLComment extends XMLNode {
 

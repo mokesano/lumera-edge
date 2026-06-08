@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\File\JournalFileManager;
 namespace Lumera\Plugins\Generic\staticPages;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Plugins\Generic\staticPages;
  * Form for journal managers to view and modify static pages
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-
-import('core.Modules.form.Form');
 
 class StaticPagesEditForm extends Form {
     
@@ -115,7 +114,7 @@ class StaticPagesEditForm extends Form {
         // Enable TinyMCE with specific params
         $additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 
-        import('core.Modules.file.JournalFileManager');
+        
         $publicFileManager = new PublicFileManager();
         $tinyMCE_script = '
         <script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
@@ -168,7 +167,7 @@ class StaticPagesEditForm extends Form {
         $plugin = $this->plugin;
         $journalId = $this->journalId;
 
-        $plugin->import('StaticPage');
+        $plugin->
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         if (isset($this->staticPageId)) {
             $staticPage = $staticPagesDao->getStaticPage($this->staticPageId);

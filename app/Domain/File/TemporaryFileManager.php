@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\CoreTemporaryFileManager;
 namespace App\Domain\File;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\File;
  *
  * @brief Class defining operations for temporary file management.
  */
-
-import('app.Domain.File.CoreTemporaryFileManager');
 
 class TemporaryFileManager extends CoreTemporaryFileManager {
     

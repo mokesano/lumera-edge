@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
 namespace Lumera\Plugins\Generic\usageStats;
 
 /**
@@ -16,9 +17,6 @@ namespace Lumera\Plugins\Generic\usageStats;
  * @brief Operations for retrieving and adding temporary usage statistics records.
  * MODERNIZED FOR PHP 7.4+ (Fork Version)
  */
-
-
-import('core.Modules.db.DAO');
 
 class UsageStatsTemporaryRecordDAO extends DAO {
 
@@ -144,7 +142,6 @@ class UsageStatsTemporaryRecordDAO extends DAO {
             array((int) $assocType, (int) $assocId, (int) $time, $loadId)
         );
     }
-
 
     //
     // Protected helper methods.

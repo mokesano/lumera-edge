@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationLookup\Crossref\CoreCrossrefCitationLookupPlugin;
 /**
  * @defgroup plugins_citationLookup_crossref
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief CrossRef citation database connector plug-in.
  */
-
-import('core.Modules.plugins.citationLookup.crossref.CoreCrossrefCitationLookupPlugin');
 
 class CrossrefCitationLookupPlugin extends CoreCrossrefCitationLookupPlugin {
     

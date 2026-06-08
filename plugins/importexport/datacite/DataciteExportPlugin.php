@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Datacite\Classes\DOIExportPlugin;
+Lumera\Kernel\VirtualArrayIterator;
+Lumera\Modules\DataciteExportDom;
 namespace Lumera\Plugins\Importexport\datacite;
 
 /**
@@ -17,9 +20,8 @@ namespace Lumera\Plugins\Importexport\datacite;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-
 if (!class_exists('DOIExportPlugin')) { // Bug #7848
-    import('plugins.importexport.datacite.classes.DOIExportPlugin');
+    
 }
 
 // DataCite API
@@ -75,7 +77,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
     public function getDescription(): string {
         return __('plugins.importexport.datacite.description');
     }
-
 
     //
     // Implement template methods from DOIExportPlugin
@@ -173,7 +174,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
         unset($suppFiles);
 
         // Instantiate supp file iterator.
-        import('core.Kernel.VirtualArrayIterator');
+        
         $iterator = new VirtualArrayIterator($suppFileData, $totalSuppFiles, $rangeInfo->getPage(), $rangeInfo->getCount());
 
         // Prepare and display the supp file template.
@@ -190,7 +191,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
         // Export objects one by one (DataCite does not allow
         // multiple objects per file).
-        $this->import('core.Modules.DataciteExportDom');
+        $this->
         $exportFiles = [];
         foreach($objects as $object) {
             // Generate the export XML.
@@ -332,7 +333,6 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
         return false;
     }
-
 
     //
     // Private helper methods

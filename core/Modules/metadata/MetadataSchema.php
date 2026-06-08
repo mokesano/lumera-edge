@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataProperty;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -61,8 +62,6 @@ namespace Lumera\Modules\metadata;
  * schemas in the database for higher flexibility and easier run-time configuration/
  * installation of new schemas.
  */
-
-import('core.Modules.metadata.MetadataProperty');
 
 class MetadataSchema {
     /** @var array */

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Issue\IssueHandler;
 namespace App\Pages\Issue;
 
 /**
@@ -29,6 +30,6 @@ switch ($op) {
     case 'viewFile':
     case 'download':
         define('HANDLER_CLASS', \App\Pages\Issue\IssueHandler::class);
-        import('app.Pages.Issue.IssueHandler');
+        
         break;
 }

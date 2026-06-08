@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Plugin;
 namespace Lumera\Modules\plugins\citationParser\paracite;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\plugins\citationParser\paracite;
  * - PHP 8.1+ Strict Compliance
  * - Explicit Visibility & Return Types
  */
-
-import('core.Modules.plugins.Plugin');
 
 class CoreParaciteCitationParserPlugin extends Plugin {
     

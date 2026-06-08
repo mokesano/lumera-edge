@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Security\Role;
+Lumera\Domain\Security\Hashing;
 namespace App\Domain\Security;
 
 /**
@@ -16,9 +18,6 @@ namespace App\Domain\Security;
  * @brief Class providing user validation/authentication operations.
  * [WIZDAM EDITION] Auto-Migrate Legacy Passwords to Bcrypt
  */
-
-import('app.Domain.Security.Role');
-import('app.Domain.Security.Hashing');
 
 define('IMPLICIT_AUTH_OPTIONAL', 'optional');
 

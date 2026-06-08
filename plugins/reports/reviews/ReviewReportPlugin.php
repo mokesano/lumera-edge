@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ReportPlugin;
+Lumera\Modules\Submission\ReviewAssignment\ReviewAssignment;
 /**
  * @file plugins/reports/reviews/ReviewReportPlugin.inc.php
  *
@@ -14,8 +16,6 @@ declare(strict_types=1);
  * @brief Review report plugin
  */
 
-import('core.Modules.plugins.ReportPlugin');
-
 class ReviewReportPlugin extends ReportPlugin {
     
     /**
@@ -28,7 +28,7 @@ class ReviewReportPlugin extends ReportPlugin {
     public function register(string $category, string $path, $mainContextId = null): bool {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && Config::getVar('general', 'installed')) {
-            $this->import('ReviewReportDAO');
+            $this->
             $reviewReportDAO = new ReviewReportDAO();
             DAORegistry::registerDAO('ReviewReportDAO', $reviewReportDAO);
         }
@@ -89,7 +89,7 @@ class ReviewReportPlugin extends ReportPlugin {
 
         $yesnoMessages = [0 => __('common.no'), 1 => __('common.yes')];
 
-        import('core.Modules.submission.reviewAssignment.ReviewAssignment');
+        
         $recommendations = ReviewAssignment::getReviewerRecommendationOptions();
 
         $columns = [

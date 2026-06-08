@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataSchema;
 namespace Lumera\Modules\plugins\metadata\mods34\schema;
 
 /**
@@ -34,9 +35,6 @@ namespace Lumera\Modules\plugins\metadata\mods34\schema;
  * description.
  */
 
-
-import('core.Modules.metadata.MetadataSchema');
-
 class Mods34NameSchema extends MetadataSchema {
     
     /**
@@ -50,7 +48,6 @@ class Mods34NameSchema extends MetadataSchema {
             'core.Modules.plugins.metadata.mods34.schema.Mods34NameSchema',
             [ASSOC_TYPE_AUTHOR, ASSOC_TYPE_EDITOR]
         );
-
 
         // The type attribute can take the following values: personal,
         // corporate and conference. This is a required attribute.

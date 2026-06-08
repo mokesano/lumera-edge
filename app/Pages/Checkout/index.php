@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Checkout\CheckoutHandler;
 namespace App\Pages\Checkout;
 
 /**
@@ -27,6 +28,6 @@ switch ($op) {
     case 'finalize':
     case 'updateCartAjax':
         define('HANDLER_CLASS', \App\Pages\Checkout\CheckoutHandler::class);
-        import('app.Pages.Checkout.CheckoutHandler');
+        
         break;
 }

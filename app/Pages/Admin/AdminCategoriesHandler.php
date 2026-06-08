@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Admin\AdminHandler;
+Lumera\Kernel\ArrayItemIterator;
+Lumera\Domain\Journal\Categories\CategoryForm;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for changing admin's category list.
  */
-
-import('app.Pages.admin.AdminHandler');
 
 class AdminCategoriesHandler extends AdminHandler {
     
@@ -62,7 +63,7 @@ class AdminCategoriesHandler extends AdminHandler {
         // Unused variable removed: $categoryEntryDao
 
         $categoriesArray = $categoryDao->getCategories();
-        import('core.Kernel.ArrayItemIterator');
+        
         $categories = ArrayItemIterator::fromRangeInfo($categoriesArray, $rangeInfo);
 
         $templateMgr = TemplateManager::getManager();
@@ -161,7 +162,7 @@ class AdminCategoriesHandler extends AdminHandler {
         $this->validate($request, $categoryId);
 
         $this->setupTemplate($request, $this->category, true);
-        import('app.Domain.Journal.categories.CategoryForm');
+        
 
         $templateMgr = TemplateManager::getManager();
         $templateMgr->assign('pageTitle',
@@ -206,7 +207,7 @@ class AdminCategoriesHandler extends AdminHandler {
         }
         $this->setupTemplate($request, $category);
 
-        import('app.Domain.Journal.categories.CategoryForm');
+        
 
         $categoryForm = new CategoryForm($category);
         $categoryForm->readInputData();

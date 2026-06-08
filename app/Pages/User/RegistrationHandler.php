@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\User\Form\RegistrationForm;
+Lumera\Domain\Security\AccessKeyManager;
 namespace App\Pages\User;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\User;
  *
  * @brief Handle requests for user registration.
  */
-
-import('app.Pages.user.UserHandler');
 
 class RegistrationHandler extends UserHandler {
     
@@ -67,7 +68,7 @@ class RegistrationHandler extends UserHandler {
         $journal = $request->getJournal();
 
         if ($journal != null) {
-            import('app.Domain.User.form.RegistrationForm');
+            
 
             $regForm = new RegistrationForm();
             if ($regForm->isLocaleResubmit()) {
@@ -110,7 +111,7 @@ class RegistrationHandler extends UserHandler {
 
         // [WIZDAM FIX] Validasi token security dengan konteks register
         if (!$this->_validateSecurityTokens($request, 'register')) {
-            import('app.Domain.User.form.RegistrationForm');
+            
             $templateMgr = TemplateManager::getManager();
             $this->_assignSecurityVariables($templateMgr, 'register');
             $regForm = new RegistrationForm();
@@ -234,7 +235,7 @@ class RegistrationHandler extends UserHandler {
         if (!$user) $request->redirect(null, 'login');
 
         // Checks user & token
-        import('app.Domain.Security.AccessKeyManager');
+        
         $accessKeyManager = new AccessKeyManager();
         $accessKeyHash = AccessKeyManager::generateKeyHash($accessKeyCode);
         $accessKey = $accessKeyManager->validateKey(

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10JournalBookBaseSchema;
 namespace Lumera\Modules\plugins\metadata\openurl10\schema;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\plugins\metadata\openurl10\schema;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.plugins.metadata.openurl10.schema.Openurl10JournalBookBaseSchema');
 
 define('OPENURL10_GENRE_JOURNAL', 'journal');
 define('OPENURL10_GENRE_ISSUE', 'issue');

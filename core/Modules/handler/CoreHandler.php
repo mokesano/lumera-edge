@@ -1,6 +1,16 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Validation\HandlerValidator;
+Lumera\Modules\Handler\Validation\HandlerValidatorRoles;
+Lumera\Modules\Handler\Validation\HandlerValidatorCustom;
+Lumera\Modules\Security\Authorization\AuthorizationDecisionManager;
+Lumera\Modules\Security\Authorization\RestrictedSiteAccessPolicy;
+Lumera\Modules\Security\Authorization\HttpsPolicy;
+Lumera\Modules\Security\Authorization\UserRolesRequiredPolicy;
+Lumera\Modules\Validation\ValidatorCSRF;
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\Db\DBResultRange;
 namespace Lumera\Modules\handler;
 
 /**
@@ -18,9 +28,6 @@ namespace Lumera\Modules\handler;
  */
 
 // FIXME: remove these import statements - handler validators are deprecated.
-import('core.Modules.handler.validation.HandlerValidator');
-import('core.Modules.handler.validation.HandlerValidatorRoles');
-import('core.Modules.handler.validation.HandlerValidatorCustom');
 
 class CoreHandler {
     
@@ -78,7 +85,6 @@ class CoreHandler {
         call_user_func_array([$this, '__construct'], $args);
     }
 
-
     //
     // [WIZDAM] New Helper Methods
     //
@@ -94,7 +100,6 @@ class CoreHandler {
         $this->_request = Application::get()->getRequest();
         return $this->_request;
     }
-
 
     //
     // Setters and Getters
@@ -171,7 +176,7 @@ class CoreHandler {
      */
     public function addPolicy($authorizationPolicy, $addToTop = false) {
         if (is_null($this->_authorizationDecisionManager)) {
-            import('core.Modules.security.authorization.AuthorizationDecisionManager');
+            
             $this->_authorizationDecisionManager = new AuthorizationDecisionManager();
         }
         $this->_authorizationDecisionManager->addPolicy($authorizationPolicy, $addToTop);
@@ -257,18 +262,18 @@ class CoreHandler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('core.Modules.security.authorization.RestrictedSiteAccessPolicy');
+        
         $this->addPolicy(new RestrictedSiteAccessPolicy($request), true);
 
         if ($this->requireSSL()) {
-            import('core.Modules.security.authorization.HttpsPolicy');
+            
             $this->addPolicy(new HttpsPolicy($request), true);
         }
 
         if (!defined('SESSION_DISABLE_INIT')) {
             $user = $request->getUser();
             if (is_a($user, 'User')) { // Kept is_a for broader compatibility momentarily
-                import('core.Modules.security.authorization.UserRolesRequiredPolicy');
+                
                 $this->addPolicy(new UserRolesRequiredPolicy($request), true);
             }
         }
@@ -311,7 +316,7 @@ class CoreHandler {
             $exemptedOps = ['callback', 'webhook']; 
 
             if (!in_array($op, $exemptedOps)) {
-                import('core.Modules.validation.ValidatorCSRF'); 
+                 
                 
                 // Ambil token dari request menggunakan konstanta FIELD_NAME agar dinamis dan konsisten
                 $clientToken = $request->getUserVar(ValidatorCSRF::FIELD_NAME);
@@ -333,7 +338,7 @@ class CoreHandler {
                     $session->setSessionVar('wizdam_old_input', $userInput);
 
                     // 2. Kirim notifikasi error ke UI (Notification Manager)
-                    import('core.Modules.notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $user = $request->getUser();
                     $userId = $user ? $user->getId() : 0;
@@ -429,7 +434,7 @@ class CoreHandler {
         if ($context) $count = $context->getSetting('itemsPerPage');
         if (!isset($count)) $count = Config::getVar('interface', 'items_per_page');
 
-        import('core.Modules.db.DBResultRange');
+        
 
         if (isset($count)) $returner = new DBResultRange($count, $pageNum);
         else $returner = new DBResultRange(-1, -1);
@@ -479,7 +484,7 @@ class CoreHandler {
      * @return array
      */
     public function getLoginExemptions() {
-        import('core.Modules.security.authorization.RestrictedSiteAccessPolicy');
+        
         return RestrictedSiteAccessPolicy::_getLoginExemptions();
     }
 

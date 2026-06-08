@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Oai\OAIDAO;
 namespace Lumera\Plugins\Generic\openAIRE;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\openAIRE;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.oai.OAIDAO');
 
 class OpenAIREDAO extends OAIDAO {
 

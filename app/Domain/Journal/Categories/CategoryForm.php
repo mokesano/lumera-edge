@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Journal\Categories;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Journal\Categories;
  *
  * @brief Form for site admins to create/edit categories.
  */
-
-import('core.Modules.form.Form');
 
 class CategoryForm extends Form {
 

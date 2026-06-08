@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Api\DataverseApiClient;
 namespace Lumera\Plugins\Generic\dataverse\classes\form;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\dataverse\classes\form;
  * @brief Plugin settings: select a specific Dataverse collection via Native REST API.
  * [WIZDAM EDITION] Modernized for PHP 8.4 and Dataverse Native REST API.
  */
-
-import('core.Modules.form.Form');
 
 class DataverseSelectForm extends Form {
 
@@ -62,7 +62,7 @@ class DataverseSelectForm extends Form {
      * @see Form::initData()
      */
     public function initData() {
-        $this->_plugin->import('core.Modules.api.DataverseApiClient');
+        $this->_plugin->
         $apiClient = new DataverseApiClient($this->_plugin);
         
         $dvnUri = (string) $this->_plugin->getSetting($this->_journalId, 'dvnUri');

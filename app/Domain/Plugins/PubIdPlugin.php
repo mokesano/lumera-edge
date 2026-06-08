@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Plugins\Plugin;
 namespace App\Domain\Plugins;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Domain\Plugins;
  *
  * @brief Abstract class for public identifiers plugins
  */
-
-import('app.Domain.Plugins.Plugin');
 
 class PubIdPlugin extends Plugin {
 
@@ -159,7 +158,6 @@ class PubIdPlugin extends Plugin {
                 return false;
         }
     }
-
 
     //
     // Protected template methods to be implemented by sub-classes.
@@ -590,7 +588,6 @@ class PubIdPlugin extends Plugin {
         }
         return false;
     }
-
 
     //
     // Private helper methods

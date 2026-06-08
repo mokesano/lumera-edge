@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Cache\GenericCache;
 namespace Lumera\Modules\cache;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\cache;
  * @brief Provides caching based on APCu's variable store.
  * [WIZDAM] Renamed from APCCache to APCuCache to reflect modern PHP usage.
  */
-
-import('core.Modules.cache.GenericCache');
 
 // Helper class untuk menyimpan nilai boolean false
 // (Karena apcu_fetch mengembalikan false jika gagal, kita butuh cara membedakannya)

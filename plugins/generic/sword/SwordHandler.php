@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
 namespace Lumera\Plugins\Generic\sword;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\sword;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
 
 class SwordHandler extends Handler {
     
@@ -66,7 +65,7 @@ class SwordHandler extends Handler {
         }
 
         $swordPlugin = $this->_getSwordPlugin();
-        $swordPlugin->import('AuthorDepositForm');
+        $swordPlugin->
         $authorDepositForm = new AuthorDepositForm($swordPlugin, $article);
 
         if ($save) {

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\Subscription;
+Lumera\Domain\Subscription\SubscriptionType;
 namespace App\Domain\Subscription;
-
 
 /**
  * @file app/Domain/Subscription/SubscriptionDAO.php
@@ -18,9 +19,6 @@ namespace App\Domain\Subscription;
  * @brief Abstract class for retrieving and modifying subscriptions.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.Subscription');
-import('app.Domain.Subscription.SubscriptionType');
 
 define('SUBSCRIPTION_USER',             0x01);
 define('SUBSCRIPTION_MEMBERSHIP',        0x02);

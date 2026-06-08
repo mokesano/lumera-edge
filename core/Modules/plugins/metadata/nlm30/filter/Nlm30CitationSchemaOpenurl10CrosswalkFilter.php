@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30Openurl10CrosswalkFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
 namespace Lumera\Modules\plugins\metadata\nlm30\filter;
 
 /**
@@ -22,8 +24,6 @@ namespace Lumera\Modules\plugins\metadata\nlm30\filter;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30Openurl10CrosswalkFilter');
 
 class Nlm30CitationSchemaOpenurl10CrosswalkFilter extends Nlm30Openurl10CrosswalkFilter {
     
@@ -92,7 +92,7 @@ class Nlm30CitationSchemaOpenurl10CrosswalkFilter extends Nlm30Openurl10Crosswal
         $output = new MetadataDescription($outputSchemaName, $input->getAssocType());
 
         // Transform authors
-        import('core.Modules.plugins.metadata.nlm30.filter.Nlm30NameSchemaPersonStringFilter');
+        
         $personStringFilter = new Nlm30NameSchemaPersonStringFilter();
         $authors = $input->getStatement('person-group[@person-group-type="author"]');
         if (is_array($authors) && count($authors)) {

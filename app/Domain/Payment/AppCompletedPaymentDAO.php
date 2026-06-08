@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Payment\AppCompletedPayment;
 namespace App\Domain\Payment;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Payment;
  * @brief Operations for retrieving and querying past payments
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Payment.AppCompletedPayment');
 
 class AppCompletedPaymentDAO extends DAO {
 

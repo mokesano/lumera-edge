@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Medra\Classes\DOIExportDom;
 namespace Lumera\Plugins\Importexport\medra\classes;
 
 /**
@@ -18,7 +19,7 @@ namespace Lumera\Plugins\Importexport\medra\classes;
  */
 
 if (!class_exists('DOIExportDom')) { // Bug #7848
-    import('plugins.importexport.medra.classes.DOIExportDom');
+    
 }
 
 // XML attributes
@@ -226,7 +227,6 @@ class O4DOIExportDom extends DOIExportDom {
         return $this->_exportIssuesAs == O4DOI_ISSUE_AS_WORK;
     }
 
-
     //
     // Public methods
     //
@@ -257,7 +257,6 @@ class O4DOIExportDom extends DOIExportDom {
 
         return $doc;
     }
-
 
     //
     // Implement protected template methods from DOIExportDom
@@ -334,7 +333,6 @@ class O4DOIExportDom extends DOIExportDom {
 
         return $publicationObjects;
     }
-
 
     //
     // Private helper methods

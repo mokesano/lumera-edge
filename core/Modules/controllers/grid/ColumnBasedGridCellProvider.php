@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\controllers\grid;
  * [WIZDAM EDITION] Refactored for PHP 8.x Strict Standards.
  */
 
-import('core.Modules.controllers.grid.GridCellProvider');
-
 class ColumnBasedGridCellProvider extends GridCellProvider {
     
     /**
@@ -46,7 +45,6 @@ class ColumnBasedGridCellProvider extends GridCellProvider {
         }
         self::__construct();
     }
-
 
     //
     // Implement protected template methods from GridCellProvider

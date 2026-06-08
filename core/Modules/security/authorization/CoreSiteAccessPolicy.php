@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\PolicySet;
+Lumera\Modules\Security\Authorization\RoleBasedHandlerOperationPolicy;
+Lumera\Modules\Security\Authorization\CorePublicAccessPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -18,8 +21,6 @@ namespace Lumera\Modules\security\authorization;
 
 define('SITE_ACCESS_ALL_ROLES', 0x01);
 
-import('core.Modules.security.authorization.PolicySet');
-
 class CoreSiteAccessPolicy extends PolicySet {
     /** @var CoreRequest */
     public $_request;
@@ -34,12 +35,12 @@ class CoreSiteAccessPolicy extends PolicySet {
         $siteRolePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
         
         if(is_array($roleAssignments)) {
-            import('core.Modules.security.authorization.RoleBasedHandlerOperationPolicy');
+            
             foreach($roleAssignments as $role => $operations) {
                 $siteRolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $role, $operations));
             }
         } elseif ($roleAssignments === SITE_ACCESS_ALL_ROLES) {
-            import('core.Modules.security.authorization.CorePublicAccessPolicy');
+            
             $siteRolePolicy->addPolicy(new CorePublicAccessPolicy($request, $operations));
         } else {
             fatalError('Invalid role assignments!');

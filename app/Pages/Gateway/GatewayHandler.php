@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
 namespace App\Pages\Gateway;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Gateway;
  *
  * @brief Handle external gateway requests.
  */
-
-import('app.Domain.Handler.Handler');
 
 class GatewayHandler extends Handler {
     

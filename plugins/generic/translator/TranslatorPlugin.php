@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\translator;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\translator;
  * @brief This plugin helps with translation maintenance.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class TranslatorPlugin extends GenericPlugin {
     
@@ -53,7 +52,7 @@ class TranslatorPlugin extends GenericPlugin {
         $sourceFile = $args[2];
 
         if ($page === 'translate') {
-            $this->import('TranslatorHandler');
+            $this->
             Registry::set('plugin', $this);
             define('HANDLER_CLASS', 'TranslatorHandler');
             return true;

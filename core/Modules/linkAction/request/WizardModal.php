@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\AjaxModal;
 namespace Lumera\Modules\linkAction\request;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\linkAction\request;
  * @brief A modal that contains a wizard retrieved via AJAX.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.AjaxModal');
 
 class WizardModal extends AjaxModal {
     

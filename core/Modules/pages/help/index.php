@@ -1,5 +1,6 @@
 <?php
 
+Lumera\Pages\Help\HelpHandler;
 /**
  * @defgroup pages_help
  */
@@ -23,7 +24,7 @@ switch ($op) {
 	case 'search':
 	case 'chat': // <--- WIZDAM CHATBOX ROUTE
 		define('HANDLER_CLASS', 'HelpHandler');
-		import('app.Pages.help.HelpHandler');
+		
 		break;
 }
 

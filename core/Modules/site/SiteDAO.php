@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Site\Site;
 namespace Lumera\Modules\site;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\site;
  *
  * @brief Operations for retrieving and modifying the Site object.
  */
-
-import('core.Modules.site.Site');
 
 class SiteDAO extends DAO {
     

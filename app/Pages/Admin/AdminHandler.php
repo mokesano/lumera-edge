@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Domain\Admin\Form\AboutSiteForm;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +19,6 @@ namespace App\Pages\Admin;
  *
  * @brief Handle requests for site administration functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class AdminHandler extends Handler {
     
@@ -70,7 +72,7 @@ class AdminHandler extends Handler {
         // Display a warning message if there is a new version of Wizdam available
         $newVersionAvailable = false;
         if (Config::getVar('general', 'show_upgrade_warning')) {
-            import('core.Modules.site.VersionCheck');
+            
             if ($latestVersion = VersionCheck::checkIfNewVersionExists()) {
                 $newVersionAvailable = true;
                 $templateMgr->assign('latestVersion', $latestVersion);
@@ -123,7 +125,7 @@ class AdminHandler extends Handler {
         // I will use standard call:
         // $this->setupTemplate(true); 
         
-        import('app.Domain.Admin.form.AboutSiteForm');
+        
         $form = new AboutSiteForm();
         
         if (!$request->isPost()) {
@@ -143,7 +145,7 @@ class AdminHandler extends Handler {
         // [WIZDAM] Singleton Fallback
         if (!$request) $request = Application::get()->getRequest();
         
-        import('app.Domain.Admin.form.AboutSiteForm');
+        
         $form = new AboutSiteForm();
         
         // --- PERBAIKAN ALUR LOGIKA ---
@@ -158,7 +160,7 @@ class AdminHandler extends Handler {
             $form->execute();
             
             // --- PERBAIKAN NOTIFIKASI ---
-            import('app.Domain.Notification.NotificationManager');
+            
             $notificationManager = new NotificationManager();
             
             // Parameter 1: Dapatkan ID pengguna dari request

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Sword\AppSwordDeposit;
+Lumera\Kernel\VirtualArrayIterator;
 namespace Lumera\Plugins\Generic\sword;
 
 /**
@@ -17,8 +20,6 @@ namespace Lumera\Plugins\Generic\sword;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
 
 class SwordImportExportPlugin extends ImportExportPlugin {
     
@@ -51,7 +52,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
      * the plugin will not be registered.
      */
     public function register(string $category, string $path): bool {
-        import('core.Modules.sword.AppSwordDeposit');
+        
         $success = parent::register($category, $path);
         $this->addLocaleData();
         return $success;
@@ -219,7 +220,7 @@ class SwordImportExportPlugin extends ImportExportPlugin {
                 $articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getId(), false);
                 $totalArticles = count($articleIds);
                 if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-                import('core.Kernel.VirtualArrayIterator');
+                
                 $iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
                 foreach (['swordUrl', 'swordUsername', 'swordPassword', 'depositEditorial', 'depositGalleys', 'swordDepositPoint'] as $var) {
                     $templateMgr->assign($var, Request::getUserVar($var));

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataSchema;
 namespace Lumera\Modules\plugins\metadata\dc11\schema;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\plugins\metadata\dc11\schema;
  *
  * For details see <http://dublincore.org/documents/dces/>,
  */
-
-import('core.Modules.metadata.MetadataSchema');
 
 class CoreDc11Schema extends MetadataSchema {
     

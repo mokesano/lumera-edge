@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\SectionEditor\SubmissionEditHandler;
 namespace App\Pages\SectionEditor;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\SectionEditor;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.SectionEditor.SubmissionEditHandler');
 
 class SubmissionCommentsHandler extends SectionEditorHandler {
     

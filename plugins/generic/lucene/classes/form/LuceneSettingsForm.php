@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Form\Validation\FormValidatorBoolean;
 namespace Lumera\Plugins\Generic\lucene\classes\form;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Plugins\Generic\lucene\classes\form;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.form.Form');
-import('core.Modules.form.validation.FormValidatorBoolean');
 
 // These are the first few letters of an md5 of '##placeholder##'.
 // FIXME: Any better idea how to prevent a password clash?
@@ -63,7 +62,6 @@ class LuceneSettingsForm extends Form {
         $args = func_get_args();
         call_user_func_array(array($this, '__construct'), $args);
     }
-
 
     //
     // Implement template methods from Form.
@@ -122,7 +120,6 @@ class LuceneSettingsForm extends Form {
             $plugin->updateSetting(0, $formField, $this->getData($formField), 'string');
         }
     }
-
 
     //
     // Private helper methods

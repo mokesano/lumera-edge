@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataDataObjectAdapter;
 /**
  * @file plugins/metadata/dc11/filter/Dc11SchemaArticleAdapter.inc.php
  *
@@ -17,8 +18,6 @@ declare(strict_types=1);
  * injects/extracts Dublin Core schema compliant meta-data into/from
  * an PublishedArticle object.
  */
-
-import('core.Modules.metadata.MetadataDataObjectAdapter');
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
     
@@ -160,7 +159,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
         }
         $this->_addLocalizedElements($dc11Description, 'dc:contributor', $contributors);
 
-
         // Date
         if ($article instanceof PublishedArticle) {
             if ($article->getDatePublished()) {
@@ -181,7 +179,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
         $this->_addLocalizedElements($dc11Description, 'dc:type', $types);
         $driverVersion = 'info:eu-repo/semantics/publishedVersion';
         $dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-
 
         // Format
         if ($article instanceof PublishedArticle) {

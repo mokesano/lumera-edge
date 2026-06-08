@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Signoff\Signoff;
 namespace Lumera\Modules\signoff;
 
 /**
@@ -21,8 +22,6 @@ namespace Lumera\Modules\signoff;
  * - Strict Integer Casting
  * - Null Safety
  */
-
-import('core.Modules.signoff.Signoff');
 
 class CoreSignoffDAO extends DAO {
     
@@ -433,7 +432,6 @@ class CoreSignoffDAO extends DAO {
             'SIGNOFF_SIGNOFF'
         );
     }
-
 
     //
     // Private helper methods.

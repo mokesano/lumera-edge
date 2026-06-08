@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridBodyElement;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\controllers\grid;
 
 define('GRID_ACTION_POSITION_ROW_CLICK', 'row-click');
 define('GRID_ACTION_POSITION_ROW_LEFT', 'row-left');
-
-import('core.Modules.controllers.grid.GridBodyElement');
 
 class GridRow extends GridBodyElement {
 
@@ -50,7 +49,6 @@ class GridRow extends GridBodyElement {
     /** @var string|null the row template */
     protected ?string $template = null;
 
-
     /**
      * Constructor.
      */
@@ -71,7 +69,6 @@ class GridRow extends GridBodyElement {
         }
         self::__construct();
     }
-
 
     //
     // Getters/Setters

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Modules\manager\form;
 
 /**
@@ -18,8 +19,6 @@ namespace Lumera\Modules\manager\form;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.form.Form');
 
 class CoreAnnouncementTypeForm extends Form {
     /** @var int|null the ID of the announcement type being edited */

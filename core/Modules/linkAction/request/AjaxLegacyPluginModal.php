@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\AjaxModal;
 namespace Lumera\Modules\linkAction\request;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Modules\linkAction\request;
  * FIXME After modernizing the UI of the plugins, remove this class.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.AjaxModal');
 
 class AjaxLegacyPluginModal extends AjaxModal {
     

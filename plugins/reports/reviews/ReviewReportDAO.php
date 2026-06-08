@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Article\ArticleComment;
+Lumera\Modules\Db\DBRowIterator;
 /**
  * @file plugins/reports/reviews/ReviewReportDAO.inc.php
  *
@@ -14,9 +16,6 @@ declare(strict_types=1);
  *
  * @brief Review report DAO
  */
-
-import('core.Modules.article.ArticleComment');
-import('core.Modules.db.DBRowIterator');
 
 class ReviewReportDAO extends DAO {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\sehl;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Plugins\Generic\sehl;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible - Security Optimized)
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {
     

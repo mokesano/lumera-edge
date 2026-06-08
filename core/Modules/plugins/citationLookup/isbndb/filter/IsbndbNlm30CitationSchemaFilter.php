@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Filter\FilterSetting;
 namespace Lumera\Modules\plugins\citationLookup\isbndb\filter;
 
 /**
@@ -28,9 +30,6 @@ namespace Lumera\Modules\plugins\citationLookup\isbndb\filter;
 if (!defined('ISBNDB_WEBSERVICE_URL')) {
     define('ISBNDB_WEBSERVICE_URL', 'http://isbndb.com/api/books.xml');
 }
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
-import('core.Modules.filter.FilterSetting');
 
 class IsbndbNlm30CitationSchemaFilter extends Nlm30CitationSchemaFilter {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/readingTools/ReadingToolsBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for reading tools block plugin
  * [WIZDAM EDITION] Modernized Syntax.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class ReadingToolsBlockPlugin extends BlockPlugin {
     

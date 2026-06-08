@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidatorLocale;
+Lumera\Modules\Validation\ValidatorUrl;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Modules\form\validation;
  * @brief Form validation check for URL addresses.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidatorLocale');
-import('core.Modules.validation.ValidatorUrl');
 
 class FormValidatorLocaleUrl extends FormValidatorLocale {
     

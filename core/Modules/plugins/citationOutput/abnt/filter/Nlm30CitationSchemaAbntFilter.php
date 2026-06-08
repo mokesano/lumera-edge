@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationOutputFormatFilter;
 namespace Lumera\Modules\plugins\citationOutput\abnt\filter;
 
 /**
@@ -26,8 +27,6 @@ namespace Lumera\Modules\plugins\citationOutput\abnt\filter;
  * - Explicit Type Hints
  */
 
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationOutputFormatFilter');
-
 class Nlm30CitationSchemaAbntFilter extends Nlm30CitationSchemaCitationOutputFormatFilter {
     
     /**
@@ -46,7 +45,6 @@ class Nlm30CitationSchemaAbntFilter extends Nlm30CitationSchemaCitationOutputFor
         parent::__construct($filterGroup);
     }
 
-
     //
     // Implement template methods from PersistableFilter
     //
@@ -58,7 +56,6 @@ class Nlm30CitationSchemaAbntFilter extends Nlm30CitationSchemaCitationOutputFor
     public function getClassName(): string {
         return 'core.Modules.plugins.citationOutput.abnt.filter.Nlm30CitationSchemaAbntFilter';
     }
-
 
     //
     // Implement abstract template methods from TemplateBasedFilter

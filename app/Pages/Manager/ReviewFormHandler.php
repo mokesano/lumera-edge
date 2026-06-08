@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Manager\Form\ReviewFormForm;
+Lumera\Modules\ReviewForm\ReviewFormElement;
+Lumera\Domain\Manager\Form\ReviewFormElementForm;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +19,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for review form management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class ReviewFormHandler extends ManagerHandler {
     
@@ -105,7 +107,7 @@ class ReviewFormHandler extends ManagerHandler {
                 $templateMgr->assign('pageTitle', 'manager.reviewForms.edit');
             }
 
-            import('app.Domain.Manager.form.ReviewFormForm');
+            
             $reviewFormForm = new ReviewFormForm($reviewFormId);
 
             if ($reviewFormForm->isLocaleResubmit()) {
@@ -139,7 +141,7 @@ class ReviewFormHandler extends ManagerHandler {
         }
         $this->setupTemplate(true, $reviewForm);
 
-        import('app.Domain.Manager.form.ReviewFormForm');
+        
         $reviewFormForm = new ReviewFormForm($reviewFormId);
         $reviewFormForm->readInputData();
 
@@ -392,7 +394,7 @@ class ReviewFormHandler extends ManagerHandler {
         $templateMgr->assign('unusedReviewFormTitles', $unusedReviewFormTitles);
         $templateMgr->assign('reviewFormElements', $reviewFormElements);
         $templateMgr->assign('reviewFormId', $reviewFormId);
-        import('core.Modules.reviewForm.ReviewFormElement');
+        
         $templateMgr->assign('reviewFormElementTypeOptions', ReviewFormElement::getReviewFormElementTypeOptions());
         $templateMgr->assign('helpTopicId', 'journal.managementPages.reviewForms');
         $templateMgr->display('manager/reviewForms/reviewFormElements.tpl');
@@ -436,7 +438,7 @@ class ReviewFormHandler extends ManagerHandler {
             $templateMgr->assign('pageTitle', 'manager.reviewFormElements.edit');
         }
 
-        import('app.Domain.Manager.form.ReviewFormElementForm');
+        
         $reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
         if ($reviewFormElementForm->isLocaleResubmit()) {
             $reviewFormElementForm->readInputData();
@@ -473,7 +475,7 @@ class ReviewFormHandler extends ManagerHandler {
             $request->redirect(null, null, 'reviewFormElements', [$reviewFormId]);
         }
 
-        import('app.Domain.Manager.form.ReviewFormElementForm');
+        
         $reviewFormElementForm = new ReviewFormElementForm($reviewFormId, $reviewFormElementId);
         $reviewFormElementForm->readInputData();
         $formLocale = $reviewFormElementForm->getFormLocale();

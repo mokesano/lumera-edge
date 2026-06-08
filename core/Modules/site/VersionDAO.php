@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Site\Version;
 namespace Lumera\Modules\site;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\site;
  * @brief Operations for retrieving and modifying Version objects.
  * [WIZDAM EDITION] PHP 7.4+ Compatible & Custom Logic Preserved
  */
-
-import('core.Modules.site.Version');
 
 class VersionDAO extends DAO {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Announcement\CoreAnnouncementHandler;
 namespace App\Pages\Announcement;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\Announcement;
  *
  * @brief Handle requests for public announcement functions.
  */
-
-import('app.Pages.announcement.CoreAnnouncementHandler');
 
 class AnnouncementHandler extends CoreAnnouncementHandler {
     

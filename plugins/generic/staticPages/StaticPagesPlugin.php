@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\staticPages;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\staticPages;
  * StaticPagesPlugin class
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class StaticPagesPlugin extends GenericPlugin {
 
@@ -64,7 +63,7 @@ class StaticPagesPlugin extends GenericPlugin {
     public function register(string $category, string $path): bool {
         if (parent::register($category, $path)) {
             if (\Config::getVar('general', 'installed')) {
-                $this->import('StaticPagesDAO');
+                $this->
                 $staticPagesDao = new StaticPagesDAO($this->getName());
                 DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
             }
@@ -91,7 +90,7 @@ class StaticPagesPlugin extends GenericPlugin {
         if ( $page == 'pages' ) {
             define('STATIC_PAGES_PLUGIN_NAME', $this->getName()); // Kludge
             define('HANDLER_CLASS', 'StaticPagesHandler');
-            $this->import('StaticPagesHandler');
+            $this->
             return true;
         }
         return false;
@@ -148,7 +147,7 @@ class StaticPagesPlugin extends GenericPlugin {
             case 'settings':
                 $journal = $request->getJournal();
 
-                $this->import('StaticPagesSettingsForm');
+                $this->
                 $form = new StaticPagesSettingsForm($this, $journal ? $journal->getId() : 0);
 
                 $templateMgr->assign('pageHierarchy', $pageCrumbs);
@@ -159,7 +158,7 @@ class StaticPagesPlugin extends GenericPlugin {
             case 'add':
                 $journal = $request->getJournal();
 
-                $this->import('StaticPagesEditForm');
+                $this->
 
                 $staticPageId = isset($args[0])?(int)$args[0]:null;
                 $form = new StaticPagesEditForm($this, $journal ? $journal->getId() : 0, $staticPageId);
@@ -182,7 +181,7 @@ class StaticPagesPlugin extends GenericPlugin {
             case 'save':
                 $journal = $request->getJournal();
 
-                $this->import('StaticPagesEditForm');
+                $this->
 
                 $staticPageId = isset($args[0])?(int)$args[0]:null;
                 $form = new StaticPagesEditForm($this, $journal ? $journal->getId() : 0, $staticPageId);

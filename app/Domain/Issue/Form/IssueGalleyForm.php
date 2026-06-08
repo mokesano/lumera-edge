@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\File\IssueFileManager;
 namespace App\Domain\Issue\Form;
 
 /**
@@ -21,8 +23,6 @@ namespace App\Domain\Issue\Form;
  * @brief Issue galley editing form.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.Form');
 
 class IssueGalleyForm extends Form {
     /** @var int|null the ID of the issue */
@@ -227,7 +227,7 @@ class IssueGalleyForm extends Form {
      * @return int|null the galley ID
      */
     public function execute($fileName = null) {
-        import('app.Domain.File.IssueFileManager');
+        
         $issueFileManager = new IssueFileManager($this->getIssueId());
         $galleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 

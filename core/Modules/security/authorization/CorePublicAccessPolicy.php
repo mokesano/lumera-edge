@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\HandlerOperationPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security\authorization;
  * @brief Class to control access to handler operations based on an
  * operation whitelist.
  */
-
-import('core.Modules.security.authorization.HandlerOperationPolicy');
 
 class CorePublicAccessPolicy extends HandlerOperationPolicy {
     

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Openurl10Nlm30CitationSchemaCrosswalkFilter;
+Lumera\Modules\Filter\SetFilterSetting;
 namespace Lumera\Modules\plugins\citationParser\paracite\filter;
 
 /**
@@ -38,11 +41,6 @@ namespace Lumera\Modules\plugins\citationParser\paracite\filter;
  * - Static method modernization
  */
 
-
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
-import('core.Modules.plugins.metadata.nlm30.filter.Openurl10Nlm30CitationSchemaCrosswalkFilter');
-import('core.Modules.filter.SetFilterSetting');
-
 define('CITATION_PARSER_PARACITE_STANDARD', 'Standard');
 define('CITATION_PARSER_PARACITE_CITEBASE', 'Citebase');
 define('CITATION_PARSER_PARACITE_JIAO', 'Jiao');
@@ -78,7 +76,6 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
         return $this->getData('citationModule');
     }
 
-
     //
     // Implement template methods from PersistableFilter
     //
@@ -90,7 +87,6 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
     public function getClassName(): string {
         return 'core.Modules.plugins.citationParser.paracite.filter.ParaciteRawCitationNlm30CitationSchemaFilter';
     }
-
 
     //
     // Implement template methods from Filter
@@ -303,7 +299,6 @@ class ParaciteRawCitationNlm30CitationSchemaFilter extends Nlm30CitationSchemaFi
 
         return $nlm30Description;
     }
-
 
     //
     // Private helper methods

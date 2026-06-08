@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\FilterSetting;
+Lumera\Modules\Form\Validation\FormValidatorEmail;
 namespace Lumera\Modules\filter;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\filter;
  * @brief Class that describes a configurable filter setting which
  * must be an email.
  */
-
-import('core.Modules.filter.FilterSetting');
-import('core.Modules.form.validation.FormValidatorEmail');
 
 class EmailFilterSetting extends FilterSetting {
     

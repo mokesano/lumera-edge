@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\File\JournalFileManager;
 namespace Lumera\Plugins\Generic\xmlGalley;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\xmlGalley;
  * @brief XML Galley Plugin
  * MODERNIZED FOR PHP 7.4+ & SCHOLARWIZDAM FORK
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class XMLGalleyPlugin extends GenericPlugin {
     
@@ -52,7 +52,7 @@ class XMLGalleyPlugin extends GenericPlugin {
     public function register(string $category, string $path): bool {
         if (parent::register($category, $path)) {
             if ($this->getEnabled()) {
-                $this->import('ArticleXMLGalleyDAO');
+                $this->
                 $xmlGalleyDao = new ArticleXMLGalleyDAO($this->getName());
                 DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
 
@@ -173,7 +173,7 @@ class XMLGalleyPlugin extends GenericPlugin {
      * @return ArticleXMLGalley
      */
     public function _returnXMLGalleyFromArticleGalley($galley) {
-        $this->import('ArticleXMLGalley');
+        $this->
         $articleXMLGalley = new ArticleXMLGalley($this->getName());
 
         // Create XML Galley with previous values
@@ -233,7 +233,6 @@ class XMLGalleyPlugin extends GenericPlugin {
         return false;
     }
 
-
     /**
      * Display verbs for the management interface.
      * @see Plugin::getManagementVerbs()
@@ -267,7 +266,7 @@ class XMLGalleyPlugin extends GenericPlugin {
         $templateMgr = TemplateManager::getManager();
         $templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
-        $this->import('XMLGalleySettingsForm');
+        $this->
         $form = new XMLGalleySettingsForm($this, $journal->getId());
 
         switch ($verb) {
@@ -284,7 +283,7 @@ class XMLGalleyPlugin extends GenericPlugin {
                     $xslFile = $this->getPluginPath() . '/transform/test.xsl';
 
                     // create a testing article galley object (to access the XSLT render method)
-                    $this->import('ArticleXMLGalley');
+                    $this->
                     $xmlGalley = new ArticleXMLGalley($this->getName());
 
                     // transform the XML using whatever XSLT processor we have available
@@ -312,7 +311,7 @@ class XMLGalleyPlugin extends GenericPlugin {
                 } elseif (Request::getUserVar('uploadCustomXSL')) {
                     $form->readInputData();
 
-                    import('core.Modules.file.JournalFileManager');
+                    
 
                     // if the a valid custom XSL is uploaded, process it
                     $fileManager = new JournalFileManager($journal);
@@ -350,7 +349,7 @@ class XMLGalleyPlugin extends GenericPlugin {
                 // if we are deleting an existing custom XSL sheet
                 } elseif (Request::getUserVar('deleteCustomXSL')) {
 
-                    import('core.Modules.file.JournalFileManager');
+                    
 
                     // if the a valid custom XSL is uploaded, process it
                     $fileManager = new JournalFileManager($journal);
@@ -362,7 +361,6 @@ class XMLGalleyPlugin extends GenericPlugin {
                     // update the plugin and form settings
                     $this->updateSetting($journal->getId(), 'XSLstylesheet', 'NLM');
                     $this->updateSetting($journal->getId(), 'customXSL', '');
-
 
                     $form->initData();
                     $form->display();

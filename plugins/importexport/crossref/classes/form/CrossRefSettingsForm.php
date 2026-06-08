@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Importexport\Crossref\Classes\Form\DOIExportSettingsForm;
 namespace Lumera\Plugins\Importexport\crossref\classes\form;
 
 /**
@@ -17,9 +18,8 @@ namespace Lumera\Plugins\Importexport\crossref\classes\form;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-
 if (!class_exists('DOIExportSettingsForm')) { // Bug #7848
-    import('plugins.importexport.crossref.classes.form.DOIExportSettingsForm');
+    
 }
 
 class CrossRefSettingsForm extends DOIExportSettingsForm {

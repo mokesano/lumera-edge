@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\Article;
 namespace App\Domain\Submission\Reviewer;
-
 
 /**
  * @file app/Domain/Submission/Reviewer/ReviewerSubmission.php
@@ -19,8 +19,6 @@ namespace App\Domain\Submission\Reviewer;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.Article');
 
 class ReviewerSubmission extends Article {
 

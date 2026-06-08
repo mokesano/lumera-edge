@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Rtadmin\RTAdminHandler;
+Lumera\Domain\Rt\JournalRTAdmin;
+Lumera\Domain\Rt\Form\VersionForm;
 namespace App\Pages\Rtadmin;
 
 /**
@@ -16,8 +19,7 @@ namespace App\Pages\Rtadmin;
  * @brief Handle Reading Tools administration requests -- setup section.
  */
 
-import('app.Pages.rtadmin.RTAdminHandler');
-import('app.Domain.Rt.JournalRTAdmin'); // [WIZDAM] Explicit import
+ // [WIZDAM] Explicit import
 
 class RTVersionHandler extends RTAdminHandler {
     
@@ -56,7 +58,7 @@ class RTVersionHandler extends RTAdminHandler {
         $rtDao = DAORegistry::getDAO('RTDAO');
         $journal = $request->getJournal();
 
-        import('app.Domain.Rt.form.VersionForm');
+        
         $versionForm = new VersionForm(null, $journal->getId());
 
         if (isset($args[0]) && $args[0]=='save') {
@@ -188,7 +190,7 @@ class RTVersionHandler extends RTAdminHandler {
         $version = $rtDao->getVersion($versionId, $journal->getId());
 
         if (isset($version)) {
-            import('app.Domain.Rt.form.VersionForm');
+            
             $this->setupTemplate(true, $version);
             $versionForm = new VersionForm($versionId, $journal->getId());
             $versionForm->initData();
@@ -237,7 +239,7 @@ class RTVersionHandler extends RTAdminHandler {
         $version = $rtDao->getVersion($versionId, $journal->getId());
 
         if (isset($version)) {
-            import('app.Domain.Rt.form.VersionForm');
+            
             $versionForm = new VersionForm($versionId, $journal->getId());
             $versionForm->readInputData();
             $versionForm->execute();

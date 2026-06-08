@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Domain\Payment\Form\PaymentSettingsForm;
 namespace App\Pages\Admin;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Admin;
  * 
  * @brief Handler khusus untuk Site Administrator mengelola Payment Gateway.
  */
-
-import('app.Domain.Handler.Handler');
 
 class AdminPaymentHandler extends Handler {
 
@@ -60,7 +60,7 @@ class AdminPaymentHandler extends Handler {
 
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Payment.form.PaymentSettingsForm');
+        
         $settingsForm = new PaymentSettingsForm();
         $settingsForm->initData();
 
@@ -81,7 +81,7 @@ class AdminPaymentHandler extends Handler {
 
         if (!$request) $request = Application::get()->getRequest();
 
-        import('app.Domain.Payment.form.PaymentSettingsForm');
+        
         $settingsForm = new PaymentSettingsForm();
         $settingsForm->readInputData();
 

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
 namespace Lumera\Plugins\Oaimetadataformats\nlm;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Oaimetadataformats\nlm;
  *
  * @brief NLM Journal Article metadata format plugin for OAI.
  */
-
-import('core.Modules.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_NLM extends OAIMetadataFormatPlugin {
 

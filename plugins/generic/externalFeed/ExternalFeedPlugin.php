@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\File\PublicFileManager;
+Lumera\SimplePie;
+Lumera\Kernel\CoreString;
+Lumera\Modules\Notification\NotificationManager;
 namespace Lumera\Plugins\Generic\externalFeed;
 
 /**
@@ -16,8 +21,6 @@ namespace Lumera\Plugins\Generic\externalFeed;
  * @brief ExternalFeed plugin class
  * [WIZDAM] MODERNIZED FOR PHP 8.x
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class ExternalFeedPlugin extends GenericPlugin {
     
@@ -49,7 +52,7 @@ class ExternalFeedPlugin extends GenericPlugin {
     public function register(string $category, string $path): bool {
         $success = parent::register($category, $path);
         if ($success) {
-            $this->import('ExternalFeedDAO');
+            $this->
     
             // [WIZDAM FIX] Daftarkan DAO hanya setelah aplikasi siap
             // bukan langsung instansiasi saat plugin loading
@@ -115,7 +118,7 @@ class ExternalFeedPlugin extends GenericPlugin {
         if (empty($styleSheet)) {
             return $this->getDefaultStyleSheetFile();
         } else {
-            import('core.Modules.file.PublicFileManager');
+            
             $fileManager = new PublicFileManager();
             return $fileManager->getJournalFilesPath($journalId) . '/' . $styleSheet['uploadName'];
         }
@@ -180,7 +183,7 @@ class ExternalFeedPlugin extends GenericPlugin {
         $plugins =& $args[1];
     
         if ($category === 'blocks') {
-            $this->import('ExternalFeedBlockPlugin');
+            $this->
             $blockPlugin = new ExternalFeedBlockPlugin($this->getName());
             
             // FIX: Panggil register() dulu agar pluginPath dan context terisi
@@ -236,10 +239,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 
             if (empty($requestedPage) || $requestedPage == 'index') {
                 $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
-                $this->import('simplepie.SimplePie');
+                $this->
                 
                 // PENTING: Import CoreString agar tidak error Class Not Found
-                import('core.Kernel.CoreString');
+                
 
                 $feeds = $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
                 $processedFeeds = array(); 
@@ -419,7 +422,7 @@ class ExternalFeedPlugin extends GenericPlugin {
                 $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
                 if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || ($externalFeedId == null)) {
-                    $this->import('ExternalFeedForm');
+                    $this->
 
                     if ($externalFeedId == null) {
                         $templateMgr->assign('externalFeedTitle', 'plugins.generic.externalFeed.manager.createTitle');
@@ -448,7 +451,7 @@ class ExternalFeedPlugin extends GenericPlugin {
                 $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
                 if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journalId) || $externalFeedId == null) {
-                    $this->import('ExternalFeedForm');
+                    $this->
                     $externalFeedForm = new ExternalFeedForm($this, $externalFeedId);
                     $externalFeedForm->readInputData();
 
@@ -456,7 +459,7 @@ class ExternalFeedPlugin extends GenericPlugin {
                         $externalFeedForm->execute();
                         
                         // [WIZDAM] Use NotificationManager
-                        import('core.Modules.notification.NotificationManager');
+                        
                         $notificationMgr = new NotificationManager();
                         $notificationMgr->createTrivialNotification(
                             $request->getUser()->getId(),
@@ -487,14 +490,14 @@ class ExternalFeedPlugin extends GenericPlugin {
                 }
                 return true;
             case 'settings':
-                $this->import('ExternalFeedSettingsForm');
+                $this->
                 $form = new ExternalFeedSettingsForm($this, $journal->getId());
                 if (Request::getUserVar('save')) {
                     // FIX 5: Proses form sebelum redirect
                     $form->readInputData();
                     if ($form->validate()) {
                         $form->execute();
-                        import('core.Modules.notification.NotificationManager');
+                        
                         $notificationMgr = new NotificationManager();
                         $notificationMgr->createTrivialNotification(
                             $request->getUser()->getId(),
@@ -519,7 +522,7 @@ class ExternalFeedPlugin extends GenericPlugin {
     
             case 'feeds':
             default:
-                $this->import('ExternalFeed');
+                $this->
                 $rangeInfo = Handler::getRangeInfo('feeds');
                 $externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
                 $feeds = $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\User\UserAction;
 namespace Lumera\Modules\Tools;
 
 use Lumera\Modules\CliTool\CommandLineTool;
@@ -104,7 +105,7 @@ class MergeUsers extends CommandLineTool {
         }
 
         // Both user IDs are valid. Merge the accounts.
-        import('core.Modules.user.UserAction');
+        
         // [WIZDAM] Casting IDs to int for strict safety, although DAO should handle it.
         UserAction::mergeUsers((int)$oldUserId, (int)$newUserId);
 

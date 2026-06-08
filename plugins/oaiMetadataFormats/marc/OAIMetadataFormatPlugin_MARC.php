@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
 namespace Lumera\Plugins\Oaimetadataformats\marc;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Oaimetadataformats\marc;
  * @brief MARC metadata format plugin for OAI.
  * * REFACTORED: Wizdam Edition (Fixed getEnabled fatal error)
  */
-
-import('core.Modules.plugins.OAIMetadataFormatPlugin');
 
 class OAIMetadataFormatPlugin_MARC extends OAIMetadataFormatPlugin {
     

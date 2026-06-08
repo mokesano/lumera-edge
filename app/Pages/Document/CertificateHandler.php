@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Services\CertificateService;
+Lumera\Modules\Services\PdfService;
+Lumera\Modules\Services\QrCodeService;
+Lumera\Domain\Security\SecurityHashService;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Document;
 
 /**
@@ -16,12 +22,6 @@ namespace App\Pages\Document;
  * @brief Handler untuk menampilkan dan mengunduh Sertifikat (Reviewer/Author).
  * Terintegrasi dengan Smart Router, SecurityHashService, dan Ownership Validation.
  */
-
-import('app.Domain.Handler.Handler');
-import('core.Modules.services.CertificateService');
-import('core.Modules.services.PdfService');
-import('core.Modules.services.QrCodeService');
-import('app.Domain.Security.SecurityHashService');
 
 class CertificateHandler extends Handler {
     
@@ -147,7 +147,7 @@ class CertificateHandler extends Handler {
      * @param string $localeKey The locale key for the error message
      */
     private function _redirectWithError($request, string $localeKey): void {
-        import('app.Domain.Notification.NotificationManager');
+        
         $notificationManager = new NotificationManager();
         $user = $request->getUser();
         

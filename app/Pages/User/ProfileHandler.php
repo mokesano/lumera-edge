@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\User\Form\ProfileForm;
+Lumera\Domain\User\Form\ChangePasswordForm;
 namespace App\Pages\User;
 
 /**
@@ -16,8 +19,6 @@ namespace App\Pages\User;
  * @brief Handle requests for modifying user profiles.
  * Refactored for Semantic RESTful URLs (update-profile, my-profile).
  */
-
-import('app.Pages.user.UserHandler');
 
 class ProfileHandler extends UserHandler {
     
@@ -78,7 +79,7 @@ class ProfileHandler extends UserHandler {
         $this->validate();
         $this->setupTemplate($request, true);
 
-        import('app.Domain.User.form.ProfileForm');
+        
 
         $profileForm = new ProfileForm();
         if ($profileForm->isLocaleResubmit()) {
@@ -102,7 +103,7 @@ class ProfileHandler extends UserHandler {
         $this->setupTemplate($request);
         $dataModified = false;
 
-        import('app.Domain.User.form.ProfileForm');
+        
 
         $profileForm = new ProfileForm();
         $profileForm->readInputData();
@@ -178,7 +179,7 @@ class ProfileHandler extends UserHandler {
         $this->validate();
         $this->setupTemplate($request, true);
 
-        import('app.Domain.User.form.ChangePasswordForm');
+        
 
         $passwordForm = new ChangePasswordForm();
         $passwordForm->initData();
@@ -196,7 +197,7 @@ class ProfileHandler extends UserHandler {
 
         $this->validate();
 
-        import('app.Domain.User.form.ChangePasswordForm');
+        
 
         $passwordForm = new ChangePasswordForm();
         $passwordForm->readInputData();

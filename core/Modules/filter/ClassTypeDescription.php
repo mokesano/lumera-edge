@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\TypeDescription;
+Lumera\Modules\Filter\TypeDescriptionFactory;
 namespace Lumera\Modules\filter;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Modules\filter;
  *
  * Example type identifier: 'class::core.Modules.submission.Submission'
  */
-
-import('core.Modules.filter.TypeDescription');
-import('core.Modules.filter.TypeDescriptionFactory');
 
 class ClassTypeDescription extends TypeDescription {
     /** @var string a valid class name */
@@ -58,7 +57,6 @@ class ClassTypeDescription extends TypeDescription {
         return TYPE_DESCRIPTION_NAMESPACE_CLASS;
     }
 
-
     //
     // Implement abstract template methods from TypeDescription
     //
@@ -89,7 +87,6 @@ class ClassTypeDescription extends TypeDescription {
 
         return true;
     }
-
 
     //
     // Protected helper methods

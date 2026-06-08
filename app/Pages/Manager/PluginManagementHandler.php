@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Site\Version;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Domain\File\FileManager;
+Lumera\Domain\Install\Install;
+Lumera\Domain\Install\Upgrade;
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\File\TemporaryFileManager;
 namespace App\Pages\Manager;
 
 /**
@@ -19,13 +26,6 @@ namespace App\Pages\Manager;
 define('VERSION_FILE', '/version.xml');
 define('INSTALL_FILE', '/install.xml');
 define('UPGRADE_FILE', '/upgrade.xml');
-
-import('core.Modules.site.Version');
-import('core.Modules.site.VersionCheck');
-import('app.Domain.File.FileManager');
-import('app.Domain.Install.Install');
-import('app.Domain.Install.Upgrade');
-import('app.Pages.manager.ManagerHandler');
 
 class PluginManagementHandler extends ManagerHandler {
     
@@ -166,7 +166,6 @@ class PluginManagementHandler extends ManagerHandler {
         $templateMgr->display('manager/plugins/managePlugins.tpl');
     }
 
-
     /**
      * Decompress uploaded plugin and install in the correct plugin directory.
      * @param CoreRequest $request
@@ -188,7 +187,7 @@ class PluginManagementHandler extends ManagerHandler {
         $user = null;
 
         if ((int) $request->getUserVar('uploadPlugin')) {
-            import('app.Domain.File.TemporaryFileManager');
+            
             $temporaryFileManager = new TemporaryFileManager();
             $user = $request->getUser();
         } else {

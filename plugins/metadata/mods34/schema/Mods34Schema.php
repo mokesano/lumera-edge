@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Mods34\Schema\CoreMods34Schema;
 /**
  * @defgroup plugins_metadata_mods34_schema
  */
@@ -18,8 +19,6 @@ declare(strict_types=1);
  *
  * @brief Wizdam-specific implementation of the Mods34Schema.
  */
-
-import('core.Modules.plugins.metadata.mods34.schema.CoreMods34Schema');
 
 class Mods34Schema extends CoreMods34Schema {
 

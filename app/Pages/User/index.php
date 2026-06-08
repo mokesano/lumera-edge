@@ -1,6 +1,14 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserIndexHandler;
+Lumera\Pages\User\ProfileHandler;
+Lumera\Pages\User\RegistrationHandler;
+Lumera\Pages\User\EmailHandler;
+Lumera\Pages\User\UserSubscriptionHandler;
+Lumera\Pages\User\UserGiftHandler;
+Lumera\Pages\User\UserHandler;
+Lumera\Pages\User\CoreUserHandler;
 namespace App\Pages\User;
 
 /**
@@ -25,7 +33,7 @@ switch ($op) {
     //
     case 'index':
         define('HANDLER_CLASS', \App\Pages\User\UserIndexHandler::class);
-        import('app.Pages.User.UserIndexHandler');
+        
         break;
     //
     // Profiles & Account
@@ -38,7 +46,7 @@ switch ($op) {
     case 'savePassword':       // (POST Internal)
     case 'linked-accounts':    // [WIZDAM ROUTING] KEBAB-CASE URL ---
         define('HANDLER_CLASS', \App\Pages\User\ProfileHandler::class);
-        import('app.Pages.User.ProfileHandler');
+        
         break;
     //
     // Registration
@@ -47,14 +55,14 @@ switch ($op) {
     case 'registerUser':
     case 'activateUser':
         define('HANDLER_CLASS', \App\Pages\User\RegistrationHandler::class);
-        import('app.Pages.User.RegistrationHandler');
+        
         break;
     //
     // Email
     //
     case 'email':
         define('HANDLER_CLASS', \App\Pages\User\EmailHandler::class);
-        import('app.Pages.User.EmailHandler');
+        
         break;
     //
     // Subscriptions & Payments
@@ -66,7 +74,7 @@ switch ($op) {
     case 'payRenewSubscription':
     case 'payMembership':
         define('HANDLER_CLASS', \App\Pages\User\UserSubscriptionHandler::class);
-        import('app.Pages.User.UserSubscriptionHandler');
+        
         break;
 
     //
@@ -75,7 +83,7 @@ switch ($op) {
     case 'gifts':
     case 'redeemGift':
         define('HANDLER_CLASS', \App\Pages\User\UserGiftHandler::class);
-        import('app.Pages.User.UserGiftHandler');
+        
         break;
     //
     // Core Utilities / Misc.
@@ -85,13 +93,13 @@ switch ($op) {
     case 'authorizationDenied':
     case 'viewCaptcha':
         define('HANDLER_CLASS', \App\Pages\User\UserHandler::class);
-        import('app.Pages.User.UserHandler');
+        
         break;
     //
     // Interest
     //
     case 'getInterests':
         define('HANDLER_CLASS', \App\Pages\User\CoreUserHandler::class);
-        import('app.Pages.User.CoreUserHandler');
+        
         break;
 }

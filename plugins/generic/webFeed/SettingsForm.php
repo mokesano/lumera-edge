@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\webFeed;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\webFeed;
  * @brief Form for journal managers to modify web feeds plugin settings
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class SettingsForm extends Form {
 

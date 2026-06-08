@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
 namespace Lumera\Plugins\Generic\staticPages;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\staticPages;
  * Find the content and display the appropriate page
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.handler.Handler');
 
 class StaticPagesHandler extends Handler {
     

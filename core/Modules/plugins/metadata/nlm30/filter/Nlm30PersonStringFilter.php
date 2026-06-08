@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30NameSchema;
 namespace Lumera\Modules\plugins\metadata\nlm30\filter;
 
 /**
@@ -19,10 +22,6 @@ namespace Lumera\Modules\plugins\metadata\nlm30\filter;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & Removed create_function
  */
-
-import('core.Modules.filter.Filter');
-import('core.Modules.metadata.MetadataDescription');
-import('core.Modules.plugins.metadata.nlm30.schema.Nlm30NameSchema');
 
 define('PERSON_STRING_FILTER_MULTIPLE', 0x01);
 define('PERSON_STRING_FILTER_SINGLE', 0x02);

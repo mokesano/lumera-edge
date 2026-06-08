@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\TemplateBasedFilter;
+Lumera\Modules\Filter\FilterSetting;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Modules\Citation;
  * list for a submission.
  */
 
-import('core.Modules.filter.TemplateBasedFilter');
-
 class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
     
     /**
@@ -26,7 +26,7 @@ class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
      */
     public function __construct($filterGroup) {
         // Add the persistable filter settings.
-        import('core.Modules.filter.FilterSetting');
+        
         $this->addSetting(new FilterSetting('citationOutputFilterName', null, null));
         $this->addSetting(new FilterSetting('metadataSchemaName', null, null));
 
@@ -80,7 +80,6 @@ class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
         return $citationOutputFilter;
     }
 
-
     //
     // Abstract template methods to be implemented by sub-classes.
     //
@@ -94,7 +93,6 @@ class TemplateBasedReferencesListFilter extends TemplateBasedFilter {
         assert(false);
         return []; // Fail-safe return
     }
-
 
     //
     // Implement template methods from TemplateBasedFilter

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorORCID;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Modules\form\validation;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-import('core.Modules.form.validation.FormValidator');
-
 class FormValidatorORCID extends FormValidator {
     
     /**
@@ -29,7 +29,7 @@ class FormValidatorORCID extends FormValidator {
      * @param string $message the error message for validation failures (i18n key)
      */
     public function __construct($form, $field, $type, $message) {
-        import('core.Modules.validation.ValidatorORCID');
+        
         $validator = new ValidatorORCID();
         parent::__construct($form, $field, $type, $message, $validator);
     }

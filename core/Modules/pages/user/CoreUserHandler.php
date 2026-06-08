@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\User\InterestManager;
+Lumera\Kernel\JSONMessage;
 namespace Lumera\Modules\pages\user;
 
 /**
@@ -17,8 +20,6 @@ namespace Lumera\Modules\pages\user;
  *
  * [WIZDAM EDITION] PHP 8.1+ Compatibility, Strict Types, Security Hardening
  */
-
-import('core.Modules.handler.Handler');
 
 class CoreUserHandler extends Handler {
     
@@ -55,12 +56,12 @@ class CoreUserHandler extends Handler {
         // [SECURITY FIX] Sanitasi string (Fix variabel undefined $term -> $filter)
         $filter = trim($filter);
 
-        import('core.Modules.user.InterestManager');
+        
         $interestManager = new InterestManager();
 
         $interests = $interestManager->getAllInterests($filter);
 
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage(true, $interests);
         
         header('Content-Type: application/json');
@@ -83,7 +84,7 @@ class CoreUserHandler extends Handler {
             $userDao->updateObject($user);
         }
 
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage(true);
         
         header('Content-Type: application/json');

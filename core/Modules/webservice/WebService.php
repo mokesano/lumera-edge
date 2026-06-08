@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Webservice\WebServiceRequest;
 namespace Lumera\Modules\webservice;
 
 /**
@@ -22,8 +23,6 @@ define('WEBSERVICE_MICROSECONDS_BEFORE_RETRY', 100000);
 
 define('WEBSERVICE_RESPONSE_OK', 200);
 define('WEBSERVICE_RESPONSE_CREATED', 201);
-
-import('core.Modules.webservice.WebServiceRequest');
 
 class WebService {
     /** @var string */
@@ -60,7 +59,6 @@ class WebService {
     public function getLastResponseStatus() {
         return $this->_lastResponseStatus;
     }
-
 
     //
     // Public API
@@ -110,7 +108,6 @@ class WebService {
 
         return $result;
     }
-
 
     //
     // Private helper methods

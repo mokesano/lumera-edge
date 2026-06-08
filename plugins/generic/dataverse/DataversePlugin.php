@@ -1,6 +1,16 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\DataverseStudyDAO;
+Lumera\Modules\DataverseFileDAO;
+Lumera\Modules\Api\DataverseApiClient;
+Lumera\Modules\Services\StudyService;
+Lumera\Modules\Hooks\FormHookDelegator;
+Lumera\Modules\Hooks\UIHookDelegator;
+Lumera\Modules\Form\DataverseAuthForm;
+Lumera\Modules\Form\DataverseSelectForm;
+Lumera\Modules\Form\SettingsForm;
 namespace Lumera\Plugins\Generic\dataverse;
 
 /**
@@ -16,8 +26,6 @@ namespace Lumera\Plugins\Generic\dataverse;
  * @brief Dataverse plugin class
  * [WIZDAM EDITION] Refactored into a Clean Architecture Orchestration Hub for PHP 8.4
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 // HTTP status codes
 define('DATAVERSE_PLUGIN_HTTP_STATUS_OK',         200);
@@ -58,19 +66,19 @@ class DataversePlugin extends GenericPlugin {
         
         if ($success && $this->getEnabled()) {
             // Register DAOs
-            $this->import('core.Modules.DataverseStudyDAO');
+            $this->
             $dataverseStudyDao = new DataverseStudyDAO($this->getName());
             DAORegistry::registerDAO('DataverseStudyDAO', $dataverseStudyDao);
 
-            $this->import('core.Modules.DataverseFileDAO');          
+            $this->          
             $dataverseFileDao = new DataverseFileDAO($this->getName());         
             DAORegistry::registerDAO('DataverseFileDAO', $dataverseFileDao);
 
             // [WIZDAM ARCHITECTURE] Instantiate Delegators
-            $this->import('core.Modules.api.DataverseApiClient');
-            $this->import('core.Modules.services.StudyService');
-            $this->import('core.Modules.hooks.FormHookDelegator');
-            $this->import('core.Modules.hooks.UIHookDelegator');
+            $this->
+            $this->
+            $this->
+            $this->
 
             $apiClient = new DataverseApiClient($this);
             $studyService = new StudyService($this, $apiClient);
@@ -194,7 +202,7 @@ class DataversePlugin extends GenericPlugin {
         
         switch ($verb) {
             case 'connect':
-                $this->import('core.Modules.form.DataverseAuthForm');
+                $this->
                 $form = new DataverseAuthForm($this, $journal->getId());
                 
                 if ($request->getUserVar('cancel')) {
@@ -215,7 +223,7 @@ class DataversePlugin extends GenericPlugin {
                 return true;
                 
             case 'select':
-                $this->import('core.Modules.form.DataverseSelectForm');
+                $this->
                 $form = new DataverseSelectForm($this, $journal->getId());
                 
                 if ($request->getUserVar('cancel')) {
@@ -236,7 +244,7 @@ class DataversePlugin extends GenericPlugin {
                 return true;
                 
             case 'settings':
-                $this->import('core.Modules.form.SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journal->getId());
                 
                 if ($request->getUserVar('cancel')) {

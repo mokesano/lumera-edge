@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\PublishedArticle;
 namespace App\Domain\Article;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Domain\Article;
  * @brief Operations for retrieving and modifying PublishedArticle objects.
  * [WIZDAM EDITION] PHP 7.4+ Compatible & Optimized
  */
-
-import('app.Domain.Article.PublishedArticle');
 
 class PublishedArticleDAO extends DAO {
     public $articleDao;
@@ -937,7 +936,6 @@ class PublishedArticleDAO extends DAO {
         $cache = $this->_getArticlesInSectionsCache();
         $cache->flush();
     }
-
 
     // --- Custom Functions ---
 

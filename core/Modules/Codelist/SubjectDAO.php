@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Codelist\Subject;
+Lumera\Modules\Codelist\CodelistItemDAO;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\Codelist;
  *
  * @brief Operations for retrieving and modifying Subject Subject objects.
  */
-
-import('core.Modules.Codelist.Subject');
-import('core.Modules.Codelist.CodelistItemDAO');
 
 class SubjectDAO extends CodelistItemDAO {
 

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Invoice\Invoice;
+Lumera\Modules\Invoice\InvoiceDAO;
+Lumera\Modules\Services\CartService;
 namespace App\Helpers\Services;
 
 /**
@@ -17,11 +20,8 @@ namespace App\Helpers\Services;
  */
 
 // Model & DAO tetap di domain checkout (atau sesuaikan jika ikut dipindah)
-import('core.Modules.invoice.Invoice');
-import('core.Modules.invoice.InvoiceDAO');
 
 // Import service yang relevan
-import('core.Modules.services.CartService');
 
 class InvoiceService {
     

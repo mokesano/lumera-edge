@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\ArticleFile;
+Lumera\Domain\Note\CoreNote;
 namespace App\Domain\Note;
 
 /**
@@ -18,9 +20,6 @@ namespace App\Domain\Note;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Article.ArticleFile');
-import('app.Domain.Note.CoreNote');
 
 class Note extends CoreNote {
     

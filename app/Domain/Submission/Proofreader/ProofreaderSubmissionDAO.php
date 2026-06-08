@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Proofreader\ProofreaderSubmission;
 namespace App\Domain\Submission\Proofreader;
-
 
 /**
  * @file app/Domain/Submission/Proofreader/ProofreaderSubmissionDAO.php
@@ -22,8 +22,6 @@ namespace App\Domain\Submission\Proofreader;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
-
-import('app.Domain.Submission.proofreader.ProofreaderSubmission');
 
 class ProofreaderSubmissionDAO extends DAO {
     /** Helper DAOs */

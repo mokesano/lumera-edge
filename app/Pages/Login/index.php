@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Login\LoginHandler;
 namespace App\Pages\Login;
 
 /**
@@ -41,6 +42,6 @@ switch ($op) {
     case 'google-callback':
     case 'google-unlink':
         define('HANDLER_CLASS', \App\Pages\Login\LoginHandler::class);
-        import('app.Pages.Login.LoginHandler');
+        
         break;
 }

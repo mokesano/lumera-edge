@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Db\DAO;
+Lumera\Generic\Dataverse\Classes\DataverseFile;
 namespace Lumera\Plugins\Generic\dataverse\classes;
 
 /**
@@ -17,8 +19,7 @@ namespace Lumera\Plugins\Generic\dataverse\classes;
  * [WIZDAM EDITION] Modernized for PHP 8.4 Strict Typing and Null-Safety.
  */
 
-import('core.Modules.db.DAO');
-import('plugins.generic.dataverse.classes.DataverseFile'); // [WIZDAM FIX] Import absolut untuk mencegah Null Pointer
+ // [WIZDAM FIX] Import absolut untuk mencegah Null Pointer
 
 class DataverseFileDAO extends DAO {
     

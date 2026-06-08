@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\PaymethodPlugin;
+Lumera\Modules\Mail\MailTemplate;
+Lumera\Modules\Payment\AppPaymentManager;
 namespace Lumera\Plugins\Paymethod\Paypal;
 
 /**
@@ -23,8 +26,6 @@ namespace Lumera\Plugins\Paymethod\Paypal;
  * - Backend: IPN Handler (Legacy Support)
  * - Safety: Graceful Error Handling (No WSOD)
  */
-
-import('core.Modules.plugins.PaymethodPlugin');
 
 class PayPalPlugin extends PaymethodPlugin {
 
@@ -352,7 +353,7 @@ class PayPalPlugin extends PaymethodPlugin {
         
         if (!$journal) return parent::handle($args, $request);
 
-        import('core.Modules.mail.MailTemplate');
+        
         
         $contactName = $journal->getSetting('supportName') ?: $journal->getSetting('contactName');
         $contactEmail = $journal->getSetting('supportEmail') ?: $journal->getSetting('contactEmail');
@@ -414,7 +415,7 @@ class PayPalPlugin extends PaymethodPlugin {
                             );
 
                             $queuedPaymentId = $request->getUserVar('custom');
-                            import('core.Modules.payment.AppPaymentManager');
+                            
                             $wizdamPaymentManager = new AppPaymentManager($request);
                             $queuedPayment = $wizdamPaymentManager->getQueuedPayment($queuedPaymentId);
 

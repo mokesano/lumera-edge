@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\File\FileManager;
+Lumera\Domain\Article\ArticleFile;
 namespace App\Domain\File;
 
 /**
@@ -27,9 +29,6 @@ namespace App\Domain\File;
  * [article id]/supp
  * [article id]/attachment
  */
-
-import('app.Domain.File.FileManager');
-import('app.Domain.Article.ArticleFile');
 
 class ArticleFileManager extends FileManager {
 

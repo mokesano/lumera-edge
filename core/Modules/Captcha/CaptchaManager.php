@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\FileManager;
 namespace Lumera\Modules\Captcha;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Captcha;
  *
  * @brief Class providing captcha services.
  */
-
-import('core.Modules.file.FileManager');
 
 class CaptchaManager {
     

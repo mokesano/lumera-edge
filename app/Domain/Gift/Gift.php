@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Gift\CoreGift;
 namespace App\Domain\Gift;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\Gift;
  *
  * @brief Class for an Wizdam Gift.
  */
-
-import('app.Domain.Gift.CoreGift');
 
 define('GIFT_TYPE_SUBSCRIPTION', 0x01);
 

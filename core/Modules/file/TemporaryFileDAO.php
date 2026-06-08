@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\TemporaryFile;
 namespace Lumera\Modules\file;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\file;
  *
  * @brief Operations for retrieving and modifying TemporaryFile objects.
  */
-
-import('core.Modules.file.TemporaryFile');
 
 class TemporaryFileDAO extends DAO {
     

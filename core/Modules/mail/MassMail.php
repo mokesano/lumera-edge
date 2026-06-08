@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\MailTemplate;
 namespace Lumera\Modules\mail;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\mail;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.mail.MailTemplate');
 
 class MassMail extends MailTemplate {
     /** @var callable|null */

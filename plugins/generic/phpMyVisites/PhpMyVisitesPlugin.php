@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
 namespace Lumera\Plugins\Generic\phpMyVisites;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\phpMyVisites;
  * @brief phpMyVisites plugin class
  * * MODERNIZED FOR PHP 7.4+ & Wizdam FORK
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 class PhpMyVisitesPlugin extends GenericPlugin {
     
@@ -182,7 +181,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
                 $journal = $request->getJournal();
 
                 AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_WIZDAM_MANAGER);
-                $this->import('PhpMyVisitesSettingsForm');
+                $this->
                 $form = new PhpMyVisitesSettingsForm($this, $journal->getId());
                 if (Request::getUserVar('save')) {
                     $form->readInputData();

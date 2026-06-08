@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
 namespace Lumera\Plugins\Importexport\quickSubmit;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Importexport\quickSubmit;
  *
  * @brief Quick Submit one-page submission plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
 
 class QuickSubmitPlugin extends ImportExportPlugin {
 
@@ -92,7 +91,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
         if (array_shift($args) == 'saveSubmit') {
             $this->saveSubmit($args, $request);
         } else {
-            $this->import('QuickSubmitForm');
+            $this->
             $form = new QuickSubmitForm($this, $request);
             if ($form->isLocaleResubmit()) {
                 $form->readInputData();
@@ -111,7 +110,7 @@ class QuickSubmitPlugin extends ImportExportPlugin {
     public function saveSubmit($args, $request): void {
         $templateMgr = TemplateManager::getManager();
 
-        $this->import('QuickSubmitForm');
+        $this->
         $form = new QuickSubmitForm($this, $request);
         $form->readInputData();
         $formLocale = $form->getFormLocale();

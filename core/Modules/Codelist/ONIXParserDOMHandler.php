@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLParserDOMHandler;
+Lumera\Modules\Xml\XMLNode;
 namespace Lumera\Modules\Codelist;
 
 /**
@@ -21,9 +23,6 @@ namespace Lumera\Modules\Codelist;
  *
  * Example:  <xs:simpleType name="List30">...</xs:simpleType>
  */
-
-import('core.Modules.xml.XMLParserDOMHandler');
-import('core.Modules.xml.XMLNode');
 
 class ONIXParserDOMHandler extends XMLParserDOMHandler {
 

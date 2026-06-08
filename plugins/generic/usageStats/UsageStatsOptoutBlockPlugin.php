@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 namespace Lumera\Plugins\Generic\usageStats;
 
 /**
@@ -16,13 +17,10 @@ namespace Lumera\Plugins\Generic\usageStats;
  * @brief Opt-out component.
  */
 
-import('core.Modules.plugins.BlockPlugin');
-
 class UsageStatsOptoutBlockPlugin extends BlockPlugin {
 
     /** @var string */
     public $_parentPluginName;
-
 
     /**
      * Constructor
@@ -130,7 +128,6 @@ class UsageStatsOptoutBlockPlugin extends BlockPlugin {
         return $seq;
     }
 
-
     //
     // Implement template methods from LazyLoadPlugin
     //
@@ -144,7 +141,6 @@ class UsageStatsOptoutBlockPlugin extends BlockPlugin {
         $plugin = $this->_getPlugin();
         return $plugin->getEnabled();
     }
-
 
     //
     // Implement template methods from BlockPlugin
@@ -189,7 +185,6 @@ class UsageStatsOptoutBlockPlugin extends BlockPlugin {
         $templateMgr->assign('privacyInfoUrl', $privacyInfoUrl);
         return parent::getContents($templateMgr, $request);
     }
-
 
     //
     // Private helper methods

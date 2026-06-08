@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\UserGroup;
 namespace Lumera\Modules\security;
 
 /**
@@ -19,8 +20,6 @@ namespace Lumera\Modules\security;
  * to be changed for zero- or double-context applications when user groups
  * are ported over to them.
  */
-
-import('core.Modules.security.UserGroup');
 
 class CoreUserGroupDAO extends DAO {
     /** @var UserDAO a shortcut to get the UserDAO **/
@@ -128,7 +127,6 @@ class CoreUserGroupDAO extends DAO {
     public function deleteUserGroup($userGroup) {
         return $this->deleteById($userGroup->getContextId(), $userGroup->getId());
     }
-
 
     /**
      * Delete a user group by its context id
@@ -474,7 +472,6 @@ class CoreUserGroupDAO extends DAO {
             LEFT JOIN user_user_groups uug ON (uug.user_id = u.user_id)
             LEFT JOIN user_groups ug ON (ug.user_group_id = uug.user_group_id) WHERE';
 
-
         $sql .= (isset($userGroupId) ? ' ug.user_group_id = ? ' . (isset($contextId) ? 'AND ' : '') : ' ');
         $sql .= (isset($contextId) ? ' ug.context_id = ? ' : ' ') . $searchSql;
 
@@ -599,7 +596,6 @@ class CoreUserGroupDAO extends DAO {
         }
     }
 
-
     //
     // Extra settings (not handled by rest of Dao)
     //
@@ -641,7 +637,6 @@ class CoreUserGroupDAO extends DAO {
             }
         }
     }
-
 
     /**
      * Retrieve a context setting value.

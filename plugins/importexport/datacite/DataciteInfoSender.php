@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
 namespace Lumera\Plugins\Importexport\datacite;
 
 /**
@@ -16,9 +17,6 @@ namespace Lumera\Plugins\Importexport\datacite;
  * @brief Scheduled task to register DOIs to the DataCite server.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
-
 
 class DataciteInfoSender extends ScheduledTask {
     /** @var DataciteExportPlugin */

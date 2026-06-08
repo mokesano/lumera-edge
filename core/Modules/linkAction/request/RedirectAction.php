@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\LinkActionRequest;
 namespace Lumera\Modules\linkAction\request;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\linkAction\request;
  * @brief This action request redirects to another page.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.LinkActionRequest');
 
 class RedirectAction extends LinkActionRequest {
     /** @var string The URL this action will invoke */
@@ -55,7 +54,6 @@ class RedirectAction extends LinkActionRequest {
     public function getUrl(): string {
         return $this->_url;
     }
-
 
     //
     // Overridden protected methods from LinkActionRequest

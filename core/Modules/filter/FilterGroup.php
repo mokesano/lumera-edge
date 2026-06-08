@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Kernel\DataObject;
 namespace Lumera\Modules\filter;
 
 /**
@@ -42,8 +43,6 @@ namespace Lumera\Modules\filter;
  * It can be difficult to change filter group names later as we expect community
  * contributions to certain filter groups (e.g. citation parsers).
  */
-
-import('core.Kernel.DataObject');
 
 class FilterGroup extends DataObject {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\LinkAction\Request\Modal;
 namespace Lumera\Modules\linkAction\request;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\linkAction\request;
  * @brief Class defining a simple confirmation modal either with remote action or not.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.linkAction.request.Modal');
 
 class ConfirmationModal extends Modal {
     /**

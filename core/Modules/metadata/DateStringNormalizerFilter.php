@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\Filter;
+Lumera\Modules\Validation\ValidatorDate;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\metadata;
  * @brief Filter that normalizes a date string to
  * YYYY[-MM[-DD]].
  */
-
-import('core.Modules.filter.Filter');
-import('core.Modules.validation.ValidatorDate');
 
 class DateStringNormalizerFilter extends Filter {
     

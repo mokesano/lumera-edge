@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ControlledVocab\ControlledVocabEntry;
 namespace Lumera\Modules\user;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\user;
  *
  * @brief Basic class describing a reviewer interest
  */
-
-import('core.Modules.ControlledVocab.ControlledVocabEntry');
 
 class InterestEntry extends ControlledVocabEntry {
     

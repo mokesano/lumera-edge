@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridBodyElement;
+Lumera\Modules\Controllers\Grid\ArrayGridCellProvider;
 namespace Lumera\Modules\controllers\grid;
 
 /**
@@ -23,8 +25,6 @@ namespace Lumera\Modules\controllers\grid;
 define('COLUMN_ALIGNMENT_LEFT', 'left');
 define('COLUMN_ALIGNMENT_CENTER', 'center');
 define('COLUMN_ALIGNMENT_RIGHT', 'right');
-
-import('core.Modules.controllers.grid.GridBodyElement');
 
 class GridColumn extends GridBodyElement {
     /** @var string|null the column title i18n key */
@@ -125,7 +125,7 @@ class GridColumn extends GridBodyElement {
         
         // [WIZDAM] Lazy load default provider if none exists
         if ($provider === null) {
-            import('core.Modules.controllers.grid.ArrayGridCellProvider');
+            
             $provider = new ArrayGridCellProvider();
             $this->setCellProvider($provider);
         }

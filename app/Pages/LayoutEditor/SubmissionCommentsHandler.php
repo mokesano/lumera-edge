@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\LayoutEditor\SubmissionLayoutHandler;
 namespace App\Pages\LayoutEditor;
 
 /**
@@ -15,8 +16,6 @@ namespace App\Pages\LayoutEditor;
  *
  * @brief Handle requests for submission comments.
  */
-
-import('app.Pages.LayoutEditor.SubmissionLayoutHandler');
 
 class SubmissionCommentsHandler extends LayoutEditorHandler {
     

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Submission\ReviewAssignment\CoreReviewAssignment;
+Lumera\Domain\Submission\Reviewer\ReviewerSubmission;
 namespace App\Domain\Submission\ReviewAssignment;
-
 
 /**
  * @file app/Domain/Submission/ReviewAssignment/ReviewAssignment.php
@@ -19,8 +20,6 @@ namespace App\Domain\Submission\ReviewAssignment;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.submission.reviewAssignment.CoreReviewAssignment');
 
 class ReviewAssignment extends CoreReviewAssignment {
     
@@ -94,7 +93,7 @@ class ReviewAssignment extends CoreReviewAssignment {
      */
     public static function getReviewerRecommendationOptions() {
         // Bring in reviewer constants
-        import('app.Domain.Submission.Reviewer.ReviewerSubmission');
+        
 
         static $reviewerRecommendationOptions = [
             '' => 'common.chooseOne',

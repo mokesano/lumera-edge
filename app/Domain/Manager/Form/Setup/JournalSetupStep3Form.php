@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Manager\Form\Setup\JournalSetupForm;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Manager\Form\Setup;
 
 /**
@@ -17,8 +19,6 @@ namespace App\Domain\Manager\Form\Setup;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Manager.form.setup.JournalSetupForm');
 
 class JournalSetupStep3Form extends JournalSetupForm {
     
@@ -143,7 +143,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
         $templateMgr->addJavaScript('public/js/core-library/functions/jqueryValidatorI18n.js');
 
         // Mail Logic
-        import('app.Domain.Mail.MailTemplate');
+        
         $mail = new MailTemplate('SUBMISSION_ACK');
         if ($mail->isEnabled()) {
             $templateMgr->assign('submissionAckEnabled', true);

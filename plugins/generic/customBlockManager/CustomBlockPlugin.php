@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 namespace Lumera\Plugins\Generic\customBlockManager;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Generic\customBlockManager;
  *
  * @brief Plugin to handle individual custom blocks.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class CustomBlockPlugin extends BlockPlugin {
     
@@ -171,7 +170,7 @@ class CustomBlockPlugin extends BlockPlugin {
     
         // Handle edit/save sendiri TANPA delegasi ke parent
         $journal = Request::getJournal();
-        $this->import('CustomBlockEditForm');
+        $this->
         $form = new CustomBlockEditForm($this, $journal->getId());
     
         if ($verb === 'edit') {

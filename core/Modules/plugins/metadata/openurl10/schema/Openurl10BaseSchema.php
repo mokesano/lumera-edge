@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataSchema;
 namespace Lumera\Modules\plugins\metadata\openurl10\schema;
 
 /**
@@ -23,8 +24,6 @@ namespace Lumera\Modules\plugins\metadata\openurl10\schema;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('core.Modules.metadata.MetadataSchema');
 
 class Openurl10BaseSchema extends MetadataSchema {
     

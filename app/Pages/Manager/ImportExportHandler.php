@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
 namespace App\Pages\Manager;
 
 /**
@@ -17,8 +18,6 @@ namespace App\Pages\Manager;
  */
 
 define('IMPORTEXPORT_PLUGIN_CATEGORY', 'importexport');
-
-import('app.Pages.manager.ManagerHandler');
 
 class ImportExportHandler extends ManagerHandler {
     

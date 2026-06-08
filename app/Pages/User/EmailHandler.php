@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\User\UserHandler;
+Lumera\Domain\Mail\ArticleMailTemplate;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Pages\User;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\User;
  *
  * @brief Handle requests for user emails.
  */
-
-import('app.Pages.user.UserHandler');
 
 class EmailHandler extends UserHandler {
     
@@ -143,13 +144,13 @@ class EmailHandler extends UserHandler {
             if (!$article || ($article && $article->getJournalId() !== $journal->getId())) $hasAccess = false;
 
             if ($hasAccess) {
-                import('app.Domain.Mail.ArticleMailTemplate');
+                
                 $email = new ArticleMailTemplate($articleDao->getArticle($articleId), $template);
             }
         }
 
         if ($email === null) {
-            import('app.Domain.Mail.MailTemplate');
+            
             $email = new MailTemplate($template);
         }
 

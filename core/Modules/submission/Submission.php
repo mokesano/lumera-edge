@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Mail\Mail;
 namespace Lumera\Modules\submission;
 
 /**
@@ -122,7 +123,7 @@ class Submission extends DataObject {
     public function getAuthorEmails() {
         $authors = $this->getAuthors();
 
-        import('core.Modules.mail.Mail');
+        
         $returner = array();
         foreach($authors as $author) {
             $returner[] = Mail::encodeDisplayName($author->getFullName()) . ' <' . $author->getEmail() . '>';

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Authenticate\AuthenticateHandler;
 namespace App\Pages\Authenticate;
 
 /**
@@ -27,6 +28,6 @@ switch ($op) {
     // Endpoint Sertifikat (Reviewer/Author) berdasarkan Hash-ID
     case 'certificate':
         define('HANDLER_CLASS', \App\Pages\Authenticate\AuthenticateHandler::class);
-        import('app.Pages.Authenticate.AuthenticateHandler');
+        
         break;
 }

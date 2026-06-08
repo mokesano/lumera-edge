@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\AuthPlugin;
 namespace Lumera\Modules\security;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security;
  *
  * @brief Describes an authentication source.
  */
-
-import('core.Modules.plugins.AuthPlugin');
 
 class AuthSource extends DataObject {
     

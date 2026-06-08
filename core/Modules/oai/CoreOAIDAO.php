@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Oai\OAIStruct;
+Lumera\Modules\Db\DBResultRange;
 namespace Lumera\Modules\oai;
 
 /**
@@ -12,9 +14,6 @@ namespace Lumera\Modules\oai;
  * structure for fetching OAI Records and Identifiers.
  * * REFACTORED: Wizdam Edition (PHP 7.4 - 8.x Modernization)
  */
-
-import('core.Modules.oai.OAIStruct');
-import('core.Modules.db.DBResultRange');
 
 class CoreOAIDAO extends DAO {
 

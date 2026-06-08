@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/relatedItems/RelatedItemsBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for related items block plugin
  * [WIZDAM EDITION] Modernized & Cleaned Up Dead Code
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class RelatedItemsBlockPlugin extends BlockPlugin {
     

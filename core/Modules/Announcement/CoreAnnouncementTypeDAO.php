@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Announcement\CoreAnnouncementType;
 namespace Lumera\Modules\Announcement;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\Announcement;
  *
  * @brief Operations for retrieving and modifying AnnouncementType objects.
  */
-
-import('core.Modules.Announcement.CoreAnnouncementType');
 
 class CoreAnnouncementTypeDAO extends DAO {
     
@@ -101,7 +100,6 @@ class CoreAnnouncementTypeDAO extends DAO {
 
         return $returner;
     }
-
 
     /**
      * Check if a announcement type exists with the given type id for a assoc type/id pair.

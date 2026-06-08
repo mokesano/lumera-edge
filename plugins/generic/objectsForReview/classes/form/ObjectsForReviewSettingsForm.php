@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
  * @brief Form for editors to modify objects for review plugin settings
  * [WIZDAM EDITION] Modernized. PHP 8 Safe.
  */
-
-import('core.Modules.form.Form');
 
 class ObjectsForReviewSettingsForm extends Form {
 

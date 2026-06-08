@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\ObjectForReviewAssignment;
 namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
  * @brief Object for review assignment form.
  * [WIZDAM] MODERNIZED FOR PHP 8.x compatibility.
  */
-
-import('core.Modules.form.Form');
 
 class ObjectForReviewAssignmentForm extends Form {
 
@@ -119,7 +119,7 @@ class ObjectForReviewAssignmentForm extends Form {
      */
     public function execute($object = null) {
         $ofrPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-        $ofrPlugin->import('core.Modules.ObjectForReviewAssignment');
+        $ofrPlugin->
 
         $journal = Request::getJournal();
         $journalId = $journal->getId();

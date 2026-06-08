@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Security\Authorization\Internal\JournalPolicy;
+Lumera\Modules\Security\Authorization\RoleBasedHandlerOperationPolicy;
 namespace App\Domain\Security\Authorization;
 
 /**
@@ -16,8 +18,6 @@ namespace App\Domain\Security\Authorization;
  * @brief Class to control access to Wizdam' journal setup components.
  */
 
-import('app.Domain.Security.Authorization.Internal.JournalPolicy');
-
 class AppJournalAccessPolicy extends JournalPolicy {
     
     /**
@@ -32,7 +32,7 @@ class AppJournalAccessPolicy extends JournalPolicy {
         // so we can simply add all role assignments. It's ok if
         // any of these role conditions permits access.
         $journalRolePolicy = new PolicySet(COMBINING_PERMIT_OVERRIDES);
-        import('core.Modules.security.authorization.RoleBasedHandlerOperationPolicy');
+        
         foreach($roleAssignments as $role => $operations) {
             $journalRolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $role, $operations));
         }

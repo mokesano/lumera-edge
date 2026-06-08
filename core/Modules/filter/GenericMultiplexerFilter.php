@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Filter\CompositeFilter;
 namespace Lumera\Modules\filter;
 
 /**
@@ -20,8 +21,6 @@ namespace Lumera\Modules\filter;
  * The result can then be sent to either an iterator filter or
  * to a de-multiplexer filter.
  */
-
-import('core.Modules.filter.CompositeFilter');
 
 class GenericMultiplexerFilter extends CompositeFilter {
     /**
@@ -53,7 +52,6 @@ class GenericMultiplexerFilter extends CompositeFilter {
         self::__construct($filterGroup, $displayName);
     }
 
-
     //
     // Setters and Getters
     //
@@ -75,7 +73,6 @@ class GenericMultiplexerFilter extends CompositeFilter {
         return $this->_tolerateFailures;
     }
 
-
     //
     // Implementing abstract template methods from PersistentFilter
     //
@@ -85,7 +82,6 @@ class GenericMultiplexerFilter extends CompositeFilter {
     public function getClassName() {
         return 'core.Modules.filter.GenericMultiplexerFilter';
     }
-
 
     //
     // Implementing abstract template methods from Filter

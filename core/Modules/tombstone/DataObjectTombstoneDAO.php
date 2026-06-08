@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Tombstone\DataObjectTombstone;
 namespace Lumera\Modules\tombstone;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\tombstone;
  * @brief Base class for retrieving and modifying DataObjectTombstone objects.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Critical Variable Fix)
  */
-
-import('core.Modules.tombstone.DataObjectTombstone');
 
 class DataObjectTombstoneDAO extends DAO {
     
@@ -326,7 +325,6 @@ class DataObjectTombstoneDAO extends DAO {
             }
         }
     }
-
 
     //
     // Private helper methods.

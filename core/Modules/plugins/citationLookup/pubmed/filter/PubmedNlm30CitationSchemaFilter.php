@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
+Lumera\Modules\Filter\EmailFilterSetting;
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
+Lumera\Modules\Metadata\DateStringNormalizerFilter;
 namespace Lumera\Modules\plugins\citationLookup\pubmed\filter;
 
 /**
@@ -22,11 +27,7 @@ namespace Lumera\Modules\plugins\citationLookup\pubmed\filter;
  * - Enhanced DOM safety checks
  */
 
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationSchemaFilter');
-import('core.Modules.filter.EmailFilterSetting');
-import('core.Modules.metadata.MetadataDescription');
-import('core.Modules.plugins.metadata.nlm30.filter.Nlm30NameSchemaPersonStringFilter'); // Dynamic import moved up
-import('core.Modules.metadata.DateStringNormalizerFilter');
+ // Dynamic import moved up
 
 // Define constants safely
 if (!defined('PUBMED_WEBSERVICE_ESEARCH')) {

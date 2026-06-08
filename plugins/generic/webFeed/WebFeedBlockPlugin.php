@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 namespace Lumera\Plugins\Generic\webFeed;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Plugins\Generic\webFeed;
  * @brief Class for block component of web feed plugin
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class WebFeedBlockPlugin extends BlockPlugin {
 

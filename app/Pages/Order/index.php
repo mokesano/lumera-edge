@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Order\OrderHandler;
 namespace App\Pages\Order;
 
 /**
@@ -20,6 +21,6 @@ switch ($op) {
     case 'cart':       // Menampilkan UI Keranjang Belanja
     case 'checkout':   // Memproses isi keranjang menjadi Invoice (POST)
         define('HANDLER_CLASS', \App\Pages\Order\OrderHandler::class);
-        import('app.Pages.Order.OrderHandler');
+        
         break;
 }

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\User\InterestManager;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\SectionEditor\Form;
 
 /**
@@ -20,8 +23,6 @@ namespace App\Domain\SectionEditor\Form;
  * @brief Form for section editors to create reviewers.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class CreateReviewerForm extends Form {
     /** @var int The article this form is for */
@@ -197,7 +198,7 @@ class CreateReviewerForm extends Form {
 
         // Insert the user interests
         $interests = $this->getData('interestsKeywords') ? $this->getData('interestsKeywords') : $this->getData('interestsTextOnly');
-        import('app.Domain.User.InterestManager');
+        
         $interestManager = new InterestManager();
         $interestManager->setInterestsForUser($user, $interests);
 
@@ -211,7 +212,7 @@ class CreateReviewerForm extends Form {
 
         if ($sendNotify) {
             // Send welcome email to user
-            import('app.Domain.Mail.MailTemplate');
+            
             $mail = new MailTemplate('REVIEWER_REGISTER');
             $mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
             $mail->assignParams(array('username' => $this->getData('username'), 'password' => $password, 'userFullName' => $user->getFullName()));

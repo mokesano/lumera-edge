@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Db\DBResultRange;
 /**
  * @file plugins/generic/timedView/TimedViewReportForm.inc.php
  *
@@ -10,8 +12,6 @@ declare(strict_types=1);
  *
  * @class TimedViewReportForm
  */
-
-import('core.Modules.form.Form');
 
 class TimedViewReportForm extends Form {
 
@@ -153,7 +153,7 @@ class TimedViewReportForm extends Form {
             $metricType = APP_METRIC_TYPE_COUNTER;
         }
 
-        import('core.Modules.db.DBResultRange');
+        
         $dbResultRange = new DBResultRange(STATISTICS_MAX_ROWS);
 
         $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Kernel\CoreString;
+Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Pages\Policies;
 
 /**
@@ -16,9 +19,6 @@ namespace App\Pages\Policies;
  * @brief Handle requests for policy pages.
  * @version DRY Principle, and N+1 Query Optimization.
  */
-
-import('app.Domain.Handler.Handler');
-import('core.Kernel.CoreString');
 
 class PoliciesHandler extends Handler {
 
@@ -349,7 +349,7 @@ class PoliciesHandler extends Handler {
         $templateMgr->assign('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
         $templateMgr->assign('pageTitle', 'about.sectionPolicies');
 
-        import('app.Domain.Payment.AppPaymentManager');
+        
         $paymentManager = new AppPaymentManager($request);
         $templateMgr->assign('paymentConfigured', $paymentManager->isConfigured());
 

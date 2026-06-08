@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Notification\NotificationHandler;
 /**
  * @defgroup pages_notification
  */
@@ -31,7 +32,7 @@ switch ($op) {
 	case 'unsubscribeMailList':
 	case 'fetchNotification':
 		define('HANDLER_CLASS', 'NotificationHandler');
-		import('app.Pages.notification.NotificationHandler');
+		
 		break;
 }
 

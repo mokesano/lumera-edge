@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\CorePublicAccessPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\security\authorization;
  * @brief Class to control access to handler operations based on a one time key
  * that authorizes a process to execute.
  */
-
-import('core.Modules.security.authorization.CorePublicAccessPolicy');
 
 class CoreProcessAccessPolicy extends CorePublicAccessPolicy {
     /** @var string the process authorization token */

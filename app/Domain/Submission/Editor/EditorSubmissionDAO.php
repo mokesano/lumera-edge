@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Editor\EditorSubmission;
+Lumera\Domain\Submission\Common\Action;
+Lumera\Domain\Submission\Author\AuthorSubmission;
 namespace App\Domain\Submission\Editor;
 
 /**
@@ -19,11 +22,7 @@ namespace App\Domain\Submission\Editor;
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance & HookRegistry::dispatch
  */
 
-import('app.Domain.Submission.editor.EditorSubmission');
-
 // Bring in editor decision constants
-import('app.Domain.Submission.common.Action');
-import('app.Domain.Submission.author.AuthorSubmission');
 
 class EditorSubmissionDAO extends DAO {
     public $articleDao = null;

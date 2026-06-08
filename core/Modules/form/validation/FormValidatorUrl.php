@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorUrl;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Modules\form\validation;
  * @brief Form validation check for URLs.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
-import('core.Modules.validation.ValidatorUrl');
 
 class FormValidatorUrl extends FormValidator {
     

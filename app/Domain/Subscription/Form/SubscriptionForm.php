@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @defgroup subscription_form
@@ -21,8 +22,6 @@ namespace App\Domain\Subscription\Form;
  * @brief Base form class for subscription create/edits.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('core.Modules.form.Form');
 
 class SubscriptionForm extends Form {
 
@@ -358,7 +357,7 @@ class SubscriptionForm extends Form {
             'subscriptionContactSignature' => $subscriptionContactSignature
         );
 
-        import('app.Domain.Mail.MailTemplate');
+        
         $mail = new MailTemplate($mailTemplateKey);
         $mail->setFrom($subscriptionEmail, $subscriptionName);
         $mail->addRecipient($user->getEmail(), $user->getFullName());

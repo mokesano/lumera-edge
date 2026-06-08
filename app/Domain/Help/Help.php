@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Help\CoreHelp;
+Lumera\Domain\Help\AppHelpMappingFile;
 namespace App\Domain\Help;
 
 /**
@@ -18,8 +20,6 @@ namespace App\Domain\Help;
  * * MODERNIZED FOR WIZDAM FORK
  */
 
-import('app.Domain.Help.CoreHelp');
-
 class Help extends CoreHelp {
     
     /**
@@ -27,7 +27,7 @@ class Help extends CoreHelp {
      */
     public function __construct() {
         parent::__construct();
-        import('app.Domain.Help.AppHelpMappingFile');
+        
         $mainMappingFile = new AppHelpMappingFile();
         $this->addMappingFile($mainMappingFile);
     }

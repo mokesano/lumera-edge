@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Invoice\Invoice;
+Lumera\Domain\Security\DigitalSignatureService;
+Lumera\Modules\Services\InvoiceService;
 namespace App\Helpers\Services;
 
 /**
@@ -17,8 +20,6 @@ namespace App\Helpers\Services;
  */
 
 require_once(Core::getBaseDir() . '/lib/wizdam/library/autoload.php');
-import('core.Modules.invoice.Invoice');
-import('app.Domain.Security.DigitalSignatureService');
 
 use Mpdf\Mpdf;
 use Mpdf\Output\Destination;
@@ -60,7 +61,7 @@ class PdfService {
      * @return void
      */
     public function generateInvoicePdf(Invoice $invoice, string $qrCodeBase64): void {
-        import('core.Modules.services.InvoiceService');
+        
         $invoiceService = new InvoiceService();
         $flatData = $invoiceService->getInvoiceSummary($invoice);
 

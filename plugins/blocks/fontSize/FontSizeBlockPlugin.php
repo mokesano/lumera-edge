@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/fontSize/FontSizeBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for font size block plugin
  * [WIZDAM STATUS] Legacy Feature. Consider Repurposing.
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class FontSizeBlockPlugin extends BlockPlugin {
 

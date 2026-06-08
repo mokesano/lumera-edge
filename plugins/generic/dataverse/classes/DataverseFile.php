@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Article\SuppFile;
 namespace Lumera\Plugins\Generic\dataverse\classes;
 
 /**
@@ -17,7 +18,7 @@ namespace Lumera\Plugins\Generic\dataverse\classes;
  * [WIZDAM EDITION] Modernized for PHP 8.4, Strict Typing, and Null-Safety.
  */
 
-// [WIZDAM FIX] import('core.Modules.article.SuppFile') dihapus karena tidak relevan dengan DataObject
+// [WIZDAM FIX] dihapus karena tidak relevan dengan DataObject
 
 class DataverseFile extends DataObject {
     

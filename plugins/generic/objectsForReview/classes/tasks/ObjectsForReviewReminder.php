@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ScheduledTask\ScheduledTask;
+Lumera\Modules\Mail\MailTemplate;
 namespace Lumera\Plugins\Generic\objectsForReview\classes\tasks;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Plugins\Generic\objectsForReview\classes\tasks;
  * @brief Class to perform automated reminders for object reviewers.
  * [WIZDAM EDITION] Modernized. PHP 8 Safe. Resource Optimized.
  */
-
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class ObjectsForReviewReminder extends ScheduledTask {
     
@@ -71,7 +71,7 @@ class ObjectsForReviewReminder extends ScheduledTask {
             'editorialContactSignature' => strip_tags($editor->getContactSignature())
         );
 
-        import('core.Modules.mail.MailTemplate');
+        
         $mail = new MailTemplate($emailKey);
         $mail->setFrom($editor->getEmail(), $editor->getFullName());
         $mail->addRecipient($author->getEmail(), $author->getFullName());

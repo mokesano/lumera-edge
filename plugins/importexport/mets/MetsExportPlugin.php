@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
 namespace Lumera\Plugins\Importexport\mets;
 
 /**
@@ -15,9 +17,6 @@ namespace Lumera\Plugins\Importexport\mets;
  *
  * @brief METS/MODS XML metadata export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 class MetsExportPlugin extends ImportExportPlugin {
 
@@ -139,7 +138,7 @@ class MetsExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportIssues($journal, $issues): bool {
-        $this->import('MetsExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument();
         $root = XMLCustomWriter::createElement($doc, 'METS:mets');
         XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Article\SuppFile;
 namespace App\Domain\Article;
 
 /**
@@ -21,8 +22,6 @@ namespace App\Domain\Article;
  * - Strict Integer Casting
  * - Hook Dispatch
  */
-
-import('app.Domain.Article.SuppFile');
 
 class SuppFileDAO extends DAO {
     
@@ -518,7 +517,6 @@ class SuppFileDAO extends DAO {
         );
         $this->replace('article_supp_file_settings', $updateArray, $idFields);
     }
-
 
     /**
      * Delete the public IDs of all supplementary files in a journal.

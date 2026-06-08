@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
+Lumera\Kernel\VirtualArrayIterator;
 namespace Lumera\Plugins\Importexport\pubmed;
 
 /**
@@ -15,9 +18,6 @@ namespace Lumera\Plugins\Importexport\pubmed;
  *
  * @brief PubMed/MEDLINE XML metadata export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 class PubMedExportPlugin extends ImportExportPlugin {
 
@@ -142,7 +142,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
                 if ($rangeInfo->isValid()) {
                     $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage() - 1), $rangeInfo->getCount());
                 }
-                import('core.Kernel.VirtualArrayIterator');
+                
                 $iterator = new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
                 $templateMgr->assign('articles', $iterator);
                 $templateMgr->display($this->getTemplatePath() . 'articles.tpl');
@@ -160,7 +160,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportArticles($results, $outputFile = null): bool {
-        $this->import('PubMedExportDom');
+        $this->
         
         // Instantiate the DOM helper (cannot call non-static methods statically in PHP 8)
         $domHelper = new PubMedExportDom();
@@ -199,7 +199,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
      * @return bool
      */
     public function exportIssues($journal, array $issues, $outputFile = null): bool {
-        $this->import('PubMedExportDom');
+        $this->
         
         // Instantiate the DOM helper
         $domHelper = new PubMedExportDom();

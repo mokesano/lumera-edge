@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\Metadata\Mods34\Filter\Mods34SchemaSubmissionAdapter;
 /**
  * @defgroup plugins_metadata_mods34_filter
  */
@@ -22,8 +23,6 @@ declare(strict_types=1);
  * into/from an Article or PublishedArticle object.
  * * [WIZDAM EDITION] REFACTOR: PHP 8.1+ Signature Compatibility Fix
  */
-
-import('core.Modules.plugins.metadata.mods34.filter.Mods34SchemaSubmissionAdapter');
 
 class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 

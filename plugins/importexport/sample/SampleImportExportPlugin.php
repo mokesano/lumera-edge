@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\ImportExportPlugin;
 namespace Lumera\Plugins\Importexport\sample;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Plugins\Importexport\sample;
  *
  * @brief Sample import/export plugin
  */
-
-import('core.Modules.plugins.ImportExportPlugin');
 
 class SampleImportExportPlugin extends ImportExportPlugin {
 

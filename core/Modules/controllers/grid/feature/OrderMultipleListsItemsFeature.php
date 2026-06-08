@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
 namespace Lumera\Modules\controllers\grid\feature;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\grid\feature;
  * @brief Implements multiple lists listbuilder ordering functionality.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.grid.feature.OrderItemsFeature');
 
 class OrderMultipleListsItemsFeature extends OrderItemsFeature {
 
@@ -41,7 +40,6 @@ class OrderMultipleListsItemsFeature extends OrderItemsFeature {
         self::__construct();
     }
 
-
     //
     // Extended methods from GridFeature.
     //
@@ -53,7 +51,6 @@ class OrderMultipleListsItemsFeature extends OrderItemsFeature {
     public function getJSClass(): string {
         return '$.wizdam.classes.features.OrderMultipleListsItemsFeature';
     }
-
 
     //
     // Extended methods from OrderItemsFeature.

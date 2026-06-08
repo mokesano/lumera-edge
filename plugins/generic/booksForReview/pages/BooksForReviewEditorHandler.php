@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\BookForReview;
+Lumera\Pages\Editor\EditorHandler;
+Lumera\Modules\Form\BookForReviewForm;
+Lumera\Modules\Notification\NotificationManager;
+Lumera\Modules\Form\BooksForReviewSettingsForm;
+Lumera\Modules\Security\Validation;
+Lumera\Modules\Db\DAO;
+Lumera\Modules\Mail\MailTemplate;
 namespace Lumera\Plugins\Generic\booksForReview\pages;
 
 /**
@@ -17,8 +26,6 @@ namespace Lumera\Plugins\Generic\booksForReview\pages;
  * [WIZDAM EDITION] Modernized. PHP 8 Safe. Security Hardened (XSS & Open Redirect Prevention).
  */
 
-import('core.Modules.handler.Handler');
-
 class BooksForReviewEditorHandler extends Handler {
 
     /**
@@ -33,7 +40,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         $bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
         $mode = $bfrPlugin->getSetting($journalId, 'mode');
-        $bfrPlugin->import('core.Modules.BookForReview');
+        $bfrPlugin->
         
         $searchField = null;
         $searchMatch = null;
@@ -92,8 +99,7 @@ class BooksForReviewEditorHandler extends Handler {
                 $template = 'booksForReviewAll.tpl';
         }
 
-
-        import('app.Pages.editor.EditorHandler');
+        
         $user = $request->getUser();
         $filterEditorOptions = array(
             FILTER_EDITOR_ALL => AppLocale::Translate('editor.allEditors'),
@@ -194,7 +200,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         // Ensure book for review is valid and for this journal
         if (($bookId != null && $bfrDao->getBookForReviewJournalId($bookId) == $journalId) || ($bookId == null)) {
-            $bfrPlugin->import('core.Modules.form.BookForReviewForm');
+            $bfrPlugin->
 
             $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
             $journalSettings = $journalSettingsDao->getJournalSettings($journalId);
@@ -227,7 +233,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         $bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
         $mode = $bfrPlugin->getSetting($journalId, 'mode');
-        $bfrPlugin->import('core.Modules.form.BookForReviewForm');
+        $bfrPlugin->
         
         // [SECURITY FIX] Amankan 'bookId' dengan trim() dan (int)
         $bookId = (int) trim($request->getUserVar('bookId'));
@@ -296,7 +302,7 @@ class BooksForReviewEditorHandler extends Handler {
                 }
                 
                 $user = $request->getUser();
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), $notificationType);
                 
@@ -364,7 +370,7 @@ class BooksForReviewEditorHandler extends Handler {
             if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
                 $bfrDao->deleteBookForReviewById($bookId);
                 $user = $request->getUser();
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_DELETED);
             }
@@ -383,7 +389,7 @@ class BooksForReviewEditorHandler extends Handler {
         $journalId = $journal->getId();
 
         $bfrPlugin = PluginRegistry::getPlugin('generic', BOOKS_FOR_REVIEW_PLUGIN_NAME);
-        $bfrPlugin->import('core.Modules.form.BooksForReviewSettingsForm');
+        $bfrPlugin->
         $templateMgr = TemplateManager::getManager();
 
         $form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
@@ -401,7 +407,7 @@ class BooksForReviewEditorHandler extends Handler {
             if ($form->validate()) {
                 $form->execute();
                 $user = $request->getUser();
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED);
 
@@ -497,7 +503,7 @@ class BooksForReviewEditorHandler extends Handler {
         // [SECURITY FIX] Amankan output 'searchInitial'
         $templateMgr->assign('searchInitial', htmlspecialchars($searchInitial, ENT_QUOTES, 'UTF-8'));
 
-        import('core.Modules.security.Validation');
+        
         $templateMgr->assign('isJournalManager', Validation::isJournalManager());
 
         $templateMgr->assign('fieldOptions', Array(
@@ -571,7 +577,7 @@ class BooksForReviewEditorHandler extends Handler {
         $editorId = $user->getId();
         $rangeInfo = Handler::getRangeInfo('submissions');
 
-        import('core.Modules.db.DAO');
+        
         $submissions = $editorSubmissionDao->getEditorSubmissions(
             $journalId,
             0,
@@ -645,7 +651,7 @@ class BooksForReviewEditorHandler extends Handler {
                 $bfrDao->updateObject($book);
                 $user = $request->getUser();
 
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED);
             }
@@ -707,7 +713,7 @@ class BooksForReviewEditorHandler extends Handler {
             // Ensure user is an author for this journal
             $roleDao = DAORegistry::getDAO('RoleDAO');
             if ($roleDao->userHasRole($journalId, $userId, ROLE_ID_AUTHOR)) {
-                import('core.Modules.mail.MailTemplate');
+                
                 $email = new MailTemplate('BFR_BOOK_ASSIGNED');
                 // [SECURITY FIX] Amankan flag boolean 'send'
                 $send = (int) trim($request->getUserVar('send'));
@@ -728,7 +734,7 @@ class BooksForReviewEditorHandler extends Handler {
                     $email->send();
                     $user = $request->getUser();
 
-                    import('core.Modules.notification.NotificationManager');
+                    
                     $notificationManager = new NotificationManager();
                     $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED);
 
@@ -801,7 +807,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         // Ensure book for review is for this journal
         if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-            import('core.Modules.mail.MailTemplate');
+            
             $email = new MailTemplate('BFR_BOOK_DENIED');
             
             // [SECURITY FIX] Amankan flag boolean 'send'
@@ -820,7 +826,7 @@ class BooksForReviewEditorHandler extends Handler {
                 $email->send();
                 $user = $request->getUser();
 
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED);
 
@@ -881,7 +887,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         // Ensure book for review is for this journal
         if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-            import('core.Modules.mail.MailTemplate');
+            
             $email = new MailTemplate('BFR_BOOK_MAILED');
             
             // [SECURITY FIX] Amankan flag boolean 'send'
@@ -899,7 +905,7 @@ class BooksForReviewEditorHandler extends Handler {
                 $email->send();
                 $user = $request->getUser();
 
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_MAILED);
 
@@ -973,7 +979,7 @@ class BooksForReviewEditorHandler extends Handler {
 
         // Ensure book for review is for this journal
         if ($bfrDao->getBookForReviewJournalId($bookId) == $journalId) {
-            import('core.Modules.mail.MailTemplate');
+            
             $email = new MailTemplate('BFR_REVIEWER_REMOVED');
             
             // [SECURITY FIX] Amankan flag boolean 'send'
@@ -997,7 +1003,7 @@ class BooksForReviewEditorHandler extends Handler {
                 $email->send();
                 $user = $request->getUser();
 
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED);
 

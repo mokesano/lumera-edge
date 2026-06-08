@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
+Lumera\Modules\Notification\NotificationManager;
 namespace Lumera\Plugins\Generic\acron;
 
 /**
@@ -16,9 +19,6 @@ namespace Lumera\Plugins\Generic\acron;
  * @brief Removes dependency on 'cron' for scheduled tasks.
  * REFACTORED: Wizdam Edition (Throttling + Strict Standards)
  */
-
-import('core.Modules.plugins.GenericPlugin');
-import('core.Modules.scheduledTask.ScheduledTaskHelper');
 
 class AcronPlugin extends GenericPlugin {
 
@@ -159,7 +159,7 @@ class AcronPlugin extends GenericPlugin {
                 $this->updateSetting(0, 'enabled', true);
                 
                 // [WIZDAM] Gunakan NotificationManager
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->createTrivialNotification(
                     $request->getUser()->getId(),
@@ -172,7 +172,7 @@ class AcronPlugin extends GenericPlugin {
                 $this->updateSetting(0, 'enabled', false);
                 
                 // [WIZDAM] Gunakan NotificationManager
-                import('core.Modules.notification.NotificationManager');
+                
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->createTrivialNotification(
                     $request->getUser()->getId(),
@@ -372,7 +372,6 @@ class AcronPlugin extends GenericPlugin {
             $taskInstance->execute();
         }
     }
-
 
     //
     // Private helper methods.

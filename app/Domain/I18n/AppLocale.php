@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\I18n\CoreLocale;
 namespace App\Domain\I18n;
 
 /**
@@ -16,8 +17,6 @@ namespace App\Domain\I18n;
  * @brief Provides methods for loading locale data and translating strings identified by unique keys
  * WIZDAM EDITION: PHP 8 Compatibility (Static Methods)
  */
-
-import('core.Modules.i18n.CoreLocale');
 
 define('LOCALE_COMPONENT_APPLICATION_COMMON', 0x00000101);
 define('LOCALE_COMPONENT_APP_AUTHOR',         0x00000102);

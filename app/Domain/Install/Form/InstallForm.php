@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Install\Install;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Modules\Form\Form;
 namespace App\Domain\Install\Form;
 
 /**
@@ -21,10 +24,6 @@ namespace App\Domain\Install\Form;
  * @brief Form for system installation.
  * [WIZDAM EDITION] Refactored for PHP 8.x and Modern Prudent Standards
  */
-
-import('app.Domain.Install.Install');
-import('core.Modules.site.VersionCheck');
-import('core.Modules.form.Form');
 
 class InstallForm extends Form {
 

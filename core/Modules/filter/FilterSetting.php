@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
 namespace Lumera\Modules\filter;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\filter;
  *
  * @brief Class that describes a configurable filter setting.
  */
-
-import('core.Modules.form.validation.FormValidator');
 
 class FilterSetting {
     /** @var string the (internal) name of the setting */
@@ -143,7 +142,6 @@ class FilterSetting {
     public function getIsLocalized() {
         return $this->_isLocalized;
     }
-
 
     //
     // Protected Template Methods

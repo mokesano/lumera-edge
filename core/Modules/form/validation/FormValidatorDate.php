@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorDate;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Modules\form\validation;
  * @brief Form validation check that field is a date or date part.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.form.validation.FormValidator');
-import('core.Modules.validation.ValidatorDate');
 
 class FormValidatorDate extends FormValidator {
 

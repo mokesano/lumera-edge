@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\File\JournalFileManager;
+Lumera\Modules\ScheduledTask\ScheduledTask;
 namespace Lumera\Plugins\Generic\pln\classes;
 
 /**
@@ -17,9 +19,6 @@ namespace Lumera\Plugins\Generic\pln\classes;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.file.JournalFileManager');
-import('core.Modules.scheduledTask.ScheduledTask');
 
 class DepositPackage {
 

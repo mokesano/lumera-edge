@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationParser\Parscit\CoreParscitCitationParserPlugin;
 /**
  * @defgroup plugins_citationParser_parscit
  */
@@ -17,8 +18,6 @@ declare(strict_types=1);
  *
  * @brief ParsCit citation extraction connector plug-in.
  */
-
-import('core.Modules.plugins.citationParser.parscit.CoreParscitCitationParserPlugin');
 
 class ParscitCitationParserPlugin extends CoreParscitCitationParserPlugin {
     

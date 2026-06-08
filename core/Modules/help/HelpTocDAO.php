@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Help\HelpToc;
+Lumera\Modules\Help\HelpTopic;
 namespace Lumera\Modules\help;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\help;
  *
  * @brief Operations for retrieving HelpToc objects.
  */
-
-import('core.Modules.help.HelpToc');
 
 class HelpTocDAO extends XMLDAO {
     
@@ -148,7 +148,7 @@ class HelpTocDAO extends XMLDAO {
         // Add Topics
         if (isset($data['topic'])) {
             foreach ($data['topic'] as $topicData) {
-                import('core.Modules.help.HelpTopic'); // Pastikan HelpTopic di-import
+                 // Pastikan HelpTopic di-import
                 $topic = new HelpTopic();
                 $topic->setId($topicData['attributes']['id']);
                 $topic->setTitle($topicData['attributes']['title']);

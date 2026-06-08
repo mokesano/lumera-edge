@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Announcement\Announcement;
+Lumera\Domain\Announcement\CoreAnnouncementDAO;
 namespace App\Domain\Announcement;
 
 /**
@@ -21,10 +23,6 @@ namespace App\Domain\Announcement;
  * - Strict SHIM
  * - Visibility explicit
  */
-
-
-import('app.Domain.Announcement.Announcement');
-import('app.Domain.Announcement.CoreAnnouncementDAO');
 
 class AnnouncementDAO extends CoreAnnouncementDAO {
     

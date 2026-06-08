@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Xml\XMLParser;
 namespace Lumera\Modules\db;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\db;
  * @brief Class to import and export database data from an XML format.
  * See dbscripts/xml/dtd/xmldata.dtd for the XML schema used.
  */
-
-import('core.Modules.xml.XMLParser');
 
 class DBDataXMLParser {
 
@@ -232,7 +231,6 @@ class DBDataXMLParser {
     public function destroy() {
         $this->parser->destroy();
     }
-
 
     //
     // Private helper methods

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Site\VersionCheck;
+Lumera\Domain\Mail\MailTemplate;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +18,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for journal management functions.
  */
-
-import('app.Domain.Handler.Handler');
 
 class ManagerHandler extends Handler {
     
@@ -72,7 +73,7 @@ class ManagerHandler extends Handler {
         // Display a warning message if there is a new version of Wizdam available
         $newVersionAvailable = false;
         if (Config::getVar('general', 'show_upgrade_warning')) {
-            import('core.Modules.site.VersionCheck');
+            
             if ($latestVersion = VersionCheck::checkIfNewVersionExists()) {
                 $newVersionAvailable = true;
                 $templateMgr->assign('latestVersion', $latestVersion);
@@ -120,7 +121,7 @@ class ManagerHandler extends Handler {
         $journal = $request->getJournal();
         $user = $request->getUser();
 
-        import('app.Domain.Mail.MailTemplate');
+        
         
         // [SECURITY FIX] Amankan 'template' dan 'locale' (string key) trim()
         $templateKey = trim((string) ($request->getUserVar('template') ?? ''));

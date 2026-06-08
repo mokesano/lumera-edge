@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Session\Session;
 namespace Lumera\Modules\session;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\session;
  * @brief Operations for retrieving and modifying Session objects.
  * [WIZDAM EDITION] PHP 7.4+ Compatible & Hardened
  */
-
-import('core.Modules.session.Session');
 
 class SessionDAO extends DAO {
     

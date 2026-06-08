@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Validation\Validator;
 namespace Lumera\Modules\validation;
 
 /**
@@ -17,8 +18,6 @@ namespace Lumera\Modules\validation;
  * from the database.
  * * REFACTORED: Wizdam Edition (PHP 8 Constructor, No References, Visibility)
  */
-
-import('core.Modules.validation.Validator');
 
 class ValidatorControlledVocab extends Validator {
     /** @var array */

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\CitationPlugin;
 /**
  * @file plugins/citationFormats/mla/MlaCitationPlugin.inc.php
  *
@@ -13,8 +14,6 @@ declare(strict_types=1);
  *
  * @brief MLA citation format plugin
  */
-
-import('core.Modules.plugins.CitationPlugin');
 
 class MlaCitationPlugin extends CitationPlugin {
     

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Security\Authorization\AuthorizationPolicy;
 namespace Lumera\Modules\security\authorization;
 
 /**
@@ -15,8 +16,6 @@ namespace Lumera\Modules\security\authorization;
  *
  * @brief Abstract base class for policies that check for a data object from a parameter.
  */
-
-import('core.Modules.security.authorization.AuthorizationPolicy');
 
 class DataObjectRequiredPolicy extends AuthorizationPolicy {
     /** @var CoreRequest */

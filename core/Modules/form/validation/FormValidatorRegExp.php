@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorRegExp;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Modules\form\validation;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-import('core.Modules.form.validation.FormValidator');
-
 class FormValidatorRegExp extends FormValidator {
     
     /**
@@ -30,7 +30,7 @@ class FormValidatorRegExp extends FormValidator {
      * @param string $regExp the regular expression (PCRE form)
      */
     public function __construct($form, $field, $type, $message, $regExp) {
-        import('core.Modules.validation.ValidatorRegExp');
+        
         $validator = new ValidatorRegExp($regExp);
         parent::__construct($form, $field, $type, $message, $validator);
     }

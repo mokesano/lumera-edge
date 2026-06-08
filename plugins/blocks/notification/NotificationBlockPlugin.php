@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\BlockPlugin;
 /**
  * @file plugins/blocks/notification/NotificationBlockPlugin.inc.php
  *
@@ -14,8 +15,6 @@ declare(strict_types=1);
  * @brief Class for "notification" block plugin
  * [WIZDAM EDITION] Modernized Syntax Only (Safe Mode)
  */
-
-import('core.Modules.plugins.BlockPlugin');
 
 class NotificationBlockPlugin extends BlockPlugin {
     

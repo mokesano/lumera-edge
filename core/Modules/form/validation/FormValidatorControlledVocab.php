@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Validation\FormValidator;
+Lumera\Modules\Validation\ValidatorControlledVocab;
 namespace Lumera\Modules\form\validation;
 
 /**
@@ -17,8 +19,6 @@ namespace Lumera\Modules\form\validation;
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
 
-import('core.Modules.form.validation.FormValidator');
-
 class FormValidatorControlledVocab extends FormValidator {
     
     /**
@@ -32,7 +32,7 @@ class FormValidatorControlledVocab extends FormValidator {
      * @param int $assocId
      */
     public function __construct($form, $field, $type, $message, $symbolic, $assocType, $assocId) {
-        import('core.Modules.validation.ValidatorControlledVocab');
+        
         // [WIZDAM] PHP 8 Safety: Ensure IDs are integers
         $validator = new ValidatorControlledVocab($symbolic, (int)$assocType, (int)$assocId);
         parent::__construct($form, $field, $type, $message, $validator);

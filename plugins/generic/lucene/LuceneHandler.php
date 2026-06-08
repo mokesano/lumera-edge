@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Generic\Lucene\Classes\SolrWebService;
+Lumera\Kernel\JSONMessage;
+Lumera\Modules\Search\ArticleSearch;
 namespace Lumera\Plugins\Generic\lucene;
 
 /**
@@ -17,11 +21,6 @@ namespace Lumera\Plugins\Generic\lucene;
  *
  * @edition Wizdam Edition (PHP 8.x Compatible)
  */
-
-import('core.Modules.handler.Handler');
-import('plugins.generic.lucene.classes.SolrWebService');
-import('core.Kernel.JSONMessage');
-import('core.Modules.search.ArticleSearch');
 
 class LuceneHandler extends Handler {
 
@@ -56,7 +55,6 @@ class LuceneHandler extends Handler {
         // Forward calls to __construct
         $this->__construct($request);
     }
-
 
     //
     // Public operations
@@ -196,7 +194,6 @@ class LuceneHandler extends Handler {
         $request->redirect(null, 'search', 'search', null, $searchParams);
     }
 
-
     //
     // Public methods
     //
@@ -224,7 +221,6 @@ class LuceneHandler extends Handler {
         // all changed documents will eventually be indexed.
         return $batchCount;
     }
-
 
     //
     // Private helper methods

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Citation\Citation;
+Lumera\Modules\Citation\CitationListTokenizerFilter;
+Lumera\Modules\Filter\GenericMultiplexerFilter;
+Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationDemultiplexerFilter;
+Lumera\Modules\Filter\GenericSequencerFilter;
 namespace Lumera\Modules\Citation;
 
 /**
@@ -22,8 +27,6 @@ namespace Lumera\Modules\Citation;
 // standards in the citation assistant (e.g. MODS).
 define('CITATION_PARSER_FILTER_GROUP', 'plaintext=>nlm30-element-citation');
 define('CITATION_LOOKUP_FILTER_GROUP', 'nlm30-element-citation=>nlm30-element-citation');
-
-import('core.Modules.Citation.Citation');
 
 class CitationDAO extends DAO {
 
@@ -130,7 +133,7 @@ class CitationDAO extends DAO {
         $this->deleteObjectsByAssocId($assocType, $assocId);
 
         // Tokenize raw citations
-        import('core.Modules.Citation.CitationListTokenizerFilter');
+        
         $citationTokenizer = new CitationListTokenizerFilter();
         $citationStrings = $citationTokenizer->execute($rawCitationList);
 
@@ -457,7 +460,6 @@ class CitationDAO extends DAO {
         return $citationOutputFilter;
     }
 
-
     //
     // Protected helper methods
     //
@@ -472,7 +474,6 @@ class CitationDAO extends DAO {
     public function getInsertId($table = '', $id = '', $callHooks = true) {
         return parent::getInsertId('citations', 'citation_id', $callHooks);
     }
-
 
     //
     // Private helper methods
@@ -620,7 +621,7 @@ class CitationDAO extends DAO {
             $filterGroup->setOutputType($filterGroup->getOutputType().'[]');
 
             // Instantiate the citation multiplexer filter.
-            import('core.Modules.filter.GenericMultiplexerFilter');
+            
             $citationMultiplexer = new GenericMultiplexerFilter($filterGroup, $transformationDefinition['displayName']);
 
             // Don't fail just because one of the web services
@@ -637,7 +638,7 @@ class CitationDAO extends DAO {
             }
 
             // Instantiate the citation de-multiplexer filter.
-            import('core.Modules.plugins.metadata.nlm30.filter.Nlm30CitationDemultiplexerFilter');
+            
             $citationDemultiplexer = new Nlm30CitationDemultiplexerFilter();
             $citationDemultiplexer->setOriginalDescription($originalDescription);
             $citationDemultiplexer->setOriginalRawCitation($citation->getRawCitation());
@@ -645,7 +646,7 @@ class CitationDAO extends DAO {
 
             // Combine multiplexer and de-multiplexer to form the
             // final citation filter network.
-            import('core.Modules.filter.GenericSequencerFilter');
+            
             $citationFilterNet = new GenericSequencerFilter(
                     PersistableFilter::tempGroup(
                             $filterGroup->getInputType(),

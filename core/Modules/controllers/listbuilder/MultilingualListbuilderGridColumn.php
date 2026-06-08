@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Listbuilder\ListbuilderGridColumn;
 namespace Lumera\Modules\controllers\listbuilder;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\controllers\listbuilder;
  * @brief Represents a multilingual text column within a listbuilder.
  * [WIZDAM EDITION] Refactored for PHP 8.x
  */
-
-import('core.Modules.controllers.listbuilder.ListbuilderGridColumn');
 
 class MultilingualListbuilderGridColumn extends ListbuilderGridColumn {
     

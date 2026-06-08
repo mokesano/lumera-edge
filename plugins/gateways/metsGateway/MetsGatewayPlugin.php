@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GatewayPlugin;
+Lumera\Modules\Xml\XMLCustomWriter;
 namespace Lumera\Plugins\Gateways\metsGateway;
 
 /**
@@ -16,9 +18,6 @@ namespace Lumera\Plugins\Gateways\metsGateway;
  * @brief A plugin to allow exposure of Journals in METS format for web service access
  * * [WIZDAM EDITION v3.4] Refactored for PHP 8.x Strict Compliance
  */
-
-import('core.Modules.plugins.GatewayPlugin');
-import('core.Modules.xml.XMLCustomWriter');
 
 class MetsGatewayPlugin extends GatewayPlugin {
     
@@ -107,7 +106,7 @@ class MetsGatewayPlugin extends GatewayPlugin {
                 // [FIX CRITICAL] Force Integer Cast untuk Strict Typing Constructor
                 $journalId = (int) $journal->getId();
 
-                $this->import('SettingsForm');
+                $this->
                 $form = new SettingsForm($this, $journalId);
 
                 if ($request->getUserVar('save')) {
@@ -221,7 +220,7 @@ class MetsGatewayPlugin extends GatewayPlugin {
         // Mengutamakan objek Journal yang dipassing, backup ke Request jika perlu
         $this->journalId = (int) $journal->getId();
 
-        $this->import('MetsExportDom');
+        $this->
         $doc = XMLCustomWriter::createDocument();
         $root = XMLCustomWriter::createElement($doc, 'METS:mets');
         XMLCustomWriter::setAttribute($root, 'xmlns:METS', 'http://www.loc.gov/METS/');

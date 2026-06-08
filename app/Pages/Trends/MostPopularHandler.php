@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Handler\Handler;
+Lumera\Modules\Security\Authorization\ContextRequiredPolicy;
+Lumera\Wizdam\Trends\WizdamTrendsManager;
 namespace App\Pages\Trends;
 
 /**
@@ -13,8 +16,6 @@ namespace App\Pages\Trends;
  * [WIZDAM] - Standalone Handler for Most Popular Module.
  * URL Target: /{context}/trends/popular ATAU /index/trends/popular
  */
-
-import('app.Domain.Handler.Handler');
 
 class MostPopularHandler extends Handler {
 
@@ -33,7 +34,7 @@ class MostPopularHandler extends Handler {
      * @return bool
      */
     public function authorize($request, $args, $roleAssignments) {
-        import('core.Modules.security.authorization.ContextRequiredPolicy');
+        
         // Set context required false, agar bisa diakses di site level maupun journal level
         $this->addPolicy(new ContextRequiredPolicy($request, 'user.authorization.noContext', false));
         return parent::authorize($request, $args, $roleAssignments);
@@ -56,7 +57,7 @@ class MostPopularHandler extends Handler {
         }
 
         // [WIZDAM] Eksekusi WIZDAM Trends Manager
-        import('lib.wizdam.trends.WizdamTrendsManager');
+        
         WizdamTrendsManager::assignMostPopularPayload($templateMgr, $journal, $request);
 
         // Path ke template yang menyatukan header/footer WIZDAM dan most_popular.tpl

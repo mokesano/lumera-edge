@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\ControlledVocab\ControlledVocabEntry;
 namespace Lumera\Modules\ControlledVocab;
 
 /**
@@ -16,8 +17,6 @@ namespace Lumera\Modules\ControlledVocab;
  *
  * @brief Operations for retrieving and modifying ControlledVocabEntry objects
  */
-
-import('core.Modules.ControlledVocab.ControlledVocabEntry');
 
 class ControlledVocabEntryDAO extends DAO {
     

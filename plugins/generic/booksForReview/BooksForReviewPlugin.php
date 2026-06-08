@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Plugins\GenericPlugin;
+Lumera\Modules\BookForReviewDAO;
+Lumera\Modules\BookForReviewAuthorDAO;
+Lumera\Modules\BookForReview;
+Lumera\Modules\File\PublicFileManager;
 namespace Lumera\Plugins\Generic\booksForReview;
 
 /**
@@ -16,8 +21,6 @@ namespace Lumera\Plugins\Generic\booksForReview;
  * @brief Books for review plugin class
  * [WIZDAM EDITION] Modernized. PHP 8 Safe & Resource Optimized.
  */
-
-import('core.Modules.plugins.GenericPlugin');
 
 define('BFR_MODE_FULL',         0x01);
 define('BFR_MODE_METADATA',     0x02);
@@ -54,8 +57,8 @@ class BooksForReviewPlugin extends GenericPlugin {
         $success = parent::register($category, $path);
         $this->addLocaleData();
         if ($success && $this->getEnabled()) {
-            $this->import('core.Modules.BookForReviewDAO');
-            $this->import('core.Modules.BookForReviewAuthorDAO');
+            $this->
+            $this->
 
             // [MODERNISASI] Hapus referensi &
             $bfrAuthorDao = new BookForReviewAuthorDAO($this->getName());
@@ -212,7 +215,7 @@ class BooksForReviewPlugin extends GenericPlugin {
 
                     if ($authorId == $userId) {
                         $status = $book->getStatus();
-                        $this->import('core.Modules.BookForReview');
+                        $this->
 
                         if ($status == BFR_STATUS_ASSIGNED || $status == BFR_STATUS_MAILED) {
                             $book->setStatus(BFR_STATUS_SUBMITTED);
@@ -479,7 +482,7 @@ class BooksForReviewPlugin extends GenericPlugin {
             $book = $bfrDao->getSubmittedBookForReviewByArticle($journalId, $articleId);
 
             if ($book) {
-                import('core.Modules.file.PublicFileManager');
+                
                 $publicFileManager = new PublicFileManager();
                 $baseCoverPagePath = Request::getBaseUrl() . '/';
                 $baseCoverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';

@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Submission\Form\Comment\CommentForm;
 namespace App\Domain\Submission\Form\Comment;
-
 
 /**
  * @file app/Domain/Submission/Form/Comment/CopyeditCommentForm.php
@@ -19,8 +19,6 @@ namespace App\Domain\Submission\Form\Comment;
  *
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
-
-import('app.Domain.Submission.form.comment.CommentForm');
 
 class CopyeditCommentForm extends CommentForm {
 

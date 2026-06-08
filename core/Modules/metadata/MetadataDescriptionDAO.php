@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Metadata\MetadataDescription;
+Lumera\Modules\Metadata\MetadataDescriptionDummyAdapter;
 namespace Lumera\Modules\metadata;
 
 /**
@@ -16,8 +18,6 @@ namespace Lumera\Modules\metadata;
  *
  * @brief Operations for retrieving and modifying MetadataDescription objects.
  */
-
-import('core.Modules.metadata.MetadataDescription');
 
 class MetadataDescriptionDAO extends DAO {
     
@@ -183,7 +183,6 @@ class MetadataDescriptionDAO extends DAO {
         return parent::getInsertId('metadata_descriptions', 'metadata_description_id');
     }
 
-
     //
     // Private helper methods
     //
@@ -255,7 +254,7 @@ class MetadataDescriptionDAO extends DAO {
         // use the meta-data persistence infrastructure of the
         // DAO and DataObject classes to persist our meta-data
         // description.
-        import('core.Modules.metadata.MetadataDescriptionDummyAdapter');
+        
         $metadataAdapter = new MetadataDescriptionDummyAdapter($metadataDescription);
         $metadataDescription->addSupportedMetadataAdapter($metadataAdapter);
 

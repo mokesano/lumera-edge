@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
+Lumera\Modules\Notification\NotificationManager;
 /**
  * @file AbntSettingsForm.inc.php
  *
@@ -15,8 +17,6 @@ declare(strict_types=1);
  *
  * @brief Form for journal managers to modify ABNT Citation plugin settings
  */
-
-import('core.Modules.form.Form');
 
 class AbntSettingsForm extends Form {
 
@@ -119,7 +119,7 @@ class AbntSettingsForm extends Form {
         }
 
         // Modern UX: Send notification confirming save
-        import('core.Modules.notification.NotificationManager');
+        
         $notificationMgr = new NotificationManager();
         $user = Request::getUser();
         if ($user) {

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Notification\Form\CoreNotificationSettingsForm;
 namespace App\Domain\Notification\Form;
 
 /**
@@ -19,8 +20,6 @@ namespace App\Domain\Notification\Form;
  *
  * @brief Form to edit notification settings.
  */
-
-import('app.Domain.Notification.form.CoreNotificationSettingsForm');
 
 class NotificationSettingsForm extends CoreNotificationSettingsForm {
     

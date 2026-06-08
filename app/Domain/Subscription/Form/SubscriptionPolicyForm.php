@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Form\Form;
 namespace App\Domain\Subscription\Form;
-
 
 /**
  * @file app/Domain/Subscription/Form/SubscriptionPolicyForm.php
@@ -20,9 +20,6 @@ namespace App\Domain\Subscription\Form;
 
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '0');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
-
-import('core.Modules.form.Form');
-
 
 class SubscriptionPolicyForm extends Form {
     /** @var array validDuration keys are valid open access delay months */     

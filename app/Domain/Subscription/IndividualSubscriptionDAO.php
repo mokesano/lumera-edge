@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Domain\Subscription\SubscriptionDAO;
+Lumera\Domain\Subscription\IndividualSubscription;
 namespace App\Domain\Subscription;
-
 
 /**
  * @file app/Domain/Subscription/IndividualSubscriptionDAO.php
@@ -18,9 +19,6 @@ namespace App\Domain\Subscription;
  * @brief Operations for retrieving and modifying IndividualSubscription objects.
  * * MODERNIZED FOR WIZDAM FORK
  */
-
-import('app.Domain.Subscription.SubscriptionDAO');
-import('app.Domain.Subscription.IndividualSubscription');
 
 class IndividualSubscriptionDAO extends SubscriptionDAO {
     /**

@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Handler\Handler;
+Lumera\Modules\Notification\Notification;
+Lumera\Modules\Notification\Form\NotificationSettingsForm;
+Lumera\Modules\Notification\Form\NotificationMailingListForm;
+Lumera\Kernel\JSONMessage;
 namespace Lumera\Modules\pages\notification;
 
 /**
@@ -17,9 +22,6 @@ namespace Lumera\Modules\pages\notification;
  *
  * [WIZDAM EDITION] PHP 8.1+ Compatibility, Strict Types, Security Hardening
  */
-
-import('core.Modules.handler.Handler');
-import('core.Modules.notification.Notification');
 
 class NotificationHandler extends Handler {
 
@@ -108,7 +110,7 @@ class NotificationHandler extends Handler {
 
         $user = $request->getUser();
         if ($user) {
-            import('core.Modules.notification.form.NotificationSettingsForm');
+            
             $notificationSettingsForm = new NotificationSettingsForm();
             $notificationSettingsForm->display($request);
         } else {
@@ -126,7 +128,7 @@ class NotificationHandler extends Handler {
         $this->validate();
         $this->setupTemplate(true);
 
-        import('core.Modules.notification.form.NotificationSettingsForm');
+        
 
         $notificationSettingsForm = new NotificationSettingsForm();
         $notificationSettingsForm->readInputData();
@@ -254,7 +256,7 @@ class NotificationHandler extends Handler {
             $templateMgr = TemplateManager::getManager();
             $this->_assignSecurityVariables($templateMgr);
 
-            import('core.Modules.notification.form.NotificationMailingListForm');
+            
             $notificationMailingListForm = new NotificationMailingListForm();
             $notificationMailingListForm->display($request);
         } else {
@@ -278,14 +280,14 @@ class NotificationHandler extends Handler {
             $this->_assignSecurityVariables($templateMgr);
             $templateMgr->assign('error', 'common.captchaField.badCaptcha');
             
-            import('core.Modules.notification.form.NotificationMailingListForm');
+            
             $notificationMailingListForm = new NotificationMailingListForm();
             $notificationMailingListForm->readInputData();
             $notificationMailingListForm->display($request);
             return; // Hentikan eksekusi di sini
         }
 
-        import('core.Modules.notification.form.NotificationMailingListForm');
+        
 
         $notificationMailingListForm = new NotificationMailingListForm();
         $notificationMailingListForm->readInputData();
@@ -408,7 +410,7 @@ class NotificationHandler extends Handler {
             }
         }
 
-        import('core.Kernel.JSONMessage');
+        
         $json = new JSONMessage();
 
         if (is_array($notifications) && !empty($notifications)) {

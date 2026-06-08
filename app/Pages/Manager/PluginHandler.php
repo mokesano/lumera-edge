@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Pages\Manager\ManagerHandler;
+Lumera\Domain\Notification\NotificationManager;
 namespace App\Pages\Manager;
 
 /**
@@ -15,8 +17,6 @@ namespace App\Pages\Manager;
  *
  * @brief Handle requests for plugin management functions.
  */
-
-import('app.Pages.manager.ManagerHandler');
 
 class PluginHandler extends ManagerHandler {
     
@@ -127,7 +127,7 @@ class PluginHandler extends ManagerHandler {
             
             if ($message) {
                 $user = $request->getUser();
-                import('app.Domain.Notification.NotificationManager');
+                
                 $notificationManager = new NotificationManager();
                 $notificationManager->createTrivialNotification($user->getId(), $message, $messageParams);
             }

@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+Lumera\Modules\Controllers\Grid\GridHandler;
+Lumera\Modules\Controllers\Grid\Citation\CoreCitationGridCellProvider;
+Lumera\Modules\Controllers\Grid\Citation\CoreCitationGridRow;
+Lumera\Modules\Controllers\Grid\Citation\Form\CitationForm;
+Lumera\Modules\Mail\Mail;
+Lumera\Modules\Citation\Citation;
 namespace Lumera\Modules\controllers\grid\citation;
 
 /**
@@ -18,11 +24,8 @@ namespace Lumera\Modules\controllers\grid\citation;
  */
 
 // import grid base classes
-import('core.Modules.controllers.grid.GridHandler');
-import('core.Modules.controllers.grid.citation.CoreCitationGridCellProvider');
 
 // import citation grid specific classes
-import('core.Modules.controllers.grid.citation.CoreCitationGridRow');
 
 class CoreCitationGridHandler extends GridHandler {
     /** @var DataObject|null */
@@ -50,7 +53,6 @@ class CoreCitationGridHandler extends GridHandler {
         }
         self::__construct();
     }
-
 
     //
     // Getters and Setters
@@ -98,7 +100,6 @@ class CoreCitationGridHandler extends GridHandler {
         $assocObject = $this->getAssocObject();
         return $assocObject ? $assocObject->getId() : 0;
     }
-
 
     //
     // Overridden methods from CoreHandler
@@ -162,7 +163,6 @@ class CoreCitationGridHandler extends GridHandler {
         );
     }
 
-
     //
     // Overridden methods from GridHandler
     //
@@ -181,7 +181,6 @@ class CoreCitationGridHandler extends GridHandler {
     public function getIsSubcomponent(): bool {
         return true;
     }
-
 
     //
     // Public grid actions
@@ -326,7 +325,7 @@ class CoreCitationGridHandler extends GridHandler {
         $citation = $this->getCitationFromArgs($request, $args, true);
 
         // Form handling
-        import('core.Modules.controllers.grid.citation.form.CitationForm');
+        
         $citationForm = new CitationForm($request, $citation, $this->getAssocObject());
         if ($citationForm->isLocaleResubmit()) {
             $citationForm->readInputData();
@@ -483,7 +482,7 @@ class CoreCitationGridHandler extends GridHandler {
      */
     public function sendAuthorQuery($args, $request) {
         // Instantiate the email to the author.
-        import('core.Modules.mail.Mail');
+        
         $mail = new Mail();
 
         // Recipient
@@ -512,7 +511,6 @@ class CoreCitationGridHandler extends GridHandler {
         return $json->getString();
     }
 
-
     //
     // Protected helper methods
     //
@@ -534,7 +532,7 @@ class CoreCitationGridHandler extends GridHandler {
         } else {
             if ($createIfMissing) {
                 // It seems that a new citation is being edited/updated
-                import('core.Modules.Citation.Citation');
+                
                 $citation = new Citation();
                 $citation->setAssocType($this->getAssocType());
                 $citation->setAssocId($this->getAssocId());
@@ -576,7 +574,7 @@ class CoreCitationGridHandler extends GridHandler {
         $citation = $this->getCitationFromArgs($request, $args, true);
 
         // Form initialization
-        import('core.Modules.controllers.grid.citation.form.CitationForm');
+        
         $citationForm = new CitationForm($request, $citation, $this->getAssocObject());
         $citationForm->readInputData();
 
@@ -590,7 +588,6 @@ class CoreCitationGridHandler extends GridHandler {
         }
         return $citationForm;
     }
-
 
     /**
      * Internal method that re-checks the given citation and
@@ -616,7 +613,7 @@ class CoreCitationGridHandler extends GridHandler {
         $filteredCitation = $citationDao->checkCitation($request, $originalCitation, $filterIds);
 
         // Crate a new form for the filtered (but yet unsaved) citation data
-        import('core.Modules.controllers.grid.citation.form.CitationForm');
+        
         $citationForm = new CitationForm($request, $filteredCitation, $this->getAssocObject());
 
         // Transport filtering errors to form (if any).
