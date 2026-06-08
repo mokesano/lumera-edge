@@ -21,7 +21,7 @@ declare(strict_types=1);
  * [WIZDAM EDITION] Refactored for PHP 8.1+ Strict Compliance
  */
 
-import('core.Modules.citation.TemplateBasedReferencesListFilter');
+import('core.Modules.Citation.TemplateBasedReferencesListFilter');
 
 class CoreSubmissionNlm30XmlFilter extends TemplateBasedReferencesListFilter {
     /**

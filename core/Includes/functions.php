@@ -39,6 +39,7 @@ if (!function_exists('str_contains')) {
  * If a class functions backslashes, we assume it's handled by Composer/Autoloader.
  * Maps legacy paths (lib.wizdam.*, classes.*, pages.*) to new structure (core.library.*, app.classes.*, app.pages.*).
  * Also maps Wizdam class names to CORE and Wizdam class names to APP.
+ * [LUMERA FIX] Auto-maps lowercase module paths to PascalCase directories for PSR-4 compliance.
  * @param string $class the complete name of the class to be imported
  */
 if (!function_exists('import')) {
@@ -47,33 +48,50 @@ if (!function_exists('import')) {
 
         if (isset($importedClasses[$class])) return;
 
+        // [PSR-4] If class contains backslashes, assume Composer handles it
         if (strpos($class, '\\') !== false) {
             $importedClasses[$class] = true;
             return;
         }
 
-        // [WIZDAM] Legacy Path Mapping - Map old paths to new structure
+        // [LUMERA FIX] Map lowercase legacy paths to PascalCase directories
+        // This ensures old import() calls work with new PSR-4 directory structure
         $mappedClass = $class;
         
-        // Map lib.wizdam.* -> core.modules.*
-        if (strpos($class, 'lib.wizdam.') === 0) {
-            $mappedClass = 'core.Modules.' . substr($class, 9);
+        // Map core.Modules.moduleName.* -> core.Modules.ModuleName.* (PascalCase)
+        $pascalCaseModules = [
+            'announcement', 'captcha', 'citation', 'codelist', 'comment', 
+            'config', 'controlledvocab', 'clitool', 'admin', 'api',
+            'mail', 'user', 'install', 'manager', 'handler', 'file',
+            'search', 'webservice', 'xslt', 'pages', 'kernel'
+        ];
+        
+        foreach ($pascalCaseModules as $module) {
+            $pattern = '/^core\.Modules\.' . preg_quote($module, '/') . '\./i';
+            $replacement = 'core.Modules.' . ucfirst($module) . '.';
+            $mappedClass = preg_replace($pattern, $replacement, $mappedClass);
         }
-        // Map lib.wizdam.* -> core.kernel.*
-        elseif (strpos($class, 'lib.wizdam.') === 0) {
-            $mappedClass = 'core.Kernel.' . substr($class, 11);
+        
+        // Special case: cliTool -> CliTool
+        $mappedClass = preg_replace('/^core\.Modules\.cliTool\./', 'core.Modules.CliTool.', $mappedClass);
+        $mappedClass = preg_replace('/^core\.Modules\.controlledVocab\./', 'core.Modules.ControlledVocab.', $mappedClass);
+
+        // [WIZDAM] Legacy Path Mapping - Map old paths to new structure
+        // Map lib.wizdam.* -> core.modules.*
+        if (strpos($mappedClass, 'lib.wizdam.') === 0) {
+            $mappedClass = 'core.Modules.' . substr($mappedClass, 11);
         }
         // Map classes.* -> core.modules.*
-        elseif (strpos($class, 'classes.') === 0) {
-            $mappedClass = 'core.Modules.' . substr($class, 8);
+        elseif (strpos($mappedClass, 'classes.') === 0) {
+            $mappedClass = 'core.Modules.' . substr($mappedClass, 8);
         }
         // Map pages.* -> core.modules.pages.*
-        elseif (strpos($class, 'pages.') === 0) {
-            $mappedClass = 'core.Modules.pages.' . substr($class, 6);
+        elseif (strpos($mappedClass, 'pages.') === 0) {
+            $mappedClass = 'core.Modules.pages.' . substr($mappedClass, 6);
         }
         // Map controllers.* -> core.modules.controllers.*
-        elseif (strpos($class, 'controllers.') === 0) {
-            $mappedClass = 'core.Modules.controllers.' . substr($class, 12);
+        elseif (strpos($mappedClass, 'controllers.') === 0) {
+            $mappedClass = 'core.Modules.controllers.' . substr($mappedClass, 12);
         }
 
         // [LUMERA NOTE] Map Wizdam class names to CORE and Wizdam class names to APP

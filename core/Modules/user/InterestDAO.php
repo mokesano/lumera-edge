@@ -15,7 +15,7 @@ declare(strict_types=1);
  * @brief Operations for retrieving and modifying a user's review interests.
  */
 
-import('core.Modules.controlledVocab.ControlledVocabDAO');
+import('core.Modules.ControlledVocab.ControlledVocabDAO');
 
 define('CONTROLLED_VOCAB_INTEREST', 'interest');
 

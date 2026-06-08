@@ -78,7 +78,7 @@ class Handler extends CoreHandler {
         // PILAR 3: DEFAULT CAPTCHA (Fallback)
         // Hanya render Captcha gambar jika Turnstile DAN reCAPTCHA dimatikan
         if (!$turnstileEnabled && !$reCaptchaEnabled) {
-            import('core.Modules.captcha.CaptchaManager');
+            import('core.Modules.Captcha.CaptchaManager');
             $captchaManager = new CaptchaManager();
             $captchaEnabled = $captchaManager->isEnabledForContext($context);
             
@@ -174,7 +174,7 @@ class Handler extends CoreHandler {
 
         // --- LAYER 2: FALLBACK DEFAULT CAPTCHA ---
         // Dieksekusi HANYA JIKA Turnstile OFF dan reCAPTCHA OFF
-        import('core.Modules.captcha.CaptchaManager');
+        import('core.Modules.Captcha.CaptchaManager');
         $captchaManager = new CaptchaManager();
         $captchaEnabled = $captchaManager->isEnabledForContext($context);
         

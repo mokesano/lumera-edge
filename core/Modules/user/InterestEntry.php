@@ -15,7 +15,7 @@ declare(strict_types=1);
  * @brief Basic class describing a reviewer interest
  */
 
-import('core.Modules.controlledVocab.ControlledVocabEntry');
+import('core.Modules.ControlledVocab.ControlledVocabEntry');
 
 class InterestEntry extends ControlledVocabEntry {
     

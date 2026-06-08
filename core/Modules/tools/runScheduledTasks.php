@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 require(__DIR__ . '/bootstrap.php');
 
-import('core.Modules.cliTool.ScheduledTaskTool');
+import('core.Modules.CliTool.ScheduledTaskTool');
 
 class RunScheduledTasks extends ScheduledTaskTool {
     

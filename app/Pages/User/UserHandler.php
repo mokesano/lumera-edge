@@ -287,7 +287,7 @@ class UserHandler extends Handler {
         $request = $request instanceof CoreRequest ? $request : Application::get()->getRequest();
 
         $captchaId = (int) array_shift($args);
-        import('core.Modules.captcha.CaptchaManager');
+        import('core.Modules.Captcha.CaptchaManager');
         $captchaManager = new CaptchaManager();
         if ($captchaManager->isEnabled()) {
             $captchaDao = DAORegistry::getDAO('CaptchaDAO');

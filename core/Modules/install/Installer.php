@@ -27,7 +27,7 @@ define('INSTALLER_DEFAULT_LOCALE', 'en_US');
 import('core.Modules.db.DBDataXMLParser');
 import('core.Modules.site.Version');
 import('core.Modules.site.VersionDAO');
-import('core.Modules.config.ConfigParser');
+import('core.Modules.Config.ConfigParser');
 
 require_once './core/Library/adodb/adodb-xmlschema.inc.php';
 

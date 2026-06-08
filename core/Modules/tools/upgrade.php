@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 require(__DIR__ . '/bootstrap.php');
 
-import('core.Modules.cliTool.UpgradeTool');
+import('core.Modules.CliTool.UpgradeTool');
 
 class AppUpgradeTool extends UpgradeTool {
     /**

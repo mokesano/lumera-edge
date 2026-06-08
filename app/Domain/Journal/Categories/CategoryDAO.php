@@ -18,7 +18,7 @@ namespace App\Domain\Journal\Categories;
  * [WIZDAM] Cache mechanism updated to use .wiz extension
  */
 
-import('core.Modules.controlledVocab.ControlledVocabDAO');
+import('core.Modules.ControlledVocab.ControlledVocabDAO');
 
 define('CATEGORY_SYMBOLIC', 'category');
 

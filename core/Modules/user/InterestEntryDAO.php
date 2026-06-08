@@ -16,7 +16,7 @@ declare(strict_types=1);
  */
 
 import('core.Modules.user.InterestEntry');
-import('core.Modules.controlledVocab.ControlledVocabEntryDAO');
+import('core.Modules.ControlledVocab.ControlledVocabEntryDAO');
 
 class InterestEntryDAO extends ControlledVocabEntryDAO {
     

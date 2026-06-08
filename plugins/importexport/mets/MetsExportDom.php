@@ -239,7 +239,7 @@ class MetsExportDom {
 
         XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'issue');
         
-        import('core.Modules.config.Config');
+        import('core.Modules.Config.Config');
         $base_url = Config::getVar('general', 'base_url');
         $url = $base_url . '/index.php/' . $journal->getPath() . '/issue/view/' . $issue->getId();
         

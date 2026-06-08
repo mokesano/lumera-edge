@@ -84,7 +84,7 @@ class CommentForm extends Form {
         // PILAR 3: DEFAULT CAPTCHA (HANYA JIKA TURNSTILE & RECAPTCHA OFF)
         if (!$this->turnstileEnabled && !$this->reCaptchaEnabled) {
             if (Config::getVar('captcha', 'captcha') && Config::getVar('captcha', 'captcha_on_comments')) {
-                import('core.Modules.captcha.CaptchaManager');
+                import('core.Modules.Captcha.CaptchaManager');
                 $captchaManager = new CaptchaManager();
                 if ($captchaManager->isEnabled()) {
                     $this->captchaEnabled = true;
@@ -254,7 +254,7 @@ class CommentForm extends Form {
         // 3. Default Captcha
         $templateMgr->assign('captchaEnabled', $this->captchaEnabled);
         if ($this->captchaEnabled) {
-            import('core.Modules.captcha.CaptchaManager');
+            import('core.Modules.Captcha.CaptchaManager');
             $captchaManager = new CaptchaManager();
             $captcha = $captchaManager->createCaptcha();
             if ($captcha) {
