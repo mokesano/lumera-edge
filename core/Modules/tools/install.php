@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 require(__DIR__ . '/bootstrap.php');
 
-import('core.Modules.cliTool.InstallTool');
+import('core.Modules.CliTool.InstallTool');
 
 class AppInstallTool extends InstallTool {
     /**

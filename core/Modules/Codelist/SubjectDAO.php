@@ -17,8 +17,8 @@ namespace Lumera\Modules\Codelist;
  * @brief Operations for retrieving and modifying Subject Subject objects.
  */
 
-import('core.Modules.codelist.Subject');
-import('core.Modules.codelist.CodelistItemDAO');
+import('core.Modules.Codelist.Subject');
+import('core.Modules.Codelist.CodelistItemDAO');
 
 class SubjectDAO extends CodelistItemDAO {
 

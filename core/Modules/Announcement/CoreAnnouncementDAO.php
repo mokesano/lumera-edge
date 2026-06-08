@@ -17,7 +17,7 @@ namespace Lumera\Modules\Announcement;
  * @brief Operations for retrieving and modifying Announcement objects.
  */
 
-import('core.Modules.announcement.CoreAnnouncement');
+import('core.Modules.Announcement.CoreAnnouncement');
 
 class CoreAnnouncementDAO extends DAO {
     

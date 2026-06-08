@@ -17,7 +17,7 @@ namespace Lumera\Modules\Codelist;
  * @brief Parent class for operations involving Codelist objects.
  */
 
-import('core.Modules.codelist.CodelistItem');
+import('core.Modules.Codelist.CodelistItem');
 
 class CodelistItemDAO extends DAO {
 

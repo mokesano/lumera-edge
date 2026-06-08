@@ -18,7 +18,7 @@ namespace Lumera\Modules\Codelist;
  *
  */
 
-import('core.Modules.codelist.ONIXCodelistItem');
+import('core.Modules.Codelist.ONIXCodelistItem');
 
 class ONIXCodelistItemDAO extends DAO {
 
@@ -99,7 +99,7 @@ class ONIXCodelistItemDAO extends DAO {
             $xmlDao = new XMLDAO();
             $listName = $this->getListName(); // i.e., 'List30'
             
-            import('core.Modules.codelist.ONIXParserDOMHandler');
+            import('core.Modules.Codelist.ONIXParserDOMHandler');
             $handler = new ONIXParserDOMHandler($listName);
 
             import('core.Modules.xslt.XSLTransformer');

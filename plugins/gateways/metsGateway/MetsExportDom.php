@@ -168,7 +168,7 @@ class MetsExportDom {
 		}
 
 		XMLCustomWriter::createChildWithText($doc, $mods, 'mods:genre', 'issue');
-		import('core.Modules.config.Config');
+		import('core.Modules.Config.Config');
 		$base_url = Config::getVar('general','base_url');
 		$url = $base_url.'/index.php/'.$journal->getPath().'/issue/view/'.$issue->getId();
 		$modsIdentifier = XMLCustomWriter::createChildWithText($doc, $mods, 'mods:identifier', $url);
@@ -671,7 +671,7 @@ class MetsExportDom {
 	 * getPublicFileUrl !!!! must be a better way....
 	 */
 	function getPublicFileUrl(&$file) {
-		import('core.Modules.config.Config');
+		import('core.Modules.Config.Config');
 		$base_url = Config::getVar('general','base_url');
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($file->getArticleId());
@@ -686,7 +686,7 @@ class MetsExportDom {
 	 * getPublicSuppFileUrl !!!! must be a better way....
 	 */
 	function getPublicSuppFileUrl(&$file) {
-		import('core.Modules.config.Config');
+		import('core.Modules.Config.Config');
 		$base_url = Config::getVar('general','base_url');
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$article = $articleDao->getArticle($file->getArticleId());

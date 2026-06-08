@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 
 import('core.Modules.plugins.GenericPlugin');
-import('core.Modules.config.Config');
+import('core.Modules.Config.Config');
 import('core.Modules.article.PublishedArticle');
 import('core.Modules.issue.Issue');
 

@@ -17,7 +17,7 @@ namespace Lumera\Modules\Captcha;
  * @brief Operations for retrieving and modifying Captcha keys.
  */
 
-import('core.Modules.captcha.Captcha');
+import('core.Modules.Captcha.Captcha');
 
 class CaptchaDAO extends DAO {
     

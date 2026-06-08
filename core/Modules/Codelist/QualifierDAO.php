@@ -17,8 +17,8 @@ namespace Lumera\Modules\Codelist;
  * @brief Operations for retrieving and modifying Subject Qualifier objects.
  */
 
-import('core.Modules.codelist.Qualifier');
-import('core.Modules.codelist.CodelistItemDAO');
+import('core.Modules.Codelist.Qualifier');
+import('core.Modules.Codelist.CodelistItemDAO');
 
 class QualifierDAO extends CodelistItemDAO {
 

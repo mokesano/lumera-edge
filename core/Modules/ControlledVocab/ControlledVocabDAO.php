@@ -17,7 +17,7 @@ namespace Lumera\Modules\ControlledVocab;
  * @brief Operations for retrieving and modifying ControlledVocab objects.
  */
 
-import('core.Modules.controlledVocab.ControlledVocab');
+import('core.Modules.ControlledVocab.ControlledVocab');
 
 class ControlledVocabDAO extends DAO {
     

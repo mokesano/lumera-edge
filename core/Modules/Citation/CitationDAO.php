@@ -23,7 +23,7 @@ namespace Lumera\Modules\Citation;
 define('CITATION_PARSER_FILTER_GROUP', 'plaintext=>nlm30-element-citation');
 define('CITATION_LOOKUP_FILTER_GROUP', 'nlm30-element-citation=>nlm30-element-citation');
 
-import('core.Modules.citation.Citation');
+import('core.Modules.Citation.Citation');
 
 class CitationDAO extends DAO {
 
@@ -130,7 +130,7 @@ class CitationDAO extends DAO {
         $this->deleteObjectsByAssocId($assocType, $assocId);
 
         // Tokenize raw citations
-        import('core.Modules.citation.CitationListTokenizerFilter');
+        import('core.Modules.Citation.CitationListTokenizerFilter');
         $citationTokenizer = new CitationListTokenizerFilter();
         $citationStrings = $citationTokenizer->execute($rawCitationList);
 

@@ -21,7 +21,7 @@ namespace Lumera\Modules\Codelist;
  * @brief Basic class describing a BIC Subject.
  */
 
-import('core.Modules.codelist.CodelistItem');
+import('core.Modules.Codelist.CodelistItem');
 
 class Subject extends CodelistItem {
 

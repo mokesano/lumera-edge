@@ -532,7 +532,7 @@ class CoreCitationGridHandler extends GridHandler {
         } else {
             if ($createIfMissing) {
                 // It seems that a new citation is being edited/updated
-                import('core.Modules.citation.Citation');
+                import('core.Modules.Citation.Citation');
                 $citation = new Citation();
                 $citation->setAssocType($this->getAssocType());
                 $citation->setAssocId($this->getAssocId());

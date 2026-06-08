@@ -17,7 +17,7 @@ namespace Lumera\Modules\Comment;
  * @brief Operations for retrieving and modifying Comment objects.
  */
 
-import('core.Modules.comment.Comment');
+import('core.Modules.Comment.Comment');
 
 define ('SUBMISSION_COMMENT_RECURSE_ALL', -1);
 

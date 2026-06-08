@@ -17,8 +17,8 @@ namespace Lumera\Modules\Citation;
  * based on the configured ordering type and citation output filter.
  */
 
-import('core.Modules.citation.TemplateBasedReferencesListFilter');
-import('core.Modules.citation.PlainTextReferencesList');
+import('core.Modules.Citation.TemplateBasedReferencesListFilter');
+import('core.Modules.Citation.PlainTextReferencesList');
 
 class PlainTextReferencesListFilter extends TemplateBasedReferencesListFilter {
     

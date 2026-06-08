@@ -21,7 +21,7 @@ namespace Lumera\Modules\Codelist;
  * @brief Basic class describing a BIC Qualifier.
  */
 
-import('core.Modules.codelist.CodelistItem');
+import('core.Modules.Codelist.CodelistItem');
 
 class Qualifier extends CodelistItem {
 

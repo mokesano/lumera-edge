@@ -73,7 +73,7 @@ class CoreApplication {
         import('core.Kernel.Core');
         import('core.Kernel.CoreString');
         import('core.Kernel.Registry');
-        import('core.Modules.config.Config');
+        import('core.Modules.Config.Config');
 
         if ((bool) Config::getVar('debug', 'display_errors')) {
             @ini_set('display_errors', '0');

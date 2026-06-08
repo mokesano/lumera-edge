@@ -20,7 +20,7 @@ namespace Lumera\Kernel;
 import('core.Modules.db.DBConnection');
 import('core.Modules.cache.CacheManager');
 import('core.Kernel.Core');
-import('core.Modules.config.Config');
+import('core.Modules.Config.Config');
 import('core.Modules.journal.JournalDAO');
 import('core.Modules.article.ArticleDAO');
 import('core.Modules.article.ArticleGalleyDAO');

@@ -62,7 +62,7 @@ class RegistrationForm extends Form {
             // PILAR 3: DEFAULT CAPTCHA (Gambar) (HANYA JIKA TURNSTILE & RECAPTCHA OFF)
             if (!$this->turnstileEnabled && !$this->reCaptchaEnabled) {
                 if (Config::getVar('captcha', 'captcha') && Config::getVar('captcha', 'captcha_on_register')) {
-                    import('core.Modules.captcha.CaptchaManager');
+                    import('core.Modules.Captcha.CaptchaManager');
                     $captchaManager = new CaptchaManager();
                     if ($captchaManager->isEnabled()) {
                         $this->captchaEnabled = true;
@@ -272,7 +272,7 @@ class RegistrationForm extends Form {
         
         // 1. Eksekusi logic UI berdasarkan Flag
         if ($this->captchaEnabled) {
-            import('core.Modules.captcha.CaptchaManager');
+            import('core.Modules.Captcha.CaptchaManager');
             $captchaManager = new CaptchaManager();
             $captcha = $captchaManager->createCaptcha();
             if ($captcha) {
