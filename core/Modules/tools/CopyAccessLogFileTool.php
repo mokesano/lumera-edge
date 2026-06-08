@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\Task\FileLoader;
+
 /**
  * @file tools/CopyAccessLogFileTool.php
  *
@@ -17,11 +22,6 @@ namespace Lumera\Modules\Tools;
  * related only to the current instalation.
  * [WIZDAM EDITION] Modernized CLI Tool.
  */
-
-require(dirname(__DIR__) . '/tools/bootstrap.php');
-
-// Bring in the file loader folder constants.
-import('core.Modules.task.FileLoader');
 
 class CopyAccessLogFileTool extends CommandLineTool {
 

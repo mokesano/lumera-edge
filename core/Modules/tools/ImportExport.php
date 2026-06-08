@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\Plugin\PluginRegistry;
+
 /**
  * @file core/Modules/Tools/ImportExport.php
  *
@@ -16,8 +21,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool to perform import/export tasks
  * [WIZDAM EDITION] Modernized CLI Dispatcher.
  */
-
-require(__DIR__ . '/bootstrap.php');
 
 class ImportExport extends CommandLineTool {
 

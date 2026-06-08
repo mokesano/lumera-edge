@@ -270,7 +270,7 @@ class DepositPackage {
     public function generatePackage() {
         
         // [PHP 8 FIX] Use __DIR__ instead of dirname(__FILE__)
-        if( ! @include_once(__DIR__.'/../lib/bagit.php')) {
+        if( ! @include_once(__DIR__.'/../lib/BagIt.php')) {
             $this->_logMessage(__("plugins.generic.pln.error.include.bagit"));
             return;
         }

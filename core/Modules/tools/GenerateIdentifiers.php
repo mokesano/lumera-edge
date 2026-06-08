@@ -3,6 +3,13 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Kernel\Application;
+use Lumera\Core\Locale\AppLocale;
+use Lumera\Core\Plugin\PluginRegistry;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+
 /**
  * @file tools/generateIdentifiers.php
  *
@@ -15,8 +22,6 @@ namespace Lumera\Modules\Tools;
  *
  * @brief CLI tool to generate eLocator and PII sequentially for existing articles.
  */
-
-require(__DIR__ . '/bootstrap.php');
 
 class GenerateIdentifiers extends CommandLineTool {
 
@@ -63,4 +68,3 @@ class GenerateIdentifiers extends CommandLineTool {
 
 $tool = new GenerateIdentifiers($argv ?? []);
 $tool->execute();
-?>

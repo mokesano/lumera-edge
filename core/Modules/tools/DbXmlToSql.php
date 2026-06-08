@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\XmlToSqlTool;
+
 /**
  * @file core/Modules/Tools/DbXmlToSql.php
  *
@@ -16,10 +18,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool to output the SQL statements corresponding to an XML database schema.
  * [WIZDAM EDITION] Modernized CLI Tool.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.CliTool.XmlToSqlTool');
 
 /** Default XML file to parse if none is specified */
 define('DATABASE_XML_FILE', 'dbscripts/xml/wizdam_schema.xml');

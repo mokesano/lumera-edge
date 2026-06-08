@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\User\UserDAO;
+
 /**
  * @file core/Modules/Tools/MergeUsers.php
  *
@@ -16,8 +21,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool for merging two Wizdam 2 user accounts.
  * [WIZDAM EDITION] Modernized CLI User Merge Tool.
  */
-
-require(__DIR__ . '/bootstrap.php');
 
 class MergeUsers extends CommandLineTool {
 

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\UpgradeTool;
+
 /**
  * @file core/Modules/tools/upgrade.php
  *
@@ -15,10 +17,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool for upgrading Lumera Edge.
  * [LUMERA EDGE EDITION] Lumera Edge Upgrade Tool Implementation.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.CliTool.UpgradeTool');
 
 class AppUpgradeTool extends UpgradeTool {
     /**

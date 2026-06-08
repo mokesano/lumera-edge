@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+
 /**
  * @file core/Modules/Tools/PoToCountries.php
  *
@@ -18,14 +21,8 @@ namespace Lumera\Modules\Tools;
  * [WIZDAM EDITION] Modernized Localization Tool.
  */
 
-require(__DIR__ . '/bootstrap.php');
-
 // [WIZDAM] Ensure the binary exists, otherwise this tool is unusable.
 define('PO_TO_CSV_TOOL', '/usr/bin/po2csv');
-if (!is_executable(PO_TO_CSV_TOOL)) {
-    fwrite(STDERR, "Error: Required binary " . PO_TO_CSV_TOOL . " not found or not executable.\n");
-    exit(1);
-}
 
 class PoToCountries extends CommandLineTool {
 

@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\CommandLineTool;
+use Lumera\Core\Config\Config;
+use Lumera\Core\DAO\DAORegistry;
+use Lumera\Core\Modules\File\ArticleFileManager;
+
 /**
  * @file tools/deleteSubmissions.php
  *
@@ -16,10 +21,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool to delete submissions
  * [WIZDAM EDITION] Modernized CLI Tool.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.file.ArticleFileManager');
 
 class SubmissionDeletionTool extends CommandLineTool {
 

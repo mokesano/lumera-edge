@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Lumera\Modules\Tools;
 
+use Lumera\Modules\CliTool\InstallTool;
+
 /**
  * @file core/Modules/tools/install.php
  *
@@ -15,10 +17,6 @@ namespace Lumera\Modules\Tools;
  * @brief CLI tool for installing Lumera Edge.
  * [LUMERA EDGE EDITION] Modernized CLI Installer Child.
  */
-
-require(__DIR__ . '/bootstrap.php');
-
-import('core.Modules.CliTool.InstallTool');
 
 class AppInstallTool extends InstallTool {
     /**
