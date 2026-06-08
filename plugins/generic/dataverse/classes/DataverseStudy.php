@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\dataverse\classes;
+namespace Lumera\Plugins\Generic\Dataverse\Classes;
 
 /**
  * @file plugins/generic/dataverse/classes/DataverseStudy.inc.php

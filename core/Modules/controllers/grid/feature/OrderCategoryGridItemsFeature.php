@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
 Lumera\Kernel\JSONManager;
-namespace Lumera\Modules\controllers\grid\feature;
+namespace Lumera\Modules\Controllers\Grid\Feature;
 
 /**
  * @file core.Modules.controllers/grid/feature/OrderCategoryGridItemsFeature.inc.php

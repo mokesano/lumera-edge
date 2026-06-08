@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\File\CoreFileDAO;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Modules\submission;
+namespace Lumera\Modules\Submission;
 
 /**
  * @file core.Modules.submission/CoreSubmissionFileDAO.inc.php

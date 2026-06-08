@@ -7,7 +7,7 @@ Lumera\Modules\Controllers\Grid\Citation\CoreCitationGridRow;
 Lumera\Modules\Controllers\Grid\Citation\Form\CitationForm;
 Lumera\Modules\Mail\Mail;
 Lumera\Modules\Citation\Citation;
-namespace Lumera\Modules\controllers\grid\citation;
+namespace Lumera\Modules\Controllers\Grid\Citation;
 
 /**
  * @file controllers/grid/citation/CoreCitationGridHandler.inc.php

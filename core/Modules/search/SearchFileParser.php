@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Search\SearchHTMLParser;
 Lumera\Modules\Search\SearchHelperParser;
-namespace Lumera\Modules\search;
+namespace Lumera\Modules\Search;
 
 /**
  * @defgroup search

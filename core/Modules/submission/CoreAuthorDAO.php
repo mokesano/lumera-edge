@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Submission\CoreAuthor;
-namespace Lumera\Modules\submission;
+namespace Lumera\Modules\Submission;
 
 /**
  * @file core.Modules.submission/CoreAuthorDAO.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\staticPages;
+namespace Lumera\Plugins\Generic\StaticPages;
 
 /**
  * @file plugins/generic/staticPages/StaticPagesSettingsForm.inc.php

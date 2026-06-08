@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Gift\CoreGift;
-namespace Lumera\Modules\gift;
+namespace Lumera\Modules\Gift;
 
 /**
  * @file core.Modules.gift/CoreGiftDAO.inc.php

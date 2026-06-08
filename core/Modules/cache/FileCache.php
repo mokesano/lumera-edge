@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Cache\GenericCache;
-namespace Lumera\Modules\cache;
+namespace Lumera\Modules\Cache;
 
 /**
  * @defgroup cache

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\googleAnalytics;
+namespace Lumera\Plugins\Generic\GoogleAnalytics;
 
 /**
  * @file plugins/generic/googleAnalytics/GoogleAnalyticsPlugin.inc.php

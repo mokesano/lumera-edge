@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\Feature\OrderItemsFeature;
-namespace Lumera\Modules\controllers\grid\feature;
+namespace Lumera\Modules\Controllers\Grid\Feature;
 
 /**
  * @file core.Modules.controllers/grid/feature/OrderMultipleListsItemsFeature.inc.php

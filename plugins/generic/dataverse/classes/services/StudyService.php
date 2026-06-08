@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\DataverseStudy;
 Lumera\Modules\DataverseFile;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\dataverse\classes\services;
+namespace Lumera\Plugins\Generic\Dataverse\Classes\Services;
 
 /**
  * @file plugins/generic/dataverse/classes/services/StudyService.inc.php

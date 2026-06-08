@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Validation\ValidatorControlledVocab;
 Lumera\Modules\Validation\ValidatorUri;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/MetadataProperty.inc.php

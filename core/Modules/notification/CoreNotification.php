@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Notification\NotificationDAO;
-namespace Lumera\Modules\notification;
+namespace Lumera\Modules\Notification;
 
 /**
  * @file core.Modules.notification/CoreNotification.inc.php

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\tombstone;
+namespace Lumera\Modules\Tombstone;
 
 /**
  * @file core.Modules.tombstone/DataObjectTombstone.inc.php

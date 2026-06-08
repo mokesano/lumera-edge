@@ -6,7 +6,7 @@ Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
 Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10JournalSchema;
 Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10BookSchema;
 Lumera\Modules\Plugins\Metadata\Openurl10\Schema\Openurl10DissertationSchema;
-namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Filter;
 
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30Openurl10CrosswalkFilter.inc.php

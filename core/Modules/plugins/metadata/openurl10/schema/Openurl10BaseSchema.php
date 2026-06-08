@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataSchema;
-namespace Lumera\Modules\plugins\metadata\openurl10\schema;
+namespace Lumera\Modules\Plugins\Metadata\Openurl10\Schema;
 
 /**
  * @defgroup plugins_metadata_openurl10_schema

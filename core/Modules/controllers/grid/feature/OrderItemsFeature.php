@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\Feature\GridFeature;
 Lumera\Modules\LinkAction\Request\NullAction;
-namespace Lumera\Modules\controllers\grid\feature;
+namespace Lumera\Modules\Controllers\Grid\Feature;
 
 /**
  * @file core.Modules.controllers/grid/feature/OrderItemsFeature.inc.php

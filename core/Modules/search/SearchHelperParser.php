@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Search\SearchFileParser;
-namespace Lumera\Modules\search;
+namespace Lumera\Modules\Search;
 
 /**
  * @file core.Modules.search/SearchHelperParser.inc.php

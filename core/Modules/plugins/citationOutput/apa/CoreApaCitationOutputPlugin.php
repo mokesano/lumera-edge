@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationOutput\apa;
+namespace Lumera\Modules\Plugins\CitationOutput\Apa;
 
 /**
  * @defgroup plugins_citationOutput_apa

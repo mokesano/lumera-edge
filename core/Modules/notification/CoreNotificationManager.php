@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Notification\Notification;
 Lumera\Modules\Mail\MailTemplate;
-namespace Lumera\Modules\notification;
+namespace Lumera\Modules\Notification;
 
 /**
  * @file core.Modules.notification/CoreNotificationManager.inc.php

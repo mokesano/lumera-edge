@@ -13,7 +13,7 @@ Lumera\Modules\Security\Validation;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\Submission\Common\Action;
 Lumera\Modules\Form\ObjectForReviewAssignmentForm;
-namespace Lumera\Plugins\Generic\objectsForReview\pages;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Pages;
 
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewEditorHandler.inc.php

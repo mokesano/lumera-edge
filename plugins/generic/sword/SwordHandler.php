@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
-namespace Lumera\Plugins\Generic\sword;
+namespace Lumera\Plugins\Generic\Sword;
 
 /**
  * @file plugins/generic/sword/SwordHandler.inc.php

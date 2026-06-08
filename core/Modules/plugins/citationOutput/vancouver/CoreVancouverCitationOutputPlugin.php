@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationOutput\vancouver;
+namespace Lumera\Modules\Plugins\CitationOutput\Vancouver;
 
 /**
  * @defgroup plugins_citationOutput_vancouver

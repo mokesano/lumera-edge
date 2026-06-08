@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Security\Role;
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/UserGroup.inc.php

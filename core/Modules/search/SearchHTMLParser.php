@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Search\SearchFileParser;
 Lumera\Kernel\CoreString;
-namespace Lumera\Modules\search;
+namespace Lumera\Modules\Search;
 
 /**
  * @file core.Modules.search/SearchHTMLParser.inc.php

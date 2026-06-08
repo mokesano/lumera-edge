@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\signoff;
+namespace Lumera\Modules\Signoff;
 
 /**
  * @defgroup signoff

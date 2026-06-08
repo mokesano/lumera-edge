@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Help\Help;
 Lumera\Modules\Help\PluginHelpMappingFile;
-namespace Lumera\Modules\plugins;
+namespace Lumera\Modules\Plugins;
 
 /**
  * @defgroup plugins

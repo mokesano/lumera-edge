@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\cache;
+namespace Lumera\Modules\Cache;
 
 /**
  * @file core/Modules/Cache/GenericCacheMiss.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\User\InterestManager;
-namespace Lumera\Modules\user;
+namespace Lumera\Modules\User;
 
 /**
  * @defgroup user

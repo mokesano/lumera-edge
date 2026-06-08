@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\dataverse\classes\form;
+namespace Lumera\Plugins\Generic\Dataverse\Classes\Form;
 
 /**
  * @file plugins/generic/dataverse/classes/form/DataverseAuthForm.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Kernel\ItemIterator;
 Lumera\Modules\Db\DBResultRange;
-namespace Lumera\Modules\db;
+namespace Lumera\Modules\Db;
 
 /**
  * @file core.Modules.db/DAOResultFactory.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\PersistableFilter;
 Lumera\Modules\Xml\XMLCustomWriter;
-namespace Lumera\Modules\plugins\metadata\mods34\filter;
+namespace Lumera\Modules\Plugins\Metadata\Mods34\Filter;
 
 /**
  * @defgroup plugins_metadata_mods34_filter

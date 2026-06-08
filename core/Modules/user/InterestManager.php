@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\user;
+namespace Lumera\Modules\User;
 
 /**
  * @file core.Modules.user/InterestManager.inc.php

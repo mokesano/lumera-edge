@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\gift;
+namespace Lumera\Modules\Gift;
 
 /**
  * @defgroup gift

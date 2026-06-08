@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\referral;
+namespace Lumera\Plugins\Generic\Referral;
 
 /**
  * @file plugins/generic/referral/ReferralPluginSettingsForm.inc.php

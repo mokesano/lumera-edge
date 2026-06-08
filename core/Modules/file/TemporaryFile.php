@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\File\CoreFile;
 Lumera\Modules\File\CoreTemporaryFileManager;
-namespace Lumera\Modules\file;
+namespace Lumera\Modules\File;
 
 /**
  * @file core.Modules.file/TemporaryFile.inc.php

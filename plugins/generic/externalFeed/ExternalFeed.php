@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\externalFeed;
+namespace Lumera\Plugins\Generic\ExternalFeed;
 
 /**
  * @file plugins/generic/externalFeed/ExternalFeed.inc.php

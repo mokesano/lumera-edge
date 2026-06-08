@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Db\DAO;
 Lumera\Generic\Dataverse\Classes\DataverseFile;
-namespace Lumera\Plugins\Generic\dataverse\classes;
+namespace Lumera\Plugins\Generic\Dataverse\Classes;
 
 /**
  * @file plugins/generic/dataverse/classes/DataverseFileDAO.inc.php

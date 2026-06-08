@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Mail\MailTemplate;
-namespace Lumera\Modules\mail;
+namespace Lumera\Modules\Mail;
 
 /**
  * @file core.Modules.mail/MassMail.inc.php

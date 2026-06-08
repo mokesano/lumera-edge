@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\tinymce;
+namespace Lumera\Plugins\Generic\Tinymce;
 
 /**
  * @file plugins/generic/tinymce/TinyMCEPlugin.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Kernel\CoreString;
-namespace Lumera\Modules\nlp;
+namespace Lumera\Modules\Nlp;
 
 /**
  * @file core.Modules.lib/nlp/WizdamNLP.inc.php

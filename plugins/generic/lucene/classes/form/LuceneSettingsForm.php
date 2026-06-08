@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
 Lumera\Modules\Form\Validation\FormValidatorBoolean;
-namespace Lumera\Plugins\Generic\lucene\classes\form;
+namespace Lumera\Plugins\Generic\Lucene\Classes\Form;
 
 /**
  * @file plugins/generic/lucene/classes/form/LuceneSettingsForm.inc.php

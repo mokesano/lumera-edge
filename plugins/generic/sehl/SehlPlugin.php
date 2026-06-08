@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\sehl;
+namespace Lumera\Plugins\Generic\Sehl;
 
 /**
  * @file plugins/generic/sehl/SehlPlugin.inc.php

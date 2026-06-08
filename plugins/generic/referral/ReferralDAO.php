@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\referral;
+namespace Lumera\Plugins\Generic\Referral;
 
 /**
  * @file plugins/generic/referral/ReferralDAO.inc.php

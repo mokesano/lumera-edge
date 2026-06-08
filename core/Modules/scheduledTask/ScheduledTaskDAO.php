@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\ScheduledTask\ScheduledTask;
-namespace Lumera\Modules\scheduledTask;
+namespace Lumera\Modules\ScheduledTask;
 
 /**
  * @defgroup scheduledTask

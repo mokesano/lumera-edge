@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationOutput\mla;
+namespace Lumera\Modules\Plugins\CitationOutput\Mla;
 
 /**
  * @defgroup plugins_citationOutput_mla

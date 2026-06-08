@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Security\AccessKey;
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/AccessKeyDAO.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\File\JournalFileManager;
-namespace Lumera\Plugins\Generic\xmlGalley;
+namespace Lumera\Plugins\Generic\XmlGalley;
 
 /**
  * @file plugins/generic/xmlGalley/XMLGalleyPlugin.inc.php

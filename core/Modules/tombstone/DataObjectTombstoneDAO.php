@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Tombstone\DataObjectTombstone;
-namespace Lumera\Modules\tombstone;
+namespace Lumera\Modules\Tombstone;
 
 /**
  * @file core.Modules.tombstone/DataObjectTombstoneDAO.inc.php

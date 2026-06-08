@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Filter\Filter;
 Lumera\Modules\Metadata\MetadataDescription;
 Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30NameSchema;
-namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Filter;
 
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30PersonStringFilter.inc.php

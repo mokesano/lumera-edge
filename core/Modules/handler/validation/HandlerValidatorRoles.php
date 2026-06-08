@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Handler\Validation\HandlerValidatorPolicy;
 Lumera\Modules\Security\Authorization\RoleBasedHandlerOperationPolicy;
-namespace Lumera\Modules\handler\validation;
+namespace Lumera\Modules\Handler\Validation;
 
 /**
  * @file core.Modules.handler/HandlerValidatorRoles.inc.php

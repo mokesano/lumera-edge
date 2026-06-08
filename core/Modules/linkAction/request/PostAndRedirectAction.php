@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\LinkAction\Request\RedirectAction;
-namespace Lumera\Modules\linkAction\request;
+namespace Lumera\Modules\LinkAction\Request;
 
 /**
  * @file core.Modules.linkAction/request/PostAndRedirectAction.inc.php

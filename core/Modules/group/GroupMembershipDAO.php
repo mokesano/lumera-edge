@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Group\GroupMembership;
-namespace Lumera\Modules\group;
+namespace Lumera\Modules\Group;
 
 /**
  * @file core.Modules.group/GroupMembershipDAO.inc.php

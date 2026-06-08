@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Controllers\Listbuilder\ListbuilderGridColumn;
-namespace Lumera\Modules\controllers\listbuilder;
+namespace Lumera\Modules\Controllers\Listbuilder;
 
 /**
  * @file core.Modules.controllers/listbuilder/MultilingualListbuilderGridColumn.inc.php

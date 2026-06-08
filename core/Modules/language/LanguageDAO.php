@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Language\Language;
-namespace Lumera\Modules\language;
+namespace Lumera\Modules\Language;
 
 /**
  * @file core.Modules.language/LanguageDAO.inc.php

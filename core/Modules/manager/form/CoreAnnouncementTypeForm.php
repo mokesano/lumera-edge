@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Modules\manager\form;
+namespace Lumera\Modules\Manager\Form;
 
 /**
  * @file core.Modules.manager/form/CoreAnnouncementTypeForm.inc.php

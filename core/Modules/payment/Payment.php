@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\payment;
+namespace Lumera\Modules\Payment;
 
 /**
  * @defgroup payment

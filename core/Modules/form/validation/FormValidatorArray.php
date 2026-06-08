@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Validation\FormValidator;
-namespace Lumera\Modules\form\validation;
+namespace Lumera\Modules\Form\Validation;
 
 /**
  * @file core.Modules.form/validation/FormValidatorArray.inc.php

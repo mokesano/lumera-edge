@@ -8,7 +8,7 @@ Lumera\Modules\Config\ConfigParser;
 Lumera\Modules\Filter\FilterHelper;
 Lumera\Modules\File\FileManager;
 Lumera\Modules\Site\VersionCheck;
-namespace Lumera\Modules\install;
+namespace Lumera\Modules\Install;
 
 /**
  * @file core.Modules.install/Installer.inc.php

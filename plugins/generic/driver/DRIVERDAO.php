@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Oai\OAIDAO;
-namespace Lumera\Plugins\Generic\driver;
+namespace Lumera\Plugins\Generic\Driver;
 
 /**
  * @file plugins/generic/driver/DRIVERDAO.inc.php

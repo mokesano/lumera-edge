@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridRow;
 Lumera\Modules\LinkAction\Request\NullAction;
-namespace Lumera\Modules\controllers\listbuilder;
+namespace Lumera\Modules\Controllers\Listbuilder;
 
 /**
  * @file core.Modules.controllers/listbuilder/ListbuilderGridRow.inc.php

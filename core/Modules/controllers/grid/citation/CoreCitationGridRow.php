@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridRow;
-namespace Lumera\Modules\controllers\grid\citation;
+namespace Lumera\Modules\Controllers\Grid\Citation;
 
 /**
  * @file core.Modules.controllers/grid/citation/CoreCitationGridRow.inc.php

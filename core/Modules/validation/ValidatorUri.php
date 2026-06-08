@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Validation\ValidatorRegExp;
-namespace Lumera\Modules\validation;
+namespace Lumera\Modules\Validation;
 
 /**
  * @file core.Modules.validation/ValidatorUri.inc.php

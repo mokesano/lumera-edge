@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\db;
+namespace Lumera\Modules\Db;
 
 /**
  * @file core.Modules.db/DBConnection.inc.php

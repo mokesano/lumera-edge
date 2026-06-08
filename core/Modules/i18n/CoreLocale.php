@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\I18n\LocaleFile;
 Lumera\Modules\Db\DBDataXMLParser;
-namespace Lumera\Modules\i18n;
+namespace Lumera\Modules\I18n;
 
 /**
  * @defgroup i18n

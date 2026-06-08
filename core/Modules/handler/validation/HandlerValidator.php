@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\handler\validation;
+namespace Lumera\Modules\Handler\Validation;
 
 /**
  * @file core.Modules.handler/validation/HandlerValidator.inc.php

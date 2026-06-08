@@ -6,7 +6,7 @@ Lumera\Modules\ScheduledTask\ScheduledTask;
 Lumera\Modules\Deposit;
 Lumera\Modules\DepositObject;
 Lumera\Modules\DepositPackage;
-namespace Lumera\Plugins\Generic\pln\classes\tasks;
+namespace Lumera\Plugins\Generic\Pln\Classes\Tasks;
 
 /**
  * @file plugins/generic/pln/classes/tasks/Depositor.inc.php

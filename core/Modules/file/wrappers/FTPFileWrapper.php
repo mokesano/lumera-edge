@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\file\wrappers;
+namespace Lumera\Modules\File\Wrappers;
 
 /**
  * @file core.Modules.file/wrappers/FTPFileWrapper.inc.php

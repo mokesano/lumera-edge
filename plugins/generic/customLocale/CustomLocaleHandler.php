@@ -5,7 +5,7 @@ Lumera\Modules\Handler\Handler;
 Lumera\Kernel\ArrayItemIterator;
 Lumera\Modules\File\FileManager;
 Lumera\Modules\File\EditableLocaleFile;
-namespace Lumera\Plugins\Generic\customLocale;
+namespace Lumera\Plugins\Generic\CustomLocale;
 
 /**
  * @file plugins/generic/customLocale/CustomLocaleHandler.inc.php

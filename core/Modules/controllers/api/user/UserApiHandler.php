@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Handler\CoreHandler;
 Lumera\Kernel\JSONMessage;
 Lumera\Modules\Security\Authorization\CoreSiteAccessPolicy;
-namespace Lumera\Modules\controllers\api\user;
+namespace Lumera\Modules\Controllers\Api\User;
 
 /**
  * @defgroup controllers_api_user

@@ -6,7 +6,7 @@ Lumera\Modules\File\PublicFileManager;
 Lumera\SimplePie;
 Lumera\Kernel\CoreString;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\externalFeed;
+namespace Lumera\Plugins\Generic\ExternalFeed;
 
 /**
  * @file plugins/generic/externalFeed/ExternalFeedPlugin.inc.php

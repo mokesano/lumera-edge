@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\googleAnalytics;
+namespace Lumera\Plugins\Generic\GoogleAnalytics;
 
 /**
  * @file plugins/generic/googleAnalytics/GoogleAnalyticsSettingsForm.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\externalFeed;
+namespace Lumera\Plugins\Generic\ExternalFeed;
 
 /**
  * @file plugins/generic/externalFeed/ExternalFeedSettingsForm.inc.php

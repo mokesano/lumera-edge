@@ -9,7 +9,7 @@ Lumera\Modules\Controllers\Grid\GridRow;
 Lumera\Kernel\JSONMessage;
 Lumera\Modules\Db\DBResultRange;
 Lumera\Modules\Controllers\Grid\GridCellProvider;
-namespace Lumera\Modules\controllers\grid;
+namespace Lumera\Modules\Controllers\Grid;
 
 /**
  * @file core.Modules.controllers/grid/GridHandler.inc.php

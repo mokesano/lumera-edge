@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Install\Form\InstallForm;
 Lumera\Modules\Install\Form\UpgradeForm;
 Lumera\Modules\Handler\Handler;
-namespace Lumera\Modules\pages\install;
+namespace Lumera\Modules\Pages\Install;
 
 /**
  * @file pages/install/CoreInstallHandler.inc.php

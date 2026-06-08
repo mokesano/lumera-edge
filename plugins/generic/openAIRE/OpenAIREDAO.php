@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Oai\OAIDAO;
-namespace Lumera\Plugins\Generic\openAIRE;
+namespace Lumera\Plugins\Generic\OpenAIRE;
 
 /**
  * @file plugins/generic/openAIRE/OpenAIREDAO.inc.php

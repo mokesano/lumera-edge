@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\ControlledVocab\ControlledVocabDAO;
 Lumera\Kernel\ArrayItemIterator;
-namespace Lumera\Modules\user;
+namespace Lumera\Modules\User;
 
 /**
  * @file core.Modules.user/InterestDAO.inc.php

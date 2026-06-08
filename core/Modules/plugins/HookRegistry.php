@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\plugins;
+namespace Lumera\Modules\Plugins;
 
 /**
  * @file core.Modules.plugins/HookRegistry.inc.php

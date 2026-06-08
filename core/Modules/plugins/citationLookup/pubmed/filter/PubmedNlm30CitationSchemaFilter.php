@@ -6,7 +6,7 @@ Lumera\Modules\Filter\EmailFilterSetting;
 Lumera\Modules\Metadata\MetadataDescription;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
 Lumera\Modules\Metadata\DateStringNormalizerFilter;
-namespace Lumera\Modules\plugins\citationLookup\pubmed\filter;
+namespace Lumera\Modules\Plugins\CitationLookup\Pubmed\Filter;
 
 /**
  * @file plugins/citationLookup/pubmed/filter/PubmedNlm30CitationSchemaFilter.inc.php

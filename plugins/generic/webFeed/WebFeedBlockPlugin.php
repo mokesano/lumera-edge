@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\BlockPlugin;
-namespace Lumera\Plugins\Generic\webFeed;
+namespace Lumera\Plugins\Generic\WebFeed;
 
 /**
  * @file plugins/generic/webFeed/WebFeedBlockPlugin.inc.php

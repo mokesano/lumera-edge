@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\sword;
+namespace Lumera\Plugins\Generic\Sword;
 
 /**
  * @file plugins/generic/sword/SettingsForm.inc.php

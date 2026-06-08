@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\MetadataPlugin;
-namespace Lumera\Modules\plugins\metadata\mods34;
+namespace Lumera\Modules\Plugins\Metadata\Mods34;
 
 /**
  * @defgroup plugins_metadata_mods34

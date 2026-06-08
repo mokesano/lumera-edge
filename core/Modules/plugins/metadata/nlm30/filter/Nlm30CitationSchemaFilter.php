@@ -12,7 +12,7 @@ Lumera\Modules\Webservice\XmlWebService;
 Lumera\Modules\Xml\XMLHelper;
 Lumera\Modules\Xslt\XSLTransformationFilter;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
-namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Filter;
 
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30CitationSchemaFilter.inc.php

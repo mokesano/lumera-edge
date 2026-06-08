@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\linkAction;
+namespace Lumera\Modules\LinkAction;
 
 /**
  * @defgroup linkAction

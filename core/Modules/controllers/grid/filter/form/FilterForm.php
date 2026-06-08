@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Modules\controllers\grid\filter\form;
+namespace Lumera\Modules\Controllers\Grid\Filter\Form;
 
 /**
  * @file core.Modules.controllers/grid/filter/form/FilterForm.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\File\Wrappers\HTTPFileWrapper;
-namespace Lumera\Modules\file\wrappers;
+namespace Lumera\Modules\File\Wrappers;
 
 /**
  * @file core.Modules.file/wrappers/HTTPSFileWrapper.inc.php

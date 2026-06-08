@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\TypeDescription;
 Lumera\Modules\Filter\TypeDescriptionFactory;
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/PrimitiveTypeDescription.inc.php

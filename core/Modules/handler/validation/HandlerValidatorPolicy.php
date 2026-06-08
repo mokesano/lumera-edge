@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Handler\Validation\HandlerValidator;
-namespace Lumera\Modules\handler\validation;
+namespace Lumera\Modules\Handler\Validation;
 
 /**
  * @file core.Modules.handler/HandlerValidatorPolicy.inc.php

@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\User\Form\LoginChangePasswordForm;
-namespace Lumera\Modules\pages\login;
+namespace Lumera\Modules\Pages\Login;
 
 /**
  * @file pages/login/CoreLoginHandler.inc.php

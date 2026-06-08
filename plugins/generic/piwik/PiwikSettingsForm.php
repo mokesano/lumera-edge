@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\piwik;
+namespace Lumera\Plugins\Generic\Piwik;
 
 /**
  * @file plugins/generic/piwik/PiwikSettingsForm.inc.php

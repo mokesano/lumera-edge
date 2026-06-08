@@ -7,7 +7,7 @@ Lumera\Modules\Metadata\DateStringNormalizerFilter;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\PersonStringNlm30NameSchemaFilter;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
-namespace Lumera\Modules\controllers\grid\citation\form;
+namespace Lumera\Modules\Controllers\Grid\Citation\Form;
 
 /**
  * @file core.Modules.controllers/grid/citation/form/CitationForm.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Install\Installer;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Modules\install;
+namespace Lumera\Modules\Install;
 
 /**
  * @defgroup install

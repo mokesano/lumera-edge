@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Oai\OAIStruct;
 Lumera\Modules\Db\DBResultRange;
-namespace Lumera\Modules\oai;
+namespace Lumera\Modules\Oai;
 
 /**
  * @file core.Modules.oai/CoreOAIDAO.inc.php

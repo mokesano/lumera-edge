@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\controllers\grid\feature;
+namespace Lumera\Modules\Controllers\Grid\Feature;
 
 /**
  * @file core.Modules.controllers/grid/feature/GridFeature.inc.php
