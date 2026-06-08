@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Modules\CliTool;
+namespace Lumera\Modules\CliTool;
 
 /**
  * @file core/Modules/CliTool/XmlToSqlTool.php

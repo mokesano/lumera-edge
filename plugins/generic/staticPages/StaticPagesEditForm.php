@@ -9,7 +9,7 @@ declare(strict_types=1);
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.staticPages
- * @class StaticPagesSettingsForm
+ * @class StaticPagesEditForm
  *
  * Form for journal managers to view and modify static pages
  * * MODERNIZED FOR WIZDAM FORK

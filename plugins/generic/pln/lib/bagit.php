@@ -36,7 +36,7 @@ require_once 'bagit_manifest.php';
 require_once 'bagit_utils.php';
 
 /**
- * This is the main class for interacting with a bag.
+ * This is the main class BagIt interacting with a bag.
  */
 class BagIt
 {

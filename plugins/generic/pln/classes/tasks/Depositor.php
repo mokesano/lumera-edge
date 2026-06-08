@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class PLNPluginDepositor
+ * @class Depositor
  * @ingroup plugins_generic_pln_tasks
  *
  * @brief Class to perform automated deposits of PLN object.

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Modules\Admin\Form;
+namespace Lumera\Modules\Admin\Form;
 
 /**
  * @defgroup admin_form

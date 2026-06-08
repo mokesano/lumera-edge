@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @package file.wrappers
  * @ingroup file_wrappers
  *
- * Class providing a wrapper for the HTTP protocol.
+ * class HTTPFileWrapper a wrapper for the HTTP protocol.
  * (for when allow_url_fopen is disabled).
  *
  */

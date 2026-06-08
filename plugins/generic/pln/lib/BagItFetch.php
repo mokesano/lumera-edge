@@ -32,7 +32,7 @@ declare(strict_types=1);
  */
 
 /**
- * This is a utility class for managing fetch files.
+ * This is a utility class BagItFetch managing fetch files.
  *
  * These files map file names to hashes.
  *

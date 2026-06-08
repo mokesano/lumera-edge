@@ -7,7 +7,7 @@ declare(strict_types=1);
  * Copyright (c) 2014 University of Pittsburgh
  * Distributed under the GNU GPL v3 or later. For full terms see the file docs/COPYING.
  *
- * @class AR1
+ * @class CounterReportAR1
  * @ingroup plugins_reports_counter
  *
  * @brief Article Report 1

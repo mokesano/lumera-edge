@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Modules\Captcha;
+namespace Lumera\Modules\Captcha;
 
 /**
  * @file core/Modules/Captcha/CaptchaManager.php

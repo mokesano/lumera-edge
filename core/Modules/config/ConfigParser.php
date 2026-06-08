@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Modules\Config;
+namespace Lumera\Modules\Config;
 
 /**
  * @file core/Modules/Config/ConfigParser.php

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Modules\Announcement;
+namespace Lumera\Modules\Announcement;
 
 /**
  * @file core/Modules/Announcement/CoreAnnouncementDAO.php

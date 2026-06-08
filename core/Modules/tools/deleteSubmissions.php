@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class deleteSubmissions
+ * @class DeleteSubmissions
  * @ingroup tools
  *
  * @brief CLI tool to delete submissions

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2003-2015 Rochmady and Wizdam Team
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class Sangia Publishing
+ * @class SangiaPub Publishing
  * @ingroup plugins_themes_sangiapub
  *
  * @brief "sangiapub" theme plugin

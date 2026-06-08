@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Modules\Citation;
+namespace Lumera\Modules\Citation;
 
 /**
  * @defgroup citation

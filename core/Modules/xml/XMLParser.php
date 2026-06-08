@@ -11,7 +11,7 @@ declare(strict_types=1);
  * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class CoreXMLParser
+ * @class XMLParser
  * @ingroup xml
  *
  * @brief Generic class for parsing an XML document into a data structure.

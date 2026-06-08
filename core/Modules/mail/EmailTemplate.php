@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class BaseEmailTemplate
+ * @class EmailTemplate
  * @ingroup mail
  * @see EmailTemplateDAO
  *
@@ -30,7 +30,7 @@ class BaseEmailTemplate extends DataObject {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function BaseEmailTemplate() {
+    public function __construct() {
         trigger_error(
             "Class '" . get_class($this) . "' uses deprecated constructor parent::BaseEmailTemplate(). Please refactor to use parent::__construct().",
             E_USER_DEPRECATED

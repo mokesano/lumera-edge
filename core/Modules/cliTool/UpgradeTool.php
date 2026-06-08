@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class upgradeTool
+ * @class UpgradeTool
  * @ingroup tools
  *
  * @brief CLI tool for upgrading Wizdam.
@@ -48,7 +48,7 @@ class UpgradeTool extends CommandLineTool {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function upgradeTool($argv = []) {
+    public function __construct($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",

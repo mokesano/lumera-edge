@@ -215,7 +215,7 @@ function findJournalInfo($issn) {
     } else {
         // Try multiple patterns to extract grade from profile page
         $gradePatterns = [
-            // From class attributes
+            // From class SintaProxyHandler
             '/class="[^"]*num-stat accredited[^"]*"><a[^>]*><i[^>]*><\/i>\s*S(\d+)\s*<span/is',
             '/S(\d+)\s*<span[^>]*>Accredited<\/span>/is',
             

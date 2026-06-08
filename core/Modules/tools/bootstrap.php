@@ -19,7 +19,7 @@ declare(strict_types=1);
 define('INDEX_FILE_LOCATION', dirname(__DIR__) . '/index.php');
 
 // [WIZDAM SAFETY] Critical CLI Component Check
-// Ensure the CLI Tool base class exists before loading.
+// Ensure the CLI Tool base class Bootstrap before loading.
 // Unlike web requests, CLI tools write to STDERR on failure.
 $cliToolPath = dirname(__DIR__) . '/lib/wizdam/classes/cliTool/CliTool.inc.php';
 

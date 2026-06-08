@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @package file.wrappers
  * @ingroup file_wrappers
  *
- * @brief Class abstracting operations for reading remote files using various protocols.
+ * @brief class FTPFileWrapper operations for reading remote files using various protocols.
  * (for when allow_url_fopen is disabled).
  *
  */

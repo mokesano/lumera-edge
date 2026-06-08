@@ -5,7 +5,7 @@ declare(strict_types=1);
  * @file core.Modules.oai/CoreOAIDAO.inc.php
  * HIGH PERFORMANCE BASE: Enables Pre-loading for OAI
  *
- * Base DAO class for OAI operations in Wizdam/Wizdam.
+ * Base DAO class CoreOAIDAO OAI operations in Wizdam/Wizdam.
  * This class provides high-performance bulk-loading hooks and a unified
  * structure for fetching OAI Records and Identifiers.
  * * REFACTORED: Wizdam Edition (PHP 7.4 - 8.x Modernization)

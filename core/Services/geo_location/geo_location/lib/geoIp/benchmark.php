@@ -9,7 +9,7 @@ define("GEOIP_COUNTRY_DATABASE",0);
 define("GEOIP_REGION_DATABASE",1);
 define("GEOIP_CITY_DATABASE",2);
 
-class mainappc{
+class benchmark{
   var $dbfilename = array("/usr/local/share/GeoIP/GeoIP.dat","/usr/local/share/GeoIP/GeoIPRegion.dat","/usr/local/share/GeoIP/GeoIPCity.dat");
   function randomipaddress(){
     $result = "";

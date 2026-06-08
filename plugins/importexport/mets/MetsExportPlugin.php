@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class METSExportPlugin
+ * @class MetsExportPlugin
  * @ingroup plugins_importexport_mets
  *
  * @brief METS/MODS XML metadata export plugin
@@ -29,7 +29,7 @@ class METSExportPlugin extends ImportExportPlugin {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function METSExportPlugin() {
+    public function __construct() {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor " . get_class($this) . "(). Please refactor to use __construct().",

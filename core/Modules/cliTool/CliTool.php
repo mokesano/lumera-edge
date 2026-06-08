@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Modules\CliTool;
+namespace Lumera\Modules\CliTool;
 
 /**
  * @defgroup tools
@@ -14,7 +14,7 @@ namespace App\Modules\CliTool;
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class CommandLineTool
+ * @class CliTool
  * @ingroup tools
  *
  * @brief Initialization code for command-line scripts.
@@ -87,7 +87,7 @@ class CommandLineTool {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function CommandLineTool($argv = []) {
+    public function __construct($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",

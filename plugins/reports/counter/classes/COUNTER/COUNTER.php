@@ -21,7 +21,7 @@ declare(strict_types=1);
 namespace COUNTER {
 	/**
 	 * COUNTER Reports classes, release 4.1
-	 * Represents the COUNTER XSD schema in class form
+	 * Represents the COUNTER XSD schema in class COUNTER
 	 * @link http://www.niso.org/schemas/sushi
 	 *
 	 * @author Clinton Graham, University of Pittsburgh Library System, University of Pittsburgh <ctgraham@pitt.edu> +1-412-383-1057

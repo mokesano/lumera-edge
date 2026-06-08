@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Modules\Citation;
+namespace Lumera\Modules\Citation;
 
 /**
  * @file core/Modules/Citation/TemplateBasedReferencesListFilter.php

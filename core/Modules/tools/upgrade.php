@@ -7,7 +7,7 @@ declare(strict_types=1);
  * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class AppUpgradeTool
+ * @class Upgrade
  * @ingroup tools
  *
  * @brief CLI tool for upgrading Lumera Edge.
@@ -31,7 +31,7 @@ class AppUpgradeTool extends UpgradeTool {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function AppUpgradeTool($argv = []) {
+    public function __construct($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",

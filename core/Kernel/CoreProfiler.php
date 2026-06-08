@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Kernel;
+namespace Lumera\Kernel;
 
 /**
  * @file core/Kernel/CoreProfiler.php

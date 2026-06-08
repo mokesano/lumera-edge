@@ -32,7 +32,7 @@ declare(strict_types=1);
  */
 
 /**
- * This is a utility class for managing manifest files.
+ * This is a utility class BagItManifest managing manifest files.
  *
  * These files map file names to hashes.
  *

@@ -118,7 +118,7 @@ define('SERVICES_JSON_SUPPRESS_ERRORS', 32);
 
 if (class_exists('PEAR_Error')) {
 
-    class Services_JSON_Error extends PEAR_Error
+    class ServicesJsonError extends PEAR_Error
     {
         /**
          * @param string $message
@@ -136,7 +136,7 @@ if (class_exists('PEAR_Error')) {
         /**
          * PHP 4 compatible constructor deprecated.
          */
-        public function Services_JSON_Error($message = 'unknown error', $code = null,
+        public function __construct($message = 'unknown error', $code = null,
                                      $mode = null, $options = null, $userinfo = null)
         {
             self::__construct($message, $code, $mode, $options, $userinfo);
@@ -166,7 +166,7 @@ if (class_exists('PEAR_Error')) {
         /**
          * PHP 4 compatible constructor deprecated.
          */
-        public function Services_JSON_Error($message = 'unknown error', $code = null,
+        public function __construct($message = 'unknown error', $code = null,
                                      $mode = null, $options = null, $userinfo = null)
         {
             self::__construct($message, $code, $mode, $options, $userinfo);

@@ -36,7 +36,7 @@ require_once 'bagit_manifest.php';
 require_once 'bagit_utils.php';
 
 /**
- * This is a class for all bag exceptions.
+ * This is a class BagItException all bag exceptions.
  */
 class BagItException extends Exception
 {

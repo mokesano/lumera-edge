@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Kernel\CoreWizdamEditorStaff;
+namespace Lumera\Kernel\CoreWizdamEditorStaff;
 
 /**
  * @file core/Kernel/CoreWizdamEditorStaff.php
@@ -10,7 +10,7 @@ namespace Core\Kernel\CoreWizdamEditorStaff;
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class DataObject
+ * @class CoreWizdamEditorStaff
  * @ingroup core
  * 
  * @brief Sistem cache data staff jurnal (Manager dan Editor) untuk homepage.

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Modules\Comment;
+namespace Lumera\Modules\Comment;
 
 /**
  * @file core/Modules/Comment/CommentDAO.php
