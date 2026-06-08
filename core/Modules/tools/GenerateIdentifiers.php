@@ -66,5 +66,8 @@ class GenerateIdentifiers extends CommandLineTool {
     }
 }
 
-$tool = new GenerateIdentifiers($argv ?? []);
-$tool->execute();
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new GenerateIdentifiers($argv);
+    $tool->execute();
+}

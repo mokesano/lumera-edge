@@ -100,7 +100,8 @@ class ImportExport extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new ImportExport($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new ImportExport($argv);
+    $tool->execute();
+}

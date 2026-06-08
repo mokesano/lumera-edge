@@ -133,7 +133,7 @@ class PoToCountries extends CommandLineTool {
         
         // [WIZDAM] Using HEREDOC for clean XML output
         $xmlHeader = <<<XML
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"
 
 <!DOCTYPE countries [
     <!ELEMENT countries (country+)>
@@ -162,7 +162,8 @@ XML;
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new PoToCountries($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new PoToCountries($argv);
+    $tool->execute();
+}

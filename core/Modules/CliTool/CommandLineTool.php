@@ -49,7 +49,12 @@ class CommandLineTool {
     /**
      * Constructor.
      */
-    public function __construct(array $argv = []) {
+    public function __construct($argv = []) {
+        // Handle backward compatibility: convert to array if needed
+        if (!is_array($argv)) {
+            $argv = func_get_args();
+        }
+        
         // [WIZDAM SECURITY] SAPI Check
         // Ensure this is truly running via CLI to prevent web-based invocation attacks.
         if (php_sapi_name() !== 'cli') {
@@ -81,20 +86,6 @@ class CommandLineTool {
             $this->usage();
             exit(0);
         }
-    }
-
-    /**
-     * [SHIM] Backward Compatibility
-     */
-    public function __construct($argv = []) {
-        if (Config::getVar('debug', 'deprecation_warnings')) {
-            trigger_error(
-                "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",
-                E_USER_DEPRECATED
-            );
-        }
-        $args = func_get_args();
-        call_user_func_array([$this, '__construct'], $args);
     }
 
     /**

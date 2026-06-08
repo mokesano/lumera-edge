@@ -48,7 +48,8 @@ class DbXmlToSql extends XmlToSqlTool {
 }
 
 // [WIZDAM] Safe instantiation using Null Coalescing Operator
-$tool = new DbXmlToSql($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new DbXmlToSql($argv);
+    $tool->execute();
+}

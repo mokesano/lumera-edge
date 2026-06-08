@@ -69,6 +69,8 @@ class MigrateInvoices extends CommandLineTool {
     }
 }
 
-$tool = new MigrateInvoices($argv ?? []);
-$tool->execute();
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new MigrateInvoices($argv);
+    $tool->execute();
+}

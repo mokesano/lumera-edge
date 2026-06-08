@@ -44,7 +44,8 @@ class AppUpgradeTool extends UpgradeTool {
 }
 
 // [LUMERA EDGE] Safe instantiation
-$tool = new AppUpgradeTool($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new AppUpgradeTool($argv);
+    $tool->execute();
+}

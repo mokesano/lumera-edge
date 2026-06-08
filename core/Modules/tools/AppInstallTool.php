@@ -62,8 +62,10 @@ class AppInstallTool extends InstallTool {
     }
 }
 
-// [LUMERA EDGE] Safe instantiation
-$tool = new AppInstallTool($argv ?? []);
-$tool->execute();
-
-?>
+// [LUMERA EDGE] Safe instantiation - Only run when executed directly as CLI script
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    // CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new AppInstallTool($argv);
+    $tool->execute();
+}

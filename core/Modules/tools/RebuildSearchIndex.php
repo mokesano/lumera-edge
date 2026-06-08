@@ -109,7 +109,8 @@ class RebuildSearchIndex extends CommandLineTool {
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new RebuildSearchIndex($argv ?? []);
-$tool->execute();
-
-?>
+// CLI execution guard
+if (PHP_SAPI === 'cli' && isset($argv) && basename(__FILE__) === basename($argv[0] ?? '')) {
+    $tool = new RebuildSearchIndex($argv);
+    $tool->execute();
+}
