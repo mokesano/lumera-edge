@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\xslt;
+namespace Lumera\Modules\Xslt;
 
 /**
  * @file core.Modules.xslt/XSLTransformer.inc.php

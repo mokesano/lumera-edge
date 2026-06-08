@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Controllers\Listbuilder\ListbuilderHandler;
 Lumera\Modules\Controllers\Listbuilder\ListbuilderList;
 Lumera\Modules\Controllers\Grid\Feature\OrderMultipleListsItemsFeature;
-namespace Lumera\Modules\controllers\listbuilder;
+namespace Lumera\Modules\Controllers\Listbuilder;
 
 /**
  * @file core.Modules.controllers/listbuilder/MultipleListsListbuilderHandler.inc.php

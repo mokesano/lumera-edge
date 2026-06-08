@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Plugins\Generic\customLocale;
+namespace Lumera\Plugins\Generic\CustomLocale;
 
 /**
  * @file plugins/generic/customLocale/CustomLocalePlugin.inc.php

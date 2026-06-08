@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationOutputFormatFilter;
-namespace Lumera\Modules\plugins\citationOutput\mla\filter;
+namespace Lumera\Modules\Plugins\CitationOutput\Mla\Filter;
 
 /**
  * @defgroup plugins_citationOutput_mla_filter

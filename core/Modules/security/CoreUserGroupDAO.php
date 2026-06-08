@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Security\UserGroup;
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/CoreUserGroupDAO.inc.php

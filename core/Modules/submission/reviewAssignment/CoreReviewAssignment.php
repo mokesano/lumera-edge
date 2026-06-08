@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\submission\reviewAssignment;
+namespace Lumera\Modules\Submission\ReviewAssignment;
 
 /**
  * @file core.Modules.submission/reviewAssignment/CoreReviewAssignment.inc.php

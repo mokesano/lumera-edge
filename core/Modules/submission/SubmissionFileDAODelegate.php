@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Db\DAO;
-namespace Lumera\Modules\submission;
+namespace Lumera\Modules\Submission;
 
 /**
  * @file core.Modules.submission/SubmissionFileDAODelegate.inc.php

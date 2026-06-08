@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\customLocale;
+namespace Lumera\Plugins\Generic\CustomLocale;
 
 /**
  * @file plugins/generic/customLocale/CustomLocaleAction.inc.php

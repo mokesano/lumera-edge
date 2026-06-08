@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\FilterSetting;
 Lumera\Modules\Form\Validation\FormValidatorEmail;
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/EmailFilterSetting.inc.php

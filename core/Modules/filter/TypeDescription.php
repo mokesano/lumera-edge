@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/TypeDescription.inc.php

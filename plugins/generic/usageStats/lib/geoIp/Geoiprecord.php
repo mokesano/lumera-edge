@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\usageStats\lib\geoIp;
+namespace Lumera\Plugins\Generic\UsageStats\Lib\GeoIp;
 
 /* @file Geoiprecord.php
  *

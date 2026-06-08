@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\openAIRE;
+namespace Lumera\Plugins\Generic\OpenAIRE;
 
 /**
  * @file plugins/generic/openAIRE/OpenAIREPlugin.inc.php

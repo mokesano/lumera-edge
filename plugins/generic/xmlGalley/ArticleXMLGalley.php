@@ -6,7 +6,7 @@ Lumera\Modules\Article\SuppFileDAO;
 Lumera\Modules\File\JournalFileManager;
 Lumera\Modules\File\FileManager;
 Lumera\Modules\File\TemporaryFileManager;
-namespace Lumera\Plugins\Generic\xmlGalley;
+namespace Lumera\Plugins\Generic\XmlGalley;
 
 /**
  * @file plugins/generic/xmlGalley/ArticleXMLGalley.inc.php

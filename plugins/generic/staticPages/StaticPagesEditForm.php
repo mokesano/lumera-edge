@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
 Lumera\Modules\File\JournalFileManager;
-namespace Lumera\Plugins\Generic\staticPages;
+namespace Lumera\Plugins\Generic\StaticPages;
 
 /**
  * @file StaticPagesSettingsForm.inc.php

@@ -5,7 +5,7 @@ Lumera\Modules\Handler\Handler;
 Lumera\Modules\ObjectForReviewAssignment;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\objectsForReview\pages;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Pages;
 
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewAuthorHandler.inc.php

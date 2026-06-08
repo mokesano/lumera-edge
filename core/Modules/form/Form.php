@@ -26,7 +26,7 @@ Lumera\Modules\Form\Validation\FormValidatorISSN;
 Lumera\Modules\Form\Validation\FormValidatorORCID;
 Lumera\Modules\Form\Validation\FormValidatorCSRF;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Modules\form;
+namespace Lumera\Modules\Form;
 
 /**
  * @defgroup form

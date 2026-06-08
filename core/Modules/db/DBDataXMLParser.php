@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Xml\XMLParser;
-namespace Lumera\Modules\db;
+namespace Lumera\Modules\Db;
 
 /**
  * @file core.Modules.db/DBDataXMLParser.inc.php

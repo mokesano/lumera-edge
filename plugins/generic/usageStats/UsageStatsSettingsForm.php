@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\usageStats;
+namespace Lumera\Plugins\Generic\UsageStats;
 
 /**
  * @file plugins/generic/usageStats/UsageStatsSettingsForm.inc.php

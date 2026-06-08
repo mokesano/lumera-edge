@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GatewayPlugin;
 Lumera\Modules\Xml\XMLCustomWriter;
-namespace Lumera\Plugins\Gateways\metsGateway;
+namespace Lumera\Plugins\Gateways\MetsGateway;
 
 /**
  * @file plugins/gateways/metsGateway/MetsGatewayPlugin.inc.php

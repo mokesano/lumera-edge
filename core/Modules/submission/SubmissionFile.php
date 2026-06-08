@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\File\CoreFile;
-namespace Lumera\Modules\submission;
+namespace Lumera\Modules\Submission;
 
 /**
  * @file core.Modules.submission/SubmissionFile.inc.php

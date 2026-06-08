@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Gateways\metsGateway;
+namespace Lumera\Plugins\Gateways\MetsGateway;
 
 /**
  * @file plugins/gateways/metsGateway/SettingsForm.inc.php

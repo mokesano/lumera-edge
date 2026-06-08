@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Filter\Filter;
-namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Filter;
 
 /**
  * @defgroup plugins_metadata_nlm30_filter

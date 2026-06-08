@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Webservice\WebService;
 Lumera\Modules\Xslt\XSLTransformer;
-namespace Lumera\Modules\webservice;
+namespace Lumera\Modules\Webservice;
 
 /**
  * @file core.Modules.citation/XmlWebService.inc.php

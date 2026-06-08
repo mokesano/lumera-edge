@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
-namespace Lumera\Modules\plugins\citationParser\regex\filter;
+namespace Lumera\Modules\Plugins\CitationParser\Regex\Filter;
 
 /**
  * @defgroup plugins_citationParser_regex_filter

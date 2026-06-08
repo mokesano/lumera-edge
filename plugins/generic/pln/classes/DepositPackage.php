@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\File\JournalFileManager;
 Lumera\Modules\ScheduledTask\ScheduledTask;
-namespace Lumera\Plugins\Generic\pln\classes;
+namespace Lumera\Plugins\Generic\Pln\Classes;
 
 /**
  * @file plugins/generic/pln/classes/DepositPackage.inc.php

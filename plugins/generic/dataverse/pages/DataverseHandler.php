@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\Api\DataverseApiClient;
-namespace Lumera\Plugins\Generic\dataverse\pages;
+namespace Lumera\Plugins\Generic\Dataverse\Pages;
 
 /**
  * @file plugins/generic/dataverse/pages/DataverseHandler.inc.php

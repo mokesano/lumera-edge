@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Kernel\DataObject;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/MetadataDescription.inc.php

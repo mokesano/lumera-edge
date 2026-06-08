@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\ReviewForm\ReviewFormElement;
-namespace Lumera\Modules\reviewForm;
+namespace Lumera\Modules\ReviewForm;
 
 /**
  * @file core.Modules.reviewForm/ReviewFormElementDAO.inc.php

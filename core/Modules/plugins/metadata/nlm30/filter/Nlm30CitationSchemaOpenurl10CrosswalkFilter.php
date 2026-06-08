@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30Openurl10CrosswalkFilter;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30NameSchemaPersonStringFilter;
-namespace Lumera\Modules\plugins\metadata\nlm30\filter;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Filter;
 
 /**
  * @file plugins/metadata/nlm30/filter/Nlm30CitationSchemaOpenurl10CrosswalkFilter.inc.php

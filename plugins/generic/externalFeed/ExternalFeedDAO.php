@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Db\DAO;
 Lumera\Generic\ExternalFeed\ExternalFeed;
-namespace Lumera\Plugins\Generic\externalFeed;
+namespace Lumera\Plugins\Generic\ExternalFeed;
 
 /**
  * @file plugins/generic/externalFeed/ExternalFeedDAO.inc.php

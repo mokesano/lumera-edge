@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\submission\common;
+namespace Lumera\Modules\Submission\Common;
 
 /**
  * @defgroup submission_common

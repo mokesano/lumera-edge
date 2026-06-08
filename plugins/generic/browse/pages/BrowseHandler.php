@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
 Lumera\Kernel\VirtualArrayIterator;
-namespace Lumera\Plugins\Generic\browse\pages;
+namespace Lumera\Plugins\Generic\Browse\Pages;
 
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php

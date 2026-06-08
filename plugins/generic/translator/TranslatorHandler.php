@@ -6,7 +6,7 @@ Lumera\Kernel\ArrayItemIterator;
 Lumera\Modules\File\EditableLocaleFile;
 Lumera\Modules\File\EditableEmailFile;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Plugins\Generic\translator;
+namespace Lumera\Plugins\Generic\Translator;
 
 /**
  * @file plugins/generic/translator/TranslatorHandler.inc.php

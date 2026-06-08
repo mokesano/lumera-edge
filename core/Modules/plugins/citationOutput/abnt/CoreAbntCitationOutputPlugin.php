@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationOutput\abnt;
+namespace Lumera\Modules\Plugins\CitationOutput\Abnt;
 
 /**
  * @defgroup plugins_citationOutput_abnt

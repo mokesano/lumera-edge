@@ -8,7 +8,7 @@ Lumera\Generic\Lucene\Classes\SolrSearchRequest;
 Lumera\Modules\Search\ArticleSearch;
 Lumera\Modules\Db\DBResultRange;
 Lumera\Modules\Issue\IssueAction;
-namespace Lumera\Plugins\Generic\lucene\classes;
+namespace Lumera\Plugins\Generic\Lucene\Classes;
 
 /**
  * @file plugins/generic/lucene/classes/SolrWebService.inc.php

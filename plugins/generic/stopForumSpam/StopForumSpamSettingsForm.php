@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\stopForumSpam;
+namespace Lumera\Plugins\Generic\StopForumSpam;
 
 /**
  * @file plugins/generic/stopForumSpam/StopForumSpamSettingsForm.inc.php

@@ -6,7 +6,7 @@ Lumera\Modules\ObjectForReview;
 Lumera\Modules\ObjectForReviewPerson;
 Lumera\Modules\ReviewObjectMetadata;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes\Form;
 
 /**
  * @file plugins/generic/objectsForReview/classes/form/ObjectForReviewForm.inc.php

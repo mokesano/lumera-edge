@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Filter\Filter;
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/FilterDAO.inc.php

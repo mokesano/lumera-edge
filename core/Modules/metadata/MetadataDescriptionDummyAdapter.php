@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataDataObjectAdapter;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/MetadataDescriptionDummyAdapter.inc.php

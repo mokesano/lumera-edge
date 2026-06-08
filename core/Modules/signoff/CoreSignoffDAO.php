@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Signoff\Signoff;
-namespace Lumera\Modules\signoff;
+namespace Lumera\Modules\Signoff;
 
 /**
  * @file core.Modules.signoff/CoreSignoffDAO.inc.php

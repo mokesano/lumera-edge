@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\log;
+namespace Lumera\Modules\Log;
 
 /**
  * @file core.Modules.log/EmailLogEntry.inc.php

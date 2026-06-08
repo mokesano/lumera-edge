@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\File\FileManager;
-namespace Lumera\Modules\file;
+namespace Lumera\Modules\File;
 
 /**
  * @file core.Modules.file/PrivateFileManager.inc.php

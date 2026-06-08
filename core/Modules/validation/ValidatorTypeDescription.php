@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Filter\PrimitiveTypeDescription;
-namespace Lumera\Modules\validation;
+namespace Lumera\Modules\Validation;
 
 /**
  * @file core.Modules.filter/ValidatorTypeDescription.inc.php

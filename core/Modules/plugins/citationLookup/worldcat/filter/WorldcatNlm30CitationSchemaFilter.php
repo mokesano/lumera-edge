@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
 Lumera\Modules\Filter\FilterSetting;
 Lumera\Modules\Metadata\MetadataDescription;
-namespace Lumera\Modules\plugins\citationLookup\worldcat\filter;
+namespace Lumera\Modules\Plugins\CitationLookup\Worldcat\Filter;
 
 /**
  * @defgroup plugins_citationLookup_worldcat_filter

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GatewayPlugin;
-namespace Lumera\Plugins\Gateways\resolver;
+namespace Lumera\Plugins\Gateways\Resolver;
 
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php

@@ -5,7 +5,7 @@ Lumera\Modules\Plugins\GatewayPlugin;
 Lumera\Modules\Site\VersionCheck;
 Lumera\Modules\Db\DBResultRange;
 Lumera\Kernel\ArrayItemIterator;
-namespace Lumera\Plugins\Generic\pln;
+namespace Lumera\Plugins\Generic\Pln;
 
 /**
  * @file plugins/generic/pln/PLNGatewayPlugin.inc.php

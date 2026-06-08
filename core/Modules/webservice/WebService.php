@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Webservice\WebServiceRequest;
-namespace Lumera\Modules\webservice;
+namespace Lumera\Modules\Webservice;
 
 /**
  * @file core.Modules.citation/WebService.inc.php

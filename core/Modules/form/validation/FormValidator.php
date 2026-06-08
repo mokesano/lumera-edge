@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\form\validation;
+namespace Lumera\Modules\Form\Validation;
 
 /**
  * @defgroup form_validation

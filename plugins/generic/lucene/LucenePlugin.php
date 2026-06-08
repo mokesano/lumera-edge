@@ -5,7 +5,7 @@ Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Generic\Lucene\Classes\SolrWebService;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\Form\LuceneSettingsForm;
-namespace Lumera\Plugins\Generic\lucene;
+namespace Lumera\Plugins\Generic\Lucene;
 
 /**
  * @file plugins/generic/lucene/LucenePlugin.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Cache\FileCache;
-namespace Lumera\Modules\cache;
+namespace Lumera\Modules\Cache;
 
 /**
  * @file core.Modules.cache/XCacheCache.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Validation\FormValidator;
 Lumera\Modules\Validation\ValidatorISSN;
-namespace Lumera\Modules\form\validation;
+namespace Lumera\Modules\Form\Validation;
 
 /**
  * @file core.Modules.form/validation/FormValidatorISSN.inc.php

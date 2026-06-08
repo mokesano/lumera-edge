@@ -11,7 +11,7 @@ Lumera\Modules\Hooks\UIHookDelegator;
 Lumera\Modules\Form\DataverseAuthForm;
 Lumera\Modules\Form\DataverseSelectForm;
 Lumera\Modules\Form\SettingsForm;
-namespace Lumera\Plugins\Generic\dataverse;
+namespace Lumera\Plugins\Generic\Dataverse;
 
 /**
  * @file plugins/generic/dataverse/DataversePlugin.inc.php

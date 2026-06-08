@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\xml;
+namespace Lumera\Modules\Xml;
 
 /**
  * @file core.Modules.xml/XMLHelper.inc.php

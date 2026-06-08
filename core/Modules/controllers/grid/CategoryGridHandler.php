@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Controllers\Grid\GridHandler;
 Lumera\Modules\Controllers\Grid\GridCategoryRow;
 Lumera\Modules\Controllers\Grid\NullGridCellProvider;
-namespace Lumera\Modules\controllers\grid;
+namespace Lumera\Modules\Controllers\Grid;
 
 /**
  * @file core.Modules.controllers/grid/CategoryGridHandler.inc.php

@@ -5,7 +5,7 @@ Lumera\Modules\File\Wrappers\ResourceWrapper;
 Lumera\Modules\File\Wrappers\HTTPFileWrapper;
 Lumera\Modules\File\Wrappers\HTTPSFileWrapper;
 Lumera\Modules\File\Wrappers\FTPFileWrapper;
-namespace Lumera\Modules\file;
+namespace Lumera\Modules\File;
 
 /**
  * @defgroup file_wrapper

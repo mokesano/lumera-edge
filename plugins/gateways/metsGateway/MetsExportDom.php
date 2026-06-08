@@ -5,7 +5,7 @@ Lumera\Modules\Xml\XMLCustomWriter;
 Lumera\Modules\Config\Config;
 Lumera\Modules\File\PublicFileManager;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Plugins\Gateways\metsGateway;
+namespace Lumera\Plugins\Gateways\MetsGateway;
 
 /**
  * @defgroup GatewayPlugin

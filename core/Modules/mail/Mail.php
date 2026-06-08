@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Mail\SMTPMailer;
-namespace Lumera\Modules\mail;
+namespace Lumera\Modules\Mail;
 
 /**
  * @defgroup mail

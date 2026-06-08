@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\pln\classes\form;
+namespace Lumera\Plugins\Generic\Pln\Classes\Form;
 
 /**
  * @file plugins/generic/pln/PLNSettingsForm.inc.php

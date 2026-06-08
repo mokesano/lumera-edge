@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Rt\RTStruct;
-namespace Lumera\Modules\rt;
+namespace Lumera\Modules\Rt;
 
 /**
  * @file core.Modules.rt/RTAdmin.inc.php

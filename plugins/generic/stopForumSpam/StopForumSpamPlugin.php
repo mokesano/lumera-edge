@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\stopForumSpam;
+namespace Lumera\Plugins\Generic\StopForumSpam;
 
 /**
  * @file plugins/generic/stopForumSpam/StopForumSpamPlugin.inc.php

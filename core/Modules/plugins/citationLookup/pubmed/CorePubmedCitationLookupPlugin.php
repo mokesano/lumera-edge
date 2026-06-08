@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationLookup\pubmed;
+namespace Lumera\Modules\Plugins\CitationLookup\Pubmed;
 
 /**
  * @defgroup plugins_citationLookup_pubmed

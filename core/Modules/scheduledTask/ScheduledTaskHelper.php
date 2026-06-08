@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Mail\Mail;
 Lumera\Modules\File\PrivateFileManager;
-namespace Lumera\Modules\scheduledTask;
+namespace Lumera\Modules\ScheduledTask;
 
 /**
  * @file core.Modules.scheduledTask/ScheduledTaskHelper.inc.php

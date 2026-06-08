@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
 Lumera\Modules\Filter\EmailFilterSetting;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaOpenurl10CrosswalkFilter;
-namespace Lumera\Modules\plugins\citationLookup\crossref\filter;
+namespace Lumera\Modules\Plugins\CitationLookup\Crossref\Filter;
 
 /**
  * @defgroup plugins_citationLookup_crossref_filter

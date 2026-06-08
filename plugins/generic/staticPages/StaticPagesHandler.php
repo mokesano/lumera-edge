@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
-namespace Lumera\Plugins\Generic\staticPages;
+namespace Lumera\Plugins\Generic\StaticPages;
 
 /**
  * @file plugins/generic/staticPages/StaticPagesHandler.inc.php

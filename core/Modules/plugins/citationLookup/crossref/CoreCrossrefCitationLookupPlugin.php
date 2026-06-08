@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationLookup\crossref;
+namespace Lumera\Modules\Plugins\CitationLookup\Crossref;
 
 /**
  * @defgroup plugins_citationLookup_crossref

@@ -5,7 +5,7 @@ Lumera\Modules\Cache\FileCache;
 Lumera\Modules\Cache\APCuCache;
 Lumera\Modules\Cache\MemcacheCache;
 Lumera\Modules\Cache\GenericCache;
-namespace Lumera\Modules\cache;
+namespace Lumera\Modules\Cache;
 
 /**
  * @file core.Modules.cache/CacheManager.inc.php

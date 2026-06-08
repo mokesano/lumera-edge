@@ -8,7 +8,7 @@ Lumera\Modules\Help\HelpTopicDAO;
 Lumera\Modules\Help\HelpTopicSection;
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\Help\Help;
-namespace Lumera\Modules\pages\help;
+namespace Lumera\Modules\Pages\Help;
 
 /**
  * @file core.Modules.pages/help/HelpHandler.inc.php

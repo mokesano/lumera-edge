@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\help;
+namespace Lumera\Modules\Help;
 
 /**
  * @file core.Modules.help/HelpTopicSection.inc.php

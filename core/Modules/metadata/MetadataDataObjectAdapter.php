@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\PersistableFilter;
 Lumera\Modules\Metadata\MetadataDescription;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/MetadataDataObjectAdapter.inc.php

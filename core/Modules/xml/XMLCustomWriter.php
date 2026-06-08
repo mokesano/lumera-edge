@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Xml\XMLNode;
 Lumera\Modules\Xml\XMLComment;
-namespace Lumera\Modules\xml;
+namespace Lumera\Modules\Xml;
 
 /**
  * @file core.Modules.xml/XMLCustomWriter.inc.php

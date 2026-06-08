@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Pages\Manager\ManagerHandler;
 Lumera\Modules\Manager\Form\AnnouncementForm;
 Lumera\Modules\Manager\Form\AnnouncementTypeForm;
-namespace Lumera\Modules\pages\manager;
+namespace Lumera\Modules\Pages\Manager;
 
 /**
  * @file pages/manager/AnnouncementHandler.inc.php

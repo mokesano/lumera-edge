@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\TypeDescription;
 Lumera\Modules\Filter\TypeDescriptionFactory;
-namespace Lumera\Modules\xslt;
+namespace Lumera\Modules\Xslt;
 
 /**
  * @file core.Modules.filter/XMLTypeDescription.inc.php

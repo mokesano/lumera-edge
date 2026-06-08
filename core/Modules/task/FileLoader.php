@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\ScheduledTask\ScheduledTask;
 Lumera\Modules\File\FileManager;
-namespace Lumera\Modules\task;
+namespace Lumera\Modules\Task;
 
 /**
  * @file core.Modules.task/FileLoader.php

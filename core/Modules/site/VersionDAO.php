@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Site\Version;
-namespace Lumera\Modules\site;
+namespace Lumera\Modules\Site;
 
 /**
  * @file core.Modules.site/VersionDAO.inc.php

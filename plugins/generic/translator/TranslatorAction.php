@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\translator;
+namespace Lumera\Plugins\Generic\Translator;
 
 /**
  * @file plugins/generic/translator/TranslatorAction.inc.php

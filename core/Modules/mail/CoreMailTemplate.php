@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Mail\Mail;
 Lumera\Modules\Form\Form;
 Lumera\Modules\File\TemporaryFileManager;
-namespace Lumera\Modules\mail;
+namespace Lumera\Modules\Mail;
 
 /**
  * @file core.Modules.mail/CoreMailTemplate.inc.php

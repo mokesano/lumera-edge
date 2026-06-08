@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridRow;
 Lumera\Modules\Controllers\Grid\GridCategoryRowCellProvider;
-namespace Lumera\Modules\controllers\grid;
+namespace Lumera\Modules\Controllers\Grid;
 
 /**
  * @file core.Modules.controllers/grid/GridCategoryRow.inc.php

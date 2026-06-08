@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\pdfJsViewer;
+namespace Lumera\Plugins\Generic\PdfJsViewer;
 
 /**
  * @file plugins/generic/pdfJsViewer/PdfJsViewerPlugin.inc.php

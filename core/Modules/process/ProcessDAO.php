@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Process\Process;
-namespace Lumera\Modules\process;
+namespace Lumera\Modules\Process;
 
 /**
  * @file core.Modules.process/ProcessDAO.inc.php

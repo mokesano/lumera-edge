@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\User\InterestEntry;
 Lumera\Modules\ControlledVocab\ControlledVocabEntryDAO;
-namespace Lumera\Modules\user;
+namespace Lumera\Modules\User;
 
 /**
  * @file core.Modules.user/InterestsEntryDAO.inc.php

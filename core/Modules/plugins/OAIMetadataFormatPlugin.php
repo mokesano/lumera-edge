@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
 Lumera\Modules\Oai\OAIStruct;
-namespace Lumera\Modules\plugins;
+namespace Lumera\Modules\Plugins;
 
 /**
  * @file core.Modules.classes/plugins/OAIMetadataFormatPlugin.inc.php

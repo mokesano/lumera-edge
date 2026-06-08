@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\customBlockManager;
+namespace Lumera\Plugins\Generic\CustomBlockManager;
 
 /**
  * @file plugins/generic/customBlockManager/CustomBlockEditForm.inc.php

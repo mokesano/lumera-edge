@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridCellProvider;
-namespace Lumera\Modules\controllers\grid;
+namespace Lumera\Modules\Controllers\Grid;
 
 /**
  * @file core.Modules.controllers/grid/GridCategoryRowCellProvider.inc.php

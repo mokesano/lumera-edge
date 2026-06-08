@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationParser\regex;
+namespace Lumera\Modules\Plugins\CitationParser\Regex;
 
 /**
  * @defgroup plugins_citationParser_regex

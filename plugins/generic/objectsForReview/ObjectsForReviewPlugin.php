@@ -8,7 +8,7 @@ Lumera\Modules\ObjectForReviewPersonDAO;
 Lumera\Modules\ObjectForReviewDAO;
 Lumera\Modules\ObjectForReviewSettingsDAO;
 Lumera\Modules\ObjectForReviewAssignmentDAO;
-namespace Lumera\Plugins\Generic\objectsForReview;
+namespace Lumera\Plugins\Generic\ObjectsForReview;
 
 /**
  * @file plugins/generic/objectsForReview/ObjectsForReviewPlugin.inc.php

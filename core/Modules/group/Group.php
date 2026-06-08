@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\group;
+namespace Lumera\Modules\Group;
 
 /**
  * @defgroup group

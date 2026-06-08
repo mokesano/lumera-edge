@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Form\Form;
 Lumera\Generic\Tinymce\TinyMCEPlugin;
 Lumera\Modules\Api\DataverseApiClient;
-namespace Lumera\Plugins\Generic\dataverse\classes\form;
+namespace Lumera\Plugins\Generic\Dataverse\Classes\Form;
 
 /**
  * @file plugins/generic/dataverse/classes/form/SettingsForm.inc.php

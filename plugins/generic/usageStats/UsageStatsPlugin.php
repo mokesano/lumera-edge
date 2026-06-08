@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Generic\UsageStats\UsageStatsReportPlugin;
 Lumera\Modules\File\PrivateFileManager;
-namespace Lumera\Plugins\Generic\usageStats;
+namespace Lumera\Plugins\Generic\UsageStats;
 
 /**
  * @file plugins/generic/usageStats/UsageStatsPlugin.inc.php

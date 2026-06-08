@@ -5,7 +5,7 @@ Lumera\Modules\Form\Form;
 Lumera\Modules\Notification\Notification;
 Lumera\Modules\Captcha\CaptchaManager;
 Lumera\Modules\Payment\AppPaymentManager;
-namespace Lumera\Modules\notification\form;
+namespace Lumera\Modules\Notification\Form;
 
 /**
  * @defgroup notification_form

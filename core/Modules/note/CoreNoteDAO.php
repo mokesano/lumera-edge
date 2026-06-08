@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\note;
+namespace Lumera\Modules\Note;
 
 /**
  * @file core.Modules.note/CoreNoteDAO.inc.php

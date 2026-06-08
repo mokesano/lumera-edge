@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\customBlockManager;
+namespace Lumera\Plugins\Generic\CustomBlockManager;
 
 /**
  * @file plugins/generic/customBlockManager/CustomBlockManagerPlugin.inc.php

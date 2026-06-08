@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Currency\Currency;
-namespace Lumera\Modules\currency;
+namespace Lumera\Modules\Currency;
 
 /**
  * @file core.Modules.currency/CurrencyDAO.inc.php
