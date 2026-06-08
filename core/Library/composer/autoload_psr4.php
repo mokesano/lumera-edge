@@ -6,9 +6,13 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
+    'Lumera\\Plugins\\Paymethod\\Paypal\\' => array($baseDir . '/plugins/paymethod/paypal'),
+    'Lumera\\Plugins\\Paymethod\\Manual\\' => array($baseDir . '/plugins/paymethod/manual'),
     'Lumera\\Plugins\\Paymethod\\' => array($baseDir . '/plugins/paymethod'),
     'Lumera\\Plugins\\Oaimetadataformats\\' => array($baseDir . '/plugins/oaiMetadataFormats'),
+    'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\' => array($baseDir . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes'),
     'Lumera\\Plugins\\Importexport\\' => array($baseDir . '/plugins/importexport'),
+    'Lumera\\Plugins\\Generic\\Pln\\Lib\\' => array($baseDir . '/plugins/generic/pln/lib'),
     'Lumera\\Plugins\\Generic\\' => array($baseDir . '/plugins/generic'),
     'Lumera\\Plugins\\Gateways\\' => array($baseDir . '/plugins/gateways'),
     'Lumera\\Modules\\' => array($baseDir . '/core/Modules'),

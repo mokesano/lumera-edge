@@ -13,9 +13,13 @@ class ComposerStaticInitecb218716fcece06efcbd26128719253
     public static $prefixLengthsPsr4 = array (
         'L' =>
         array (
+            'Lumera\\Plugins\\Paymethod\\Paypal\\' => 32,
+            'Lumera\\Plugins\\Paymethod\\Manual\\' => 32,
             'Lumera\\Plugins\\Paymethod\\' => 25,
             'Lumera\\Plugins\\Oaimetadataformats\\' => 34,
+            'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\' => 63,
             'Lumera\\Plugins\\Importexport\\' => 28,
+            'Lumera\\Plugins\\Generic\\Pln\\Lib\\' => 31,
             'Lumera\\Plugins\\Generic\\' => 23,
             'Lumera\\Plugins\\Gateways\\' => 24,
             'Lumera\\Modules\\' => 15,
@@ -33,6 +37,14 @@ class ComposerStaticInitecb218716fcece06efcbd26128719253
     );
 
     public static $prefixDirsPsr4 = array (
+        'Lumera\\Plugins\\Paymethod\\Paypal\\' =>
+        array (
+            0 => __DIR__ . '/../../..' . '/plugins/paymethod/paypal',
+        ),
+        'Lumera\\Plugins\\Paymethod\\Manual\\' =>
+        array (
+            0 => __DIR__ . '/../../..' . '/plugins/paymethod/manual',
+        ),
         'Lumera\\Plugins\\Paymethod\\' =>
         array (
             0 => __DIR__ . '/../../..' . '/plugins/paymethod',
@@ -41,9 +53,17 @@ class ComposerStaticInitecb218716fcece06efcbd26128719253
         array (
             0 => __DIR__ . '/../../..' . '/plugins/oaiMetadataFormats',
         ),
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\' =>
+        array (
+            0 => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes',
+        ),
         'Lumera\\Plugins\\Importexport\\' =>
         array (
             0 => __DIR__ . '/../../..' . '/plugins/importexport',
+        ),
+        'Lumera\\Plugins\\Generic\\Pln\\Lib\\' =>
+        array (
+            0 => __DIR__ . '/../../..' . '/plugins/generic/pln/lib',
         ),
         'Lumera\\Plugins\\Generic\\' =>
         array (
@@ -1039,6 +1059,14 @@ class ComposerStaticInitecb218716fcece06efcbd26128719253
         'Lumera\\Plugins\\Generic\\xmlGalley\\ArticleXMLGalleyDAO' => __DIR__ . '/../../..' . '/plugins/generic/xmlGalley/ArticleXMLGalleyDAO.php',
         'Lumera\\Plugins\\Generic\\xmlGalley\\XMLGalleyPlugin' => __DIR__ . '/../../..' . '/plugins/generic/xmlGalley/XMLGalleyPlugin.php',
         'Lumera\\Plugins\\Generic\\xmlGalley\\XMLGalleySettingsForm' => __DIR__ . '/../../..' . '/plugins/generic/xmlGalley/XMLGalleySettingsForm.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudComponent' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudComponent.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudConnection' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudConnection.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudContent' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudContent.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudContentDescriptor' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudContentDescriptor.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudFileContent' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudFileContent.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudStreamContent' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudStreamContent.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraCloudXMLParser' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraCloudXMLParser.php',
+        'Lumera\\Plugins\\Importexport\\Duracloud\\Lib\\DuraCloudPHP\\Classes\\DuraStore' => __DIR__ . '/../../..' . '/plugins/importexport/duracloud/lib/DuraCloud-PHP/classes/DuraStore.php',
         'Lumera\\Plugins\\Importexport\\crossref\\CrossRefExportPlugin' => __DIR__ . '/../../..' . '/plugins/importexport/crossref/CrossRefExportPlugin.php',
         'Lumera\\Plugins\\Importexport\\crossref\\CrossrefInfoSender' => __DIR__ . '/../../..' . '/plugins/importexport/crossref/CrossrefInfoSender.php',
         'Lumera\\Plugins\\Importexport\\crossref\\classes\\CrossRefExportDom' => __DIR__ . '/../../..' . '/plugins/importexport/crossref/classes/CrossRefExportDom.php',
@@ -1096,6 +1124,9 @@ class ComposerStaticInitecb218716fcece06efcbd26128719253
         'Lumera\\Plugins\\Oaimetadataformats\\nlm\\OAIMetadataFormat_NLM' => __DIR__ . '/../../..' . '/plugins/oaiMetadataFormats/nlm/OAIMetadataFormat_NLM.php',
         'Lumera\\Plugins\\Oaimetadataformats\\rfc1807\\OAIMetadataFormatPlugin_RFC1807' => __DIR__ . '/../../..' . '/plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.php',
         'Lumera\\Plugins\\Oaimetadataformats\\rfc1807\\OAIMetadataFormat_RFC1807' => __DIR__ . '/../../..' . '/plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormat_RFC1807.php',
+        'Lumera\\Plugins\\Paymethod\\Manual\\ManualPaymentPlugin' => __DIR__ . '/../../..' . '/plugins/paymethod/manual/ManualPaymentPlugin.php',
+        'Lumera\\Plugins\\Paymethod\\Paypal\\PayPalDAO' => __DIR__ . '/../../..' . '/plugins/paymethod/paypal/PayPalDAO.php',
+        'Lumera\\Plugins\\Paymethod\\Paypal\\PayPalPlugin' => __DIR__ . '/../../..' . '/plugins/paymethod/paypal/PayPalPlugin.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -1,40 +1,39 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\tools;
+namespace Lumera\Modules\Tools;
 
 /**
- * @file core/Modules/Tools/RunScheduledTasks.php
+ * @file core/Modules/tools/upgrade.php
  *
- * Copyright (c) 2017-2026 Sangia Publishing House
- * Copyright (c) 2024-2026 Rochmady and Lumera Teams
+ * Copyright (c) 2013-2025 Lumera Edge Project
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class RunScheduledTasks
+ * @class Upgrade
  * @ingroup tools
  *
- * @brief CLI tool to execute a set of scheduled tasks.
- * [WIZDAM EDITION] Scheduled Task Runner Implementation.
+ * @brief CLI tool for upgrading Lumera Edge.
+ * [LUMERA EDGE EDITION] Lumera Edge Upgrade Tool Implementation.
  */
 
 require(__DIR__ . '/bootstrap.php');
 
-import('core.Modules.CliTool.ScheduledTaskTool');
+import('core.Modules.CliTool.UpgradeTool');
 
-class RunScheduledTasks extends ScheduledTaskTool {
-    
+class AppUpgradeTool extends UpgradeTool {
     /**
      * Constructor.
+     * @param array $argv command-line arguments
      */
     public function __construct(array $argv = []) {
-        // [WIZDAM FIX] Call parent::__construct which handles argument parsing and file validation.
+        // [WIZDAM FIX] Call parent::__construct which handles command validation and argument parsing.
         parent::__construct($argv);
     }
 
     /**
      * [SHIM] Backward Compatibility
      */
-    public function runScheduledTasks($argv = []) {
+    public function __construct($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",
@@ -46,8 +45,8 @@ class RunScheduledTasks extends ScheduledTaskTool {
     }
 }
 
-// [WIZDAM] Safe instantiation
-$tool = new RunScheduledTasks($argv ?? []);
+// [LUMERA EDGE] Safe instantiation
+$tool = new AppUpgradeTool($argv ?? []);
 $tool->execute();
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Paymethod;
+namespace Lumera\Plugins\Paymethod\Manual;
 
 /**
  * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php

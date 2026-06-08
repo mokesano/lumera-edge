@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Importexport\duracloud\lib\DuraCloudPHP\classes;
+namespace Lumera\Plugins\Importexport\Duracloud\Lib\DuraCloudPHP\Classes;
 
-namespace Lumera\Plugins\Importexport\duracloud\lib\DuraCloud-PHP\classes;
+namespace Lumera\Plugins\Importexport\Duracloud\Lib\DuraCloudPHP\Classes;
 
 /**
  * @file core.Modules.DuraCloudContent.inc.php

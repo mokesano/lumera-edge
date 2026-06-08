@@ -1,43 +1,40 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\tools;
+namespace Lumera\Modules\Tools;
 
 /**
- * @file core/Modules/Tools/DbXmlToSql.php
+ * @file core/Modules/Tools/RunScheduledTasks.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class DbXmlToSql
+ * @class RunScheduledTasks
  * @ingroup tools
  *
- * @brief CLI tool to output the SQL statements corresponding to an XML database schema.
- * [WIZDAM EDITION] Modernized CLI Tool.
+ * @brief CLI tool to execute a set of scheduled tasks.
+ * [WIZDAM EDITION] Scheduled Task Runner Implementation.
  */
 
 require(__DIR__ . '/bootstrap.php');
 
-import('core.Modules.CliTool.XmlToSqlTool');
+import('core.Modules.CliTool.ScheduledTaskTool');
 
-/** Default XML file to parse if none is specified */
-define('DATABASE_XML_FILE', 'dbscripts/xml/wizdam_schema.xml');
-
-class DbXmlToSql extends XmlToSqlTool {
+class RunScheduledTasks extends ScheduledTaskTool {
+    
     /**
      * Constructor.
-     * @param array $argv command-line arguments
-     * If specified, the first argument should be the file to parse
      */
     public function __construct(array $argv = []) {
+        // [WIZDAM FIX] Call parent::__construct which handles argument parsing and file validation.
         parent::__construct($argv);
     }
 
     /**
      * [SHIM] Backward Compatibility
      */
-    public function dbXMLtoSQL() {
+    public function runScheduledTasks($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",
@@ -49,8 +46,8 @@ class DbXmlToSql extends XmlToSqlTool {
     }
 }
 
-// [WIZDAM] Safe instantiation using Null Coalescing Operator
-$tool = new DbXmlToSql($argv ?? []);
+// [WIZDAM] Safe instantiation
+$tool = new RunScheduledTasks($argv ?? []);
 $tool->execute();
 
 ?>

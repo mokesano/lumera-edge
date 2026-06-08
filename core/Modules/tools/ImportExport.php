@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\tools;
+namespace Lumera\Modules\Tools;
 
 /**
  * @file core/Modules/Tools/ImportExport.php

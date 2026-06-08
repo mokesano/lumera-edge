@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Paymethod;
+namespace Lumera\Plugins\Paymethod\Paypal;
 
 /**
  * @file plugins/paymethod/paypal/PayPalPlugin.inc.php

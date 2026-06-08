@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\pln\lib;
+namespace Lumera\Plugins\Generic\Pln\Lib;
 
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 

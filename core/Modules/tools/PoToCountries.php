@@ -1,21 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\tools;
+namespace Lumera\Modules\Tools;
 
 /**
- * @file core/Modules/Tools/PoToCurrencies.php
+ * @file core/Modules/Tools/PoToCountries.php
  *
  * Copyright (c) 2017-2026 Sangia Publishing House
  * Copyright (c) 2024-2026 Rochmady and Lumera Teams
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class PoToCurrencies
+ * @class PoToCountries
  * @ingroup tools
  *
- * @brief CLI tool to convert a .PO file for ISO4217 into the currencies.xml format
+ * @brief CLI tool to convert a .PO file for ISO3166 into the countries.xml format
  * supported by the Wizdam suite.
- * [WIZDAM EDITION] Modernized Currency Localization Tool.
+ * [WIZDAM EDITION] Modernized Localization Tool.
  */
 
 require(__DIR__ . '/bootstrap.php');
@@ -27,12 +27,12 @@ if (!is_executable(PO_TO_CSV_TOOL)) {
     exit(1);
 }
 
-class PoToCurrencies extends CommandLineTool {
+class PoToCountries extends CommandLineTool {
 
-    /** @var string The target locale (e.g., 'id_ID') */
+    /** @var string */
     protected string $locale = '';
 
-    /** @var string The path to the source PO file */
+    /** @var string */
     protected string $translationFile = '';
 
     /**
@@ -41,7 +41,7 @@ class PoToCurrencies extends CommandLineTool {
     public function __construct(array $argv = []) {
         parent::__construct($argv);
 
-        // $this->argv has been shifted by parent, so [0] is locale, [1] is file
+        // Parent constructor removed $this->argv[0] (script name)
         $this->locale = $this->argv[0] ?? '';
         $this->translationFile = $this->argv[1] ?? '';
 
@@ -58,7 +58,7 @@ class PoToCurrencies extends CommandLineTool {
     /**
      * [SHIM] Backward Compatibility
      */
-    public function poToCurrencies($argv = []) {
+    public function poToCountries($argv = []) {
         if (Config::getVar('debug', 'deprecation_warnings')) {
             trigger_error(
                 "Class '" . get_class($this) . "' uses deprecated constructor parent::" . get_class($this) . "(). Please refactor to use parent::__construct().",
@@ -73,7 +73,7 @@ class PoToCurrencies extends CommandLineTool {
      * Print command usage information.
      */
     public function usage(): void {
-        echo "Script to convert PO file to Wizdam's ISO4217 XML format\n"
+        echo "Script to convert PO file to Wizdam's ISO3166 XML format\n"
             . "Usage: {$this->scriptName} locale /path/to/translation.po\n";
     }
 
@@ -81,94 +81,91 @@ class PoToCurrencies extends CommandLineTool {
      * Execute the conversion and XML generation.
      */
     public function execute(): void {
-        // 1. Read the translated file as a map from English => Whatever
+        // Read the translated file as a map from English => Whatever
         $cmd = PO_TO_CSV_TOOL . ' ' . escapeshellarg($this->translationFile);
         $ih = popen($cmd, 'r');
         
         if ($ih === false) {
-            fwrite(STDERR, 'Error: Unable to execute ' . $cmd . "\n");
+            fwrite(STDERR, 'Error: Unable to read ' . $this->translationFile . ' using ' . PO_TO_CSV_TOOL . "\n");
             exit(1);
         }
 
         $translationMap = [];
         while (($row = fgetcsv($ih)) !== false) {
             if (count($row) != 3) continue;
-            // $row[1] is English name, $row[2] is Translation
-            $translationMap[$row[1]] = $row[2];
+            // list($comment, $english, $translation) = $row; // PHP 7.1+ array destructuring
+            $english = $row[1];
+            $translation = $row[2];
+            $translationMap[$english] = $translation;
         }
         pclose($ih);
 
-        // 2. Get the English map from the DAO
-        /** @var CurrencyDAO $currencyDao */
-        $currencyDao = DAORegistry::getDAO('CurrencyDAO');
-        $currencies = $currencyDao->getCurrencies(); // Returns factory or array of Currency objects
+        // Get the English map from the DAO
+        /** @var CountryDAO $countryDao */
+        $countryDao = DAORegistry::getDAO('CountryDAO');
+        $countries = $countryDao->getCountries(); // Returns array code => English name
 
-        // 3. Generate a translated map of Currency objects
+        // Generate a map of code => translation
         $outputMap = [];
-        foreach ($currencies as $currency) {
-            /** @var Currency $currency */
-            $english = $currency->getName();
-
+        foreach ((array) $countries as $code => $english) {
             if (!isset($translationMap[$english])) {
-                echo "WARNING: Unknown currency \"$english\"! Using English as default.\n";
+                echo "WARNING: Unknown country \"$english\"! Using English as default.\n";
+                $outputMap[$code] = $english;
             } else {
-                $currency->setName($translationMap[$english]);
+                $outputMap[$code] = $translationMap[$english];
+                // Unset to find unused translations, though not strictly necessary for core logic
+                // unset($translationMap[$english]);
             }
-            $outputMap[] = $currency;
         }
 
-        // 4. Write the translated currency list to XML
-        $ofn = 'locale/' . $this->locale . '/currencies.xml';
+        // Use the map to convert the country list to the new locale
+        $ofn = 'registry/locale/' . $this->locale . '/countries.xml';
         
+        // [WIZDAM SAFETY] Ensure directory exists and open file
         $dir = dirname($ofn);
         if (!is_dir($dir) && !mkdir($dir, 0777, true)) {
             fwrite(STDERR, "Error: Unable to create directory for $ofn.\n");
             exit(1);
         }
-        
+
         $oh = fopen($ofn, 'w');
         if ($oh === false) {
             fwrite(STDERR, "Error: Unable to open $ofn for writing.\n");
             exit(1);
         }
-
+        
         // [WIZDAM] Using HEREDOC for clean XML output
         $xmlHeader = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE currencies [
-    <!ELEMENT currencies (currency+)>
-        <!ATTLIST currencies
-            locale CDATA #REQUIRED>
-    <!ELEMENT currency EMPTY>
-        <!ATTLIST currency
-            code_alpha CDATA #REQUIRED
-            code_numeric CDATA #REQUIRED
+<!DOCTYPE countries [
+    <!ELEMENT countries (country+)>
+    <!ELEMENT country EMPTY>
+        <!ATTLIST country
+            code CDATA #REQUIRED
             name CDATA #REQUIRED>
 ]>
 
-<currencies locale="{$this->locale}">
+<countries>
 
 XML;
         fwrite($oh, $xmlHeader);
 
-        foreach ($outputMap as $currency) {
-            /** @var Currency $currency */
-            // [WIZDAM] Ensure name is safe for XML attribute
-            $safeName = htmlspecialchars($currency->getName(), ENT_XML1, 'UTF-8');
-            
-            fwrite($oh, "    <currency name=\"$safeName\" code_alpha=\"{$currency->getCodeAlpha()}\" code_numeric=\"{$currency->getCodeNumeric()}\" />\n");
+        foreach ($outputMap as $code => $translation) {
+            // [WIZDAM] Ensure translation is safe for XML attribute
+            $safeTranslation = htmlspecialchars($translation, ENT_XML1, 'UTF-8');
+            fwrite($oh, "    <country name=\"$safeTranslation\" code=\"$code\"/>\n");
         }
 
-        fwrite($oh, "</currencies>");
+        fwrite($oh, "</countries>");
         fclose($oh);
         
-        printf("Success: Wrote %s currencies to %s\n", count($outputMap), $ofn);
+        printf("Success: Wrote %s entries to %s\n", count($outputMap), $ofn);
     }
 }
 
 // [WIZDAM] Safe instantiation
-$tool = new PoToCurrencies($argv ?? []);
+$tool = new PoToCountries($argv ?? []);
 $tool->execute();
 
 ?>
