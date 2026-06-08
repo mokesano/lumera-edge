@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/MemcacheFalse.php
  *
@@ -22,6 +24,6 @@ import('core.Modules.cache.GenericCache');
 // misses will result.
 
 // Pseudotypes used to represent false and null values in the cache
-class memcache_false {
+class MemcacheFalse {
 }
 ?>

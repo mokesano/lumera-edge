@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\datacite\classes\form;
+
 /**
  * @file plugins/importexport/crossref/classes/form/DOIExportSettingsForm.inc.php
  *

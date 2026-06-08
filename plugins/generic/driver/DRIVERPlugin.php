@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\driver;
+
 /**
  * @file plugins/generic/driver/DRIVERPlugin.inc.php
  *

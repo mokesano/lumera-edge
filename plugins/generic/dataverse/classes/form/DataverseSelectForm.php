@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\dataverse\classes\form;
+
 /**
  * @file plugins/generic/dataverse/classes/form/DataverseSelectForm.inc.php
  *

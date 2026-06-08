@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\dataverse\pages;
+
 /**
  * @file plugins/generic/dataverse/pages/DataverseHandler.inc.php
  *

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\pln\classes\tasks;
+
 /**
  * @file plugins/generic/pln/classes/tasks/Depositor.inc.php
  *

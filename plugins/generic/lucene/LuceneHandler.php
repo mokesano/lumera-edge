@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\lucene;
+
 /**
  * @file plugins/generic/lucene/LuceneHandler.inc.php
  *

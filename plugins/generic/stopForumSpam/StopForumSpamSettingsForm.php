@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\stopForumSpam;
+
 /**
  * @file plugins/generic/stopForumSpam/StopForumSpamSettingsForm.inc.php
  *

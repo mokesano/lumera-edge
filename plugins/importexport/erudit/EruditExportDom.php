@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\erudit;
+
 /**
  * @file plugins/importexport/erudit/EruditExportDom.inc.php
  *

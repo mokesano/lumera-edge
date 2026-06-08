@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Oaimetadataformats\dc;
+
 /**
  * @file plugins/oaiMetadataFormats/dc/OAIMetadataFormatPlugin_DC.inc.php
  *

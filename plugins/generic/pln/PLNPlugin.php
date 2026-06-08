@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\pln;
+
 /**
  * @file plugins/generic/pln/PLNPlugin.inc.php
  *

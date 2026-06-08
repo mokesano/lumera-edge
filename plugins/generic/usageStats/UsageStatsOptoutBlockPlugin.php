@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\usageStats;
+
 /**
  * @file plugins/generic/usageStats/UsageStatsOptoutBlockPlugin.inc.php
  *

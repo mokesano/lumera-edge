@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\duracloud;
+
 /**
  * @file plugins/importexport/duracloud/DuraCloudImportExportPlugin.inc.php
  *

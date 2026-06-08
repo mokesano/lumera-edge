@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Lumera\Plugins\Generic\driver;
+
 /**
  * @file plugins/generic/driver/DRIVERDAO.inc.php
  *

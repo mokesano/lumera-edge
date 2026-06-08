@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\browse\pages;
+
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *

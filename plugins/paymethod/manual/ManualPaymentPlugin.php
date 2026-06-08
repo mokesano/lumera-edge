@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Paymethod;
+
 /**
  * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
  *
@@ -400,4 +402,3 @@ class ManualPaymentPlugin extends PaymethodPlugin {
         return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
     }
 }
-?>

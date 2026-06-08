@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\lucene\classes;
+
 /**
  * @file plugins/generic/lucene/classes/SolrWebService.inc.php
  *

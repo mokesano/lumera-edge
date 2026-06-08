@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\sample;
+
 /**
  * @file plugins/importexport/sample/SampleImportExportPlugin.inc.php
  *

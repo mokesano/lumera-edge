@@ -16,6 +16,6 @@ declare(strict_types=1);
  * @brief Wrapper for manual payment plugin.
  */
 
-require_once('ManualPaymentPlugin.inc.php');
+require_once('ManualPaymentPlugin.php');
 
 return new ManualPaymentPlugin();

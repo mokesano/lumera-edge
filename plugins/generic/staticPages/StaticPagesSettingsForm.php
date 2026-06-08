@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\staticPages;
+
 /**
  * @file plugins/generic/staticPages/StaticPagesSettingsForm.inc.php
  *

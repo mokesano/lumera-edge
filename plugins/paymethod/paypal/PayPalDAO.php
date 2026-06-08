@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Paymethod;
+
 /**
  * @file plugins/paymethod/paypal/PayPalDAO.inc.php
  *
@@ -100,5 +102,3 @@ class PayPalDAO extends DAO {
         return $returner;
     }
 }
-
-?>

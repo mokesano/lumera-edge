@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Gateways\metsGateway;
+
 /**
  * @file plugins/gateways/metsGateway/MetsGatewayPlugin.inc.php
  *
@@ -18,7 +20,7 @@ declare(strict_types=1);
 import('core.Modules.plugins.GatewayPlugin');
 import('core.Modules.xml.XMLCustomWriter');
 
-class METSGatewayPlugin extends GatewayPlugin {
+class MetsGatewayPlugin extends GatewayPlugin {
     
     /** @var int|null */
     protected $journalId;

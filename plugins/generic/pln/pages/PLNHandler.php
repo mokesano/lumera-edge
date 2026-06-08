@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\pln\pages;
+
 /**
  * @file plugins/generic/pln/pages/PLNHandler.inc.php
  *

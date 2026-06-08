@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\openAIRE;
+
 /**
  * @file plugins/generic/openAIRE/OpenAIREPlugin.inc.php
  *

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\medra\classes\form;
+
 /**
  * @file plugins/importexport/medra/classes/form/MedraSettingsForm.inc.php
  *

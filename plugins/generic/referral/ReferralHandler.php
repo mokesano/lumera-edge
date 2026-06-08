@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\referral;
+
 /**
  * @file plugins/generic/referral/ReferralHandler.inc.php
  *

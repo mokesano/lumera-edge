@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\mets;
+
 /**
  * @file plugins/importexport/mets/METSExportPlugin.inc.php
  *
@@ -17,7 +19,7 @@ declare(strict_types=1);
 import('core.Modules.plugins.ImportExportPlugin');
 import('core.Modules.xml.XMLCustomWriter');
 
-class METSExportPlugin extends ImportExportPlugin {
+class MetsExportPlugin extends ImportExportPlugin {
 
     /**
      * Constructor

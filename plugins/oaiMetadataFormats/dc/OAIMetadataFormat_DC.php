@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Oaimetadataformats\dc;
+
 /**
  * @defgroup oai_format
  */

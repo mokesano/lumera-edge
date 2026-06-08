@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\pages\help;
+
 /**
  * @file core.Modules.pages/help/HelpHandler.inc.php
  *

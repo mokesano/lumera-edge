@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\crossref\classes\form;
+
 /**
  * @file plugins/importexport/crossref/classes/form/CrossRefSettingsForm.inc.php
  *

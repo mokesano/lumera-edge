@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\pubmed;
+
 /**
  * @file plugins/importexport/pubmed/PubMedExportPlugin.inc.php
  *

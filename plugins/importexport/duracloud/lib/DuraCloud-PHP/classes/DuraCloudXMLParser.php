@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\duracloud\lib\DuraCloudPHP\classes;
+
+namespace Lumera\Plugins\Importexport\duracloud\lib\DuraCloud-PHP\classes;
+
 /**
  * @file core.Modules.DuraCloudXMLParser.inc.php
  *

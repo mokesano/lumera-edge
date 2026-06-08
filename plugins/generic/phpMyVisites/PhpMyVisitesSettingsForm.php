@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\phpMyVisites;
+
 /**
  * @file plugins/generic/phpMyVisites/PhpMyVisitesSettingsForm.inc.php
  *

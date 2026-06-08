@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\datacite\classes\form;
+
 /**
  * @file plugins/importexport/datacite/classes/form/DataciteSettingsForm.inc.php
  *

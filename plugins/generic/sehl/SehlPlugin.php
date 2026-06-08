@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\sehl;
+
 /**
  * @file plugins/generic/sehl/SehlPlugin.inc.php
  *

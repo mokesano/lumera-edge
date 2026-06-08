@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Gateways\resolver;
+
 /**
  * @file plugins/gateways/resolver/ResolverPlugin.inc.php
  *

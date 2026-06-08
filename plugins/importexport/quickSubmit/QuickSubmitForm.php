@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\quickSubmit;
+
 /**
  * @file plugins/importexport/quickSubmit/QuickSubmitForm.inc.php
  *

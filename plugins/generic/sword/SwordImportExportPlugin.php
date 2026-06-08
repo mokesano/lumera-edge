@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\sword;
+
 /**
  * @file plugins/generic/sword/SwordImportExportPlugin.inc.php
  *

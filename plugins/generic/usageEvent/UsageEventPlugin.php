@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\usageEvent;
+
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *

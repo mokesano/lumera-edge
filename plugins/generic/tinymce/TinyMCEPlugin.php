@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\tinymce;
+
 /**
  * @file plugins/generic/tinymce/TinyMCEPlugin.inc.php
  *

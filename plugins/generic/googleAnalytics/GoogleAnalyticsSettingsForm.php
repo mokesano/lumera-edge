@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\googleAnalytics;
+
 /**
  * @file plugins/generic/googleAnalytics/GoogleAnalyticsSettingsForm.inc.php
  *

@@ -16,5 +16,5 @@ declare(strict_types=1);
  * @brief Wrapper for PayPal plugin.
  */
  
-require_once('PayPalPlugin.inc.php'); 
+require_once('PayPalPlugin.php'); 
 return new PayPalPlugin();

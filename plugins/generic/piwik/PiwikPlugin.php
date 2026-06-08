@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\piwik;
+
 /**
  * @file plugins/generic/piwik/PiwikPlugin.inc.php
  *

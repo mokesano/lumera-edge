@@ -6,7 +6,4 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'SimplePie' => array($vendorDir . '/simplepie/simplepie/library'),
-    'Less' => array($vendorDir . '/wikimedia/less.php/lib'),
-    'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
 );

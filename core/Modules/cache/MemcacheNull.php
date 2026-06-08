@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Modules\cache;
+
 /**
  * @file core/Modules/Cache/MemcacheNull.php
  *
@@ -21,6 +23,6 @@ import('core.Modules.cache.GenericCache');
 // WARNING: This cache MUST be loaded in batch, or else many cache
 // misses will result.
 
-class memcache_null {
+class MemcacheNull {
 }
 ?>

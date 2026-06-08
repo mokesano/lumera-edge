@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\native;
+
 /**
  * @file plugins/importexport/native/NativeImportDom.inc.php
  *

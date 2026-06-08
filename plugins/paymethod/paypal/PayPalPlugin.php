@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Paymethod;
+
 /**
  * @file plugins/paymethod/paypal/PayPalPlugin.inc.php
  * 
@@ -516,4 +518,3 @@ class PayPalPlugin extends PaymethodPlugin {
         return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
     }
 }
-?>

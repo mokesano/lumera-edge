@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\lucene\classes\form;
+
 /**
  * @file plugins/generic/lucene/classes/form/LuceneSettingsForm.inc.php
  *

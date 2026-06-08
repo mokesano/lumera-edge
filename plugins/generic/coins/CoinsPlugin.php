@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\coins;
+
 /**
  * @file plugins/generic/coins/CoinsPlugin.inc.php
  *

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\webFeed;
+
 /**
  * @file plugins/generic/webFeed/WebFeedBlockPlugin.inc.php
  *

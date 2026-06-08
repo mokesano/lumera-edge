@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\objectsForReview;
+
 /**
  * @file plugins/generic/objectsForReview/ObjectsForReviewPlugin.inc.php
  *

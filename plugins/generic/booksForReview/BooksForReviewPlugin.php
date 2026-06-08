@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\booksForReview;
+
 /**
  * @file plugins/generic/booksForReview/BooksForReviewPlugin.inc.php
  *

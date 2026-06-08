@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\objectsForReview\classes\tasks;
+
 /**
  * @file plugins/generic/objectsForReview/classes/tasks/ObjectsForReviewReminder.inc.php
  *

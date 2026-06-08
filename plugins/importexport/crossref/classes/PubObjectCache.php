@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\crossref\classes;
+
 /**
  * @file plugins/importexport/crossref/classes/PubObjectCache.inc.php
  *

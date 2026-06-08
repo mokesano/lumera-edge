@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Importexport\users;
+
 /**
  * @file plugins/importexport/users/UserImportExportPlugin.inc.php
  *

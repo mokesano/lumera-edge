@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Lumera\Plugins\Generic\pln\classes\form;
+
 /**
  * @file plugins/generic/pln/PLNStatusForm.inc.php
  *
