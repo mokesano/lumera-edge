@@ -3,13 +3,13 @@
 
 set_time_limit('300');
 
-include("geoip.inc");
-include("geoipcity.inc");
+include("GeoIP.php");
+include("GeoIPCity.php");
 define("GEOIP_COUNTRY_DATABASE",0);
 define("GEOIP_REGION_DATABASE",1);
 define("GEOIP_CITY_DATABASE",2);
 
-class mainappc {
+class Mainappc {
   var $dbfilename = array("/usr/local/share/GeoIP/GeoIP.dat","/usr/local/share/GeoIP/GeoIPRegion.dat","/usr/local/share/GeoIP/GeoIPCity.dat");
   function randomipaddress(){
     $result = "";
@@ -54,7 +54,7 @@ class mainappc {
 }
 
 
-$mainapp = new mainappc();
+$mainapp = new Mainappc();
 
 
 $mainapp->testgeoipdatabase(GEOIP_COUNTRY_DATABASE,GEOIP_STANDARD,"Geoip Country ",10000);
