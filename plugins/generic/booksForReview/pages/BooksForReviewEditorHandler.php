@@ -10,7 +10,7 @@ Lumera\Modules\Form\BooksForReviewSettingsForm;
 Lumera\Modules\Security\Validation;
 Lumera\Modules\Db\DAO;
 Lumera\Modules\Mail\MailTemplate;
-namespace Lumera\Plugins\Generic\booksForReview\pages;
+namespace Lumera\Plugins\Generic\BooksForReview\Pages;
 
 /**
  * @file plugins/generic/booksForReview/pages/BooksForReviewEditorHandler.inc.php

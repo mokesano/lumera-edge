@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\Form\BrowseSettingsForm;
-namespace Lumera\Plugins\Generic\browse;
+namespace Lumera\Plugins\Generic\Browse;
 
 /**
  * @file plugins/generic/browse/BrowsePlugin.inc.php

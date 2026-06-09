@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\BookForReview;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\booksForReview\pages;
+namespace Lumera\Plugins\Generic\BooksForReview\Pages;
 
 /**
  * @file plugins/generic/booksForReview/pages/BooksForReviewHandler.inc.php

@@ -6,7 +6,7 @@ Lumera\Modules\BookForReviewDAO;
 Lumera\Modules\BookForReviewAuthorDAO;
 Lumera\Modules\BookForReview;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\booksForReview;
+namespace Lumera\Plugins\Generic\BooksForReview;
 
 /**
  * @file plugins/generic/booksForReview/BooksForReviewPlugin.inc.php

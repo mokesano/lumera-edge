@@ -5,7 +5,7 @@ Lumera\Modules\ScheduledTask\ScheduledTask;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\BookForReviewDAO;
 Lumera\Modules\BookForReviewAuthorDAO;
-namespace Lumera\Plugins\Generic\booksForReview\classes;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes;
 
 /**
  * @file plugins/generic/booksForReview/classes/BooksForReviewReminder.inc.php

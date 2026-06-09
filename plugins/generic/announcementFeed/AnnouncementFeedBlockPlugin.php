@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\Plugins\BlockPlugin;
-namespace Lumera\Plugins\Generic\announcementFeed;
+namespace Lumera\Plugins\Generic\AnnouncementFeed;
+
+use Lumera\Modules\Plugins\BlockPlugin;
 
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedBlockPlugin.inc.php
@@ -136,5 +137,4 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
         }
     }
 }
-
 ?>

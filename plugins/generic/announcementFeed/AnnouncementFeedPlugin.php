@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\announcementFeed;
+namespace Lumera\Plugins\Generic\AnnouncementFeed;
 
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedPlugin.inc.php

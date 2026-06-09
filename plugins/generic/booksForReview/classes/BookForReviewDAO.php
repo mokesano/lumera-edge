@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Db\DAO;
 Lumera\Modules\BookForReview;
 Lumera\Modules\File\PublicFileManager;
-namespace Lumera\Plugins\Generic\booksForReview\classes;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes;
 
 /**
  * @file plugins/generic/booksForReview/classes/BookForReviewDAO.inc.php

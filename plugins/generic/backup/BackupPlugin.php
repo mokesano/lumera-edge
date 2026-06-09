@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\backup;
+namespace Lumera\Plugins\Generic\Backup;
 
 /**
  * @file plugins/generic/backup/BackupPlugin.inc.php

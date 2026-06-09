@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\BookForReviewAuthor;
-namespace Lumera\Plugins\Generic\booksForReview\classes;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes;
 
 /**
  * @file plugins/generic/booksForReview/classes/BookForReviewAuthorDAO.inc.php

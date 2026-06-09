@@ -5,7 +5,7 @@ Lumera\Modules\Handler\Handler;
 Lumera\Modules\BookForReview;
 Lumera\Modules\Mail\MailTemplate;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\booksForReview\pages;
+namespace Lumera\Plugins\Generic\BooksForReview\Pages;
 
 /**
  * @file plugins/generic/booksForReview/pages/BooksForReviewAuthorHandler.inc.php

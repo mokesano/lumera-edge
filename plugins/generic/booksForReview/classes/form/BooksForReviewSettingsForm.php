@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\booksForReview\classes\form;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes\Form;
 
 /**
  * @file plugins/generic/booksForReview/classes/BooksForReviewSettingsForm.inc.php

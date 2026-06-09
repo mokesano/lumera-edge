@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\browse\classes\form;
+namespace Lumera\Plugins\Generic\Browse\Classes\Form;
 
 /**
  * @file plugins/generic/browse/BrowseSettingsForm.inc.php

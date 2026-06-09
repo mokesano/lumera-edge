@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GatewayPlugin;
 Lumera\Modules\Db\DBResultRange;
-namespace Lumera\Plugins\Generic\announcementFeed;
+namespace Lumera\Plugins\Generic\AnnouncementFeed;
 
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedGatewayPlugin.inc.php

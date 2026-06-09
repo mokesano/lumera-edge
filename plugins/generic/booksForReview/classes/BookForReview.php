@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\booksForReview\classes;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes;
 
 /**
  * @file plugins/generic/booksForReview/classes/BookForReview.inc.php

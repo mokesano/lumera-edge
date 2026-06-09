@@ -1,10 +1,18 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\Plugins\GenericPlugin;
-Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
-Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\acron;
+namespace Lumera\Plugins\Generic\Acron;
+
+use Lumera\Modules\Plugins\GenericPlugin;
+use Lumera\Modules\ScheduledTask\ScheduledTaskHelper;
+use Lumera\Modules\Notification\NotificationManager;
+use Lumera\Modules\Config\Config;
+use Lumera\Modules\Plugins\HookRegistry;
+use Lumera\Modules\Plugins\PluginRegistry;
+use Lumera\Kernel\Registry;
+use Lumera\Modules\Db\DAORegistry;
+use Lumera\Modules\Xml\XMLParser;
+use Lumera\Modules\Xml\XMLNode;
 
 /**
  * @file plugins/generic/acron/AcronPlugin.inc.php

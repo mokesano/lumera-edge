@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\announcementFeed;
+namespace Lumera\Plugins\Generic\AnnouncementFeed;
 
 /**
  * @file plugins/generic/announcementFeed/SettingsForm.inc.php

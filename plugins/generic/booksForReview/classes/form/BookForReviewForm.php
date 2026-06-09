@@ -5,7 +5,7 @@ Lumera\Modules\Form\Form;
 Lumera\Modules\BookForReview;
 Lumera\Modules\File\PublicFileManager;
 Lumera\Modules\BookForReviewAuthor;
-namespace Lumera\Plugins\Generic\booksForReview\classes\form;
+namespace Lumera\Plugins\Generic\BooksForReview\Classes\Form;
 
 /**
  * @file plugins/generic/booksForReview/classes/form/BookForReviewForm.inc.php
