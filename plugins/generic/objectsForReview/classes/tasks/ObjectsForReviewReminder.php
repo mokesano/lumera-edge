@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\ScheduledTask\ScheduledTask;
 Lumera\Modules\Mail\MailTemplate;
-namespace Lumera\Plugins\Generic\objectsForReview\classes\tasks;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes\Tasks;
 
 /**
  * @file plugins/generic/objectsForReview/classes/tasks/ObjectsForReviewReminder.inc.php

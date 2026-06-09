@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\OAIMetadataFormatPlugin;
-namespace Lumera\Modules\plugins\oaiMetadataFormats\dc;
+namespace Lumera\Modules\Plugins\OaiMetadataFormats\Dc;
 
 /**
  * @file plugins/oaiMetadata/dc/CoreOAIMetadataFormatPlugin_DC.inc.php

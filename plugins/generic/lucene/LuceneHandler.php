@@ -5,7 +5,7 @@ Lumera\Modules\Handler\Handler;
 Lumera\Generic\Lucene\Classes\SolrWebService;
 Lumera\Kernel\JSONMessage;
 Lumera\Modules\Search\ArticleSearch;
-namespace Lumera\Plugins\Generic\lucene;
+namespace Lumera\Plugins\Generic\Lucene;
 
 /**
  * @file plugins/generic/lucene/LuceneHandler.inc.php

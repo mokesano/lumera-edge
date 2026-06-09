@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Payment\Payment;
-namespace Lumera\Modules\payment;
+namespace Lumera\Modules\Payment;
 
 /**
  * @file core.Modules.payment/QueuedPayment.inc.php

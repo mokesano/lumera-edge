@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\notification;
+namespace Lumera\Modules\Notification;
 
 /**
  * @file core.Modules.notification/NotificationMailListDAO.inc.php

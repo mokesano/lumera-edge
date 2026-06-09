@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Filter\ClassTypeDescription;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/MetadataTypeDescription.inc.php

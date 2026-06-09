@@ -8,7 +8,7 @@ Lumera\Modules\Form\ReviewObjectMetadataForm;
 Lumera\Modules\ReviewObjectType;
 Lumera\Modules\ReviewObjectMetadata;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\objectsForReview\pages;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Pages;
 
 /**
  * @file plugins/generic/objectsForReview/pages/ReviewObjectTypesEditorHandler.inc.php

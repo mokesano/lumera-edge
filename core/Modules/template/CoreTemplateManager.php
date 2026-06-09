@@ -5,7 +5,7 @@ Lumera\Modules\Validation\ValidatorCSRF;
 Lumera\Kernel\JSONMessage;
 Lumera\Modules\Form\FormBuilderVocabulary;
 Lumera\Modules\LinkAction\Request\NullAction;
-namespace Lumera\Modules\template;
+namespace Lumera\Modules\Template;
 
 /**
  * @defgroup template

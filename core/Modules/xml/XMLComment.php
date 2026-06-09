@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Xml\XMLNode;
-namespace Lumera\Modules\xml;
+namespace Lumera\Modules\Xml;
 
 /**
  * @file core.Modules.xml/XMLComment.inc.php

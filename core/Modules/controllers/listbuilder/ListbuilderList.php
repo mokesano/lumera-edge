@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\controllers\listbuilder;
+namespace Lumera\Modules\Controllers\Listbuilder;
 
 /**
  * @file core.Modules.controllers/listbuilder/ListbuilderList.inc.php

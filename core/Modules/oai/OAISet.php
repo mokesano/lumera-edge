@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\oai;
+namespace Lumera\Modules\Oai;
 
 /**
  * @file core/Modules/oai/OAISet.php

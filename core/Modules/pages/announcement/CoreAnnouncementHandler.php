@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
-namespace Lumera\Modules\pages\announcement;
+namespace Lumera\Modules\Pages\Announcement;
 
 /**
  * @file pages/announcement/CoreAnnouncementHandler.inc.php

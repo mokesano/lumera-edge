@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationParser\paracite;
+namespace Lumera\Modules\Plugins\CitationParser\Paracite;
 
 /**
  * @defgroup plugins_citationParser_paracite

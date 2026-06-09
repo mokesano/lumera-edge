@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\ReviewObjectType;
-namespace Lumera\Plugins\Generic\objectsForReview\classes;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes;
 
 /**
  * @file plugins/generic/objectsForReview/classes/ReviewObjectTypeDAO.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Kernel\DataObject;
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/FilterGroup.inc.php

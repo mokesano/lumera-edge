@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationLookup\worldcat;
+namespace Lumera\Modules\Plugins\CitationLookup\Worldcat;
 
 /**
  * @defgroup plugins_citationLookup_worldcat

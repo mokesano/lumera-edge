@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\driver;
+namespace Lumera\Plugins\Generic\Driver;
 
 /**
  * @file plugins/generic/driver/DRIVERPlugin.inc.php

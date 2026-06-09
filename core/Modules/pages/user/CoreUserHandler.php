@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\User\InterestManager;
 Lumera\Kernel\JSONMessage;
-namespace Lumera\Modules\pages\user;
+namespace Lumera\Modules\Pages\User;
 
 /**
  * @file pages/user/CoreUserHandler.inc.php

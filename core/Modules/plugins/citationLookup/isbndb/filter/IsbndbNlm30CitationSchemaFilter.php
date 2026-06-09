@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
 Lumera\Modules\Filter\FilterSetting;
-namespace Lumera\Modules\plugins\citationLookup\isbndb\filter;
+namespace Lumera\Modules\Plugins\CitationLookup\Isbndb\Filter;
 
 /**
  * @defgroup plugins_citationLookup_isbndb_filter

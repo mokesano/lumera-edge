@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Openurl10Nlm30CitationSchemaCrosswalkFilter;
 Lumera\Modules\Filter\SetFilterSetting;
-namespace Lumera\Modules\plugins\citationParser\paracite\filter;
+namespace Lumera\Modules\Plugins\CitationParser\Paracite\Filter;
 
 /**
  * @defgroup plugins_citationParser_paracite_filter

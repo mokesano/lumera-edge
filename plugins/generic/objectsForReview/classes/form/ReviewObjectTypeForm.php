@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Form\Form;
 Lumera\Modules\ReviewObjectType;
 Lumera\Modules\ReviewObjectMetadata;
-namespace Lumera\Plugins\Generic\objectsForReview\classes\form;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes\Form;
 
 /**
  * @file plugins/generic/objectsForReview/classes/form/ReviewObjectTypeForm.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Kernel\VirtualArrayIterator;
-namespace Lumera\Plugins\Generic\referral;
+namespace Lumera\Plugins\Generic\Referral;
 
 /**
  * @file plugins/generic/referral/ReferralPlugin.inc.php

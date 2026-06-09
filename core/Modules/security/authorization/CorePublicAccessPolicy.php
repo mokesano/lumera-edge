@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Security\Authorization\HandlerOperationPolicy;
-namespace Lumera\Modules\security\authorization;
+namespace Lumera\Modules\Security\Authorization;
 
 /**
  * @file core.Modules.security/authorization/CorePublicAccessPolicy.inc.php

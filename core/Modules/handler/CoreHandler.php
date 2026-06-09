@@ -11,7 +11,7 @@ Lumera\Modules\Security\Authorization\UserRolesRequiredPolicy;
 Lumera\Modules\Validation\ValidatorCSRF;
 Lumera\Modules\Notification\NotificationManager;
 Lumera\Modules\Db\DBResultRange;
-namespace Lumera\Modules\handler;
+namespace Lumera\Modules\Handler;
 
 /**
  * @file core.Modules.core/CoreHandler.inc.php

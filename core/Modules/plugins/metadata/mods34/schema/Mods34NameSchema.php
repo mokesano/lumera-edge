@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataSchema;
-namespace Lumera\Modules\plugins\metadata\mods34\schema;
+namespace Lumera\Modules\Plugins\Metadata\Mods34\Schema;
 
 /**
  * @file plugins/metadata/mods34/schema/Mods34NameSchema.inc.php

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Help\HelpToc;
 Lumera\Modules\Help\HelpTopic;
-namespace Lumera\Modules\help;
+namespace Lumera\Modules\Help;
 
 /**
  * @file core.Modules.help/HelpTocDAO.inc.php

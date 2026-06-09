@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridBodyElement;
 Lumera\Modules\Controllers\Grid\ArrayGridCellProvider;
-namespace Lumera\Modules\controllers\grid;
+namespace Lumera\Modules\Controllers\Grid;
 
 /**
  * @file core.Modules.controllers/grid/GridColumn.inc.php

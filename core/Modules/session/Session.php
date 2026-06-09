@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\session;
+namespace Lumera\Modules\Session;
 
 /**
  * @file core.Modules.session/Session.inc.php

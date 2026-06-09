@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\usageEvent;
+namespace Lumera\Plugins\Generic\UsageEvent;
 
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php

@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Notification\NotificationManager;
 Lumera\Modules\File\ArticleFileManager;
 Lumera\Modules\DataverseFile;
-namespace Lumera\Plugins\Generic\dataverse\classes\hooks;
+namespace Lumera\Plugins\Generic\Dataverse\Classes\Hooks;
 
 /**
  * @file plugins/generic/dataverse/classes/hooks/FormHookDelegator.inc.php

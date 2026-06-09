@@ -5,7 +5,7 @@ Lumera\Modules\Db\DBConnection;
 Lumera\Modules\Db\DAOResultFactory;
 Lumera\Kernel\DataObject;
 Lumera\Kernel\JSONMessage;
-namespace Lumera\Modules\db;
+namespace Lumera\Modules\Db;
 
 /**
  * @defgroup db

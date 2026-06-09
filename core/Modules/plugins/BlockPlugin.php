@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\LazyLoadPlugin;
-namespace Lumera\Modules\plugins;
+namespace Lumera\Modules\Plugins;
 
 /**
  * @file core.Modules.plugins/BlockPlugin.inc.php

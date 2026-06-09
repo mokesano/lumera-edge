@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\phpMyVisites;
+namespace Lumera\Plugins\Generic\PhpMyVisites;
 
 /**
  * @file plugins/generic/phpMyVisites/PhpMyVisitesSettingsForm.inc.php

@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\ObjectForReview;
 Lumera\Modules\File\PublicFileManager;
 Lumera\Modules\ReviewObjectMetadata;
-namespace Lumera\Plugins\Generic\objectsForReview\classes;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes;
 
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewDAO.inc.php

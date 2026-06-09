@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\recaptcha;
+namespace Lumera\Modules\Recaptcha;
 
 /*
  * This is a PHP library that handles calling reCAPTCHA.

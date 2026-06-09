@@ -5,7 +5,7 @@ Lumera\Kernel\DataObject;
 Lumera\Modules\Filter\TypeDescription;
 Lumera\Modules\Filter\TypeDescriptionFactory;
 Lumera\Kernel\RuntimeEnvironment;
-namespace Lumera\Modules\filter;
+namespace Lumera\Modules\Filter;
 
 /**
  * @file core.Modules.filter/Filter.inc.php

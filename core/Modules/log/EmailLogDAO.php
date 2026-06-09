@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Log\EmailLogEntry;
-namespace Lumera\Modules\log;
+namespace Lumera\Modules\Log;
 
 /**
  * @file core.Modules.log/EmailLogDAO.inc.php

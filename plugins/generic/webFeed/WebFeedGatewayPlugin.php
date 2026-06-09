@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Plugins\GatewayPlugin;
 Lumera\Modules\Db\DBResultRange;
-namespace Lumera\Plugins\Generic\webFeed;
+namespace Lumera\Plugins\Generic\WebFeed;
 
 /**
  * @file plugins/generic/webFeed/WebFeedGatewayPlugin.inc.php

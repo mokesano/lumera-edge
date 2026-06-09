@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Filter\PersistableFilter;
 Lumera\Modules\Xslt\XSLTransformer;
 Lumera\Modules\Filter\FilterSetting;
-namespace Lumera\Modules\xslt;
+namespace Lumera\Modules\Xslt;
 
 /**
  * @file core.Modules.metadata/XSLTransformationFilter.inc.php

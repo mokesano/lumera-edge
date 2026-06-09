@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Task\FileLoader;
-namespace Lumera\Plugins\Generic\usageStats;
+namespace Lumera\Plugins\Generic\UsageStats;
 
 /**
  * @file plugins/generic/usageStats/UsageStatsLoader.php

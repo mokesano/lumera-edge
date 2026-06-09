@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/AccessKeyManager.inc.php

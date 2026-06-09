@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\lucene\classes;
+namespace Lumera\Plugins\Generic\Lucene\Classes;
 
 /**
  * @file plugins/generic/lucene/classes/EmbeddedServer.inc.php

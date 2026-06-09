@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Submission\ReviewAssignment\CoreReviewAssignment;
-namespace Lumera\Modules\submission\reviewAssignment;
+namespace Lumera\Modules\Submission\ReviewAssignment;
 
 /**
  * @file core.Modules.submission/reviewAssignment/CoreReviewAssignmentDAO.inc.php

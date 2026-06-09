@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\dataverse\classes\hooks;
+namespace Lumera\Plugins\Generic\Dataverse\Classes\Hooks;
 
 /**
  * @file plugins/generic/dataverse/classes/hooks/UIHookDelegator.inc.php

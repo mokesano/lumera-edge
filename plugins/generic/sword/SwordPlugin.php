@@ -5,7 +5,7 @@ Lumera\Modules\Plugins\GenericPlugin;
 Lumera\Modules\Sword\AppSwordDeposit;
 Lumera\Modules\Notification\NotificationManager;
 Lumera\Modules\Mail\ArticleMailTemplate;
-namespace Lumera\Plugins\Generic\sword;
+namespace Lumera\Plugins\Generic\Sword;
 
 /**
  * @file plugins/generic/sword/SwordPlugin.inc.php

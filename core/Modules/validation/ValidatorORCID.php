@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Validation\ValidatorRegExp;
 Lumera\Modules\Validation\ValidatorISNI;
-namespace Lumera\Modules\validation;
+namespace Lumera\Modules\Validation;
 
 /**
  * @file core.Modules.validation/ValidatorORCID.inc.php

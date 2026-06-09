@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataSchema;
-namespace Lumera\Modules\plugins\metadata\dc11\schema;
+namespace Lumera\Modules\Plugins\Metadata\Dc11\Schema;
 
 /**
  * @defgroup plugins_metadata_dc11_schema

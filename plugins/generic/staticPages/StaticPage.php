@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Plugins\Generic\staticPages;
+namespace Lumera\Plugins\Generic\StaticPages;
 
 /**
  * @file plugins/generic/staticPages/StaticPage.inc.php

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Modules\notification\form;
+namespace Lumera\Modules\Notification\Form;
 
 /**
  * @defgroup notification_form

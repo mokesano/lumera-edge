@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\BlockPlugin;
-namespace Lumera\Plugins\Generic\lucene;
+namespace Lumera\Plugins\Generic\Lucene;
 
 /**
  * @file plugins/generic/lucene/LuceneFacetsBlockPlugin.inc.php

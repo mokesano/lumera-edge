@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Security\AuthSource;
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/AuthSourceDAO.inc.php

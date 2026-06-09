@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Handler\Handler;
 Lumera\Modules\File\PublicFileManager;
 Lumera\Modules\ReviewObjectMetadata;
-namespace Lumera\Plugins\Generic\objectsForReview\pages;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Pages;
 
 /**
  * @file plugins/generic/objectsForReview/pages/ObjectsForReviewHandler.inc.php

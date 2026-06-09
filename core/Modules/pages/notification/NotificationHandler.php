@@ -6,7 +6,7 @@ Lumera\Modules\Notification\Notification;
 Lumera\Modules\Notification\Form\NotificationSettingsForm;
 Lumera\Modules\Notification\Form\NotificationMailingListForm;
 Lumera\Kernel\JSONMessage;
-namespace Lumera\Modules\pages\notification;
+namespace Lumera\Modules\Pages\Notification;
 
 /**
  * @file pages/notification/NotificationHandler.inc.php

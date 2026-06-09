@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Controllers\Grid\GridCellProvider;
-namespace Lumera\Modules\controllers\grid\filter;
+namespace Lumera\Modules\Controllers\Grid\Filter;
 
 /**
  * @file core.Modules.controllers/grid/filter/FilterGridCellProvider.inc.php

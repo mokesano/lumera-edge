@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Form\Form;
-namespace Lumera\Plugins\Generic\xmlGalley;
+namespace Lumera\Plugins\Generic\XmlGalley;
 
 /**
  * @file plugins/generic/xmlGalley/XMLGalleySettingsForm.inc.php

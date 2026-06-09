@@ -6,7 +6,7 @@ Lumera\Modules\Controllers\Grid\Filter\CoreFilterGridRow;
 Lumera\Modules\Controllers\Grid\Filter\FilterGridCellProvider;
 Lumera\Modules\Metadata\MetadataDescription;
 Lumera\Modules\Controllers\Grid\Filter\Form\FilterForm;
-namespace Lumera\Modules\controllers\grid\filter;
+namespace Lumera\Modules\Controllers\Grid\Filter;
 
 /**
  * @file core.Modules.controllers/grid/filter/CoreFilterGridHandler.inc.php

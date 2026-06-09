@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataProperty;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @defgroup metadata

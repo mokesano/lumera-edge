@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\json;
+namespace Lumera\Modules\Json;
 
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 

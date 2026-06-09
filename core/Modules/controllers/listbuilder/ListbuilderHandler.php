@@ -7,7 +7,7 @@ Lumera\Modules\Controllers\Listbuilder\ListbuilderGridColumn;
 Lumera\Modules\Controllers\Listbuilder\MultilingualListbuilderGridColumn;
 Lumera\Modules\LinkAction\Request\NullAction;
 Lumera\Kernel\JSONManager;
-namespace Lumera\Modules\controllers\listbuilder;
+namespace Lumera\Modules\Controllers\Listbuilder;
 
 /**
  * @file core.Modules.controllers/listbuilder/ListbuilderHandler.inc.php

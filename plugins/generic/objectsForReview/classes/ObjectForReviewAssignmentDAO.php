@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\ObjectForReviewAssignment;
 Lumera\Modules\ReviewObjectMetadata;
-namespace Lumera\Plugins\Generic\objectsForReview\classes;
+namespace Lumera\Plugins\Generic\ObjectsForReview\Classes;
 
 /**
  * @file plugins/generic/objectsForReview/classes/ObjectForReviewAssignmentDAO.inc.php

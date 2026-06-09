@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins;
+namespace Lumera\Modules\Plugins;
 
 /**
  * @file core.Modules.plugins/CachedPlugin.inc.php

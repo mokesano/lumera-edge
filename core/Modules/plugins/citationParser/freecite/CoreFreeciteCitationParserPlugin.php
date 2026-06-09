@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationParser\freecite;
+namespace Lumera\Modules\Plugins\CitationParser\Freecite;
 
 /**
  * @defgroup plugins_citationParser_freecite

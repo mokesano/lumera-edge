@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Session\Session;
-namespace Lumera\Modules\session;
+namespace Lumera\Modules\Session;
 
 /**
  * @file core.Modules.session/SessionDAO.inc.php

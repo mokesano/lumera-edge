@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Plugin;
-namespace Lumera\Modules\plugins\citationParser\parscit;
+namespace Lumera\Modules\Plugins\CitationParser\Parscit;
 
 /**
  * @defgroup plugins_citationParser_parscit

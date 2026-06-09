@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\piwik;
+namespace Lumera\Plugins\Generic\Piwik;
 
 /**
  * @file plugins/generic/piwik/PiwikPlugin.inc.php

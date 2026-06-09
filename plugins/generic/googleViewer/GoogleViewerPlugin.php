@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\GenericPlugin;
-namespace Lumera\Plugins\Generic\googleViewer;
+namespace Lumera\Plugins\Generic\GoogleViewer;
 
 /**
  * @file plugins/generic/googleViewer/GoogleViewerPlugin.inc.php

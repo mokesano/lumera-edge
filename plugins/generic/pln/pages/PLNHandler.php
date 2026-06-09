@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Handler\Handler;
-namespace Lumera\Plugins\Generic\pln\pages;
+namespace Lumera\Plugins\Generic\Pln\Pages;
 
 /**
  * @file plugins/generic/pln/pages/PLNHandler.inc.php

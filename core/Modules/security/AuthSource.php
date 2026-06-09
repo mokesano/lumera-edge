@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\AuthPlugin;
-namespace Lumera\Modules\security;
+namespace Lumera\Modules\Security;
 
 /**
  * @file core.Modules.security/AuthSource.inc.php

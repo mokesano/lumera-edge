@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Mail\Mail;
-namespace Lumera\Modules\submission;
+namespace Lumera\Modules\Submission;
 
 /**
  * @defgroup submission

@@ -13,7 +13,7 @@ Lumera\Modules\DepositObjectDAO;
 Lumera\Modules\Form\PLNSettingsForm;
 Lumera\Modules\Form\PLNStatusForm;
 Lumera\Modules\Notification\NotificationManager;
-namespace Lumera\Plugins\Generic\pln;
+namespace Lumera\Plugins\Generic\Pln;
 
 /**
  * @file plugins/generic/pln/PLNPlugin.inc.php

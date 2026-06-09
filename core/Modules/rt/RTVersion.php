@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Lumera\Modules\rt;
+namespace Lumera\Modules\Rt;
 
 /**
  * @file core/Modules/RT/RTVersion.php

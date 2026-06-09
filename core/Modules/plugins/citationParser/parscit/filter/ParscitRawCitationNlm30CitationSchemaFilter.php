@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaFilter;
-namespace Lumera\Modules\plugins\citationParser\parscit\filter;
+namespace Lumera\Modules\Plugins\CitationParser\Parscit\Filter;
 
 /**
  * @defgroup plugins_citationParser_parscit_filter

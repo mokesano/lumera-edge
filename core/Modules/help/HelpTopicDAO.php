@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Help\HelpTopic;
 Lumera\Modules\Help\CoreHelp;
 Lumera\Modules\Help\HelpTopicSection;
-namespace Lumera\Modules\help;
+namespace Lumera\Modules\Help;
 
 /**
  * @file core.Modules.help/HelpTopicDAO.inc.php

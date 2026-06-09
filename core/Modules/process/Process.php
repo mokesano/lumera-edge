@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Kernel\DataObject;
-namespace Lumera\Modules\process;
+namespace Lumera\Modules\Process;
 
 /**
  * @defgroup process

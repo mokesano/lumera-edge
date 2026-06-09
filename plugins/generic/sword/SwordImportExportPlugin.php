@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\ImportExportPlugin;
 Lumera\Modules\Sword\AppSwordDeposit;
 Lumera\Kernel\VirtualArrayIterator;
-namespace Lumera\Plugins\Generic\sword;
+namespace Lumera\Plugins\Generic\Sword;
 
 /**
  * @file plugins/generic/sword/SwordImportExportPlugin.inc.php

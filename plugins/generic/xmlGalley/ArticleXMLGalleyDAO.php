@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Article\ArticleGalleyDAO;
-namespace Lumera\Plugins\Generic\xmlGalley;
+namespace Lumera\Plugins\Generic\XmlGalley;
 
 /**
  * @file plugins/generic/xmlGalley/ArticleXMLGalleyDAO.inc.php

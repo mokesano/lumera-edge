@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 Lumera\Modules\Filter\Filter;
 Lumera\Modules\Validation\ValidatorDate;
-namespace Lumera\Modules\metadata;
+namespace Lumera\Modules\Metadata;
 
 /**
  * @file core.Modules.metadata/DateStringNormalizerFilter.inc.php

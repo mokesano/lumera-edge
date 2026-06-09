@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Oai\OAIStruct;
 Lumera\Modules\Oai\OAIUtils;
 Lumera\Modules\Plugins\PluginRegistry;
-namespace Lumera\Modules\oai;
+namespace Lumera\Modules\Oai;
 
 /**
  * @defgroup oai

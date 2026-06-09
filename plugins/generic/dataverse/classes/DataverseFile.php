@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Article\SuppFile;
-namespace Lumera\Plugins\Generic\dataverse\classes;
+namespace Lumera\Plugins\Generic\Dataverse\Classes;
 
 /**
  * @file plugins/generic/dataverse/classes/DataverseFile.inc.php

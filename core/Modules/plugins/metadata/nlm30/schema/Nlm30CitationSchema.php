@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataSchema;
-namespace Lumera\Modules\plugins\metadata\nlm30\schema;
+namespace Lumera\Modules\Plugins\Metadata\Nlm30\Schema;
 
 /**
  * @defgroup plugins_metadata_nlm30_schema

@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Plugins\BlockPlugin;
 Lumera\SimplePie;
 Lumera\Kernel\CoreString;
-namespace Lumera\Plugins\Generic\externalFeed;
+namespace Lumera\Plugins\Generic\ExternalFeed;
 
 /**
  * @file plugins/generic/externalFeed/ExternalFeedBlockPlugin.inc.php

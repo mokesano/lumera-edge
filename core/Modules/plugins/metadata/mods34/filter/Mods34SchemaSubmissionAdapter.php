@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Metadata\MetadataDataObjectAdapter;
-namespace Lumera\Modules\plugins\metadata\mods34\filter;
+namespace Lumera\Modules\Plugins\Metadata\Mods34\Filter;
 
 /**
  * @file plugins/metadata/mods34/filter/Mods34SchemaSubmissionAdapter.inc.php

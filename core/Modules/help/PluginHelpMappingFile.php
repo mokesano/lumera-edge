@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Help\HelpMappingFile;
-namespace Lumera\Modules\help;
+namespace Lumera\Modules\Help;
 
 /**
  * @file core.Modules.help/PluginHelpMappingFile.inc.php

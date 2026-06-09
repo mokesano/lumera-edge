@@ -4,7 +4,7 @@ declare(strict_types=1);
 Lumera\Modules\Security\Authorization\PolicySet;
 Lumera\Modules\Security\Authorization\RoleBasedHandlerOperationPolicy;
 Lumera\Modules\Security\Authorization\CorePublicAccessPolicy;
-namespace Lumera\Modules\security\authorization;
+namespace Lumera\Modules\Security\Authorization;
 
 /**
  * @file core.Modules.security/authorization/CoreSiteAccessPolicy.inc.php

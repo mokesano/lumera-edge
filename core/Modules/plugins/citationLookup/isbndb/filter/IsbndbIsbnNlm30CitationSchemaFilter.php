@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 Lumera\Modules\Plugins\CitationLookup\Isbndb\Filter\IsbndbNlm30CitationSchemaFilter;
-namespace Lumera\Modules\plugins\citationLookup\isbndb\filter;
+namespace Lumera\Modules\Plugins\CitationLookup\Isbndb\Filter;
 
 /**
  * @file plugins/citationLookup/isbndb/filter/IsbndbIsbnNlm30CitationSchemaFilter.inc.php
