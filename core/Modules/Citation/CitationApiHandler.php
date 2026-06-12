@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\Handler\CoreHandler;
-Lumera\Modules\Security\Authorization\CoreProcessAccessPolicy;
 namespace Lumera\Modules\Citation;
+
+use Lumera\Modules\Handler\CoreHandler;
+use Lumera\Modules\Security\Authorization\CoreProcessAccessPolicy;
 
 /**
  * @defgroup controllers_api_citation

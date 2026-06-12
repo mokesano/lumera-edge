@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Pages\Login\CoreLoginHandler;
 namespace App\Pages\Login;
+
+use Lumera\Pages\Login\CoreLoginHandler;
 
 /**
  * @file app/Pages/Login/LoginHandler.php
