@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\Db\DAO;
 namespace Lumera\Modules\Db;
+
+use Lumera\Modules\Db\DAO;
+use Lumera\Kernel\CoreApplication;
 
 /**
  * @file core.Modules.db/DAORegistry.inc.php
@@ -16,12 +18,12 @@ namespace Lumera\Modules\Db;
  * @see DAO
  *
  * @brief Maintains a static list of DAO objects so each DAO is instantiated only once.
- * MODERNIZED FOR PHP 7.4+
  */
 
 class DAORegistry {
 
-    /** * @var array Static list of instantiated DAOs 
+    /** 
+     * @var array Static list of instantiated DAOs 
      * Menggantikan Registry::get('daos')
      */
     protected static $daos = array();
@@ -106,5 +108,4 @@ class DAORegistry {
         return null;
     }
 }
-
 ?>

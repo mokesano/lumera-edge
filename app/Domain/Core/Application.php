@@ -1,12 +1,18 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Kernel\CoreApplication;
-Lumera\Domain\Statistics\StatisticsHelper;
-Lumera\Kernel\Request;
-Lumera\Domain\Help\Help;
-Lumera\Domain\Payment\AppPaymentManager;
 namespace App\Domain\Core;
+
+use Lumera\Kernel\CoreApplication;
+use Lumera\Kernel\Registry;
+use Lumera\Modules\Plugins\PluginRegistry;
+use Lumera\Modules\Site\Site;
+use Lumera\Modules\Config\Config;
+use App\Domain\Journal\Journal;
+use App\Domain\Statistics\StatisticsHelper;
+use App\Domain\Core\Request;
+use App\Domain\Help\Help;
+use App\Domain\Payment\AppPaymentManager;
 
 /**
  * @file core.Modules.core/Application.php
@@ -22,7 +28,7 @@ namespace App\Domain\Core;
  * @brief Class describing this application.
  */
 
-define('PHP_REQUIRED_VERSION', '7.4.0');
+define('PHP_REQUIRED_VERSION', '8.0.0');
 
 // --- IDENTITY CONSTANTS (ASSOC TYPES) ---
 define('ASSOC_TYPE_JOURNAL',        0x0000100); // 256
@@ -127,7 +133,7 @@ class Application extends CoreApplication {
     public function getName(): string {
         // [PERINGATAN] Jika ubah 'wizdam2' maka ubah pula DB tabel 'versions'.
         // Jika diubah, Application::getCurrentVersion() gagal, dan TemplateManager crash.
-        return 'wizdam2'; 
+        return 'lumera'; 
     }
 
     /**
@@ -135,9 +141,9 @@ class Application extends CoreApplication {
      * @return string
      */
     public function getNameKey(): string {
-        // [PERINGATAN] Jika ubah 'wizdam2' ubah pemanggilan nama aplikasi.
-        // Menjadi common.wizdamEditionSystems
-        return 'common.openJournalSystems';
+        // [PERINGATAN] Jika ubah 'lumera' ubah pemanggilan nama aplikasi.
+        // Menjadi common.lumeraEditorial jika ingin menampilkan nama aplikasi di UI.
+        return 'common.lumeraEditorial';
     }
 
     /**
@@ -145,9 +151,9 @@ class Application extends CoreApplication {
      * @return string
      */
     public function getVersionDescriptorUrl(): string {
-        // [PERINGATAN] Jika ubah 'wizdam2' siapkan url cek versi aplikasi.
-        // Gunakan url wizdamEditin untuk versi fork Wizdam Fork Edition
-        return 'https://wizdam.sangia.org/app/wizdam/wizdam/xml/wizdam-version.xml';
+        // [PERINGATAN] Jika ubah 'lumera' siapkan url cek versi aplikasi.
+        // Gunakan url lumera untuk versi fork Lumera Fork Edition
+        return 'https://lumera.sangia.org/app/xml/lumera-version.xml';
     }
 
     /**
@@ -431,8 +437,6 @@ class Application extends CoreApplication {
      * @return AppPaymentManager
      */
     public static function getPaymentManager($journal = null) {
-        
-        
         // Resolve journal jika tidak disuplai
         if ($journal === null) {
             $request = Registry::get('request');

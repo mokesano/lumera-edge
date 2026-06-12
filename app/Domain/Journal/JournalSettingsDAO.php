@@ -3,6 +3,12 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
+use Lumera\Modules\Db\DAO;
+use Lumera\Modules\Cache\FileCache;
+use Lumera\Modules\Cache\CacheManager;
+use Lumera\Modules\Xml\CoreXMLParser as XMLParser;
+use App\Domain\I18n\AppLocale;
+
 /**
  * @file app/Domain/Journal/JournalSettingsDAO.php
  *

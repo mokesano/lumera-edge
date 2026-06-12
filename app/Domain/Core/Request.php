@@ -128,5 +128,4 @@ class Request extends CoreRequest {
         return $instance->_delegateToRouter('redirectHome');
     }
 }
-
 ?>

@@ -166,5 +166,4 @@ class HookRegistry {
         return self::$calledHooks;
     }
 }
-
 ?>

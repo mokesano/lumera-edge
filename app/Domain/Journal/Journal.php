@@ -3,6 +3,14 @@ declare(strict_types=1);
 
 namespace App\Domain\Journal;
 
+use Lumera\Kernel\CoreApplication;
+use Lumera\Kernel\DataObject;
+use Lumera\Modules\Plugins\PluginRegistry;
+use App\Domain\Core\Request;
+use App\Domain\I18n\AppLocale;
+use Lumera\Modules\Config\ConfigParser as Config;
+use Lumera\Modules\Db\DAORegistry;
+
 /**
  * @defgroup journal
  */
