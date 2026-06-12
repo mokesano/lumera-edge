@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\Announcement\CoreAnnouncement;
 namespace Lumera\Modules\Announcement;
+
+use Lumera\Kernel\DataObject;
+use Lumera\Modules\Config\ConfigParser as Config;
+use Lumera\Modules\Db\DAO;
+use Lumera\Modules\Announcement\CoreAnnouncement;
+use App\Domain\Announcement\Announcement;
+use Lumera\Modules\Db\DAOResultFactory;
 
 /**
  * @file core/Modules/Announcement/CoreAnnouncementDAO.php

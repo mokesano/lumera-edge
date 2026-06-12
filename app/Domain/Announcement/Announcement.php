@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Domain\Announcement\CoreAnnouncement;
 namespace App\Domain\Announcement;
+
+use Lumera\Modules\Config\ConfigParser as Config;
+use Lumera\Modules\Announcement\CoreAnnouncement;
 
 /**
  * @defgroup announcement
@@ -45,5 +47,4 @@ class Announcement extends CoreAnnouncement {
         self::__construct();
     }
 }
-
 ?>
