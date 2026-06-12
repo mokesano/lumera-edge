@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Kernel\DataObject;
-Lumera\Modules\Plugins\Metadata\Nlm30\Schema\Nlm30CitationSchema;
-Lumera\Modules\Plugins\Metadata\Nlm30\Filter\Nlm30CitationSchemaCitationAdapter;
 namespace Lumera\Modules\Citation;
+
+use Lumera\Modules\Config;
+use Lumera\Kernel\CoreString;
+use Lumera\Kernel\DataObject;
+use Lumera\Modules\Metadata\MetadataDescription;
 
 /**
  * @defgroup citation

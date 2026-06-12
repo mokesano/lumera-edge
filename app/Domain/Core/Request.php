@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Kernel\CoreRequest;
 namespace App\Domain\Core;
+
+use Lumera\Kernel\CoreRequest;
+use Lumera\Modules\Plugins\HookRegistry;
 
 /**
  * @file core.Modules.core/Request.php

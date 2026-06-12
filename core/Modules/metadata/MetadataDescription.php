@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Kernel\DataObject;
 namespace Lumera\Modules\Metadata;
+
+use Lumera\Kernel\DataObject;
+use App\Domain\I18n\AppLocale;
 
 /**
  * @file core.Modules.metadata/MetadataDescription.inc.php

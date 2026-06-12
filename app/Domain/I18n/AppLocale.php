@@ -1,8 +1,12 @@
 <?php
 declare(strict_types=1);
 
-Lumera\Modules\I18n\CoreLocale;
 namespace App\Domain\I18n;
+
+use Lumera\Modules\Config\Config;
+use Lumera\Modules\Session\SessionManager;
+use Lumera\Modules\I18n\CoreLocale;
+use App\Domain\Core\Request;
 
 /**
  * @file app.Domain.I18n/AppLocale.php
