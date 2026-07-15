@@ -78,7 +78,6 @@ class CoreApplication {
         if (defined('E_DEPRECATED')) $errorReportingLevel &= ~E_DEPRECATED;
         if (defined('E_NOTICE')) $errorReportingLevel &= ~E_NOTICE;
         @error_reporting($errorReportingLevel);
-
         
         $wizdamProfiler = new CoreProfiler();
 
@@ -86,11 +85,6 @@ class CoreApplication {
         Console::logSpeed('CoreApplication::construct');
 
         mt_srand((int) ((double) microtime() * 1000000));
-
-        
-        
-        
-        
 
         if ((bool) Config::getVar('debug', 'display_errors')) {
             @ini_set('display_errors', '0');
@@ -102,19 +96,7 @@ class CoreApplication {
         
         $request = new Request();
         Registry::set('request', $request);
-        // ---------------------------
-
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
         CoreString::init();
         set_error_handler([$this, 'errorHandler']);
 
