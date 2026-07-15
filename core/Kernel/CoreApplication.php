@@ -583,7 +583,7 @@ class CoreApplication {
  * @param mixed $value
  * @return void
  */
-function define_exposed(string $name, $value): void {
+function define_exposed(string $name, mixed $value): void {
     CoreApplication::defineExposedConstant($name, $value);
 }
 ?>
