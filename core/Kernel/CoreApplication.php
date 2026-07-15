@@ -551,7 +551,7 @@ class CoreApplication {
         }
         assert((bool) preg_match('/^[a-zA-Z_]+$/', $name));
         
-        $constants =& self::getExposedConstants();
+        $constants = self::getExposedConstants();
         $constants[$name] = $value;
     }
 
@@ -561,7 +561,7 @@ class CoreApplication {
      * Returns REFERENCE to support defineExposedConstant modification.
      * @return array
      */
-    public static function &getExposedConstants(): array {
+    public static function getExposedConstants(): array {
         static $exposedConstants = [];
         return $exposedConstants;
     }
